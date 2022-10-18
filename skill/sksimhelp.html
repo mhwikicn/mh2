@@ -1,0 +1,375 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<META name="GENERATOR" content="IBM WebSphere Studio Homepage Builder Version 9.0.3.0 for Windows">
+<META http-equiv="Content-Style-Type" content="text/css">
+<TITLE>モンスターハンター２解析情報　スキルシミュレータ</TITLE>
+<LINK rel="stylesheet" href="../table.css" type="text/css">
+<SCRIPT src="../scripts/links.js"></SCRIPT>
+</HEAD>
+<BODY>
+<HR>
+<TABLE border="0" width="900">
+<TBODY>
+<TR>
+<TD width="300" valign="middle" align="center" height="66"><SPAN id="logo"></SPAN></TD>
+<TD valign="top" class="tb-cell0"><SPAN id="links"></SPAN></TD>
+<TD width="150" class="tb-cell0"><SPAN id="counter"></SPAN></TD>
+</TR>
+</TBODY>
+</TABLE>
+<SCRIPT language="JavaScript">
+<!--
+ShowLinks(1, 99);
+// -->
+</SCRIPT>
+<HR>
+<H3>スキルシミュレータ　【MH2SKSIM】</H3>
+<P class="tb-cell0">本プログラムは、モンスターハンター２に対応したスキルの表示・検索を行なうツールです。<BR>
+フリーウェアですが、著作権は当方にあります。</P>
+<TABLE border="0" width="894">
+  <TBODY>
+    <TR>
+      <TD colspan="3" class="zb-cell5">●　<B>動作環境</B></TD>
+    </TR>
+    <TR>
+      <TD width="250"></TD>
+      <TD class="tb-cell0" width="150"></TD>
+      <TD class="tb-cell0" width="480"></TD>
+    </TR>
+    <TR>
+      <TD valign="top" class="tb-cell0" colspan="2">
+      <TABLE border="1" cellspacing="0" cellpadding="2" class="cnt-tb2">
+        <TBODY>
+          <TR>
+            <TD class="tb-cell1" width="356">Microsoft Windows 2000 Professional SP3以降<BR>
+            画面解像度 800×600 以上<BR>
+            メモリ 256MB 以上</TD>
+          </TR>
+          <TR>
+            <TD class="tb-cell1" width="356">Microsoft Windows XP Home Edition/Professional SP1以降<BR>
+            画面解像度 800×600 以上<BR>
+            メモリ 256MB 以上</TD>
+          </TR>
+        </TBODY>
+      </TABLE>
+      </TD>
+      <TD valign="top" class="tb-cell0">左記以外の環境での動作確認はしていません。<BR>
+      また、左記環境を満たしているとしても、全てのパソコン環境において動作を保証することはできませんで、ご了承ください。</TD>
+    </TR>
+    <TR>
+      <TD height="30"></TD>
+      <TD></TD>
+      <TD class="tb-cell0"></TD>
+    </TR>
+    <TR>
+      <TD colspan="3" class="zb-cell5">●　<B>ダウンロードとインストール</B></TD>
+    </TR>
+    <TR>
+      <TD></TD>
+      <TD class="tb-cell0"></TD>
+      <TD class="tb-cell0"></TD>
+    </TR>
+    <TR>
+      <TD align="center" class="tb-cell0"><A href="./MH2SKSIM100b5.zip"><IMG src="../images/sksimicon.gif" width="32" height="31" border="0"></A><BR>
+      <A href="./MH2SKSIM100b5.zip">MH2SKSIM100b5.zip</A></TD>
+      <TD class="tb-cell0"></TD>
+      <TD class="tb-cell0">左のアイコンをクリックしてダウンロードしてください。<BR>
+      <BR>
+      ダウンロードファイルは ZIP 形式の圧縮ファイルとなっています。適当なフォルダを作成してプログラムファイルをその中に解凍すれば、インストールは完了です。<BR>
+      Windows XP の場合は、直接 ZIP ファイルを開いて適当なフォルダへプログラムファイルを取り出します。<BR>
+      <BR>
+      アンインストールは、プログラムファイルを削除するだけで完了です。レジストリは使用していません。<BR>
+      <BR>
+      一度起動すると、プログラムファイルと同じフォルダに MH2SKSIM.ini ファイルが作成され、この中に各種設定が保存されます。</TD>
+    </TR>
+    <TR>
+      <TD height="30"></TD>
+      <TD></TD>
+      <TD class="tb-cell0"></TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<TABLE border="0" width="894">
+  <TBODY>
+    <TR>
+      <TD colspan="3" class="zb-cell5">●　<B>画面の説明</B></TD>
+    </TR>
+    <TR>
+      <TD width="250"></TD>
+      <TD class="tb-cell0" width="200"></TD>
+      <TD class="tb-cell0" width="430"></TD>
+    </TR>
+    <TR>
+      <TD valign="top" class="tb-cell0" colspan="2"><IMG src="../images/sksim01.gif" border="0"></TD>
+      <TD valign="top" class="tb-cell0">起動すると、左図のような画面が表示されます。<BR>
+      画面は大別して３つのフレームに分かれています。<BR>
+      <BR>
+      <B>●検索条件フレーム</B><BR>
+      <BR>
+      <B>性別、タイプ、制限</B><BR>
+      プレイヤーの性別、装備タイプ、モード（シングル・ネットワーク）やHRによる制限を指定します。指定内容と合わない防具は表示・検索されません。<BR>
+      <BR>
+      <B>固定防具</B><BR>
+      選択した防具によって発動するスキルを確認する場合は、ここで防具を指定すれば、スキル表示フレームにスキル詳細値が表示されます。<BR>
+      右端にあるボタンを押すと防具選択画面が表示されるので、防具を選択します。<BR>
+      スキル検索の場合は、固定したい部位の防具を選択した後、左端のチェックボックスでチェックしておくと、その部位は指定の防具で固定された防具セットが検索されます。<BR>
+      <BR>
+      <B>スキル１〜３</B><BR>
+      スキル検索をする場合、ここで検索したいスキルを指定します。チェックをつけたもののみが有効です。複数指定した場合はAND検索となります。<BR>
+      <BR>
+      <B>装飾品を使用</B><BR>
+      防具だけでは発動しにくいスキルを検索する場合はチェックします。チェックすると、指定スキルが発動するように防具に装飾品を装着して検索を行ないます。<BR>
+      <BR>
+      <B>武器スロット数</B><BR>
+      装飾品を使用する場合、武器スロットも使用するかを指定します。武器のスロット数を選択してください。<BR>
+      <BR>
+      <B>スロットを持つ全防具</B><BR>
+      装飾品を使用する場合、スロットを持つ全ての防具を検索対象にするかどうかを指定します。ここをチェックすると膨大な検索時間を要するのでご注意ください。<BR>
+      <BR>
+      <B>除外設定</B><BR>
+      除外したい防具や装飾品がある場合は、このボタンを押すと除外選択画面が表示されるので指定します。除外指定された防具や装飾品は、他の画面には一切表示されなくなり、スキル検索においても検索対象からはずされます。<BR>
+      <BR>
+      <B>検索開始・検索中断ボタン</B><BR>
+      『検索開始』 ボタンを押すと、指定したスキルによる防具セットの検索を開始します。検索された防具セットは順次検索結果フレームに追加されていきます。<BR>
+      検索を途中で中断する場合は、『検索中断』 ボタンを押します。<BR>
+      <BR>
+      <B>設定の保存</B><BR>
+      ここまでの設定内容は、プログラム終了時に自動的に保存されます。何らかの理由で保存したくない場合は、コントロールキーを押しながら終了すると、保存せずに終了します。<BR>
+      <BR>
+      <BR>
+      <B>●スキル表示フレーム</B><BR>
+      <BR>
+      固定防具、または検索された防具セットのスキル詳細値を表示します。フレーム上部のオプションボタンでどちらのスキルを表示するのかを指定します。<BR>
+      固定防具を選択した時と、防具セット番号を選択した時には、自動的に対応する方に切り替わります。<BR>
+      <BR>
+      <BR>
+      <B>●検索結果フレーム</B><BR>
+      <BR>
+      検索された防具セット番号を表示します。セット番号を選択すると、その防具セットの詳細が右に表示されます。</TD>
+    </TR>
+    <TR>
+      <TD height="30"></TD>
+      <TD></TD>
+      <TD class="tb-cell0"></TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<TABLE border="0" width="894">
+  <TBODY>
+    <TR>
+      <TD colspan="3" class="zb-cell5">●　<B>固定防具の選択</B></TD>
+    </TR>
+    <TR>
+      <TD width="250"></TD>
+      <TD class="tb-cell0" width="100"></TD>
+      <TD class="tb-cell0" width="530"></TD>
+    </TR>
+    <TR>
+      <TD valign="top" class="tb-cell0" colspan="2"><IMG src="../images/sksim03.gif" width="336" height="231" border="0"></TD>
+      <TD class="tb-cell0" valign="top">固定防具表示部の右端にある５つのいずれかのボタンを押すか、防具名部分をダブルクリックすると左図のような防具選択画面が表示されます。<BR>
+      指定したい防具と、必要に応じて防具レベル・装着する装飾品を選択します。<BR>
+      <BR>
+      ここで表示される防具・装飾品は、検索条件フレームにて指定した性別・タイプ・制限に合致するもののみとなります。</TD>
+    </TR>
+    <TR>
+      <TD height="30"></TD>
+      <TD></TD>
+      <TD class="tb-cell0"></TD>
+    </TR>
+    <TR>
+      <TD colspan="3" class="zb-cell5">●　<B>防具のプロパティ</B></TD>
+    </TR>
+    <TR>
+      <TD width="250"></TD>
+      <TD class="tb-cell0"></TD>
+      <TD class="tb-cell0"></TD>
+    </TR>
+    <TR>
+      <TD valign="top" class="tb-cell0" colspan="2"><IMG src="../images/sksim02.gif" width="324" height="249" border="0"></TD>
+      <TD class="tb-cell0" valign="top">各画面で表示される防具名上で右クリックし、ポップアップメニューから 『プロパティ』 を選択すると、左図のように、防具の情報画面が表示されます。<BR>
+      その防具の下位モデル、上位モデルなど関連する防具がある場合は、それらの防具の情報も同じ画面で見ることができます。<BR>
+      <BR>
+      必要素材名をクリックすると、当サイトのアイテム詳細画面がブラウザによって開かれます。</TD>
+    </TR>
+    <TR>
+      <TD height="30"></TD>
+      <TD></TD>
+      <TD class="tb-cell0"></TD>
+    </TR>
+    <TR>
+      <TD colspan="3" class="zb-cell5">●　<B>防具セットの保存・読出し</B></TD>
+    </TR>
+    <TR>
+      <TD width="250"></TD>
+      <TD class="tb-cell0"></TD>
+      <TD class="tb-cell0"></TD>
+    </TR>
+    <TR>
+      <TD valign="top" class="tb-cell0" colspan="2"></TD>
+      <TD class="tb-cell0" valign="top">気にいった防具セットが見つかったら、それをファイルに保存しておくことができます。<BR>
+      『防具セットの詳細』 で右クリックしてポップアップメニューから 『防具セットの保存』 を選択し、適当なファイル名をつけて保存します。保存されたファイルはテキストファイルなので、メモ帳などで開くことができます。<BR>
+      <BR>
+      保存したファイルは固定防具として読み込むことができます。固定防具名上で右クリックしてポップアップメニューから 『防具セットの読込み』 を選択します。<BR>
+      <BR>
+      ファイルの１行目には防具セットの情報が記述されています。ここを改変したりすると読み込めなくなるのでご注意ください。２行目以降は、読込みには関係ありません。</TD>
+    </TR>
+    <TR>
+      <TD height="30"></TD>
+      <TD></TD>
+      <TD class="tb-cell0"></TD>
+    </TR>
+    <TR>
+      <TD colspan="3" class="zb-cell5">●　<B>スキル検索について</B></TD>
+    </TR>
+    <TR>
+      <TD width="250"></TD>
+      <TD class="tb-cell0"></TD>
+      <TD class="tb-cell0"></TD>
+    </TR>
+    <TR>
+      <TD valign="top" class="tb-cell0" colspan="2"></TD>
+      <TD class="tb-cell0" valign="top">指定したスキルが発動するような防具セットを検索しますが、検索の対象となる防具は、原則として指定したスキルのスキルポイント値がプラスであるもののみとなります。（装飾品も同様）<BR>
+      <BR>
+      例として『麻痺無効』を指定した場合、麻痺スキルポイント値がプラスの防具のみをピックアップし、それらの防具の組み合わせで検索を行ないます。 『装飾品使用』
+      を指定した場合でも、通常は麻痺スキルポイントを持っていない防具に装飾品を装着し、麻痺スキルポイントを持たせたような防具は検索されませんが、『スロットを持つ全防具』を指定した場合は、このような防具も検索対象になります。この場合、検索に膨大な時間を要するので、通常は、このような防具を自分で決めて固定防具として指定しておくのをお勧めします。<BR>
+      <BR>
+      『装飾品使用』 を指定して検索する場合、固定防具に空きスロットがあれば、そのスロットも使用するようになります。必要に応じてスロットを空けておいて下さい。</TD>
+    </TR>
+    <TR>
+      <TD height="30"></TD>
+      <TD></TD>
+      <TD class="tb-cell0"></TD>
+    </TR>
+    <TR>
+      <TD colspan="3" class="zb-cell5">●　<B>検索結果が多すぎる場合は</B></TD>
+    </TR>
+    <TR>
+      <TD></TD>
+      <TD class="tb-cell0"></TD>
+      <TD class="tb-cell0"></TD>
+    </TR>
+    <TR>
+      <TD valign="top" class="tb-cell0" colspan="2"></TD>
+      <TD class="tb-cell0" valign="top"><B>固定防具を指定する</B><BR>
+      <BR>
+      指定したスキルによっては、膨大な数の防具セットが検索されます。<BR>
+      どれかの部位を固定防具に指定しておけば、その部位は固定された防具セットが検索されるようになるので、検索結果数を少なくすることができます。<BR>
+      防具セット詳細に表示された防具名を右クリックし、表示されるポップアップメニューから『固定防具にセットする』を選ぶことによって固定防具に設定されるので、再度検索を行ないます。このようにして、防具セットの絞込みを行なってください。<BR>
+      <BR>
+      ４つ以下の部位で発動すると思われるスキルの場合は、任意の部位を 『装備なし』 とした固定防具を指定すれば、その部位は使用しない防具セットを検索することができます。<BR>
+      <BR>
+      固定防具を指定した検索を行なう場合は、『固定』チェックボックスをチェックしておく必要があるのでご注意ください。<BR>
+      <BR>
+      <BR>
+      <B>除外防具を指定する</B><BR>
+      <BR>
+      防御力が低いとか、見た目が気に入らないような防具などは除外指定しておくことで、検索結果を少なくすることができます。</TD>
+    </TR>
+    <TR>
+      <TD height="30"></TD>
+      <TD></TD>
+      <TD class="tb-cell0"></TD>
+    </TR>
+    <TR>
+      <TD colspan="3" class="zb-cell5">●　<B>不具合について</B></TD>
+    </TR>
+    <TR>
+      <TD></TD>
+      <TD class="tb-cell0"></TD>
+      <TD class="tb-cell0"></TD>
+    </TR>
+    <TR>
+      <TD valign="top" class="tb-cell0" colspan="2"></TD>
+      <TD class="tb-cell0" valign="top">本プログラムはベータバージョンのため、まだ不具合が残っている可能性があります。<BR>
+      何か不具合を発見した場合は、詳細を報告いただければ幸いです。<BR>
+      <BR>
+      改善点などの要望も含め、<A href="../mailform.html">お問い合わせ</A>からお送りください。<BR>
+      <BR>
+      <BR>
+      <BR>
+      以下の問題点は、バージョン 1.00b4 で解決したと思われます。<BR>
+      <BR>
+      <B>問題点１</B><BR>
+      複数のスキルを指定、かつ装飾品の使用を指定した場合、存在するはずの防具セットを見つけられない場合があります。この場合は、指定するスキルの順番を変えてみると、見つけられることがあります。（例えば、スキル１をスキル２に、スキル２をスキル１に指定しなおしてみる）<BR>
+      これは、装飾品の装着の順番がスキル指定の順番に依存してしまっていることによります。<BR>
+      この問題は、空きスロットに余裕があれば起こらないと思われます。<BR>
+      <BR>
+      <B>問題点２</B><BR>
+      複数のスキルを指定した場合、どちらか一方が発動していない防具セットが検索される場合があります。これは、検索中に装飾品を装着する処理において、一方のスキルを補おうとして装着した装飾品が、他方のスキルのマイナスポイントを持っていた場合に起こります。現在、対応中です。</TD>
+    </TR>
+    <TR>
+      <TD height="30"></TD>
+      <TD></TD>
+      <TD class="tb-cell0"></TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<TABLE border="0" width="894">
+  <TBODY>
+    <TR>
+      <TD colspan="3" class="zb-cell5">●　<B>修正履歴</B></TD>
+    </TR>
+    <TR>
+      <TD width="250"></TD>
+      <TD class="tb-cell0" width="150"></TD>
+      <TD class="tb-cell0" width="480"></TD>
+    </TR>
+    <TR>
+      <TD valign="top" class="tb-cell0"></TD>
+      <TD valign="top" class="tb-cell0" colspan="2">
+      <TABLE border="1" cellspacing="0" cellpadding="2" class="cnt-tb2" width="629">
+        <TBODY>
+          <TR>
+            <TD class="tb-cell1" width="130">1.00b5 (2006/05/29)</TD>
+            <TD class="tb-cell1" width="480">装飾品のプロパティを追加。<BR>
+            細かな不具合を修正。</TD>
+          </TR>
+          <TR>
+            <TD class="tb-cell1" width="130">1.00b4 (2006/05/22)</TD>
+            <TD class="tb-cell1" width="480">以下の不具合を修正<BR>
+            　１：複数のスキルを指定した場合、一方が発動していない防具セットが検索される。<BR>
+            　２：複数のスキルかつ装飾品指定の場合、スキル指定の順によっては存在するはずの　　　防具セットが検索されないことがある。<BR>
+            装飾品の除外機能を追加。</TD>
+          </TR>
+          <TR>
+            <TD class="tb-cell1" width="130">1.00b3 (2006/05/20)</TD>
+            <TD class="tb-cell1" width="480">以下の不具合を修正<BR>
+            　１：一部のGDIオブジェクト開放し忘れによって文字表示が不正になることがあった。<BR>
+            　２：生産に装飾品が必要な防具のプロパティで生産素材名の表示が不正であった。<BR>
+            　３：除外防具設定で、設定操作が反映されない場合があった。<BR>
+            　４：耐性値にかかわるスキルが発動した場合、耐性値合計の表示が不正であった。<BR>
+            『スロットを持つ全防具』オプションを追加。</TD>
+          </TR>
+          <TR>
+            <TD class="tb-cell1" width="130">1.00b2 (2006/05/19)</TD>
+            <TD class="tb-cell1" width="480">複数のスキル＆装飾品使用指定の場合、指定されたスキルをひとつでも持っている防具を対象とし、全く持っていない防具は対象からはずすのが本プログラムの仕様であるが、対象となった防具の必要最低ポイント数の計算処理において、持っていないスキルポイントを装飾品で補ってから計算するようにした。<BR>
+            例えば、斬れ味レベル+１と砥石使用高速化を指定した場合、全身クロオビ+研磨珠×３で発動するが、クロオビ防具は研ぎ師スキルは全く持っていないので、必要最低ポイントに満たないと判定され、検索されなかった。</TD>
+          </TR>
+          <TR>
+            <TD class="tb-cell1" width="130">1.00b1 (2006/05/18)</TD>
+            <TD class="tb-cell1" width="480">初版公開</TD>
+          </TR>
+        </TBODY>
+      </TABLE>
+      </TD>
+    </TR>
+    <TR>
+      <TD height="30"></TD>
+      <TD></TD>
+      <TD class="tb-cell0"></TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<BR>
+<BR>
+Last update : 2006/05/18<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+
+
+</BODY>
+</HTML>

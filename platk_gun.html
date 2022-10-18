@@ -1,0 +1,1851 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<META name="GENERATOR" content="IBM WebSphere Studio Homepage Builder Version 9.0.3.0 for Windows">
+<META http-equiv="Content-Style-Type" content="text/css">
+<TITLE>モンスターハンター２解析情報　モンスターへの攻撃【ボウガン編】</TITLE>
+<LINK rel="stylesheet" href="./table.css" type="text/css">
+<SCRIPT src="./scripts/links.js"></SCRIPT>
+</HEAD>
+<BODY>
+<HR>
+<TABLE border="0" width="900">
+<TBODY>
+<TR>
+<TD width="300" valign="middle" align="center" height="66"><SPAN id="logo"></SPAN></TD>
+<TD valign="top" class="tb-cell0"><SPAN id="links"></SPAN></TD>
+<TD width="150" class="tb-cell0"><SPAN id="counter"></SPAN></TD>
+</TR>
+</TBODY>
+</TABLE>
+<SCRIPT language="JavaScript">
+<!--
+ShowLinks(0, 99);
+// -->
+</SCRIPT>
+<HR>
+<H3>モンスターへの攻撃　【ボウガン編】</H3>
+<P class="tb-cell0">ボウガンの攻撃によるモンスターへのダメージについて示します。</P>
+<TABLE border="0" width="894">
+  <TBODY>
+    <TR>
+      <TD colspan="3" class="zb-cell0">●　<B>武器倍率</B></TD>
+    </TR>
+    <TR>
+      <TD width="250"></TD>
+      <TD class="tb-cell0" width="150"></TD>
+      <TD class="tb-cell0" width="480"></TD>
+    </TR>
+    <TR>
+      <TD valign="top" class="tb-cell0">
+      <TABLE border="1" cellspacing="0" cellpadding="2" class="cnt-tb2">
+        <TBODY>
+          <TR>
+            <TD class="tb-th2" width="110">武器の種類</TD>
+            <TD class="tb-th2" width="70">倍率</TD>
+          </TR>
+          <TR>
+            <TD class="tb-cell1">大剣/太刀</TD>
+            <TD class="tb-cell2">4.8</TD>
+          </TR>
+          <TR>
+            <TD class="tb-cell1">片手剣/双剣</TD>
+            <TD class="tb-cell2">1.4</TD>
+          </TR>
+          <TR>
+            <TD class="tb-cell1">ハンマー/狩猟笛</TD>
+            <TD class="tb-cell2">5.2</TD>
+          </TR>
+          <TR>
+            <TD class="tb-cell1">ランス/ガンランス</TD>
+            <TD class="tb-cell2">2.3</TD>
+          </TR>
+          <TR>
+            <TD class="tb-cell1">ボウガン/弓</TD>
+            <TD class="tb-cell2">1.2</TD>
+          </TR>
+        </TBODY>
+      </TABLE>
+      </TD>
+      <TD class="tb-cell0" valign="top" colspan="2">攻撃によるモンスターへのダメージ計算の元となるのは、ステータスに表示される攻撃力ではなく、<BR>
+      攻撃力を一定の倍率で割った <B>武器倍率</B> というものが元になります。<BR>
+      各武器の倍率は左表のとおりです。ボウガンの場合は 1.2 で割った値となります。<BR>
+      <BR>
+      食事効果やアイテム使用等による攻撃力アップは、全てこの武器倍率に一定値が加算されます。<BR>
+      従って、ステータス上では 1.2倍のアップ量となります。</TD>
+    </TR>
+    <TR>
+      <TD height="30"></TD>
+      <TD></TD>
+      <TD class="tb-cell0"></TD>
+    </TR>
+    <TR>
+      <TD colspan="3" class="zb-cell0">●　<B>弾の威力</B></TD>
+    </TR>
+    <TR>
+      <TD></TD>
+      <TD class="tb-cell0"></TD>
+      <TD class="tb-cell0"></TD>
+    </TR>
+    <TR>
+      <TD></TD>
+      <TD colspan="2" class="tb-cell0" valign="top">各弾の威力は、下表のとおりです。<BR>
+      武器倍率に、弾の威力を％として乗算したものが基本威力となります。<BR>
+      例えば、攻撃力 108 のグレネードボウガンでLV2通常弾を撃った場合、90×12％＝10.8 が基本威力となります。<BR>
+      <BR>
+      徹甲榴弾と拡散弾の （） 内の値は着弾後に起こる爆発の威力で、これは、モンスターの肉質によって軽減は<BR>
+      されません。弾そのものの基本威力はボウガンの武器倍率に依存しますが、その後の爆発の威力は<BR>
+      ボウガンの武器倍率とは関係なく、 （） 内の値で示す一定の基本威力となります。<BR>
+      また、爆発には火属性がありますが、これはモンスターの肉質によって軽減されます。<BR>
+      <BR>
+      状態異常属性弾（毒弾・麻痺弾・睡眠弾）の基本威力も、モンスターの肉質による軽減はありません。<BR>
+      （睡眠弾は弾の威力が０なので、基本威力も０となります）<BR>
+      <BR>
+      ライトボウガンには速射に対応したものがあり、速射対応弾を撃った場合、弾１個で複数発発射するので<BR>
+      経済的ですが、速射対応弾は基本威力・属性値とも１発当たりの威力は半分に落ちてしまいます。<BR>
+      ただし、徹甲榴弾の爆発威力と火属性値は落ちることはありません。</TD>
+    </TR>
+    <TR>
+      <TD width="5"></TD>
+      <TD class="tb-cell0"></TD>
+      <TD class="tb-cell0"></TD>
+    </TR>
+    <TR>
+      <TD valign="top" class="tb-cell0" colspan="3">
+      <TABLE border="1" cellspacing="0" cellpadding="2" class="cnt-tb2">
+        <TBODY>
+          <TR>
+            <TD class="tb-th2" width="100">弾名</TD>
+            <TD class="tb-th2" width="110">威力</TD>
+            <TD class="tb-th2" width="52">ヒット数</TD>
+            <TD class="tb-th2" width="52">所持数</TD>
+            <TD class="tb-th2" width="75">リロード値</TD>
+            <TD class="tb-th2" width="75">反動値</TD>
+            <TD class="tb-th2" width="180">属性</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">LV1 通常弾</TD>
+            <TD class="tb-cell2">6</TD>
+            <TD class="tb-cell2">1</TD>
+            <TD class="tb-cell2">∞</TD>
+            <TD class="tb-cell2">5</TD>
+            <TD class="tb-cell2">8</TD>
+            <TD class="tb-cell2">&nbsp;</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">LV2 通常弾</TD>
+            <TD class="tb-cell2">12</TD>
+            <TD class="tb-cell2">1</TD>
+            <TD class="tb-cell2">99</TD>
+            <TD class="tb-cell2">6</TD>
+            <TD class="tb-cell2">9</TD>
+            <TD class="tb-cell2">&nbsp;</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">LV3 通常弾</TD>
+            <TD class="tb-cell2">10</TD>
+            <TD class="tb-cell2">跳弾</TD>
+            <TD class="tb-cell2">99</TD>
+            <TD class="tb-cell2">7</TD>
+            <TD class="tb-cell2">10</TD>
+            <TD class="tb-cell2">&nbsp;</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">LV1 貫通弾</TD>
+            <TD class="tb-cell2">10</TD>
+            <TD class="tb-cell2">3</TD>
+            <TD class="tb-cell2">60</TD>
+            <TD class="tb-cell2">6</TD>
+            <TD class="tb-cell2">10</TD>
+            <TD class="tb-cell2">&nbsp;</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">LV2 貫通弾</TD>
+            <TD class="tb-cell2">9</TD>
+            <TD class="tb-cell2">4</TD>
+            <TD class="tb-cell2">50</TD>
+            <TD class="tb-cell2">7</TD>
+            <TD class="tb-cell2">10</TD>
+            <TD class="tb-cell2">&nbsp;</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">LV3 貫通弾</TD>
+            <TD class="tb-cell2">7</TD>
+            <TD class="tb-cell2">6</TD>
+            <TD class="tb-cell2">40</TD>
+            <TD class="tb-cell2">8</TD>
+            <TD class="tb-cell2">11</TD>
+            <TD class="tb-cell2">&nbsp;</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">LV1 散弾</TD>
+            <TD class="tb-cell2">5</TD>
+            <TD class="tb-cell2">3</TD>
+            <TD class="tb-cell2">60</TD>
+            <TD class="tb-cell2">5</TD>
+            <TD class="tb-cell2">10</TD>
+            <TD class="tb-cell2">水属性：5</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">LV2 散弾</TD>
+            <TD class="tb-cell2">5</TD>
+            <TD class="tb-cell2">4</TD>
+            <TD class="tb-cell2">60</TD>
+            <TD class="tb-cell2">6</TD>
+            <TD class="tb-cell2">10</TD>
+            <TD class="tb-cell2">水属性：4</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">LV3 散弾</TD>
+            <TD class="tb-cell2">5</TD>
+            <TD class="tb-cell2">5</TD>
+            <TD class="tb-cell2">60</TD>
+            <TD class="tb-cell2">7</TD>
+            <TD class="tb-cell2">11</TD>
+            <TD class="tb-cell2">水属性：4</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">LV1 徹甲榴弾</TD>
+            <TD class="tb-cell2">3 （20）</TD>
+            <TD class="tb-cell2">1</TD>
+            <TD class="tb-cell2">9</TD>
+            <TD class="tb-cell2">7</TD>
+            <TD class="tb-cell2">11</TD>
+            <TD class="tb-cell2">火属性：30（爆発）</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">LV2 徹甲榴弾</TD>
+            <TD class="tb-cell2">3 （30）</TD>
+            <TD class="tb-cell2">1</TD>
+            <TD class="tb-cell2">9</TD>
+            <TD class="tb-cell2">8</TD>
+            <TD class="tb-cell2">12</TD>
+            <TD class="tb-cell2">火属性：45（爆発）</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">LV3 徹甲榴弾</TD>
+            <TD class="tb-cell2">3 （40）</TD>
+            <TD class="tb-cell2">1</TD>
+            <TD class="tb-cell2">9</TD>
+            <TD class="tb-cell2">9</TD>
+            <TD class="tb-cell2">13</TD>
+            <TD class="tb-cell2">火属性：60（爆発）</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">LV1 拡散弾</TD>
+            <TD class="tb-cell2">6 （32×3）</TD>
+            <TD class="tb-cell2">1</TD>
+            <TD class="tb-cell2">3</TD>
+            <TD class="tb-cell2">8</TD>
+            <TD class="tb-cell2">13</TD>
+            <TD class="tb-cell2">火属性：2×3（爆発）</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">LV2 拡散弾</TD>
+            <TD class="tb-cell2">6 （32×4）</TD>
+            <TD class="tb-cell2">1</TD>
+            <TD class="tb-cell2">3</TD>
+            <TD class="tb-cell2">9</TD>
+            <TD class="tb-cell2">14</TD>
+            <TD class="tb-cell2">火属性：2×4（爆発）</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">LV3 拡散弾</TD>
+            <TD class="tb-cell2">6 （32×5）</TD>
+            <TD class="tb-cell2">1</TD>
+            <TD class="tb-cell2">3</TD>
+            <TD class="tb-cell2">10</TD>
+            <TD class="tb-cell2">14</TD>
+            <TD class="tb-cell2">火属性：2×5（爆発）</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">火炎弾</TD>
+            <TD class="tb-cell2">1</TD>
+            <TD class="tb-cell2">1</TD>
+            <TD class="tb-cell2">60</TD>
+            <TD class="tb-cell2">6</TD>
+            <TD class="tb-cell2">10</TD>
+            <TD class="tb-cell2">火属性：武器倍率×0.4</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">水冷弾</TD>
+            <TD class="tb-cell2">1</TD>
+            <TD class="tb-cell2">3</TD>
+            <TD class="tb-cell2">60</TD>
+            <TD class="tb-cell2">6</TD>
+            <TD class="tb-cell2">10</TD>
+            <TD class="tb-cell2">水属性：武器倍率×0.1</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">電撃弾</TD>
+            <TD class="tb-cell2">1</TD>
+            <TD class="tb-cell2">3</TD>
+            <TD class="tb-cell2">60</TD>
+            <TD class="tb-cell2">6</TD>
+            <TD class="tb-cell2">10</TD>
+            <TD class="tb-cell2">雷属性：武器倍率×0.2</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">氷結弾</TD>
+            <TD class="tb-cell2">1</TD>
+            <TD class="tb-cell2">3</TD>
+            <TD class="tb-cell2">60</TD>
+            <TD class="tb-cell2">6</TD>
+            <TD class="tb-cell2">10</TD>
+            <TD class="tb-cell2">氷属性：武器倍率×0.1</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">滅龍弾</TD>
+            <TD class="tb-cell2">1</TD>
+            <TD class="tb-cell2">6</TD>
+            <TD class="tb-cell2">20</TD>
+            <TD class="tb-cell2">9</TD>
+            <TD class="tb-cell2">13</TD>
+            <TD class="tb-cell2">龍属性：48</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">LV1 回復弾</TD>
+            <TD class="tb-cell2">0</TD>
+            <TD class="tb-cell2">-</TD>
+            <TD class="tb-cell2">12</TD>
+            <TD class="tb-cell2">7</TD>
+            <TD class="tb-cell2">11</TD>
+            <TD class="tb-cell2">回復量：30</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">LV2 回復弾</TD>
+            <TD class="tb-cell2">0</TD>
+            <TD class="tb-cell2">-</TD>
+            <TD class="tb-cell2">12</TD>
+            <TD class="tb-cell2">9</TD>
+            <TD class="tb-cell2">13</TD>
+            <TD class="tb-cell2">回復量：50</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">LV1 毒弾</TD>
+            <TD class="tb-cell2">10</TD>
+            <TD class="tb-cell2">1</TD>
+            <TD class="tb-cell2">12</TD>
+            <TD class="tb-cell2">7</TD>
+            <TD class="tb-cell2">11</TD>
+            <TD class="tb-cell2">毒蓄積量：25</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">LV2 毒弾</TD>
+            <TD class="tb-cell2">15</TD>
+            <TD class="tb-cell2">1</TD>
+            <TD class="tb-cell2">8</TD>
+            <TD class="tb-cell2">9</TD>
+            <TD class="tb-cell2">13</TD>
+            <TD class="tb-cell2">毒蓄積量：50</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">LV1 麻痺弾</TD>
+            <TD class="tb-cell2">10</TD>
+            <TD class="tb-cell2">1</TD>
+            <TD class="tb-cell2">12</TD>
+            <TD class="tb-cell2">7</TD>
+            <TD class="tb-cell2">11</TD>
+            <TD class="tb-cell2">麻痺蓄積量：25</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">LV2 麻痺弾</TD>
+            <TD class="tb-cell2">15</TD>
+            <TD class="tb-cell2">1</TD>
+            <TD class="tb-cell2">8</TD>
+            <TD class="tb-cell2">9</TD>
+            <TD class="tb-cell2">13</TD>
+            <TD class="tb-cell2">麻痺蓄積量：50</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">LV1 睡眠弾</TD>
+            <TD class="tb-cell2">0</TD>
+            <TD class="tb-cell2">1</TD>
+            <TD class="tb-cell2">12</TD>
+            <TD class="tb-cell2">7</TD>
+            <TD class="tb-cell2">11</TD>
+            <TD class="tb-cell2">睡眠蓄積量：25</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">LV2 睡眠弾</TD>
+            <TD class="tb-cell2">0</TD>
+            <TD class="tb-cell2">1</TD>
+            <TD class="tb-cell2">8</TD>
+            <TD class="tb-cell2">9</TD>
+            <TD class="tb-cell2">13</TD>
+            <TD class="tb-cell2">睡眠蓄積量：50</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">捕獲用麻酔弾</TD>
+            <TD class="tb-cell2">0</TD>
+            <TD class="tb-cell2">1</TD>
+            <TD class="tb-cell2">8</TD>
+            <TD class="tb-cell2">8</TD>
+            <TD class="tb-cell2">11</TD>
+            <TD class="tb-cell2">麻酔蓄積量：80</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">ペイント弾</TD>
+            <TD class="tb-cell2">0</TD>
+            <TD class="tb-cell2">1</TD>
+            <TD class="tb-cell2">99</TD>
+            <TD class="tb-cell2">7</TD>
+            <TD class="tb-cell2">11</TD>
+            <TD class="tb-cell2">&nbsp;</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">鬼人弾</TD>
+            <TD class="tb-cell2">0</TD>
+            <TD class="tb-cell2">-</TD>
+            <TD class="tb-cell2">5</TD>
+            <TD class="tb-cell2">7</TD>
+            <TD class="tb-cell2">11</TD>
+            <TD class="tb-cell2">&nbsp;</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">硬化弾</TD>
+            <TD class="tb-cell2">0</TD>
+            <TD class="tb-cell2">-</TD>
+            <TD class="tb-cell2">5</TD>
+            <TD class="tb-cell2">7</TD>
+            <TD class="tb-cell2">11</TD>
+            <TD class="tb-cell2">&nbsp;</TD>
+          </TR>
+        </TBODY>
+      </TABLE>
+      </TD>
+    </TR>
+    <TR>
+      <TD height="30"></TD>
+      <TD></TD>
+      <TD class="tb-cell0"></TD>
+    </TR>
+    <TR>
+      <TD colspan="3" class="zb-cell0">●　<B>弾のリロード速度</B></TD>
+    </TR>
+    <TR>
+      <TD></TD>
+      <TD class="tb-cell0"></TD>
+      <TD class="tb-cell0"></TD>
+    </TR>
+    <TR>
+      <TD valign="top" class="tb-cell0">
+      <TABLE border="1" cellspacing="0" cellpadding="2" class="cnt-tb2">
+        <TBODY>
+          <TR>
+            <TD class="tb-th2" width="110">リロード速度値</TD>
+            <TD class="tb-th2" width="100">モーション</TD>
+          </TR>
+          <TR>
+            <TD class="tb-cell2">４ 以下</TD>
+            <TD class="tb-cell2">速い （62）</TD>
+          </TR>
+          <TR>
+            <TD class="tb-cell2">５ 〜 ７</TD>
+            <TD class="tb-cell2">普通 （78）</TD>
+          </TR>
+          <TR>
+            <TD class="tb-cell2">８ 以上</TD>
+            <TD class="tb-cell2">遅い （103）</TD>
+          </TR>
+        </TBODY>
+      </TABLE>
+      </TD>
+      <TD class="tb-cell0" valign="top" colspan="2">ボウガンに弾をリロードする速度は、次の計算式の結果によって、左表で示すように３段階に分かれます。<BR>
+      <BR>
+      　　　弾のリロード値 − （ボウガンのリロード修正値 ＋ 装填速度スキルによる修正値） ＝ リロード速度値<BR>
+      <BR>
+      モーション欄の （） の中の値は、リロードに要するフレーム数です。（30フレーム＝１秒）</TD>
+    </TR>
+    <TR>
+      <TD height="15"></TD>
+      <TD class="tb-cell0"></TD>
+      <TD class="tb-cell0"></TD>
+    </TR>
+    <TR>
+      <TD valign="top" class="tb-cell0"><B>ボウガンのリロード修正値</B>
+      <TABLE border="1" cellspacing="0" cellpadding="2" class="cnt-tb2">
+        <TBODY>
+          <TR>
+            <TD class="tb-th2" width="120">リロード</TD>
+            <TD class="tb-th2" width="90">修正値</TD>
+          </TR>
+          <TR>
+            <TD class="tb-cell2">遅い</TD>
+            <TD class="tb-cell2">０</TD>
+          </TR>
+          <TR>
+            <TD class="tb-cell2">やや遅い</TD>
+            <TD class="tb-cell2">１</TD>
+          </TR>
+          <TR>
+            <TD class="tb-cell2">普通</TD>
+            <TD class="tb-cell2">２</TD>
+          </TR>
+          <TR>
+            <TD class="tb-cell2">やや速い</TD>
+            <TD class="tb-cell2">３</TD>
+          </TR>
+          <TR>
+            <TD class="tb-cell2">速い</TD>
+            <TD class="tb-cell2">４</TD>
+          </TR>
+        </TBODY>
+      </TABLE>
+      <BR>
+      <B>装填速度スキルによる修正値</B>
+      <TABLE border="1" cellspacing="0" cellpadding="2" class="cnt-tb2">
+        <TBODY>
+          <TR>
+            <TD class="tb-th2" width="120">スキル</TD>
+            <TD class="tb-th2" width="90">修正値</TD>
+          </TR>
+          <TR>
+            <TD class="tb-cell2">装填速度-2</TD>
+            <TD class="tb-cell2">−３</TD>
+          </TR>
+          <TR>
+            <TD class="tb-cell2">装填速度-1</TD>
+            <TD class="tb-cell2">−１</TD>
+          </TR>
+          <TR>
+            <TD class="tb-cell2">スキルなし</TD>
+            <TD class="tb-cell2">０</TD>
+          </TR>
+          <TR>
+            <TD class="tb-cell2">装填速度+1</TD>
+            <TD class="tb-cell2">１</TD>
+          </TR>
+          <TR>
+            <TD class="tb-cell2">装填速度+2</TD>
+            <TD class="tb-cell2">２</TD>
+          </TR>
+          <TR>
+            <TD class="tb-cell2">装填速度+3</TD>
+            <TD class="tb-cell2">３</TD>
+          </TR>
+        </TBODY>
+      </TABLE>
+      <BR>
+      <BR>
+      <B>例：</B><BR>
+      超イャンクック砲 （リロード：遅い） で<BR>
+      LV2拡散弾をリロードする場合<BR>
+      　　装填速度スキルなし<BR>
+      　　　　9−（0＋0）＝9　⇒　遅い<BR>
+      　　装填速度+2スキルあり<BR>
+      　　　　9−（0＋2）＝7　⇒　普通<BR>
+      <BR>
+      <BR>
+      繚乱の対弩 （リロード：やや速い） で<BR>
+      LV2拡散弾をリロードする場合<BR>
+      　　装填速度スキルなし<BR>
+      　　　　9−（3＋0）＝6　⇒　普通<BR>
+      　　装填速度+2スキルあり<BR>
+      　　　　9−（3＋2）＝4　⇒　速い<BR>
+      </TD>
+      <TD class="tb-cell0" valign="top" colspan="2"><B>リロード速度一覧</B><BR>
+      <TABLE border="1" cellspacing="0" cellpadding="2" class="cnt-tb2">
+        <TBODY>
+          <TR>
+            <TD class="tb-th2" width="100" rowspan="2">弾名</TD>
+            <TD class="tb-th2" width="65" rowspan="2">弾の<BR>
+            リロード値</TD>
+            <TD class="tb-th2" colspan="11">ボウガンのリロード修正値＋装填速度スキルによる修正値</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th2" width="35">-3</TD>
+            <TD class="tb-th2" width="35">-2</TD>
+            <TD class="tb-th2" width="35">-1</TD>
+            <TD class="tb-th2" width="35">0</TD>
+            <TD class="tb-th2" width="35">1</TD>
+            <TD class="tb-th2" width="35">2</TD>
+            <TD class="tb-th2" width="35">3</TD>
+            <TD class="tb-th2" width="35">4</TD>
+            <TD class="tb-th2" width="35">5</TD>
+            <TD class="tb-th2" width="35">6</TD>
+            <TD class="tb-th2" width="35">7</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">LV1 通常弾</TD>
+            <TD class="tb-cell2">5</TD>
+            <TD class="rb-cell21">遅い</TD>
+            <TD class="rb-cell22">普通</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell23">速い</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">LV2 通常弾</TD>
+            <TD class="tb-cell2">6</TD>
+            <TD class="rb-cell21">遅い</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell22">普通</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell23">速い</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">LV3 通常弾</TD>
+            <TD class="tb-cell2">7</TD>
+            <TD class="rb-cell21">遅い</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell22">普通</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell23">速い</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">LV1 貫通弾</TD>
+            <TD class="tb-cell2">6</TD>
+            <TD class="rb-cell21">遅い</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell22">普通</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell23">速い</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">LV2 貫通弾</TD>
+            <TD class="tb-cell2">7</TD>
+            <TD class="rb-cell21">遅い</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell22">普通</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell23">速い</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">LV3 貫通弾</TD>
+            <TD class="tb-cell2">8</TD>
+            <TD class="rb-cell21">遅い</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell22">普通</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell23">速い</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">LV1 散弾</TD>
+            <TD class="tb-cell2">5</TD>
+            <TD class="rb-cell21">遅い</TD>
+            <TD class="rb-cell22">普通</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell23">速い</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">LV2 散弾</TD>
+            <TD class="tb-cell2">6</TD>
+            <TD class="rb-cell21">遅い</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell22">普通</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell23">速い</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">LV3 散弾</TD>
+            <TD class="tb-cell2">7</TD>
+            <TD class="rb-cell21">遅い</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell22">普通</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell23">速い</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">LV1 徹甲榴弾</TD>
+            <TD class="tb-cell2">7</TD>
+            <TD class="rb-cell21">遅い</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell22">普通</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell23">速い</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">LV2 徹甲榴弾</TD>
+            <TD class="tb-cell2">8</TD>
+            <TD class="rb-cell21">遅い</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell22">普通</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell23">速い</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">LV3 徹甲榴弾</TD>
+            <TD class="tb-cell2">9</TD>
+            <TD class="rb-cell21">遅い</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell22">普通</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell23">速い</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">LV1 拡散弾</TD>
+            <TD class="tb-cell2">8</TD>
+            <TD class="rb-cell21">遅い</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell22">普通</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell23">速い</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">LV2 拡散弾</TD>
+            <TD class="tb-cell2">9</TD>
+            <TD class="rb-cell21">遅い</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell22">普通</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell23">速い</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">LV3 拡散弾</TD>
+            <TD class="tb-cell2">10</TD>
+            <TD class="rb-cell21">遅い</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell22">普通</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell23">速い</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">火炎弾</TD>
+            <TD class="tb-cell2">6</TD>
+            <TD class="rb-cell21">遅い</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell22">普通</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell23">速い</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">水冷弾</TD>
+            <TD class="tb-cell2">6</TD>
+            <TD class="rb-cell21">遅い</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell22">普通</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell23">速い</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">電撃弾</TD>
+            <TD class="tb-cell2">6</TD>
+            <TD class="rb-cell21">遅い</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell22">普通</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell23">速い</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">氷結弾</TD>
+            <TD class="tb-cell2">6</TD>
+            <TD class="rb-cell21">遅い</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell22">普通</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell23">速い</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">滅龍弾</TD>
+            <TD class="tb-cell2">9</TD>
+            <TD class="rb-cell21">遅い</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell22">普通</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell23">速い</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">LV1 回復弾</TD>
+            <TD class="tb-cell2">7</TD>
+            <TD class="rb-cell21">遅い</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell22">普通</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell23">速い</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">LV2 回復弾</TD>
+            <TD class="tb-cell2">9</TD>
+            <TD class="rb-cell21">遅い</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell22">普通</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell23">速い</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">LV1 毒弾</TD>
+            <TD class="tb-cell2">7</TD>
+            <TD class="rb-cell21">遅い</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell22">普通</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell23">速い</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">LV2 毒弾</TD>
+            <TD class="tb-cell2">9</TD>
+            <TD class="rb-cell21">遅い</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell22">普通</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell23">速い</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">LV1 麻痺弾</TD>
+            <TD class="tb-cell2">7</TD>
+            <TD class="rb-cell21">遅い</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell22">普通</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell23">速い</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">LV2 麻痺弾</TD>
+            <TD class="tb-cell2">9</TD>
+            <TD class="rb-cell21">遅い</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell22">普通</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell23">速い</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">LV1 睡眠弾</TD>
+            <TD class="tb-cell2">7</TD>
+            <TD class="rb-cell21">遅い</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell22">普通</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell23">速い</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">LV2 睡眠弾</TD>
+            <TD class="tb-cell2">9</TD>
+            <TD class="rb-cell21">遅い</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell22">普通</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell23">速い</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">捕獲用麻酔弾</TD>
+            <TD class="tb-cell2">8</TD>
+            <TD class="rb-cell21">遅い</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell22">普通</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell23">速い</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">ペイント弾</TD>
+            <TD class="tb-cell2">7</TD>
+            <TD class="rb-cell21">遅い</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell22">普通</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell23">速い</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">鬼人弾</TD>
+            <TD class="tb-cell2">7</TD>
+            <TD class="rb-cell21">遅い</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell22">普通</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell23">速い</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">硬化弾</TD>
+            <TD class="tb-cell2">7</TD>
+            <TD class="rb-cell21">遅い</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell22">普通</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell23">速い</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+          </TR>
+        </TBODY>
+      </TABLE>
+      </TD>
+    </TR>
+    <TR>
+      <TD height="30"></TD>
+      <TD></TD>
+      <TD class="tb-cell0"></TD>
+    </TR>
+    <TR>
+      <TD colspan="3" class="zb-cell0">●　<B>発射時の反動</B></TD>
+    </TR>
+    <TR>
+      <TD></TD>
+      <TD class="tb-cell0"></TD>
+      <TD class="tb-cell0"></TD>
+    </TR>
+    <TR>
+      <TD valign="top" class="tb-cell0">
+      <TABLE border="1" cellspacing="0" cellpadding="2" class="cnt-tb2">
+        <TBODY>
+          <TR>
+            <TD class="tb-th2" width="110">発射反動値</TD>
+            <TD class="tb-th2" width="100">モーション</TD>
+          </TR>
+          <TR>
+            <TD class="tb-cell2">０ 〜 ８</TD>
+            <TD class="tb-cell2">反動小 （26）</TD>
+          </TR>
+          <TR>
+            <TD class="tb-cell2">９ 〜 １０</TD>
+            <TD class="tb-cell2">反動中 （56）</TD>
+          </TR>
+          <TR>
+            <TD class="tb-cell2">１１ 〜 １４</TD>
+            <TD class="tb-cell2">反動大 （72）</TD>
+          </TR>
+        </TBODY>
+      </TABLE>
+      </TD>
+      <TD class="tb-cell0" valign="top" colspan="2">弾を発射した際に生ずる反動は、次の計算式の結果によって、左表で示すように３段階に分かれます。<BR>
+      <BR>
+      　　　弾の反動値 − （ボウガンの反動修正値 ＋ 反動軽減スキルによる修正値） ＝ 発射反動値<BR>
+      <BR>
+      モーション欄の （） の中の値は、反動が収まるまでに要するフレーム数です。（30フレーム＝１秒）<BR>
+      <BR>
+      なお、連射スキルが発動している場合、２つの修正値は０となり、弾の反動値がそのまま発射反動値となります。<BR>
+      従って、ほとんどの弾はスキルがない場合より反動が大きくなってしまいます。</TD>
+    </TR>
+    <TR>
+      <TD height="15"></TD>
+      <TD class="tb-cell0"></TD>
+      <TD class="tb-cell0"></TD>
+    </TR>
+    <TR>
+      <TD valign="top" class="tb-cell0"><B>ボウガンの反動修正値</B>
+      <TABLE border="1" cellspacing="0" cellpadding="2" class="cnt-tb2">
+        <TBODY>
+          <TR>
+            <TD class="tb-th2" width="120">反動</TD>
+            <TD class="tb-th2" width="90">修正値</TD>
+          </TR>
+          <TR>
+            <TD class="tb-cell2">中</TD>
+            <TD class="tb-cell2">２</TD>
+          </TR>
+          <TR>
+            <TD class="tb-cell2">やや小</TD>
+            <TD class="tb-cell2">３</TD>
+          </TR>
+        </TBODY>
+      </TABLE>
+      <BR>
+      <B>反動軽減スキルによる修正値</B>
+      <TABLE border="1" cellspacing="0" cellpadding="2" class="cnt-tb2">
+        <TBODY>
+          <TR>
+            <TD class="tb-th2" width="120">スキル</TD>
+            <TD class="tb-th2" width="90">修正値</TD>
+          </TR>
+          <TR>
+            <TD class="tb-cell2">スキルなし</TD>
+            <TD class="tb-cell2">０</TD>
+          </TR>
+          <TR>
+            <TD class="tb-cell2">反動軽減+1</TD>
+            <TD class="tb-cell2">２</TD>
+          </TR>
+          <TR>
+            <TD class="tb-cell2">反動軽減+2</TD>
+            <TD class="tb-cell2">４</TD>
+          </TR>
+        </TBODY>
+      </TABLE>
+      <BR>
+      <BR>
+      <B>例：</B><BR>
+      超イャンクック砲 （反動：中） で<BR>
+      LV2毒弾を発射した場合<BR>
+      　　反動軽減スキルなし<BR>
+      　　　　13−（2＋0）＝11　⇒　反動大<BR>
+      　　反動軽減+1スキルあり<BR>
+      　　　　13−（2＋2）＝ 9　⇒　反動中<BR>
+      <BR>
+      <BR>
+      老山龍砲・覇 （反動：やや小） で<BR>
+      LV2毒弾を発射した場合<BR>
+      　　反動軽減スキルなし<BR>
+      　　　　13−（3＋0）＝10　⇒　反動中<BR>
+      　　反動軽減+1スキルあり<BR>
+      　　　　13−（3＋2）＝ 8　⇒　反動小<BR>
+      </TD>
+      <TD class="tb-cell0" valign="top" colspan="2"><B>反動一覧</B><BR>
+      <TABLE border="1" cellspacing="0" cellpadding="2" class="cnt-tb2">
+        <TBODY>
+          <TR>
+            <TD class="tb-th2" width="100" rowspan="2">弾名</TD>
+            <TD class="tb-th2" width="65" rowspan="2">弾の<BR>
+            反動値</TD>
+            <TD class="tb-th2" colspan="8">ボウガンの反動修正値＋反動軽減スキルによる修正値</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th2" width="50">0</TD>
+            <TD class="tb-th2" width="50">1</TD>
+            <TD class="tb-th2" width="50">2</TD>
+            <TD class="tb-th2" width="50">3</TD>
+            <TD class="tb-th2" width="50">4</TD>
+            <TD class="tb-th2" width="50">5</TD>
+            <TD class="tb-th2" width="50">6</TD>
+            <TD class="tb-th2" width="50">7</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">LV1 通常弾</TD>
+            <TD class="tb-cell2">8</TD>
+            <TD class="rb-cell23">小</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">LV2 通常弾</TD>
+            <TD class="tb-cell2">9</TD>
+            <TD class="rb-cell22">中</TD>
+            <TD class="rb-cell23">小</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">LV3 通常弾</TD>
+            <TD class="tb-cell2">10</TD>
+            <TD class="rb-cell22">中</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell23">小</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">LV1 貫通弾</TD>
+            <TD class="tb-cell2">10</TD>
+            <TD class="rb-cell22">中</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell23">小</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">LV2 貫通弾</TD>
+            <TD class="tb-cell2">10</TD>
+            <TD class="rb-cell22">中</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell23">小</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">LV3 貫通弾</TD>
+            <TD class="tb-cell2">11</TD>
+            <TD class="rb-cell21">大</TD>
+            <TD class="rb-cell22">中</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell23">小</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">LV1 散弾</TD>
+            <TD class="tb-cell2">10</TD>
+            <TD class="rb-cell22">中</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell23">小</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">LV2 散弾</TD>
+            <TD class="tb-cell2">10</TD>
+            <TD class="rb-cell22">中</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell23">小</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">LV3 散弾</TD>
+            <TD class="tb-cell2">11</TD>
+            <TD class="rb-cell21">大</TD>
+            <TD class="rb-cell22">中</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell23">小</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">LV1 徹甲榴弾</TD>
+            <TD class="tb-cell2">11</TD>
+            <TD class="rb-cell21">大</TD>
+            <TD class="rb-cell22">中</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell23">小</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">LV2 徹甲榴弾</TD>
+            <TD class="tb-cell2">12</TD>
+            <TD class="rb-cell21">大</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell22">中</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell23">小</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">LV3 徹甲榴弾</TD>
+            <TD class="tb-cell2">13</TD>
+            <TD class="rb-cell21">大</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell22">中</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell23">小</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">LV1 拡散弾</TD>
+            <TD class="tb-cell2">13</TD>
+            <TD class="rb-cell21">大</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell22">中</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell23">小</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">LV2 拡散弾</TD>
+            <TD class="tb-cell2">14</TD>
+            <TD class="rb-cell21">大</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell22">中</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell23">小</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">LV3 拡散弾</TD>
+            <TD class="tb-cell2">14</TD>
+            <TD class="rb-cell21">大</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell22">中</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell23">小</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">火炎弾</TD>
+            <TD class="tb-cell2">10</TD>
+            <TD class="rb-cell22">中</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell23">小</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">水冷弾</TD>
+            <TD class="tb-cell2">10</TD>
+            <TD class="rb-cell22">中</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell23">小</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">電撃弾</TD>
+            <TD class="tb-cell2">10</TD>
+            <TD class="rb-cell22">中</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell23">小</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">氷結弾</TD>
+            <TD class="tb-cell2">10</TD>
+            <TD class="rb-cell22">中</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell23">小</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">滅龍弾</TD>
+            <TD class="tb-cell2">13</TD>
+            <TD class="rb-cell21">大</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell22">中</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell23">小</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">LV1 回復弾</TD>
+            <TD class="tb-cell2">11</TD>
+            <TD class="rb-cell21">大</TD>
+            <TD class="rb-cell22">中</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell23">小</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">LV2 回復弾</TD>
+            <TD class="tb-cell2">13</TD>
+            <TD class="rb-cell21">大</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell22">中</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell23">小</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">LV1 毒弾</TD>
+            <TD class="tb-cell2">11</TD>
+            <TD class="rb-cell21">大</TD>
+            <TD class="rb-cell22">中</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell23">小</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">LV2 毒弾</TD>
+            <TD class="tb-cell2">13</TD>
+            <TD class="rb-cell21">大</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell22">中</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell23">小</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">LV1 麻痺弾</TD>
+            <TD class="tb-cell2">11</TD>
+            <TD class="rb-cell21">大</TD>
+            <TD class="rb-cell22">中</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell23">小</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">LV2 麻痺弾</TD>
+            <TD class="tb-cell2">13</TD>
+            <TD class="rb-cell21">大</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell22">中</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell23">小</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">LV1 睡眠弾</TD>
+            <TD class="tb-cell2">11</TD>
+            <TD class="rb-cell21">大</TD>
+            <TD class="rb-cell22">中</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell23">小</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">LV2 睡眠弾</TD>
+            <TD class="tb-cell2">13</TD>
+            <TD class="rb-cell21">大</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell21">&nbsp;</TD>
+            <TD class="rb-cell22">中</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell23">小</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">捕獲用麻酔弾</TD>
+            <TD class="tb-cell2">11</TD>
+            <TD class="rb-cell21">大</TD>
+            <TD class="rb-cell22">中</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell23">小</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">ペイント弾</TD>
+            <TD class="tb-cell2">11</TD>
+            <TD class="rb-cell21">大</TD>
+            <TD class="rb-cell22">中</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell23">小</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">鬼人弾</TD>
+            <TD class="tb-cell2">11</TD>
+            <TD class="rb-cell21">大</TD>
+            <TD class="rb-cell22">中</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell23">小</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+          </TR>
+          <TR>
+            <TD class="tb-th5">硬化弾</TD>
+            <TD class="tb-cell2">11</TD>
+            <TD class="rb-cell21">大</TD>
+            <TD class="rb-cell22">中</TD>
+            <TD class="rb-cell22">&nbsp;</TD>
+            <TD class="rb-cell23">小</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+            <TD class="rb-cell23">&nbsp;</TD>
+          </TR>
+        </TBODY>
+      </TABLE>
+      </TD>
+    </TR>
+    <TR>
+      <TD height="30"></TD>
+      <TD></TD>
+      <TD class="tb-cell0"></TD>
+    </TR>
+    <TR>
+      <TD colspan="3" class="zb-cell0">●　<B>飛距離による基本威力修正</B></TD>
+    </TR>
+    <TR>
+      <TD></TD>
+      <TD class="tb-cell0"></TD>
+      <TD class="tb-cell0"></TD>
+    </TR>
+    <TR>
+      <TD valign="top" class="tb-cell0" height="25"></TD>
+      <TD class="tb-cell0" valign="top" colspan="2">通常弾・貫通弾・徹甲榴弾の３種は、発射後の飛距離に伴って基本威力が変化します。<BR>
+      <BR>
+      　　通常弾は、発射後 1.5倍 ⇒ 1.0倍　⇒ 0.8倍 ⇒ 0.5倍　のように変化<BR>
+      　　貫通弾と徹甲榴弾は、発射後 1.0倍 ⇒ 1.5倍 ⇒ 1.0倍 ⇒ 0.8倍 ⇒ 0.5倍　のように変化<BR>
+      <BR>
+      下のグラフは、時間経過に伴う威力の変化を表したものです。ボウガンや加工レベル等によって<BR>
+      弾の速度には違いがあるので、下のグラフは弾の速度によって補正がかけられます。<BR>
+      弾の速度が早いほどグラフが横方向に圧縮され、遅いほど伸張されるといった要領です。<BR>
+      ちなみに、ヘビィボウガンはライトボウガンより弾の速度が早いものが多いです。<BR>
+      <BR>
+      補正によって、時間的に見た場合は、弾の速度が早いほど高威力を発揮する時間帯が短くなりますが、<BR>
+      距離的に見た場合は、どのボウガンやどの加工レベルでも、高威力を発揮する距離はほぼ等しくなります。<BR>
+      したがって、その距離さえ把握しておけば、どのボウガンでも同じ距離で高威力を発揮させることができます。<BR>
+      <BR>
+      上記３種の弾以外は、飛距離に伴って基本威力が変化することはありません。<BR>
+      また、各種属性弾も、飛距離に伴って属性値が変化することはありません。<BR>
+      </TD>
+    </TR>
+    <TR>
+      <TD height="10"></TD>
+      <TD class="tb-cell0"></TD>
+      <TD class="tb-cell0"></TD>
+    </TR>
+    <TR>
+      <TD colspan="3" align="center"><IMG src="./images/bullet.gif" width="810" height="202" border="0"></TD>
+    </TR>
+    <TR>
+      <TD height="30"></TD>
+      <TD></TD>
+      <TD class="tb-cell0"></TD>
+    </TR>
+    <TR>
+      <TD colspan="3" class="zb-cell0">●　<B>スキルによる基本威力・属性値修正</B></TD>
+    </TR>
+    <TR>
+      <TD></TD>
+      <TD class="tb-cell0"></TD>
+      <TD class="tb-cell0"></TD>
+    </TR>
+    <TR>
+      <TD valign="top" class="tb-cell0" height="25">
+      <TABLE border="1" cellspacing="0" cellpadding="2" class="cnt-tb2">
+        <TBODY>
+          <TR>
+            <TD class="tb-th2" width="110">スキル</TD>
+            <TD class="tb-th2" width="115">効果</TD>
+          </TR>
+          <TR>
+            <TD class="tb-cell2">通常弾攻撃力UP</TD>
+            <TD class="tb-cell2">通常弾の<BR>
+            威力が 1.1倍</TD>
+          </TR>
+          <TR>
+            <TD class="tb-cell2">貫通弾攻撃力UP</TD>
+            <TD class="tb-cell2">貫通弾の<BR>
+            威力が 1.1倍</TD>
+          </TR>
+          <TR>
+            <TD class="tb-cell2">散弾攻撃力UP</TD>
+            <TD class="tb-cell2">散弾の<BR>
+            威力が 1.3倍</TD>
+          </TR>
+          <TR>
+            <TD class="tb-cell2">状態異常攻撃強化</TD>
+            <TD class="tb-cell2">状態異常属性弾の<BR>
+            属性値が 1.125倍</TD>
+          </TR>
+        </TBODY>
+      </TABLE>
+      </TD>
+      <TD class="tb-cell0" valign="top" colspan="2">左表で示すスキルが発動していると、弾の威力や属性値が増加します。</TD>
+    </TR>
+    <TR>
+      <TD height="30"></TD>
+      <TD></TD>
+      <TD class="tb-cell0"></TD>
+    </TR>
+    <TR>
+      <TD colspan="3" class="zb-cell0">●　<B>会心率</B></TD>
+    </TR>
+    <TR>
+      <TD></TD>
+      <TD class="tb-cell0"></TD>
+      <TD class="tb-cell0"></TD>
+    </TR>
+    <TR>
+      <TD valign="top" class="tb-cell0"></TD>
+      <TD class="tb-cell0" valign="top" colspan="2">ボウガンには会心率が設定されているものがあります。<BR>
+      会心率とは、クリティカルヒットが出る確率です。クリティカルヒットが出た場合、基本威力が 1.25倍になります。<BR>
+      心眼、見切り+1、見切り+2スキルがあると、会心率がそれぞれ 5％、10％、15％アップします。<BR>
+      <BR>
+      会心率がマイナス値の場合、逆に威力が落ちる確率となります。<BR>
+      落ちた場合は、基本威力が 0.5倍になってしまいます。</TD>
+    </TR>
+    <TR>
+      <TD height="30"></TD>
+      <TD></TD>
+      <TD class="tb-cell0"></TD>
+    </TR>
+    <TR>
+      <TD colspan="3" class="zb-cell0">●　<B>与えるダメージの増大</B></TD>
+    </TR>
+    <TR>
+      <TD></TD>
+      <TD class="tb-cell0"></TD>
+      <TD class="tb-cell0"></TD>
+    </TR>
+    <TR>
+      <TD valign="top" class="tb-cell0">
+      <TABLE border="1" cellspacing="0" cellpadding="2" class="cnt-tb2">
+        <TBODY>
+          <TR>
+            <TD class="tb-th2" width="170">状態</TD>
+            <TD class="tb-th2" width="45">倍率</TD>
+          </TR>
+          <TR>
+            <TD class="tb-cell1">麻痺状態中</TD>
+            <TD class="tb-cell3">1.1倍&nbsp;</TD>
+          </TR>
+          <TR>
+            <TD class="tb-cell1">岩に擬態中　（バサルモス）</TD>
+            <TD class="tb-cell3">1.1倍&nbsp;</TD>
+          </TR>
+          <TR>
+            <TD class="tb-cell1">落とし穴　（落ちてから<BR>
+            もがき始めるまでの間のみ）</TD>
+            <TD class="tb-cell3">1.1倍&nbsp;</TD>
+          </TR>
+          <TR>
+            <TD class="tb-cell1">睡眠中　（初撃のみ）</TD>
+            <TD class="tb-cell3">3.0倍&nbsp;</TD>
+          </TR>
+        </TBODY>
+      </TABLE>
+      </TD>
+      <TD class="tb-cell0" valign="top" colspan="2">モンスターが特定の状態の時に攻撃すると、左表のように与えるダメージが増大します。<BR>
+      これらの倍率は、基本威力に乗算されます。<BR>
+      ちなみに、今作では、麻痺状態中は常時ダメージが増大します。<BR>
+      シビレ罠にかかっている時は麻痺状態ではなくシビレ状態なので、増大はしません。</TD>
+    </TR>
+    <TR>
+      <TD height="30"></TD>
+      <TD></TD>
+      <TD class="tb-cell0"></TD>
+    </TR>
+    <TR>
+      <TD colspan="3" class="zb-cell0">●　<B>肉質と全体防御率によるダメージ軽減</B></TD>
+    </TR>
+    <TR>
+      <TD></TD>
+      <TD class="tb-cell0"></TD>
+      <TD class="tb-cell0"></TD>
+    </TR>
+    <TR>
+      <TD valign="top" class="tb-cell0"></TD>
+      <TD class="tb-cell0" valign="top" colspan="2">ここまでの計算結果が、モンスターに与えるべきダメージとなりますが、<BR>
+      モンスターには肉質というものが設定されており、ダメージを軽減してしまいます。（爆発・状態異常属性弾を除く）<BR>
+      通常ダメージ、属性ダメージそれぞれが肉質によって軽減されます。<BR>
+      軽減率はモンスターの部位によって異なります。詳細は、<A href="./monslist/index.html">モンスターデータ</A>の肉質の項を参照してください。<BR>
+      <BR>
+      肉質で軽減された通常ダメージと属性ダメージの合計が、最終的にモンスターへ与える総ダメージ値となりますが、<BR>
+      モンスターには肉質とは別に全体の防御率が設定されています。<BR>
+      全体防御率は、シングルモードではほとんど100％（つまり軽減なし）ですが、ネットワークモード、さらには<BR>
+      上位クラスに行くほど軽減率が高くなり、総ダメージ値を軽減してしまいます。<BR>
+      <BR>
+      モンスターが怒り状態になると、全体防御率がおよそ 1.2倍ほどにアップし、ますますダメージが軽減されます。<BR>
+      （アップする量はモンスターによって異なります）</TD>
+    </TR>
+    <TR>
+      <TD height="30"></TD>
+      <TD></TD>
+      <TD class="tb-cell0"></TD>
+    </TR>
+    <TR>
+      <TD colspan="3" class="zb-cell0">●　<B>プレイヤーの攻撃力アップ</B></TD>
+    </TR>
+    <TR>
+      <TD></TD>
+      <TD class="tb-cell0"></TD>
+      <TD class="tb-cell0"></TD>
+    </TR>
+    <TR>
+      <TD valign="top" class="tb-cell0">
+      <TABLE border="1" cellspacing="0" cellpadding="2" class="cnt-tb2">
+        <TBODY>
+          <TR>
+            <TD class="tb-th2" width="154">攻撃力アップの手段</TD>
+            <TD class="tb-th2" width="70">武器倍率<BR>
+            アップ量</TD>
+          </TR>
+          <TR>
+            <TD class="tb-cell1">攻撃力UP【小】スキル</TD>
+            <TD class="tb-cell2">3</TD>
+          </TR>
+          <TR>
+            <TD class="tb-cell1">攻撃力UP【中】スキル</TD>
+            <TD class="tb-cell2">5</TD>
+          </TR>
+          <TR>
+            <TD class="tb-cell1">攻撃力UP【大】スキル</TD>
+            <TD class="tb-cell2">10</TD>
+          </TR>
+          <TR>
+            <TD class="tb-cell1">力の護符を所持</TD>
+            <TD class="tb-cell2">6</TD>
+          </TR>
+          <TR>
+            <TD class="tb-cell1">力の爪を所持</TD>
+            <TD class="tb-cell2">9</TD>
+          </TR>
+          <TR>
+            <TD class="tb-cell1">食事効果</TD>
+            <TD class="tb-cell2">3または5</TD>
+          </TR>
+          <TR>
+            <TD class="tb-cell1">鬼人薬</TD>
+            <TD class="tb-cell2">3</TD>
+          </TR>
+          <TR>
+            <TD class="tb-cell1">鬼人薬グレート</TD>
+            <TD class="tb-cell2">5</TD>
+          </TR>
+          <TR>
+            <TD class="tb-cell1">怪力の種 (180秒)</TD>
+            <TD class="tb-cell2">10</TD>
+          </TR>
+          <TR>
+            <TD class="tb-cell1">怪力の丸薬 (21秒)</TD>
+            <TD class="tb-cell2">25</TD>
+          </TR>
+          <TR>
+            <TD class="tb-cell1">鬼人笛 (180秒)</TD>
+            <TD class="tb-cell2">10</TD>
+          </TR>
+        </TBODY>
+      </TABLE>
+      </TD>
+      <TD class="tb-cell0" valign="top" colspan="2">プレイヤーの攻撃力をアップする手段はいろいろありますが、大別して３つのグループに分けられます。<BR>
+      <BR>
+      　　１：攻撃力アップのスキル発動、攻撃力をアップするアイテムの所持（力の護符・力の爪）<BR>
+      　　２：食事効果によるアップ、鬼人薬・鬼人薬グレートの使用<BR>
+      　　３：怪力の種・怪力の丸薬・鬼人笛の使用<BR>
+      <BR>
+      グループ１は、クエスト中に力尽きても効力が失われることはありません。<BR>
+      グループ２は、クエスト中はずっと有効ですが、力尽きると効力が失われます。<BR>
+      グループ３は、一定の時間が経過すると、効力が失われます。<BR>
+      <BR>
+      それぞれの武器倍率アップ量は、左表のとおりです。<BR>
+      <BR>
+      グループ２と３は、グループ内の各効果が重複することはありません。重複した場合は、順番にかかわらず<BR>
+      効果の大きいものが優先されます。<BR>
+      <BR>
+      例えば、食事効果で武器倍率が５上昇した状態で鬼人薬を使用しても、武器倍率上昇量は５のままです。<BR>
+      しかし、食事効果で武器倍率が３上昇した状態で鬼人薬グレートを使用した場合は、上昇量が５になります。</TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<BR>
+<BR>
+Last update : 2011/11/05<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+
+
+</BODY>
+</HTML>
