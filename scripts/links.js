@@ -1,4 +1,4 @@
-
+﻿
 urlSuffix = new String("");
 html = new String("");
 
@@ -24,7 +24,7 @@ function ShowLinks(level, kind)
     str1 = "<A href=\"" + urlSuffix + "monslist/index.html\" target=\"_top\">";
     str2 = "</A>";
   }
-  html += str1 + "モンスターデータ" + str2;
+  html += str1 + "怪物データ" + str2;
 
   str1 = "";
   str2 = "";
@@ -32,7 +32,7 @@ function ShowLinks(level, kind)
     str1 = "<A href=\"" + urlSuffix + "monslist/monslevel.html\" target=\"_top\">";
     str2 = "</A>";
   }
-  html += "　　" + str1 + "モンスターレベル" + str2;
+  html += "　　" + str1 + "怪物レベル" + str2;
 
   str1 = "";
   str2 = "";
@@ -40,7 +40,7 @@ function ShowLinks(level, kind)
     str1 = "<A href=\"" + urlSuffix + "stpickmap/index.html\" target=\"_top\">";
     str2 = "</A>";
 //  }
-  html += "　　" + str1 + "採取・発掘マップ" + str2;
+  html += "　　" + str1 + "采取・発掘マップ" + str2;
 
   str1 = "";
   str2 = "";

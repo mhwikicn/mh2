@@ -1,4 +1,4 @@
-//************************************************************
+﻿//************************************************************
 //************************************************************
 //************************************************************
 //************************************************************
@@ -213,7 +213,7 @@ function ShowItemDetail()
   if (no > 0x031d)  return;
 
 //****************************************************************
-//採取
+//采取
 
   hitemsaishu0.innerHTML = FormatSaishu(itemsaishu0[no], 0);
   hitemsaishu1.innerHTML = FormatSaishu(itemsaishu1[no], 0);
@@ -224,7 +224,7 @@ function ShowItemDetail()
 
 
 //****************************************************************
-//剥ぎ取り
+//剥取
 
   hitemhagi0.innerHTML = FormatHagi(itemhagi0[no]);
   hitemhagi1.innerHTML = FormatHagi(itemhagi1[no]);
@@ -241,7 +241,7 @@ function ShowItemDetail()
 //  0-0:  識別子  M:２種調合  X:３種調合
 //                J:爺さん    K:マカ壷
 //                S:ただの文字列 1-3:文字列の長さ 4-:文字列
-//                G:(ドス)大食いマグロ食べた結果出現するか
+//                G:(ドス)贪吃金枪鱼食べた結果出現するか
   data = itemchogo[no];
   html = "";
   ic = 0;
@@ -293,7 +293,7 @@ function ShowItemDetail()
 
     } else if (yflag == "G") {
       html += FormatItemName(data.substring(ic+1,ic+4));
-      html += " を食べて体力が回復しなかった場合、";
+      html += " を食べて体力が回复しなかった場合、";
       html += Number(data.substring(ic+4,ic+7)) + "％の確率で入手";
       ic = ic + 7;
 
@@ -390,7 +390,7 @@ function ShowItemDetail()
 //  0-0:  識別子  M:２種調合  X:３種調合
 //                J:爺さん
 //                S:ただの文字列 1-3:文字列の長さ 4-:文字列
-//                G:(ドス)大食いマグロ食べた結果出現するアイテム
+//                G:(ドス)贪吃金枪鱼食べた結果出現するアイテム
 
   data = itemyoto1[no];
   html = "";
@@ -447,8 +447,8 @@ function ShowItemDetail()
       html += " になる";
       ic = ic + 7;
 
-    } else if (yflag == "G") {				//(ドス)大食いマグロ食べた結果出現するアイテム
-      html += "食べて体力が回復しなかった場合、";
+    } else if (yflag == "G") {				//(ドス)贪吃金枪鱼食べた結果出現するアイテム
+      html += "食べて体力が回复しなかった場合、";
       html += Number(data.substring(ic+1,ic+4)) + "％の確率で ";
       html += FormatItemName(data.substring(ic+4,ic+7));
       html += " が出現";
@@ -531,7 +531,7 @@ function FormatSoshName(tdata)
 
 
 //****************************************************************
-//  採取発掘用のhtml構文生成
+//  采取発掘用のhtml構文生成
 //  0-1:  マップ番号
 //  2-3:  エリア番号 (00:BC  15:隠し)
 //  4-5:  ポイント番号
@@ -572,8 +572,8 @@ function FormatSaishu(tdata, tcla)
 }
 
 //****************************************************************
-//  剥ぎ取り用のhtml構文生成
-//  0-1:  モンスターコード
+//  剥取用のhtml構文生成
+//  0-1:  怪物コード
 //  2-2:  種類(0:本体 1:尻尾 2:落し物 3:背中 4:(キング) 5:落し物 1 6:落し物 2 7:落し物 3)
 //  3-5:  確率
 //****************************************************************
@@ -590,21 +590,21 @@ function FormatHagi(tdata)
     thtml += monsName[monsNo] + "</A>";
 
     if (kind == 0) {
-      thtml += " から剥ぎ取り";
+      thtml += " から剥取";
     } else if (kind == 1) {
-      thtml += " の尻尾から剥ぎ取り";
+      thtml += " の尻尾から剥取";
     } else if (kind == 2) {
-      thtml += " の落し物を採取";
+      thtml += " の落し物を采取";
     } else if (kind == 3) {
-      thtml += " の背中から剥ぎ取り";
+      thtml += " の背中から剥取";
     } else if (kind == 4) {
-      thtml += "（キング） から剥ぎ取り";
+      thtml += "（キング） から剥取";
     } else if (kind == 5) {
-      thtml += " の落し物１を採取";
+      thtml += " の落し物１を采取";
     } else if (kind == 6) {
-      thtml += " の落し物２を採取";
+      thtml += " の落し物２を采取";
     } else if (kind == 7) {
-      thtml += " の落し物３を採取";
+      thtml += " の落し物３を采取";
     }
     thtml += "　（" + prob + "％）";
   }
