@@ -24,7 +24,7 @@ function ShowLinks(level, kind)
     str1 = "<A href=\"" + urlSuffix + "monslist/index.html\" target=\"_top\">";
     str2 = "</A>";
   }
-  html += str1 + "怪物データ" + str2;
+  html += str1 + "怪物数据" + str2;
 
   str1 = "";
   str2 = "";
@@ -32,7 +32,7 @@ function ShowLinks(level, kind)
     str1 = "<A href=\"" + urlSuffix + "monslist/monslevel.html\" target=\"_top\">";
     str2 = "</A>";
   }
-  html += "　　" + str1 + "怪物レベル" + str2;
+  html += "　　" + str1 + "怪物等级" + str2;
 
   str1 = "";
   str2 = "";
@@ -40,7 +40,7 @@ function ShowLinks(level, kind)
     str1 = "<A href=\"" + urlSuffix + "stpickmap/index.html\" target=\"_top\">";
     str2 = "</A>";
 //  }
-  html += "　　" + str1 + "采取・発掘マップ" + str2;
+  html += "　　" + str1 + "采取・发掘地图" + str2;
 
   str1 = "";
   str2 = "";
@@ -48,7 +48,7 @@ function ShowLinks(level, kind)
     str1 = "<A href=\"" + urlSuffix + "evquest/index.html\" target=\"_top\">";
     str2 = "</A>";
   }
-  html += "<BR>" + str1 + "イベントクエスト" + str2;
+  html += "<BR>" + str1 + "活动任务" + str2;
 
   str1 = "";
   str2 = "";
@@ -56,7 +56,7 @@ function ShowLinks(level, kind)
     str1 = "<A href=\"" + urlSuffix + "onquest/index.html\" target=\"_top\">";
     str2 = "</A>";
   }
-  html += "　　" + str1 + "オンラインクエスト" + str2;
+  html += "　　" + str1 + "在线任务" + str2;
 
   str1 = "";
   str2 = "";
@@ -64,7 +64,7 @@ function ShowLinks(level, kind)
     str1 = "<A href=\"" + urlSuffix + "offquest/index.html\" target=\"_top\">";
     str2 = "</A>";
   }
-  html += "　　" + str1 + "オフラインクエスト" + str2;
+  html += "　　" + str1 + "离线任务" + str2;
 
   str1 = "";
   str2 = "";
@@ -72,7 +72,7 @@ function ShowLinks(level, kind)
     str1 = "<A href=\"" + urlSuffix + "bugu/sword.html\" target=\"_top\">";
     str2 = "</A>";
   }
-  html += "<BR>" + str1 + "武器一覧" + str2;
+  html += "<BR>" + str1 + "武器一览" + str2;
 
   str1 = "";
   str2 = "";
@@ -80,7 +80,7 @@ function ShowLinks(level, kind)
     str1 = "<A href=\"" + urlSuffix + "bugu/head.html\" target=\"_top\">";
     str2 = "</A>";
   }
-  html += "　" + str1 + "防具一覧" + str2;
+  html += "　" + str1 + "防具一览" + str2;
 
   str1 = "";
   str2 = "";
@@ -88,7 +88,7 @@ function ShowLinks(level, kind)
     str1 = "<A href=\"" + urlSuffix + "bugu/soushoku.html\" target=\"_top\">";
     str2 = "</A>";
   }
-  html += "　" + str1 + "装飾品一覧" + str2;
+  html += "　" + str1 + "装饰品一览" + str2;
 
   str1 = "";
   str2 = "";
@@ -96,7 +96,7 @@ function ShowLinks(level, kind)
     str1 = "<A href=\"" + urlSuffix + "items/index.html\" target=\"_top\">";
     str2 = "</A>";
   }
-  html += "　" + str1 + "アイテム一覧" + str2;
+  html += "　" + str1 + "物品一览" + str2;
 
   str1 = "";
   str2 = "";
@@ -104,7 +104,7 @@ function ShowLinks(level, kind)
     str1 = "<A href=\"" + urlSuffix + "skill/index.html\" target=\"_top\">";
     str2 = "</A>";
   }
-  html += "　" + str1 + "スキル一覧" + str2;
+  html += "　" + str1 + "技能一览" + str2;
 
   str1 = "";
   str2 = "";
@@ -112,7 +112,7 @@ function ShowLinks(level, kind)
     str1 = "<A href=\"" + urlSuffix + "mixlist.html\" target=\"_top\">";
     str2 = "</A>";
   }
-  html += "<BR>" + str1 + "調合リスト" + str2;
+  html += "<BR>" + str1 + "调合列表" + str2;
 
   str1 = "";
   str2 = "";
@@ -120,7 +120,7 @@ function ShowLinks(level, kind)
     str1 = "<A href=\"" + urlSuffix + "jisanlist.html\" target=\"_top\">";
     str2 = "</A>";
   }
-  html += "　　" + str1 + "爺交換リスト" + str2;
+  html += "　　" + str1 + "山菜爷交换列表" + str2;
 
   str1 = "";
   str2 = "";
@@ -128,7 +128,7 @@ function ShowLinks(level, kind)
     str1 = "<A href=\"" + urlSuffix + "shokuji/ondan.html\" target=\"_top\">";
     str2 = "</A>";
   }
-  html += "　　" + str1 + "食事効果一覧" + str2;
+  html += "　　" + str1 + "料理效果一览" + str2;
 
   str1 = "";
   str2 = "";
@@ -136,13 +136,13 @@ function ShowLinks(level, kind)
     str1 = "<A href=\"" + urlSuffix + "villagepeople.html\" target=\"_top\">";
     str2 = "</A>";
   }
-  html += "　　" + str1 + "村人との交流" + str2;
+  html += "　　" + str1 + "村民的交流" + str2;
 
 
 
   str1 = "<A href=\"" + urlSuffix + "index.html\" target=\"_top\">";
   str2 = "</A>";
-  html += "　　　　" + str1 + "トップ" + str2;
+  html += "　　" + str1 + "回到首页" + str2;
 
   links.innerHTML = html;
 
