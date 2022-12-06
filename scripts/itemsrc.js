@@ -366,7 +366,7 @@ function ShowItemDetail()
       } else if (yflag == 1) {
         html += " への強化に必要";
       } else if (yflag >= 2) {
-        html += " レベル" + yflag + " へのレベルアップに必要";
+        html += " 等级" + yflag + " 的升级所必要";
       }
       html += "　（" + Number(data.substring(ic+6,ic+8)) + "個）<BR>";
 
@@ -632,9 +632,9 @@ function FormatHoushu(tdata)
     if (tqno < 500) {					//通常のクエスト
       tqnm = quename[tqno];
       if (tqnm.charAt(0) == 0) {
-        thtml += "オフ☆";
+        thtml += "离线☆";
       } else {
-        thtml += "オン★";
+        thtml += "线上★";
       }
       thtml += tqnm.charAt(1) + " ";
 
