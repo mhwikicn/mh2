@@ -4,7 +4,7 @@
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <META name="GENERATOR" content="IBM WebSphere Studio Homepage Builder Version 9.0.3.0 for Windows">
 <META http-equiv="Content-Style-Type" content="text/css">
-<TITLE>怪物猎人２解析情报　プレイヤーが受けるダメージ</TITLE>
+<TITLE>怪物猎人２解析情报　プレイヤーが受ける伤害</TITLE>
 <LINK rel="stylesheet" href="./table.css" type="text/css">
 <SCRIPT src="./scripts/links.js"></SCRIPT>
 </HEAD>
@@ -25,12 +25,12 @@ ShowLinks(0, 99);
 // -->
 </SCRIPT>
 <HR>
-<H3>プレイヤーが受けるダメージ</H3>
-<P class="tb-cell0">プレイヤーが怪物からの攻击を受けた際のダメージについて示します。</P>
+<H3>プレイヤーが受ける伤害</H3>
+<P class="tb-cell0">プレイヤーが怪物からの攻击を受けた際の伤害について示します。</P>
 <TABLE border="0" width="894">
   <TBODY>
     <TR>
-      <TD colspan="3" class="zb-cell5">●　<B>ダメージ計算式</B></TD>
+      <TD colspan="3" class="zb-cell5">●　<B>伤害計算式</B></TD>
     </TR>
     <TR>
       <TD width="250"></TD>
@@ -39,12 +39,12 @@ ShowLinks(0, 99);
     </TR>
     <TR>
       <TD class="tb-cell0"></TD>
-      <TD valign="top" class="tb-cell0" colspan="2">怪物からの攻击を受けると、以下の計算式によってプレイヤーが受けるダメージを計算します。 </TD>
+      <TD valign="top" class="tb-cell0" colspan="2">怪物からの攻击を受けると、以下の計算式によってプレイヤーが受ける伤害を計算します。 </TD>
     </TR>
     <TR>
       <TD class="tb-cell0" height="14" rowspan="7"><IMG src="./images/damage.gif" border="0"><BR>
       <BR>
-      特定の攻击による防御力とダメージの相関</TD>
+      特定の攻击による防御力と伤害の相関</TD>
       <TD valign="top" class="tb-cell0" colspan="2"></TD>
     </TR>
     <TR>
@@ -59,9 +59,9 @@ ShowLinks(0, 99);
       <TD valign="top" class="tb-cell0" colspan="2"></TD>
     </TR>
     <TR>
-      <TD valign="top" class="tb-cell0" colspan="2">通常はこの計算結果がプレイヤーが受けるダメージとなりますが、属性攻击の場合は、プレイヤーの防具の<BR>
-      その属性への耐性値によって、ダメージが軽減（あるいは増大）します。<BR>
-      例えば、耐性値が +10 なら 10％軽減、-5 なら 5％増大ということです。<BR>
+      <TD valign="top" class="tb-cell0" colspan="2">通常はこの計算結果がプレイヤーが受ける伤害となりますが、属性攻击の場合は、プレイヤーの防具の<BR>
+      その属性への耐性值によって、伤害が軽減（あるいは増大）します。<BR>
+      例えば、耐性值が +10 なら 10％軽減、-5 なら 5％増大ということです。<BR>
       <BR>
       <BR>
       <B>例１</B>：<BR>
@@ -69,7 +69,7 @@ ShowLinks(0, 99);
     </TR>
     <TR>
       <TD class="tb-cell0"></TD>
-      <TD valign="top" class="tb-cell0">（100 ×150％ − （100 × 150％ × 93 ） ÷ （ 93 ＋ 80 ）） ×  90％ ＝ 62 ダメージ</TD>
+      <TD valign="top" class="tb-cell0">（100 ×150％ − （100 × 150％ × 93 ） ÷ （ 93 ＋ 80 ）） ×  90％ ＝ 62 伤害</TD>
     </TR>
     <TR>
       <TD valign="top" class="tb-cell0" colspan="2"><BR>
@@ -79,7 +79,7 @@ ShowLinks(0, 99);
     </TR>
     <TR>
       <TD class="tb-cell0"></TD>
-      <TD valign="top" class="tb-cell0">64 ×150％ − （64 × 150％ × 93 ） ÷ （ 93 ＋ 80 ） ＝ 44 ダメージ</TD>
+      <TD valign="top" class="tb-cell0">64 ×150％ − （64 × 150％ × 93 ） ÷ （ 93 ＋ 80 ） ＝ 44 伤害</TD>
     </TR>
     <TR>
       <TD height="30"></TD>
@@ -91,7 +91,7 @@ ShowLinks(0, 99);
 <TABLE border="0" width="894">
   <TBODY>
     <TR>
-      <TD colspan="3" class="zb-cell5">●　<B>ダメージの自然回复</B></TD>
+      <TD colspan="3" class="zb-cell5">●　<B>伤害の自然回复</B></TD>
     </TR>
     <TR>
       <TD width="250"></TD>
@@ -100,7 +100,7 @@ ShowLinks(0, 99);
     </TR>
     <TR>
       <TD class="tb-cell0"></TD>
-      <TD valign="top" class="tb-cell0" colspan="2">ダメージを受けることによって減った体力は、減った量の半分程度までは時間の経過と共に自然回复します。<BR>
+      <TD valign="top" class="tb-cell0" colspan="2">伤害を受けることによって減った体力は、減った量の半分程度までは時間の経過と共に自然回复します。<BR>
       通常は、2 秒毎に体力が１回复しますが、以下のスキルはこの回复速度に影響を与えます。<BR>
       <BR>伤害回复速度+1：　2/3 秒毎に１回复<BR>
       伤害回复速度+2：　1/2 秒毎に１回复<BR>
@@ -118,7 +118,7 @@ ShowLinks(0, 99);
 <TABLE border="0" width="894">
   <TBODY>
     <TR>
-      <TD colspan="3" class="zb-cell5">●　<B>攻击に付加されている威力値と气绝値</B></TD>
+      <TD colspan="3" class="zb-cell5">●　<B>攻击に付加されている威力值と气绝值</B></TD>
     </TR>
     <TR>
       <TD width="250"></TD>
@@ -127,16 +127,16 @@ ShowLinks(0, 99);
     </TR>
     <TR>
       <TD class="tb-cell0"></TD>
-      <TD valign="top" class="tb-cell0" colspan="2">怪物の攻击には、威力値と气绝値という値が付加されています。<BR>
-      威力値は、以下のように、その攻击をガードした時のリアクションに影響を与えます。<BR>
+      <TD valign="top" class="tb-cell0" colspan="2">怪物の攻击には、威力值と气绝值という値が付加されています。<BR>
+      威力值は、以下のように、その攻击をガードした時のリアクションに影響を与えます。<BR>
       <BR>
       <TABLE border="1" cellspacing="0" cellpadding="2" class="cnt-tb1">
         <TBODY>
           <TR>
             <TD class="tb-th1" width="80">武器の種類</TD>
-            <TD class="tb-th1" width="90">威力値1〜15</TD>
-            <TD class="tb-th1" width="90">威力値16〜39</TD>
-            <TD class="tb-th1" width="90">威力値40以上</TD>
+            <TD class="tb-th1" width="90">威力值1〜15</TD>
+            <TD class="tb-th1" width="90">威力值16〜39</TD>
+            <TD class="tb-th1" width="90">威力值40以上</TD>
           </TR>
           <TR>
             <TD class="tb-cell1">片手剣</TD>
@@ -159,14 +159,14 @@ ShowLinks(0, 99);
         </TBODY>
       </TABLE>
 <BR>
-      防御性能スキルが発動していると、威力値が軽減（増大）します。<BR>
-      <BR>防御性能+1：　威力値が 10減少する<BR>
-      防御性能+2：　威力値が 20減少する<BR>
-      防御性能-1：　威力値が 5増加する<BR>
-      防御性能-2：　威力値が 10増加する <BR>
+      防御性能スキルが発動していると、威力值が軽減（増大）します。<BR>
+      <BR>防御性能+1：　威力值が 10減少する<BR>
+      防御性能+2：　威力值が 20減少する<BR>
+      防御性能-1：　威力值が 5増加する<BR>
+      防御性能-2：　威力值が 10増加する <BR>
       <BR>
       <BR>
-      气绝値は、攻击を受けるたびにプレイヤーの体内に蓄積されていきます。蓄積された气绝値は、<BR>
+      气绝值は、攻击を受けるたびにプレイヤーの体内に蓄積されていきます。蓄積された气绝值は、<BR>
       時間の経過と共に減少しますが、蓄積量が５０以上になるとプレイヤーは气绝状態に陥ります。<BR>
       <BR>
       气绝スキルが発動していると、蓄積量に影響を与えます。<BR>
@@ -186,7 +186,7 @@ ShowLinks(0, 99);
 <TABLE border="0" width="894">
   <TBODY>
     <TR>
-      <TD colspan="3" class="zb-cell5">●　<B>怪物ごとの攻击力・属性・威力・气绝値</B></TD>
+      <TD colspan="3" class="zb-cell5">●　<B>怪物ごとの攻击力・属性・威力・气绝值</B></TD>
     </TR>
     <TR>
       <TD width="250"></TD>
@@ -195,7 +195,7 @@ ShowLinks(0, 99);
     </TR>
     <TR>
       <TD class="tb-cell0"></TD>
-      <TD valign="top" class="tb-cell0" colspan="2">怪物の各攻击の攻击量・属性・威力・气绝値は、順次 <A href="./monslist/index.html">怪物数据</A> に追加していく予定ですが<BR>
+      <TD valign="top" class="tb-cell0" colspan="2">怪物の各攻击の攻击量・属性・威力・气绝值は、順次 <A href="./monslist/index.html">怪物数据</A> に追加していく予定ですが<BR>
       なにぶん数が多いため時間がかかるかもしれませんが、ご了承ください。<BR>
       <BR>
       前作にも登場した怪物については、ほとんど変わっていないようです。<BR>
