@@ -102,43 +102,43 @@ monsName[72] = "浮岳龍";
 monsName[73] = "镰蟹";
 
 hoshuName = new Array(6);
-hoshuName[0] = "<B>確定報酬</B>";
-hoshuName[1] = "基本報酬";
-hoshuName[2] = "捕獲追加報酬";
-hoshuName[3] = "捕獲追加報酬";
-hoshuName[4] = "サブA達成報酬";
-hoshuName[5] = "サブB達成報酬";
+hoshuName[0] = "<B>确定报酬</B>";
+hoshuName[1] = "基本报酬";
+hoshuName[2] = "捕获追加报酬";
+hoshuName[3] = "捕获追加报酬";
+hoshuName[4] = "支线A达成报酬";
+hoshuName[5] = "支线B达成报酬";
 
 shopName = new Array(16);
-shopName[0] = "ジャンボ村の雑貨屋";
-shopName[1] = "ジャンボ村の調合屋";
-shopName[2] = "ジャンボ村に来る行商ばあさん(1)";
-shopName[3] = "ジャンボ村に来る行商ばあさん(2)";
-shopName[4] = "ジャンボ村の工房";
-shopName[5] = "ジャンボ村の食材屋";
-shopName[6] = "ジャンボ村の道具屋";
-shopName[7] = "ココット村の行商の青年";
-shopName[8] = "ココット村の雑貨屋";
-shopName[9] = "街門の気ままな雑貨商";
-shopName[10] = "街の雑貨屋";
-shopName[11] = "街の食材屋";
-shopName[12] = "街の調合屋";
-shopName[13] = "街の道具屋";
-shopName[14] = "街のアリーナの雑貨屋";
-shopName[15] = "街の大老殿の雑貨屋";
+shopName[0] = "江波村杂货屋";
+shopName[1] = "江波村调合屋";
+shopName[2] = "造访江波村的行商婆婆(1)";
+shopName[3] = "造访江波村的行商婆婆(2)";
+shopName[4] = "江波村工房";
+shopName[5] = "江波村食材屋";
+shopName[6] = "江波村道具屋";
+shopName[7] = "科科特村的行商青年";
+shopName[8] = "科科特村杂货屋";
+shopName[9] = "街门的随性杂货商";
+shopName[10] = "街杂货屋";
+shopName[11] = "街食材屋";
+shopName[12] = "街调合屋";
+shopName[13] = "街道具屋";
+shopName[14] = "街斗技场杂货屋";
+shopName[15] = "街大老殿杂货屋";
 
 //******************************************************
 bukiName = new Array(11);
-bukiName[0] = "大剣";
-bukiName[1] = "ヘビィボウガン";
-bukiName[2] = "ハンマー";
-bukiName[3] = "ランス";
-bukiName[4] = "片手剣";
-bukiName[5] = "ライトボウガン";
-bukiName[6] = "双剣";
+bukiName[0] = "大剑";
+bukiName[1] = "重弩";
+bukiName[2] = "大锤";
+bukiName[3] = "长枪";
+bukiName[4] = "片手剑";
+bukiName[5] = "轻弩";
+bukiName[6] = "双剑";
 bukiName[7] = "太刀";
-bukiName[8] = "狩猟笛";
-bukiName[9] = "ガンランス";
+bukiName[8] = "狩猎笛";
+bukiName[9] = "铳枪";
 bukiName[10] = "弓";
 bukiHtml = new Array(11);
 bukiHtml[0] = "sword.html";
@@ -155,11 +155,11 @@ bukiHtml[10] = "yumi.html";
 
 //      防具の場合,防具の種類 2:頭  3:胴  4:腕  5:腰  0:脚
 boguName = new Array(6);
-boguName[0] = "脚装備";
-boguName[2] = "頭装備";
-boguName[3] = "胴装備";
-boguName[4] = "腕装備";
-boguName[5] = "腰装備";
+boguName[0] = "脚装备";
+boguName[2] = "头装备";
+boguName[3] = "胴装备";
+boguName[4] = "腕装备";
+boguName[5] = "腰装备";
 boguHtml = new Array(6);
 boguHtml[0] = "foot.html";
 boguHtml[2] = "head.html";
@@ -250,40 +250,40 @@ function ShowItemDetail()
     yflag = data.substring(ic,ic+1);
 
     if (yflag == "M") {
-      html += FormatItemName(data.substring(ic+1,ic+4)) + " と ";
-      html += FormatItemName(data.substring(ic+4,ic+7)) + " を２種調合";
+      html += FormatItemName(data.substring(ic+1,ic+4)) + " 与 ";
+      html += FormatItemName(data.substring(ic+4,ic+7)) + " ２种调合而来";
       html += " （成功率" + Number(data.substring(ic+7,ic+10)) + "％）";
-      if (data.substring(ic+10,ic+11) == 1)  html += "　【錬金】";
+      if (data.substring(ic+10,ic+11) == 1)  html += "　【炼金】";
       ic = ic + 11;
 
     } else if (yflag == "X") {
-      html += FormatItemName(data.substring(ic+1,ic+4)) + " と ";
-      html += FormatItemName(data.substring(ic+4,ic+7)) + " と ";
-      html += FormatItemName(data.substring(ic+7,ic+10)) + " を３種調合";
+      html += FormatItemName(data.substring(ic+1,ic+4)) + " 与 ";
+      html += FormatItemName(data.substring(ic+4,ic+7)) + " 与 ";
+      html += FormatItemName(data.substring(ic+7,ic+10)) + " ３种调合而来";
       html += " （成功率" + Number(data.substring(ic+10,ic+13)) + "％）";
-      if (data.substring(ic+13,ic+14) == 1)  html += "　【錬金】";
+      if (data.substring(ic+13,ic+14) == 1)  html += "　【炼金】";
       ic = ic + 14;
 
     } else if (yflag == "J") {
       kind = data.substring(ic+1,ic+2);			//爺さんの場所
       if (kind == 9) {
-        html += "どこの爺さんでも ";
+        html += "任意山菜爷处交付 ";
         html += FormatItemName(data.substring(ic+2,ic+5));
         numb = data.substring(ic+5,ic+7);
         if (numb > 1)  html += "×" + numb;
-        html += " を渡すと貰える";
+        html += " 后可获得";
       } else {
-        html += mapName[kind] + "の爺さんに ";
+        html += mapName[kind] + "的山菜爷处交付 ";
         html += FormatItemName(data.substring(ic+2,ic+5));
-        html += " を渡すと貰えることがある";
+        html += " 后可能获得";
       }
       ic = ic + 7;
 
     } else if (yflag == "K") {
       html += FormatItemName(data.substring(ic+1,ic+4));
-      html += " を";
+      html += " 在";
       html += "<A href=\"../makalist.html#" + FixData(data.substring(ic+4,ic+6), 4) + "\">";
-      html += "一定時間埋めておく</A>と入手";
+      html += "埋下一定时间后く</A>可入手";
       ic = ic + 6;
 
     } else if (yflag == "S") {
@@ -293,8 +293,8 @@ function ShowItemDetail()
 
     } else if (yflag == "G") {
       html += FormatItemName(data.substring(ic+1,ic+4));
-      html += " を食べて体力が回复しなかった場合、";
-      html += Number(data.substring(ic+4,ic+7)) + "％の確率で入手";
+      html += " 吃下后发生体力回复的情况下，";
+      html += Number(data.substring(ic+4,ic+7)) + "％的概率可入手";
       ic = ic + 7;
 
     } else {
@@ -314,7 +314,7 @@ function ShowItemDetail()
   for (ic=0; ic<data.length; ic+=2) {
     shopNo = Number(data.substring(ic,ic+2));
     if (ic > 0)  html += "<BR>";
-    html += shopName[shopNo] + " から購入";
+    html += shopName[shopNo] + " 处购入";
   }
   hitemkonyu.innerHTML = html;
 
@@ -342,15 +342,15 @@ function ShowItemDetail()
     if (data.substring(ic,ic+1) == "W") {
       if (yflag == 1) {
         html += FormatBukiName(data.substring(ic+8,ic+12));
-        html += " から ";
+        html += " 至 ";
       }
       html += FormatBukiName(data.substring(ic+1,ic+5));
       if (yflag == 0) {
-        html += " の生産に必要";
+        html += " 的生产所必要";
       } else if (yflag == 1) {
-        html += " への強化に必要";
+        html += " 的强化所必要";
       }
-      html += "　（" + Number(data.substring(ic+6,ic+8)) + "個）<BR>";
+      html += "　（" + Number(data.substring(ic+6,ic+8)) + "个）<BR>";
 
 //防具の場合
     } else if (data.substring(ic,ic+1) == "B") {
@@ -358,23 +358,23 @@ function ShowItemDetail()
       html += boguName[kind] + " ";
       if (yflag == 1) {
         html += FormatBoguName(data.substring(ic+8,ic+12));
-        html += " から ";
+        html += " 至 ";
       }
       html += FormatBoguName(data.substring(ic+1,ic+5));
       if (yflag == 0) {
-        html += " の生産に必要";
+        html += " 的生产所必要";
       } else if (yflag == 1) {
-        html += " への強化に必要";
+        html += " 的强化所必要";
       } else if (yflag >= 2) {
         html += " 等级" + yflag + " 的升级所必要";
       }
-      html += "　（" + Number(data.substring(ic+6,ic+8)) + "個）<BR>";
+      html += "　（" + Number(data.substring(ic+6,ic+8)) + "个）<BR>";
 
 //装飾品の場合
     } else if (data.substring(ic,ic+1) == "S") {
       html += FormatSoshName(data.substring(ic+1,ic+5));
-      html += " の生産に必要";
-      html += "　（" + Number(data.substring(ic+6,ic+8)) + "個）<BR>";
+      html += " 的生产所必要";
+      html += "　（" + Number(data.substring(ic+6,ic+8)) + "个）<BR>";
     }
 //次のデータ
     if (yflag == 1) {
@@ -401,57 +401,57 @@ function ShowItemDetail()
     if (yflag == "J") {
       kind = data.substring(ic+1,ic+2);			//爺さんの場所
       if (kind == 9) {
-        html += "どこの爺さんでも、";
+        html += "任意山菜爷处，将";
         numb = Number(data.substring(ic+2,ic+4));
-        if (numb > 1)  html += numb + "個";
-        html += "渡すと ";
+        if (numb > 1)  html += numb + "个";
+        html += "交付后可获得 ";
         html += FormatItemName(data.substring(ic+4,ic+7));
-        html += " が貰える";
+        html += " ";
       } else {
-        html += mapName[kind] + "の爺さんに渡すと ";
+        html += mapName[kind] + "的山菜爷处交付可获得 ";
         html += FormatItemName(data.substring(ic+4,ic+7));
         numb = data.substring(ic+7,ic+10);
-        if (numb > 0)  html += " か " + FormatItemName(numb);
+        if (numb > 0)  html += " 或 " + FormatItemName(numb);
         numb = data.substring(ic+10,ic+13);
-        if (numb > 0)  html += " か " + FormatItemName(numb);
+        if (numb > 0)  html += " 或 " + FormatItemName(numb);
         numb = data.substring(ic+13,ic+16);
-        if (numb > 0)  html += " か " + FormatItemName(numb);
-        html += " が貰える";
+        if (numb > 0)  html += " 或 " + FormatItemName(numb);
+        html += " ";
       }
       ic = ic + 16;
 
     } else if (yflag == "M") {				//2種調合に使える
       html += FormatItemName(data.substring(ic+8,ic+11));
-      html += " と２種調合すれば ";
+      html += " 一同进行２种调合后可做成 ";
       html += FormatItemName(data.substring(ic+1,ic+4));
-      html += " が作れる （成功率";
+      html += " （成功率";
       html += Number(data.substring(ic+4,ic+7)) + "％）";
-      if (data.substring(ic+7,ic+8) == 1)  html += "　【錬金】";
+      if (data.substring(ic+7,ic+8) == 1)  html += "　【炼金】";
       ic = ic + 11;
 
     } else if (yflag == "X") {				//3種調合に使える
       html += FormatItemName(data.substring(ic+8,ic+11));
-      html += " と ";
+      html += " 与 ";
       html += FormatItemName(data.substring(ic+11,ic+14));
-      html += " とで３種調合すれば ";
+      html += " 一同进行３种调合后可做成 ";
       html += FormatItemName(data.substring(ic+1,ic+4));
-      html += " が作れる （成功率";
+      html += " （成功率";
       html += Number(data.substring(ic+4,ic+7)) + "％）";
-      if (data.substring(ic+7,ic+8) == 1)  html += "　【錬金】";
+      if (data.substring(ic+7,ic+8) == 1)  html += "　【炼金】";
       ic = ic + 14;
 
     } else if (yflag == "K") {				//塊系が何になるか
-      html += "武具屋で生産すると、";
-      html += Number(data.substring(ic+5,ic+7)) + "％の確率で ";
+      html += "在武具屋生产时，";
+      html += Number(data.substring(ic+5,ic+7)) + "％的概率做成 ";
       html += FormatBukiName(data.substring(ic+1,ic+5));
-      html += " になる";
+      html += " ";
       ic = ic + 7;
 
     } else if (yflag == "G") {				//(ドス)贪吃金枪鱼食べた結果出現するアイテム
-      html += "食べて体力が回复しなかった場合、";
-      html += Number(data.substring(ic+1,ic+4)) + "％の確率で ";
+      html += "吃下后发生体力回复的情况下，";
+      html += Number(data.substring(ic+1,ic+4)) + "％的概率获得 ";
       html += FormatItemName(data.substring(ic+4,ic+7));
-      html += " が出現";
+      html += " ";
       ic = ic + 7;
 
     } else if (yflag == "S") {
@@ -521,7 +521,7 @@ function FormatBoguName(tdata)
 function FormatSoshName(tdata)
 {
   thtml = "";
-  thtml += "装飾品 ";
+  thtml += "装饰品 ";
   tbno = Number(tdata.substring(1,4));
   thtml += "<A href=\"../bugu/soushoku.html#" + FixData(tbno, 4) + "\">";
   thtml += soshname[tbno] + "</A>";
@@ -557,11 +557,11 @@ function FormatSaishu(tdata, tcla)
     thtml += ".html#" + FixData(areaNo, 2) + "d\">";
     thtml += mapName[mapNo];
     if (areaNo == 0) {
-      thtml += "　キャンプ地-" + ptsNo;
+      thtml += "　营地-" + ptsNo;
     } else if (areaNo == 15) {
-      thtml += "　隠しエリア-" + ptsNo;
+      thtml += "　隐藏区域-" + ptsNo;
     } else {
-      thtml += "　エリア " + areaNo + "-" + ptsNo;
+      thtml += "　区域 " + areaNo + "-" + ptsNo;
     }
     thtml += "</A>";
 
@@ -590,21 +590,21 @@ function FormatHagi(tdata)
     thtml += monsName[monsNo] + "</A>";
 
     if (kind == 0) {
-      thtml += " から剥取";
+      thtml += " 剥取入手";
     } else if (kind == 1) {
-      thtml += " の尻尾から剥取";
+      thtml += " 的尾巴剥取入手";
     } else if (kind == 2) {
-      thtml += " の落し物を采取";
+      thtml += " 的掉落物采集入手";
     } else if (kind == 3) {
-      thtml += " の背中から剥取";
+      thtml += " 的背部剥取入手";
     } else if (kind == 4) {
-      thtml += "（キング） から剥取";
+      thtml += "（王） 剥取入手";
     } else if (kind == 5) {
-      thtml += " の落し物１を采取";
+      thtml += " 的掉落物１采集入手";
     } else if (kind == 6) {
-      thtml += " の落し物２を采取";
+      thtml += " 的掉落物２采集入手";
     } else if (kind == 7) {
-      thtml += " の落し物３を采取";
+      thtml += " 的掉落物３采集入手";
     }
     thtml += "　（" + prob + "％）";
   }
@@ -647,7 +647,7 @@ function FormatHoushu(tdata)
         thtml += "on";
       }
       thtml += "quest/rem" + tqnm.charAt(1) + ".html#" + tqnm.substring(2,6) + "\">";
-      thtml += tqnm.substring(6) + "</A>" + " の ";
+      thtml += tqnm.substring(6) + "</A>" + " 的 ";
       if (numb >= 900) {
         thtml += hoshuName[numb-900];
         numb = 0;
@@ -660,7 +660,7 @@ function FormatHoushu(tdata)
       tqnm = vquename[tqno-500];
       thtml += "活动任务 ";
       thtml += "<A href=\"../evquest/evrem" + FixData(tqno-500,2) + ".html\">";
-      thtml += tqnm + "</A>" + " の ";
+      thtml += tqnm + "</A>" + " 的 ";
       if (numb >= 900) {
         thtml += hoshuName[numb-900];
         numb = 0;
