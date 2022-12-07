@@ -481,7 +481,7 @@ kenname[479] = "大骨";
 kenname[480] = "迪奥米迪亚";
 kenname[481] = "溶解升腾";
 kenname[482] = "神苏悲号";
-kenname[483] = "圣十字＝纯白";
+kenname[483] = "幽光＝吹雪";
 kenname[484] = "大长老的胁差";
 kenname[485] = "大食人魔";
 
