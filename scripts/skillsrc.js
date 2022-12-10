@@ -86,7 +86,7 @@ function ShowBoguList()
 {
   html = "";
   html += "<TABLE border='1' cellspacing='0' cellpadding='2' class='cnt-tb2' width='270'>";
-  html += "<TBODY><TR><TH class='tb-th4' colspan='4'>頭装備</TH></TR>";
+  html += "<TBODY><TR><TH class='tb-th4' colspan='4'>头装备</TH></TR>";
   html += FormatHeadList();
   html += "</TBODY></TABLE>";
   headlist.innerHTML = html;
@@ -94,7 +94,7 @@ function ShowBoguList()
 
   html = "";
   html += "<TABLE border='1' cellspacing='0' cellpadding='2' class='cnt-tb2' width='270'>";
-  html += "<TBODY><TR><TH class='tb-th4' colspan='4'>胴装備</TH></TR>";
+  html += "<TBODY><TR><TH class='tb-th4' colspan='4'>胴装备</TH></TR>";
   html += FormatArmorList();
   html += "</TBODY></TABLE>";
   armorlist.innerHTML = html;
@@ -102,7 +102,7 @@ function ShowBoguList()
 
   html = "";
   html += "<TABLE border='1' cellspacing='0' cellpadding='2' class='cnt-tb2' width='270'>";
-  html += "<TBODY><TR><TH class='tb-th4' colspan='4'>腕装備</TH></TR>";
+  html += "<TBODY><TR><TH class='tb-th4' colspan='4'>腕装备</TH></TR>";
   html += FormatArmList();
   html += "</TBODY></TABLE>";
   armlist.innerHTML = html;
@@ -110,7 +110,7 @@ function ShowBoguList()
 
   html = "";
   html += "<TABLE border='1' cellspacing='0' cellpadding='2' class='cnt-tb2' width='270'>";
-  html += "<TBODY><TR><TH class='tb-th4' colspan='4'>腰装備</TH></TR>";
+  html += "<TBODY><TR><TH class='tb-th4' colspan='4'>腰装备</TH></TR>";
   html += FormatWaistList();
   html += "</TBODY></TABLE>";
   waistlist.innerHTML = html;
@@ -118,7 +118,7 @@ function ShowBoguList()
 
   html = "";
   html += "<TABLE border='1' cellspacing='0' cellpadding='2' class='cnt-tb2' width='270'>";
-  html += "<TBODY><TR><TH class='tb-th4' colspan='4'>脚装備</TH></TR>";
+  html += "<TBODY><TR><TH class='tb-th4' colspan='4'>脚装备</TH></TR>";
   html += FormatFootList();
   html += "</TBODY></TABLE>";
   footlist.innerHTML = html;
