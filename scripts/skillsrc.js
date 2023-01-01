@@ -78,7 +78,7 @@ skillGrp[76] = "冰耐性";
 skillGrp[77] = "耐震";
 skillGrp[78] = "广域";
 skillGrp[79] = "声带";
-skillGrp[80] = "烧肉";
+skillGrp[80] = "烤肉";
 skillGrp[81] = "炮术师";
 
 
