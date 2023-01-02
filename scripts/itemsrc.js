@@ -283,7 +283,7 @@ function ShowItemDetail()
       html += FormatItemName(data.substring(ic+1,ic+4));
       html += " 在";
       html += "<A href=\"../makalist.html#" + FixData(data.substring(ic+4,ic+6), 4) + "\">";
-      html += "埋下一定时间后く</A>可入手";
+      html += "埋下一定时间后</A>可入手";
       ic = ic + 6;
 
     } else if (yflag == "S") {
