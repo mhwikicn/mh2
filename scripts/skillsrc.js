@@ -145,7 +145,7 @@ function FormatHeadList()
       thtml += "<TR><TD class='tb-cell11' width='140'>";
       thtml += "<A href='../bugu/head.html#" + FixData(i,4) + "' target='_blank'>" + headname[i] + "</A></TD>";
       thtml += "<TD class='tb-cell11' width='38'>防：" + Number(headspec[i].substring(42,44)) + "</TD>";
-      thtml += "<TD class='tb-cell1' width='30'>ス：" + Number(headspec[i].substring(44,45)) + "</TD>";
+      thtml += "<TD class='tb-cell1' width='30'>孔：" + Number(headspec[i].substring(44,45)) + "</TD>";
       thtml += "<TD class='tb-cell2' width='35'>" + tval + "</TD>";
       thtml += "</TR>";
     }
@@ -165,7 +165,7 @@ function FormatArmorList()
       thtml += "<TR><TD class='tb-cell11' width='140'>";
       thtml += "<A href='../bugu/armor.html#" + FixData(i,4) + "' target='_blank'>" + armorname[i] + "</A></TD>";
       thtml += "<TD class='tb-cell11' width='38'>防：" + Number(armorspec[i].substring(42,44)) + "</TD>";
-      thtml += "<TD class='tb-cell1' width='30'>ス：" + Number(armorspec[i].substring(44,45)) + "</TD>";
+      thtml += "<TD class='tb-cell1' width='30'>孔：" + Number(armorspec[i].substring(44,45)) + "</TD>";
       thtml += "<TD class='tb-cell2' width='35'>" + tval + "</TD>";
       thtml += "</TR>";
     }
@@ -185,7 +185,7 @@ function FormatArmList()
       thtml += "<TR><TD class='tb-cell11' width='140'>";
       thtml += "<A href='../bugu/arm.html#" + FixData(i,4) + "' target='_blank'>" + armname[i] + "</A></TD>";
       thtml += "<TD class='tb-cell11' width='38'>防：" + Number(armspec[i].substring(42,44)) + "</TD>";
-      thtml += "<TD class='tb-cell1' width='30'>ス：" + Number(armspec[i].substring(44,45)) + "</TD>";
+      thtml += "<TD class='tb-cell1' width='30'>孔：" + Number(armspec[i].substring(44,45)) + "</TD>";
       thtml += "<TD class='tb-cell2' width='35'>" + tval + "</TD>";
       thtml += "</TR>";
     }
@@ -205,7 +205,7 @@ function FormatWaistList()
       thtml += "<TR><TD class='tb-cell11' width='140'>";
       thtml += "<A href='../bugu/waist.html#" + FixData(i,4) + "' target='_blank'>" + waistname[i] + "</A></TD>";
       thtml += "<TD class='tb-cell11' width='38'>防：" + Number(waistspec[i].substring(42,44)) + "</TD>";
-      thtml += "<TD class='tb-cell1' width='30'>ス：" + Number(waistspec[i].substring(44,45)) + "</TD>";
+      thtml += "<TD class='tb-cell1' width='30'>孔：" + Number(waistspec[i].substring(44,45)) + "</TD>";
       thtml += "<TD class='tb-cell2' width='35'>" + tval + "</TD>";
       thtml += "</TR>";
     }
@@ -225,7 +225,7 @@ function FormatFootList()
       thtml += "<TR><TD class='tb-cell11' width='140'>";
       thtml += "<A href='../bugu/foot.html#" + FixData(i,4) + "' target='_blank'>" + footname[i] + "</A></TD>";
       thtml += "<TD class='tb-cell11' width='38'>防：" + Number(footspec[i].substring(42,44)) + "</TD>";
-      thtml += "<TD class='tb-cell1' width='30'>ス：" + Number(footspec[i].substring(44,45)) + "</TD>";
+      thtml += "<TD class='tb-cell1' width='30'>孔：" + Number(footspec[i].substring(44,45)) + "</TD>";
       thtml += "<TD class='tb-cell2' width='35'>" + tval + "</TD>";
       thtml += "</TR>";
     }
@@ -244,7 +244,7 @@ function FormatSoshList()
     if (tval.length > 0) {
       thtml += "<TR><TD class='tb-cell11' width='75'>";
       thtml += "<A href='../bugu/soushoku.html#" + FixData(i,4) + "' target='_blank'>" + soshname[i] + "</A></TD>";
-      thtml += "<TD class='tb-cell1' width='30'>ス：" + Number(soshspec[i].substring(24,25)) + "</TD>";
+      thtml += "<TD class='tb-cell1' width='30'>孔：" + Number(soshspec[i].substring(24,25)) + "</TD>";
       thtml += "<TD class='tb-cell2' width='35'>" + tval + "</TD>";
       thtml += "</TR>";
     }
