@@ -293,7 +293,7 @@ function ShowItemDetail()
 
     } else if (yflag == "G") {
       html += FormatItemName(data.substring(ic+1,ic+4));
-      html += " 吃下后发生体力回复的情况下，";
+      html += " 吃下后未发生体力回复的情况下，";
       html += Number(data.substring(ic+4,ic+7)) + "％的概率可入手";
       ic = ic + 7;
 
@@ -448,7 +448,7 @@ function ShowItemDetail()
       ic = ic + 7;
 
     } else if (yflag == "G") {				//(ドス)贪吃金枪鱼食べた結果出現するアイテム
-      html += "吃下后发生体力回复的情况下，";
+      html += "吃下后未发生体力回复的情况下，";
       html += Number(data.substring(ic+1,ic+4)) + "％的概率获得 ";
       html += FormatItemName(data.substring(ic+4,ic+7));
       html += " ";
