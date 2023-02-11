@@ -866,8 +866,8 @@ headname[246] = "强运耳饰";
 headname[247] = "恶运耳饰";
 headname[248] = "护人耳饰";
 headname[249] = "勇者耳饰";
-headname[250] = "美国鳌虾头甲";
-headname[251] = "美国鳌虾软帽";
+headname[250] = "美国螯虾头甲";
+headname[251] = "美国螯虾软帽";
 headname[252] = "曳光耳饰";
 
 
@@ -1111,8 +1111,8 @@ armorname[236] = "公会卫队制服苍";
 armorname[237] = "公会卫队马甲苍";
 armorname[238] = "公会卫队制服苍";
 armorname[239] = "公会卫队马甲苍";
-armorname[240] = "美国鳌虾之铠";
-armorname[241] = "美国鳌虾之皮";
+armorname[240] = "美国螯虾之铠";
+armorname[241] = "美国螯虾之皮";
 armorname[242] = "公会英雄铠";
 
 
@@ -1351,8 +1351,8 @@ armname[231] = "公会卫队手套苍";
 armname[232] = "公会卫队袖扣苍";
 armname[233] = "公会卫队手套苍";
 armname[234] = "公会卫队袖扣苍";
-armname[235] = "美国鳌虾臂甲";
-armname[236] = "美国鳌虾护臂";
+armname[235] = "美国螯虾臂甲";
+armname[236] = "美国螯虾护臂";
 armname[237] = "破龍之笼手";
 
 
@@ -1590,8 +1590,8 @@ waistname[230] = "公会卫队扣带苍";
 waistname[231] = "公会卫队围腰苍";
 waistname[232] = "帝王龙虾扣带";
 waistname[233] = "帝王龙虾围腰";
-waistname[234] = "美国鳌虾腰甲";
-waistname[235] = "美国鳌虾围腰";
+waistname[234] = "美国螯虾腰甲";
+waistname[235] = "美国螯虾围腰";
 waistname[236] = "大师腰带";
 
 
@@ -1828,8 +1828,8 @@ footname[229] = "公会卫队长筒靴苍";
 footname[230] = "公会卫队紧身裤苍";
 footname[231] = "帝王龙虾胫甲";
 footname[232] = "帝王龙虾护胫";
-footname[233] = "美国鳌虾胫甲";
-footname[234] = "美国鳌虾护胫";
+footname[233] = "美国螯虾胫甲";
+footname[234] = "美国螯虾护胫";
 footname[235] = "合金靴・刃";
 
 
