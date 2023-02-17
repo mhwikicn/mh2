@@ -77,7 +77,7 @@ function ShowLinks(level, kind)
   str1 = "";
   str2 = "";
   if (kind != 16) {
-    str1 = '<A target="_blank"href="https://mhwikicn.github.io/mh2tip/h01.html">';
+    str1 = '<A target="_blank" href="../../mh2tip/h01.html" target=\"_top\">';
     str2 = "</A>";
   }
   html += "　" + str1 + "武器派生" + str2;
