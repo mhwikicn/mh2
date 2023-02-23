@@ -3,15 +3,20 @@
 <META http-equiv=Content-Type content="text/html; charset=UTF-8">
 <STYLE>
 td           { font-size: 10pt;word-break: keep-all;  }
-tr.s           { font-size: 10pt; color:#666666; background-color:#CCCCCC }
+tr.s           { font-size: 10pt; color:#666666; background-color:#BBBBBB }
 th {font-size: 10pt; color: #FFFFFF; background-color: #996633; height:20;word-break: keep-all; }
-td.base {color: #0000FF; font-weight:bold}
-td.last {color: #FF0000; font-weight:bold}
+td.base {color: #0000FF}
+td.last {color: #FF0000}
 td.current{ text-align:center; background-color:#0000FF}
 td.current a{text-decoration: none;cursor: default; color:#FF0000}
 td.link{text-align: center; background-color: #CCCCCC}
 td.link a {color: #808080; text-decoration: none}
 tr.odd {background-color: #EEEEEE}
+tr.hc {background-color: #ffccff}
+tr.sp {background-color: #ffcc00}
+a, a:visited {
+    color: blue;
+}
 </STYLE>
 
 <SCRIPT>
@@ -36,18 +41,17 @@ return true;
     <TD class=link width="10%"><A href="weapon07.htm">长枪</A></TD>
     <TD class=link width="10%"><A href="weapon08.htm">铳枪</A></TD>
     <TD class=link width="10%"><A href="weapon11.htm">弓</A></TD></TR></TBODY></TABLE>
-<TR><TD>是否显示：</TD> <TD><INPUT 
+图解：<t1 style="background-color:#ffccff;">线上模式限定</t1>　<t1 style="background-color:#BBBBBB;color:#666666;">其它类型派生</t1>　<t1 style="color:#0000FF;">初级形态</t1>　<t1 style="color:#FF0000;">终极形态</t1>　<t1 style="background-color:#ffcc00;">非常规武器</t1><BR>锋利度图形上/下分别表示普通状态/锋利度+1状态。部分项目没有列出直接生产配方。<BR><TR><TD>是否显示：</TD> <TD><INPUT 
 onclick="return eChange(this, 'col01');" type=checkbox CHECKED>名称</TD> 
 <TD><INPUT onclick="return eChange(this, 'col02');" type=checkbox 
 CHECKED>锋利度</TD> <TD><INPUT onclick="return eChange(this, 'col03');" 
-type=checkbox CHECKED>锋利度+1</TD> <TD><INPUT onclick="return eChange(this, 'col04');" 
 type=checkbox CHECKED>攻击力</TD> <TD><INPUT 
-onclick="return eChange(this, 'col05');" type=checkbox CHECKED>属性</TD> 
-<TD><INPUT onclick="return eChange(this, 'col06');" type=checkbox CHECKED>会心率</TD> 
-<TD><INPUT onclick="return eChange(this, 'col07');" type=checkbox CHECKED>插孔</TD> 
-<TD><INPUT onclick="return eChange(this, 'col08');" type=checkbox>稀有度</TD> 
-<TD><INPUT onclick="return eChange(this, 'col09');" type=checkbox>价格</TD> 
-<TD><INPUT onclick="return eChange(this, 'col10');" type=checkbox 
+onclick="return eChange(this, 'col04');" type=checkbox CHECKED>属性</TD> 
+<TD><INPUT onclick="return eChange(this, 'col05');" type=checkbox CHECKED>会心率</TD> 
+<TD><INPUT onclick="return eChange(this, 'col06');" type=checkbox CHECKED>插孔</TD> 
+<TD><INPUT onclick="return eChange(this, 'col07');" type=checkbox>稀有度</TD> 
+<TD><INPUT onclick="return eChange(this, 'col08');" type=checkbox>价格</TD> 
+<TD><INPUT onclick="return eChange(this, 'col09');" type=checkbox 
 CHECKED>素材</TD> </TR>
 <TABLE id=table1 borderColor=#c0c0c0 cellSpacing=0 cellPadding=0 width="100%" 
 border=0>
@@ -58,1010 +62,786 @@ border=0>
   <COL id=col04>
   <COL id=col05 bgColor=#ddddff>
   <COL id=col06>
-  <COL id=col07 bgColor=#ddddff>
+  <COL id=col07 style="visibility:collapse" bgColor=#ddddff>
   <COL id=col08 style="visibility:collapse">
-  <COL id=col09 style="visibility:collapse" bgColor=#ddddff>
-  <COLGROUP id=col10>
+  <COLGROUP id=col09>
+  <COL id=col10 bgColor=#ddddff>
   <COL id=col11>
   <COL id=col12 bgColor=#ddddff>
-  <COL id=col13>
-  <COL id=col14 bgColor=#ddddff></COLGROUP>
+  <COL id=col13></COLGROUP>
   <TBODY>
   <TR>
-    <TH noWrap>名称</TH>
+    <TH noWrap width=250>名称</TH>
     <TH noWrap width=125>锋利度</TH>
-    <TH noWrap width=125>锋利度+1</TH>
-    <TH noWrap align=middle>攻击力</TH>
-    <TH noWrap align=middle>属性</TH>
-    <TH noWrap align=middle>会心率</TH>
-    <TH noWrap align=middle>插孔</TH>
-    <TH noWrap align=middle>稀有度</TH>
-    <TH noWrap align=middle>价格</TH>
-    <TH noWrap>素材1</TH>
-    <TH noWrap>素材2</TH>
-    <TH noWrap>素材3</TH>
-    <TH noWrap>素材4</TH></TR>
+    <TH noWrap align=middle width=50>攻击力</TH>
+    <TH noWrap align=middle width=108>属性</TH>
+    <TH noWrap align=middle width=42>会心率</TH>
+    <TH noWrap align=middle width=45>插孔</TH>
+    <TH noWrap align=middle width=24>稀有度</TH>
+    <TH noWrap align=middle width=54>价格</TH>
+    <TH noWrap width=120>素材1</TH>
+    <TH noWrap width=120>素材2</TH>
+    <TH noWrap width=120>素材3</TH>
+    <TH noWrap width=120>素材4</TH></TR>
   <TR class=s>
-    <TD noWrap>巨骨剑</TD>
-    <TD noWrap align=middle width=125><IMG src="images/weapon03/15-1.gif"></TD>
-    <TD noWrap align=middle width=125><IMG src="images/weapon03/15-2.gif"></TD>
-    <TD noWrap align=middle>336 </TD>
+    <TD class=base noWrap>骨刀</TD><TD noWrap align=middle><IMG height=15 src="../images/gauge028.gif" width=122></TD>
+    <TD noWrap align=middle>336</TD>
     <TD noWrap align=middle>　</TD>
-    <TD noWrap align=right>0% </TD>
+    <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>ーーー</TD>
-    <TD noWrap align=middle>1 </TD>
-    <TD noWrap align=middle>1050 </TD>
-    <TD noWrap>龙骨【小】x3</TD>
+    <TD noWrap align=middle>1</TD><TD noWrap align=right>1050</TD>
+    <TD noWrap><A href="../items/items.html?0138" target=items">龙骨【小】</A>x3</TD>
     <TD noWrap></TD>
     <TD noWrap></TD>
     <TD noWrap></TD></TR>
   <TR class=s>
-    <TD noWrap><IMG src="images/L.gif">巨骨剑改</TD>
-    <TD noWrap align=middle width=125><IMG src="images/weapon03/16-1.gif"></TD>
-    <TD noWrap align=middle width=125><IMG src="images/weapon03/16-2.gif"></TD>
-    <TD noWrap align=middle>384 </TD>
+    <TD noWrap><IMG src="images/L.gif">骨刀改</TD><TD noWrap align=middle><IMG height=15 src="../images/gauge029.gif" width=122></TD>
+    <TD noWrap align=middle>384</TD>
     <TD noWrap align=middle>　</TD>
-    <TD noWrap align=right>0% </TD>
+    <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>ーーー</TD>
-    <TD noWrap align=middle>1 </TD>
-    <TD noWrap align=middle>1350 </TD>
-    <TD noWrap>龙骨【小】x4</TD>
+    <TD noWrap align=middle>1</TD><TD noWrap align=right>1350</TD>
+    <TD noWrap><A href="../items/items.html?0138" target=items">龙骨【小】</A>x4</TD>
     <TD noWrap></TD>
     <TD noWrap></TD>
     <TD noWrap></TD></TR>
   <TR>
     <TD noWrap><IMG src="images/blank.gif"><IMG 
-      src="images/L.gif">骨刀【狼牙】[强化<SPAN lang=zh-cn>]</SPAN></TD>
-    <TD noWrap><IMG src="images/weapon04/05-1.gif"></TD>
-    <TD noWrap><IMG src="images/weapon04/05-2.gif"></TD>
-    <TD noWrap align=middle>432 </TD>
+      src="images/L.gif">骨刀【狼牙】</TD><TD noWrap align=middle><IMG height=15 src="../images/gauge013.gif" width=122></TD>
+    <TD noWrap align=middle>432</TD>
     <TD noWrap align=middle>　</TD>
-    <TD noWrap align=right>0% </TD>
+    <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>ーーー</TD>
-    <TD noWrap align=middle>2 </TD>
-    <TD noWrap align=middle>2340 </TD>
-    <TD noWrap>燕雀石x2 </TD>
-    <TD noWrap>蓝速龙的牙x5 </TD>
-    <TD noWrap>蓝速龙的皮x2 </TD>
+    <TD noWrap align=middle>2</TD><TD noWrap align=right>2340</TD>
+    <TD noWrap><A href="../items/items.html?00DA" target=items">燕雀石</A>x2</TD>
+    <TD noWrap><A href="../items/items.html?0155" target=items">蓝速龙的牙</A>x5</TD>
+    <TD noWrap><A href="../items/items.html?0158" target=items">蓝速龙的皮</A>x2</TD>
     <TD noWrap>　</TD></TR>
   <TR class=odd>
-    <TD noWrap><IMG src="images/blank.gif"><IMG 
-      src="images/blank.gif">骨刀【狼牙】[生产<SPAN lang=zh-cn>]</SPAN></TD>
-    <TD noWrap>　</TD>
-    <TD noWrap>　</TD>
+    <TD noWrap><IMG src="images/blank.gif"><IMG src="images/blank.gif"><IMG 
+      src="images/T.gif">骨刀【鲛牙】</TD><TD noWrap align=middle><IMG height=15 src="../images/gauge014.gif" width=122></TD>
+    <TD noWrap align=middle>480</TD>
     <TD noWrap align=middle>　</TD>
-    <TD noWrap align=middle>　</TD>
-    <TD noWrap align=middle>　</TD>
-    <TD noWrap align=middle>　</TD>
-    <TD noWrap align=middle>　</TD>
-    <TD noWrap align=middle>　</TD>
-    <TD noWrap>蓝速龙王的皮x2 </TD>
-    <TD noWrap>龙骨【小】x5 </TD>
-    <TD noWrap>燕雀石x4 </TD>
-    <TD noWrap>蓝速龙的牙x7</TD></TR>
+    <TD noWrap align=right>0%</TD>
+    <TD noWrap align=middle>ーーー</TD>
+    <TD noWrap align=middle>2</TD><TD noWrap align=right>4650</TD>
+    <TD noWrap><A href="../items/items.html?00DA" target=items">燕雀石</A>x4</TD>
+    <TD noWrap><A href="../items/items.html?017C" target=items">鱼龙的牙</A>x5</TD>
+    <TD noWrap><A href="../items/items.html?0156" target=items">蓝速龙的鳞</A>x5</TD>
+    <TD noWrap></TD></TR>
   <TR>
     <TD noWrap><IMG src="images/blank.gif"><IMG src="images/blank.gif"><IMG 
-      src="images/T.gif">骨刀【鲛牙】</TD>
-    <TD noWrap><IMG src="images/weapon04/06-1.gif"></TD>
-    <TD noWrap><IMG src="images/weapon04/06-2.gif"></TD>
-    <TD noWrap align=middle>480 </TD>
+      src="images/I.gif"><IMG src="images/T.gif">骨刀【龙牙】</TD><TD noWrap align=middle><IMG height=15 src="../images/gauge015.gif" width=122></TD>
+    <TD noWrap align=middle>624</TD>
     <TD noWrap align=middle>　</TD>
-    <TD noWrap align=right>0% </TD>
+    <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>ーーー</TD>
-    <TD noWrap align=middle>2 </TD>
-    <TD noWrap align=middle>4650 </TD>
-    <TD noWrap>燕雀石x4 </TD>
-    <TD noWrap>鱼龙的牙x5 </TD>
-    <TD noWrap>蓝速龙的鳞x5</TD>
+    <TD noWrap align=middle>2</TD><TD noWrap align=right>8250</TD>
+    <TD noWrap><A href="../items/items.html?00DA" target=items">燕雀石</A>x8</TD>
+    <TD noWrap><A href="../items/items.html?0142" target=items">龙牙</A>x5</TD>
+    <TD noWrap><A href="../items/items.html?0159" target=items">蓝速龙王的皮</A>x2</TD>
     <TD noWrap></TD></TR>
   <TR class=odd>
-    <TD noWrap><IMG src="images/blank.gif"><IMG src="images/blank.gif"><IMG 
-      src="images/I.gif"><IMG src="images/T.gif">骨刀【龙牙】</TD>
-    <TD noWrap><IMG src="images/weapon04/07-1.gif"></TD>
-    <TD noWrap><IMG src="images/weapon04/07-2.gif"></TD>
-    <TD noWrap align=middle>624 </TD>
-    <TD noWrap align=middle>　</TD>
-    <TD noWrap align=right>0% </TD>
-    <TD noWrap align=middle>ーーー</TD>
-    <TD noWrap align=middle>2 </TD>
-    <TD noWrap align=middle>8250 </TD>
-    <TD noWrap>燕雀石x8 </TD>
-    <TD noWrap>龙牙x5 </TD>
-    <TD noWrap>蓝速龙王的皮x2</TD>
-    <TD noWrap></TD></TR>
-  <TR>
     <TD noWrap><IMG src="images/blank.gif"><IMG src="images/blank.gif"><IMG 
       src="images/I.gif"><IMG src="images/I.gif"><IMG 
-src="images/T.gif">天下无双刀</TD>
-    <TD noWrap><IMG src="images/weapon04/01-1.gif"></TD>
-    <TD noWrap><IMG src="images/weapon04/01-2.gif"></TD>
-    <TD noWrap align=middle>768 </TD>
+src="images/T.gif">天下无双刀</TD><TD noWrap align=middle><IMG height=15 src="../images/gauge005.gif" width=122></TD>
+    <TD noWrap align=middle>768</TD>
     <TD noWrap align=middle>　</TD>
-    <TD noWrap align=right>0% </TD>
+    <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>〇ーー</TD>
-    <TD noWrap align=middle>4 </TD>
-    <TD noWrap align=middle>22750 </TD>
-    <TD noWrap>钢龍的角x1 </TD>
-    <TD noWrap>钢龍的爪x5 </TD>
-    <TD noWrap>条纹的皮x4</TD>
+    <TD noWrap align=middle>4</TD><TD noWrap align=right>22750</TD>
+    <TD noWrap><A href="../items/items.html?0228" target=items">钢龍的角</A>x1</TD>
+    <TD noWrap><A href="../items/items.html?022A" target=items">钢龍的爪</A>x5</TD>
+    <TD noWrap><A href="../items/items.html?0254" target=items">条纹的皮</A>x4</TD>
     <TD noWrap></TD></TR>
-  <TR class=odd>
-    <TD noWrap><IMG src="images/blank.gif"><IMG src="images/blank.gif"><IMG 
+  <TR class=hc>
+    <TD class=last noWrap><IMG src="images/blank.gif"><IMG src="images/blank.gif"><IMG 
       src="images/I.gif"><IMG src="images/I.gif"><IMG src="images/I.gif"><IMG 
-      src="images/L.gif"><FONT color=#ff0000>天上天下无双刀</FONT></TD>
-    <TD noWrap><IMG src="images/weapon04/19-1.gif"></TD>
-    <TD noWrap><IMG src="images/weapon04/19-2.gif"></TD>
-    <TD noWrap align=middle>912 </TD>
+      src="images/L.gif">天上天下无双刀</TD><TD noWrap align=middle><IMG height=15 src="../images/gauge209.gif" width=122></TD>
+    <TD noWrap align=middle>912</TD>
     <TD noWrap align=middle>　</TD>
-    <TD noWrap align=right>0% </TD>
+    <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>〇〇ー</TD>
-    <TD noWrap align=middle>6 </TD>
-    <TD noWrap align=middle>50000 </TD>
-    <TD noWrap>钢龍的尖爪x5 </TD>
-    <TD noWrap>蛇龙的上皮x4 </TD>
-    <TD noWrap>古龍的血x3</TD>
-    <TD noWrap></TD></TR>
-  <TR>
-    <TD noWrap><IMG src="images/blank.gif"><IMG src="images/blank.gif"><IMG 
-      src="images/I.gif"><IMG src="images/I.gif"><IMG 
-src="images/L.gif">龙刀【焰】</TD>
-    <TD noWrap><IMG src="images/weapon04/16-1.gif"></TD>
-    <TD noWrap><IMG src="images/weapon04/16-2.gif"></TD>
-    <TD noWrap align=middle>720 </TD>
-    <TD noWrap align=middle>龍350 </TD>
-    <TD noWrap align=right>0% </TD>
-    <TD noWrap align=middle>〇ーー</TD>
-    <TD noWrap align=middle>4 </TD>
-    <TD noWrap align=middle>34550 </TD>
-    <TD noWrap>老山龍的角x1 </TD>
-    <TD noWrap>红莲石x5 </TD>
-    <TD noWrap>勇气之证x5</TD>
+    <TD noWrap align=middle>6</TD><TD noWrap align=right>50000</TD>
+    <TD noWrap><A href="../items/items.html?022B" target=items">钢龍的尖爪</A>x5</TD>
+    <TD noWrap><A href="../items/items.html?0253" target=items">蛇龙的上皮</A>x4</TD>
+    <TD noWrap><A href="../items/items.html?023D" target=items">古龍的血</A>x3</TD>
     <TD noWrap></TD></TR>
   <TR class=odd>
     <TD noWrap><IMG src="images/blank.gif"><IMG src="images/blank.gif"><IMG 
       src="images/I.gif"><IMG src="images/I.gif"><IMG 
-      src="images/blank.gif"><IMG src="images/L.gif">龙刀【红莲】</TD>
-    <TD noWrap><IMG src="images/weapon04/17-1.gif"></TD>
-    <TD noWrap><IMG src="images/weapon04/17-2.gif"></TD>
-    <TD noWrap align=middle>816 </TD>
-    <TD noWrap align=middle>龍480 </TD>
-    <TD noWrap align=right>0% </TD>
+src="images/L.gif">龍刀【焰】</TD><TD noWrap align=middle><IMG height=15 src="../images/gauge050.gif" width=122></TD>
+    <TD noWrap align=middle>720</TD>
+    <TD noWrap align=middle>龍350</TD>
+    <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>〇ーー</TD>
-    <TD noWrap align=middle>5 </TD>
-    <TD noWrap align=middle>42750 </TD>
-    <TD noWrap>老山龍的角x3 </TD>
-    <TD noWrap>炎王龍的角x5 </TD>
-    <TD noWrap>红莲石x7</TD>
+    <TD noWrap align=middle>4</TD><TD noWrap align=right>34550</TD>
+    <TD noWrap><A href="../items/items.html?01E4" target=items">老山龍的角</A>x1</TD>
+    <TD noWrap><A href="../items/items.html?00DE" target=items">红莲石</A>x5</TD>
+    <TD noWrap><A href="../items/items.html?02E8" target=items">勇气之证</A>x5</TD>
     <TD noWrap></TD></TR>
   <TR>
     <TD noWrap><IMG src="images/blank.gif"><IMG src="images/blank.gif"><IMG 
       src="images/I.gif"><IMG src="images/I.gif"><IMG 
-      src="images/blank.gif"><IMG src="images/blank.gif"><IMG 
-      src="images/T.gif"><FONT color=#ff0000>龙刀【胧火】</FONT></TD>
-    <TD noWrap><IMG src="images/weapon04/27-1.gif"></TD>
-    <TD noWrap><IMG src="images/weapon04/27-2.gif"></TD>
-    <TD noWrap align=middle>768 </TD>
-    <TD noWrap align=middle>龍520 </TD>
-    <TD noWrap align=right>0% </TD>
+      src="images/blank.gif"><IMG src="images/L.gif">龍刀【红莲】</TD><TD noWrap align=middle><IMG height=15 src="../images/gauge051.gif" width=122></TD>
+    <TD noWrap align=middle>816</TD>
+    <TD noWrap align=middle>龍480</TD>
+    <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>〇ーー</TD>
-    <TD noWrap align=middle>7 </TD>
-    <TD noWrap align=middle>120000 </TD>
-    <TD noWrap>老山龍的苍角x3 </TD>
-    <TD noWrap>炎妃龍的角x5 </TD>
-    <TD noWrap>战友之绊x5</TD>
+    <TD noWrap align=middle>5</TD><TD noWrap align=right>42750</TD>
+    <TD noWrap><A href="../items/items.html?01E4" target=items">老山龍的角</A>x3</TD>
+    <TD noWrap><A href="../items/items.html?024A" target=items">炎王龍的角</A>x5</TD>
+    <TD noWrap><A href="../items/items.html?00DE" target=items">红莲石</A>x7</TD>
     <TD noWrap></TD></TR>
-  <TR class=odd>
+  <TR class=hc>
+    <TD class=last noWrap><IMG src="images/blank.gif"><IMG src="images/blank.gif"><IMG 
+      src="images/I.gif"><IMG src="images/I.gif"><IMG 
+      src="images/blank.gif"><IMG src="images/blank.gif"><IMG 
+      src="images/T.gif">龍刀【胧火】</TD><TD noWrap align=middle><IMG height=15 src="../images/gauge280.gif" width=122></TD>
+    <TD noWrap align=middle>768</TD>
+    <TD noWrap align=middle>龍520</TD>
+    <TD noWrap align=right>0%</TD>
+    <TD noWrap align=middle>〇ーー</TD>
+    <TD noWrap align=middle>7</TD><TD noWrap align=right>120000</TD>
+    <TD noWrap><A href="../items/items.html?01E9" target=items">老山龍的苍角</A>x3</TD>
+    <TD noWrap><A href="../items/items.html?0243" target=items">炎妃龍的角</A>x5</TD>
+    <TD noWrap><A href="../items/items.html?02E4" target=items">战友之绊</A>x5</TD>
+    <TD noWrap></TD></TR>
+  <TR class=hc>
     <TD noWrap><IMG src="images/blank.gif"><IMG src="images/blank.gif"><IMG 
       src="images/I.gif"><IMG src="images/I.gif"><IMG 
       src="images/blank.gif"><IMG src="images/blank.gif"><IMG 
-      src="images/L.gif">飞龙刀【朱】</TD>
-    <TD noWrap><IMG src="images/weapon04/10-1.gif"></TD>
-    <TD noWrap><IMG src="images/weapon04/10-2.gif"></TD>
-    <TD noWrap align=middle>864 </TD>
-    <TD noWrap align=middle>火270 </TD>
-    <TD noWrap align=right>0% </TD>
+      src="images/L.gif">飞龙刀【朱】</TD><TD noWrap align=middle><IMG height=15 src="../images/gauge019.gif" width=122></TD>
+    <TD noWrap align=middle>864</TD>
+    <TD noWrap align=middle>火270</TD>
+    <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>ーーー</TD>
-    <TD noWrap align=middle>6 </TD>
-    <TD noWrap align=middle>75000 </TD>
-    <TD noWrap>火龙的尻尾x3 </TD>
-    <TD noWrap>火龙的坚壳x4 </TD>
-    <TD noWrap>火龙的逆鳞x1</TD>
+    <TD noWrap align=middle>6</TD><TD noWrap align=right>75000</TD>
+    <TD noWrap><A href="../items/items.html?019E" target=items">火龙的尻尾</A>x3</TD>
+    <TD noWrap><A href="../items/items.html?019D" target=items">火龙的坚壳</A>x4</TD>
+    <TD noWrap><A href="../items/items.html?019A" target=items">火龙的逆鳞</A>x1</TD>
+    <TD noWrap></TD></TR>
+  <TR class=hc>
+    <TD class=last noWrap><IMG src="images/blank.gif"><IMG src="images/blank.gif"><IMG 
+      src="images/I.gif"><IMG src="images/I.gif"><IMG 
+      src="images/blank.gif"><IMG src="images/blank.gif"><IMG 
+      src="images/blank.gif"><IMG src="images/L.gif">飞龙刀【枫】</TD><TD noWrap align=middle><IMG height=15 src="../images/gauge389.gif" width=122></TD>
+    <TD noWrap align=middle>912</TD>
+    <TD noWrap align=middle>火340</TD>
+    <TD noWrap align=right>0%</TD>
+    <TD noWrap align=middle>ーーー</TD>
+    <TD noWrap align=middle>7</TD><TD noWrap align=right>150000</TD>
+    <TD noWrap><A href="../items/items.html?01A0" target=items">火龙的翼</A>x2</TD>
+    <TD noWrap><A href="../items/items.html?019D" target=items">火龙的坚壳</A>x8</TD>
+    <TD noWrap><A href="../items/items.html?019B" target=items">火龙的红玉</A>x1</TD>
     <TD noWrap></TD></TR>
   <TR>
     <TD noWrap><IMG src="images/blank.gif"><IMG src="images/blank.gif"><IMG 
-      src="images/I.gif"><IMG src="images/I.gif"><IMG 
-      src="images/blank.gif"><IMG src="images/blank.gif"><IMG 
-      src="images/blank.gif"><IMG src="images/L.gif"><FONT 
-      color=#ff0000>飞龙刀【枫</FONT>】</TD>
-    <TD noWrap><IMG src="images/weapon04/41-1.gif"></TD>
-    <TD noWrap><IMG src="images/weapon04/41-2.gif"></TD>
-    <TD noWrap align=middle>912 </TD>
-    <TD noWrap align=middle>火340 </TD>
-    <TD noWrap align=right>0% </TD>
-    <TD noWrap align=middle>ーーー</TD>
-    <TD noWrap align=middle>7 </TD>
-    <TD noWrap align=middle>150000 </TD>
-    <TD noWrap>火龙的翼x2 </TD>
-    <TD noWrap>火龙的坚壳x8 </TD>
-    <TD noWrap>火龙的红玉x1</TD>
-    <TD noWrap></TD></TR>
-  <TR class=odd>
-    <TD noWrap><IMG src="images/blank.gif"><IMG src="images/blank.gif"><IMG 
-      src="images/I.gif"><IMG src="images/L.gif">飞龙刀【青叶】</TD>
-    <TD noWrap><IMG src="images/weapon04/11-1.gif"></TD>
-    <TD noWrap><IMG src="images/weapon04/11-2.gif"></TD>
-    <TD noWrap align=middle>528 </TD>
+      src="images/I.gif"><IMG src="images/L.gif">飞龙刀【青叶】</TD><TD noWrap align=middle><IMG height=15 src="../images/gauge022.gif" width=122></TD>
+    <TD noWrap align=middle>528</TD>
     <TD noWrap align=middle>　</TD>
-    <TD noWrap align=right>0% </TD>
-    <TD noWrap align=middle>ーーー</TD>
-    <TD noWrap align=middle>3 </TD>
-    <TD noWrap align=middle>18560 </TD>
-    <TD noWrap>燕雀石x15 </TD>
-    <TD noWrap>雌火龙的棘x1 </TD>
-    <TD noWrap>雌火龙的甲壳x4 </TD>
+    <TD noWrap align=right>0%</TD>
+    <TD noWrap align=middle>－－－</TD>
+    <TD noWrap align=middle>3</TD><TD noWrap align=right>18560</TD>
+    <TD noWrap><A href="../items/items.html?00DA" target=items">燕雀石</A>x15</TD>
+    <TD noWrap><A href="../items/items.html?018E" target=items">雌火龙的棘</A>x1</TD>
+    <TD noWrap><A href="../items/items.html?018C" target=items">雌火龙的甲壳</A>x4</TD>
     <TD noWrap>　</TD></TR>
-  <TR>
-    <TD noWrap><IMG src="images/blank.gif"><IMG src="images/blank.gif"><IMG 
-      src="images/I.gif"><IMG src="images/blank.gif">飞龙刀【青叶】</TD>
-    <TD noWrap>　</TD>
-    <TD noWrap>　</TD>
-    <TD noWrap align=middle>　</TD>
-    <TD noWrap align=middle>　</TD>
-    <TD noWrap align=middle>　</TD>
-    <TD noWrap align=middle>　</TD>
-    <TD noWrap align=middle>　</TD>
-    <TD noWrap align=middle>　</TD>
-    <TD noWrap>燕雀石x15 </TD>
-    <TD noWrap>雌火龙的棘x1 </TD>
-    <TD noWrap>雌火龙的甲壳x6 </TD>
-    <TD noWrap>煌甲虫x3</TD></TR>
   <TR class=odd>
     <TD noWrap><IMG src="images/blank.gif"><IMG src="images/blank.gif"><IMG 
       src="images/I.gif"><IMG src="images/blank.gif"><IMG 
-      src="images/L.gif">飞龙刀【翠】</TD>
-    <TD noWrap><IMG src="images/weapon04/35-1.gif"></TD>
-    <TD noWrap><IMG src="images/weapon04/35-2.gif"></TD>
-    <TD noWrap align=middle>624 </TD>
+      src="images/L.gif">飞龙刀【翠】</TD><TD noWrap align=middle><IMG height=15 src="../images/gauge383.gif" width=122></TD>
+    <TD noWrap align=middle>624</TD>
     <TD noWrap align=middle>　</TD>
-    <TD noWrap align=right>0% </TD>
+    <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>〇ーー</TD>
-    <TD noWrap align=middle>4 </TD>
-    <TD noWrap align=middle>36980 </TD>
-    <TD noWrap>辉龙石x5 </TD>
-    <TD noWrap>雌火龙的甲壳x6 </TD>
-    <TD noWrap>雌火龙的逆鳞x1</TD>
+    <TD noWrap align=middle>4</TD><TD noWrap align=right>36980</TD>
+    <TD noWrap><A href="../items/items.html?00DB" target=items">辉龙石</A>x5</TD>
+    <TD noWrap><A href="../items/items.html?018C" target=items">雌火龙的甲壳</A>x6</TD>
+    <TD noWrap><A href="../items/items.html?018A" target=items">雌火龙的逆鳞</A>x1</TD>
     <TD noWrap></TD></TR>
-  <TR>
-    <TD noWrap><IMG src="images/blank.gif"><IMG src="images/blank.gif"><IMG 
+  <TR class=hc>
+    <TD class=last noWrap><IMG src="images/blank.gif"><IMG src="images/blank.gif"><IMG 
       src="images/I.gif"><IMG src="images/blank.gif"><IMG 
-      src="images/blank.gif"><IMG src="images/L.gif"><FONT 
-      color=#ff0000>飞龙刀【葵】</FONT></TD>
-    <TD noWrap><IMG src="images/weapon04/46-1.gif"></TD>
-    <TD noWrap><IMG src="images/weapon04/46-2.gif"></TD>
-    <TD noWrap align=middle>672 </TD>
+      src="images/blank.gif"><IMG src="images/L.gif">飞龙刀【葵】</TD><TD noWrap align=middle><IMG height=15 src="../images/gauge478.gif" width=122></TD>
+    <TD noWrap align=middle>672</TD>
     <TD noWrap align=middle>　</TD>
-    <TD noWrap align=right>0% </TD>
+    <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>〇ーー</TD>
-    <TD noWrap align=middle>7 </TD>
-    <TD noWrap align=middle>120000 </TD>
-    <TD noWrap>灵鹤石x18 </TD>
-    <TD noWrap>雌火龙的上棘x1 </TD>
-    <TD noWrap>雌火龙的红玉x1</TD>
+    <TD noWrap align=middle>7</TD><TD noWrap align=right>120000</TD>
+    <TD noWrap><A href="../items/items.html?00DC" target=items">灵鹤石</A>x18</TD>
+    <TD noWrap><A href="../items/items.html?018F" target=items">雌火龙的上棘</A>x1</TD>
+    <TD noWrap><A href="../items/items.html?018B" target=items">雌火龙的红玉</A>x1</TD>
     <TD noWrap></TD></TR>
   <TR class=odd>
     <TD noWrap><IMG src="images/blank.gif"><IMG src="images/blank.gif"><IMG 
-      src="images/L.gif">黑刀【零型】</TD>
-    <TD noWrap><IMG src="images/weapon04/08-1.gif"></TD>
-    <TD noWrap><IMG src="images/weapon04/08-2.gif"></TD>
-    <TD noWrap align=middle>576 </TD>
-    <TD noWrap align=middle>防御+2 </TD>
-    <TD noWrap align=right>0% </TD>
+      src="images/L.gif">黑刀【零之型】</TD><TD noWrap align=middle><IMG height=15 src="../images/gauge016.gif" width=122></TD>
+    <TD noWrap align=middle>576</TD>
+    <TD noWrap align=middle>防御+2</TD>
+    <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>〇〇ー</TD>
-    <TD noWrap align=middle>3 </TD>
-    <TD noWrap align=middle>12350 </TD>
-    <TD noWrap>爬虫的头x4 </TD>
-    <TD noWrap>爬虫的羽x10 </TD>
-    <TD noWrap>硬化药x3</TD>
+    <TD noWrap align=middle>3</TD><TD noWrap align=right>12350</TD>
+    <TD noWrap><A href="../items/items.html?01CF" target=items">爬虫的头</A>x4</TD>
+    <TD noWrap><A href="../items/items.html?01D0" target=items">爬虫的羽</A>x10</TD>
+    <TD noWrap><A href="../items/items.html?0012" target=items">硬化药</A>x3</TD>
     <TD noWrap></TD></TR>
   <TR>
     <TD noWrap><IMG src="images/blank.gif"><IMG src="images/blank.gif"><IMG 
-      src="images/blank.gif"><IMG src="images/L.gif">黑刀【贰型】</TD>
-    <TD noWrap><IMG src="images/weapon04/09-1.gif"></TD>
-    <TD noWrap><IMG src="images/weapon04/09-2.gif"></TD>
-    <TD noWrap align=middle>672 </TD>
-    <TD noWrap align=middle>防御+6 </TD>
-    <TD noWrap align=right>0% </TD>
+      src="images/blank.gif"><IMG src="images/L.gif">黑刀【贰之型】</TD><TD noWrap align=middle><IMG height=15 src="../images/gauge017.gif" width=122></TD>
+    <TD noWrap align=middle>672</TD>
+    <TD noWrap align=middle>防御+6</TD>
+    <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>〇〇ー</TD>
-    <TD noWrap align=middle>4 </TD>
-    <TD noWrap align=middle>15580 </TD>
-    <TD noWrap>爬虫的头x6 </TD>
-    <TD noWrap>爬虫的羽x20 </TD>
-    <TD noWrap>硬化药Ｇx1</TD>
+    <TD noWrap align=middle>4</TD><TD noWrap align=right>15580</TD>
+    <TD noWrap><A href="../items/items.html?01CF" target=items">爬虫的头</A>x6</TD>
+    <TD noWrap><A href="../items/items.html?01D0" target=items">爬虫的羽</A>x20</TD>
+    <TD noWrap><A href="../items/items.html?0013" target=items">硬化药Ｇ</A>x1</TD>
     <TD noWrap></TD></TR>
-  <TR class=odd>
-    <TD noWrap><IMG src="images/blank.gif"><IMG src="images/blank.gif"><IMG 
+  <TR class=hc>
+    <TD class=last noWrap><IMG src="images/blank.gif"><IMG src="images/blank.gif"><IMG 
       src="images/blank.gif"><IMG src="images/blank.gif"><IMG 
-      src="images/L.gif"><FONT color=#ff0000>黑刀【参型】</FONT></TD>
-    <TD noWrap><IMG src="images/weapon04/14-1.gif"></TD>
-    <TD noWrap><IMG src="images/weapon04/14-2.gif"></TD>
-    <TD noWrap align=middle>816 </TD>
-    <TD noWrap align=middle>防御+10 </TD>
-    <TD noWrap align=right>0% </TD>
+      src="images/L.gif">黑刀【参之型】</TD><TD noWrap align=middle><IMG height=15 src="../images/gauge031.gif" width=122></TD>
+    <TD noWrap align=middle>816</TD>
+    <TD noWrap align=middle>防御+10</TD>
+    <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>〇〇〇</TD>
-    <TD noWrap align=middle>6 </TD>
-    <TD noWrap align=middle>50000 </TD>
-    <TD noWrap>爬虫的头x10 </TD>
-    <TD noWrap>爬虫的薄羽x10 </TD>
-    <TD noWrap>煌甲虫x7</TD>
+    <TD noWrap align=middle>6</TD><TD noWrap align=right>50000</TD>
+    <TD noWrap><A href="../items/items.html?01CF" target=items">爬虫的头</A>x10</TD>
+    <TD noWrap><A href="../items/items.html?01D1" target=items">爬虫的薄羽</A>x10</TD>
+    <TD noWrap><A href="../items/items.html?010A" target=items">煌甲虫</A>x7</TD>
     <TD noWrap></TD></TR>
   <TR>
-    <TH noWrap>名称</TH>
+    <TH noWrap width=250>名称</TH>
     <TH noWrap width=125>锋利度</TH>
-    <TH noWrap width=125>锋利度+1</TH>
-    <TH noWrap align=middle>攻击力</TH>
-    <TH noWrap align=middle>属性</TH>
-    <TH noWrap align=middle>会心率</TH>
-    <TH noWrap align=middle>插孔</TH>
-    <TH noWrap align=middle>稀有度</TH>
-    <TH noWrap align=middle>价格</TH>
-    <TH noWrap>素材1</TH>
-    <TH noWrap>素材2</TH>
-    <TH noWrap>素材3</TH>
-    <TH noWrap>素材4</TH></TR>
+    <TH noWrap align=middle width=50>攻击力</TH>
+    <TH noWrap align=middle width=108>属性</TH>
+    <TH noWrap align=middle width=42>会心率</TH>
+    <TH noWrap align=middle width=45>插孔</TH>
+    <TH noWrap align=middle width=24>稀有度</TH>
+    <TH noWrap align=middle width=54>价格</TH>
+    <TH noWrap width=120>素材1</TH>
+    <TH noWrap width=120>素材2</TH>
+    <TH noWrap width=120>素材3</TH>
+    <TH noWrap width=120>素材4</TH></TR>
   <TR class=s>
-    <TD noWrap>铁剑</TD>
-    <TD noWrap align=middle width=125><IMG src="images/weapon03/01-1.gif"></TD>
-    <TD noWrap align=middle width=125><IMG src="images/weapon03/01-2.gif"></TD>
-    <TD noWrap align=middle>288 </TD>
+    <TD class=base noWrap>铁剑</TD><TD noWrap align=middle><IMG height=15 src="../images/gauge001.gif" width=122></TD>
+    <TD noWrap align=middle>288</TD>
     <TD noWrap align=middle>　</TD>
-    <TD noWrap align=right>0% </TD>
+    <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>ーーー</TD>
-    <TD noWrap align=middle>1 </TD>
-    <TD noWrap align=middle>1320 </TD>
-    <TD noWrap>铁矿石x3</TD>
+    <TD noWrap align=middle>1</TD><TD noWrap align=right>1320</TD>
+    <TD noWrap><A href="../items/items.html?00D8" target=items">铁矿石</A>x3</TD>
     <TD noWrap></TD>
     <TD noWrap>　</TD>
     <TD noWrap></TD></TR>
   <TR class=s>
-    <TD noWrap><IMG src="images/blank.gif"><IMG src="images/L.gif">铁剑改</TD>
-    <TD noWrap align=middle width=125><IMG src="images/weapon03/02-1.gif"></TD>
-    <TD noWrap align=middle width=125><IMG src="images/weapon03/02-2.gif"></TD>
-    <TD noWrap align=middle>336 </TD>
+    <TD noWrap><IMG src="images/blank.gif"><IMG src="images/L.gif">铁剑改</TD><TD noWrap align=middle><IMG height=15 src="../images/gauge002.gif" width=122></TD>
+    <TD noWrap align=middle>336</TD>
     <TD noWrap align=middle>　</TD>
-    <TD noWrap align=right>0% </TD>
+    <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>ーーー</TD>
-    <TD noWrap align=middle>1 </TD>
-    <TD noWrap align=middle>1910 </TD>
-    <TD noWrap>铁矿石x2</TD>
+    <TD noWrap align=middle>1</TD><TD noWrap align=right>1910</TD>
+    <TD noWrap><A href="../items/items.html?00D8" target=items">铁矿石</A>x2</TD>
     <TD noWrap></TD>
     <TD noWrap>　</TD>
     <TD noWrap></TD></TR>
   <TR>
     <TD noWrap><IMG src="images/blank.gif"><IMG src="images/blank.gif"><IMG 
-      src="images/L.gif">铁刀[强化<SPAN lang=zh-cn>]</SPAN></TD>
-    <TD noWrap><IMG src="images/weapon04/02-1.gif"></TD>
-    <TD noWrap><IMG src="images/weapon04/02-2.gif"></TD>
-    <TD noWrap align=middle>480 </TD>
+      src="images/L.gif">铁刀</TD><TD noWrap align=middle><IMG height=15 src="../images/gauge010.gif" width=122></TD>
+    <TD noWrap align=middle>480</TD>
     <TD noWrap align=middle>　</TD>
-    <TD noWrap align=right>0% </TD>
+    <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>ーーー</TD>
-    <TD noWrap align=middle>2 </TD>
-    <TD noWrap align=middle>3150 </TD>
-    <TD noWrap>铁矿石x5 </TD>
-    <TD noWrap>燕雀石x3 </TD>
-    <TD noWrap>大地的结晶x5 </TD>
+    <TD noWrap align=middle>2</TD><TD noWrap align=right>3150</TD>
+    <TD noWrap><A href="../items/items.html?00D8" target=items">铁矿石</A>x5</TD>
+    <TD noWrap><A href="../items/items.html?00DA" target=items">燕雀石</A>x3</TD>
+    <TD noWrap><A href="../items/items.html?00D9" target=items">大地的结晶</A>x5</TD>
     <TD noWrap>　</TD></TR>
   <TR class=odd>
     <TD noWrap><IMG src="images/blank.gif"><IMG src="images/blank.gif"><IMG 
-      src="images/blank.gif">铁刀[生产<SPAN lang=zh-cn>]</SPAN></TD>
-    <TD noWrap>　</TD>
-    <TD noWrap>　</TD>
+      src="images/blank.gif"><IMG src="images/L.gif">铁刀【禊】</TD><TD noWrap align=middle><IMG height=15 src="../images/gauge011.gif" width=122></TD>
+    <TD noWrap align=middle>528</TD>
     <TD noWrap align=middle>　</TD>
-    <TD noWrap align=middle>　</TD>
-    <TD noWrap align=middle>　</TD>
-    <TD noWrap align=middle>　</TD>
-    <TD noWrap align=middle>　</TD>
-    <TD noWrap align=middle>　</TD>
-    <TD noWrap>燕雀石x5 </TD>
-    <TD noWrap>铁矿石x8 </TD>
-    <TD noWrap>大地的结晶x7 </TD>
-    <TD noWrap>砥石x12</TD></TR>
+    <TD noWrap align=right>0%</TD>
+    <TD noWrap align=middle>ーーー</TD>
+    <TD noWrap align=middle>2</TD><TD noWrap align=right>5580</TD>
+    <TD noWrap><A href="../items/items.html?00D8" target=items">铁矿石</A>x10</TD>
+    <TD noWrap><A href="../items/items.html?00DA" target=items">燕雀石</A>x6</TD>
+    <TD noWrap><A href="../items/items.html?00D9" target=items">大地的结晶</A>x10</TD>
+    <TD noWrap></TD></TR>
   <TR>
     <TD noWrap><IMG src="images/blank.gif"><IMG src="images/blank.gif"><IMG 
-      src="images/blank.gif"><IMG src="images/L.gif">铁刀【禊】</TD>
-    <TD noWrap><IMG src="images/weapon04/03-1.gif"></TD>
-    <TD noWrap><IMG src="images/weapon04/03-2.gif"></TD>
-    <TD noWrap align=middle>528 </TD>
+      src="images/blank.gif"><IMG src="images/blank.gif"><IMG 
+      src="images/L.gif">铁刀【神乐】</TD><TD noWrap align=middle><IMG height=15 src="../images/gauge012.gif" width=122></TD>
+    <TD noWrap align=middle>576</TD>
     <TD noWrap align=middle>　</TD>
-    <TD noWrap align=right>0% </TD>
+    <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>ーーー</TD>
-    <TD noWrap align=middle>2 </TD>
-    <TD noWrap align=middle>5580 </TD>
-    <TD noWrap>铁矿石x10 </TD>
-    <TD noWrap>燕雀石x6 </TD>
-    <TD noWrap>大地的结晶x10</TD>
+    <TD noWrap align=middle>2</TD><TD noWrap align=right>9420</TD>
+    <TD noWrap><A href="../items/items.html?00D8" target=items">铁矿石</A>x15</TD>
+    <TD noWrap><A href="../items/items.html?00DA" target=items">燕雀石</A>x12</TD>
+    <TD noWrap><A href="../items/items.html?00D9" target=items">大地的结晶</A>x15</TD>
     <TD noWrap></TD></TR>
   <TR class=odd>
     <TD noWrap><IMG src="images/blank.gif"><IMG src="images/blank.gif"><IMG 
       src="images/blank.gif"><IMG src="images/blank.gif"><IMG 
-      src="images/L.gif">铁刀【神乐】</TD>
-    <TD noWrap><IMG src="images/weapon04/04-1.gif"></TD>
-    <TD noWrap><IMG src="images/weapon04/04-2.gif"></TD>
-    <TD noWrap align=middle>576 </TD>
-    <TD noWrap align=middle>　</TD>
-    <TD noWrap align=right>0% </TD>
+      src="images/blank.gif"><IMG src="images/L.gif">斩破刀</TD><TD noWrap align=middle><IMG height=15 src="../images/gauge208.gif" width=122></TD>
+    <TD noWrap align=middle>624</TD>
+    <TD noWrap align=middle>雷340</TD>
+    <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>ーーー</TD>
-    <TD noWrap align=middle>2 </TD>
-    <TD noWrap align=middle>9420 </TD>
-    <TD noWrap>铁矿石x15 </TD>
-    <TD noWrap>燕雀石x12 </TD>
-    <TD noWrap>大地的结晶x15</TD>
+    <TD noWrap align=middle>4</TD><TD noWrap align=right>18980</TD>
+    <TD noWrap><A href="../items/items.html?00DA" target=items">燕雀石</A>x18</TD>
+    <TD noWrap><A href="../items/items.html?00D9" target=items">大地的结晶</A>x30</TD>
+    <TD noWrap><A href="../items/items.html?0135" target=items">电气袋</A>x3</TD>
     <TD noWrap></TD></TR>
   <TR>
     <TD noWrap><IMG src="images/blank.gif"><IMG src="images/blank.gif"><IMG 
       src="images/blank.gif"><IMG src="images/blank.gif"><IMG 
-      src="images/blank.gif"><IMG src="images/L.gif">斩破刀</TD>
-    <TD noWrap><IMG src="images/weapon04/18-1.gif"></TD>
-    <TD noWrap><IMG src="images/weapon04/18-2.gif"></TD>
-    <TD noWrap align=middle>624 </TD>
-    <TD noWrap align=middle>雷340 </TD>
-    <TD noWrap align=right>0% </TD>
-    <TD noWrap align=middle>ーーー</TD>
-    <TD noWrap align=middle>4 </TD>
-    <TD noWrap align=middle>18980 </TD>
-    <TD noWrap>燕雀石x18 </TD>
-    <TD noWrap>大地的结晶x30 </TD>
-    <TD noWrap>电气袋x3</TD>
-    <TD noWrap></TD></TR>
-  <TR class=odd>
-    <TD noWrap><IMG src="images/blank.gif"><IMG src="images/blank.gif"><IMG 
       src="images/blank.gif"><IMG src="images/blank.gif"><IMG 
-      src="images/blank.gif"><IMG src="images/blank.gif"><IMG 
-      src="images/L.gif">鬼斩破</TD>
-    <TD noWrap><IMG src="images/weapon04/28-1.gif"></TD>
-    <TD noWrap><IMG src="images/weapon04/28-2.gif"></TD>
-    <TD noWrap align=middle>672 </TD>
-    <TD noWrap align=middle>雷470 </TD>
-    <TD noWrap align=right>0% </TD>
+      src="images/L.gif">鬼斩破</TD><TD noWrap align=middle><IMG height=15 src="../images/gauge285.gif" width=122></TD>
+    <TD noWrap align=middle>672</TD>
+    <TD noWrap align=middle>雷470</TD>
+    <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>〇ーー</TD>
-    <TD noWrap align=middle>5 </TD>
-    <TD noWrap align=middle>28560 </TD>
-    <TD noWrap>辉龙石x5 </TD>
-    <TD noWrap>燕雀石x20 </TD>
-    <TD noWrap>电气袋x5</TD>
+    <TD noWrap align=middle>5</TD><TD noWrap align=right>28560</TD>
+    <TD noWrap><A href="../items/items.html?00DB" target=items">辉龙石</A>x5</TD>
+    <TD noWrap><A href="../items/items.html?00DA" target=items">燕雀石</A>x20</TD>
+    <TD noWrap><A href="../items/items.html?0135" target=items">电气袋</A>x5</TD>
     <TD noWrap></TD></TR>
-  <TR>
-    <TD noWrap><IMG src="images/blank.gif"><IMG src="images/blank.gif"><IMG 
+  <TR class=hc>
+    <TD class=last noWrap><IMG src="images/blank.gif"><IMG src="images/blank.gif"><IMG 
       src="images/blank.gif"><IMG src="images/blank.gif"><IMG 
       src="images/blank.gif"><IMG src="images/blank.gif"><IMG 
-      src="images/blank.gif"><IMG src="images/L.gif"><FONT 
-      color=#ff0000>鬼神斩破刀</FONT></TD>
-    <TD noWrap><IMG src="images/weapon04/25-1.gif"></TD>
-    <TD noWrap><IMG src="images/weapon04/25-2.gif"></TD>
-    <TD noWrap align=middle>816 </TD>
-    <TD noWrap align=middle>雷580 </TD>
-    <TD noWrap align=right>0% </TD>
+      src="images/blank.gif"><IMG src="images/L.gif">鬼神斩破刀</TD><TD noWrap align=middle><IMG height=15 src="../images/gauge274.gif" width=122></TD>
+    <TD noWrap align=middle>816</TD>
+    <TD noWrap align=middle>雷580</TD>
+    <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>〇ーー</TD>
-    <TD noWrap align=middle>6 </TD>
-    <TD noWrap align=middle>78630 </TD>
-    <TD noWrap>辉龙石x8 </TD>
-    <TD noWrap>灵鹤石x24 </TD>
-    <TD noWrap>白化的脊肉x2</TD>
+    <TD noWrap align=middle>6</TD><TD noWrap align=right>78630</TD>
+    <TD noWrap><A href="../items/items.html?00DB" target=items">辉龙石</A>x8</TD>
+    <TD noWrap><A href="../items/items.html?00DC" target=items">灵鹤石</A>x24</TD>
+    <TD noWrap><A href="../items/items.html?01AE" target=items">白化的脊肉</A>x2</TD>
     <TD noWrap></TD></TR>
   <TR>
-    <TH noWrap>名称</TH>
+    <TH noWrap width=250>名称</TH>
     <TH noWrap width=125>锋利度</TH>
-    <TH noWrap width=125>锋利度+1</TH>
-    <TH noWrap align=middle>攻击力</TH>
-    <TH noWrap align=middle>属性</TH>
-    <TH noWrap align=middle>会心率</TH>
-    <TH noWrap align=middle>插孔</TH>
-    <TH noWrap align=middle>稀有度</TH>
-    <TH noWrap align=middle>价格</TH>
-    <TH noWrap>素材1</TH>
-    <TH noWrap>素材2</TH>
-    <TH noWrap>素材3</TH>
-    <TH noWrap>素材4</TH></TR>
-  <TR>
-    <TD noWrap>黑暗镰刀</TD>
-    <TD noWrap><IMG src="images/weapon04/12-1.gif"></TD>
-    <TD noWrap><IMG src="images/weapon04/12-2.gif"></TD>
-    <TD noWrap align=middle>720 </TD>
+    <TH noWrap align=middle width=50>攻击力</TH>
+    <TH noWrap align=middle width=108>属性</TH>
+    <TH noWrap align=middle width=42>会心率</TH>
+    <TH noWrap align=middle width=45>插孔</TH>
+    <TH noWrap align=middle width=24>稀有度</TH>
+    <TH noWrap align=middle width=54>价格</TH>
+    <TH noWrap width=120>素材1</TH>
+    <TH noWrap width=120>素材2</TH>
+    <TH noWrap width=120>素材3</TH>
+    <TH noWrap width=120>素材4</TH></TR>
+  <TR class=hc>
+    <TD class=base noWrap>黑暗镰刀</TD><TD noWrap align=middle><IMG height=15 src="../images/gauge026.gif" width=122></TD>
+    <TD noWrap align=middle>720</TD>
     <TD noWrap align=middle>　</TD>
-    <TD noWrap align=right>0% </TD>
+    <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>ーーー</TD>
-    <TD noWrap align=middle>6 </TD>
-    <TD noWrap align=middle>16700 </TD>
-    <TD noWrap>坚龙骨x4 </TD>
-    <TD noWrap>黑角龙的甲壳x6 </TD>
-    <TD noWrap>古代鱼x2 </TD>
-    <TD noWrap>怪物的浓汁x4</TD></TR>
-  <TR class=odd>
-    <TD noWrap><IMG src="images/L.gif">黑暗惩罚</TD>
-    <TD noWrap><IMG src="images/weapon04/13-1.gif"></TD>
-    <TD noWrap><IMG src="images/weapon04/13-2.gif"></TD>
-    <TD noWrap align=middle>768 </TD>
+    <TD noWrap align=middle>6</TD><TD noWrap align=right>16700</TD>
+    <TD noWrap><A href="../items/items.html?013B" target=items">坚龙骨</A>x4</TD>
+    <TD noWrap><A href="../items/items.html?01C5" target=items">黑角龙的甲壳</A>x6</TD>
+    <TD noWrap><A href="../items/items.html?00FD" target=items">古代鱼</A>x2</TD>
+    <TD noWrap><A href="../items/items.html?0019" target=items">怪物的浓汁</A>x4</TD></TR>
+  <TR class=hc>
+    <TD noWrap><IMG src="images/L.gif">黑暗折磨</TD><TD noWrap align=middle><IMG height=15 src="../images/gauge027.gif" width=122></TD>
+    <TD noWrap align=middle>768</TD>
     <TD noWrap align=middle>　</TD>
-    <TD noWrap align=right>0% </TD>
+    <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>ーーー</TD>
-    <TD noWrap align=middle>6 </TD>
-    <TD noWrap align=middle>25750 </TD>
-    <TD noWrap>古龍骨x5 </TD>
-    <TD noWrap>黑角龙的坚壳x2 </TD>
-    <TD noWrap>怪物的浓汁x6</TD>
+    <TD noWrap align=middle>6</TD><TD noWrap align=right>25750</TD>
+    <TD noWrap><A href="../items/items.html?013C" target=items">古龍骨</A>x5</TD>
+    <TD noWrap><A href="../items/items.html?01C8" target=items">黑角龙的坚壳</A>x2</TD>
+    <TD noWrap><A href="../items/items.html?0019" target=items">怪物的浓汁</A>x6</TD>
     <TD noWrap></TD></TR>
-  <TR>
-    <TD noWrap><IMG src="images/blank.gif"><IMG src="images/T.gif"><FONT 
-      color=#ff0000>镰威太刀</FONT></TD>
-    <TD noWrap><IMG src="images/weapon04/26-1.gif"></TD>
-    <TD noWrap><IMG src="images/weapon04/26-2.gif"></TD>
-    <TD noWrap align=middle>912 </TD>
+  <TR class=hc>
+    <TD class=last noWrap><IMG src="images/blank.gif"><IMG src="images/T.gif">镰威太刀</TD><TD noWrap align=middle><IMG height=15 src="../images/gauge277.gif" width=122></TD>
+    <TD noWrap align=middle>912</TD>
     <TD noWrap align=middle>　</TD>
-    <TD noWrap align=right>0% </TD>
+    <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>〇ーー</TD>
-    <TD noWrap align=middle>6 </TD>
-    <TD noWrap align=middle>72880 </TD>
-    <TD noWrap>龙头壳x1 </TD>
-    <TD noWrap>达人的头骨x2 </TD>
-    <TD noWrap>剧毒蘑菇x10</TD>
+    <TD noWrap align=middle>6</TD><TD noWrap align=right>72880</TD>
+    <TD noWrap><A href="../items/items.html?0210" target=items">龙头壳</A>x1</TD>
+    <TD noWrap><A href="../items/items.html?013F" target=items">达人的髑髅</A>x2</TD>
+    <TD noWrap><A href="../items/items.html?00CB" target=items">剧毒蘑菇</A>x10</TD>
     <TD noWrap></TD></TR>
-  <TR class=odd>
-    <TD noWrap><IMG src="images/blank.gif"><IMG src="images/T.gif">切割者</TD>
-    <TD noWrap><IMG src="images/weapon04/29-1.gif"></TD>
-    <TD noWrap><IMG src="images/weapon04/29-2.gif"></TD>
-    <TD noWrap align=middle>816 </TD>
-    <TD noWrap align=middle>防御+8 </TD>
-    <TD noWrap align=right>0% </TD>
+  <TR class=hc>
+    <TD noWrap><IMG src="images/blank.gif"><IMG src="images/T.gif">蟹切刀</TD><TD noWrap align=middle><IMG height=15 src="../images/gauge292.gif" width=122></TD>
+    <TD noWrap align=middle>816</TD>
+    <TD noWrap align=middle>防御+8</TD>
+    <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>ーーー</TD>
-    <TD noWrap align=middle>6 </TD>
-    <TD noWrap align=middle>34450 </TD>
-    <TD noWrap>盾蟹的尖爪x1 </TD>
-    <TD noWrap>盾蟹的甲壳x8 </TD>
-    <TD noWrap>煌甲虫x6</TD>
+    <TD noWrap align=middle>6</TD><TD noWrap align=right>34450</TD>
+    <TD noWrap><A href="../items/items.html?0215" target=items">盾蟹的尖爪</A>x1</TD>
+    <TD noWrap><A href="../items/items.html?0212" target=items">盾蟹的甲壳</A>x8</TD>
+    <TD noWrap><A href="../items/items.html?010A" target=items">煌甲虫</A>x6</TD>
     <TD noWrap></TD></TR>
-  <TR>
-    <TD noWrap><IMG src="images/blank.gif"><IMG src="images/I.gif"><IMG 
-      src="images/L.gif"><FONT color=#ff0000>坚甲巨镰</FONT></TD>
-    <TD noWrap><IMG src="images/weapon04/34-1.gif"></TD>
-    <TD noWrap><IMG src="images/weapon04/34-2.gif"></TD>
-    <TD noWrap align=middle>864 </TD>
-    <TD noWrap align=middle>防御+12 </TD>
-    <TD noWrap align=right>0% </TD>
+  <TR class=hc>
+    <TD class=last noWrap><IMG src="images/blank.gif"><IMG src="images/I.gif"><IMG 
+      src="images/L.gif">大名切割刃</TD><TD noWrap align=middle><IMG height=15 src="../images/gauge382.gif" width=122></TD>
+    <TD noWrap align=middle>864</TD>
+    <TD noWrap align=middle>防御+12</TD>
+    <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>〇ーー</TD>
-    <TD noWrap align=middle>6 </TD>
-    <TD noWrap align=middle>43250 </TD>
-    <TD noWrap>盾蟹的尖爪x3 </TD>
-    <TD noWrap>盾蟹的坚壳x6 </TD>
-    <TD noWrap>王族花金龟x4</TD>
+    <TD noWrap align=middle>6</TD><TD noWrap align=right>43250</TD>
+    <TD noWrap><A href="../items/items.html?0215" target=items">盾蟹的尖爪</A>x3</TD>
+    <TD noWrap><A href="../items/items.html?0214" target=items">盾蟹的坚壳</A>x6</TD>
+    <TD noWrap><A href="../items/items.html?0107" target=items">王族花金龟</A>x4</TD>
     <TD noWrap></TD></TR>
-  <TR class=odd>
-    <TD noWrap><IMG src="images/blank.gif"><IMG src="images/L.gif">鬼剃刀</TD>
-    <TD noWrap><IMG src="images/weapon04/30-1.gif"></TD>
-    <TD noWrap><IMG src="images/weapon04/30-2.gif"></TD>
-    <TD noWrap align=middle>816 </TD>
-    <TD noWrap align=middle>雷180 </TD>
-    <TD noWrap align=right>10% </TD>
+  <TR class=hc>
+    <TD noWrap><IMG src="images/blank.gif"><IMG src="images/L.gif">鬼薙刀</TD><TD noWrap align=middle><IMG height=15 src="../images/gauge371.gif" width=122></TD>
+    <TD noWrap align=middle>816</TD>
+    <TD noWrap align=middle>雷180</TD>
+    <TD noWrap align=right>10%</TD>
     <TD noWrap align=middle>ーーー</TD>
-    <TD noWrap align=middle>6 </TD>
-    <TD noWrap align=middle>75000 </TD>
-    <TD noWrap>金狮子的锐牙x3 </TD>
-    <TD noWrap>金狮子的尻尾x2 </TD>
-    <TD noWrap>蛋券x5</TD>
+    <TD noWrap align=middle>6</TD><TD noWrap align=right>75000</TD>
+    <TD noWrap><A href="../items/items.html?020A" target=items">金狮子的锐牙</A>x3</TD>
+    <TD noWrap><A href="../items/items.html?020D" target=items">金狮子的尻尾</A>x2</TD>
+    <TD noWrap><A href="../items/items.html?02E6" target=items">蛋券</A>x5</TD>
+    <TD noWrap></TD></TR>
+  <TR class=hc>
+    <TD class=last noWrap><IMG src="images/blank.gif"><IMG src="images/blank.gif"><IMG 
+      src="images/L.gif">大鬼薙刀</TD><TD noWrap align=middle><IMG height=15 src="../images/gauge390.gif" width=122></TD>
+    <TD noWrap align=middle>864</TD>
+    <TD noWrap align=middle>雷240</TD>
+    <TD noWrap align=right>10%</TD>
+    <TD noWrap align=middle>ーーー</TD>
+    <TD noWrap align=middle>7</TD><TD noWrap align=right>150000</TD>
+    <TD noWrap><A href="../items/items.html?020C" target=items">金狮子的尖爪</A>x4</TD>
+    <TD noWrap><A href="../items/items.html?020D" target=items">金狮子的尻尾</A>x4</TD>
+    <TD noWrap><A href="../items/items.html?024E" target=items">浮岳龍的体液</A>x5</TD>
     <TD noWrap></TD></TR>
   <TR>
-    <TD noWrap><IMG src="images/blank.gif"><IMG src="images/blank.gif"><IMG 
-      src="images/L.gif"><FONT color=#ff0000>大鬼剃刀</FONT></TD>
-    <TD noWrap><IMG src="images/weapon04/42-1.gif"></TD>
-    <TD noWrap><IMG src="images/weapon04/42-2.gif"></TD>
-    <TD noWrap align=middle>864 </TD>
-    <TD noWrap align=middle>雷240 </TD>
-    <TD noWrap align=right>10% </TD>
-    <TD noWrap align=middle>ーーー</TD>
-    <TD noWrap align=middle>7 </TD>
-    <TD noWrap align=middle>150000 </TD>
-    <TD noWrap>金狮子的尖爪x4 </TD>
-    <TD noWrap>金狮子的尻尾x4 </TD>
-    <TD noWrap>浮岳龍的体液x5</TD>
-    <TD noWrap></TD></TR>
-  <TR>
-    <TH noWrap>名称</TH>
+    <TH noWrap width=250>名称</TH>
     <TH noWrap width=125>锋利度</TH>
-    <TH noWrap width=125>锋利度+1</TH>
-    <TH noWrap align=middle>攻击力</TH>
-    <TH noWrap align=middle>属性</TH>
-    <TH noWrap align=middle>会心率</TH>
-    <TH noWrap align=middle>插孔</TH>
-    <TH noWrap align=middle>稀有度</TH>
-    <TH noWrap align=middle>价格</TH>
-    <TH noWrap>素材1</TH>
-    <TH noWrap>素材2</TH>
-    <TH noWrap>素材3</TH>
-    <TH noWrap>素材4</TH></TR>
+    <TH noWrap align=middle width=50>攻击力</TH>
+    <TH noWrap align=middle width=108>属性</TH>
+    <TH noWrap align=middle width=42>会心率</TH>
+    <TH noWrap align=middle width=45>插孔</TH>
+    <TH noWrap align=middle width=24>稀有度</TH>
+    <TH noWrap align=middle width=54>价格</TH>
+    <TH noWrap width=120>素材1</TH>
+    <TH noWrap width=120>素材2</TH>
+    <TH noWrap width=120>素材3</TH>
+    <TH noWrap width=120>素材4</TH></TR>
   <TR class=s>
-    <TD noWrap>斧戟</TD>
-    <TD noWrap align=middle width=125><IMG src="images/weapon03/11-1.gif"></TD>
-    <TD noWrap align=middle width=125><IMG src="images/weapon03/11-2.gif"></TD>
-    <TD noWrap align=middle>864 </TD>
+    <TD class=base noWrap>战戟</TD><TD noWrap align=middle><IMG height=15 src="../images/gauge021.gif" width=122></TD>
+    <TD noWrap align=middle>864</TD>
     <TD noWrap align=middle>　</TD>
-    <TD noWrap align=right>0% </TD>
+    <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>ーーー</TD>
-    <TD noWrap align=middle>3 </TD>
-    <TD noWrap align=middle>6840 </TD>
-    <TD noWrap>红莲石x1
-    <TD noWrap>古龍骨x1
-    <TD noWrap>燕雀石x8</TD>
+    <TD noWrap align=middle>3</TD><TD noWrap align=right>6840</TD>
+    <TD noWrap><A href="../items/items.html?00DE" target=items">红莲石</A>x1
+    <TD noWrap><A href="../items/items.html?013C" target=items">古龍骨</A>x1
+    <TD noWrap><A href="../items/items.html?00DA" target=items">燕雀石</A>x8</TD>
     <TD noWrap></TD></TR>
   <TR class=s>
-    <TD noWrap><IMG src="images/L.gif">审判巨斧</TD>
-    <TD noWrap align=middle width=125><IMG src="images/weapon03/12-1.gif"></TD>
-    <TD noWrap align=middle width=125><IMG src="images/weapon03/12-2.gif"></TD>
-    <TD noWrap align=middle>816 </TD>
+    <TD noWrap><IMG src="images/L.gif">审判</TD><TD noWrap align=middle><IMG height=15 src="../images/gauge023.gif" width=122></TD>
+    <TD noWrap align=middle>816</TD>
     <TD noWrap align=middle>　</TD>
-    <TD noWrap align=right>0% </TD>
+    <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>ーーー</TD>
-    <TD noWrap align=middle>3 </TD>
-    <TD noWrap align=middle>12370 </TD>
-    <TD noWrap>古龍骨x2 </TD>
-    <TD noWrap>燕雀石x10 </TD>
-    <TD noWrap>煌甲虫x3</TD>
+    <TD noWrap align=middle>3</TD><TD noWrap align=right>12370</TD>
+    <TD noWrap><A href="../items/items.html?013C" target=items">古龍骨</A>x2</TD>
+    <TD noWrap><A href="../items/items.html?00DA" target=items">燕雀石</A>x10</TD>
+    <TD noWrap><A href="../items/items.html?010A" target=items">煌甲虫</A>x3</TD>
     <TD noWrap></TD></TR>
   <TR class=s>
     <TD noWrap><IMG src="images/blank.gif"><IMG 
-src="images/L.gif">行刑斧</TD>
-    <TD noWrap align=middle width=125><IMG src="images/weapon03/13-1.gif"></TD>
-    <TD noWrap align=middle width=125><IMG src="images/weapon03/13-2.gif"></TD>
-    <TD noWrap align=middle>768 </TD>
+src="images/L.gif">死刑</TD><TD noWrap align=middle><IMG height=15 src="../images/gauge024.gif" width=122></TD>
+    <TD noWrap align=middle>768</TD>
     <TD noWrap align=middle>　</TD>
-    <TD noWrap align=right>0% </TD>
+    <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>ーーー</TD>
-    <TD noWrap align=middle>4 </TD>
-    <TD noWrap align=middle>21060 </TD>
-    <TD noWrap>龙骨【大】x8 </TD>
-    <TD noWrap>大力王甲虫x3 </TD>
-    <TD noWrap>怪物的体液x4</TD>
+    <TD noWrap align=middle>4</TD><TD noWrap align=right>21060</TD>
+    <TD noWrap><A href="../items/items.html?013A" target=items">龙骨【大】</A>x8</TD>
+    <TD noWrap><A href="../items/items.html?0121" target=items">大力王甲虫</A>x3</TD>
+    <TD noWrap><A href="../items/items.html?0018" target=items">怪物的体液</A>x4</TD>
     <TD noWrap></TD></TR>
   <TR>
     <TD noWrap><IMG src="images/blank.gif"><IMG src="images/blank.gif"><IMG 
-      src="images/T.gif">巨红镰</TD>
-    <TD noWrap><IMG src="images/weapon04/20-1.gif"></TD>
-    <TD noWrap><IMG src="images/weapon04/20-2.gif"></TD>
-    <TD noWrap align=middle>816 </TD>
-    <TD noWrap align=middle>火120 </TD>
-    <TD noWrap align=right>0% </TD>
+      src="images/T.gif">深红镰刀</TD><TD noWrap align=middle><IMG height=15 src="../images/gauge266.gif" width=122></TD>
+    <TD noWrap align=middle>816</TD>
+    <TD noWrap align=middle>火120</TD>
+    <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>ーーー</TD>
-    <TD noWrap align=middle>3 </TD>
-    <TD noWrap align=middle>18250 </TD>
-    <TD noWrap>真红之角x1 </TD>
-    <TD noWrap>一角龙的甲壳x8 </TD>
-    <TD noWrap>火炎袋x5</TD>
+    <TD noWrap align=middle>3</TD><TD noWrap align=right>18250</TD>
+    <TD noWrap><A href="../items/items.html?01D6" target=items">真红之角</A>x1</TD>
+    <TD noWrap><A href="../items/items.html?01D7" target=items">一角龙的甲壳</A>x8</TD>
+    <TD noWrap><A href="../items/items.html?0134" target=items">火炎袋</A>x5</TD>
     <TD noWrap></TD></TR>
   <TR class=odd>
-    <TD noWrap><IMG src="images/blank.gif"><IMG src="images/blank.gif"><IMG 
-      src="images/I.gif"><IMG src="images/L.gif">真红巨镰<IMG height=16 
-      src="images/7.gif" width=19></TD>
-    <TD noWrap><IMG src="images/weapon04/37-1.gif"></TD>
-    <TD noWrap><IMG src="images/weapon04/37-2.gif"></TD>
-    <TD noWrap align=middle>864 </TD>
-    <TD noWrap align=middle>火180 </TD>
-    <TD noWrap align=right>0% </TD>
+    <TD class=last noWrap><IMG src="images/blank.gif"><IMG src="images/blank.gif"><IMG 
+      src="images/I.gif"><IMG src="images/L.gif">一角龙镰刀<IMG height=16 
+      src="images/7.gif" width=19></TD><TD noWrap align=middle><IMG height=15 src="../images/gauge385.gif" width=122></TD>
+    <TD noWrap align=middle>864</TD>
+    <TD noWrap align=middle>火180</TD>
+    <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>〇ーー</TD>
-    <TD noWrap align=middle>4 </TD>
-    <TD noWrap align=middle>27800 </TD>
-    <TD noWrap>真红之角x3 </TD>
-    <TD noWrap>一角龙的背甲x5 </TD>
-    <TD noWrap>一角龙的心脏x1</TD>
+    <TD noWrap align=middle>4</TD><TD noWrap align=right>27800</TD>
+    <TD noWrap><A href="../items/items.html?01D6" target=items">真红之角</A>x3</TD>
+    <TD noWrap><A href="../items/items.html?01D8" target=items">一角龙的背甲</A>x5</TD>
+    <TD noWrap><A href="../items/items.html?01D9" target=items">一角龙的心脏</A>x1</TD>
     <TD noWrap></TD></TR>
   <TR>
     <TD noWrap><IMG src="images/blank.gif"><IMG src="images/blank.gif"><IMG 
       height=16 src="images/L.gif" width=19><IMG height=16 src="images/H.gif" 
-      width=19><IMG height=16 src="images/C.gif" width=19>白色螳螂</TD>
-    <TD noWrap><IMG src="images/weapon04/21-1.gif"></TD>
-    <TD noWrap><IMG src="images/weapon04/21-2.gif"></TD>
-    <TD noWrap align=middle>816 </TD>
-    <TD noWrap align=middle>冰210 </TD>
-    <TD noWrap align=right>0% </TD>
+      width=19><IMG height=16 src="images/C.gif" width=19>白色螳螂</TD><TD noWrap align=middle><IMG height=15 src="../images/gauge267.gif" width=122></TD>
+    <TD noWrap align=middle>816</TD>
+    <TD noWrap align=middle>冰210</TD>
+    <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>ーーー</TD>
-    <TD noWrap align=middle>4 </TD>
-    <TD noWrap align=middle>32500 </TD>
-    <TD noWrap>白银之角x1 </TD>
-    <TD noWrap>白一角龙的背甲x5 </TD>
-    <TD noWrap>怪物的体液x5</TD>
+    <TD noWrap align=middle>4</TD><TD noWrap align=right>32500</TD>
+    <TD noWrap><A href="../items/items.html?01DA" target=items">白银之角</A>x1</TD>
+    <TD noWrap><A href="../items/items.html?01DC" target=items">白一角龙的背甲</A>x5</TD>
+    <TD noWrap><A href="../items/items.html?0018" target=items">怪物的体液</A>x5</TD>
     <TD noWrap></TD></TR>
-  <TR class=odd>
-    <TD noWrap><IMG src="images/blank.gif"><IMG src="images/blank.gif"><IMG 
+  <TR class=hc>
+    <TD class=last noWrap><IMG src="images/blank.gif"><IMG src="images/blank.gif"><IMG 
       src="images/blank.gif"><IMG src="images/blank.gif"><IMG 
-      src="images/blank.gif"><IMG src="images/L.gif"><FONT 
-      color=#ff0000>冰霜巨镰</FONT></TD>
-    <TD noWrap><IMG src="images/weapon04/38-1.gif"></TD>
-    <TD noWrap><IMG src="images/weapon04/38-2.gif"></TD>
-    <TD noWrap align=middle>912 </TD>
-    <TD noWrap align=middle>冰240 </TD>
-    <TD noWrap align=right>0% </TD>
+      src="images/blank.gif"><IMG src="images/L.gif">冰霜死神</TD><TD noWrap align=middle><IMG height=15 src="../images/gauge386.gif" width=122></TD>
+    <TD noWrap align=middle>912</TD>
+    <TD noWrap align=middle>冰240</TD>
+    <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>ーーー</TD>
-    <TD noWrap align=middle>6 </TD>
-    <TD noWrap align=middle>91800 </TD>
-    <TD noWrap>白银之角x3 </TD>
-    <TD noWrap>雪狮子的锐牙x2 </TD>
-    <TD noWrap>一角龙的心脏x1</TD>
+    <TD noWrap align=middle>6</TD><TD noWrap align=right>91800</TD>
+    <TD noWrap><A href="../items/items.html?01DA" target=items">白银之角</A>x3</TD>
+    <TD noWrap><A href="../items/items.html?01FD" target=items">雪狮子的锐牙</A>x2</TD>
+    <TD noWrap><A href="../items/items.html?01D9" target=items">一角龙的心脏</A>x1</TD>
     <TD noWrap></TD></TR>
   <TR>
-    <TH noWrap>名称</TH>
+    <TH noWrap width=250>名称</TH>
     <TH noWrap width=125>锋利度</TH>
-    <TH noWrap width=125>锋利度+1</TH>
-    <TH noWrap align=middle>攻击力</TH>
-    <TH noWrap align=middle>属性</TH>
-    <TH noWrap align=middle>会心率</TH>
-    <TH noWrap align=middle>插孔</TH>
-    <TH noWrap align=middle>稀有度</TH>
-    <TH noWrap align=middle>价格</TH>
-    <TH noWrap>素材1</TH>
-    <TH noWrap>素材2</TH>
-    <TH noWrap>素材3</TH>
-    <TH noWrap>素材4</TH></TR>
-  <TR>
-    <TD noWrap>军刀</TD>
-    <TD noWrap><IMG src="images/weapon04/22-1.gif"></TD>
-    <TD noWrap><IMG src="images/weapon04/22-2.gif"></TD>
-    <TD noWrap align=middle>576 </TD>
-    <TD noWrap align=middle>火250 </TD>
-    <TD noWrap align=right>0% </TD>
-    <TD noWrap align=middle>ーーー</TD>
-    <TD noWrap align=middle>4 </TD>
-    <TD noWrap align=middle>32050 </TD>
-    <TD noWrap>炎妃龍的甲壳x4 </TD>
-    <TD noWrap>炎妃龍的角x1 </TD>
-    <TD noWrap>炎之龍鳞x3 </TD>
-    <TD noWrap>星铁x5</TD></TR>
+    <TH noWrap align=middle width=50>攻击力</TH>
+    <TH noWrap align=middle width=108>属性</TH>
+    <TH noWrap align=middle width=42>会心率</TH>
+    <TH noWrap align=middle width=45>插孔</TH>
+    <TH noWrap align=middle width=24>稀有度</TH>
+    <TH noWrap align=middle width=54>价格</TH>
+    <TH noWrap width=120>素材1</TH>
+    <TH noWrap width=120>素材2</TH>
+    <TH noWrap width=120>素材3</TH>
+    <TH noWrap width=120>素材4</TH></TR>
   <TR class=odd>
-    <TD noWrap><IMG src="images/L.gif">军刀【狮子舞】</TD>
-    <TD noWrap><IMG src="images/weapon04/23-1.gif"></TD>
-    <TD noWrap><IMG src="images/weapon04/23-2.gif"></TD>
-    <TD noWrap align=middle>624 </TD>
-    <TD noWrap align=middle>火360 </TD>
-    <TD noWrap align=right>0% </TD>
+    <TD class=base noWrap>军刀</TD><TD noWrap align=middle><IMG height=15 src="../images/gauge271.gif" width=122></TD>
+    <TD noWrap align=middle>576</TD>
+    <TD noWrap align=middle>火250</TD>
+    <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>ーーー</TD>
-    <TD noWrap align=middle>5 </TD>
-    <TD noWrap align=middle>62500 </TD>
-    <TD noWrap>炎妃龍的角x2 </TD>
-    <TD noWrap>炎王龍的棕毛x4 </TD>
-    <TD noWrap>古龍的血x2</TD>
-    <TD noWrap></TD></TR>
+    <TD noWrap align=middle>4</TD><TD noWrap align=right>32050</TD>
+    <TD noWrap><A href="../items/items.html?023F" target=items">炎妃龍的甲壳</A>x4</TD>
+    <TD noWrap><A href="../items/items.html?0243" target=items">炎妃龍的角</A>x1</TD>
+    <TD noWrap><A href="../items/items.html?0239" target=items">炎之龍鳞</A>x3</TD>
+    <TD noWrap><A href="../items/items.html?02E0" target=items">星铁</A>x5</TD></TR>
   <TR>
-    <TD noWrap><IMG src="images/blank.gif"><IMG src="images/L.gif"><FONT 
-      color=#ff0000>军刀【狮子王】</FONT></TD>
-    <TD noWrap><IMG src="images/weapon04/36-1.gif"></TD>
-    <TD noWrap><IMG src="images/weapon04/36-2.gif"></TD>
-    <TD noWrap align=middle>768 </TD>
-    <TD noWrap align=middle>火460 </TD>
-    <TD noWrap align=right>0% </TD>
+    <TD noWrap><IMG src="images/L.gif">军刀【狮子舞】</TD><TD noWrap align=middle><IMG height=15 src="../images/gauge272.gif" width=122></TD>
+    <TD noWrap align=middle>624</TD>
+    <TD noWrap align=middle>火360</TD>
+    <TD noWrap align=right>0%</TD>
+    <TD noWrap align=middle>ーーー</TD>
+    <TD noWrap align=middle>5</TD><TD noWrap align=right>62500</TD>
+    <TD noWrap><A href="../items/items.html?0243" target=items">炎妃龍的角</A>x2</TD>
+    <TD noWrap><A href="../items/items.html?0247" target=items">炎王龍的鬣毛</A>x4</TD>
+    <TD noWrap><A href="../items/items.html?023D" target=items">古龍的血</A>x2</TD>
+    <TD noWrap></TD></TR>
+  <TR class=hc>
+    <TD class=last noWrap><IMG src="images/blank.gif"><IMG src="images/L.gif">军刀【狮子王】</TD><TD noWrap align=middle><IMG height=15 src="../images/gauge384.gif" width=122></TD>
+    <TD noWrap align=middle>768</TD>
+    <TD noWrap align=middle>火460</TD>
+    <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>〇ーー</TD>
-    <TD noWrap align=middle>7 </TD>
-    <TD noWrap align=middle>160000 </TD>
-    <TD noWrap>炎妃龍的角x5 </TD>
-    <TD noWrap>狱炎之龍鳞x10 </TD>
-    <TD noWrap>炎龍的宝玉x1</TD>
+    <TD noWrap align=middle>7</TD><TD noWrap align=right>160000</TD>
+    <TD noWrap><A href="../items/items.html?0243" target=items">炎妃龍的角</A>x5</TD>
+    <TD noWrap><A href="../items/items.html?023E" target=items">狱炎的龍鳞</A>x10</TD>
+    <TD noWrap><A href="../items/items.html?023C" target=items">炎龍的宝玉</A>x1</TD>
     <TD noWrap></TD></TR>
   <TR>
-    <TH noWrap>名称</TH>
+    <TH noWrap width=250>名称</TH>
     <TH noWrap width=125>锋利度</TH>
-    <TH noWrap width=125>锋利度+1</TH>
-    <TH noWrap align=middle>攻击力</TH>
-    <TH noWrap align=middle>属性</TH>
-    <TH noWrap align=middle>会心率</TH>
-    <TH noWrap align=middle>插孔</TH>
-    <TH noWrap align=middle>稀有度</TH>
-    <TH noWrap align=middle>价格</TH>
-    <TH noWrap>素材1</TH>
-    <TH noWrap>素材2</TH>
-    <TH noWrap>素材3</TH>
-    <TH noWrap>素材4</TH></TR>
-  <TR>
-    <TD noWrap>守卫之剑</TD>
-    <TD noWrap><IMG src="images/weapon04/24-1.gif"></TD>
-    <TD noWrap><IMG src="images/weapon04/24-2.gif"></TD>
-    <TD noWrap align=middle>720 </TD>
+    <TH noWrap align=middle width=50>攻击力</TH>
+    <TH noWrap align=middle width=108>属性</TH>
+    <TH noWrap align=middle width=42>会心率</TH>
+    <TH noWrap align=middle width=45>插孔</TH>
+    <TH noWrap align=middle width=24>稀有度</TH>
+    <TH noWrap align=middle width=54>价格</TH>
+    <TH noWrap width=120>素材1</TH>
+    <TH noWrap width=120>素材2</TH>
+    <TH noWrap width=120>素材3</TH>
+    <TH noWrap width=120>素材4</TH></TR>
+  <TR class=hc>
+    <TD class=base noWrap>守护者之剑</TD><TD noWrap align=middle><IMG height=15 src="../images/gauge273.gif" width=122></TD>
+    <TD noWrap align=middle>720</TD>
     <TD noWrap align=middle>　</TD>
-    <TD noWrap align=right>0% </TD>
+    <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>〇〇ー</TD>
-    <TD noWrap align=middle>6 </TD>
-    <TD noWrap align=middle>21150 </TD>
-    <TD noWrap></TD>
+    <TD noWrap align=middle>6</TD><TD noWrap align=right>21150</TD>
+    <TD noWrap><A href="../items/items.html?0269" target=items">太古的板状块</A>*</TD>
     <TD noWrap></TD>
     <TD noWrap></TD>
     <TD noWrap></TD></TR>
-  <TR class=odd>
-    <TD noWrap><IMG src="images/L.gif">帝王剑</TD>
-    <TD noWrap><IMG src="images/weapon04/39-1.gif"></TD>
-    <TD noWrap><IMG src="images/weapon04/39-2.gif"></TD>
-    <TD noWrap align=middle>768 </TD>
+  <TR class=hc>
+    <TD class=last noWrap><IMG src="images/L.gif">帝国剑</TD><TD noWrap align=middle><IMG height=15 src="../images/gauge387.gif" width=122></TD>
+    <TD noWrap align=middle>768</TD>
     <TD noWrap align=middle>　</TD>
-    <TD noWrap align=right>10% </TD>
+    <TD noWrap align=right>10%</TD>
     <TD noWrap align=middle>〇〇ー</TD>
-    <TD noWrap align=middle>6 </TD>
-    <TD noWrap align=middle>51600 </TD>
-    <TD noWrap>灵鹤石x25 </TD>
-    <TD noWrap>岩龙的翼x1 </TD>
-    <TD noWrap>大地的结晶x30</TD>
+    <TD noWrap align=middle>6</TD><TD noWrap align=right>51600</TD>
+    <TD noWrap><A href="../items/items.html?00DC" target=items">灵鹤石</A>x25</TD>
+    <TD noWrap><A href="../items/items.html?01B4" target=items">岩龙的翼</A>x1</TD>
+    <TD noWrap><A href="../items/items.html?00D9" target=items">大地的结晶</A>x30</TD>
     <TD noWrap></TD></TR>
   <TR>
-    <TH noWrap>名称</TH>
+    <TH noWrap width=250>名称</TH>
     <TH noWrap width=125>锋利度</TH>
-    <TH noWrap width=125>锋利度+1</TH>
-    <TH noWrap align=middle>攻击力</TH>
-    <TH noWrap align=middle>属性</TH>
-    <TH noWrap align=middle>会心率</TH>
-    <TH noWrap align=middle>插孔</TH>
-    <TH noWrap align=middle>稀有度</TH>
-    <TH noWrap align=middle>价格</TH>
-    <TH noWrap>素材1</TH>
-    <TH noWrap>素材2</TH>
-    <TH noWrap>素材3</TH>
-    <TH noWrap>素材4</TH></TR>
-  <TR>
-    <TD noWrap>双刃锈刃</TD>
-    <TD noWrap><IMG src="images/weapon04/31-1.gif"></TD>
-    <TD noWrap><IMG src="images/weapon04/31-2.gif"></TD>
-    <TD noWrap align=middle>768 </TD>
-    <TD noWrap align=middle>防御+10 </TD>
-    <TD noWrap align=right>10% </TD>
+    <TH noWrap align=middle width=50>攻击力</TH>
+    <TH noWrap align=middle width=108>属性</TH>
+    <TH noWrap align=middle width=42>会心率</TH>
+    <TH noWrap align=middle width=45>插孔</TH>
+    <TH noWrap align=middle width=24>稀有度</TH>
+    <TH noWrap align=middle width=54>价格</TH>
+    <TH noWrap width=120>素材1</TH>
+    <TH noWrap width=120>素材2</TH>
+    <TH noWrap width=120>素材3</TH>
+    <TH noWrap width=120>素材4</TH></TR>
+  <TR class=hc>
+    <TD class=base noWrap>双刃锈剑</TD><TD noWrap align=middle><IMG height=15 src="../images/gauge372.gif" width=122></TD>
+    <TD noWrap align=middle>768</TD>
+    <TD noWrap align=middle>防御+10</TD>
+    <TD noWrap align=right>10%</TD>
     <TD noWrap align=middle>ーーー</TD>
-    <TD noWrap align=middle>5 </TD>
-    <TD noWrap align=middle>50000 </TD>
-    <TD noWrap>生锈的甲壳x5 </TD>
-    <TD noWrap>钢之龍鳞x10 </TD>
-    <TD noWrap>火龙的甲壳x4 </TD>
-    <TD noWrap>古龍的血x1</TD></TR>
-  <TR class=odd>
-    <TD noWrap><IMG src="images/L.gif">双刃锋刃</TD>
-    <TD noWrap><IMG src="images/weapon04/32-1.gif"></TD>
-    <TD noWrap><IMG src="images/weapon04/32-2.gif"></TD>
-    <TD noWrap align=middle>816 </TD>
-    <TD noWrap align=middle>防御+12 </TD>
-    <TD noWrap align=right>10% </TD>
+    <TD noWrap align=middle>5</TD><TD noWrap align=right>50000</TD>
+    <TD noWrap><A href="../items/items.html?022D" target=items">生锈的甲壳</A>x5</TD>
+    <TD noWrap><A href="../items/items.html?0226" target=items">钢之龍鳞</A>x10</TD>
+    <TD noWrap><A href="../items/items.html?019C" target=items">火龙的甲壳</A>x4</TD>
+    <TD noWrap><A href="../items/items.html?023D" target=items">古龍的血</A>x1</TD></TR>
+  <TR class=hc>
+    <TD noWrap><IMG src="images/L.gif">双刃锋剑</TD><TD noWrap align=middle><IMG height=15 src="../images/gauge373.gif" width=122></TD>
+    <TD noWrap align=middle>816</TD>
+    <TD noWrap align=middle>防御+12</TD>
+    <TD noWrap align=right>10%</TD>
     <TD noWrap align=middle>〇ーー</TD>
-    <TD noWrap align=middle>6 </TD>
-    <TD noWrap align=middle>75000 </TD>
-    <TD noWrap>生锈的甲壳x10 </TD>
-    <TD noWrap>钢之龍鳞x20 </TD>
-    <TD noWrap>火龙的坚壳x6</TD>
+    <TD noWrap align=middle>6</TD><TD noWrap align=right>75000</TD>
+    <TD noWrap><A href="../items/items.html?022D" target=items">生锈的甲壳</A>x10</TD>
+    <TD noWrap><A href="../items/items.html?0226" target=items">钢之龍鳞</A>x20</TD>
+    <TD noWrap><A href="../items/items.html?019D" target=items">火龙的坚壳</A>x6</TD>
     <TD noWrap></TD></TR>
-  <TR>
-    <TD noWrap><IMG src="images/blank.gif"><IMG src="images/L.gif">双刃锋刃·蜕</TD>
-    <TD noWrap><IMG src="images/weapon04/43-1.gif"></TD>
-    <TD noWrap><IMG src="images/weapon04/43-2.gif"></TD>
-    <TD noWrap align=middle>864 </TD>
-    <TD noWrap align=middle>防御+14 </TD>
-    <TD noWrap align=right>10% </TD>
+  <TR class=hc>
+    <TD class=last noWrap><IMG src="images/blank.gif"><IMG src="images/L.gif">双刃蜕剑</TD><TD noWrap align=middle><IMG height=15 src="../images/gauge391.gif" width=122></TD>
+    <TD noWrap align=middle>864</TD>
+    <TD noWrap align=middle>防御+14</TD>
+    <TD noWrap align=right>10%</TD>
     <TD noWrap align=middle>〇〇ー</TD>
-    <TD noWrap align=middle>7 </TD>
-    <TD noWrap align=middle>150000 </TD>
-    <TD noWrap>生锈的龙翼x5 </TD>
-    <TD noWrap>钢之龍鳞x30 </TD>
-    <TD noWrap>古龍的血x5</TD>
+    <TD noWrap align=middle>7</TD><TD noWrap align=right>150000</TD>
+    <TD noWrap><A href="../items/items.html?022F" target=items">生锈的龍翼</A>x5</TD>
+    <TD noWrap><A href="../items/items.html?0226" target=items">钢之龍鳞</A>x30</TD>
+    <TD noWrap><A href="../items/items.html?023D" target=items">古龍的血</A>x5</TD>
     <TD noWrap></TD></TR>
   <TR>
-    <TH noWrap>名称</TH>
+    <TH noWrap width=250>名称</TH>
     <TH noWrap width=125>锋利度</TH>
-    <TH noWrap width=125>锋利度+1</TH>
-    <TH noWrap align=middle>攻击力</TH>
-    <TH noWrap align=middle>属性</TH>
-    <TH noWrap align=middle>会心率</TH>
-    <TH noWrap align=middle>插孔</TH>
-    <TH noWrap align=middle>稀有度</TH>
-    <TH noWrap align=middle>价格</TH>
-    <TH noWrap>素材1</TH>
-    <TH noWrap>素材2</TH>
-    <TH noWrap>素材3</TH>
-    <TH noWrap>素材4</TH></TR>
-  <TR class=odd>
-    <TD noWrap>龙木之太刀</TD>
-    <TD noWrap><IMG src="images/weapon04/15-1.gif"></TD>
-    <TD noWrap><IMG src="images/weapon04/15-2.gif"></TD>
-    <TD noWrap align=middle>624 </TD>
+    <TH noWrap align=middle width=50>攻击力</TH>
+    <TH noWrap align=middle width=108>属性</TH>
+    <TH noWrap align=middle width=42>会心率</TH>
+    <TH noWrap align=middle width=45>插孔</TH>
+    <TH noWrap align=middle width=24>稀有度</TH>
+    <TH noWrap align=middle width=54>价格</TH>
+    <TH noWrap width=120>素材1</TH>
+    <TH noWrap width=120>素材2</TH>
+    <TH noWrap width=120>素材3</TH>
+    <TH noWrap width=120>素材4</TH></TR>
+  <TR class=hc>
+    <TD class=base noWrap>龍木之太刀</TD><TD noWrap align=middle><IMG height=15 src="../images/gauge049.gif" width=122></TD>
+    <TD noWrap align=middle>624</TD>
     <TD noWrap align=middle>　</TD>
-    <TD noWrap align=right>0% </TD>
+    <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>〇〇ー</TD>
-    <TD noWrap align=middle>6 </TD>
-    <TD noWrap align=middle>75000 </TD>
-    <TD noWrap>龙木x3 </TD>
-    <TD noWrap>龙苔x1 </TD>
-    <TD noWrap>浮岳龍的鳍x3 </TD>
-    <TD noWrap>雷光虫x15</TD></TR>
-  <TR>
-    <TD noWrap><IMG src="images/L.gif">龙木太刀【神凭】</TD>
-    <TD noWrap><IMG src="images/weapon04/40-1.gif"></TD>
-    <TD noWrap><IMG src="images/weapon04/40-2.gif"></TD>
-    <TD noWrap align=middle>672 </TD>
+    <TD noWrap align=middle>6</TD><TD noWrap align=right>75000</TD>
+    <TD noWrap><A href="../items/items.html?0250" target=items">龍木</A>x3</TD>
+    <TD noWrap><A href="../items/items.html?024F" target=items">龍苔</A>x1</TD>
+    <TD noWrap><A href="../items/items.html?024C" target=items">浮岳龍的鳍</A>x3</TD>
+    <TD noWrap><A href="../items/items.html?0106" target=items">雷光虫</A>x15</TD></TR>
+  <TR class=hc>
+    <TD class=last noWrap><IMG src="images/L.gif">龍木之太刀【神凭】</TD><TD noWrap align=middle><IMG height=15 src="../images/gauge388.gif" width=122></TD>
+    <TD noWrap align=middle>672</TD>
     <TD noWrap align=middle>　</TD>
-    <TD noWrap align=right>0% </TD>
+    <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>〇〇〇</TD>
-    <TD noWrap align=middle>7 </TD>
-    <TD noWrap align=middle>150000 </TD>
-    <TD noWrap>龙木x5 </TD>
-    <TD noWrap>浮岳龍的体液x3 </TD>
-    <TD noWrap>战友之证x5</TD>
+    <TD noWrap align=middle>7</TD><TD noWrap align=right>150000</TD>
+    <TD noWrap><A href="../items/items.html?0250" target=items">龍木</A>x5</TD>
+    <TD noWrap><A href="../items/items.html?024E" target=items">浮岳龍的体液</A>x3</TD>
+    <TD noWrap><A href="../items/items.html?02E3" target=items">战友之证</A>x5</TD>
     <TD noWrap></TD></TR>
   <TR>
-    <TH noWrap>名称</TH>
+    <TH noWrap width=250>名称</TH>
     <TH noWrap width=125>锋利度</TH>
-    <TH noWrap width=125>锋利度+1</TH>
-    <TH noWrap align=middle>攻击力</TH>
-    <TH noWrap align=middle>属性</TH>
-    <TH noWrap align=middle>会心率</TH>
-    <TH noWrap align=middle>插孔</TH>
-    <TH noWrap align=middle>稀有度</TH>
-    <TH noWrap align=middle>价格</TH>
-    <TH noWrap>素材1</TH>
-    <TH noWrap>素材2</TH>
-    <TH noWrap>素材3</TH>
-    <TH noWrap>素材4</TH></TR>
-  <TR class=odd>
-    <TD noWrap>大长老的胁差</TD>
-    <TD noWrap><IMG src="images/weapon04/47-1.gif"></TD>
-    <TD noWrap><IMG src="images/weapon04/47-2.gif"></TD>
-    <TD noWrap align=middle>768 </TD>
-    <TD noWrap align=middle>火70 </TD>
-    <TD noWrap align=right>0% </TD>
+    <TH noWrap align=middle width=50>攻击力</TH>
+    <TH noWrap align=middle width=108>属性</TH>
+    <TH noWrap align=middle width=42>会心率</TH>
+    <TH noWrap align=middle width=45>插孔</TH>
+    <TH noWrap align=middle width=24>稀有度</TH>
+    <TH noWrap align=middle width=54>价格</TH>
+    <TH noWrap width=120>素材1</TH>
+    <TH noWrap width=120>素材2</TH>
+    <TH noWrap width=120>素材3</TH>
+    <TH noWrap width=120>素材4</TH></TR>
+  <TR class=hc>
+    <TD class=base noWrap>大长老的胁差</TD><TD noWrap align=middle><IMG height=15 src="../images/gauge484.gif" width=122></TD>
+    <TD noWrap align=middle>768</TD>
+    <TD noWrap align=middle>火70</TD>
+    <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>ーーー</TD>
-    <TD noWrap align=middle>6 </TD>
-    <TD noWrap align=middle>50000 </TD>
-    <TD noWrap></TD>
+    <TD noWrap align=middle>6</TD><TD noWrap align=right>50000</TD>
+    <TD noWrap><A href="../bugu/tachi.html#0484" target=weapons">*大长老赠送*</A></TD>
     <TD noWrap></TD>
     <TD noWrap></TD>
     <TD noWrap></TD></TR>
-  <TR>
-    <TD noWrap><IMG src="images/L.gif">斩老刀【须佐】</TD>
-    <TD noWrap><IMG src="images/weapon04/33-1.gif"></TD>
-    <TD noWrap><IMG src="images/weapon04/33-2.gif"></TD>
-    <TD noWrap align=middle>816 </TD>
-    <TD noWrap align=middle>火170 </TD>
-    <TD noWrap align=right>10% </TD>
+  <TR class=hc>
+    <TD class=last noWrap><IMG src="images/L.gif">斩老刀【素戋呜尊】</TD><TD noWrap align=middle><IMG height=15 src="../images/gauge381.gif" width=122></TD>
+    <TD noWrap align=middle>816</TD>
+    <TD noWrap align=middle>火170</TD>
+    <TD noWrap align=right>10%</TD>
     <TD noWrap align=middle>〇ーー</TD>
-    <TD noWrap align=middle>6 </TD>
-    <TD noWrap align=middle>82500 </TD>
-    <TD noWrap>灵鹤石x25 </TD>
-    <TD noWrap>火龙的坚壳x5 </TD>
-    <TD noWrap>火龙的逆鳞x1</TD>
+    <TD noWrap align=middle>6</TD><TD noWrap align=right>82500</TD>
+    <TD noWrap><A href="../items/items.html?00DC" target=items">灵鹤石</A>x25</TD>
+    <TD noWrap><A href="../items/items.html?019D" target=items">火龙的坚壳</A>x5</TD>
+    <TD noWrap><A href="../items/items.html?019A" target=items">火龙的逆鳞</A>x1</TD>
     <TD noWrap></TD></TR>
   <TR>
-    <TH noWrap>名称</TH>
+    <TH noWrap width=250>名称</TH>
     <TH noWrap width=125>锋利度</TH>
-    <TH noWrap width=125>锋利度+1</TH>
-    <TH noWrap align=middle>攻击力</TH>
-    <TH noWrap align=middle>属性</TH>
-    <TH noWrap align=middle>会心率</TH>
-    <TH noWrap align=middle>插孔</TH>
-    <TH noWrap align=middle>稀有度</TH>
-    <TH noWrap align=middle>价格</TH>
-    <TH noWrap>素材1</TH>
-    <TH noWrap>素材2</TH>
-    <TH noWrap>素材3</TH>
-    <TH noWrap>素材4</TH></TR>
-  <TR class=odd>
-    <TD noWrap>军刀【狮子炎王】</TD>
-    <TD noWrap><IMG height=10 src="images/weapon04/44-1.gif" width=122></TD>
-    <TD noWrap><IMG height=10 src="images/weapon04/44-2.gif" width=122></TD>
-    <TD noWrap align=middle>864 </TD>
-    <TD noWrap align=middle>火530 </TD>
-    <TD noWrap align=right>0% </TD>
+    <TH noWrap align=middle width=50>攻击力</TH>
+    <TH noWrap align=middle width=108>属性</TH>
+    <TH noWrap align=middle width=42>会心率</TH>
+    <TH noWrap align=middle width=45>插孔</TH>
+    <TH noWrap align=middle width=24>稀有度</TH>
+    <TH noWrap align=middle width=54>价格</TH>
+    <TH noWrap width=120>素材1</TH>
+    <TH noWrap width=120>素材2</TH>
+    <TH noWrap width=120>素材3</TH>
+    <TH noWrap width=120>素材4</TH></TR>
+  <TR class=hc>
+    <TD noWrap>太刀扇【伽巴斯】</TD><TD noWrap align=middle><IMG height=15 src="../images/gauge472.gif" width=122></TD>
+    <TD noWrap align=middle>624</TD>
+    <TD noWrap align=middle>冰420</TD>
+    <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>ーーー</TD>
-    <TD noWrap align=middle>7 </TD>
-    <TD noWrap align=middle>200000 </TD>
-    <TD noWrap>　</TD>
-    <TD noWrap>　</TD>
-    <TD noWrap>　</TD>
-    <TD noWrap>　</TD></TR>
-  <TR>
-    <TD noWrap>太刀扇【优惠券】</TD>
-    <TD noWrap><IMG height=10 src="images/weapon04/45-1.gif" width=122></TD>
-    <TD noWrap><IMG height=10 src="images/weapon04/45-2.gif" width=122></TD>
-    <TD noWrap align=middle>624 </TD>
-    <TD noWrap align=middle>冰420 </TD>
-    <TD noWrap align=right>0% </TD>
+    <TD noWrap align=middle>6</TD><TD noWrap align=right>350</TD>
+    <TD noWrap><A href="../items/items.html?02F3" target=items">Fami通券</A>x5</TD>
+    <TD noWrap><A href="../items/items.html?02F4" target=items">Fami通的订购单</A>x3</TD>
+    <TD noWrap><A href="../items/items.html?0227" target=items">钢龍的翼膜</A>x2</TD>
+    <TD noWrap><A href="../items/items.html?0252" target=items">蛇龙的皮</A>x3</TD></TR>
+  <TR class=sp>
+    <TD noWrap>军刀【狮子炎王】</TD><TD noWrap align=middle><IMG height=15 src="../images/gauge466.gif" width=122></TD>
+    <TD noWrap align=middle>864</TD>
+    <TD noWrap align=middle>火530</TD>
+    <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>ーーー</TD>
-    <TD noWrap align=middle>6 </TD>
-    <TD noWrap align=middle>350 </TD>
-    <TD noWrap>Fami通券x5 </TD>
-    <TD noWrap>fami通的注文书x3 </TD>
-    <TD noWrap>钢龍的翼膜x2 </TD>
-    <TD noWrap>蛇龙的皮x3</TD></TR></TBODY></TABLE><BR>
+    <TD noWrap align=middle>7</TD><TD noWrap align=right></TD>
+    <TD noWrap>　</TD>
+    <TD noWrap>　</TD>
+    <TD noWrap>　</TD>
+    <TD noWrap>　</TD></TR></TBODY></TABLE><BR>
