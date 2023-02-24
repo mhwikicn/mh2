@@ -10,7 +10,7 @@ function ShowLinks(level, kind)
 //タイトルロゴ
 
 //  html = "<A href=\"http://mmpotato.hp.infoseek.co.jp/codes/MH2/index.html\">";
-  html = "<A href=\"https://mhwikicn.github.io/mh2/index.html\">";
+  html = "<A href=\"" + urlSuffix + "index.html\" target=\"_top\">";
   html += "<IMG src=\"" + urlSuffix + "images/TITLE.gif\" width=\"260\" height=\"64\" border=\"0\">";
   html += "</A>";
   logo.innerHTML = html;
