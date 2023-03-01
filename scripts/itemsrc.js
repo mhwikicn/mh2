@@ -92,14 +92,14 @@ monsName[62] = "桃毛兽";
 monsName[63] = "蛇龙";
 monsName[64] = "炎妃龍";
 monsName[65] = "炎王龍";
-monsName[66] = "盾蟹";
+monsName[66] = "小盾蟹";
 monsName[67] = "将军镰蟹";
 monsName[68] = "大野猪王";
 monsName[69] = "雪山鹿";
 monsName[70] = "波波";
 monsName[71] = "祖龍";
 monsName[72] = "浮岳龍";
-monsName[73] = "镰蟹";
+monsName[73] = "小镰蟹";
 
 hoshuName = new Array(6);
 hoshuName[0] = "<B>确定报酬</B>";
