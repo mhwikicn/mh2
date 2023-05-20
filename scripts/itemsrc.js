@@ -469,7 +469,7 @@ function FormatItemName(tdata)
   thtml = "";
   tbno = Number(tdata);
   if (tbno == 0) {
-    thtml += "何かアイテム";
+    thtml += "<A href=../jisanlist.html target=\"_blank\">某些物品</A>";
   } else {
     thtml += "<A href=\"items.html?" + Fix16Data(tbno,4).toLowerCase() + "\" target=\"_blank\">";
     thtml += itemname[tbno] + "</A>";
