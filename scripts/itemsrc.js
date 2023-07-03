@@ -626,7 +626,7 @@ function FormatHoushu(tdata)
     if (ic > 0)  thtml += "<BR>";
     tqno = Number(tdata.substring(ic,ic+3));
     prob = Number(tdata.substring(ic+3,ic+6));
-    seas = Number(tdata.substring(ic+6,ic+7));		//季節
+    seas = Number(tdata.substring(ic+6,ic+7));		//季节
     numb = Number(tdata.substring(ic+7,ic+10));		//文字長さ
 
     if (tqno < 500) {					//通常のクエスト
