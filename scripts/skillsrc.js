@@ -126,7 +126,7 @@ function ShowBoguList()
 
   html = "";
   html += "<TABLE border='1' cellspacing='0' cellpadding='2' class='cnt-tb2' width='156'>";
-  html += "<TBODY><TR><TH class='tb-th4' colspan='3'>装飾品</TH></TR>";
+  html += "<TBODY><TR><TH class='tb-th4' colspan='3'>装饰品</TH></TR>";
   html += FormatSoshList();
   html += "</TBODY></TABLE>";
   soshlist.innerHTML = html;
