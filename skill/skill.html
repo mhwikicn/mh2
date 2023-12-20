@@ -35,26 +35,92 @@ ShowLinks(1, 99);
       <TD class="tb-th2" colspan="2" width="660">内容</TD>
     </TR>
     <TR>
-      <TD class="tb-cell2" rowspan="5">0002</TD>
-      <TD class="tb-cell1" rowspan="5">运气</TD>
-      <TD class="tb-cell1" colspan="2">影响任务主线・支线的达成报酬栏位数的增加概率。<BR>
-      通常情况下，栏位数的增加概率为22/32。（部分特殊任务的基本报酬不受影响）</TD>
+      <TD class="tb-cell2" rowspan="5">0016</TD>
+      <TD class="tb-cell1" rowspan="5">采取</TD>
+      <TD class="tb-cell1" colspan="2">影响采取・发掘２次以后每次的成功概率。<BR>
+      通常情况下，２次以后的采取・发掘成功率为27/32。</TD>
     </TR>
     <TR>
-      <TD class="tb-cell1" width="200">+10以上：幸运</TD>
-      <TD class="tb-cell1" width="450">栏位数的增加概率提高至26/32</TD>
+      <TD class="tb-cell1" width="200">+10以上：采取+1</TD>
+      <TD class="tb-cell1" width="450">２次以后的采取・发掘成功率提高至29/32</TD>
     </TR>
     <TR>
-      <TD class="tb-cell1">+15以上：激运</TD>
-      <TD class="tb-cell1">栏位数的增加概率提高至29/32</TD>
+      <TD class="tb-cell1">+15以上：采取+2</TD>
+      <TD class="tb-cell1">２次以后的采取・发掘成功率提高至31/32</TD>
     </TR>
     <TR>
-      <TD class="tb-cell1">-10以下：不运</TD>
-      <TD class="tb-cell1">栏位数的增加概率降低至16/32</TD>
+      <TD class="tb-cell1">-10以下：采取-1</TD>
+      <TD class="tb-cell1">２次以后的采取・发掘成功率降低至23/32</TD>
     </TR>
     <TR>
-      <TD class="tb-cell1">-20以下：灾难</TD>
-      <TD class="tb-cell1">栏位数的增加概率降低至8/32</TD>
+      <TD class="tb-cell1">-15以下：采取-2</TD>
+      <TD class="tb-cell1">２次以后的采取・发掘成功率降低至19/32</TD>
+    </TR>
+   <TR>
+      <TD class="tb-cell2" rowspan="4">0041</TD>
+      <TD class="tb-cell1" rowspan="4">底力</TD>
+      <TD class="tb-cell1" colspan="2" height="30">影响玩家体力低于最大值40%以下时攻击力・防御力的变化量。<BR>
+      通常情况下，体力低于40%时，攻击力没有变化，防御力增加60。</TD>
+    </TR>
+    <TR>
+      <TD class="tb-cell1">+10以上：火场怪力+1</TD>
+      <TD class="tb-cell1">防御力增加量提高至90</TD>
+    </TR>
+    <TR>
+      <TD class="tb-cell1">+15以上：火场怪力+2</TD>
+      <TD class="tb-cell1">攻击力提高至1.5倍　防御力增加量提高至90</TD>
+    </TR>
+    <TR>
+      <TD class="tb-cell1">-15以下：焦虑</TD>
+      <TD class="tb-cell1">攻击力降低至0.7倍　防御力增加量降低至42</TD>
+    </TR>
+    <TR>
+      <TD class="tb-cell2" rowspan="5">0049</TD>
+      <TD class="tb-cell1" rowspan="5">地形</TD>
+      <TD class="tb-cell1" colspan="2" height="30">影响受到的地形（如火山的熔岩边缘）伤害量。<BR>
+      通常情况下每8/30秒会受到一定伤害，导致体力量表减少。</TD>
+    </TR>
+    <TR>
+      <TD class="tb-cell1">+10以上：地形伤害减【小】</TD>
+      <TD class="tb-cell1">延长至每12/30秒受到伤害</TD>
+    </TR>
+    <TR>
+      <TD class="tb-cell1">+15以上：地形伤害减【大】</TD>
+      <TD class="tb-cell1">延长至每24/30秒受到伤害</TD>
+    </TR>
+    <TR>
+      <TD class="tb-cell1">-10以下：地形伤害增【小】</TD>
+      <TD class="tb-cell1">缩短至每6/30秒受到伤害</TD>
+    </TR>
+    <TR>
+      <TD class="tb-cell1">-15以下：地形伤害增【大】</TD>
+      <TD class="tb-cell1">缩短至每4/30秒受到伤害</TD>
+    </TR>
+    <TR>
+      <TD class="tb-cell2" rowspan="5">000e</TD>
+      <TD class="tb-cell1" rowspan="5">反覆无常</TD>
+      <TD class="tb-cell1" colspan="2">影响铁镐・捕虫网・笛系物品使用时的损坏概率。<BR>
+      通常情况下，物品使用时的损坏概率如下。<BR>
+      　　破铁镐：1/3　铁镐：1/10　铁镐Ｇ：1/15<BR>
+      　　破捕虫网：1/3　捕虫网：1/10　捕虫网Ｇ：1/15<BR>
+      　　回复笛：1/12　解毒笛：1/12　鬼人笛：1/8　硬化笛：1/8<BR>
+      　　弹击笛：1/16　突击笛：1/16　尾击笛：1/12　必击笛：1/8　特击笛：1/16　怒之笛：1/16　逆鳞笛：1/8</TD>
+    </TR>
+    <TR>
+      <TD class="tb-cell1" width="200">+10以上：精灵的反覆无常</TD>
+      <TD class="tb-cell1" width="450">损坏发生时有1/4的概率回避</TD>
+    </TR>
+    <TR>
+      <TD class="tb-cell1">+15以上：神的反覆无常</TD>
+      <TD class="tb-cell1">损坏发生时有1/2的概率回避</TD>
+    </TR>
+    <TR>
+      <TD class="tb-cell1">-10以下：恶灵的反覆无常</TD>
+      <TD class="tb-cell1">有1/4的概率加倍损坏的可能</TD>
+    </TR>
+    <TR>
+      <TD class="tb-cell1">-15以下：恶魔的反覆无常</TD>
+      <TD class="tb-cell1">有1/2的概率加倍损坏的可能</TD>
     </TR>
     <TR>
       <TD class="tb-cell2" rowspan="5">0005</TD>
@@ -110,6 +176,19 @@ ShowLinks(1, 99);
       <TD class="tb-cell1">威力值增加10</TD>
     </TR>
     <TR>
+      <TD class="tb-cell2" rowspan="3">0040</TD>
+      <TD class="tb-cell1" rowspan="3">回避性能</TD>
+      <TD class="tb-cell1" colspan="2" height="30">延长翻滚、枪与弓系武器后跳时的无敌时间。通常情况下有6/30秒的无敌时间。</TD>
+    </TR>
+    <TR>
+      <TD class="tb-cell1">+10以上：回避性能+1</TD>
+      <TD class="tb-cell1">无敌时间延长至8/30秒</TD>
+    </TR>
+    <TR>
+      <TD class="tb-cell1">+20以上：回避性能+2</TD>
+      <TD class="tb-cell1">无敌时间延长至10/30秒</TD>
+    </TR>
+    <TR>
       <TD class="tb-cell2" rowspan="3">0006</TD>
       <TD class="tb-cell1" rowspan="3">回复</TD>
       <TD class="tb-cell1" colspan="2" height="30">使用回复物品时，影响回复量。</TD>
@@ -135,53 +214,18 @@ ShowLinks(1, 99);
       <TD class="tb-cell1">-10以下：恶灵的加护</TD>
       <TD class="tb-cell1">1/4的概率受到1.3倍的伤害（增伤30%）</TD>
     </TR>
-<TR>
-      <TD class="tb-cell2" rowspan="5">000e</TD>
-      <TD class="tb-cell1" rowspan="5">反覆无常</TD>
-      <TD class="tb-cell1" colspan="2">影响铁镐・捕虫网・笛系物品使用时的损坏概率。<BR>
-      通常情况下，物品使用时的损坏概率如下。<BR>
-      　　破铁镐：1/3　铁镐：1/10　铁镐Ｇ：1/15<BR>
-      　　破捕虫网：1/3　捕虫网：1/10　捕虫网Ｇ：1/15<BR>
-      　　回复笛：1/12　解毒笛：1/12　鬼人笛：1/8　硬化笛：1/8<BR>
-      　　弹击笛：1/16　突击笛：1/16　尾击笛：1/12　必击笛：1/8　特击笛：1/16　怒之笛：1/16　逆鳞笛：1/8</TD>
+    <TR>
+      <TD class="tb-cell2" rowspan="3">0043</TD>
+      <TD class="tb-cell1" rowspan="3">耐力</TD>
+      <TD class="tb-cell1" colspan="2" height="30">影响冲刺类行动时的耐力消耗。通常情况下耐力值减少量为15单位。</TD>
     </TR>
     <TR>
-      <TD class="tb-cell1" width="200">+10以上：精灵的反覆无常</TD>
-      <TD class="tb-cell1" width="450">损坏发生时有1/4的概率回避</TD>
+      <TD class="tb-cell1">+10以上：飞人</TD>
+      <TD class="tb-cell1">耐力减少量降低至8单位</TD>
     </TR>
     <TR>
-      <TD class="tb-cell1">+15以上：神的反覆无常</TD>
-      <TD class="tb-cell1">损坏发生时有1/2的概率回避</TD>
-    </TR>
-    <TR>
-      <TD class="tb-cell1">-10以下：恶灵的反覆无常</TD>
-      <TD class="tb-cell1">有1/4的概率加倍损坏的可能</TD>
-    </TR>
-    <TR>
-      <TD class="tb-cell1">-15以下：恶魔的反覆无常</TD>
-      <TD class="tb-cell1">有1/2的概率加倍损坏的可能</TD>
-    </TR>
-    <TR>
-      <TD class="tb-cell2" rowspan="5">0016</TD>
-      <TD class="tb-cell1" rowspan="5">采取</TD>
-      <TD class="tb-cell1" colspan="2">影响采取・发掘２次以后每次的成功概率。<BR>
-      通常情况下，２次以后的采取・发掘成功率为27/32。</TD>
-    </TR>
-    <TR>
-      <TD class="tb-cell1" width="200">+10以上：采取+1</TD>
-      <TD class="tb-cell1" width="450">２次以后的采取・发掘成功率提高至29/32</TD>
-    </TR>
-    <TR>
-      <TD class="tb-cell1">+15以上：采取+2</TD>
-      <TD class="tb-cell1">２次以后的采取・发掘成功率提高至31/32</TD>
-    </TR>
-    <TR>
-      <TD class="tb-cell1">-10以下：采取-1</TD>
-      <TD class="tb-cell1">２次以后的采取・发掘成功率降低至23/32</TD>
-    </TR>
-    <TR>
-      <TD class="tb-cell1">-15以下：采取-2</TD>
-      <TD class="tb-cell1">２次以后的采取・发掘成功率降低至19/32</TD>
+      <TD class="tb-cell1">-10以下：钝足</TD>
+      <TD class="tb-cell1">耐力减少量提高至18单位</TD>
     </TR>
     <TR>
       <TD class="tb-cell2" rowspan="6">001e</TD>
@@ -219,37 +263,6 @@ ShowLinks(1, 99);
       <TD class="tb-cell1">蓄积量提高至1.125倍</TD>
     </TR>
     <TR>
-      <TD class="tb-cell2" rowspan="3">0040</TD>
-      <TD class="tb-cell1" rowspan="3">回避性能</TD>
-      <TD class="tb-cell1" colspan="2" height="30">延长翻滚、枪与弓系武器后跳时的无敌时间。通常情况下有6/30秒的无敌时间。</TD>
-    </TR>
-    <TR>
-      <TD class="tb-cell1">+10以上：回避性能+1</TD>
-      <TD class="tb-cell1">无敌时间延长至8/30秒</TD>
-    </TR>
-    <TR>
-      <TD class="tb-cell1">+20以上：回避性能+2</TD>
-      <TD class="tb-cell1">无敌时间延长至10/30秒</TD>
-    </TR>
-   <TR>
-      <TD class="tb-cell2" rowspan="4">0041</TD>
-      <TD class="tb-cell1" rowspan="4">底力</TD>
-      <TD class="tb-cell1" colspan="2" height="30">影响玩家体力低于最大值40%以下时攻击力・防御力的变化量。<BR>
-      通常情况下，体力低于40%时，攻击力没有变化，防御力增加60。</TD>
-    </TR>
-    <TR>
-      <TD class="tb-cell1">+10以上：火场怪力+1</TD>
-      <TD class="tb-cell1">防御力增加量提高至90</TD>
-    </TR>
-    <TR>
-      <TD class="tb-cell1">+15以上：火场怪力+2</TD>
-      <TD class="tb-cell1">攻击力提高至1.5倍　防御力增加量提高至90</TD>
-    </TR>
-    <TR>
-      <TD class="tb-cell1">-15以下：焦虑</TD>
-      <TD class="tb-cell1">攻击力降低至0.7倍　防御力增加量降低至42</TD>
-    </TR>
-    <TR>
       <TD class="tb-cell2" rowspan="3">0042</TD>
       <TD class="tb-cell1" rowspan="3">效果持续</TD>
       <TD class="tb-cell1" colspan="2" height="30">使用效果存在时间限制的消耗品（例如冷饮；笛系道具除外）时，影响效果的持续时间。</TD>
@@ -263,39 +276,26 @@ ShowLinks(1, 99);
       <TD class="tb-cell1">持续时间缩短至0.66（2/3）倍</TD>
     </TR>
     <TR>
-      <TD class="tb-cell2" rowspan="3">0043</TD>
-      <TD class="tb-cell1" rowspan="3">耐力</TD>
-      <TD class="tb-cell1" colspan="2" height="30">影响冲刺类行动时的耐力消耗。通常情况下耐力值减少量为15单位。</TD>
+      <TD class="tb-cell2" rowspan="5">0002</TD>
+      <TD class="tb-cell1" rowspan="5">运气</TD>
+      <TD class="tb-cell1" colspan="2">影响任务主线・支线的达成报酬栏位数的增加概率。<BR>
+      通常情况下，栏位数的增加概率为22/32。（部分特殊任务的基本报酬不受影响）</TD>
     </TR>
     <TR>
-      <TD class="tb-cell1">+10以上：飞人</TD>
-      <TD class="tb-cell1">耐力减少量降低至8单位</TD>
+      <TD class="tb-cell1" width="200">+10以上：幸运</TD>
+      <TD class="tb-cell1" width="450">栏位数的增加概率提高至26/32</TD>
     </TR>
     <TR>
-      <TD class="tb-cell1">-10以下：钝足</TD>
-      <TD class="tb-cell1">耐力减少量提高至18单位</TD>
+      <TD class="tb-cell1">+15以上：激运</TD>
+      <TD class="tb-cell1">栏位数的增加概率提高至29/32</TD>
     </TR>
     <TR>
-      <TD class="tb-cell2" rowspan="5">0049</TD>
-      <TD class="tb-cell1" rowspan="5">地形</TD>
-      <TD class="tb-cell1" colspan="2" height="30">影响受到的地形（如火山的熔岩边缘）伤害量。<BR>
-      通常情况下每8/30秒会受到一定伤害，导致体力量表减少。</TD>
+      <TD class="tb-cell1">-10以下：不运</TD>
+      <TD class="tb-cell1">栏位数的增加概率降低至16/32</TD>
     </TR>
     <TR>
-      <TD class="tb-cell1">+10以上：地形伤害减【小】</TD>
-      <TD class="tb-cell1">延长至每12/30秒受到伤害</TD>
-    </TR>
-    <TR>
-      <TD class="tb-cell1">+15以上：地形伤害减【大】</TD>
-      <TD class="tb-cell1">延长至每24/30秒受到伤害</TD>
-    </TR>
-    <TR>
-      <TD class="tb-cell1">-10以下：地形伤害增【小】</TD>
-      <TD class="tb-cell1">缩短至每6/30秒受到伤害</TD>
-    </TR>
-    <TR>
-      <TD class="tb-cell1">-15以下：地形伤害增【大】</TD>
-      <TD class="tb-cell1">缩短至每4/30秒受到伤害</TD>
+      <TD class="tb-cell1">-20以下：灾难</TD>
+      <TD class="tb-cell1">栏位数的增加概率降低至8/32</TD>
     </TR>
  
   </TBODY>
