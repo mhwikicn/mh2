@@ -33,6 +33,62 @@ ShowLinks(1, 99);
       <TD width="50" class="tb-th2">No.</TD>
       <TD width="120" class="tb-th2">技能系统名</TD>
       <TD class="tb-th2" colspan="2" width="660">内容</TD>
+    <TR>
+      <TD class="tb-cell2" rowspan="2">0003</TD>
+      <TD class="tb-cell1" rowspan="2">搬运</TD>
+      <TD class="tb-cell1" colspan="2">影响搬运能力。</TD>
+    </TR>
+    <TR>
+      <TD class="tb-cell1" width="200">+10以上：搬运达人</TD>
+      <TD class="tb-cell1" width="450">提高搬运时的移动速度与安全下落高度</TD>
+    </TR>
+    <TR>
+      <TD class="tb-cell2" rowspan="2">0032</TD>
+      <TD class="tb-cell1" rowspan="2">爆弹强化</TD>
+      <TD class="tb-cell1" colspan="2">影响玩家的爆弹系物品特性。</TD>
+    </TR>
+    <TR>
+      <TD class="tb-cell1">+10以上：炸弹客</TD>
+      <TD class="tb-cell1">爆弹系物品伤害提升至1.5倍（各个玩家独立计算）,<BR>
+     其调合成功率变为100%（含音爆弹与爆药）</TD>
+    </TR>
+    <TR>
+      <TD class="tb-cell2" rowspan="7">004c</TD>
+      <TD class="tb-cell1" rowspan="7">冰耐性</TD>
+      <TD class="tb-cell1" colspan="2">影响玩家的冰耐性。</TD>
+    </TR>
+    <TR>
+      <TD class="tb-cell1">+10以上：冰耐性+3</TD>
+      <TD class="tb-cell1">提高3点冰耐性</TD>
+    </TR>
+    <TR>
+      <TD class="tb-cell1">+15以上：冰耐性+5</TD>
+      <TD class="tb-cell1">提高5点冰耐性</TD>
+    </TR>
+    <TR>
+      <TD class="tb-cell1">+20以上：冰耐性+10</TD>
+      <TD class="tb-cell1">提高10点冰耐性</TD>
+    </TR>
+    <TR>
+      <TD class="tb-cell1">-10以下：冰耐性-3</TD>
+      <TD class="tb-cell1">降低3点冰耐性</TD>
+    </TR>
+    <TR>
+      <TD class="tb-cell1">-15以下：冰耐性-5</TD>
+      <TD class="tb-cell1">降低5点冰耐性</TD>
+    </TR>
+    <TR>
+      <TD class="tb-cell1">-20以下：冰耐性-10</TD>
+      <TD class="tb-cell1">降低10点冰耐性</TD>
+    </TR>
+    <TR>
+      <TD class="tb-cell2" rowspan="2">0048</TD>
+      <TD class="tb-cell1" rowspan="2">剥取</TD>
+      <TD class="tb-cell1" colspan="2">影响剥取次数。</TD>
+    </TR>
+    <TR>
+      <TD class="tb-cell1">+15以上：剥取名人</TD>
+      <TD class="tb-cell1">所有可剥取场景增加1次剥取</TD>
     </TR>
     <TR>
       <TD class="tb-cell2" rowspan="5">0016</TD>
@@ -41,8 +97,8 @@ ShowLinks(1, 99);
       通常情况下，２次以后的采取・发掘成功率为27/32。</TD>
     </TR>
     <TR>
-      <TD class="tb-cell1" width="200">+10以上：采取+1</TD>
-      <TD class="tb-cell1" width="450">２次以后的采取・发掘成功率提高至29/32</TD>
+      <TD class="tb-cell1">+10以上：采取+1</TD>
+      <TD class="tb-cell1">２次以后的采取・发掘成功率提高至29/32</TD>
     </TR>
     <TR>
       <TD class="tb-cell1">+15以上：采取+2</TD>
@@ -56,6 +112,44 @@ ShowLinks(1, 99);
       <TD class="tb-cell1">-15以下：采取-2</TD>
       <TD class="tb-cell1">２次以后的采取・发掘成功率降低至19/32</TD>
     </TR>
+    <TR>
+      <TD class="tb-cell2" rowspan="2">0028</TD>
+      <TD class="tb-cell1" rowspan="2">垂钓</TD>
+      <TD class="tb-cell1" colspan="2">影响垂钓能力。</TD>
+    </TR>
+    <TR>
+      <TD class="tb-cell1">+10以上：垂钓名人</TD>
+      <TD class="tb-cell1">提高咬饵概率并延长操作反应时间，降低垂钓难度</TD>
+    </TR>
+    <TR>
+      <TD class="tb-cell2" rowspan="2">0022</TD>
+      <TD class="tb-cell1" rowspan="2">弹调合</TD>
+      <TD class="tb-cell1" colspan="2">影响调合弹药的能力。<BR>
+      部分弹药调合生产时数量是随机的，该技能影响随机生产的数量。</TD>
+    </TR>
+    <TR>
+      <TD class="tb-cell1">+10以上：最大数弹生产</TD>
+      <TD class="tb-cell1">调合子弹与瓶时必定生产最大可能数量</TD>
+    </TR>
+    <TR>
+      <TD class="tb-cell2" rowspan="4">0012</TD>
+      <TD class="tb-cell1" rowspan="4">达人</TD>
+      <TD class="tb-cell1" colspan="2">影响产生会心一击的概率。<BR>
+      注意：近战武器在青色与白色锋利度等级时存在额外的会心修正，参考 <A href="../bugu/sword.html">武器一览</A> 表格上方的说明。<BR>
+      武器最终会心率=武器原始会心率+达人技能会心率+锋利度会心修正。</TD>
+    </TR>
+    <TR>
+      <TD class="tb-cell1">+10以上：心眼</TD>
+      <TD class="tb-cell1">武器会心率提高5%</TD>
+    </TR>
+    <TR>
+      <TD class="tb-cell1">+15以上：识破+1</TD>
+      <TD class="tb-cell1">武器会心率提高10%，消除弹刀惩罚（不弹刀&不消耗额外锋利度）</TD>
+    </TR>
+    <TR>
+      <TD class="tb-cell1">+25以上：识破+2</TD>
+      <TD class="tb-cell1">武器会心率提高15%，消除弹刀惩罚（不弹刀&不消耗额外锋利度）</TD>
+    </TR>
    <TR>
       <TD class="tb-cell2" rowspan="4">0041</TD>
       <TD class="tb-cell1" rowspan="4">底力</TD>
@@ -68,11 +162,24 @@ ShowLinks(1, 99);
     </TR>
     <TR>
       <TD class="tb-cell1">+15以上：火场怪力+2</TD>
-      <TD class="tb-cell1">攻击力提高至1.5倍　防御力增加量提高至90</TD>
+      <TD class="tb-cell1">攻击力提高至1.5倍，防御力增加量提高至90</TD>
     </TR>
     <TR>
       <TD class="tb-cell1">-15以下：焦虑</TD>
-      <TD class="tb-cell1">攻击力降低至0.7倍　防御力增加量降低至42</TD>
+      <TD class="tb-cell1">攻击力降低至0.7倍，防御力增加量降低至42</TD>
+    </TR>
+    <TR>
+      <TD class="tb-cell2" rowspan="3">0023</TD>
+      <TD class="tb-cell1" rowspan="3">地图</TD>
+      <TD class="tb-cell1" colspan="2">影响任务中小地图显示功能。</TD>
+    </TR>
+    <TR>
+      <TD class="tb-cell1">+10以上：地图常备</TD>
+      <TD class="tb-cell1">未持有地图时也可显示小地图</TD>
+    </TR>
+    <TR>
+      <TD class="tb-cell1">-10以下：地图无效</TD>
+      <TD class="tb-cell1">持有地图时也不能显示小地图</TD>
     </TR>
     <TR>
       <TD class="tb-cell2" rowspan="5">0049</TD>
@@ -95,6 +202,37 @@ ShowLinks(1, 99);
     <TR>
       <TD class="tb-cell1">-15以下：地形伤害增【大】</TD>
       <TD class="tb-cell1">缩短至每4/30秒受到伤害</TD>
+    </TR>
+    <TR>
+      <TD class="tb-cell2" rowspan="4">002e</TD>
+      <TD class="tb-cell1" rowspan="4">毒</TD>
+      <TD class="tb-cell1" colspan="2">影响玩家对毒效果（紫色）的反应。</TD>
+    </TR>
+    <TR>
+      <TD class="tb-cell1">+10以上：毒半减</TD>
+      <TD class="tb-cell1">中毒状态造成的体力降低速度减半</TD>
+    </TR>
+    <TR>
+      <TD class="tb-cell1">+15以上：毒无效</TD>
+      <TD class="tb-cell1">不会进入中毒状态</TD>
+    </TR>
+    <TR>
+      <TD class="tb-cell1">-10以下：毒倍加</TD>
+      <TD class="tb-cell1">中毒状态造成的体力降低速度加倍</TD>
+    </TR>
+    <TR>
+      <TD class="tb-cell2" rowspan="3">0034</TD>
+      <TD class="tb-cell1" rowspan="3">反动</TD>
+      <TD class="tb-cell1" colspan="2">影响弩射击时的反动（后坐力）大小。<BR>
+      反动相关信息详情参考 <A href="../platk_gun.html#0004">对怪物的攻击　【枪弩编】 # 发射时的反动</A> 。</TD>
+    </TR>
+    <TR>
+      <TD class="tb-cell1">+10以上：反动轻减+1</TD>
+      <TD class="tb-cell1">反动值降低2</TD>
+    </TR>
+    <TR>
+      <TD class="tb-cell1">+15以上：反动轻减+2</TD>
+      <TD class="tb-cell1">反动值降低4</TD>
     </TR>
     <TR>
       <TD class="tb-cell2" rowspan="5">000e</TD>
@@ -121,6 +259,35 @@ ShowLinks(1, 99);
     <TR>
       <TD class="tb-cell1">-15以下：恶魔的反覆无常</TD>
       <TD class="tb-cell1">有1/2的概率加倍损坏的可能</TD>
+    </TR>
+    <TR>
+      <TD class="tb-cell2" rowspan="7">0038</TD>
+      <TD class="tb-cell1" rowspan="7">防御</TD>
+      <TD class="tb-cell1" colspan="2">影响玩家的防御力。</TD>
+    </TR>
+    <TR>
+      <TD class="tb-cell1">+10以上：防御+20</TD>
+      <TD class="tb-cell1">提高20点防御力</TD>
+    </TR>
+    <TR>
+      <TD class="tb-cell1">+15以上：防御+30</TD>
+      <TD class="tb-cell1">提高30点防御力</TD>
+    </TR>
+    <TR>
+      <TD class="tb-cell1">+20以上：防御+40</TD>
+      <TD class="tb-cell1">提高40点防御力</TD>
+    </TR>
+    <TR>
+      <TD class="tb-cell1">-10以下：防御-20</TD>
+      <TD class="tb-cell1">降低20点防御力</TD>
+    </TR>
+    <TR>
+      <TD class="tb-cell1">-15以下：防御-30</TD>
+      <TD class="tb-cell1">降低30点防御力</TD>
+    </TR>
+    <TR>
+      <TD class="tb-cell1">-20以下：防御-40</TD>
+      <TD class="tb-cell1">降低40点防御力</TD>
     </TR>
     <TR>
       <TD class="tb-cell2" rowspan="5">0005</TD>
