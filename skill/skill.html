@@ -40,7 +40,7 @@ ShowLinks(1, 99);
     </TR>
     <TR>
       <TD class="tb-cell1" width="200">+10以上：搬运达人</TD>
-      <TD class="tb-cell1" width="450">提高搬运时的移动速度与安全下落高度</TD>
+      <TD class="tb-cell1" width="450">提高安全下落高度，搬运重物品的移动速度提高至与轻物品相同</TD>
     </TR>
     <TR>
       <TD class="tb-cell2" rowspan="2">0032</TD>
@@ -49,8 +49,9 @@ ShowLinks(1, 99);
     </TR>
     <TR>
       <TD class="tb-cell1">+10以上：炸弹客</TD>
-      <TD class="tb-cell1">爆弹系物品伤害提升至1.5倍（各个玩家独立计算）,<BR>
-     其调合成功率变为100%（含音爆弹与爆药）</TD>
+      <TD class="tb-cell1">爆弹系物品伤害提升至1.5倍<BR>
+     其调合成功率变为100%（含音爆弹与爆药）<BR>
+      <font color="red">注意：只对激活技能的玩家放置的爆弹有效</font></TD>
     </TR>
     <TR>
       <TD id="004c" class="tb-cell2" rowspan="7">004c</TD>
@@ -93,24 +94,26 @@ ShowLinks(1, 99);
     <TR>
       <TD id="0016" class="tb-cell2" rowspan="5">0016</TD>
       <TD class="tb-cell1" rowspan="5">采取</TD>
-      <TD class="tb-cell1" colspan="2">影响采取・发掘２次以后每次的成功概率。<BR>
-      通常情况下，２次以后的采取・发掘成功率为27/32。</TD>
+      <TD class="tb-cell1" colspan="2">影响采取・发掘第２次及以后每次的成功概率。<BR>
+      <font color="red">不影响采集点设置的采取・发掘上限次数。</font><BR>
+      通常情况下，第２次及以后的采取・发掘成功率为27/32。判定发生采集失败时，该采集点的可采集次数归零。<BR>
+      即，<font color="red">无论是否发动技能都不保证采集点可采集两次及以上</font>。</TD>
     </TR>
     <TR>
       <TD class="tb-cell1">+10以上：采取+1</TD>
-      <TD class="tb-cell1">２次以后的采取・发掘成功率提高至29/32</TD>
+      <TD class="tb-cell1">第２次及以后的采取・发掘成功率提高至29/32</TD>
     </TR>
     <TR>
       <TD class="tb-cell1">+15以上：采取+2</TD>
-      <TD class="tb-cell1">２次以后的采取・发掘成功率提高至31/32</TD>
+      <TD class="tb-cell1">第２次及以后的采取・发掘成功率提高至31/32</TD>
     </TR>
     <TR>
       <TD class="tb-cell1">-10以下：采取-1</TD>
-      <TD class="tb-cell1">２次以后的采取・发掘成功率降低至23/32</TD>
+      <TD class="tb-cell1">第２次及以后的采取・发掘成功率降低至23/32</TD>
     </TR>
     <TR>
       <TD class="tb-cell1">-15以下：采取-2</TD>
-      <TD class="tb-cell1">２次以后的采取・发掘成功率降低至19/32</TD>
+      <TD class="tb-cell1">第２次及以后的采取・发掘成功率降低至19/32</TD>
     </TR>
     <TR>
       <TD id="0028" class="tb-cell2" rowspan="2">0028</TD>
@@ -129,13 +132,14 @@ ShowLinks(1, 99);
     </TR>
     <TR>
       <TD class="tb-cell1">+10以上：最大数弹生产</TD>
-      <TD class="tb-cell1">调合子弹与瓶时必定生产最大可能数量</TD>
+      <TD class="tb-cell1">调合子弹与瓶时必定生产最大可能数量<BR>
+      <font color="red">不包括空瓶</font></TD>
     </TR>
     <TR>
       <TD id="0012" class="tb-cell2" rowspan="4">0012</TD>
       <TD class="tb-cell1" rowspan="4">达人</TD>
       <TD class="tb-cell1" colspan="2">影响产生会心一击的概率。<BR>
-      注意：近战武器在青色与白色锋利度等级时存在额外的会心修正，参考 <A href="../bugu/sword.html">武器一览</A> 表格上方的说明。<BR>
+      <font color="red">注意：近战武器在青色与白色锋利度等级时存在额外的会心修正</font>，请参考 <A href="../bugu/sword.html">武器一览</A> 表格上方的说明。<BR>
       武器最终会心率=武器原始会心率+达人技能会心率+锋利度会心修正。</TD>
     </TR>
     <TR>
@@ -184,7 +188,7 @@ ShowLinks(1, 99);
     <TR>
       <TD id="0049" class="tb-cell2" rowspan="5">0049</TD>
       <TD class="tb-cell1" rowspan="5">地形</TD>
-      <TD class="tb-cell1" colspan="2" height="30">影响受到的地形（如火山的熔岩边缘）伤害量。<BR>
+      <TD class="tb-cell1" colspan="2" height="30">影响受到的地形（火山的熔岩边缘、炎龍的护体炎铠）伤害量。<BR>
       通常情况下每8/30秒会受到一定伤害，导致体力量表减少。</TD>
     </TR>
     <TR>
@@ -206,7 +210,7 @@ ShowLinks(1, 99);
     <TR>
       <TD id="002e" class="tb-cell2" rowspan="4">002e</TD>
       <TD class="tb-cell1" rowspan="4">毒</TD>
-      <TD class="tb-cell1" colspan="2">影响玩家对中毒状态（紫色泡泡）的反应。</TD>
+      <TD class="tb-cell1" colspan="2">影响玩家对中毒状态（紫色泡沫）的反应。</TD>
     </TR>
     <TR>
       <TD class="tb-cell1">+10以上：毒半减</TD>
@@ -238,7 +242,7 @@ ShowLinks(1, 99);
       <TD id="000e" class="tb-cell2" rowspan="5">000e</TD>
       <TD class="tb-cell1" rowspan="5">反覆无常</TD>
       <TD class="tb-cell1" colspan="2">影响铁镐・捕虫网・笛系物品使用时的损坏概率。<BR>
-      通常情况下，物品使用时的损坏概率如下。<BR>
+      通常情况下，物品使用时的原始损坏概率如下。<BR>
       　　破铁镐：1/3　铁镐：1/10　铁镐Ｇ：1/15<BR>
       　　破捕虫网：1/3　捕虫网：1/10　捕虫网Ｇ：1/15<BR>
       　　回复笛：1/12　解毒笛：1/12　鬼人笛：1/8　硬化笛：1/8<BR>
@@ -246,19 +250,19 @@ ShowLinks(1, 99);
     </TR>
     <TR>
       <TD class="tb-cell1" width="200">+10以上：精灵的反覆无常</TD>
-      <TD class="tb-cell1" width="450">损坏发生时有1/4的概率回避</TD>
+      <TD class="tb-cell1" width="450">损坏发生时有1/4的概率回避（损坏概率降低至原始的3/4）</TD>
     </TR>
     <TR>
       <TD class="tb-cell1">+15以上：神的反覆无常</TD>
-      <TD class="tb-cell1">损坏发生时有1/2的概率回避</TD>
+      <TD class="tb-cell1">损坏发生时有1/2的概率回避（损坏概率降低至原始的1/2）</TD>
     </TR>
     <TR>
       <TD class="tb-cell1">-10以下：恶灵的反覆无常</TD>
-      <TD class="tb-cell1">有1/4的概率加倍损坏的可能</TD>
+      <TD class="tb-cell1">有1/4的概率加倍损坏的可能（损坏概率提高至原始的5/4）</TD>
     </TR>
     <TR>
       <TD class="tb-cell1">-15以下：恶魔的反覆无常</TD>
-      <TD class="tb-cell1">有1/2的概率加倍损坏的可能</TD>
+      <TD class="tb-cell1">有1/2的概率加倍损坏的可能（损坏概率提高至原始的3/2）</TD>
     </TR>
     <TR>
       <TD id="0038" class="tb-cell2" rowspan="7">0038</TD>
@@ -293,8 +297,7 @@ ShowLinks(1, 99);
       <TD id="0005" class="tb-cell2" rowspan="5">0005</TD>
       <TD class="tb-cell1" rowspan="5">防御性能</TD>
       <TD class="tb-cell1" colspan="2" height="30">影响防御怪物攻击时，由应对攻击造成的效果。<BR>
-      通常情况下，威力值根据武器种类有如下的后退等动作影响。<BR>
-      <BR>
+      通常情况下，威力值根据可防御的近战武器种类有如下的动作影响。<BR>
       <TABLE border="1" cellspacing="0" cellpadding="2" class="cnt-tb1">
         <TBODY>
           <TR>
@@ -304,8 +307,8 @@ ShowLinks(1, 99);
             <TD class="tb-th1" width="90">威力值40以上</TD>
           </TR>
           <TR>
-            <TD class="tb-cell1">片手剑/重弩盾</TD>
-            <TD class="tb-cell1">小后退/原地不动</TD>
+            <TD class="tb-cell1">片手剑</TD>
+            <TD class="tb-cell1">小后退</TD>
             <TD class="tb-cell1">大后退</TD>
             <TD class="tb-cell1">大后退</TD>
           </TR>
@@ -323,7 +326,7 @@ ShowLinks(1, 99);
           </TR>
         </TBODY>
       </TABLE>
-      <BR>
+          <font color="red">对重弩的盾没有效果。</font><BR>
       </TD>
     </TR>
     <TR>
@@ -332,7 +335,7 @@ ShowLinks(1, 99);
     </TR>
     <TR>
       <TD class="tb-cell1">+20以上：防御性能+2</TD>
-      <TD class="tb-cell1">威力值减少20　且原本不能防御的攻击变得可以防御</TD>
+      <TD class="tb-cell1">威力值减少20，且原本不能防御的攻击变得可以防御</TD>
     </TR>
     <TR>
       <TD class="tb-cell1">-10以下：防御性能-1</TD>
@@ -347,8 +350,8 @@ ShowLinks(1, 99);
       <TD class="tb-cell1" rowspan="4">风压</TD>
       <TD class="tb-cell1" colspan="2">影响玩家对各等级风压的反应。<BR>
       无技能时，根据玩家受到的风压大小，会产生不同的硬直动作。<BR>
-      除笛效果外，部分武器动作/状态存在霸体/超级装甲效果，类似于“风压【大】无效”。<BR>
-      另外玩家蹲下时也有“风压【大】无效”。</TD>
+      除狩猎笛效果外，部分武器动作/状态存在霸体/超级装甲效果，类似于“风压【大】无效”。<BR>
+      另外玩家蹲下时也有“风压【大】无效”状态。</TD>
     </TR>
     <TR>
       <TD class="tb-cell1">+10以上：风压【小】无效</TD>
@@ -369,7 +372,8 @@ ShowLinks(1, 99);
     </TR>
     <TR>
       <TD class="tb-cell1">+10以上：高速剥取＆采取</TD>
-      <TD class="tb-cell1">加快采集与剥取的速度。</TD>
+      <TD class="tb-cell1">加快采集与剥取的速度<BR>
+      <font color="red">技能激活后剥取时站立比蹲下更有效率</font></TD>
     </TR>
     <TR>
       <TD id="0015" class="tb-cell2" rowspan="4">0015</TD>
@@ -414,13 +418,13 @@ ShowLinks(1, 99);
     </TR>
     <TR>
       <TD class="tb-cell1">+20以上：广域化+2</TD>
-      <TD class="tb-cell1">使用物品后同区域其他玩家同时获得相同的效果</TD>
+      <TD class="tb-cell1">使用物品后同区域其他玩家同时获得完全的效果</TD>
     </TR>
     <TR>
       <TD id="000b" class="tb-cell2" rowspan="2">000b</TD>
       <TD class="tb-cell1" rowspan="2">贯通弹强化</TD>
       <TD class="tb-cell1" colspan="2">影响弩的贯通弹威力。<BR>
-      注意：弓的贯通箭不受此技能影响。</TD>
+      <font color="red">注意：弓的贯通箭不受此技能影响。</font></TD>
     </TR>
     <TR>
       <TD class="tb-cell1">+10以上：贯通弹攻击力UP</TD>
@@ -446,7 +450,7 @@ ShowLinks(1, 99);
     <TR>
       <TD id="0040" class="tb-cell2" rowspan="3">0040</TD>
       <TD class="tb-cell1" rowspan="3">回避性能</TD>
-      <TD class="tb-cell1" colspan="2" height="30">延长翻滚、枪与弓系武器后跳时的无敌时间。通常情况下有6/30秒的无敌时间。</TD>
+      <TD class="tb-cell1" colspan="2" height="30">延长回避翻滚、枪与弓系武器后跳时的无敌时间。通常情况下有6/30秒的无敌时间。</TD>
     </TR>
     <TR>
       <TD class="tb-cell1">+10以上：回避性能+1</TD>
@@ -522,7 +526,7 @@ ShowLinks(1, 99);
     <TR>
       <TD id="0009" class="tb-cell2" rowspan="3">0009</TD>
       <TD class="tb-cell1" rowspan="3">加护</TD>
-      <TD class="tb-cell1" colspan="2" height="30">增加或减少被攻击时受到的伤害。</TD>
+      <TD class="tb-cell1" colspan="2" height="30">影响玩家被攻击时受到的伤害。</TD>
     </TR>
     <TR>
       <TD class="tb-cell1">+10以上：精灵的加护</TD>
@@ -583,11 +587,11 @@ ShowLinks(1, 99);
     <TR>
       <TD id="004a" class="tb-cell2" rowspan="4">004a</TD>
       <TD class="tb-cell1" rowspan="4">抗菌・抗毒</TD>
-      <TD class="tb-cell1" colspan="2">影响玩家对中毒状态（紫色泡泡）与恶臭状态（棕色气体）的反应。</TD>
+      <TD class="tb-cell1" colspan="2">影响玩家对恶臭状态（棕色气体）与中毒状态（紫色泡沫）的反应。</TD>
     </TR>
     <TR>
       <TD class="tb-cell1">+10以上：抗菌+1</TD>
-      <TD class="tb-cell1">中毒与恶臭状态的持续时间减半</TD>
+      <TD class="tb-cell1">恶臭与中毒状态的持续时间减半</TD>
     </TR>
     <TR>
       <TD class="tb-cell1">+20以上：抗菌+2</TD>
@@ -687,8 +691,8 @@ ShowLinks(1, 99);
     <TR>
       <TD class="tb-cell1">+10以上：利刃</TD>
       <TD class="tb-cell1">锋利度消耗超过1点的场合，消耗的锋利度减半<BR>
-      包括：各种弹刀（包括取消弹刀动作的各种特殊武器动作），<BR>
-      大剑防御，铳枪炮击/龙击炮。</TD>
+      包括：弹刀惩罚（含取消弹刀动作的各种特殊武器动作）、<BR>
+      大剑防御、铳枪炮击/龙击炮。</TD>
     </TR>
     <TR>
       <TD class="tb-cell1">-10以下：钝刀</TD>
@@ -788,22 +792,23 @@ ShowLinks(1, 99);
     <TR>
       <TD id="0043" class="tb-cell2" rowspan="3">0043</TD>
       <TD class="tb-cell1" rowspan="3">耐力</TD>
-      <TD class="tb-cell1" colspan="2" height="30">影响冲刺类行动时的耐力消耗。通常情况下耐力值减少量为15单位。</TD>
+      <TD class="tb-cell1" colspan="2" height="30">影响各类消耗耐力动作的消耗值/消耗速度。<BR>
+      包括回避/后跳、防御的一次性耐力消耗与冲刺、加速攀爬、双剑鬼人化、长枪冲锋、锤与弓蓄力的持续性消耗。</TD>
     </TR>
     <TR>
       <TD class="tb-cell1">+10以上：奔跑者</TD>
-      <TD class="tb-cell1">耐力减少量降低至8单位</TD>
+      <TD class="tb-cell1">耐力消耗值/消耗速度减半</TD>
     </TR>
     <TR>
       <TD class="tb-cell1">-10以下：钝足</TD>
-      <TD class="tb-cell1">耐力减少量提高至18单位</TD>
+      <TD class="tb-cell1">耐力消耗值/消耗速度增加至1.2倍</TD>
     </TR>
     <TR>
       <TD id="001e" class="tb-cell2" rowspan="6">001e</TD>
       <TD class="tb-cell1" rowspan="6">耐暑</TD>
       <TD class="tb-cell1" colspan="2" height="30">影响火山与砂漠（昼）环境下暑热导致的体力减少速度。<BR>
-      暑热等级LV1：砂漠（昼）暑热地带。<BR>
-      暑热等级LV2：火山暑热地带。<BR>
+      暑热等级LV1：火山外部暑热地带、砂漠（昼）暑热地带。<BR>
+      暑热等级LV2：火山内部熔岩地带。<BR>
       通常情况下，暑热LV1区域中每3秒、LV2区域中每2秒会发生一次体力减少。</TD>
     </TR>
     <TR>
@@ -856,7 +861,7 @@ ShowLinks(1, 99);
       <TD id="0051" class="tb-cell2" rowspan="2">0051</TD>
       <TD class="tb-cell1" rowspan="2">炮术师</TD>
       <TD class="tb-cell1" colspan="2">影响大炮与大型弩炮设施的威力。<BR>
-      注意：铳枪的炮击威力不受此技能影响。</TD>
+      <font color="red">注意：铳枪的炮击威力不受此技能影响。</font></TD>
     </TR>
     <TR>
       <TD class="tb-cell1">+10以上：炮术师</TD>
@@ -938,7 +943,7 @@ ShowLinks(1, 99);
       <TD id="0017" class="tb-cell2" rowspan="2">0017</TD>
       <TD class="tb-cell1" rowspan="2">散弹强化</TD>
       <TD class="tb-cell1" colspan="2">影响弩的散弹威力。<BR>
-      注意：弓的扩散箭不受此技能影响。</TD>
+      <font color="red">注意：弓的扩散箭不受此技能影响。</font></TD>
     </TR>
     <TR>
       <TD class="tb-cell1">+10以上：散弹攻击力UP</TD>
@@ -1045,14 +1050,14 @@ ShowLinks(1, 99);
     </TR>
     <TR>
       <TD class="tb-cell1">+15以上：随拣随食</TD>
-      <TD class="tb-cell1">食用所有可食用标记的物品都有1/3概率提高25点耐力上限<BR>
-      其中焦肉/鱼、解毒草、各类贪吃金枪鱼需要产生正面效果<BR>
-      才有概率触发耐力上限提高。</TD>
+      <TD class="tb-cell1">所有入口服用的物品都有1/3概率提高25点耐力上限<BR>
+      <font color="red">其中焦肉/鱼、解毒草、各类贪吃金枪鱼需要产生正面效果<BR>
+      才有概率触发耐力上限提高</font></TD>
     </TR>
     <TR>
       <TD class="tb-cell2" rowspan="2">002f</TD>
       <TD class="tb-cell1" rowspan="2">特殊攻击</TD>
-      <TD class="tb-cell1" colspan="2" height="30">影响状态异常属性（毒・麻痹・睡眠）的蓄积量。</TD>
+      <TD class="tb-cell1" colspan="2" height="30">影响状态异常属性（毒・麻痹・睡眠・麻醉）的蓄积量。</TD>
     </TR>
     <TR>
       <TD class="tb-cell1">+10以上：状态异常攻击强化</TD>
@@ -1129,7 +1134,7 @@ ShowLinks(1, 99);
       <TD id="0026" class="tb-cell2" rowspan="2">0026</TD>
       <TD class="tb-cell1" rowspan="2">通常弹强化</TD>
       <TD class="tb-cell1" colspan="2">影响弩的通常弹威力。<BR>
-      注意：弓的连射箭不受此技能影响。</TD>
+      <font color="red">注意：弓的连射箭不受此技能影响。</font></TD>
     </TR>
     <TR>
       <TD class="tb-cell1">+10以上：通常弹攻击力UP</TD>
@@ -1168,7 +1173,9 @@ ShowLinks(1, 99);
     <TR>
       <TD id="0042" class="tb-cell2" rowspan="3">0042</TD>
       <TD class="tb-cell1" rowspan="3">效果持续</TD>
-      <TD class="tb-cell1" colspan="2" height="30">使用效果存在时间限制的固定消耗品（例如冷饮；不包括笛系道具）时，影响效果的持续时间。</TD>
+      <TD class="tb-cell1" colspan="2" height="30">使用效果持续系固定消耗品（例如冷饮、怪力之种、强走药等）时，影响效果对自身的持续时间。<BR>
+      <font color="red">此技能的影响仅对激活技能的物品使用人生效，无法被广域化继承，也无法影响非自身的状态效果。<BR>
+      鬼人笛/硬化笛非固定消耗品，提供的效果不受此技能影响。</font></TD>
     </TR>
     <TR>
       <TD class="tb-cell1">+10以上：道具使用强化</TD>
@@ -1194,7 +1201,8 @@ ShowLinks(1, 99);
       <TD id="0002" class="tb-cell2" rowspan="5">0002</TD>
       <TD class="tb-cell1" rowspan="5">运气</TD>
       <TD class="tb-cell1" colspan="2">影响任务主线・支线的达成报酬栏位数的增加概率。<BR>
-      通常情况下，栏位数的增加概率为22/32。（部分特殊任务的基本报酬不受影响）</TD>
+      通常情况下，栏位数的增加概率为22/32。（不影响确定报酬数量，且部分特殊任务的基本报酬不受影响）<BR>
+      报酬相关信息详情参考 <A href="../queremun.html">关于任务报酬</A> 。</TD>
     </TR>
     <TR>
       <TD class="tb-cell1" width="200">+10以上：幸运</TD>
@@ -1216,7 +1224,7 @@ ShowLinks(1, 99);
       <TD id="001c" class="tb-cell2" rowspan="6">001c</TD>
       <TD class="tb-cell1" rowspan="6">装填</TD>
       <TD class="tb-cell1" colspan="2">影响射手的子弹装填/瓶装填速度。<BR>
-      弩的装填相关信息详情参考 <A href="../platk_gun.html#0003">对怪物的攻击　【枪弩编】 # 子弹装填速度</A> 。</TD>
+      弩的装填速度相关信息详情参考 <A href="../platk_gun.html#0003">对怪物的攻击　【枪弩编】 # 子弹装填速度</A> 。</TD>
     </TR>
     <TR>
       <TD class="tb-cell1">+10以上：装填速度+1</TD>
@@ -1255,8 +1263,8 @@ ShowLinks(1, 99);
     <TR>
       <TD class="tb-cell1">+10以上：全自动防御</TD>
       <TD class="tb-cell1">可自动防御当前状态下来自可防御方向的可防御攻击<BR>
-      即，发生可防御的攻击事件时，自动代替玩家按下防御键<BR>
-      因此，在无法防御的动作中，以及对无法防御的方向及类型的攻击无效</TD>
+      <font color="red">即，发生可防御的攻击事件时，自动代替玩家按下防御键<BR>
+      因此，在无法防御的动作中，以及对无法防御的方向及类型的攻击无效</font></TD>
     </TR>
  
   </TBODY>
