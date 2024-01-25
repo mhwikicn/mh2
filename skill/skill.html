@@ -553,23 +553,25 @@ ShowLinks(1, 99);
       <TD id="0033" class="tb-cell2" rowspan="5">0033</TD>
       <TD class="tb-cell1" rowspan="5">饥饿</TD>
       <TD class="tb-cell1" colspan="2">影响耐力上限自然降低的速度。<BR>
-      通常情况下，每6分钟降低一次耐力上限（25点）。</TD>
+      定义饥饿常数 H=6，在无技能、非寒冷环境的通常情况下，玩家的固有饥饿倍率 m=1，环境饥饿倍率修正 n=0，<BR>
+      自然饥饿（降低25点耐力上限）时间 T=H/(m+n)=6，单位为分钟。<BR>
+      寒冷环境下请参考“耐寒”技能说明中对应的环境饥饿倍率修正n进行计算。</TD>
     </TR>
     <TR>
       <TD class="tb-cell1">+10以上：饥饿半减</TD>
-      <TD class="tb-cell1">耐力上限的自然降低速度减半</TD>
+      <TD class="tb-cell1">固有饥饿倍率降低至0.5</TD>
     </TR>
     <TR>
       <TD class="tb-cell1">+15以上：饥饿无效</TD>
-      <TD class="tb-cell1">耐力上限不会自然降低</TD>
+      <TD class="tb-cell1">固有饥饿倍率降低至0</TD>
     </TR>
     <TR>
       <TD class="tb-cell1">-10以下：饥饿倍加【小】</TD>
-      <TD class="tb-cell1">耐力上限的自然降低速度增加至1.5倍</TD>
+      <TD class="tb-cell1">固有饥饿倍率增加至1.5</TD>
     </TR>
     <TR>
       <TD class="tb-cell1">-15以下：饥饿倍加【大】</TD>
-      <TD class="tb-cell1">耐力上限的自然降低速度增加至2倍</TD>
+      <TD class="tb-cell1">固有饥饿倍率增加至2</TD>
     </TR>
     <TR>
       <TD id="0045" class="tb-cell2" rowspan="3">0045</TD>
@@ -764,30 +766,34 @@ ShowLinks(1, 99);
     <TR>
       <TD id="001d" class="tb-cell2" rowspan="6">001d</TD>
       <TD class="tb-cell1" rowspan="6">耐寒</TD>
-      <TD class="tb-cell1" colspan="2">影响寒冷环境导致的耐力上限降低速度的增加倍率。<BR>
-      寒冷等级LV1：雪山洞窟、沼地洞窟、砂漠（夜）寒冷地带。<BR>
-      寒冷等级LV2：雪山山顶三个露天区域。<BR>
-      通常情况下，非寒冷区域中每6分钟、寒冷LV1区域中每?分钟、LV2区域中每?分钟会发生一次耐力上限降低。</TD>
+      <TD class="tb-cell1" colspan="2">影响寒冷环境导致的耐力上限降低速度的增加量。<BR>
+      寒冷等级LV1：环境饥饿倍率修正 n=2，环境为为雪山洞窟、沼地洞窟、砂漠（夜）寒冷地带。<BR>
+      寒冷等级LV2：环境饥饿倍率修正 n=3，环境为为雪山山顶6、7、8三个露天区域。<BR>
+      非寒冷地区：环境饥饿倍率修正n=0。<BR>
+      定义饥饿常数 H=6，在无饥饿技能的通常情况下，玩家的固有饥饿倍率 m=1，<BR>
+      自然饥饿（降低25点耐力上限）时间 T=H/(m+n)，单位为分钟。<BR>
+      以无饥饿技能为例，寒冷LV1区域中 T=6/(1+2)=2分钟，寒冷LV2区域中 T=6/(1+3)=1.5分钟。<BR>
+      有饥饿技能的情况下请参考“饥饿”技能说明中对应的固有饥饿倍率m进行计算。</TD>
     </TR>
     <TR>
       <TD class="tb-cell1">+10以上：寒冷半减</TD>
-      <TD class="tb-cell1">寒冷LV1区域、LV2区域中耐力上限降低速度的增加倍率减半</TD>
+      <TD class="tb-cell1">LV1与LV2寒冷区域的环境饥饿倍率修正减半（变为1与1.5）</TD>
     </TR>
     <TR>
       <TD class="tb-cell1">+15以上：寒冷【小】无效</TD>
-      <TD class="tb-cell1">寒冷LV1区域中耐力上限降低速度不再增加，LV2区域中耐力上限降低速度的增加倍率减少至1/3</TD>
+      <TD class="tb-cell1">寒冷LV1区域中环境饥饿倍率修正降至0，LV2区域中环境饥饿倍率修正降至1</TD>
     </TR>
     <TR>
       <TD class="tb-cell1">+20以上：寒冷【大】无效</TD>
-      <TD class="tb-cell1">寒冷不会导致耐力上限降低速度增加</TD>
+      <TD class="tb-cell1">LV1与LV2寒冷区域的环境饥饿倍率修正降至0</TD>
     </TR>
     <TR>
       <TD class="tb-cell1">-10以下：寒冷倍加【小】</TD>
-      <TD class="tb-cell1">寒冷LV1区域、LV2区域中耐力上限降低速度的增加倍率增加至1.5倍</TD>
+      <TD class="tb-cell1">LV1与LV2寒冷区域的环境饥饿倍率修正增加1（变为3与4）</TD>
     </TR>
     <TR>
       <TD class="tb-cell1">-20以下：寒冷倍加【大】</TD>
-      <TD class="tb-cell1">寒冷LV1区域、LV2区域中耐力上限降低速度的增加倍率加倍</TD>
+      <TD class="tb-cell1">LV1与LV2寒冷区域的环境饥饿倍率修正加倍（变为4与6）</TD>
     </TR>
     <TR>
       <TD id="0043" class="tb-cell2" rowspan="3">0043</TD>
@@ -813,11 +819,11 @@ ShowLinks(1, 99);
     </TR>
     <TR>
       <TD class="tb-cell1">+10以上：暑热半减</TD>
-      <TD class="tb-cell1">暑热LV1区域、LV2区域中体力减少速度减半</TD>
+      <TD class="tb-cell1">LV1与LV2暑热区域中体力减少速度减半</TD>
     </TR>
     <TR>
       <TD class="tb-cell1">+15以上：暑热【小】无效</TD>
-      <TD class="tb-cell1">暑热LV1区域中不再发生体力减少，LV2区域中体力减少速度减少至1/3</TD>
+      <TD class="tb-cell1">暑热LV1区域中不再因环境导致体力减少，LV2区域中体力减少速度降低至1/3</TD>
     </TR>
     <TR>
       <TD class="tb-cell1">+20以上：暑热【大】无效</TD>
@@ -825,11 +831,11 @@ ShowLinks(1, 99);
     </TR>
     <TR>
       <TD class="tb-cell1">-10以下：暑热倍加【小】</TD>
-      <TD class="tb-cell1">暑热LV1区域、LV2区域中体力减少速度增加至1.5倍</TD>
+      <TD class="tb-cell1">LV1与LV2暑热区域中体力减少速度升高至1.5倍</TD>
     </TR>
     <TR>
       <TD class="tb-cell1">-20以下：暑热倍加【大】</TD>
-      <TD class="tb-cell1">暑热LV1区域、LV2区域中体力减少速度加倍</TD>
+      <TD class="tb-cell1">LV1与LV2暑热区域中体力减少速度加倍</TD>
     </TR>
     <TR>
       <TD id="004b" class="tb-cell2" rowspan="4">004b</TD>
