@@ -265,7 +265,7 @@ function ShowItemDetail()
       ic = ic + 14;
 
     } else if (yflag == "J") {
-      kind = data.substring(ic+1,ic+2);			//爺さんの場所
+      kind = data.substring(ic+1,ic+2);			//爺さんの场所
       if (kind == 9) {
         html += "任意山菜爷处交付 ";
         html += FormatItemName(data.substring(ic+2,ic+5));
@@ -307,7 +307,7 @@ function ShowItemDetail()
 
 //****************************************************************
 //購入
-//  0-1:  購入場所番号
+//  0-1:  購入场所番号
 //
   data = itemkonyu[no];
   html = "";
@@ -399,7 +399,7 @@ function ShowItemDetail()
     if (ic > 0)  html += "<BR>";
     yflag = data.substring(ic,ic+1);		//識別子
     if (yflag == "J") {
-      kind = data.substring(ic+1,ic+2);			//爺さんの場所
+      kind = data.substring(ic+1,ic+2);			//爺さんの场所
       if (kind == 9) {
         html += "任意山菜爷处，将";
         numb = Number(data.substring(ic+2,ic+4));
@@ -533,7 +533,7 @@ function FormatSoshName(tdata)
 //****************************************************************
 //  采取発掘用のhtml構文生成
 //  0-1:  マップ番号
-//  2-3:  エリア番号 (00:BC  15:隠し)
+//  2-3:  区域番号 (00:BC  15:隠し)
 //  4-5:  ポイント番号
 //  6-8:  昼の確率
 //  9-11: 夜の確率
