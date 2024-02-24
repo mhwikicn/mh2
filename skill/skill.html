@@ -148,11 +148,11 @@ ShowLinks(1, 17);
     </TR>
     <TR>
       <TD class="tb-cell1">+15以上：识破+1</TD>
-      <TD class="tb-cell1">武器会心率提高10%，消除弹刀惩罚（不弹刀&不消耗额外锋利度）</TD>
+      <TD class="tb-cell1">武器会心率提高10%，消除弹刀惩罚（无弹刀后仰动作且不消耗额外锋利度）</TD>
     </TR>
     <TR>
       <TD class="tb-cell1">+25以上：识破+2</TD>
-      <TD class="tb-cell1">武器会心率提高15%，消除弹刀惩罚（不弹刀&不消耗额外锋利度）</TD>
+      <TD class="tb-cell1">武器会心率提高15%，消除弹刀惩罚（无弹刀后仰动作且不消耗额外锋利度）</TD>
     </TR>
    <TR>
       <TD id="0041" class="tb-cell2" rowspan="4">0041</TD>
@@ -934,13 +934,15 @@ ShowLinks(1, 17);
     <TR>
       <TD id="000f" class="tb-cell2" rowspan="3">000f</TD>
       <TD class="tb-cell1" rowspan="3">锐利</TD>
-      <TD class="tb-cell1" colspan="2">影响近战武器的锋利度消耗。</TD>
+      <TD class="tb-cell1" colspan="2">影响近战武器的锋利度消耗，具体数据如下：<BR>
+      近战攻击：按命中判定次数计算，每次非弹刀1点，弹刀2点（发动“识破+1/识破+2“技能时为1点）。<BR>
+     <font color="red">注意：强制取消弹刀后仰动作的各种特殊武器动作仍视为弹刀攻击。</font><BR>
+      大剑防御：按防御判定次数计算，每次微后退1点，小收招2点，大后退10点。<BR>
+      铳枪炮击：按发射次数计算，每发通常型/扩散型炮击3点，放射型炮击4点，龙击炮10点。</TD>
     </TR>
     <TR>
       <TD class="tb-cell1">+10以上：利刃</TD>
-      <TD class="tb-cell1">锋利度消耗超过1点的场合，消耗的锋利度减半，如非整数则取整数部分计算<BR>
-      包括：弹刀惩罚（2点，含强制取消弹刀动作的各种特殊武器动作）、<BR>
-      大剑防御（小收招：2点，大后退：10点）、铳枪炮击（通常&扩散：3点，放射：4点，龙击炮：10点）</TD>
+      <TD class="tb-cell1">锋利度的消耗量减半，如非整数则取整数部分计算，<font color="red">最低为1点</font><BR></TD>
     </TR>
     <TR>
       <TD class="tb-cell1">-10以下：钝刀</TD>
@@ -950,7 +952,7 @@ ShowLinks(1, 17);
       <TD id="0017" class="tb-cell2" rowspan="2">0017</TD>
       <TD class="tb-cell1" rowspan="2">散弹强化</TD>
       <TD class="tb-cell1" colspan="2">影响弩的散弹威力。<BR>
-      <font color="red">注意：弓的扩散箭不受此技能影响。</font></TD>
+      <font color="red">注意：不影响散弹附带的属性值。弓的扩散箭不受此技能影响。</font></TD>
     </TR>
     <TR>
       <TD class="tb-cell1">+10以上：散弹攻击力UP</TD>
@@ -990,7 +992,7 @@ ShowLinks(1, 17);
     <TR>
       <TD id="0047" class="tb-cell2" rowspan="3">0047</TD>
       <TD class="tb-cell1" rowspan="3">食事</TD>
-      <TD class="tb-cell1" colspan="2">影响食用物品的时间。<BR>
+      <TD class="tb-cell1" colspan="2">影响食用物品所需的时间。<BR>
       有效物品限定为所有可食用肉与鱼，以特有的进食动作为特征。</TD>
     </TR>
     <TR>
@@ -1053,18 +1055,17 @@ ShowLinks(1, 17);
     </TR>
     <TR>
       <TD class="tb-cell1">+10以上：饱腹</TD>
-      <TD class="tb-cell1">食用肉类回复耐力的情况下（含便携口粮），额外提高25点耐力上限</TD>
+      <TD class="tb-cell1">食用肉类与便携口粮回复耐力的情况下，额外提高25点耐力上限</TD>
     </TR>
     <TR>
       <TD class="tb-cell1">+15以上：随捡随食</TD>
       <TD class="tb-cell1">所有入口服用的物品都有1/3概率提高25点耐力上限<BR>
-      <font color="red">其中焦肉/鱼、解毒草、各类贪吃金枪鱼需要产生正面效果<BR>
-      才有概率触发耐力上限提高</font></TD>
+      <font color="red">其中焦肉/鱼、解毒草、各类贪吃金枪鱼需要产生正面效果才有概率触发</font></TD>
     </TR>
     <TR>
       <TD class="tb-cell2" rowspan="2">002f</TD>
       <TD class="tb-cell1" rowspan="2">特殊攻击</TD>
-      <TD class="tb-cell1" colspan="2" height="30">影响状态异常属性（毒・麻痹・睡眠・麻醉）的蓄积量。</TD>
+      <TD class="tb-cell1" colspan="2" height="30">影响玩家状态异常属性攻击（毒・麻痹・睡眠・麻醉）的蓄积量。</TD>
     </TR>
     <TR>
       <TD class="tb-cell1">+10以上：状态异常攻击强化</TD>
@@ -1230,28 +1231,28 @@ ShowLinks(1, 17);
     <TR>
       <TD id="001c" class="tb-cell2" rowspan="6">001c</TD>
       <TD class="tb-cell1" rowspan="6">装填</TD>
-      <TD class="tb-cell1" colspan="2">影响射手的子弹装填/瓶装填速度。<BR>
+      <TD class="tb-cell1" colspan="2">影响射手的子弹/瓶装填速度。<BR>
       弩的装填速度相关信息详情参考 <A href="../platk_gun.html#0003">对怪物的攻击　【枪弩编】 # 子弹装填速度</A> 。</TD>
     </TR>
     <TR>
       <TD class="tb-cell1">+10以上：装填速度+1</TD>
-      <TD class="tb-cell1">获得1点装填速度技能修正，瓶装填时间缩短至85%</TD>
+      <TD class="tb-cell1">获得1点装填速度技能修正，瓶装填时间缩短至0.85倍</TD>
     </TR>
     <TR>
       <TD class="tb-cell1">+15以上：装填速度+2</TD>
-      <TD class="tb-cell1">获得2点装填速度技能修正，瓶装填时间缩短至75%</TD>
+      <TD class="tb-cell1">获得2点装填速度技能修正，瓶装填时间缩短至0.75倍</TD>
     </TR>
     <TR>
       <TD class="tb-cell1">+20以上：装填速度+3</TD>
-      <TD class="tb-cell1">获得3点装填速度技能修正，瓶装填时间缩短至65%</TD>
+      <TD class="tb-cell1">获得3点装填速度技能修正，瓶装填时间缩短至0.65倍</TD>
     </TR>
     <TR>
       <TD class="tb-cell1">-10以下：装填速度-1</TD>
-      <TD class="tb-cell1">获得-1点装填速度技能修正，瓶装填时间延长至110%</TD>
+      <TD class="tb-cell1">获得-1点装填速度技能修正，瓶装填时间延长至1.1倍</TD>
     </TR>
     <TR>
       <TD class="tb-cell1">-15以下：装填速度-2</TD>
-      <TD class="tb-cell1">获得-3点装填速度技能修正，瓶装填时间延长至140%</TD>
+      <TD class="tb-cell1">获得-3点装填速度技能修正，瓶装填时间延长至1.4倍</TD>
     </TR>
     <TR>
       <TD id="0044" class="tb-cell2" rowspan="2">0044</TD>
@@ -1271,7 +1272,7 @@ ShowLinks(1, 17);
       <TD class="tb-cell1">+10以上：全自动防御</TD>
       <TD class="tb-cell1">可自动防御当前状态下来自可防御方向的可防御攻击<BR>
       <font color="red">即，发生可防御的攻击事件时，自动代替玩家按下防御键<BR>
-      因此，在无法防御的动作中，以及对无法防御的方向及类型的攻击无效</font></TD>
+      因此，在无法防御的动作中，以及对无法防御的方向及类型的攻击均不生效</font></TD>
     </TR>
  
   </TBODY>
