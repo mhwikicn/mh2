@@ -77,7 +77,7 @@ function ShowLinks(level, kind)
   str1 = "";
   str2 = "";
   if (kind != 16) {
-    str1 = "<A href=\"" + urlSuffix + "weapons/weapon01.htm\" target=\"_top\">";
+    str1 = "<A href=\"" + urlSuffix + "weapons/weapon01.html\" target=\"_top\">";
     str2 = "</A>";
   }
   html += " | " + str1 + "武器派生" + str2;
