@@ -80,7 +80,7 @@ function ShowLinks(level, kind)
     str1 = "<A href=\"" + urlSuffix + "weapons/weapon01.htm\" target=\"_top\">";
     str2 = "</A>";
   }
-  html += "|" + str1 + "武器派生" + str2;
+  html += " | " + str1 + "武器派生" + str2;
 
   str1 = "";
   str2 = "";
@@ -120,7 +120,7 @@ function ShowLinks(level, kind)
     str1 = "<A href=\"" + urlSuffix + "skill/skill.html\" target=\"_top\">";
     str2 = "</A>";
   }
-  html += "|" + str1 + "技能效果" + str2;
+  html += " | " + str1 + "技能效果" + str2;
 
   str1 = "";
   str2 = "";
