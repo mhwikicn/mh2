@@ -29,12 +29,12 @@ ShowLinks(0, 99);
 <P class="tb-cell0">表示玩家的近战攻击对怪物造成的伤害。</P>
 <b>近战伤害计算公式：</b><BR>
 <b><font size=2>注：由于硬件原因以及武器倍率/面板攻击力显示值在计算中的取整机制，所有涉及小数与乘法的计算结果可能产生偏差</font></b><BR>
-通常伤害（期望值）=武器倍率×威力%×武器威力修正×会心期望×锋利度倍率×斩击修正值×状态追加倍率×对应攻击类型肉质%×全体防御率<BR>
+通常伤害（期望值）=武器倍率×威力%×近战攻击吸收率×状态追加倍率×全体防御率×会心期望<BR>
 属性伤害=面板属性值÷10×属性锋利度倍率×对应属性肉质%×全体防御率<BR>
-炮击伤害=（爆炸威力+（附加火属性×火属性肉质%））×炮击锋利度倍率×全体防御率<BR>
+炮击伤害=（爆炸威力×状态追加倍率+附加火属性×肉质（火）%）×炮击锋利度倍率×全体防御率<BR>
 会心期望（正）=1+会心率×0.25<BR>
 会心期望（负）=1-会心率×0.5<BR>
-斩击吸收率=武器威力修正×锋利度倍率×斩击修正值×对应攻击类型肉质%　<b>（斩击吸收率小于25时发生弹刀）</b><BR>
+近战攻击吸收率=武器威力修正×锋利度倍率×命中时机修正值×对应攻击类型肉质%　<b>（近战攻击吸收率小于25时发生弹刀）</b><BR>
 <TABLE border="0" width="894">
   <TBODY>
     <TR>
@@ -129,186 +129,186 @@ ShowLinks(0, 99);
             <TD class="tb-cell1" rowspan="7" width="60">大剑</TD>
             <TD class="tb-cell1" width="120">拔刀攻击</TD>
             <TD class="tb-cell2">48</TD>
-            <TD class="tb-cell2">斩</TD>
+            <TD class="tb-cell2">切断</TD>
           </TR>
           <TR>
             <TD class="tb-cell1">纵斩</TD>
             <TD class="tb-cell2">48</TD>
-            <TD class="tb-cell2">斩</TD>
+            <TD class="tb-cell2">切断</TD>
           </TR>
           <TR>
             <TD class="tb-cell1">横斩</TD>
             <TD class="tb-cell2">36</TD>
-            <TD class="tb-cell2">斩</TD>
+            <TD class="tb-cell2">切断</TD>
           </TR>
           <TR>
             <TD class="tb-cell1">上斩</TD>
             <TD class="tb-cell2">46</TD>
-            <TD class="tb-cell2">斩</TD>
+            <TD class="tb-cell2">切断</TD>
           </TR>
           <TR>
             <TD class="tb-cell1">蓄力斩（阶段１）</TD>
             <TD class="tb-cell2">65</TD>
-            <TD class="tb-cell2">斩</TD>
+            <TD class="tb-cell2">切断</TD>
           </TR>
           <TR>
             <TD class="tb-cell1">蓄力斩（阶段２)</TD>
             <TD class="tb-cell2">80</TD>
-            <TD class="tb-cell2">斩</TD>
+            <TD class="tb-cell2">切断</TD>
           </TR>
           <TR>
             <TD class="tb-cell1">蓄力斩（阶段３)</TD>
             <TD class="tb-cell2">110</TD>
-            <TD class="tb-cell2">斩</TD>
+            <TD class="tb-cell2">切断</TD>
           </TR>
           <TR>
             <TD class="tb-cell1" rowspan="8">片手剑</TD>
             <TD class="tb-cell1">拔刀攻击</TD>
             <TD class="tb-cell2">18</TD>
-            <TD class="tb-cell2">斩</TD>
+            <TD class="tb-cell2">切断</TD>
           </TR>
           <TR>
             <TD class="tb-cell1">跳斩</TD>
             <TD class="tb-cell2">18</TD>
-            <TD class="tb-cell2">斩</TD>
+            <TD class="tb-cell2">切断</TD>
           </TR>
           <TR>
             <TD class="tb-cell1">前斩</TD>
             <TD class="tb-cell2">14</TD>
-            <TD class="tb-cell2">斩</TD>
+            <TD class="tb-cell2">切断</TD>
           </TR>
           <TR>
             <TD class="tb-cell1">横斩</TD>
             <TD class="tb-cell2">12</TD>
-            <TD class="tb-cell2">斩</TD>
+            <TD class="tb-cell2">切断</TD>
           </TR>
           <TR>
             <TD class="tb-cell1">剑盾连击</TD>
             <TD class="tb-cell2">8+12</TD>
-            <TD class="tb-cell2">斩</TD>
+            <TD class="tb-cell2">切断</TD>
           </TR>
           <TR>
             <TD class="tb-cell1">回旋斩</TD>
             <TD class="tb-cell2">24</TD>
-            <TD class="tb-cell2">斩</TD>
+            <TD class="tb-cell2">切断</TD>
           </TR>
           <TR>
             <TD class="tb-cell1">上斩</TD>
             <TD class="tb-cell2">15</TD>
-            <TD class="tb-cell2">斩</TD>
+            <TD class="tb-cell2">切断</TD>
           </TR>
           <TR>
             <TD class="tb-cell1">防御攻击</TD>
             <TD class="tb-cell2">14</TD>
-            <TD class="tb-cell2">斩</TD>
+            <TD class="tb-cell2">切断</TD>
           </TR>
           <TR>
             <TD class="tb-cell1" rowspan="10">长枪</TD>
             <TD class="tb-cell1">拔刀攻击</TD>
             <TD class="tb-cell2">28</TD>
-            <TD class="tb-cell2">斩+打</TD>
+            <TD class="tb-cell2">切+打</TD>
           </TR>
           <TR>
             <TD class="tb-cell1">中段突刺１</TD>
             <TD class="tb-cell2">23</TD>
-            <TD class="tb-cell2">斩+打</TD>
+            <TD class="tb-cell2">切+打</TD>
           </TR>
           <TR>
             <TD class="tb-cell1">中段突刺２</TD>
             <TD class="tb-cell2">23</TD>
-            <TD class="tb-cell2">斩+打</TD>
+            <TD class="tb-cell2">切+打</TD>
           </TR>
           <TR>
             <TD class="tb-cell1">中段突刺３</TD>
             <TD class="tb-cell2">30</TD>
-            <TD class="tb-cell2">斩+打</TD>
+            <TD class="tb-cell2">切+打</TD>
           </TR>
           <TR>
             <TD class="tb-cell1">上段突刺１</TD>
             <TD class="tb-cell2">28</TD>
-            <TD class="tb-cell2">斩+打</TD>
+            <TD class="tb-cell2">切+打</TD>
           </TR>
           <TR>
             <TD class="tb-cell1">上段突刺２</TD>
             <TD class="tb-cell2">28</TD>
-            <TD class="tb-cell2">斩+打</TD>
+            <TD class="tb-cell2">切+打</TD>
           </TR>
           <TR>
             <TD class="tb-cell1">上段突刺３</TD>
             <TD class="tb-cell2">30</TD>
-            <TD class="tb-cell2">斩+打</TD>
+            <TD class="tb-cell2">切+打</TD>
           </TR>
           <TR>
             <TD class="tb-cell1">突进</TD>
             <TD class="tb-cell2">20　×每次判定</TD>
-            <TD class="tb-cell2">斩+打</TD>
+            <TD class="tb-cell2">切+打</TD>
           </TR>
           <TR>
             <TD class="tb-cell1">终结突刺</TD>
             <TD class="tb-cell2">40</TD>
-            <TD class="tb-cell2">斩+打</TD>
+            <TD class="tb-cell2">切+打</TD>
           </TR>
           <TR>
             <TD class="tb-cell1">防御攻击</TD>
             <TD class="tb-cell2">20</TD>
-            <TD class="tb-cell2">斩+打</TD>
+            <TD class="tb-cell2">切+打</TD>
           </TR>
           <TR>
             <TD class="tb-cell1" rowspan="9">大锤</TD>
             <TD class="tb-cell1">拔刀攻击</TD>
             <TD class="tb-cell2">20</TD>
-            <TD class="tb-cell2">打</TD>
+            <TD class="tb-cell2">打击</TD>
           </TR>
           <TR>
             <TD class="tb-cell1">纵敲１</TD>
             <TD class="tb-cell2">52</TD>
-            <TD class="tb-cell2">打</TD>
+            <TD class="tb-cell2">打击</TD>
           </TR>
           <TR>
             <TD class="tb-cell1">纵敲２</TD>
             <TD class="tb-cell2">20</TD>
-            <TD class="tb-cell2">打</TD>
+            <TD class="tb-cell2">打击</TD>
           </TR>
           <TR>
             <TD class="tb-cell1">上敲</TD>
             <TD class="tb-cell2">100</TD>
-            <TD class="tb-cell2">打</TD>
+            <TD class="tb-cell2">打击</TD>
           </TR>
           <TR>
             <TD class="tb-cell1">横敲</TD>
             <TD class="tb-cell2">15</TD>
-            <TD class="tb-cell2">打</TD>
+            <TD class="tb-cell2">打击</TD>
           </TR>
           <TR>
             <TD class="tb-cell1">回旋攻击</TD>
             <TD class="tb-cell2">20+10+10+10+10+10+40</TD>
-            <TD class="tb-cell2">打</TD>
+            <TD class="tb-cell2">打击</TD>
           </TR>
           <TR>
             <TD class="tb-cell1">蓄力（小）攻击</TD>
             <TD class="tb-cell2">45</TD>
-            <TD class="tb-cell2">打</TD>
+            <TD class="tb-cell2">打击</TD>
           </TR>
           <TR>
             <TD class="tb-cell1">蓄力（中）攻击</TD>
             <TD class="tb-cell2">45+35</TD>
-            <TD class="tb-cell2">打</TD>
+            <TD class="tb-cell2">打击</TD>
           </TR>
           <TR>
             <TD class="tb-cell1">蓄力（大）攻击</TD>
             <TD class="tb-cell2">20+76</TD>
-            <TD class="tb-cell2">打</TD>
+            <TD class="tb-cell2">打击</TD>
           </TR>
           <TR>
             <TD class="tb-cell1" rowspan="2">弓</TD>
             <TD class="tb-cell1">横扫</TD>
             <TD class="tb-cell2">10</TD>
-            <TD class="tb-cell2">斩+打</TD>
+            <TD class="tb-cell2">切+打</TD>
           </TR>
           <TR>
             <TD class="tb-cell1">纵斩</TD>
             <TD class="tb-cell2">18</TD>
-            <TD class="tb-cell2">斩+打</TD>
+            <TD class="tb-cell2">切+打</TD>
           </TR>
         </TBODY>
       </TABLE>
@@ -328,237 +328,237 @@ ShowLinks(0, 99);
             （通常）</TD>
             <TD class="tb-cell1" width="120">拔刀攻击</TD>
             <TD class="tb-cell2">12+6</TD>
-            <TD class="tb-cell2">斩</TD>
+            <TD class="tb-cell2">切断</TD>
           </TR>
           <TR>
             <TD class="tb-cell1">切裂斩</TD>
             <TD class="tb-cell2">12+6</TD>
-            <TD class="tb-cell2">斩</TD>
+            <TD class="tb-cell2">切断</TD>
           </TR>
           <TR>
             <TD class="tb-cell1">下斩</TD>
             <TD class="tb-cell2">14</TD>
-            <TD class="tb-cell2">斩</TD>
+            <TD class="tb-cell2">切断</TD>
           </TR>
           <TR>
             <TD class="tb-cell1">斜向斩１</TD>
             <TD class="tb-cell2">8+6</TD>
-            <TD class="tb-cell2">斩</TD>
+            <TD class="tb-cell2">切断</TD>
           </TR>
           <TR>
             <TD class="tb-cell1">斜向斩２</TD>
             <TD class="tb-cell2">5+7+16</TD>
-            <TD class="tb-cell2">斩</TD>
+            <TD class="tb-cell2">切断</TD>
           </TR>
           <TR>
             <TD class="tb-cell1">左回旋斩</TD>
             <TD class="tb-cell2">10+8+6</TD>
-            <TD class="tb-cell2">斩</TD>
+            <TD class="tb-cell2">切断</TD>
           </TR>
           <TR>
             <TD class="tb-cell1">右回旋斩</TD>
             <TD class="tb-cell2">10+8+6</TD>
-            <TD class="tb-cell2">斩</TD>
+            <TD class="tb-cell2">切断</TD>
           </TR>
           <TR>
             <TD class="tb-cell1">上斩</TD>
             <TD class="tb-cell2">15</TD>
-            <TD class="tb-cell2">斩</TD>
+            <TD class="tb-cell2">切断</TD>
           </TR>
           <TR>
             <TD class="tb-cell1" rowspan="7">双剑<BR>
             （鬼人）</TD>
             <TD class="tb-cell1">下斩</TD>
             <TD class="tb-cell2">18</TD>
-            <TD class="tb-cell2">斩</TD>
+            <TD class="tb-cell2">切断</TD>
           </TR>
           <TR>
             <TD class="tb-cell1">斜向斩１</TD>
             <TD class="tb-cell2">10+8</TD>
-            <TD class="tb-cell2">斩</TD>
+            <TD class="tb-cell2">切断</TD>
           </TR>
           <TR>
             <TD class="tb-cell1">斜向斩２</TD>
             <TD class="tb-cell2">6+9+21</TD>
-            <TD class="tb-cell2">斩</TD>
+            <TD class="tb-cell2">切断</TD>
           </TR>
           <TR>
             <TD class="tb-cell1">左回旋斩</TD>
             <TD class="tb-cell2">（13+10+8）×2回</TD>
-            <TD class="tb-cell2">斩</TD>
+            <TD class="tb-cell2">切断</TD>
           </TR>
           <TR>
             <TD class="tb-cell1">右回旋斩</TD>
             <TD class="tb-cell2">（13+10+8）×2回</TD>
-            <TD class="tb-cell2">斩</TD>
+            <TD class="tb-cell2">切断</TD>
           </TR>
           <TR>
             <TD class="tb-cell1">上斩</TD>
             <TD class="tb-cell2">20</TD>
-            <TD class="tb-cell2">斩</TD>
+            <TD class="tb-cell2">切断</TD>
           </TR>
           <TR>
             <TD class="tb-cell1">乱舞</TD>
             <TD class="tb-cell2">28+5+5+5+5+5+5+5+5+33</TD>
-            <TD class="tb-cell2">斩</TD>
+            <TD class="tb-cell2">切断</TD>
           </TR>
           <TR>
             <TD class="tb-cell1" rowspan="10">太刀</TD>
             <TD class="tb-cell1">拔刀攻击</TD>
             <TD class="tb-cell2">28</TD>
-            <TD class="tb-cell2">斩</TD>
+            <TD class="tb-cell2">切断</TD>
           </TR>
           <TR>
             <TD class="tb-cell1">踏步斩</TD>
             <TD class="tb-cell2">28</TD>
-            <TD class="tb-cell2">斩</TD>
+            <TD class="tb-cell2">切断</TD>
           </TR>
           <TR>
             <TD class="tb-cell1">纵斩</TD>
             <TD class="tb-cell2">23</TD>
-            <TD class="tb-cell2">斩</TD>
+            <TD class="tb-cell2">切断</TD>
           </TR>
           <TR>
             <TD class="tb-cell1">袈裟斩</TD>
             <TD class="tb-cell2">24</TD>
-            <TD class="tb-cell2">斩</TD>
+            <TD class="tb-cell2">切断</TD>
           </TR>
           <TR>
             <TD class="tb-cell1">突刺</TD>
             <TD class="tb-cell2">14</TD>
-            <TD class="tb-cell2">斩</TD>
+            <TD class="tb-cell2">切断</TD>
           </TR>
           <TR>
             <TD class="tb-cell1">上斩</TD>
             <TD class="tb-cell2">18</TD>
-            <TD class="tb-cell2">斩</TD>
+            <TD class="tb-cell2">切断</TD>
           </TR>
           <TR>
             <TD class="tb-cell1">气刃斩(无气)</TD>
             <TD class="tb-cell2">16</TD>
-            <TD class="tb-cell2">斩</TD>
+            <TD class="tb-cell2">切断</TD>
           </TR>
           <TR>
             <TD class="tb-cell1">气刃斩１</TD>
             <TD class="tb-cell2">30</TD>
-            <TD class="tb-cell2">斩</TD>
+            <TD class="tb-cell2">切断</TD>
           </TR>
           <TR>
             <TD class="tb-cell1">气刃斩２</TD>
             <TD class="tb-cell2">36</TD>
-            <TD class="tb-cell2">斩</TD>
+            <TD class="tb-cell2">切断</TD>
           </TR>
           <TR>
             <TD class="tb-cell1">气刃斩３</TD>
             <TD class="tb-cell2">18+24+10</TD>
-            <TD class="tb-cell2">斩</TD>
+            <TD class="tb-cell2">切断</TD>
           </TR>
           <TR>
             <TD class="tb-cell1" rowspan="9">铳枪</TD>
             <TD class="tb-cell1">拔刀攻击</TD>
             <TD class="tb-cell2">34</TD>
-            <TD class="tb-cell2">斩</TD>
+            <TD class="tb-cell2">切断</TD>
           </TR>
           <TR>
             <TD class="tb-cell1">踏步上突刺</TD>
             <TD class="tb-cell2">34</TD>
-            <TD class="tb-cell2">斩</TD>
+            <TD class="tb-cell2">切断</TD>
           </TR>
           <TR>
             <TD class="tb-cell1">前方突刺１</TD>
             <TD class="tb-cell2">21</TD>
-            <TD class="tb-cell2">斩</TD>
+            <TD class="tb-cell2">切断</TD>
           </TR>
           <TR>
             <TD class="tb-cell1">前方突刺２</TD>
             <TD class="tb-cell2">21</TD>
-            <TD class="tb-cell2">斩</TD>
+            <TD class="tb-cell2">切断</TD>
           </TR>
           <TR>
             <TD class="tb-cell1">前方突刺３</TD>
             <TD class="tb-cell2">28</TD>
-            <TD class="tb-cell2">斩</TD>
+            <TD class="tb-cell2">切断</TD>
           </TR>
           <TR>
             <TD class="tb-cell1">上斩</TD>
             <TD class="tb-cell2">30</TD>
-            <TD class="tb-cell2">斩</TD>
+            <TD class="tb-cell2">切断</TD>
           </TR>
           <TR>
             <TD class="tb-cell1">上方突刺１</TD>
             <TD class="tb-cell2">24</TD>
-            <TD class="tb-cell2">斩</TD>
+            <TD class="tb-cell2">切断</TD>
           </TR>
           <TR>
             <TD class="tb-cell1">上方突刺２</TD>
             <TD class="tb-cell2">24</TD>
-            <TD class="tb-cell2">斩</TD>
+            <TD class="tb-cell2">切断</TD>
           </TR>
           <TR>
             <TD class="tb-cell1">上方突刺３</TD>
             <TD class="tb-cell2">24</TD>
-            <TD class="tb-cell2">斩</TD>
+            <TD class="tb-cell2">切断</TD>
           </TR>
           <TR>
             <TD class="tb-cell1" rowspan="12">狩猎笛</TD>
             <TD class="tb-cell1">拔刀攻击</TD>
             <TD class="tb-cell2">21</TD>
-            <TD class="tb-cell2">打</TD>
+            <TD class="tb-cell2">打击</TD>
           </TR>
           <TR>
             <TD class="tb-cell1">大地叩击</TD>
             <TD class="tb-cell2">10+28</TD>
-            <TD class="tb-cell2">打</TD>
+            <TD class="tb-cell2">打击</TD>
           </TR>
           <TR>
             <TD class="tb-cell1">左旋敲击</TD>
             <TD class="tb-cell2">21</TD>
-            <TD class="tb-cell2">打</TD>
+            <TD class="tb-cell2">打击</TD>
           </TR>
           <TR>
             <TD class="tb-cell1">右旋敲击</TD>
             <TD class="tb-cell2">21</TD>
-            <TD class="tb-cell2">打</TD>
+            <TD class="tb-cell2">打击</TD>
           </TR>
           <TR>
             <TD class="tb-cell1">柄殴打１</TD>
             <TD class="tb-cell2">9</TD>
-            <TD class="tb-cell2">打</TD>
+            <TD class="tb-cell2">打击</TD>
           </TR>
           <TR>
             <TD class="tb-cell1">柄殴打２</TD>
             <TD class="tb-cell2">9</TD>
-            <TD class="tb-cell2">打</TD>
+            <TD class="tb-cell2">打击</TD>
           </TR>
           <TR>
             <TD class="tb-cell1">柄殴打３</TD>
             <TD class="tb-cell2">9</TD>
-            <TD class="tb-cell2">打</TD>
+            <TD class="tb-cell2">打击</TD>
           </TR>
           <TR>
             <TD class="tb-cell1">开始演奏</TD>
             <TD class="tb-cell2">12</TD>
-            <TD class="tb-cell2">打</TD>
+            <TD class="tb-cell2">打击</TD>
           </TR>
           <TR>
             <TD class="tb-cell1">演奏１</TD>
             <TD class="tb-cell2">23</TD>
-            <TD class="tb-cell2">打</TD>
+            <TD class="tb-cell2">打击</TD>
           </TR>
           <TR>
             <TD class="tb-cell1">演奏２</TD>
             <TD class="tb-cell2">18</TD>
-            <TD class="tb-cell2">打</TD>
+            <TD class="tb-cell2">打击</TD>
           </TR>
           <TR>
             <TD class="tb-cell1">演奏３</TD>
             <TD class="tb-cell2">21</TD>
-            <TD class="tb-cell2">打</TD>
+            <TD class="tb-cell2">打击</TD>
           </TR>
           <TR>
             <TD class="tb-cell1">结束演奏</TD>
             <TD class="tb-cell2">16</TD>
-            <TD class="tb-cell2">打</TD>
+            <TD class="tb-cell2">打击</TD>
           </TR>
         </TBODY>
       </TABLE>
@@ -669,8 +669,8 @@ ShowLinks(0, 99);
             <TD width="430" valign="top" class="tb-cell0">铳枪的炮击与龙击炮的威力参考左表。<BR>
             这部分的威力与武器攻击力无关。<BR>
             <BR>
-            爆炸威力属于“无”类型攻击，不受怪物肉质影响，但火属性部分会根据<BR>
-            肉质（火）减轻伤害。<BR>
+            爆炸威力属于“无”类型攻击，不受怪物肉质影响（可视为肉质100%），<BR>
+            但火属性部分会根据肉质（火）减轻伤害。<BR>
             <BR>
             龙击炮最多有4次判定，全部命中的话按照表中数值的4倍计算威力。<BR>
             <BR>
@@ -781,7 +781,7 @@ ShowLinks(0, 99);
       <TD class="tb-cell0"></TD>
     </TR>
     <TR>
-      <TD id="0006" colspan="3" class="zb-cell0">●　<B>斩击修正值</B></TD>
+      <TD id="0006" colspan="3" class="zb-cell0">●　<B>命中时机修正值</B></TD>
     </TR>
     <TR>
       <TD></TD>
@@ -811,7 +811,7 @@ ShowLinks(0, 99);
         </TBODY>
       </TABLE>
       </TD>
-      <TD class="tb-cell0" valign="top" colspan="2">斩击修正值，表示攻击动作在何时命中怪物造成的威力值的变化。<BR>
+      <TD class="tb-cell0" valign="top" colspan="2">命中时机修正值，表示攻击动作在何时命中怪物造成的威力值的变化。<BR>
       锋利度等级２（黄）及以下的场合，如左表所示，武器在动作的起始与结束时威力较低。<BR>
       保持等级３（绿）及以上的话，无论动作何时命中都按照1.0倍计算，因此不必多虑。<BR>
       （大剑的中段部分命中时，1.0倍的部分按照1.05倍来计算）</TD>
@@ -911,7 +911,7 @@ ShowLinks(0, 99);
       </TABLE>
       </TD>
       <TD class="tb-cell0" valign="top" colspan="2">怪物在特定的状态下受到攻击时，其伤害根据左表进行追加。<BR>
-      该倍率与基本威力相乘计算。<BR>
+      该倍率影响除属性伤害外的其他所有伤害类型。<BR>
       顺便一提，本作中怪物在麻痹状态下所受伤害会固定增加。<BR>
       但麻痹陷阱造成的并非麻痹状态而是麻木状态，因此不会增加伤害。<BR>
       一角龙、角龙由于音爆等效果在地下挣扎的状态不属于落穴状态。<BR>
@@ -924,7 +924,7 @@ ShowLinks(0, 99);
       据此推测睡眠3倍伤害可能限定为“静态伤害来源”，具体情况仍需进一步研究。<BR>
       <BR>
       （2024/03/15 追记）<BR><BR>
-      进一步测试发现麻痹状态倍率可能因怪物而异，例如一角龙在麻痹测试中未检测到状态追加倍率……<BR>
+      进一步测试发现状态追加倍率可能因怪物而异，例如一角龙在麻痹测试中未检测到状态追加倍率……<BR>
       对所有怪物进行状态追加倍率测试可能较为困难……<BR>
       <BR>
       （2024/03/16 追记）<BR><BR>
@@ -958,12 +958,12 @@ ShowLinks(0, 99);
        （计算结果舍去小数点以下部分）</TD>
       <TD class="tb-cell0" valign="top" colspan="2">根据到此为止的计算结果，计算对怪物的粗伤害，<BR>
       要考虑到怪物存在肉质的设定，通常会减轻受到的伤害。<BR>
-      除爆炸等“无”类型攻击伤害外，通常伤害、属性伤害都会受到肉质影响而减轻。<BR>
+      除爆炸等“无”类型攻击伤害外，其他通常伤害、属性伤害都会受到肉质影响。<BR>
       减轻程度因不同的怪物部位而异。详情参考 <A href="./monslist/index.html">怪物数据</A> 中肉质相关项目。<BR>
       <BR>
-      同时具备“斩”与“打”两种类型的攻击，需按照对应肉质分别计算二者的伤害，以较高值为最终的通常伤害。<BR>
+      同时具备“切”与“打”两种类型的攻击，需按照对应肉质分别计算二者的伤害，以较高值为最终的通常伤害。<BR>
       <BR>
-      根据肉质对伤害的减轻计算通常伤害与属性伤害合计得到粗伤害后，要得到最终对怪物的总伤害，<BR>
+      根据肉质对伤害的影响计算通常伤害与属性伤害合计得到粗伤害后，要得到最终对怪物的总伤害，<BR>
       还要考虑怪物在肉质以外还有着全体防御率的设定。<BR>
       全体防御率在单机模式下几乎均为100％（即吸收100%粗伤害，不发生减轻），但在联机模式下以及<BR>
       上位等级时会逐渐降低，进一步提高减轻程度，降低受到的总伤害值。<BR>
