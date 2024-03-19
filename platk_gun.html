@@ -4,7 +4,7 @@
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <META name="GENERATOR" content="IBM WebSphere Studio Homepage Builder Version 9.0.3.0 for Windows">
 <META http-equiv="Content-Style-Type" content="text/css">
-<TITLE>怪物猎人２解析情报　怪物への攻击【ボウガン编】</TITLE>
+<TITLE>怪物猎人２解析情报　对怪物的攻击【枪弩编】</TITLE>
 <LINK rel="stylesheet" href="./table.css" type="text/css">
 <SCRIPT src="./scripts/links.js"></SCRIPT>
 </HEAD>
@@ -25,8 +25,8 @@ ShowLinks(0, 99);
 // -->
 </SCRIPT>
 <HR>
-<H3>怪物への攻击　【ボウガン编】</H3>
-<P class="tb-cell0">ボウガンの攻击による怪物への伤害について示します。</P>
+<H3>对怪物的攻击　【枪弩编】</H3>
+<P class="tb-cell0">表示玩家的枪弩射击对怪物造成的伤害。</P>
 <TABLE border="0" width="894">
   <TBODY>
     <TR>
@@ -42,38 +42,37 @@ ShowLinks(0, 99);
       <TABLE border="1" cellspacing="0" cellpadding="2" class="cnt-tb2">
         <TBODY>
           <TR>
-            <TD class="tb-th2" width="110">武器の種類</TD>
+            <TD class="tb-th2" width="110">武器的种类</TD>
             <TD class="tb-th2" width="70">倍率</TD>
           </TR>
           <TR>
-            <TD class="tb-cell1">大剣/太刀</TD>
+            <TD class="tb-cell1">大剑/太刀</TD>
             <TD class="tb-cell2">4.8</TD>
           </TR>
           <TR>
-            <TD class="tb-cell1">片手剣/双剣</TD>
+            <TD class="tb-cell1">片手剑/双剑</TD>
             <TD class="tb-cell2">1.4</TD>
           </TR>
           <TR>
-            <TD class="tb-cell1">ハンマー/狩猟笛</TD>
+            <TD class="tb-cell1">大锤/狩猎笛</TD>
             <TD class="tb-cell2">5.2</TD>
           </TR>
           <TR>
-            <TD class="tb-cell1">ランス/ガンランス</TD>
+            <TD class="tb-cell1">长枪/铳枪</TD>
             <TD class="tb-cell2">2.3</TD>
           </TR>
           <TR>
-            <TD class="tb-cell1">ボウガン/弓</TD>
+            <TD class="tb-cell1">枪弩/弓</TD>
             <TD class="tb-cell2">1.2</TD>
           </TR>
         </TBODY>
       </TABLE>
       </TD>
-      <TD class="tb-cell0" valign="top" colspan="2">攻击による怪物への伤害計算の元となるのは、ステータスに表示される攻击力ではなく、<BR>
-      攻击力を一定の倍率で割った <B>武器倍率</B> というものが元になります。<BR>
-      各武器の倍率は左表のとおりです。ボウガンの場合は 1.2 で割った値となります。<BR>
+      <TD class="tb-cell0" valign="top" colspan="2">对怪物的攻击造成的伤害计算不是依据状态面板显示的攻击力，而是将<B>攻击力</B>除以一定的倍率后<BR>获得的<B>武器倍率</B>为基准。<BR>
+      各武器的倍率请参考左表。对枪弩而言是攻击力除以 1.2 。<BR>
       <BR>
-      食事效果やアイテム使用等による攻击力アップは、全てこの武器倍率に一定値が加算されます。<BR>
-      従って、ステータス上では 1.2倍のアップ量となります。</TD>
+      内部伤害计算全部以武器倍率为基准，面板攻击力的数值为武器倍率×倍率后<b>取整</b>。<BR>
+      因此，枪弩面板攻击力的增加量为武器倍率增加量的 1.2倍。</TD>
     </TR>
     <TR>
       <TD height="30"></TD>
@@ -81,7 +80,7 @@ ShowLinks(0, 99);
       <TD class="tb-cell0"></TD>
     </TR>
     <TR>
-      <TD id="0002" colspan="3" class="zb-cell0">●　<B>弾の威力</B></TD>
+      <TD id="0002" colspan="3" class="zb-cell0">●　<B>弹种威力</B></TD>
     </TR>
     <TR>
       <TD></TD>
@@ -90,21 +89,20 @@ ShowLinks(0, 99);
     </TR>
     <TR>
       <TD></TD>
-      <TD colspan="2" class="tb-cell0" valign="top">各弾の威力は、下表のとおりです。<BR>
-      武器倍率に、弾の威力を％として乗算したものが基本威力となります。<BR>
-      例えば、攻击力 108 の榴弹弩でLV2通常弾を撃った場合、90×12％＝10.8 が基本威力となります。<BR>
+      <TD colspan="2" class="tb-cell0" valign="top">各弹种威力请参考下表。<BR>
+      <B>武器倍率</B>与各弹种的<B>威力（以%计算）</B>相乘，就得到了<B>基本威力</B>。<BR>
+      例如，攻击力 108 的榴弹弩发射LV2通常弹时，90×12％＝10.8 即为基本威力。<BR>
       <BR>
-      徹甲榴弾と拡散弾の （） 内の値は着弾後に起こる爆発の威力で、これは、怪物の肉质によって軽減は<BR>
-      されません。弾そのものの基本威力はボウガンの武器倍率に依存しますが、その後の爆発の威力は<BR>
-      ボウガンの武器倍率とは関係なく、 （） 内の値で示す一定の基本威力となります。<BR>
-      また、爆発には火属性がありますが、これは怪物の肉质によって軽減されます。<BR>
+      彻甲榴弹与扩散弹 （） 内的值为着弹后爆炸的威力，属于“无”类型攻击，这部分不受怪物肉质影响而减轻。<BR>
+      子弹本身的基本威力与枪弩的武器倍率相关，但之后的爆炸威力与武器倍率无关，（） 内的值为固定威力。<BR>
+      此外，爆炸会产生额外的火属性伤害，这部分会受到肉质（火）的影响而减轻。<BR>
       <BR>
-      状態異常属性弾（毒弾・麻痹弾・睡眠弾）の基本威力も、怪物の肉质による軽減はありません。<BR>
-      （睡眠弾は弾の威力が０なので、基本威力も０となります）<BR>
+      状态异常属性弹（毒弹・麻痹弹・睡眠弹）属于“无”类型攻击，其基本威力不受怪物肉质影响而减轻。<BR>
+      （睡眠弹的弹威力为０，因此基本威力也为０）<BR><BR>
+      其他所有弹种的基本威力均属于“弹”类型攻击，会受到肉质（弹）影响而降低伤害。<BR>
       <BR>
-      ライトボウガンには速射に対応したものがあり、速射対応弾を撃った場合、弾１個で複数発発射するので<BR>
-      経済的ですが、速射対応弾は基本威力・属性値とも１発当たりの威力は半分に落ちてしまいます。<BR>
-      ただし、徹甲榴弾の爆発威力と火属性値は落ちることはありません。</TD>
+      部分轻型枪弩带有速射功能，装填对应的速射弹种时，１发弹药能够进行多次发射，虽然看似经济节约，<BR>
+      但速射对应弹种的基本威力与属性值都是单发的一半。不过，彻甲榴弹的爆炸威力与火属性不会下降。</TD>
     </TR>
     <TR>
       <TD width="5"></TD>
@@ -116,17 +114,19 @@ ShowLinks(0, 99);
       <TABLE border="1" cellspacing="0" cellpadding="2" class="cnt-tb2">
         <TBODY>
           <TR>
-            <TD class="tb-th2" width="100">弾名</TD>
-            <TD class="tb-th2" width="110">威力</TD>
-            <TD class="tb-th2" width="52">ヒット数</TD>
+            <TD class="tb-th2" width="100">弹种</TD>
+            <TD class="tb-th2" width="110">威力（%）</TD>
+            <TD class="tb-th2" width="60">类型</TD>
+            <TD class="tb-th2" width="52">打击数</TD>
             <TD class="tb-th2" width="52">所持数</TD>
-            <TD class="tb-th2" width="75">リロード値</TD>
-            <TD class="tb-th2" width="75">反动値</TD>
+            <TD class="tb-th2" width="75">装填值</TD>
+            <TD class="tb-th2" width="75">反动值</TD>
             <TD class="tb-th2" width="180">属性</TD>
           </TR>
           <TR>
             <TD class="tb-th5">LV1 通常弹</TD>
             <TD class="tb-cell2">6</TD>
+            <TD class="tb-cell2">弹</TD>
             <TD class="tb-cell2">1</TD>
             <TD class="tb-cell2">∞</TD>
             <TD class="tb-cell2">5</TD>
@@ -136,6 +136,7 @@ ShowLinks(0, 99);
           <TR>
             <TD class="tb-th5">LV2 通常弹</TD>
             <TD class="tb-cell2">12</TD>
+            <TD class="tb-cell2">弹</TD>
             <TD class="tb-cell2">1</TD>
             <TD class="tb-cell2">99</TD>
             <TD class="tb-cell2">6</TD>
@@ -145,7 +146,8 @@ ShowLinks(0, 99);
           <TR>
             <TD class="tb-th5">LV3 通常弹</TD>
             <TD class="tb-cell2">10</TD>
-            <TD class="tb-cell2">跳弾</TD>
+            <TD class="tb-cell2">弹</TD>
+            <TD class="tb-cell2">跳弹</TD>
             <TD class="tb-cell2">99</TD>
             <TD class="tb-cell2">7</TD>
             <TD class="tb-cell2">10</TD>
@@ -154,6 +156,7 @@ ShowLinks(0, 99);
           <TR>
             <TD class="tb-th5">LV1 贯通弹</TD>
             <TD class="tb-cell2">10</TD>
+            <TD class="tb-cell2">弹</TD>
             <TD class="tb-cell2">3</TD>
             <TD class="tb-cell2">60</TD>
             <TD class="tb-cell2">6</TD>
@@ -163,6 +166,7 @@ ShowLinks(0, 99);
           <TR>
             <TD class="tb-th5">LV2 贯通弹</TD>
             <TD class="tb-cell2">9</TD>
+            <TD class="tb-cell2">弹</TD>
             <TD class="tb-cell2">4</TD>
             <TD class="tb-cell2">50</TD>
             <TD class="tb-cell2">7</TD>
@@ -172,6 +176,7 @@ ShowLinks(0, 99);
           <TR>
             <TD class="tb-th5">LV3 贯通弹</TD>
             <TD class="tb-cell2">7</TD>
+            <TD class="tb-cell2">弹</TD>
             <TD class="tb-cell2">6</TD>
             <TD class="tb-cell2">40</TD>
             <TD class="tb-cell2">8</TD>
@@ -181,6 +186,7 @@ ShowLinks(0, 99);
           <TR>
             <TD class="tb-th5">LV1 散弹</TD>
             <TD class="tb-cell2">5</TD>
+            <TD class="tb-cell2">弹</TD>
             <TD class="tb-cell2">3</TD>
             <TD class="tb-cell2">60</TD>
             <TD class="tb-cell2">5</TD>
@@ -190,6 +196,7 @@ ShowLinks(0, 99);
           <TR>
             <TD class="tb-th5">LV2 散弹</TD>
             <TD class="tb-cell2">5</TD>
+            <TD class="tb-cell2">弹</TD>
             <TD class="tb-cell2">4</TD>
             <TD class="tb-cell2">60</TD>
             <TD class="tb-cell2">6</TD>
@@ -199,6 +206,7 @@ ShowLinks(0, 99);
           <TR>
             <TD class="tb-th5">LV3 散弹</TD>
             <TD class="tb-cell2">5</TD>
+            <TD class="tb-cell2">弹</TD>
             <TD class="tb-cell2">5</TD>
             <TD class="tb-cell2">60</TD>
             <TD class="tb-cell2">7</TD>
@@ -208,60 +216,67 @@ ShowLinks(0, 99);
           <TR>
             <TD class="tb-th5">LV1 彻甲榴弹</TD>
             <TD class="tb-cell2">3 （20）</TD>
+            <TD class="tb-cell2">弹（无）</TD>
             <TD class="tb-cell2">1</TD>
             <TD class="tb-cell2">9</TD>
             <TD class="tb-cell2">7</TD>
             <TD class="tb-cell2">11</TD>
-            <TD class="tb-cell2">火属性：30（爆発）</TD>
+            <TD class="tb-cell2">火属性：30（爆炸时）</TD>
           </TR>
           <TR>
             <TD class="tb-th5">LV2 彻甲榴弹</TD>
             <TD class="tb-cell2">3 （30）</TD>
+            <TD class="tb-cell2">弹（无）</TD>
             <TD class="tb-cell2">1</TD>
             <TD class="tb-cell2">9</TD>
             <TD class="tb-cell2">8</TD>
             <TD class="tb-cell2">12</TD>
-            <TD class="tb-cell2">火属性：45（爆発）</TD>
+            <TD class="tb-cell2">火属性：45（爆炸时）</TD>
           </TR>
           <TR>
             <TD class="tb-th5">LV3 彻甲榴弹</TD>
             <TD class="tb-cell2">3 （40）</TD>
+            <TD class="tb-cell2">弹（无）</TD>
             <TD class="tb-cell2">1</TD>
             <TD class="tb-cell2">9</TD>
             <TD class="tb-cell2">9</TD>
             <TD class="tb-cell2">13</TD>
-            <TD class="tb-cell2">火属性：60（爆発）</TD>
+            <TD class="tb-cell2">火属性：60（爆炸时）</TD>
           </TR>
           <TR>
             <TD class="tb-th5">LV1 扩散弹</TD>
             <TD class="tb-cell2">6 （32×3）</TD>
+            <TD class="tb-cell2">弹（无）</TD>
             <TD class="tb-cell2">1</TD>
             <TD class="tb-cell2">3</TD>
             <TD class="tb-cell2">8</TD>
             <TD class="tb-cell2">13</TD>
-            <TD class="tb-cell2">火属性：2×3（爆発）</TD>
+            <TD class="tb-cell2">火属性：2×3（爆炸时）</TD>
           </TR>
           <TR>
             <TD class="tb-th5">LV2 扩散弹</TD>
             <TD class="tb-cell2">6 （32×4）</TD>
+            <TD class="tb-cell2">弹（无）</TD>
             <TD class="tb-cell2">1</TD>
             <TD class="tb-cell2">3</TD>
             <TD class="tb-cell2">9</TD>
             <TD class="tb-cell2">14</TD>
-            <TD class="tb-cell2">火属性：2×4（爆発）</TD>
+            <TD class="tb-cell2">火属性：2×4（爆炸时）</TD>
           </TR>
           <TR>
             <TD class="tb-th5">LV3 扩散弹</TD>
             <TD class="tb-cell2">6 （32×5）</TD>
+            <TD class="tb-cell2">弹（无）</TD>
             <TD class="tb-cell2">1</TD>
             <TD class="tb-cell2">3</TD>
             <TD class="tb-cell2">10</TD>
             <TD class="tb-cell2">14</TD>
-            <TD class="tb-cell2">火属性：2×5（爆発）</TD>
+            <TD class="tb-cell2">火属性：2×5（爆炸时）</TD>
           </TR>
           <TR>
             <TD class="tb-th5">火炎弹</TD>
             <TD class="tb-cell2">1</TD>
+            <TD class="tb-cell2">弹</TD>
             <TD class="tb-cell2">1</TD>
             <TD class="tb-cell2">60</TD>
             <TD class="tb-cell2">6</TD>
@@ -271,6 +286,7 @@ ShowLinks(0, 99);
           <TR>
             <TD class="tb-th5">水冷弹</TD>
             <TD class="tb-cell2">1</TD>
+            <TD class="tb-cell2">弹</TD>
             <TD class="tb-cell2">3</TD>
             <TD class="tb-cell2">60</TD>
             <TD class="tb-cell2">6</TD>
@@ -280,6 +296,7 @@ ShowLinks(0, 99);
           <TR>
             <TD class="tb-th5">电击弹</TD>
             <TD class="tb-cell2">1</TD>
+            <TD class="tb-cell2">弹</TD>
             <TD class="tb-cell2">3</TD>
             <TD class="tb-cell2">60</TD>
             <TD class="tb-cell2">6</TD>
@@ -289,6 +306,7 @@ ShowLinks(0, 99);
           <TR>
             <TD class="tb-th5">冰结弹</TD>
             <TD class="tb-cell2">1</TD>
+            <TD class="tb-cell2">弹</TD>
             <TD class="tb-cell2">3</TD>
             <TD class="tb-cell2">60</TD>
             <TD class="tb-cell2">6</TD>
@@ -298,6 +316,7 @@ ShowLinks(0, 99);
           <TR>
             <TD class="tb-th5">灭龍弹</TD>
             <TD class="tb-cell2">1</TD>
+            <TD class="tb-cell2">弹</TD>
             <TD class="tb-cell2">6</TD>
             <TD class="tb-cell2">20</TD>
             <TD class="tb-cell2">9</TD>
@@ -307,6 +326,7 @@ ShowLinks(0, 99);
           <TR>
             <TD class="tb-th5">LV1 回复弹</TD>
             <TD class="tb-cell2">0</TD>
+            <TD class="tb-cell2">弹</TD>
             <TD class="tb-cell2">-</TD>
             <TD class="tb-cell2">12</TD>
             <TD class="tb-cell2">7</TD>
@@ -316,6 +336,7 @@ ShowLinks(0, 99);
           <TR>
             <TD class="tb-th5">LV2 回复弹</TD>
             <TD class="tb-cell2">0</TD>
+            <TD class="tb-cell2">弹</TD>
             <TD class="tb-cell2">-</TD>
             <TD class="tb-cell2">12</TD>
             <TD class="tb-cell2">9</TD>
@@ -325,69 +346,77 @@ ShowLinks(0, 99);
           <TR>
             <TD class="tb-th5">LV1 毒弹</TD>
             <TD class="tb-cell2">10</TD>
+            <TD class="tb-cell2">无</TD>
             <TD class="tb-cell2">1</TD>
             <TD class="tb-cell2">12</TD>
             <TD class="tb-cell2">7</TD>
             <TD class="tb-cell2">11</TD>
-            <TD class="tb-cell2">毒蓄積量：25</TD>
+            <TD class="tb-cell2">毒蓄积量：25</TD>
           </TR>
           <TR>
             <TD class="tb-th5">LV2 毒弹</TD>
             <TD class="tb-cell2">15</TD>
+            <TD class="tb-cell2">无</TD>
             <TD class="tb-cell2">1</TD>
             <TD class="tb-cell2">8</TD>
             <TD class="tb-cell2">9</TD>
             <TD class="tb-cell2">13</TD>
-            <TD class="tb-cell2">毒蓄積量：50</TD>
+            <TD class="tb-cell2">毒蓄积量：50</TD>
           </TR>
           <TR>
             <TD class="tb-th5">LV1 麻痹弹</TD>
             <TD class="tb-cell2">10</TD>
+            <TD class="tb-cell2">无</TD>
             <TD class="tb-cell2">1</TD>
             <TD class="tb-cell2">12</TD>
             <TD class="tb-cell2">7</TD>
             <TD class="tb-cell2">11</TD>
-            <TD class="tb-cell2">麻痹蓄積量：25</TD>
+            <TD class="tb-cell2">麻痹蓄积量：25</TD>
           </TR>
           <TR>
             <TD class="tb-th5">LV2 麻痹弹</TD>
             <TD class="tb-cell2">15</TD>
+            <TD class="tb-cell2">无</TD>
             <TD class="tb-cell2">1</TD>
             <TD class="tb-cell2">8</TD>
             <TD class="tb-cell2">9</TD>
             <TD class="tb-cell2">13</TD>
-            <TD class="tb-cell2">麻痹蓄積量：50</TD>
+            <TD class="tb-cell2">麻痹蓄积量：50</TD>
           </TR>
           <TR>
             <TD class="tb-th5">LV1 睡眠弹</TD>
             <TD class="tb-cell2">0</TD>
+            <TD class="tb-cell2">无</TD>
             <TD class="tb-cell2">1</TD>
             <TD class="tb-cell2">12</TD>
             <TD class="tb-cell2">7</TD>
             <TD class="tb-cell2">11</TD>
-            <TD class="tb-cell2">睡眠蓄積量：25</TD>
+            <TD class="tb-cell2">睡眠蓄积量：25</TD>
           </TR>
           <TR>
             <TD class="tb-th5">LV2 睡眠弹</TD>
             <TD class="tb-cell2">0</TD>
+            <TD class="tb-cell2">无</TD>
             <TD class="tb-cell2">1</TD>
             <TD class="tb-cell2">8</TD>
             <TD class="tb-cell2">9</TD>
             <TD class="tb-cell2">13</TD>
-            <TD class="tb-cell2">睡眠蓄積量：50</TD>
+            <TD class="tb-cell2">睡眠蓄积量：50</TD>
           </TR>
           <TR>
             <TD class="tb-th5">捕获用麻醉弹</TD>
             <TD class="tb-cell2">0</TD>
+            <TD class="tb-cell2">弹</TD>
             <TD class="tb-cell2">1</TD>
             <TD class="tb-cell2">8</TD>
             <TD class="tb-cell2">8</TD>
             <TD class="tb-cell2">11</TD>
-            <TD class="tb-cell2">麻酔蓄積量：80</TD>
+            <TD class="tb-cell2">麻醉蓄积量：80</TD>
           </TR>
           <TR>
             <TD class="tb-th5">染色弹</TD>
             <TD class="tb-cell2">0</TD>
+            <TD class="tb-cell2">弹</TD>
             <TD class="tb-cell2">1</TD>
             <TD class="tb-cell2">99</TD>
             <TD class="tb-cell2">7</TD>
@@ -397,6 +426,7 @@ ShowLinks(0, 99);
           <TR>
             <TD class="tb-th5">鬼人弹</TD>
             <TD class="tb-cell2">0</TD>
+            <TD class="tb-cell2">弹</TD>
             <TD class="tb-cell2">-</TD>
             <TD class="tb-cell2">5</TD>
             <TD class="tb-cell2">7</TD>
@@ -406,6 +436,7 @@ ShowLinks(0, 99);
           <TR>
             <TD class="tb-th5">硬化弹</TD>
             <TD class="tb-cell2">0</TD>
+            <TD class="tb-cell2">弹</TD>
             <TD class="tb-cell2">-</TD>
             <TD class="tb-cell2">5</TD>
             <TD class="tb-cell2">7</TD>
@@ -422,7 +453,7 @@ ShowLinks(0, 99);
       <TD class="tb-cell0"></TD>
     </TR>
     <TR>
-      <TD id="0003" colspan="3" class="zb-cell0">●　<B>弾のリロード速度</B></TD>
+      <TD id="0003" colspan="3" class="zb-cell0">●　<B>子弹装填速度</B></TD>
     </TR>
     <TR>
       <TD></TD>
@@ -434,12 +465,12 @@ ShowLinks(0, 99);
       <TABLE border="1" cellspacing="0" cellpadding="2" class="cnt-tb2">
         <TBODY>
           <TR>
-            <TD class="tb-th2" width="110">リロード速度値</TD>
-            <TD class="tb-th2" width="100">モーション</TD>
+            <TD class="tb-th2" width="110">装填速度值</TD>
+            <TD class="tb-th2" width="100">动作</TD>
           </TR>
           <TR>
             <TD class="tb-cell2">４ 以下</TD>
-            <TD class="tb-cell2">速い （62）</TD>
+            <TD class="tb-cell2">快 （62）</TD>
           </TR>
           <TR>
             <TD class="tb-cell2">５ 〜 ７</TD>
@@ -447,16 +478,16 @@ ShowLinks(0, 99);
           </TR>
           <TR>
             <TD class="tb-cell2">８ 以上</TD>
-            <TD class="tb-cell2">遅い （103）</TD>
+            <TD class="tb-cell2">慢 （103）</TD>
           </TR>
         </TBODY>
       </TABLE>
       </TD>
-      <TD class="tb-cell0" valign="top" colspan="2">ボウガンに弾をリロードする速度は、次の計算式の結果によって、左表で示すように３段階に分かれます。<BR>
+      <TD class="tb-cell0" valign="top" colspan="2">枪弩的子弹装填速度，按以下的公式计算结果，根据左表分为３个等级。<BR>
       <BR>
-      　　　弾のリロード値 − （ボウガンのリロード修正値 ＋ 装填速度スキルによる修正値） ＝ リロード速度値<BR>
+      　　　子弹装填值 − （枪弩的再装填修正值 ＋ 装填速度技能修正值） ＝ 装填速度值<BR>
       <BR>
-      モーション欄の （） の中の値は、リロードに要するフレーム数です。（30フレーム＝１秒）</TD>
+      动作一栏中 （） 内表示的数值为装填所需的具体帧数。（30帧＝１秒）</TD>
     </TR>
     <TR>
       <TD height="15"></TD>
@@ -464,12 +495,12 @@ ShowLinks(0, 99);
       <TD class="tb-cell0"></TD>
     </TR>
     <TR>
-      <TD valign="top" class="tb-cell0"><B>ボウガンのリロード修正値</B>
+      <TD valign="top" class="tb-cell0"><B>枪弩的再装填修正值</B>
       <TABLE border="1" cellspacing="0" cellpadding="2" class="cnt-tb2">
         <TBODY>
           <TR>
             <TD class="tb-th2" width="120">再装填</TD>
-            <TD class="tb-th2" width="90">修正値</TD>
+            <TD class="tb-th2" width="90">修正值</TD>
           </TR>
           <TR>
             <TD class="tb-cell2">慢</TD>
@@ -494,12 +525,12 @@ ShowLinks(0, 99);
         </TBODY>
       </TABLE>
       <BR>
-      <B>装填速度スキルによる修正値</B>
+      <B>装填速度技能修正值</B>
       <TABLE border="1" cellspacing="0" cellpadding="2" class="cnt-tb2">
         <TBODY>
           <TR>
-            <TD class="tb-th2" width="120">スキル</TD>
-            <TD class="tb-th2" width="90">修正値</TD>
+            <TD class="tb-th2" width="120">技能</TD>
+            <TD class="tb-th2" width="90">修正值</TD>
           </TR>
           <TR>
             <TD class="tb-cell2">装填速度-2</TD>
@@ -510,7 +541,7 @@ ShowLinks(0, 99);
             <TD class="tb-cell2">−１</TD>
           </TR>
           <TR>
-            <TD class="tb-cell2">スキルなし</TD>
+            <TD class="tb-cell2">无技能</TD>
             <TD class="tb-cell2">０</TD>
           </TR>
           <TR>
@@ -530,29 +561,29 @@ ShowLinks(0, 99);
       <BR>
       <BR>
       <B>例：</B><BR>
-      超怪鸟炮 （リロード：遅い） で<BR>
-      LV2拡散弾をリロードする場合<BR>
-      　　装填速度スキルなし<BR>
-      　　　　9−（0＋0）＝9　⇒　遅い<BR>
-      　　装填速度+2スキルあり<BR>
+      使用超怪鸟炮 （再装填：慢） <BR>
+      进行LV2扩散弹装填，<BR>
+      　　无装填速度技能时<BR>
+      　　　　9−（0＋0）＝9　⇒　慢<BR>
+      　　有装填速度+2技能时<BR>
       　　　　9−（0＋2）＝7　⇒　普通<BR>
       <BR>
       <BR>
-      缭乱之对弩 （リロード：やや速い） で<BR>
-      LV2拡散弾をリロードする場合<BR>
-      　　装填速度スキルなし<BR>
+      使用缭乱之对弩 （再装填：稍快） <BR>
+      进行LV2扩散弹装填，<BR>
+      　　无装填速度技能时<BR>
       　　　　9−（3＋0）＝6　⇒　普通<BR>
-      　　装填速度+2スキルあり<BR>
-      　　　　9−（3＋2）＝4　⇒　速い<BR>
+      　　有装填速度+2技能时<BR>
+      　　　　9−（3＋2）＝4　⇒　快<BR>
       </TD>
-      <TD class="tb-cell0" valign="top" colspan="2"><B>リロード速度一覧</B><BR>
+      <TD class="tb-cell0" valign="top" colspan="2"><B>装填速度一览</B><BR>
       <TABLE border="1" cellspacing="0" cellpadding="2" class="cnt-tb2">
         <TBODY>
           <TR>
-            <TD class="tb-th2" width="100" rowspan="2">弾名</TD>
-            <TD class="tb-th2" width="65" rowspan="2">弾の<BR>
-            リロード値</TD>
-            <TD class="tb-th2" colspan="11">ボウガンのリロード修正値＋装填速度スキルによる修正値</TD>
+            <TD class="tb-th2" width="100" rowspan="2">弹种</TD>
+            <TD class="tb-th2" width="65" rowspan="2">子弹的<BR>
+            装填值</TD>
+            <TD class="tb-th2" colspan="11">枪弩的再装填修正值＋装填速度技能修正值</TD>
           </TR>
           <TR>
             <TD class="tb-th2" width="35">-3</TD>
@@ -1057,7 +1088,7 @@ ShowLinks(0, 99);
       <TD class="tb-cell0"></TD>
     </TR>
     <TR>
-      <TD id="0004" colspan="3" class="zb-cell0">●　<B>発射時の反动</B></TD>
+      <TD id="0004" colspan="3" class="zb-cell0">●　<B>发射时的反动</B></TD>
     </TR>
     <TR>
       <TD></TD>
@@ -1069,8 +1100,8 @@ ShowLinks(0, 99);
       <TABLE border="1" cellspacing="0" cellpadding="2" class="cnt-tb2">
         <TBODY>
           <TR>
-            <TD class="tb-th2" width="110">発射反动値</TD>
-            <TD class="tb-th2" width="100">モーション</TD>
+            <TD class="tb-th2" width="110">发射反动值</TD>
+            <TD class="tb-th2" width="100">动作</TD>
           </TR>
           <TR>
             <TD class="tb-cell2">０ 〜 ８</TD>
@@ -1087,14 +1118,14 @@ ShowLinks(0, 99);
         </TBODY>
       </TABLE>
       </TD>
-      <TD class="tb-cell0" valign="top" colspan="2">弾を発射した際に生ずる反动は、次の計算式の結果によって、左表で示すように３段階に分かれます。<BR>
+      <TD class="tb-cell0" valign="top" colspan="2">子弹发射时的反动效果，按以下的公式计算结果，根据左表分为３个等级。<BR>
       <BR>
-      　　　弾の反动値 − （ボウガンの反动修正値 ＋ 反动軽減スキルによる修正値） ＝ 発射反动値<BR>
+      　　　子弹反动值 − （枪弩的反动修正值 ＋ 反动轻减技能修正值） ＝ 发射反动值<BR>
       <BR>
-      モーション欄の （） の中の値は、反动が収まるまでに要するフレーム数です。（30フレーム＝１秒）<BR>
+      动作一栏中 （） 内表示的数值为消除反动所需的具体帧数。（30帧＝１秒）<BR>
       <BR>
-      なお、连射スキルが発動している場合、２つの修正値は０となり、弾の反动値がそのまま発射反动値となります。<BR>
-      従って、ほとんどの弾はスキルがない場合より反动が大きくなってしまいます。</TD>
+      另外，在发动连射技能的情况下，公式中的两个修正值全部变为０，子弹反动值即为发射反动值。<BR>
+      因此，大多数弹种的反动都会变得比无技能时更大。</TD>
     </TR>
     <TR>
       <TD height="15"></TD>
@@ -1102,12 +1133,12 @@ ShowLinks(0, 99);
       <TD class="tb-cell0"></TD>
     </TR>
     <TR>
-      <TD valign="top" class="tb-cell0"><B>ボウガンの反动修正値</B>
+      <TD valign="top" class="tb-cell0"><B>枪弩的反动修正值</B>
       <TABLE border="1" cellspacing="0" cellpadding="2" class="cnt-tb2">
         <TBODY>
           <TR>
             <TD class="tb-th2" width="120">反动</TD>
-            <TD class="tb-th2" width="90">修正値</TD>
+            <TD class="tb-th2" width="90">修正值</TD>
           </TR>
           <TR>
             <TD class="tb-cell2">中</TD>
@@ -1120,15 +1151,15 @@ ShowLinks(0, 99);
         </TBODY>
       </TABLE>
       <BR>
-      <B>反动軽減スキルによる修正値</B>
+      <B>反动轻减技能修正值</B>
       <TABLE border="1" cellspacing="0" cellpadding="2" class="cnt-tb2">
         <TBODY>
           <TR>
-            <TD class="tb-th2" width="120">スキル</TD>
-            <TD class="tb-th2" width="90">修正値</TD>
+            <TD class="tb-th2" width="120">技能</TD>
+            <TD class="tb-th2" width="90">修正值</TD>
           </TR>
           <TR>
-            <TD class="tb-cell2">スキルなし</TD>
+            <TD class="tb-cell2">无技能</TD>
             <TD class="tb-cell2">０</TD>
           </TR>
           <TR>
@@ -1144,29 +1175,29 @@ ShowLinks(0, 99);
       <BR>
       <BR>
       <B>例：</B><BR>
-      超怪鸟炮 （反动：中） で<BR>
-      LV2毒弾を発射した場合<BR>
-      　　反动軽減スキルなし<BR>
+      使用超怪鸟炮 （反动：中） <BR>
+      发射LV2毒弹，<BR>
+      　　无反动轻减技能时<BR>
       　　　　13−（2＋0）＝11　⇒　反动大<BR>
-      　　反动轻减+1スキルあり<BR>
+      　　有反动轻减+1技能时<BR>
       　　　　13−（2＋2）＝ 9　⇒　反动中<BR>
       <BR>
       <BR>
-      老山龍炮・霸 （反动：やや小） で<BR>
-      LV2毒弾を発射した場合<BR>
-      　　反动軽減スキルなし<BR>
+      使用老山龍炮・霸 （反动：稍小） <BR>
+      发射LV2毒弹，<BR>
+      　　无反动轻减技能时<BR>
       　　　　13−（3＋0）＝10　⇒　反动中<BR>
-      　　反动轻减+1スキルあり<BR>
+      　　有反动轻减+1技能时<BR>
       　　　　13−（3＋2）＝ 8　⇒　反动小<BR>
       </TD>
-      <TD class="tb-cell0" valign="top" colspan="2"><B>反动一覧</B><BR>
+      <TD class="tb-cell0" valign="top" colspan="2"><B>反动一览</B><BR>
       <TABLE border="1" cellspacing="0" cellpadding="2" class="cnt-tb2">
         <TBODY>
           <TR>
-            <TD class="tb-th2" width="100" rowspan="2">弾名</TD>
-            <TD class="tb-th2" width="65" rowspan="2">弾の<BR>
-            反动値</TD>
-            <TD class="tb-th2" colspan="8">ボウガンの反动修正値＋反动軽減スキルによる修正値</TD>
+            <TD class="tb-th2" width="100" rowspan="2">弹种</TD>
+            <TD class="tb-th2" width="65" rowspan="2">子弹<BR>
+            反动值</TD>
+            <TD class="tb-th2" colspan="8">枪弩的反动修正值＋反动轻减技能修正值</TD>
           </TR>
           <TR>
             <TD class="tb-th2" width="50">0</TD>
@@ -1572,7 +1603,7 @@ ShowLinks(0, 99);
       <TD class="tb-cell0"></TD>
     </TR>
     <TR>
-      <TD id="0005" colspan="3" class="zb-cell0">●　<B>飛距離による基本威力修正</B></TD>
+      <TD id="0005" colspan="3" class="zb-cell0">●　<B>飞行距离的基本威力修正</B></TD>
     </TR>
     <TR>
       <TD></TD>
@@ -1581,22 +1612,21 @@ ShowLinks(0, 99);
     </TR>
     <TR>
       <TD valign="top" class="tb-cell0" height="25"></TD>
-      <TD class="tb-cell0" valign="top" colspan="2">通常弾・貫通弾・徹甲榴弾の３種は、発射後の飛距離に伴って基本威力が変化します。<BR>
+      <TD class="tb-cell0" valign="top" colspan="2">通常弹・贯通弹・彻甲榴弹３种子弹，基本威力会随着发射后的飞行距离而变化。<BR>
       <BR>
-      　　通常弾は、発射後 1.5倍 ⇒ 1.0倍　⇒ 0.8倍 ⇒ 0.5倍　のように変化<BR>
-      　　貫通弾と徹甲榴弾は、発射後 1.0倍 ⇒ 1.5倍 ⇒ 1.0倍 ⇒ 0.8倍 ⇒ 0.5倍　のように変化<BR>
+      　　通常弹按照发射后 1.5倍 ⇒ 1.0倍　⇒ 0.8倍 ⇒ 0.5倍　的规律变化<BR>
+      　　贯通弹与彻甲榴弹按照发射后 1.0倍 ⇒ 1.5倍 ⇒ 1.0倍 ⇒ 0.8倍 ⇒ 0.5倍　的规律变化<BR>
       <BR>
-      下のグラフは、时间経過に伴う威力の変化を表したものです。ボウガンや加工レベル等によって<BR>
-      弾の速度には違いがあるので、下のグラフは弾の速度によって補正がかけられます。<BR>
-      弾の速度が早いほどグラフが横方向に圧縮され、遅いほど伸張されるといった要領です。<BR>
-      ちなみに、ヘビィボウガンはライトボウガンより弾の速度が早いものが多いです。<BR>
+      下图表示威力随时间经过的变化。由于子弹射速因枪弩或加工等级而异，请参考下图对具体情况进行补偿调整。<BR>
+      简要说就是射速较快时按图中横方向进行压缩，射速较慢时按图中横方向进行伸张。<BR>
+      顺便一提，大多数重型枪弩的射速要比轻型枪弩更快。<BR>
       <BR>
-      補正によって、时间的に見た場合は、弾の速度が早いほど高威力を発揮する时间帯が短くなりますが、<BR>
-      距離的に見た場合は、どのボウガンやどの加工レベルでも、高威力を発揮する距離はほぼ等しくなります。<BR>
-      したがって、その距離さえ把握しておけば、どのボウガンでも同じ距離で高威力を発揮させることができます。<BR>
+      补偿的具体情况，从时间的角度看，射速越快其发挥高威力的时间就越短，但从距离的角度看，无论是怎样的<BR>
+      枪弩或加工等级，发挥高威力的距离几乎是相等的。<BR>
+      因此，只要能够把握好距离，无论什么枪弩都能在相同的距离上发挥高威力。<BR>
       <BR>
-      上記３種の弾以外は、飛距離に伴って基本威力が変化することはありません。<BR>
-      また、各種属性弾も、飛距離に伴って属性値が変化することはありません。<BR>
+      上述３种子弹以外的其他弹种，其基本威力不随飞行距离而变化。<BR>
+      此外，各种属性弹的属性值也不随飞行距离而变化。<BR>
       </TD>
     </TR>
     <TR>
@@ -1613,7 +1643,7 @@ ShowLinks(0, 99);
       <TD class="tb-cell0"></TD>
     </TR>
     <TR>
-      <TD id="0006" colspan="3" class="zb-cell0">●　<B>スキルによる基本威力・属性値修正</B></TD>
+      <TD id="0006" colspan="3" class="zb-cell0">●　<B>技能的基本威力・属性值修正</B></TD>
     </TR>
     <TR>
       <TD></TD>
@@ -1625,33 +1655,33 @@ ShowLinks(0, 99);
       <TABLE border="1" cellspacing="0" cellpadding="2" class="cnt-tb2">
         <TBODY>
           <TR>
-            <TD class="tb-th2" width="110">スキル</TD>
+            <TD class="tb-th2" width="110">技能</TD>
             <TD class="tb-th2" width="115">效果</TD>
           </TR>
           <TR>
             <TD class="tb-cell2">通常弹攻击力UP</TD>
-            <TD class="tb-cell2">通常弾の<BR>
-            威力が 1.1倍</TD>
+            <TD class="tb-cell2">通常弹<BR>
+            威力 × 1.1</TD>
           </TR>
           <TR>
             <TD class="tb-cell2">贯通弹攻击力UP</TD>
-            <TD class="tb-cell2">貫通弾の<BR>
-            威力が 1.1倍</TD>
+            <TD class="tb-cell2">贯通弹<BR>
+            威力 × 1.1</TD>
           </TR>
           <TR>
             <TD class="tb-cell2">散弹攻击力UP</TD>
-            <TD class="tb-cell2">散弾の<BR>
-            威力が 1.3倍</TD>
+            <TD class="tb-cell2">散弹<BR>
+            威力 × 1.3</TD>
           </TR>
           <TR>
             <TD class="tb-cell2">状态异常攻击强化</TD>
-            <TD class="tb-cell2">状態異常属性弾の<BR>
-            属性値が 1.125倍</TD>
+            <TD class="tb-cell2">状态异常属性弹<BR>
+            属性值 × 1.125</TD>
           </TR>
         </TBODY>
       </TABLE>
       </TD>
-      <TD class="tb-cell0" valign="top" colspan="2">左表で示すスキルが発動していると、弾の威力や属性値が増加します。</TD>
+      <TD class="tb-cell0" valign="top" colspan="2">左表为发动相关技能时，对应的弹种威力或属性值的增加。</TD>
     </TR>
     <TR>
       <TD height="30"></TD>
@@ -1668,12 +1698,12 @@ ShowLinks(0, 99);
     </TR>
     <TR>
       <TD valign="top" class="tb-cell0"></TD>
-      <TD class="tb-cell0" valign="top" colspan="2">ボウガンには会心率が設定されているものがあります。<BR>
-      会心率とは、クリティカルヒットが出る確率です。クリティカルヒットが出た場合、基本威力が 1.25倍になります。<BR>
-      心眼、识破+1、识破+2スキルがあると、会心率がそれぞれ 5％、10％、15％アップします。<BR>
+      <TD class="tb-cell0" valign="top" colspan="2">枪弩存在会心率的设定。<BR>
+      会心率表示造成会心一击的概率。会心一击的情况下，基本威力提高至 1.25倍。<BR>
+      心眼、识破+1、识破+2技能发动时，会心率分别有 5％、10％、15％的提升。<BR>
       <BR>
-      会心率がマイナス値の場合、逆に威力が落ちる確率となります。<BR>
-      落ちた場合は、基本威力が 0.5倍になってしまいます。</TD>
+      会心率为负数的情况下，反过来会有概率造成威力的下降。<BR>
+      发生负会心一击时，基本威力将下降至 0.5倍。</TD>
     </TR>
     <TR>
       <TD height="30"></TD>
@@ -1681,7 +1711,7 @@ ShowLinks(0, 99);
       <TD class="tb-cell0"></TD>
     </TR>
     <TR>
-      <TD id="0008" colspan="3" class="zb-cell0">●　<B>与える伤害の増大</B></TD>
+      <TD id="0008" colspan="3" class="zb-cell0">●　<B>伤害的状态追加</B></TD>
     </TR>
     <TR>
       <TD></TD>
@@ -1693,33 +1723,47 @@ ShowLinks(0, 99);
       <TABLE border="1" cellspacing="0" cellpadding="2" class="cnt-tb2">
         <TBODY>
           <TR>
-            <TD class="tb-th2" width="170">状態</TD>
-            <TD class="tb-th2" width="45">倍率</TD>
+            <TD class="tb-th2" width="170">状态</TD>
+            <TD class="tb-th2" width="55">倍率<BR>（存疑）</TD>
           </TR>
           <TR>
-            <TD class="tb-cell1">麻痹状態中</TD>
+            <TD class="tb-cell1">麻痹状态中</TD>
             <TD class="tb-cell3">1.1倍&nbsp;</TD>
           </TR>
           <TR>
-            <TD class="tb-cell1">岩に擬態中　（岩龙）</TD>
+            <TD class="tb-cell1">岩石拟态中　（岩龙）</TD>
             <TD class="tb-cell3">1.1倍&nbsp;</TD>
           </TR>
           <TR>
-            <TD class="tb-cell1">落穴　（落ちてから<BR>
-            もがき始めるまでの間のみ）</TD>
+            <TD class="tb-cell1">落穴　（仅限自陷落开始<BR>
+            到结束的时间）</TD>
             <TD class="tb-cell3">1.1倍&nbsp;</TD>
           </TR>
           <TR>
-            <TD class="tb-cell1">睡眠中　（初撃のみ）</TD>
+            <TD class="tb-cell1">睡眠中　（首次攻击）</TD>
             <TD class="tb-cell3">3.0倍&nbsp;</TD>
           </TR>
         </TBODY>
       </TABLE>
       </TD>
-      <TD class="tb-cell0" valign="top" colspan="2">怪物が特定の状態の時に攻击すると、左表のように与える伤害が増大します。<BR>
-      これらの倍率は、基本威力に乗算されます。<BR>
-      ちなみに、今作では、麻痹状態中は常時伤害が増大します。<BR>
-      麻痹陷阱にかかっている時は麻痹状態ではなくシビレ状態なので、増大はしません。</TD>
+      <TD class="tb-cell0" valign="top" colspan="2">怪物在特定的状态下受到攻击时，其伤害根据左表进行追加。<BR>
+      该倍率与基本威力相乘计算。<BR>
+      顺便一提，本作中怪物在麻痹状态下所受伤害会固定增加。<BR>
+      但麻痹陷阱造成的并非麻痹状态而是麻木状态，因此不会增加伤害。<BR>
+      一角龙、角龙由于音爆等效果在地下挣扎的状态不属于落穴状态。<BR>
+      <BR>
+      （2006/04/25 追记）<BR><BR>
+      另外经过测试发现睡眠状态似乎不会影响武器伤害（眠斩无用？），只影响部分特殊伤害。<BR>
+      已确认睡眠状态下有3倍伤害的来源有：小桶爆弹、小桶爆弹Ｇ、大桶爆弹、大桶爆弹Ｇ、<BR>
+      支给专用大桶爆弹、电击熊爆弹、爆雷针、击龍枪（战斗街&修雷德城）。<BR>
+      大型弩弹、大炮弹、飞空爆弹/飞空爆弹Ｇ伤害不受睡眠状态影响。<BR>
+      据此推测睡眠3倍伤害可能限定为“静态伤害来源”，具体情况仍需进一步研究。<BR>
+      <BR>
+      （2024/03/15 追记）<BR><BR>
+      进一步测试发现麻痹状态倍率可能因怪物而异，例如一角龙在麻痹测试中未检测到状态追加倍率……<BR>
+      对所有怪物进行状态追加倍率测试可能较为困难……<BR>
+      <BR>
+      （2024/03/16 追记）<BR><BR></TD>
     </TR>
     <TR>
       <TD height="30"></TD>
@@ -1727,7 +1771,7 @@ ShowLinks(0, 99);
       <TD class="tb-cell0"></TD>
     </TR>
     <TR>
-      <TD id="0009" colspan="3" class="zb-cell0">●　<B>肉质と全体防御率による伤害軽減</B></TD>
+      <TD id="0009" colspan="3" class="zb-cell0">●　<B>肉质与全体防御率对伤害的减轻</B></TD>
     </TR>
     <TR>
       <TD></TD>
@@ -1736,18 +1780,18 @@ ShowLinks(0, 99);
     </TR>
     <TR>
       <TD valign="top" class="tb-cell0"></TD>
-      <TD class="tb-cell0" valign="top" colspan="2">ここまでの計算結果が、怪物に与えるべき伤害となりますが、<BR>
-      怪物には肉质というものが設定されており、伤害を軽減してしまいます。（爆発・状態異常属性弾を除く）<BR>
-      通常伤害、属性伤害それぞれが肉质によって軽減されます。<BR>
-      軽減率は怪物の部位によって異なります。詳細は、<A href="./monslist/index.html">怪物数据</A>の肉质の項を参照してください。<BR>
+      <TD class="tb-cell0" valign="top" colspan="2">根据到此为止的计算结果，计算对怪物的粗伤害，<BR>
+      要考虑到怪物存在肉质的设定，通常会减轻受到的伤害。<BR>
+      除爆炸・状态异常属性弹等“无”类型攻击伤害外，通常伤害、属性伤害都会受到肉质影响而减轻。<BR>
+      减轻程度因不同的怪物部位而异。详情参考 <A href="./monslist/index.html">怪物数据</A> 中肉质相关项目。<BR>
       <BR>
-      肉质で軽減された通常伤害と属性伤害の合計が、最終的に怪物へ与える総伤害値となりますが、<BR>
-      怪物には肉质とは別に全体の防御率が設定されています。<BR>
-      全体防御率は、单机模式ではほとんど100％（つまり軽減なし）ですが、网络モード、さらには<BR>
-      上位等级に行くほど軽減率が高くなり、総伤害値を軽減してしまいます。<BR>
+      根据肉质对伤害的减轻计算通常伤害与属性伤害合计得到粗伤害后，要得到最终对怪物的总伤害，<BR>
+      还要考虑怪物在肉质以外还有着全体防御率的设定。<BR>
+      全体防御率在单机模式下几乎均为100％（即吸收100%粗伤害，不发生减轻），但在联机模式下以及<BR>
+      上位等级时会逐渐降低，进一步提高减轻程度，降低受到的总伤害值。<BR>
       <BR>
-      怪物が怒り状態になると、全体防御率がおよそ 1.2倍ほどにアップし、ますます伤害が軽減されます。<BR>
-      （アップする量は怪物によって異なります）</TD>
+      怪物在愤怒状态下，全体防御率还会降低至约 5/6，进一步减轻所受伤害。<BR>
+      （具体降低程度因怪物而异）</TD>
     </TR>
     <TR>
       <TD height="30"></TD>
@@ -1755,7 +1799,7 @@ ShowLinks(0, 99);
       <TD class="tb-cell0"></TD>
     </TR>
     <TR>
-      <TD id="0010" colspan="3" class="zb-cell0">●　<B>プレイヤーの攻击力アップ</B></TD>
+      <TD id="0010" colspan="3" class="zb-cell0">●　<B>提升攻击力的手段</B></TD>
     </TR>
     <TR>
       <TD></TD>
@@ -1767,74 +1811,106 @@ ShowLinks(0, 99);
       <TABLE border="1" cellspacing="0" cellpadding="2" class="cnt-tb2">
         <TBODY>
           <TR>
-            <TD class="tb-th2" width="154">攻击力アップの手段</TD>
-            <TD class="tb-th2" width="70">武器倍率<BR>
-            アップ量</TD>
+            <TD class="tb-th2" width="140">提升攻击力的手段</TD>
+            <TD class="tb-th2" width="20">类别<BR>
+            <TD class="tb-th2" width="60">武器倍率<BR>
+            提升量</TD>
           </TR>
           <TR>
-            <TD class="tb-cell1">攻击力UP【小】スキル</TD>
-            <TD class="tb-cell2">3</TD>
+            <TD class="tb-cell1">攻击力UP【小】技能</TD>
+            <TD class="tb-cell2" rowspan="6">１<BR>
+            <TD class="tb-cell3">+3</TD>
           </TR>
           <TR>
-            <TD class="tb-cell1">攻击力UP【中】スキル</TD>
-            <TD class="tb-cell2">5</TD>
+            <TD class="tb-cell1">攻击力UP【中】技能</TD>
+            <TD class="tb-cell3">+5</TD>
           </TR>
           <TR>
-            <TD class="tb-cell1">攻击力UP【大】スキル</TD>
-            <TD class="tb-cell2">10</TD>
+            <TD class="tb-cell1">攻击力UP【大】技能</TD>
+            <TD class="tb-cell3">+10</TD>
           </TR>
           <TR>
-            <TD class="tb-cell1">力之护符を所持</TD>
-            <TD class="tb-cell2">6</TD>
+            <TD class="tb-cell1">火场怪力+2技能<br>（体力低于40%发动）</TD>
+            <TD class="tb-cell3">x1.5</TD>
           </TR>
           <TR>
-            <TD class="tb-cell1">力之爪を所持</TD>
-            <TD class="tb-cell2">9</TD>
+            <TD class="tb-cell1">持有力之护符</TD>
+            <TD class="tb-cell3">+6</TD>
           </TR>
           <TR>
-            <TD class="tb-cell1">食事效果</TD>
-            <TD class="tb-cell2">3または5</TD>
+            <TD class="tb-cell1">持有力之爪</TD>
+            <TD class="tb-cell3">+9</TD>
           </TR>
           <TR>
-            <TD class="tb-cell1">鬼人药</TD>
-            <TD class="tb-cell2">3</TD>
+            <TD class="tb-cell1">料理效果</TD>
+            <TD class="tb-cell2" rowspan="3">２<BR>
+            <TD class="tb-cell3">+3或+5</TD>
+          </TR>
+          <TR>
+            <TD class="tb-cell1">鬼人药/鬼人弹</TD>
+            <TD class="tb-cell3">+3</TD>
           </TR>
           <TR>
             <TD class="tb-cell1">鬼人药Ｇ</TD>
-            <TD class="tb-cell2">5</TD>
-          </TR>
-          <TR>
-            <TD class="tb-cell1">怪力之种 (180秒)</TD>
-            <TD class="tb-cell2">10</TD>
-          </TR>
-          <TR>
-            <TD class="tb-cell1">怪力药丸 (21秒)</TD>
-            <TD class="tb-cell2">25</TD>
+            <TD class="tb-cell3">+5</TD>
           </TR>
           <TR>
             <TD class="tb-cell1">鬼人笛 (180秒)</TD>
-            <TD class="tb-cell2">10</TD>
+            <TD class="tb-cell2" rowspan="3">３<BR>
+            <TD class="tb-cell3">+10</TD>
+          </TR>
+          <TR>
+            <TD class="tb-cell1">怪力之种 (180秒)</TD>
+            <TD class="tb-cell3">+10</TD>
+          </TR>
+          <TR>
+            <TD class="tb-cell1">怪力药丸 (21秒)</TD>
+            <TD class="tb-cell3">+25</TD>
+          </TR>
+          <TR>
+            <TD class="tb-cell1">笛旋律攻击小 (90秒)</TD>
+            <TD class="tb-cell2" rowspan="4">４<BR>
+            <TD class="tb-cell3">x1.1</TD>
+          </TR>
+          <TR>
+            <TD class="tb-cell1">└ 进一步强化 (+60秒)</TD>
+            <TD class="tb-cell3">x1.15</TD>
+          </TR>
+          <TR>
+            <TD class="tb-cell1">笛旋律攻击大 (60秒)</TD>
+            <TD class="tb-cell3">x1.15</TD>
+          </TR>
+          <TR>
+            <TD class="tb-cell1">└ 进一步强化 (+30秒)</TD>
+            <TD class="tb-cell3">x1.25</TD>
           </TR>
         </TBODY>
       </TABLE>
       </TD>
-      <TD class="tb-cell0" valign="top" colspan="2">プレイヤーの攻击力をアップする手段はいろいろありますが、大別して３つのグループに分けられます。<BR>
+      <TD class="tb-cell0" valign="top" colspan="2">提升玩家攻击力的手段多种多样，大体可分为4个类别。<BR>
       <BR>
-      　　１：攻击力アップのスキル発動、攻击力をアップするアイテムの所持（力之护符・力之爪）<BR>
-      　　２：食事效果によるアップ、鬼人药・鬼人药Ｇの使用<BR>
-      　　３：怪力之种・怪力药丸・鬼人笛の使用<BR>
+      　　１：攻击力UP、火场怪力+2技能效果的发动、持有提升攻击力的特殊道具（力之护符・力之爪）<BR>
+      　　２：料理效果、鬼人药/鬼人弹・鬼人药Ｇ的使用<BR>
+      　　３：鬼人笛・怪力之种・怪力药丸的使用<BR>
+      　　４：狩猎笛旋律效果（参考 <A href="./senritsu.html">狩猎笛旋律一览</A>）<BR>
       <BR>
-      グループ１は、クエスト中に力尽きても効力が失われることはありません。<BR>
-      グループ２は、クエスト中はずっと有効ですが、力尽きると効力が失われます。<BR>
-      グループ３は、一定の时间が経過すると、効力が失われます。<BR>
+      类别１在任务中即使力尽倒地效果也不会消失。<BR>
+      类别２在任务中的效果会由于力尽倒地而消失。<BR>
+      类别３、４为限时效果，经过一定的时间后消失。<BR>
       <BR>
-      それぞれの武器倍率アップ量は、左表のとおりです。<BR>
+      对武器倍率的提升量如左表所示。<BR>
       <BR>
-      グループ２と３は、グループ内の各效果が重複することはありません。重複した場合は、順番にかかわらず<BR>
-      效果の大きいものが優先されます。<BR>
+      类别２、３、４各组内的效果无法重复叠加，每组只能存在1个。<BR>
+      发生重复的场合下，类别２以同组内提升效果更高者优先，类别３则是新效果覆盖旧效果，<BR>
+      类别４以同组内等级更高者优先，表格中效果等级为升序排列。<BR>
       <BR>
-      例えば、食事效果で武器倍率が５上昇した状態で鬼人药を使用しても、武器倍率上昇量は５のままです。<BR>
-      しかし、食事效果で武器倍率が３上昇した状態で鬼人药Ｇを使用した場合は、上昇量が５になります。</TD>
+      例如，在料理效果增加5点武器倍率的状态下使用鬼人药，武器倍率的提升量仍然是+5。<BR>
+      但是，在料理效果增加3点武器倍率的状态下使用鬼人药Ｇ，武器倍率的提升量将变为+5。<BR>
+      使用怪力药丸增加25点武器倍率后使用怪力种子，武器倍率的提升量将变为+10。<BR>
+      在玩家A的笛旋律攻击大（x1.15）效果即将结束时，玩家B吹奏笛旋律攻击小+进一步强化（x1.15），<BR>
+      不会更新提升效果，攻击提升将在A效果结束时消失，B效果不会生效。<BR>
+      相反，玩家B吹奏笛旋律攻击小+进一步强化（x1.15）的效果即将结束时，玩家A吹奏笛旋律攻击大（x1.15），此时A效果将立即覆盖B效果，并更新持续时间为60秒。<BR><BR>
+      注：太刀满练气槽触发的武器倍率提升量等同于怪力药丸，属类别３，持续时间至练气槽自然下降（30秒）。</TD>
     </TR>
   </TBODY>
 </TABLE>
