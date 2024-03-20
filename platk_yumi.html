@@ -4,7 +4,7 @@
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <META name="GENERATOR" content="IBM WebSphere Studio Homepage Builder Version 9.0.3.0 for Windows">
 <META http-equiv="Content-Style-Type" content="text/css">
-<TITLE>怪物猎人２解析情报　怪物への攻击【弓编】</TITLE>
+<TITLE>怪物猎人２解析情报　对怪物的攻击【弓编】</TITLE>
 <LINK rel="stylesheet" href="./table.css" type="text/css">
 <SCRIPT src="./scripts/links.js"></SCRIPT>
 </HEAD>
@@ -25,8 +25,16 @@ ShowLinks(0, 99);
 // -->
 </SCRIPT>
 <HR>
-<H3>怪物への攻击　【弓编】</H3>
-<P class="tb-cell0">今作から追加された、弓の攻击による怪物への伤害について示します。</P>
+<H3>对怪物的攻击　【弓编】</H3>
+<P class="tb-cell0">表示本作追加的弓对怪物造成的伤害。</P>
+<b>弓伤害计算公式：</b><BR>
+<b><font size=2>注：由于硬件原因以及各种数值在计算中可能出现的取整机制，所有涉及小数与乘法的计算结果可能产生偏差</font></b><BR><BR>
+通常伤害（期望值）=武器倍率×箭矢威力%×强击瓶箭矢倍率×蓄力阶段威力修正×飞行时间威力修正×肉质（弹）%×状态追加倍率×全体防御率×会心期望<BR>
+属性伤害=面板属性值÷10×属性蓄力倍率×对应属性肉质%×全体防御率<BR>
+近战伤害=武器倍率×近战威力%×强击瓶近战倍率×近战攻击吸收率×状态追加倍率×全体防御率×会心期望<BR>
+会心期望（正）=1+会心率×0.25<BR>
+会心期望（负）=1-会心率×0.5<BR>
+近战攻击吸收率=对应部位肉质（切断）%与肉质（打击）%较高者　<b>（近战攻击吸收率小于25%时发生弹刀）</b><BR><BR>
 <TABLE border="0" width="894">
   <TBODY>
     <TR>
@@ -42,38 +50,37 @@ ShowLinks(0, 99);
       <TABLE border="1" cellspacing="0" cellpadding="2" class="cnt-tb2">
         <TBODY>
           <TR>
-            <TD class="tb-th2" width="110">武器の種類</TD>
+            <TD class="tb-th2" width="110">武器的种类</TD>
             <TD class="tb-th2" width="70">倍率</TD>
           </TR>
           <TR>
-            <TD class="tb-cell1">大剣/太刀</TD>
+            <TD class="tb-cell1">大剑/太刀</TD>
             <TD class="tb-cell2">4.8</TD>
           </TR>
           <TR>
-            <TD class="tb-cell1">片手剣/双剣</TD>
+            <TD class="tb-cell1">片手剑/双剑</TD>
             <TD class="tb-cell2">1.4</TD>
           </TR>
           <TR>
-            <TD class="tb-cell1">ハンマー/狩猟笛</TD>
+            <TD class="tb-cell1">大锤/狩猎笛</TD>
             <TD class="tb-cell2">5.2</TD>
           </TR>
           <TR>
-            <TD class="tb-cell1">ランス/ガンランス</TD>
+            <TD class="tb-cell1">长枪/铳枪</TD>
             <TD class="tb-cell2">2.3</TD>
           </TR>
           <TR>
-            <TD class="tb-cell1">ボウガン/弓</TD>
+            <TD class="tb-cell1">枪弩/弓</TD>
             <TD class="tb-cell2">1.2</TD>
           </TR>
         </TBODY>
       </TABLE>
       </TD>
-      <TD class="tb-cell0" valign="top" colspan="2">攻击による怪物への伤害計算の元となるのは、ステータスに表示される攻击力ではなく、<BR>
-      攻击力を一定の倍率で割った <B>武器倍率</B> というものが元になります。<BR>
-      各武器の倍率は左表のとおりです。弓の場合はボウガンと同じで、1.2 で割った値となります。<BR>
+      <TD class="tb-cell0" valign="top" colspan="2">对怪物的攻击造成的伤害计算不是依据状态面板显示的攻击力，而是将<B>攻击力</B>除以一定的倍率后<BR>获得的<B>武器倍率</B>为基准。<BR>
+      各武器的倍率请参考左表。对弓而言是攻击力除以 1.2 。<BR>
       <BR>
-      食事效果やアイテム使用等による攻击力アップは、全てこの武器倍率に一定値が加算されます。<BR>
-      従って、弓の場合はステータス上では 1.2倍のアップ量となります。</TD>
+      内部伤害计算全部以武器倍率为基准，面板攻击力的数值为武器倍率×倍率后<b>取整</b>。<BR>
+      因此，弓面板攻击力的增加量为武器倍率增加量的 1.2倍。</TD>
     </TR>
     <TR>
       <TD height="30"></TD>
@@ -81,7 +88,7 @@ ShowLinks(0, 99);
       <TD class="tb-cell0"></TD>
     </TR>
     <TR>
-      <TD colspan="3" class="zb-cell0">●　<B>矢の威力</B></TD>
+      <TD colspan="3" class="zb-cell0">●　<B>箭矢威力</B></TD>
     </TR>
     <TR>
       <TD></TD>
@@ -93,8 +100,8 @@ ShowLinks(0, 99);
       <TABLE border="1" cellspacing="0" cellpadding="2" class="cnt-tb2">
         <TBODY>
           <TR>
-            <TD class="tb-th2" width="85">类型</TD>
-            <TD class="tb-th2" width="105">威力</TD>
+            <TD class="tb-th2" width="85">种类</TD>
+            <TD class="tb-th2" width="105">威力（%）</TD>
           </TR>
           <TR>
             <TD class="tb-cell2">连射LV1</TD>
@@ -102,63 +109,63 @@ ShowLinks(0, 99);
           </TR>
           <TR>
             <TD class="tb-cell2">连射LV2</TD>
-            <TD class="tb-cell2">12・5</TD>
+            <TD class="tb-cell2">12+5</TD>
           </TR>
           <TR>
             <TD class="tb-cell2">连射LV3</TD>
-            <TD class="tb-cell2">12・5・4</TD>
+            <TD class="tb-cell2">12+5+4</TD>
           </TR>
           <TR>
             <TD class="tb-cell2">连射LV4</TD>
-            <TD class="tb-cell2">12・5・4・2</TD>
+            <TD class="tb-cell2">12+5+4+2</TD>
           </TR>
           <TR>
-            <TD class="tb-cell2">拡散LV1</TD>
-            <TD class="tb-cell2">4・3・3</TD>
+            <TD class="tb-cell2">扩散LV1</TD>
+            <TD class="tb-cell2">4+3+3</TD>
           </TR>
           <TR>
-            <TD class="tb-cell2">拡散LV2</TD>
-            <TD class="tb-cell2">5・4・4</TD>
+            <TD class="tb-cell2">扩散LV2</TD>
+            <TD class="tb-cell2">5+4+4</TD>
           </TR>
           <TR>
-            <TD class="tb-cell2">拡散LV3</TD>
-            <TD class="tb-cell2">4・4・4・3・3</TD>
+            <TD class="tb-cell2">扩散LV3</TD>
+            <TD class="tb-cell2">4+4+4+3+3</TD>
           </TR>
           <TR>
-            <TD class="tb-cell2">拡散LV4</TD>
-            <TD class="tb-cell2">5・4・4・3・3</TD>
+            <TD class="tb-cell2">扩散LV4</TD>
+            <TD class="tb-cell2">5+4+4+3+3</TD>
           </TR>
           <TR>
-            <TD class="tb-cell2">貫通LV1</TD>
-            <TD class="tb-cell2">6×3ヒット</TD>
+            <TD class="tb-cell2">贯通LV1</TD>
+            <TD class="tb-cell2">6×3次判定</TD>
           </TR>
           <TR>
-            <TD class="tb-cell2">貫通LV2</TD>
-            <TD class="tb-cell2">6×4ヒット</TD>
+            <TD class="tb-cell2">贯通LV2</TD>
+            <TD class="tb-cell2">6×4次判定</TD>
           </TR>
           <TR>
-            <TD class="tb-cell2">貫通LV3</TD>
-            <TD class="tb-cell2">6×5ヒット</TD>
+            <TD class="tb-cell2">贯通LV3</TD>
+            <TD class="tb-cell2">6×5次判定</TD>
           </TR>
           <TR>
-            <TD class="tb-cell2">貫通LV4</TD>
-            <TD class="tb-cell2">6×6ヒット</TD>
+            <TD class="tb-cell2">贯通LV4</TD>
+            <TD class="tb-cell2">6×6次判定</TD>
           </TR>
         </TBODY>
       </TABLE>
       </TD>
-      <TD class="tb-cell0" valign="top" colspan="2">弓の矢は、连射、拡散、貫通と３種類の类型があり、それぞれがLV1〜LV4まであります。<BR>
+      <TD class="tb-cell0" valign="top" colspan="2">弓的箭矢分为连射、扩散、贯通３种，各自还有LV1〜LV4的等级之分。<BR>
       <BR>
-      　　连射：　ピンポイントに1〜４本の矢を同時に放つ。连射レベルが高いほど矢の本数が増える<BR>
-      　　扩散：　放射状に複数の矢を放つ。拡散レベルが高いほど矢の本数が増える<BR>
-      　　贯通：　貫通する矢を放つ。貫通レベルが高いほどヒット数が増える<BR>
+      　　连射：　沿准星方向同时射出1〜４支箭矢。射出的箭矢数随连射等级提高而增加<BR>
+      　　扩散：　以放射形态射出多支箭矢。射出的箭矢数随扩散等级提高而增加<BR>
+      　　贯通：　射出具有贯通能力的箭矢。箭矢的命中判定次数随贯通等级提高而增加<BR>
       <BR>
-      弓の種類によって、どの类型/レベルが使用できるかは決められています。<BR>
-      类型ごとの矢の威力は、左表のとおりです。<BR>
-      武器倍率に、矢の威力を％として乗算したものが基本威力となります。<BR>
-      　（複数の矢が放たれる类型は、それぞれの威力を列記）<BR>
+      弓的种类决定了可发射的箭矢种类/等级。<BR>
+      箭矢种类与等级对应的威力参考左表。<BR>
+      <B>武器倍率</B>与各弹种的<B>威力（以%计算）</B>相乘，就得到了<B>基本威力</B>。<BR>
+      　（射出多支箭矢时，每支的威力单独列出）<BR>
       <BR>
-      矢に强击瓶を装着すると、威力が 1.5倍になります。</TD>
+      安装强击瓶时，箭矢的威力提升至 1.5倍。</TD>
     </TR>
     <TR>
       <TD height="30"></TD>
@@ -166,7 +173,7 @@ ShowLinks(0, 99);
       <TD class="tb-cell0"></TD>
     </TR>
     <TR>
-      <TD colspan="3" class="zb-cell0">●　<B>溜め段階による基本威力修正</B></TD>
+      <TD colspan="3" class="zb-cell0">●　<B>蓄力阶段的基本威力修正</B></TD>
     </TR>
     <TR>
       <TD></TD>
@@ -178,7 +185,7 @@ ShowLinks(0, 99);
       <TABLE border="1" cellspacing="0" cellpadding="2" class="cnt-tb2">
         <TBODY>
           <TR>
-            <TD class="tb-th2" width="90">溜め段階</TD>
+            <TD class="tb-th2" width="90">蓄力阶段</TD>
             <TD class="tb-th2" width="100">基本威力倍率</TD>
           </TR>
           <TR>
@@ -200,8 +207,8 @@ ShowLinks(0, 99);
         </TBODY>
       </TABLE>
       </TD>
-      <TD class="tb-cell0" valign="top" colspan="2">同じ类型/レベルの矢でも、溜め段階によって基本威力が変化します。<BR>
-      左表は、溜め段階ごとの基本威力倍率です。<BR>
+      <TD class="tb-cell0" valign="top" colspan="2">同种类/等级的箭矢，基本威力会随着蓄力等级而变化。<BR>
+      左表为蓄力阶段的基本威力倍率。<BR>
       　（蓄力阶段４在装填数UP技能发动时可用）</TD>
     </TR>
     <TR>
@@ -210,7 +217,7 @@ ShowLinks(0, 99);
       <TD class="tb-cell0"></TD>
     </TR>
     <TR>
-      <TD colspan="3" class="zb-cell0">●　<B>时间経過による基本威力修正</B></TD>
+      <TD colspan="3" class="zb-cell0">●　<B>飞行时间的基本威力修正</B></TD>
     </TR>
     <TR>
       <TD></TD>
@@ -219,7 +226,7 @@ ShowLinks(0, 99);
     </TR>
     <TR>
       <TD valign="top" class="tb-cell0" height="25"></TD>
-      <TD class="tb-cell0" valign="top" colspan="2">矢は、発射後の时间経過に伴って、下図のように威力が変化します。</TD>
+      <TD class="tb-cell0" valign="top" colspan="2">箭矢在射出后，威力随时间的变化如下图所示。</TD>
     </TR>
     <TR>
       <TD></TD>
@@ -240,12 +247,12 @@ ShowLinks(0, 99);
     </TR>
     <TR>
       <TD valign="top" class="tb-cell0"></TD>
-      <TD class="tb-cell0" valign="top" colspan="2">弓には会心率が設定されているものがあります。<BR>
-      会心率とは、クリティカルヒットが出る確率です。クリティカルヒットが出た場合、基本威力が 1.25倍になります。<BR>
-      心眼、识破+1、识破+2スキルがあると、会心率がそれぞれ 5％、10％、15％アップします。<BR>
+      <TD class="tb-cell0" valign="top" colspan="2">弓存在会心率的设定。<BR>
+      会心率表示造成会心一击的概率。会心一击的情况下，基本威力提高至 1.25倍。<BR>
+      心眼、识破+1、识破+2技能发动时，会心率分别有 5％、10％、15％的提升。<BR>
       <BR>
-      会心率がマイナス値の場合、逆に威力が落ちる確率となります。<BR>
-      落ちた場合は、基本威力が 0.5倍になってしまいます。</TD>
+      会心率为负数的情况下，反过来会有概率造成威力的下降。<BR>
+      发生负会心一击时，基本威力将下降至 0.5倍。</TD>
     </TR>
     <TR>
       <TD height="30"></TD>
@@ -253,7 +260,7 @@ ShowLinks(0, 99);
       <TD class="tb-cell0"></TD>
     </TR>
     <TR>
-      <TD colspan="3" class="zb-cell0"><B>●　通常属性による追加伤害</B></TD>
+      <TD colspan="3" class="zb-cell0"><B>●　通常属性的追加伤害</B></TD>
     </TR>
     <TR>
       <TD></TD>
@@ -265,8 +272,8 @@ ShowLinks(0, 99);
       <TABLE border="1" cellspacing="0" cellpadding="2" class="cnt-tb2">
         <TBODY>
           <TR>
-            <TD class="tb-th2" width="90">溜め段階</TD>
-            <TD class="tb-th2" colspan="2">溜め倍率</TD>
+            <TD class="tb-th2" width="90">蓄力阶段</TD>
+            <TD class="tb-th2" colspan="2">蓄力倍率</TD>
           </TR>
           <TR>
             <TD class="tb-cell2">１</TD>
@@ -291,10 +298,10 @@ ShowLinks(0, 99);
         </TBODY>
       </TABLE>
       </TD>
-      <TD class="tb-cell0" valign="top" colspan="2">通常属性（火/水/雷/龍/冰）付きの弓で攻击すると、通常伤害に加えて属性伤害が追加されます。<BR>
-      ステータスに表示されている属性値は、実際の属性値を10倍しています。<BR>
-      したがって、属性伤害量は　表示属性値÷10×溜め倍率　となります。<BR>
-      溜め倍率は、左表で示すように溜め段階によって変化します。</TD>
+      <TD class="tb-cell0" valign="top" colspan="2">附带通常属性（火/水/雷/龍/冰）的弓在攻击时，在通常伤害的基础上还会追加属性伤害。<BR>
+      状态面板显示的属性值为实际属性值的10倍。<BR>
+      因此，属性伤害量按照　显示属性值÷10×蓄力倍率　进行计算。<BR>
+      蓄力倍率如左表所示。</TD>
     </TR>
     <TR>
       <TD height="30"></TD>
@@ -302,7 +309,7 @@ ShowLinks(0, 99);
       <TD class="tb-cell0"></TD>
     </TR>
     <TR>
-      <TD colspan="3" class="zb-cell0">●　<B>状態異常属性ビンの装着</B></TD>
+      <TD colspan="3" class="zb-cell0">●　<B>状态异常属性瓶的安装</B></TD>
     </TR>
     <TR>
       <TD></TD>
@@ -315,7 +322,7 @@ ShowLinks(0, 99);
         <TBODY>
           <TR>
             <TD class="tb-th2" width="85">类型</TD>
-            <TD class="tb-th2" width="105">属性値</TD>
+            <TD class="tb-th2" width="105">属性值</TD>
           </TR>
           <TR>
             <TD class="tb-cell2">连射LV1</TD>
@@ -323,57 +330,57 @@ ShowLinks(0, 99);
           </TR>
           <TR>
             <TD class="tb-cell2">连射LV2</TD>
-            <TD class="tb-cell2">7×2本</TD>
+            <TD class="tb-cell2">7×2支</TD>
           </TR>
           <TR>
             <TD class="tb-cell2">连射LV3</TD>
-            <TD class="tb-cell2">5×3本</TD>
+            <TD class="tb-cell2">5×3支</TD>
           </TR>
           <TR>
             <TD class="tb-cell2">连射LV4</TD>
-            <TD class="tb-cell2">4×4本</TD>
+            <TD class="tb-cell2">4×4支</TD>
           </TR>
           <TR>
-            <TD class="tb-cell2">拡散LV1</TD>
-            <TD class="tb-cell2">5×3本</TD>
+            <TD class="tb-cell2">扩散LV1</TD>
+            <TD class="tb-cell2">5×3支</TD>
           </TR>
           <TR>
-            <TD class="tb-cell2">拡散LV2</TD>
-            <TD class="tb-cell2">6×3本</TD>
+            <TD class="tb-cell2">扩散LV2</TD>
+            <TD class="tb-cell2">6×3支</TD>
           </TR>
           <TR>
-            <TD class="tb-cell2">拡散LV3</TD>
-            <TD class="tb-cell2">4×5本</TD>
+            <TD class="tb-cell2">扩散LV3</TD>
+            <TD class="tb-cell2">4×5支</TD>
           </TR>
           <TR>
-            <TD class="tb-cell2">拡散LV4</TD>
-            <TD class="tb-cell2">4×5本</TD>
+            <TD class="tb-cell2">扩散LV4</TD>
+            <TD class="tb-cell2">4×5支</TD>
           </TR>
           <TR>
-            <TD class="tb-cell2">貫通LV1</TD>
-            <TD class="tb-cell2">5×ヒット数</TD>
+            <TD class="tb-cell2">贯通LV1</TD>
+            <TD class="tb-cell2">5×判定数</TD>
           </TR>
           <TR>
-            <TD class="tb-cell2">貫通LV2</TD>
-            <TD class="tb-cell2">4×ヒット数</TD>
+            <TD class="tb-cell2">贯通LV2</TD>
+            <TD class="tb-cell2">4×判定数</TD>
           </TR>
           <TR>
-            <TD class="tb-cell2">貫通LV3</TD>
-            <TD class="tb-cell2">4×ヒット数</TD>
+            <TD class="tb-cell2">贯通LV3</TD>
+            <TD class="tb-cell2">4×判定数</TD>
           </TR>
           <TR>
-            <TD class="tb-cell2">貫通LV4</TD>
-            <TD class="tb-cell2">4×ヒット数</TD>
+            <TD class="tb-cell2">贯通LV4</TD>
+            <TD class="tb-cell2">4×判定数</TD>
           </TR>
         </TBODY>
       </TABLE>
       </TD>
-      <TD class="tb-cell0" valign="top" colspan="2">矢に状態異常属性 （毒・麻痹・睡眠） ビンを装着すると、状態異常属性が付加された矢を放つことができます。<BR>
-      　（状態異常属性ビンを装着すると、弓に付加されている通常属性は無効となります）<BR>
-      属性値は、左表のとおりです。 複数の矢を放った場合は、１本ごとに属性値が付加されます。<BR>
+      <TD class="tb-cell0" valign="top" colspan="2">弓在安装状态异常属性 （毒・麻痹・睡眠） 瓶时，射出的箭矢会附加状态异常属性。<BR>
+      　（安装状态异常属性瓶时，弓原本附带的通常属性会被覆盖而无效化）<BR>
+      属性值如左表所示。 射出多支箭矢时，每支都会附带属性值。<BR>
       <BR>
-      状态异常攻击强化 スキルが発動していると、属性値が 1.125倍になります。<BR>
-      また、溜め段階１の時のみ属性値が半分となります。</TD>
+      发动状态异常攻击强化技能时，状态异常属性值上升至 1.125倍。<BR>
+      此外，蓄力阶段为１时状态异常属性值减半（状态异常蓄力倍率＝0.5）。</TD>
     </TR>
     <TR>
       <TD height="30"></TD>
@@ -381,7 +388,7 @@ ShowLinks(0, 99);
       <TD class="tb-cell0"></TD>
     </TR>
     <TR>
-      <TD colspan="3" class="zb-cell0">●　<B>弓の近接攻击</B></TD>
+      <TD colspan="3" class="zb-cell0">●　<B>弓的近战攻击</B></TD>
     </TR>
     <TR>
       <TD></TD>
@@ -393,32 +400,32 @@ ShowLinks(0, 99);
       <TABLE border="1" cellspacing="0" cellpadding="2" class="cnt-tb2">
         <TBODY>
           <TR>
-            <TD class="tb-th2" width="105">アクション</TD>
-            <TD class="tb-th2" width="85">威力</TD>
+            <TD class="tb-th2" width="105">动作</TD>
+            <TD class="tb-th2" width="85">威力（%）</TD>
           </TR>
           <TR>
-            <TD class="tb-cell1">なぎ払い</TD>
+            <TD class="tb-cell1">横扫</TD>
             <TD class="tb-cell2">10</TD>
           </TR>
           <TR>
-            <TD class="tb-cell1">縦斬り</TD>
+            <TD class="tb-cell1">纵劈</TD>
             <TD class="tb-cell2">18</TD>
           </TR>
         </TBODY>
       </TABLE>
       </TD>
-      <TD class="tb-cell0" valign="top" colspan="2">弓の近接攻击は、攻击の種類は切断攻击属性となりますが、ランスと同様に打击攻击属性も持っており、<BR>
-      切断と打击それぞれの肉质軽減による伤害計算の結果、より伤害の大きい方が採用されます。<BR>
+      <TD class="tb-cell0" valign="top" colspan="2">弓的近战攻击，同时具有“切断”与“打击”的类型属性，需按照对应肉质分别计算二者的伤害，<BR>
+      以较高值为最终的通常伤害。<BR>
       <BR>
-      近接攻击の威力は、左表のとおりです。武器倍率に威力值を％として乗算したものが基本威力となります。<BR>
-      弓に通常属性が付加されていれば、属性伤害も追加されます。<BR>
-      属性伤害は 表示属性値÷10×0.5 となります。<BR>
+      近战攻击的威力威力如左表所示。<B>武器倍率</B>与<B>威力（以%计算）</B>相乘，就得到了<B>基本威力</B>。<BR>
+      附带通常属性时也会追加属性伤害。<BR>
+      属性伤害为 面板显示属性值÷10×0.5 。<BR>
       <BR>
-      强击瓶を装着すれば、近接攻击の威力も 1.5倍となります。<BR>
-      状態異常属性ビンを装着した場合は、矢と同様、通常属性は無効となり、かわりに状態異常属性が付加されます。<BR>
-      近接攻击の状態異常属性値はわずか 2 しかありませんが、他の近接武器と違って毎回発動します。<BR>
+      安装强击瓶时，近战攻击的威力提升至 1.5倍。<BR>
+      安装状态异常属性瓶时，近战攻击与箭矢一样，原本的通常属性会被覆盖无效化，变为附加状态异常属性。<BR>
+      近战攻击的状态异常属性值固定为 2 ，与其他近战武器不同，每次攻击都会发动。<BR>
       <BR>
-      近接攻击の場合は、各種ビン装着時でも矢のようにビンの数を消費することはありません。</TD>
+      进行近战攻击时，不会消耗安装的各种瓶。</TD>
     </TR>
     <TR>
       <TD height="30"></TD>
@@ -426,7 +433,7 @@ ShowLinks(0, 99);
       <TD class="tb-cell0"></TD>
     </TR>
     <TR>
-      <TD colspan="3" class="zb-cell0">●　<B>与える伤害の増大</B></TD>
+      <TD colspan="3" class="zb-cell0">●　<B>伤害的状态追加</B></TD>
     </TR>
     <TR>
       <TD></TD>
@@ -438,33 +445,48 @@ ShowLinks(0, 99);
       <TABLE border="1" cellspacing="0" cellpadding="2" class="cnt-tb2">
         <TBODY>
           <TR>
-            <TD class="tb-th2" width="170">状態</TD>
-            <TD class="tb-th2" width="45">倍率</TD>
+            <TD class="tb-th2" width="170">状态</TD>
+            <TD class="tb-th2" width="55">倍率<BR>（存疑）</TD>
           </TR>
           <TR>
-            <TD class="tb-cell1">麻痹状態中</TD>
+            <TD class="tb-cell1">麻痹状态中</TD>
             <TD class="tb-cell3">1.1倍&nbsp;</TD>
           </TR>
           <TR>
-            <TD class="tb-cell1">岩に擬態中　（岩龙）</TD>
+            <TD class="tb-cell1">岩石拟态中　（岩龙）</TD>
             <TD class="tb-cell3">1.1倍&nbsp;</TD>
           </TR>
           <TR>
-            <TD class="tb-cell1">落穴　（落ちてから<BR>
-            もがき始めるまでの間のみ）</TD>
+            <TD class="tb-cell1">落穴　（仅限自陷落开始<BR>
+            到结束的时间）</TD>
             <TD class="tb-cell3">1.1倍&nbsp;</TD>
           </TR>
           <TR>
-            <TD class="tb-cell1">睡眠中　（初撃のみ）</TD>
+            <TD class="tb-cell1">睡眠中　（首次攻击）</TD>
             <TD class="tb-cell3">3.0倍&nbsp;</TD>
           </TR>
         </TBODY>
       </TABLE>
       </TD>
-      <TD class="tb-cell0" valign="top" colspan="2">怪物が特定の状態の時に攻击すると、左表のように与える伤害が増大します。<BR>
-      これらの倍率は、基本威力に乗算されます。<BR>
-      ちなみに、今作では、麻痹状態中は常時伤害が増大します。<BR>
-      麻痹陷阱にかかっている時は麻痹状態ではなくシビレ状態なので、増大はしません。</TD>
+      <TD class="tb-cell0" valign="top" colspan="2">怪物在特定的状态下受到攻击时，其伤害根据左表进行追加。<BR>
+      该倍率影响除属性伤害外的其他所有伤害类型。<BR>
+      顺便一提，本作中怪物在麻痹状态下所受伤害会固定增加。<BR>
+      但麻痹陷阱造成的并非麻痹状态而是麻木状态，因此不会增加伤害。<BR>
+      一角龙、角龙由于音爆等效果在地下挣扎的状态不属于落穴状态。<BR>
+      <BR>
+      （2006/04/25 追记）<BR><BR>
+      另外经过测试发现睡眠状态似乎不会影响武器伤害（眠斩无用？），只影响部分特殊伤害。<BR>
+      已确认睡眠状态下有3倍伤害的来源有：小桶爆弹、小桶爆弹Ｇ、大桶爆弹、大桶爆弹Ｇ、<BR>
+      支给专用大桶爆弹、电击熊爆弹、爆雷针、击龍枪（战斗街&修雷德城）。<BR>
+      大型弩弹、大炮弹、飞空爆弹/飞空爆弹Ｇ伤害不受睡眠状态影响。<BR>
+      据此推测睡眠3倍伤害可能限定为“静态伤害来源”，具体情况仍需进一步研究。<BR>
+      <BR>
+      （2024/03/15 追记）<BR><BR>
+      进一步测试发现状态追加倍率可能因怪物而异，例如一角龙在麻痹测试中未检测到状态追加倍率……<BR>
+      对所有怪物进行状态追加倍率测试可能较为困难……<BR>
+      <BR>
+      （2024/03/16 追记）<BR><BR>
+      </TD>
     </TR>
     <TR>
       <TD height="30"></TD>
@@ -472,7 +494,7 @@ ShowLinks(0, 99);
       <TD class="tb-cell0"></TD>
     </TR>
     <TR>
-      <TD colspan="3" class="zb-cell0">●　<B>肉质と全体防御率による伤害軽減</B></TD>
+      <TD colspan="3" class="zb-cell0">●　<B>肉质与全体防御率对伤害的减轻</B></TD>
     </TR>
     <TR>
       <TD></TD>
@@ -481,19 +503,19 @@ ShowLinks(0, 99);
     </TR>
     <TR>
       <TD valign="top" class="tb-cell0"></TD>
-      <TD class="tb-cell0" valign="top" colspan="2">ここまでの計算結果が、怪物に与えるべき伤害となりますが、<BR>
-      怪物には肉质というものが設定されており、伤害を軽減してしまいます。<BR>
-      通常伤害、属性伤害それぞれが肉质によって軽減されます。<BR>
-      軽減率は怪物の部位によって異なります。詳細は、<A href="./monslist/index.html">怪物数据</A>の肉质の項を参照してください。<BR>
-      弓の矢は、ボウガンと同様、弹に対する肉质軽減が適用されます。<BR>
+      <TD class="tb-cell0" valign="top" colspan="2">根据到此为止的计算结果，计算对怪物的粗伤害，<BR>
+      要考虑到怪物存在肉质的设定，通常会减轻受到的伤害。<BR>
+      弓的通常伤害、属性伤害都会受到肉质影响。<BR>
+      减轻程度因不同的怪物部位而异。详情参考 <A href="./monslist/index.html">怪物数据</A> 中肉质相关项目。<BR><BR>
+      弓射出的箭矢全部按照“弹”类型进行肉质计算。<BR>
       <BR>
-      肉质で軽減された通常伤害と属性伤害の合計が、最終的に怪物へ与える総伤害値となりますが、<BR>
-      怪物には肉质とは別に全体の防御率が設定されています。<BR>
-      全体防御率は、单机模式ではほとんど100％（つまり軽減なし）ですが、网络モード、さらには<BR>
-      上位等级に行くほど軽減率が高くなり、総伤害値を軽減してしまいます。<BR>
+      根据肉质对伤害的影响计算通常伤害与属性伤害合计得到粗伤害后，要得到最终对怪物的总伤害，<BR>
+      还要考虑怪物在肉质以外还有着全体防御率的设定。<BR>
+      全体防御率在单机模式下几乎均为100％（即吸收100%粗伤害，不发生减轻），但在联机模式下以及<BR>
+      上位等级时会逐渐降低，进一步提高减轻程度，降低受到的总伤害值。<BR>
       <BR>
-      怪物が怒り状態になると、全体防御率がおよそ 1.2倍ほどにアップし、ますます伤害が軽減されます。<BR>
-      （アップする量は怪物によって異なります）</TD>
+      怪物在愤怒状态下，全体防御率还会降低至约 5/6，进一步减轻所受伤害。<BR>
+      （具体是否降低与降低程度因怪物而异）</TD>
     </TR>
     <TR>
       <TD height="30"></TD>
@@ -501,7 +523,7 @@ ShowLinks(0, 99);
       <TD class="tb-cell0"></TD>
     </TR>
     <TR>
-      <TD colspan="3" class="zb-cell0">●　<B>プレイヤーの攻击力アップ</B></TD>
+      <TD colspan="3" class="zb-cell0">●　<B>玩家的攻击力提升</B></TD>
     </TR>
     <TR>
       <TD></TD>
@@ -513,74 +535,106 @@ ShowLinks(0, 99);
       <TABLE border="1" cellspacing="0" cellpadding="2" class="cnt-tb2">
         <TBODY>
           <TR>
-            <TD class="tb-th2" width="154">攻击力アップの手段</TD>
-            <TD class="tb-th2" width="70">武器倍率<BR>
-            アップ量</TD>
+            <TD class="tb-th2" width="140">提升攻击力的手段</TD>
+            <TD class="tb-th2" width="20">类别<BR>
+            <TD class="tb-th2" width="60">武器倍率<BR>
+            提升量</TD>
           </TR>
           <TR>
-            <TD class="tb-cell1">攻击力UP【小】スキル</TD>
-            <TD class="tb-cell2">3</TD>
+            <TD class="tb-cell1">攻击力UP【小】技能</TD>
+            <TD class="tb-cell2" rowspan="6">１<BR>
+            <TD class="tb-cell3">+3</TD>
           </TR>
           <TR>
-            <TD class="tb-cell1">攻击力UP【中】スキル</TD>
-            <TD class="tb-cell2">5</TD>
+            <TD class="tb-cell1">攻击力UP【中】技能</TD>
+            <TD class="tb-cell3">+5</TD>
           </TR>
           <TR>
-            <TD class="tb-cell1">攻击力UP【大】スキル</TD>
-            <TD class="tb-cell2">10</TD>
+            <TD class="tb-cell1">攻击力UP【大】技能</TD>
+            <TD class="tb-cell3">+10</TD>
           </TR>
           <TR>
-            <TD class="tb-cell1">力之护符を所持</TD>
-            <TD class="tb-cell2">6</TD>
+            <TD class="tb-cell1">火场怪力+2技能<br>（体力低于40%发动）</TD>
+            <TD class="tb-cell3">x1.5</TD>
           </TR>
           <TR>
-            <TD class="tb-cell1">力之爪を所持</TD>
-            <TD class="tb-cell2">9</TD>
+            <TD class="tb-cell1">持有力之护符</TD>
+            <TD class="tb-cell3">+6</TD>
           </TR>
           <TR>
-            <TD class="tb-cell1">食事效果</TD>
-            <TD class="tb-cell2">3または5</TD>
+            <TD class="tb-cell1">持有力之爪</TD>
+            <TD class="tb-cell3">+9</TD>
           </TR>
           <TR>
-            <TD class="tb-cell1">鬼人药</TD>
-            <TD class="tb-cell2">3</TD>
+            <TD class="tb-cell1">料理效果</TD>
+            <TD class="tb-cell2" rowspan="3">２<BR>
+            <TD class="tb-cell3">+3或+5</TD>
+          </TR>
+          <TR>
+            <TD class="tb-cell1">鬼人药/鬼人弹</TD>
+            <TD class="tb-cell3">+3</TD>
           </TR>
           <TR>
             <TD class="tb-cell1">鬼人药Ｇ</TD>
-            <TD class="tb-cell2">5</TD>
-          </TR>
-          <TR>
-            <TD class="tb-cell1">怪力之种 (180秒)</TD>
-            <TD class="tb-cell2">10</TD>
-          </TR>
-          <TR>
-            <TD class="tb-cell1">怪力药丸 (21秒)</TD>
-            <TD class="tb-cell2">25</TD>
+            <TD class="tb-cell3">+5</TD>
           </TR>
           <TR>
             <TD class="tb-cell1">鬼人笛 (180秒)</TD>
-            <TD class="tb-cell2">10</TD>
+            <TD class="tb-cell2" rowspan="3">３<BR>
+            <TD class="tb-cell3">+10</TD>
+          </TR>
+          <TR>
+            <TD class="tb-cell1">怪力之种 (180秒)</TD>
+            <TD class="tb-cell3">+10</TD>
+          </TR>
+          <TR>
+            <TD class="tb-cell1">怪力药丸 (21秒)</TD>
+            <TD class="tb-cell3">+25</TD>
+          </TR>
+          <TR>
+            <TD class="tb-cell1">笛旋律攻击小 (90秒)</TD>
+            <TD class="tb-cell2" rowspan="4">４<BR>
+            <TD class="tb-cell3">x1.1</TD>
+          </TR>
+          <TR>
+            <TD class="tb-cell1">└ 进一步强化 (+60秒)</TD>
+            <TD class="tb-cell3">x1.15</TD>
+          </TR>
+          <TR>
+            <TD class="tb-cell1">笛旋律攻击大 (60秒)</TD>
+            <TD class="tb-cell3">x1.15</TD>
+          </TR>
+          <TR>
+            <TD class="tb-cell1">└ 进一步强化 (+30秒)</TD>
+            <TD class="tb-cell3">x1.25</TD>
           </TR>
         </TBODY>
       </TABLE>
       </TD>
-      <TD class="tb-cell0" valign="top" colspan="2">プレイヤーの攻击力をアップする手段はいろいろありますが、大別して３つのグループに分けられます。<BR>
+      <TD class="tb-cell0" valign="top" colspan="2">提升玩家攻击力的手段多种多样，大体可分为4个类别。<BR>
       <BR>
-      　　１：攻击力アップのスキル発動、攻击力をアップするアイテムの所持（力之护符・力之爪）<BR>
-      　　２：食事效果によるアップ、鬼人药・鬼人药Ｇの使用<BR>
-      　　３：怪力之种・怪力药丸・鬼人笛の使用<BR>
+      　　１：攻击力UP、火场怪力+2技能效果的发动、持有提升攻击力的特殊道具（力之护符・力之爪）<BR>
+      　　２：料理效果、鬼人药/鬼人弹・鬼人药Ｇ的使用<BR>
+      　　３：鬼人笛・怪力之种・怪力药丸的使用<BR>
+      　　４：狩猎笛旋律效果（参考 <A href="./senritsu.html">狩猎笛旋律一览</A>）<BR>
       <BR>
-      グループ１は、クエスト中に力尽きても効力が失われることはありません。<BR>
-      グループ２は、クエスト中はずっと有効ですが、力尽きると効力が失われます。<BR>
-      グループ３は、一定の时间が経過すると、効力が失われます。<BR>
+      类别１在任务中即使力尽倒地效果也不会消失。<BR>
+      类别２在任务中的效果会由于力尽倒地而消失。<BR>
+      类别３、４为限时效果，经过一定的时间后消失。<BR>
       <BR>
-      それぞれの武器倍率アップ量は、左表のとおりです。<BR>
+      对武器倍率的提升量如左表所示。<BR>
       <BR>
-      グループ２と３は、グループ内の各效果が重複することはありません。重複した場合は、順番にかかわらず<BR>
-      效果の大きいものが優先されます。<BR>
+      类别２、３、４各组内的效果无法重复叠加，每组只能存在1个。<BR>
+      发生重复的场合下，类别２以同组内提升效果更高者优先，类别３则是新效果覆盖旧效果，<BR>
+      类别４以同组内等级更高者优先，表格中效果等级为升序排列。<BR>
       <BR>
-      例えば、食事效果で武器倍率が５上昇した状態で鬼人药を使用しても、武器倍率上昇量は５のままです。<BR>
-      しかし、食事效果で武器倍率が３上昇した状態で鬼人药Ｇを使用した場合は、上昇量が５になります。</TD>
+      例如，在料理效果增加5点武器倍率的状态下使用鬼人药，武器倍率的提升量仍然是+5。<BR>
+      但是，在料理效果增加3点武器倍率的状态下使用鬼人药Ｇ，武器倍率的提升量将变为+5。<BR>
+      使用怪力药丸增加25点武器倍率后使用怪力种子，武器倍率的提升量将变为+10。<BR>
+      在玩家A的笛旋律攻击大（x1.15）效果即将结束时，玩家B吹奏笛旋律攻击小+进一步强化（x1.15），<BR>
+      不会更新提升效果，攻击提升将在A效果结束时消失，B效果不会生效。<BR>
+      相反，玩家B吹奏笛旋律攻击小+进一步强化（x1.15）的效果即将结束时，玩家A吹奏笛旋律攻击大（x1.15），此时A效果将立即覆盖B效果，并更新持续时间为60秒。<BR><BR>
+      注：太刀满练气槽触发的武器倍率提升量等同于怪力药丸，属类别３，持续时间至练气槽自然下降（30秒）。</TD>
     </TR>
   </TBODY>
 </TABLE>

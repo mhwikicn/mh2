@@ -28,12 +28,12 @@ ShowLinks(0, 99);
 <H3>对怪物的攻击　【枪弩编】</H3>
 <P class="tb-cell0">表示玩家的枪弩射击对怪物造成的伤害。</P>
 <b>枪弩伤害计算公式：</b><BR>
-<b><font size=2>注：由于硬件原因以及武器倍率/面板攻击力显示值在计算中的取整机制，所有涉及小数与乘法的计算结果可能产生偏差</font></b><BR>
+<b><font size=2>注：由于硬件原因以及各种数值在计算中可能出现的取整机制，所有涉及小数与乘法的计算结果可能产生偏差</font></b><BR><BR>
 通常伤害（期望值）=武器倍率×弹种威力%×速射倍率修正×飞行距离威力修正×弹种技能威力修正×对应攻击类型肉质%×状态追加倍率×全体防御率×会心期望<BR>
 属性伤害=各弹种附带属性值×速射倍率修正×对应属性肉质%×全体防御率<BR>
 爆炸伤害=各弹种爆炸威力值×状态追加倍率×全体防御率<BR>
 会心期望（正）=1+会心率×0.25<BR>
-会心期望（负）=1-会心率×0.5<BR>
+会心期望（负）=1-会心率×0.5<BR><BR>
 <TABLE border="0" width="894">
   <TBODY>
     <TR>
@@ -102,7 +102,7 @@ ShowLinks(0, 99);
       <BR>
       彻甲榴弹与扩散弹 （） 内的值为着弹后爆炸的威力，属于“无”类型攻击，不受肉质影响。<BR>
       子弹本身的基本威力与枪弩的武器倍率相关，但之后的爆炸威力与武器倍率无关，（） 内的值为固定威力。<BR>
-      此外，爆炸会产生额外的火属性伤害，这部分会受到肉质（火）的影响而减轻。<BR>
+      此外，爆炸会产生额外的火属性伤害，这部分会受到肉质（火）的影响。<BR>
       <BR>
       状态异常属性弹（毒弹・麻痹弹・睡眠弹・捕获用麻醉弹）属于“无”类型攻击，其基本威力不受肉质影响，<BR>
       可视为肉质（无）＝100%。<BR>
@@ -504,7 +504,7 @@ ShowLinks(0, 99);
       <TD class="tb-cell0"></TD>
     </TR>
     <TR>
-      <TD valign="top" class="tb-cell0"><B>枪弩的再装填修正值</B>
+      <TD valign="top" class="tb-cell0"><B>枪弩的再装填修正</B>
       <TABLE border="1" cellspacing="0" cellpadding="2" class="cnt-tb2">
         <TBODY>
           <TR>
@@ -534,7 +534,7 @@ ShowLinks(0, 99);
         </TBODY>
       </TABLE>
       <BR>
-      <B>装填速度技能修正值</B>
+      <B>装填速度技能修正</B>
       <TABLE border="1" cellspacing="0" cellpadding="2" class="cnt-tb2">
         <TBODY>
           <TR>
@@ -1142,7 +1142,7 @@ ShowLinks(0, 99);
       <TD class="tb-cell0"></TD>
     </TR>
     <TR>
-      <TD valign="top" class="tb-cell0"><B>枪弩的反动修正值</B>
+      <TD valign="top" class="tb-cell0"><B>枪弩的反动修正</B>
       <TABLE border="1" cellspacing="0" cellpadding="2" class="cnt-tb2">
         <TBODY>
           <TR>
@@ -1160,7 +1160,7 @@ ShowLinks(0, 99);
         </TBODY>
       </TABLE>
       <BR>
-      <B>反动轻减技能修正值</B>
+      <B>反动轻减技能修正</B>
       <TABLE border="1" cellspacing="0" cellpadding="2" class="cnt-tb2">
         <TBODY>
           <TR>
@@ -1772,7 +1772,8 @@ ShowLinks(0, 99);
       进一步测试发现状态追加倍率可能因怪物而异，例如一角龙在麻痹测试中未检测到状态追加倍率……<BR>
       对所有怪物进行状态追加倍率测试可能较为困难……<BR>
       <BR>
-      （2024/03/16 追记）<BR><BR></TD>
+      （2024/03/16 追记）<BR><BR>
+      </TD>
     </TR>
     <TR>
       <TD height="30"></TD>
@@ -1800,7 +1801,7 @@ ShowLinks(0, 99);
       上位等级时会逐渐降低，进一步提高减轻程度，降低受到的总伤害值。<BR>
       <BR>
       怪物在愤怒状态下，全体防御率还会降低至约 5/6，进一步减轻所受伤害。<BR>
-      （具体降低程度因怪物而异）</TD>
+      （具体是否降低与降低程度因怪物而异）</TD>
     </TR>
     <TR>
       <TD height="30"></TD>
