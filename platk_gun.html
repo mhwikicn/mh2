@@ -29,7 +29,7 @@ ShowLinks(0, 99);
 <P class="tb-cell0">表示玩家的枪弩射击对怪物造成的伤害。</P>
 <b>枪弩伤害计算公式：</b><BR>
 <b><font size=2>注：由于硬件原因以及各种数值在计算中可能出现的取整机制，所有涉及小数与乘法的计算结果可能产生偏差</font></b><BR><BR>
-通常伤害（期望值）=武器倍率×弹种威力%×速射倍率修正×飞行距离威力修正×弹种技能威力修正×对应攻击类型肉质%×状态追加倍率×全体防御率×会心期望<BR>
+通常伤害（期望值）=武器倍率×弹种威力%×速射倍率修正×飞行距离威力修正×弹种技能威力修正×对应攻击系统肉质%×状态追加倍率×全体防御率×会心期望<BR>
 属性伤害=各弹种附带属性值×速射倍率修正×对应属性肉质%×全体防御率<BR>
 爆炸伤害=各弹种爆炸威力值×状态追加倍率×全体防御率<BR>
 会心期望（正）=1+会心率×0.25<BR>
@@ -100,14 +100,14 @@ ShowLinks(0, 99);
       <B>武器倍率</B>与各弹种的<B>威力（以%计算）</B>相乘，就得到了<B>基本威力</B>。<BR>
       例如，攻击力 108 的榴弹弩发射LV2通常弹时，90×12％＝10.8 即为基本威力。<BR>
       <BR>
-      彻甲榴弹与扩散弹 （） 内的值为着弹后爆炸的威力，属于“无”类型攻击，不受肉质影响。<BR>
+      彻甲榴弹与扩散弹 （） 内的值为着弹后爆炸的威力，属于“无”系统攻击，不受肉质影响。<BR>
       子弹本身的基本威力与枪弩的武器倍率相关，但之后的爆炸威力与武器倍率无关，（） 内的值为固定威力。<BR>
       此外，爆炸会产生额外的火属性伤害，这部分会受到肉质（火）的影响。<BR>
       <BR>
-      状态异常属性弹（毒弹・麻痹弹・睡眠弹・捕获用麻醉弹）属于“无”类型攻击，其基本威力不受肉质影响，<BR>
+      状态异常属性弹（毒弹・麻痹弹・睡眠弹・捕获用麻醉弹）属于“无”系统攻击，其基本威力不受肉质影响，<BR>
       可视为肉质（无）＝100%。<BR>
       （睡眠弹与捕获用麻醉弹的弹威力为０，因此基本威力也为０）<BR><BR>
-      除威力为０的特殊弹种，其他弹种的基本威力均属于“弹”类型攻击，会受到肉质（弹）影响。<BR>
+      除威力为０的特殊弹种，其他弹种的基本威力均属于“弹”系统攻击，会受到肉质（弹）影响。<BR>
       <BR>
       部分轻型枪弩带有速射功能，装填对应的速射弹种时，１发弹药能够进行多次发射，虽然看似经济节约，<BR>
       但速射弹种的基本威力与属性值都是单发的一半，即速射倍率修正为0.5。<BR>
@@ -125,7 +125,7 @@ ShowLinks(0, 99);
           <TR>
             <TD class="tb-th2" width="100">弹种</TD>
             <TD class="tb-th2" width="110">威力（%）</TD>
-            <TD class="tb-th2" width="60">类型</TD>
+            <TD class="tb-th2" width="70">系统</TD>
             <TD class="tb-th2" width="52">打击数</TD>
             <TD class="tb-th2" width="52">所持数</TD>
             <TD class="tb-th2" width="75">装填值</TD>
@@ -225,7 +225,7 @@ ShowLinks(0, 99);
           <TR>
             <TD class="tb-th5">LV1 彻甲榴弹</TD>
             <TD class="tb-cell2">3 +（20）</TD>
-            <TD class="tb-cell2">弹（无）</TD>
+            <TD class="tb-cell2">弹 +（无）</TD>
             <TD class="tb-cell2">1</TD>
             <TD class="tb-cell2">9</TD>
             <TD class="tb-cell2">7</TD>
@@ -235,7 +235,7 @@ ShowLinks(0, 99);
           <TR>
             <TD class="tb-th5">LV2 彻甲榴弹</TD>
             <TD class="tb-cell2">3 +（30）</TD>
-            <TD class="tb-cell2">弹（无）</TD>
+            <TD class="tb-cell2">弹 +（无）</TD>
             <TD class="tb-cell2">1</TD>
             <TD class="tb-cell2">9</TD>
             <TD class="tb-cell2">8</TD>
@@ -245,7 +245,7 @@ ShowLinks(0, 99);
           <TR>
             <TD class="tb-th5">LV3 彻甲榴弹</TD>
             <TD class="tb-cell2">3 +（40）</TD>
-            <TD class="tb-cell2">弹（无）</TD>
+            <TD class="tb-cell2">弹 +（无）</TD>
             <TD class="tb-cell2">1</TD>
             <TD class="tb-cell2">9</TD>
             <TD class="tb-cell2">9</TD>
@@ -255,7 +255,7 @@ ShowLinks(0, 99);
           <TR>
             <TD class="tb-th5">LV1 扩散弹</TD>
             <TD class="tb-cell2">6 +（32×3）</TD>
-            <TD class="tb-cell2">弹（无）</TD>
+            <TD class="tb-cell2">弹 +（无）</TD>
             <TD class="tb-cell2">1</TD>
             <TD class="tb-cell2">3</TD>
             <TD class="tb-cell2">8</TD>
@@ -265,7 +265,7 @@ ShowLinks(0, 99);
           <TR>
             <TD class="tb-th5">LV2 扩散弹</TD>
             <TD class="tb-cell2">6 +（32×4）</TD>
-            <TD class="tb-cell2">弹（无）</TD>
+            <TD class="tb-cell2">弹 +（无）</TD>
             <TD class="tb-cell2">1</TD>
             <TD class="tb-cell2">3</TD>
             <TD class="tb-cell2">9</TD>
@@ -275,7 +275,7 @@ ShowLinks(0, 99);
           <TR>
             <TD class="tb-th5">LV3 扩散弹</TD>
             <TD class="tb-cell2">6 +（32×5）</TD>
-            <TD class="tb-cell2">弹（无）</TD>
+            <TD class="tb-cell2">弹 +（无）</TD>
             <TD class="tb-cell2">1</TD>
             <TD class="tb-cell2">3</TD>
             <TD class="tb-cell2">10</TD>
@@ -1744,26 +1744,33 @@ ShowLinks(0, 99);
             <TD class="tb-cell3">1.1倍&nbsp;</TD>
           </TR>
           <TR>
-            <TD class="tb-cell1">落穴　（仅限自陷落开始<BR>
-            到结束的时间）</TD>
+            <TD class="tb-cell1">进食中<BR>（大名盾蟹/将军镰蟹）</TD>
             <TD class="tb-cell3">1.1倍&nbsp;</TD>
           </TR>
           <TR>
-            <TD class="tb-cell1">睡眠中　（首次攻击）</TD>
+            <TD class="tb-cell1">落穴　（陷落期间）</TD>
+            <TD class="tb-cell3">1.1倍&nbsp;</TD>
+          </TR>
+          <TR>
+            <TD class="tb-cell1">睡眠状态中　（首次攻击）</TD>
             <TD class="tb-cell3">3.0倍&nbsp;</TD>
+          </TR>
+          <TR>
+            <TD class="tb-cell1">待补充…</TD>
+            <TD class="tb-cell3">…&nbsp;</TD>
           </TR>
         </TBODY>
       </TABLE>
       </TD>
       <TD class="tb-cell0" valign="top" colspan="2">怪物在特定的状态下受到攻击时，其伤害根据左表进行追加。<BR>
-      该倍率影响除属性伤害外的其他所有伤害类型。<BR>
+      该倍率影响除属性伤害外的其他所有攻击伤害系统。<BR>
       顺便一提，本作中怪物在麻痹状态下所受伤害会固定增加。<BR>
       但麻痹陷阱造成的并非麻痹状态而是麻木状态，因此不会增加伤害。<BR>
       一角龙、角龙由于音爆等效果在地下挣扎的状态不属于落穴状态。<BR>
       <BR>
       （2006/04/25 追记）<BR><BR>
       另外经过测试发现睡眠状态似乎不会影响武器伤害（眠斩无用？），只影响部分特殊伤害。<BR>
-      已确认睡眠状态下有3倍伤害的来源有：小桶爆弹、小桶爆弹Ｇ、大桶爆弹、大桶爆弹Ｇ、<BR>
+      已确认睡眠状态下3倍伤害的来源有：小桶爆弹、小桶爆弹Ｇ、大桶爆弹、大桶爆弹Ｇ、<BR>
       支给专用大桶爆弹、电击熊爆弹、爆雷针、击龍枪（战斗街&修雷德城）。<BR>
       大型弩弹、大炮弹、飞空爆弹/飞空爆弹Ｇ伤害不受睡眠状态影响。<BR>
       据此推测睡眠3倍伤害可能限定为“静态伤害来源”，具体情况仍需进一步研究。<BR>
@@ -1792,7 +1799,7 @@ ShowLinks(0, 99);
       <TD valign="top" class="tb-cell0"></TD>
       <TD class="tb-cell0" valign="top" colspan="2">根据到此为止的计算结果，计算对怪物的粗伤害，<BR>
       要考虑到怪物存在肉质的设定，通常会减轻受到的伤害。<BR>
-      除爆炸・状态异常属性弹等“无”类型攻击伤害外，其他通常伤害、属性伤害都会受到肉质影响。<BR>
+      除爆炸・状态异常属性弹等“无”系统攻击伤害外，其他通常伤害、属性伤害都会受到肉质影响。<BR>
       减轻程度因不同的怪物部位而异。详情参考 <A href="./monslist/index.html">怪物数据</A> 中肉质相关项目。<BR>
       <BR>
       根据肉质对伤害的影响计算通常伤害与属性伤害合计得到粗伤害后，要得到最终对怪物的总伤害，<BR>
