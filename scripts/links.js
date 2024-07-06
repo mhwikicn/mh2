@@ -36,10 +36,10 @@ function ShowLinks(level, kind)
 
   str1 = "";
   str2 = "";
-//  if (kind != 2) {
+  if (kind != 2) {
     str1 = "<A href=\"" + urlSuffix + "stpickmap/index.html\" target=\"_top\">";
     str2 = "</A>";
-//  }
+  }
   html += "　　" + str1 + "采取・发掘地图" + str2;
 
   str1 = "";
@@ -65,6 +65,14 @@ function ShowLinks(level, kind)
     str2 = "</A>";
   }
   html += "　　" + str1 + "离线任务" + str2;
+
+  str1 = "";
+  str2 = "";
+  if (kind != 18) {
+    str1 = "<A href=\"" + urlSuffix + "terms.html\" target=\"_top\">";
+    str2 = "</A>";
+  }
+  html += "　　　　　　　　　　　" + str1 + "中日名词对照表" + str2;
 
   str1 = "";
   str2 = "";
