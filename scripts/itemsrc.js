@@ -110,22 +110,22 @@ hoshuName[4] = "支线A达成报酬";
 hoshuName[5] = "支线B达成报酬";
 
 shopName = new Array(16);
-shopName[0] = "江波村杂货屋";
-shopName[1] = "江波村调合屋";
+shopName[0] = "江波村杂货店";
+shopName[1] = "江波村调合店";
 shopName[2] = "造访江波村的行商婆婆(1)";
 shopName[3] = "造访江波村的行商婆婆(2)";
 shopName[4] = "江波村工房";
-shopName[5] = "江波村食材屋";
-shopName[6] = "江波村道具屋";
+shopName[5] = "江波村食材店";
+shopName[6] = "江波村道具店";
 shopName[7] = "科科特村的行商青年";
-shopName[8] = "科科特村杂货屋";
+shopName[8] = "科科特村杂货店";
 shopName[9] = "街门的随性杂货商";
-shopName[10] = "街杂货屋";
-shopName[11] = "街食材屋";
-shopName[12] = "街调合屋";
-shopName[13] = "街道具屋";
-shopName[14] = "街斗技场杂货屋";
-shopName[15] = "街大老殿杂货屋";
+shopName[10] = "街杂货店";
+shopName[11] = "街食材店";
+shopName[12] = "街调合店";
+shopName[13] = "街道具店";
+shopName[14] = "街斗技场杂货店";
+shopName[15] = "街大老殿杂货店";
 
 //******************************************************
 bukiName = new Array(11);
@@ -441,7 +441,7 @@ function ShowItemDetail()
       ic = ic + 14;
 
     } else if (yflag == "K") {				//塊系が何になるか
-      html += "在武具屋生产时，";
+      html += "在武具店生产时，";
       html += Number(data.substring(ic+5,ic+7)) + "％的概率做成 ";
       html += FormatBukiName(data.substring(ic+1,ic+5));
       html += " ";
