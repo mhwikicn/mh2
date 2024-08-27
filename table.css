@@ -170,6 +170,21 @@
 	padding-left : 3px;
 }
 
+.tb-cell1g {
+	font-size : 80%;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #333333;
+	border-right-color: #333333;
+	border-bottom-color: #333333;
+	border-left-color: #333333;
+	border-width : 0px 1px 1px 0px;
+	background-color: #DDDDDD;
+	padding-left : 3px;
+}
+
 .tb-cell11 {
 	font-size : 80%;
 	border-top-style: solid;
