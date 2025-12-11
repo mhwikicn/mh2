@@ -401,7 +401,7 @@ function ShowItemDetail()
     if (yflag == "J") {
       kind = data.substring(ic+1,ic+2);			//爺さんの场所
       if (kind == 9) {
-        html += "任意山菜爷处，将";
+        html += "任意山菜爷处，将其";
         numb = Number(data.substring(ic+2,ic+4));
         if (numb > 1)  html += numb + "个";
         html += "交付后可获得 ";
