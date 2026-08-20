@@ -16,15 +16,22 @@ mapHtml[9] = "tori";
 
 mapName = new Array(10);
 mapName[0] = "密林";
-mapName[1] = "砂漠";
+mapName[1] = "沙漠";
 mapName[2] = "沼地";
 mapName[3] = "雪山";
 mapName[4] = "火山";
 mapName[5] = "森丘";
-mapName[6] = "塔（１）";
-mapName[7] = "塔（２）";
+mapName[6] = "塔（1）";
+mapName[7] = "塔（2）";
 mapName[8] = "战斗街";
 mapName[9] = "砦";
+
+jiName = new Array(5);
+jiName[0] = "<A href=\"../jisanlist.html#0001\" target=\"jisan\">密林的山菜爷</A>";
+jiName[1] = "<A href=\"../jisanlist.html#0004\" target=\"jisan\">沙漠的山菜爷</A>";
+jiName[2] = "<A href=\"../jisanlist.html#0003\" target=\"jisan\">沼地的山菜爷</A>";
+jiName[3] = "<A href=\"../jisanlist.html#0005\" target=\"jisan\">雪山的山菜爷</A>";
+jiName[5] = "<A href=\"../jisanlist.html#0002\" target=\"jisan\">森丘的山菜爷</A>";
 
 monsName = new Array(74);
 monsName[1] = "雌火龙";
@@ -34,7 +41,7 @@ monsName[4] = "苔猪";
 monsName[5] = "大野猪";
 monsName[6] = "大怪鸟";
 monsName[7] = "老山龍";
-monsName[8] = "砂龙王";
+monsName[8] = "沙龙王";
 monsName[9] = "白猫";
 monsName[10] = "山菜爷";
 monsName[11] = "雄火龙";
@@ -60,8 +67,8 @@ monsName[30] = "红速龙";
 monsName[31] = "红速龙王";
 monsName[32] = "小猪";
 monsName[33] = "麒麟";
-monsName[34] = "砂龙";
-monsName[35] = "白速龙";
+monsName[34] = "沙龙";
+monsName[35] = "白蓝速龙";
 monsName[36] = "红黑龍";
 monsName[37] = "雌火龙【亚种】";
 monsName[38] = "大怪鸟【亚种】";
@@ -110,22 +117,22 @@ hoshuName[4] = "支线A达成报酬";
 hoshuName[5] = "支线B达成报酬";
 
 shopName = new Array(16);
-shopName[0] = "江波村杂货店";
-shopName[1] = "江波村调合店";
-shopName[2] = "造访江波村的行商婆婆(1)";
-shopName[3] = "造访江波村的行商婆婆(2)";
-shopName[4] = "江波村工房";
-shopName[5] = "江波村食材店";
-shopName[6] = "江波村道具店";
-shopName[7] = "科科特村的行商青年";
-shopName[8] = "科科特村杂货店";
-shopName[9] = "街门的随性杂货商";
-shopName[10] = "街杂货店";
-shopName[11] = "街食材店";
-shopName[12] = "街调合店";
-shopName[13] = "街道具店";
-shopName[14] = "街斗技场杂货店";
-shopName[15] = "街大老殿杂货店";
+shopName[0] = "<A href=\"../shop.html#00\"  target=\"shop\">江波村杂货店</A>";
+shopName[1] = "<A href=\"../shop.html#01\"  target=\"shop\">江波村调合店</A>";
+shopName[2] = "<A href=\"../shop.html#02\"  target=\"shop\">造访江波村的行商婆婆(1)</A>";
+shopName[3] = "<A href=\"../shop.html#02\"  target=\"shop\">造访江波村的行商婆婆(2)</A>";
+shopName[4] = "<A href=\"../shop.html#03\"  target=\"shop\">工房</A>";
+shopName[5] = "<A href=\"../shop.html#04\"  target=\"shop\">江波村食材店</A>";
+shopName[6] = "<A href=\"../shop.html#05\"  target=\"shop\">江波村道具店</A>";
+shopName[7] = "<A href=\"../shop.html#06\"  target=\"shop\">科科特村的行商青年</A>";
+shopName[8] = "<A href=\"../shop.html#07\"  target=\"shop\">科科特村杂货店</A>";
+shopName[9] = "<A href=\"../shop.html#08\"  target=\"shop\">东多尔玛街门的随性杂货商</A>";
+shopName[10] = "<A href=\"../shop.html#09\"  target=\"shop\">东多尔玛街酒场杂货店</A>";
+shopName[11] = "<A href=\"../shop.html#0a\"  target=\"shop\">东多尔玛街食材店</A>";
+shopName[12] = "<A href=\"../shop.html#0b\"  target=\"shop\">东多尔玛街调合店</A>";
+shopName[13] = "<A href=\"../shop.html#0c\"  target=\"shop\">东多尔玛街道具店</A>";
+shopName[14] = "<A href=\"../shop.html#0d\"  target=\"shop\">东多尔玛街斗技场杂货店</A>";
+shopName[15] = "<A href=\"../shop.html#0e\"  target=\"shop\">东多尔玛街大老殿杂货店</A>";
 
 //******************************************************
 bukiName = new Array(11);
@@ -251,7 +258,7 @@ function ShowItemDetail()
 
     if (yflag == "M") {
       html += FormatItemName(data.substring(ic+1,ic+4)) + " 与 ";
-      html += FormatItemName(data.substring(ic+4,ic+7)) + " ２种调合而来";
+      html += FormatItemName(data.substring(ic+4,ic+7)) + " 2种调合而来";
       html += " （成功率" + Number(data.substring(ic+7,ic+10)) + "％）";
       if (data.substring(ic+10,ic+11) == 1)  html += "　【炼金】";
       ic = ic + 11;
@@ -259,7 +266,7 @@ function ShowItemDetail()
     } else if (yflag == "X") {
       html += FormatItemName(data.substring(ic+1,ic+4)) + " 与 ";
       html += FormatItemName(data.substring(ic+4,ic+7)) + " 与 ";
-      html += FormatItemName(data.substring(ic+7,ic+10)) + " ３种调合而来";
+      html += FormatItemName(data.substring(ic+7,ic+10)) + " 3种调合而来";
       html += " （成功率" + Number(data.substring(ic+10,ic+13)) + "％）";
       if (data.substring(ic+13,ic+14) == 1)  html += "　【炼金】";
       ic = ic + 14;
@@ -267,13 +274,13 @@ function ShowItemDetail()
     } else if (yflag == "J") {
       kind = data.substring(ic+1,ic+2);			//爺さんの场所
       if (kind == 9) {
-        html += "任意山菜爷处交付 ";
+        html += "<A href=\"../jisanlist.html#0000\" target=\"jisan\">任意山菜爷</A>处交付 ";
         html += FormatItemName(data.substring(ic+2,ic+5));
         numb = data.substring(ic+5,ic+7);
         if (numb > 1)  html += "×" + numb;
         html += " 后可获得";
       } else {
-        html += mapName[kind] + "的山菜爷处交付 ";
+        html += jiName[kind] + "处交付 ";
         html += FormatItemName(data.substring(ic+2,ic+5));
         html += " 后可能获得";
       }
@@ -282,7 +289,7 @@ function ShowItemDetail()
     } else if (yflag == "K") {
       html += FormatItemName(data.substring(ic+1,ic+4));
       html += " 在";
-      html += "<A href=\"../makalist.html#" + FixData(data.substring(ic+4,ic+6), 4) + "\">";
+      html += "<A href=\"../makalist.html#" + FixData(data.substring(ic+4,ic+6), 4) + "\" target=\"maka\">";
       html += "埋下一定时间后</A>可入手";
       ic = ic + 6;
 
@@ -401,14 +408,14 @@ function ShowItemDetail()
     if (yflag == "J") {
       kind = data.substring(ic+1,ic+2);			//爺さんの场所
       if (kind == 9) {
-        html += "任意山菜爷处，将其";
+        html += "<A href=\"../jisanlist.html#0000\" target=\"jisan\">任意山菜爷</A>处，将其";
         numb = Number(data.substring(ic+2,ic+4));
         if (numb > 1)  html += numb + "个";
         html += "交付后可获得 ";
         html += FormatItemName(data.substring(ic+4,ic+7));
         html += " ";
       } else {
-        html += mapName[kind] + "的山菜爷处交付可获得 ";
+        html += jiName[kind] + "处交付可获得 ";
         html += FormatItemName(data.substring(ic+4,ic+7));
         numb = data.substring(ic+7,ic+10);
         if (numb > 0)  html += " 或 " + FormatItemName(numb);
@@ -422,7 +429,7 @@ function ShowItemDetail()
 
     } else if (yflag == "M") {				//2種調合に使える
       html += FormatItemName(data.substring(ic+8,ic+11));
-      html += " 一同进行２种调合后可做成 ";
+      html += " 一同进行2种调合后可做成 ";
       html += FormatItemName(data.substring(ic+1,ic+4));
       html += " （成功率";
       html += Number(data.substring(ic+4,ic+7)) + "％）";
@@ -433,7 +440,7 @@ function ShowItemDetail()
       html += FormatItemName(data.substring(ic+8,ic+11));
       html += " 与 ";
       html += FormatItemName(data.substring(ic+11,ic+14));
-      html += " 一同进行３种调合后可做成 ";
+      html += " 一同进行3种调合后可做成 ";
       html += FormatItemName(data.substring(ic+1,ic+4));
       html += " （成功率";
       html += Number(data.substring(ic+4,ic+7)) + "％）";
@@ -484,7 +491,7 @@ function FormatBukiName(tdata)
   tkind = Number("0x"+tdata.substring(0,1));
   thtml += bukiName[tkind] + " ";
   tbno = Number(tdata.substring(1,4));
-  thtml += "<A href=\"../bugu/" + bukiHtml[tkind] + "#" + FixData(tbno, 4) + "\">";
+  thtml += "<A href=\"../bugu/" + bukiHtml[tkind] + "#" + FixData(tbno, 4) + "\" target=\"weapon\">";
   if (tkind == 1  || tkind == 5  ||  tkind == 10) {
     thtml += gunname[tbno] + "</A>";
   } else {
@@ -501,7 +508,7 @@ function FormatBoguName(tdata)
   tbno = Number(tdata.substring(1,4));
   thtml += "<A href=\"../bugu/";
   thtml += boguHtml[tkind];
-  thtml += "#" + FixData(tbno, 4) + "\">";
+  thtml += "#" + FixData(tbno, 4) + "\" target=\"armor\">";
   if (tkind == 0) {
     thtml += footname[tbno];
   } else if (tkind == 2) {
@@ -523,7 +530,7 @@ function FormatSoshName(tdata)
   thtml = "";
   thtml += "装饰品 ";
   tbno = Number(tdata.substring(1,4));
-  thtml += "<A href=\"../bugu/soushoku.html#" + FixData(tbno, 4) + "\">";
+  thtml += "<A href=\"../bugu/soushoku.html#" + FixData(tbno, 4) + "\" target=\"deco\">";
   thtml += soshname[tbno] + "</A>";
   return thtml;
 }
@@ -554,7 +561,7 @@ function FormatSaishu(tdata, tcla)
     if (tcla == 1) {
       thtml += "h";
     }
-    thtml += ".html#" + FixData(areaNo, 2) + "d\">";
+    thtml += ".html#" + FixData(areaNo, 2) + "d\" target=\"gather\">";
     thtml += mapName[mapNo];
     if (areaNo == 0) {
       thtml += "　营地-" + ptsNo;
@@ -586,7 +593,7 @@ function FormatHagi(tdata)
     prob = Number(tdata.substring(ic+3,ic+6));
 
     if (ic > 0)  thtml += "<BR>";
-    thtml += "<A href=\"../monslist/mons" + Fix16Data(monsNo, 2) + ".html\">";
+    thtml += "<A href=\"../monslist/mons" + Fix16Data(monsNo, 2) + ".html\" target=\"monster\">";
     thtml += monsName[monsNo] + "</A>";
 
     if (kind == 0) {
@@ -600,11 +607,11 @@ function FormatHagi(tdata)
     } else if (kind == 4) {
       thtml += "（王） 剥取入手";
     } else if (kind == 5) {
-      thtml += " 的掉落物１采集入手";
+      thtml += " 的掉落物1采集入手";
     } else if (kind == 6) {
-      thtml += " 的掉落物２采集入手";
+      thtml += " 的掉落物2采集入手";
     } else if (kind == 7) {
-      thtml += " 的掉落物３采集入手";
+      thtml += " 的掉落物3采集入手";
     }
     thtml += "　（" + prob + "％）";
   }
@@ -646,7 +653,7 @@ function FormatHoushu(tdata)
       } else {
         thtml += "on";
       }
-      thtml += "quest/rem" + tqnm.charAt(1) + ".html#" + tqnm.substring(2,6) + "\">";
+      thtml += "quest/rem" + tqnm.charAt(1) + ".html#" + tqnm.substring(2,6) + "\" target=\"quest\">";
       thtml += tqnm.substring(6) + "</A>" + " 的 ";
       if (numb >= 900) {
         thtml += hoshuName[numb-900];
@@ -659,7 +666,7 @@ function FormatHoushu(tdata)
     } else {
       tqnm = vquename[tqno-500];
       thtml += "活动任务 ";
-      thtml += "<A href=\"../evquest/evrem" + FixData(tqno-500,2) + ".html\">";
+      thtml += "<A href=\"../evquest/evrem" + FixData(tqno-500,2) + ".html\" target=\"quest\">";
       thtml += tqnm + "</A>" + " 的 ";
       if (numb >= 900) {
         thtml += hoshuName[numb-900];

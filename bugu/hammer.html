@@ -8,6 +8,55 @@
 <LINK rel="stylesheet" href="../table.css" type="text/css">
 <SCRIPT src="../scripts/links.js"></SCRIPT>
 </HEAD>
+<SCRIPT src="../scripts/blink.js"></SCRIPT>
+<STYLE>
+.gauge {
+  width: 160px;
+  margin: 0 auto;
+  display: flex;
+  height: 10px;
+  line-height: 0;
+  font-size: 0;
+  border-top: 1px solid gray;
+  border-bottom: 1px dotted gray;
+  border-left: 1px solid gray;
+  border-right: 1px solid gray;
+}
+.gauge-ext {
+  width: 160px;
+  margin: 0 auto;
+  display: flex;
+  height: 10px;
+  line-height: 0;
+  font-size: 0;
+  border-bottom: 1px solid gray;
+  border-left: 1px solid gray;
+  border-right: 1px solid gray;
+}
+.tb-cell1 font[size="-2"] {
+  display: block;
+  text-align: center;
+  margin-top: 2px;
+}
+.cnt-tb2 {
+  table-layout: fixed;
+  width: 1080px;
+}
+.highlight-row td,
+.highlight-row th {
+  background-color: #c7edcc !important;
+  transition: background-color 0.3s ease;
+}
+.cnt-tb2 > tbody:first-child > tr:first-child {
+  position: sticky;
+  top: 0;
+  background-color: #996633;
+  z-index: 10;
+}
+.cnt-tb2 td[id] {
+  scroll-margin-top: 39px;
+}
+</STYLE>
 <BODY>
 <HR>
 <TABLE border="0" width="910">
@@ -33,26 +82,38 @@ ShowLinks(1, 6);
 </TBODY>
 </TABLE>
 <BR>
-<FONT SIZE="-1">* 武器名称下方的锋利度，上段表示无技能，下段表示 <B>锋利度等级＋１</B> 时的武器锋利度。<BR>* 会心率高于０％的武器，青色锋利度时有＋５％，白色锋利度时有＋１０％的提升。<BR>* 请注意，并非所有武器在游戏中都能获得。<BR>
+<FONT SIZE="-1">* 武器名称下方的锋利度，上段表示无技能，下段表示 <B>锋利度等级＋1</B> 时的武器锋利度。<BR>* 会心率高于0％的武器，青色锋利度时有＋5％，白色锋利度时有＋10％的提升。<BR>* 请注意，并非所有武器在游戏中都能获得。<BR>
 * <SPAN class="hc">　　　</SPAN>表示网络模式限定内容。</FONT>
 <TABLE border="1" cellspacing="0" cellpadding="2" class="cnt-tb2" width="1080">
 <TBODY>
 <TR>
-<TH class="tb-th1" width="35">武器<BR>No.</TH><TH class="tb-th1" width="160">名称</TH>
+<TH class="tb-th1" width="35">武器<BR>No.</TH>
+<TH class="tb-th1" width="165">名称</TH>
 <TH class="tb-th1" width="25">稀<BR>有</TH>
-<TH class="tb-th1" width="55">价格</TH>
+<TH class="tb-th1" width="65">价格</TH>
 <TH class="tb-th1" width="55">攻击力</TH>
 <TH class="tb-th1" width="60">属性</TH>
 <TH class="tb-th1" width="50">插孔</TH>
 <TH class="tb-th1" width="50">会心率</TH>
-<TH class="tb-th1" width="72">強化可能<BR>武器No.</TH>
-<TH class="tb-th1" width="140">强化必要素材</TH>
-<TH class="tb-th1" width="140">生产必要素材</TH>
-<TH class="tb-th1" width="180">解说</TH>
+<TH class="tb-th1" width="62">可强化至<BR>武器No.</TH>
+<TH class="tb-th1" width="130">强化必要素材</TH>
+<TH class="tb-th1" width="130">生产必要素材</TH>
+<TH class="tb-th1" width="190">解说</TH>
 </TR>
 <TR>
 <TD id="0055"class="tb-cell2" height="65">55</TD>
-<TD class="tb-cell1">铁锤<BR>　 <IMG src="../images/gauge055.gif" border="0" width="122" height="19"></TD>
+<TD class="tb-cell1">铁锤<div class="gauge">
+  <div style="width:36px; background:#ee0000;" title="90"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:16px; background:#eeee00;" title="40"></div>
+  <div style="width:100px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:36px; background:#ee0000;" title="90"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:36px; background:#eeee00;" title="90"></div>
+  <div style="width:80px; background:#000000;"></div>
+</div></TD>
 <TD class="tb-cell2">1</TD>
 <TD class="tb-cell3">1150ｚ</TD>
 <TD class="tb-cell2">312
@@ -70,7 +131,19 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0056"class="tb-cell2" height="65">56</TD>
-<TD class="tb-cell1">铁锤改<BR>　 <IMG src="../images/gauge056.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./hammer.html#0055">铁锤</A>强化而来</FONT></TD>
+<TD class="tb-cell1">铁锤改<div class="gauge">
+  <div style="width:36px; background:#ee0000;" title="90"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:36px; background:#eeee00;" title="90"></div>
+  <div style="width:80px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:36px; background:#ee0000;" title="90"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:52px; background:#eeee00;" title="130"></div>
+  <div style="width:4px; background:#00ee00;" title="10"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./hammer.html#0055">铁锤</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">1</TD>
 <TD class="tb-cell3">1500ｚ</TD>
 <TD class="tb-cell2">364
@@ -80,7 +153,7 @@ ShowLinks(1, 6);
 <TD class="tb-cell2">0％</TD>
 <TD class="tb-cell2"><A href="./hammer.html#0057">57</A>, <A href="./hammer.html#0064">64</A></TD>
 <TD class="tb-cell1"><A href="../items/items.html?00d8" target="items">铁矿石</A>×6</TD>
-<TD class="tb-cell1"><A href="../items/items.html?0265" target="items">大锈块</A>×1</TD>
+<TD class="tb-cell1"><A href="../items/items.html?0265" target="items">大锈块</A>×1<BR>（概率生产）</TD>
 <TD class="tb-cell1">扱い次第で強力な威力を得る。<br>
 溜め攻击は目を見張る威力！<br>
 武器によるガードは無い。<br>
@@ -88,7 +161,18 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0057"class="tb-cell2" height="65">57</TD>
-<TD class="tb-cell1">战锤<BR>　 <IMG src="../images/gauge057.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./hammer.html#0056">铁锤改</A>强化而来</FONT></TD>
+<TD class="tb-cell1">战锤<div class="gauge">
+  <div style="width:20px; background:#ee0000;" title="50"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:24px; background:#eeee00;" title="60"></div>
+  <div style="width:100px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:20px; background:#ee0000;" title="50"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:44px; background:#eeee00;" title="110"></div>
+  <div style="width:80px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./hammer.html#0056">铁锤改</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">2</TD>
 <TD class="tb-cell3">2830ｚ</TD>
 <TD class="tb-cell2">416
@@ -106,7 +190,21 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0058"class="tb-cell2" height="65">58</TD>
-<TD class="tb-cell1">溶解锤<BR>　 <IMG src="../images/gauge058.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./hammer.html#0087">巨大锤改</A>强化而来</FONT></TD>
+<TD class="tb-cell1">熔解锤<div class="gauge">
+  <div style="width:32px; background:#ee0000;" title="80"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:28px; background:#eeee00;" title="70"></div>
+  <div style="width:32px; background:#00ee00;" title="80"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:32px; background:#ee0000;" title="80"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:28px; background:#eeee00;" title="70"></div>
+  <div style="width:44px; background:#00ee00;" title="110"></div>
+  <div style="width:8px; background:#5050ff;" title="20"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./hammer.html#0087">巨大锤改</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">5</TD>
 <TD class="tb-cell3">31500ｚ</TD>
 <TD class="tb-cell2">832
@@ -124,7 +222,19 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0059"class="tb-cell2" height="65">59</TD>
-<TD class="tb-cell1">战斗权杖<BR>　 <IMG src="../images/gauge059.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./hammer.html#0057">战锤</A>强化而来</FONT></TD>
+<TD class="tb-cell1">战斗权杖<div class="gauge">
+  <div style="width:36px; background:#ee0000;" title="90"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:36px; background:#eeee00;" title="90"></div>
+  <div style="width:80px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:36px; background:#ee0000;" title="90"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:52px; background:#eeee00;" title="130"></div>
+  <div style="width:4px; background:#00ee00;" title="10"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./hammer.html#0057">战锤</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">2</TD>
 <TD class="tb-cell3">4520ｚ</TD>
 <TD class="tb-cell2">520
@@ -134,7 +244,7 @@ ShowLinks(1, 6);
 <TD class="tb-cell2">0％</TD>
 <TD class="tb-cell2"><A href="./hammer.html#0060">60</A>, <A href="./hammer.html#0090">90</A></TD>
 <TD class="tb-cell1"><A href="../items/items.html?00d8" target="items">铁矿石</A>×15<BR><A href="../items/items.html?00d6" target="items">阳光石</A>×5</TD>
-<TD class="tb-cell1"><A href="../items/items.html?0265" target="items">大锈块</A>×1</TD>
+<TD class="tb-cell1"><A href="../items/items.html?0265" target="items">大锈块</A>×1<BR>（概率生产）</TD>
 <TD class="tb-cell1">より純度の高い鉄を精製し、<br>
 攻击力を強化した大槌。<br>
 <br>
@@ -142,7 +252,20 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0060"class="tb-cell2" height="65">60</TD>
-<TD class="tb-cell1">铁之打击锤<BR>　 <IMG src="../images/gauge060.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./hammer.html#0059">战斗权杖</A>强化而来</FONT></TD>
+<TD class="tb-cell1">铁之打击锤<div class="gauge">
+  <div style="width:36px; background:#ee0000;" title="90"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:52px; background:#eeee00;" title="130"></div>
+  <div style="width:4px; background:#00ee00;" title="10"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:36px; background:#ee0000;" title="90"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:52px; background:#eeee00;" title="130"></div>
+  <div style="width:24px; background:#00ee00;" title="60"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./hammer.html#0059">战斗权杖</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">3</TD>
 <TD class="tb-cell3">8870ｚ</TD>
 <TD class="tb-cell2">624
@@ -160,7 +283,19 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0061"class="tb-cell2" height="65">61</TD>
-<TD class="tb-cell1">野猪头锤<BR>　 <IMG src="../images/gauge061.gif" border="0" width="122" height="19"></TD>
+<TD class="tb-cell1">野猪头锤<div class="gauge">
+  <div style="width:32px; background:#ee0000;" title="80"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:20px; background:#eeee00;" title="50"></div>
+  <div style="width:80px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:32px; background:#ee0000;" title="80"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:28px; background:#eeee00;" title="70"></div>
+  <div style="width:12px; background:#00ee00;" title="30"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div></TD>
 <TD class="tb-cell2">3</TD>
 <TD class="tb-cell3">4830ｚ</TD>
 <TD class="tb-cell2">520
@@ -178,7 +313,22 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0062"class="tb-cell2 hc" height="65">62</TD>
-<TD class="tb-cell1 hc">双角魔锤<BR>　 <IMG src="../images/gauge062.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./hammer.html#0212">破锤禁闭</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc">双角魔锤<div class="gauge">
+  <div style="width:32px; background:#ee0000;" title="80"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:28px; background:#eeee00;" title="70"></div>
+  <div style="width:44px; background:#00ee00;" title="110"></div>
+  <div style="width:8px; background:#5050ff;" title="20"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:32px; background:#ee0000;" title="80"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:28px; background:#eeee00;" title="70"></div>
+  <div style="width:44px; background:#00ee00;" title="110"></div>
+  <div style="width:20px; background:#5050ff;" title="50"></div>
+  <div style="width:8px; background:#ffffff;" title="20"></div>
+</div><FONT size="-2"><A href="./hammer.html#0212">破锤禁闭</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">6</TD>
 <TD class="tb-cell3 hc">50000ｚ</TD>
 <TD class="tb-cell2 hc">884
@@ -196,7 +346,21 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0063"class="tb-cell2" height="65">63</TD>
-<TD class="tb-cell1">铁之冲击锤<BR>　 <IMG src="../images/gauge063.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./hammer.html#0060">铁之打击锤</A>强化而来</FONT></TD>
+<TD class="tb-cell1">铁之冲击锤<div class="gauge">
+  <div style="width:36px; background:#ee0000;" title="90"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:52px; background:#eeee00;" title="130"></div>
+  <div style="width:24px; background:#00ee00;" title="60"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:36px; background:#ee0000;" title="90"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:52px; background:#eeee00;" title="130"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:16px; background:#5050ff;" title="40"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./hammer.html#0060">铁之打击锤</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">4</TD>
 <TD class="tb-cell3">13600ｚ</TD>
 <TD class="tb-cell2">728
@@ -214,7 +378,18 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0064"class="tb-cell2" height="65">64</TD>
-<TD class="tb-cell1">刺锤<BR>　 <IMG src="../images/gauge064.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./hammer.html#0056">铁锤改</A>强化而来</FONT></TD>
+<TD class="tb-cell1">刺锤<div class="gauge">
+  <div style="width:20px; background:#ee0000;" title="50"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:24px; background:#eeee00;" title="60"></div>
+  <div style="width:100px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:20px; background:#ee0000;" title="50"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:44px; background:#eeee00;" title="110"></div>
+  <div style="width:80px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./hammer.html#0056">铁锤改</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">2</TD>
 <TD class="tb-cell3">3830ｚ</TD>
 <TD class="tb-cell2">468
@@ -224,7 +399,7 @@ ShowLinks(1, 6);
 <TD class="tb-cell2">0％</TD>
 <TD class="tb-cell2"><A href="./hammer.html#0065">65</A></TD>
 <TD class="tb-cell1"><A href="../items/items.html?00d8" target="items">铁矿石</A>×15<BR><A href="../items/items.html?00d2" target="items">针果</A>×10<BR><A href="../items/items.html?001d" target="items">增强剂</A>×3</TD>
-<TD class="tb-cell1"><A href="../items/items.html?00da" target="items">燕雀石</A>×4<BR><A href="../items/items.html?00d8" target="items">铁矿石</A>×18<BR><A href="../items/items.html?00d2" target="items">针果</A>×12<BR><A href="../items/items.html?001d" target="items">增强剂</A>×5</TD>
+<TD class="tb-cell1"><A href="../items/items.html?00da" target="items">燕雀石</A>×4<BR><A href="../items/items.html?00d8" target="items">铁矿石</A>×18<BR><A href="../items/items.html?00d2" target="items">针果</A>×12<BR><A href="../items/items.html?001d" target="items">增强剂</A>×5<BR>（首次联动）</TD>
 <TD class="tb-cell1">強化された针果を仕込ん<br>
 だ鎚。溜め攻击の際に中から<br>
 鉄針が飛び出す仕掛けがある。<br>
@@ -232,7 +407,19 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0065"class="tb-cell2" height="65">65</TD>
-<TD class="tb-cell1">刺锤改<BR>　 <IMG src="../images/gauge065.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./hammer.html#0064">刺锤</A>强化而来</FONT></TD>
+<TD class="tb-cell1">刺锤改<div class="gauge">
+  <div style="width:32px; background:#ee0000;" title="80"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:20px; background:#eeee00;" title="50"></div>
+  <div style="width:80px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:32px; background:#ee0000;" title="80"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:28px; background:#eeee00;" title="70"></div>
+  <div style="width:12px; background:#00ee00;" title="30"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./hammer.html#0064">刺锤</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">2</TD>
 <TD class="tb-cell3">6740ｚ</TD>
 <TD class="tb-cell2">572
@@ -242,7 +429,7 @@ ShowLinks(1, 6);
 <TD class="tb-cell2">0％</TD>
 <TD class="tb-cell2"><A href="./hammer.html#0066">66</A></TD>
 <TD class="tb-cell1"><A href="../items/items.html?00d8" target="items">铁矿石</A>×20<BR><A href="../items/items.html?00d2" target="items">针果</A>×15<BR><A href="../items/items.html?000a" target="items">营养剂Ｇ</A>×5</TD>
-<TD class="tb-cell1 hc"><A href="../items/items.html?026a" target="items">太古的大块</A>×1</TD>
+<TD class="tb-cell1 hc"><A href="../items/items.html?026a" target="items">太古的大块</A>×1<BR>（概率生产）</TD>
 <TD class="tb-cell1">強化された针果を仕込ん<br>
 だ鎚。溜め攻击の際に中から<br>
 鉄針が飛び出す仕掛けがある。<br>
@@ -250,7 +437,20 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0066"class="tb-cell2" height="65">66</TD>
-<TD class="tb-cell1">水晶石<BR>　 <IMG src="../images/gauge066.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./hammer.html#0065">刺锤改</A>强化而来</FONT></TD>
+<TD class="tb-cell1">水晶石<div class="gauge">
+  <div style="width:32px; background:#ee0000;" title="80"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:28px; background:#eeee00;" title="70"></div>
+  <div style="width:12px; background:#00ee00;" title="30"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:32px; background:#ee0000;" title="80"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:28px; background:#eeee00;" title="70"></div>
+  <div style="width:32px; background:#00ee00;" title="80"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./hammer.html#0065">刺锤改</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">4</TD>
 <TD class="tb-cell3">10120ｚ</TD>
 <TD class="tb-cell2">676
@@ -260,7 +460,7 @@ ShowLinks(1, 6);
 <TD class="tb-cell2">0％</TD>
 <TD class="tb-cell2"><A href="./hammer.html#0067">67</A></TD>
 <TD class="tb-cell1"><A href="../items/items.html?00e1" target="items">光水晶</A>×1<BR><A href="../items/items.html?00da" target="items">燕雀石</A>×8<BR><A href="../items/items.html?02e7" target="items">宝石券</A>×3</TD>
-<TD class="tb-cell1"><A href="../items/items.html?00e1" target="items">光水晶</A>×1<BR><A href="../items/items.html?00da" target="items">燕雀石</A>×13<BR><A href="../items/items.html?00e4" target="items">冰结晶</A>×7<BR><A href="../items/items.html?02e7" target="items">宝石券</A>×1</TD>
+<TD class="tb-cell1"><A href="../items/items.html?00e1" target="items">光水晶</A>×1<BR><A href="../items/items.html?00da" target="items">燕雀石</A>×13<BR><A href="../items/items.html?00e4" target="items">冰结晶</A>×7<BR><A href="../items/items.html?02e7" target="items">宝石券</A>×1<BR>（沼地开放后联动）</TD>
 <TD class="tb-cell1">刺锤強化版。<br>
 高価なクリスタルを惜しげも<br>
 なく使用した贅沢な逸品。<br>
@@ -268,7 +468,21 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0067"class="tb-cell2" height="65">67</TD>
-<TD class="tb-cell1">水晶新星<BR>　 <IMG src="../images/gauge067.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./hammer.html#0066">水晶石</A>强化而来</FONT></TD>
+<TD class="tb-cell1">水晶新星<div class="gauge">
+  <div style="width:32px; background:#ee0000;" title="80"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:28px; background:#eeee00;" title="70"></div>
+  <div style="width:32px; background:#00ee00;" title="80"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:32px; background:#ee0000;" title="80"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:28px; background:#eeee00;" title="70"></div>
+  <div style="width:44px; background:#00ee00;" title="110"></div>
+  <div style="width:8px; background:#5050ff;" title="20"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./hammer.html#0066">水晶石</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">4</TD>
 <TD class="tb-cell3">15220ｚ</TD>
 <TD class="tb-cell2">780
@@ -286,7 +500,19 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0068"class="tb-cell2" height="65">68</TD>
-<TD class="tb-cell1">铁砧锤<BR>　 <IMG src="../images/gauge068.gif" border="0" width="122" height="19"></TD>
+<TD class="tb-cell1">铁砧锤<div class="gauge">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:60px; background:#eeee00;" title="150"></div>
+  <div style="width:80px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:68px; background:#eeee00;" title="170"></div>
+  <div style="width:12px; background:#00ee00;" title="30"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div></TD>
 <TD class="tb-cell2">4</TD>
 <TD class="tb-cell3">19740ｚ</TD>
 <TD class="tb-cell2">676
@@ -304,7 +530,21 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0069"class="tb-cell2" height="65">69</TD>
-<TD class="tb-cell1">恶毒怪兽<BR>　 <IMG src="../images/gauge069.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./hammer.html#0438">残暴之颚</A>强化而来</FONT></TD>
+<TD class="tb-cell1">恶毒怪兽<div class="gauge">
+  <div style="width:56px; background:#ee0000;" title="140"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:24px; background:#eeee00;" title="60"></div>
+  <div style="width:24px; background:#00ee00;" title="60"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:56px; background:#ee0000;" title="140"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:24px; background:#eeee00;" title="60"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:16px; background:#5050ff;" title="40"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./hammer.html#0438">残暴之颚</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">5</TD>
 <TD class="tb-cell3">24300ｚ</TD>
 <TD class="tb-cell2">832
@@ -322,7 +562,19 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0070"class="tb-cell2" height="65">70</TD>
-<TD class="tb-cell1">骨斧<BR>　 <IMG src="../images/gauge070.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./hammer.html#0079">骨锤改</A>强化而来</FONT></TD>
+<TD class="tb-cell1">骨斧<div class="gauge">
+  <div style="width:24px; background:#ee0000;" title="60"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:20px; background:#eeee00;" title="50"></div>
+  <div style="width:100px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:24px; background:#ee0000;" title="60"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:32px; background:#eeee00;" title="80"></div>
+  <div style="width:8px; background:#00ee00;" title="20"></div>
+  <div style="width:80px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./hammer.html#0079">骨锤改</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">2</TD>
 <TD class="tb-cell3">4390ｚ</TD>
 <TD class="tb-cell2">624
@@ -340,7 +592,20 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0071"class="tb-cell2 hc" height="65">71</TD>
-<TD class="tb-cell1 hc">龙虾重踏<BR>　 <IMG src="../images/gauge071.gif" border="0" width="122" height="19"></TD>
+<TD class="tb-cell1 hc">龙虾重踏<div class="gauge">
+  <div style="width:24px; background:#ee0000;" title="60"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:32px; background:#eeee00;" title="80"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:24px; background:#ee0000;" title="60"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:32px; background:#eeee00;" title="80"></div>
+  <div style="width:48px; background:#00ee00;" title="120"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div></TD>
 <TD class="tb-cell2 hc">6</TD>
 <TD class="tb-cell3 hc">15780ｚ</TD>
 <TD class="tb-cell2 hc">624
@@ -358,7 +623,20 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0072"class="tb-cell2" height="65">72</TD>
-<TD class="tb-cell1">宽骨斧<BR>　 <IMG src="../images/gauge072.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./hammer.html#0070">骨斧</A>强化而来</FONT></TD>
+<TD class="tb-cell1">宽骨斧<div class="gauge">
+  <div style="width:56px; background:#ee0000;" title="140"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:24px; background:#eeee00;" title="60"></div>
+  <div style="width:4px; background:#00ee00;" title="10"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:56px; background:#ee0000;" title="140"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:24px; background:#eeee00;" title="60"></div>
+  <div style="width:24px; background:#00ee00;" title="60"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./hammer.html#0070">骨斧</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">2</TD>
 <TD class="tb-cell3">8980ｚ</TD>
 <TD class="tb-cell2">780
@@ -376,7 +654,20 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0073"class="tb-cell2" height="65">73</TD>
-<TD class="tb-cell1">巨大锤<BR>　 <IMG src="../images/gauge073.gif" border="0" width="122" height="19"></TD>
+<TD class="tb-cell1">巨大锤<div class="gauge">
+  <div style="width:24px; background:#ee0000;" title="60"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:32px; background:#eeee00;" title="80"></div>
+  <div style="width:8px; background:#00ee00;" title="20"></div>
+  <div style="width:80px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:24px; background:#ee0000;" title="60"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:32px; background:#eeee00;" title="80"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div></TD>
 <TD class="tb-cell2">3</TD>
 <TD class="tb-cell3">6780ｚ</TD>
 <TD class="tb-cell2">624
@@ -394,7 +685,20 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0074"class="tb-cell2" height="65">74</TD>
-<TD class="tb-cell1">锚锤<BR>　 <IMG src="../images/gauge074.gif" border="0" width="122" height="19"></TD>
+<TD class="tb-cell1">锚锤<div class="gauge">
+  <div style="width:36px; background:#ee0000;" title="90"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:52px; background:#eeee00;" title="130"></div>
+  <div style="width:4px; background:#00ee00;" title="10"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:36px; background:#ee0000;" title="90"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:52px; background:#eeee00;" title="130"></div>
+  <div style="width:24px; background:#00ee00;" title="60"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div></TD>
 <TD class="tb-cell2">4</TD>
 <TD class="tb-cell3">15000ｚ</TD>
 <TD class="tb-cell2">624
@@ -404,7 +708,7 @@ ShowLinks(1, 6);
 <TD class="tb-cell2">0％</TD>
 <TD class="tb-cell2"><A href="./hammer.html#0427">427</A></TD>
 <TD class="tb-cell1">&nbsp;</TD>
-<TD class="tb-cell1">狩猎大型尺寸以上<BR>水龙后由船老大入手</TD>
+<TD class="tb-cell1">狩猎银冠及以上体型<BR>水龙后由船老大入手</TD>
 <TD class="tb-cell1">親方からもらった巨大な錨。<br>
 海の漢の暑苦しい情熱が<br>
 いっぱい詰まっている。<br>
@@ -412,7 +716,20 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0075"class="tb-cell2" height="65">75</TD>
-<TD class="tb-cell1">雪狮头锤<BR>　 <IMG src="../images/gauge075.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./hammer.html#0084">碎颅改</A>强化而来</FONT></TD>
+<TD class="tb-cell1">雪狮头锤<div class="gauge">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:68px; background:#eeee00;" title="170"></div>
+  <div style="width:12px; background:#00ee00;" title="30"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:68px; background:#eeee00;" title="170"></div>
+  <div style="width:32px; background:#00ee00;" title="80"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./hammer.html#0084">碎颅改</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">4</TD>
 <TD class="tb-cell3">15500ｚ</TD>
 <TD class="tb-cell2">624
@@ -430,7 +747,21 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0076"class="tb-cell2" height="65">76</TD>
-<TD class="tb-cell1">锤【乌】<BR>　 <IMG src="../images/gauge076.gif" border="0" width="122" height="19"></TD>
+<TD class="tb-cell1">锤【乌】<div class="gauge">
+  <div style="width:24px; background:#ee0000;" title="60"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:32px; background:#eeee00;" title="80"></div>
+  <div style="width:48px; background:#00ee00;" title="120"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:24px; background:#ee0000;" title="60"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:32px; background:#eeee00;" title="80"></div>
+  <div style="width:48px; background:#00ee00;" title="120"></div>
+  <div style="width:20px; background:#5050ff;" title="50"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div></TD>
 <TD class="tb-cell2">5</TD>
 <TD class="tb-cell3">18470ｚ</TD>
 <TD class="tb-cell2">780
@@ -448,7 +779,21 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0077"class="tb-cell2" height="65">77</TD>
-<TD class="tb-cell1">重力锤<BR>　 <IMG src="../images/gauge077.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./hammer.html#0477">甲壳锤</A>强化而来</FONT></TD>
+<TD class="tb-cell1">重力锤<div class="gauge">
+  <div style="width:24px; background:#ee0000;" title="60"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:32px; background:#eeee00;" title="80"></div>
+  <div style="width:48px; background:#00ee00;" title="120"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:24px; background:#ee0000;" title="60"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:32px; background:#eeee00;" title="80"></div>
+  <div style="width:48px; background:#00ee00;" title="120"></div>
+  <div style="width:20px; background:#5050ff;" title="50"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./hammer.html#0477">甲壳锤</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">4</TD>
 <TD class="tb-cell3">52220ｚ</TD>
 <TD class="tb-cell2">884
@@ -466,7 +811,18 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0078"class="tb-cell2" height="65">78</TD>
-<TD class="tb-cell1">骨锤<BR>　 <IMG src="../images/gauge078.gif" border="0" width="122" height="19"></TD>
+<TD class="tb-cell1">骨锤<div class="gauge">
+  <div style="width:20px; background:#ee0000;" title="50"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:24px; background:#eeee00;" title="60"></div>
+  <div style="width:100px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:20px; background:#ee0000;" title="50"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:44px; background:#eeee00;" title="110"></div>
+  <div style="width:80px; background:#000000;"></div>
+</div></TD>
 <TD class="tb-cell2">1</TD>
 <TD class="tb-cell3">950ｚ</TD>
 <TD class="tb-cell2">364
@@ -484,7 +840,19 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0079"class="tb-cell2" height="65">79</TD>
-<TD class="tb-cell1">骨锤改<BR>　 <IMG src="../images/gauge079.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./hammer.html#0078">骨锤</A>强化而来</FONT></TD>
+<TD class="tb-cell1">骨锤改<div class="gauge">
+  <div style="width:20px; background:#ee0000;" title="50"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:44px; background:#eeee00;" title="110"></div>
+  <div style="width:80px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:20px; background:#ee0000;" title="50"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:56px; background:#eeee00;" title="140"></div>
+  <div style="width:8px; background:#00ee00;" title="20"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./hammer.html#0078">骨锤</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">1</TD>
 <TD class="tb-cell3">1890ｚ</TD>
 <TD class="tb-cell2">416
@@ -502,7 +870,18 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0080"class="tb-cell2" height="65">80</TD>
-<TD class="tb-cell1">独眼巨人之锤<BR>　 <IMG src="../images/gauge080.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./hammer.html#0079">骨锤改</A>强化而来</FONT></TD>
+<TD class="tb-cell1">独眼巨人之锤<div class="gauge">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:40px; background:#eeee00;" title="100"></div>
+  <div style="width:100px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:60px; background:#eeee00;" title="150"></div>
+  <div style="width:80px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./hammer.html#0079">骨锤改</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">2</TD>
 <TD class="tb-cell3">2310ｚ</TD>
 <TD class="tb-cell2">468
@@ -520,7 +899,21 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0081"class="tb-cell2 hc" height="65">81</TD>
-<TD class="tb-cell1 hc">龍头盖棍<BR>　 <IMG src="../images/gauge081.gif" border="0" width="122" height="19"></TD>
+<TD class="tb-cell1 hc">龍头盖棍<div class="gauge">
+  <div style="width:56px; background:#ee0000;" title="140"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:24px; background:#eeee00;" title="60"></div>
+  <div style="width:24px; background:#00ee00;" title="60"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:56px; background:#ee0000;" title="140"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:24px; background:#eeee00;" title="60"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:16px; background:#5050ff;" title="40"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div></TD>
 <TD class="tb-cell2 hc">6</TD>
 <TD class="tb-cell3 hc">11400ｚ</TD>
 <TD class="tb-cell2 hc">624
@@ -538,7 +931,19 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0082"class="tb-cell2" height="65">82</TD>
-<TD class="tb-cell1">阿特拉斯之锤<BR>　 <IMG src="../images/gauge082.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./hammer.html#0080">独眼巨人之锤</A>强化而来</FONT></TD>
+<TD class="tb-cell1">阿特拉斯之锤<div class="gauge">
+  <div style="width:20px; background:#ee0000;" title="50"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:44px; background:#eeee00;" title="110"></div>
+  <div style="width:80px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:20px; background:#ee0000;" title="50"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:56px; background:#eeee00;" title="140"></div>
+  <div style="width:8px; background:#00ee00;" title="20"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./hammer.html#0080">独眼巨人之锤</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">2</TD>
 <TD class="tb-cell3">3920ｚ</TD>
 <TD class="tb-cell2">572
@@ -556,7 +961,18 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0083"class="tb-cell2" height="65">83</TD>
-<TD class="tb-cell1">碎颅<BR>　 <IMG src="../images/gauge083.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./hammer.html#0080">独眼巨人之锤</A>强化而来</FONT></TD>
+<TD class="tb-cell1">碎颅<div class="gauge">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:40px; background:#eeee00;" title="100"></div>
+  <div style="width:100px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:60px; background:#eeee00;" title="150"></div>
+  <div style="width:80px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./hammer.html#0080">独眼巨人之锤</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">3</TD>
 <TD class="tb-cell3">3190ｚ</TD>
 <TD class="tb-cell2">520
@@ -574,7 +990,19 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0084"class="tb-cell2" height="65">84</TD>
-<TD class="tb-cell1">碎颅改<BR>　 <IMG src="../images/gauge084.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./hammer.html#0083">碎颅</A>强化而来</FONT></TD>
+<TD class="tb-cell1">碎颅改<div class="gauge">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:60px; background:#eeee00;" title="150"></div>
+  <div style="width:80px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:68px; background:#eeee00;" title="170"></div>
+  <div style="width:12px; background:#00ee00;" title="30"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./hammer.html#0083">碎颅</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">3</TD>
 <TD class="tb-cell3">5340ｚ</TD>
 <TD class="tb-cell2">572
@@ -592,7 +1020,20 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0085"class="tb-cell2" height="65">85</TD>
-<TD class="tb-cell1">怪鸟之颚<BR>　 <IMG src="../images/gauge085.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./hammer.html#0082">阿特拉斯之锤</A>强化而来</FONT></TD>
+<TD class="tb-cell1">怪鸟之颚<div class="gauge">
+  <div style="width:20px; background:#ee0000;" title="50"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:56px; background:#eeee00;" title="140"></div>
+  <div style="width:8px; background:#00ee00;" title="20"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:20px; background:#ee0000;" title="50"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:56px; background:#eeee00;" title="140"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./hammer.html#0082">阿特拉斯之锤</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">3</TD>
 <TD class="tb-cell3">6430ｚ</TD>
 <TD class="tb-cell2">676
@@ -610,7 +1051,22 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0086"class="tb-cell2 hc" height="65">86</TD>
-<TD class="tb-cell1 hc">雪狮巨头<BR>　 <IMG src="../images/gauge086.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./hammer.html#0425">雪狮头锤改</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc">雪狮巨头<div class="gauge">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:68px; background:#eeee00;" title="170"></div>
+  <div style="width:48px; background:#00ee00;" title="120"></div>
+  <div style="width:4px; background:#5050ff;" title="10"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:68px; background:#eeee00;" title="170"></div>
+  <div style="width:48px; background:#00ee00;" title="120"></div>
+  <div style="width:16px; background:#5050ff;" title="40"></div>
+  <div style="width:8px; background:#ffffff;" title="20"></div>
+</div><FONT size="-2"><A href="./hammer.html#0425">雪狮头锤改</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">6</TD>
 <TD class="tb-cell3 hc">87230ｚ</TD>
 <TD class="tb-cell2 hc">832
@@ -628,7 +1084,20 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0087"class="tb-cell2" height="65">87</TD>
-<TD class="tb-cell1">巨大锤改<BR>　 <IMG src="../images/gauge087.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./hammer.html#0073">巨大锤</A>强化而来</FONT></TD>
+<TD class="tb-cell1">巨大锤改<div class="gauge">
+  <div style="width:32px; background:#ee0000;" title="80"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:28px; background:#eeee00;" title="70"></div>
+  <div style="width:12px; background:#00ee00;" title="30"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:32px; background:#ee0000;" title="80"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:28px; background:#eeee00;" title="70"></div>
+  <div style="width:32px; background:#00ee00;" title="80"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./hammer.html#0073">巨大锤</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">3</TD>
 <TD class="tb-cell3">9180ｚ</TD>
 <TD class="tb-cell2">728
@@ -646,7 +1115,21 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0088"class="tb-cell2 hc" height="65">88</TD>
-<TD class="tb-cell1 hc">岩龙打击<BR>　 <IMG src="../images/gauge088.gif" border="0" width="122" height="19"></TD>
+<TD class="tb-cell1 hc">岩龙打击<div class="gauge">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:68px; background:#eeee00;" title="170"></div>
+  <div style="width:32px; background:#00ee00;" title="80"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:68px; background:#eeee00;" title="170"></div>
+  <div style="width:48px; background:#00ee00;" title="120"></div>
+  <div style="width:4px; background:#5050ff;" title="10"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div></TD>
 <TD class="tb-cell2 hc">6</TD>
 <TD class="tb-cell3 hc">15000ｚ</TD>
 <TD class="tb-cell2 hc">832
@@ -656,7 +1139,7 @@ ShowLinks(1, 6);
 <TD class="tb-cell2 hc">0％</TD>
 <TD class="tb-cell2 hc"><A href="./hammer.html#0432">432</A></TD>
 <TD class="tb-cell1 hc">&nbsp;</TD>
-<TD class="tb-cell1 hc"><A href="../items/items.html?026a" target="items">太古的大块</A>×1</TD>
+<TD class="tb-cell1 hc"><A href="../items/items.html?026a" target="items">太古的大块</A>×1<BR>（概率生产）</TD>
 <TD class="tb-cell1 hc">岩龙が成体になる前の<br>
 一番固い顔の甲殻を使用。<br>
 ベルトで無骨に止めている。<br>
@@ -664,7 +1147,20 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0089"class="tb-cell2" height="65">89</TD>
-<TD class="tb-cell1">角龙尾<BR>　 <IMG src="../images/gauge089.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./hammer.html#0084">碎颅改</A>强化而来</FONT></TD>
+<TD class="tb-cell1">角龙尾<div class="gauge">
+  <div style="width:24px; background:#ee0000;" title="60"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:32px; background:#eeee00;" title="80"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:24px; background:#ee0000;" title="60"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:32px; background:#eeee00;" title="80"></div>
+  <div style="width:48px; background:#00ee00;" title="120"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./hammer.html#0084">碎颅改</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">4</TD>
 <TD class="tb-cell3">12690ｚ</TD>
 <TD class="tb-cell2">728
@@ -673,7 +1169,7 @@ ShowLinks(1, 6);
 <TD class="tb-cell2">−−−</TD>
 <TD class="tb-cell2">0％</TD>
 <TD class="tb-cell2"><A href="./hammer.html#0212">212</A></TD>
-<TD class="tb-cell1"><A href="../items/items.html?01c2" target="items">角龙的尻尾</A>×1<BR><A href="../items/items.html?01be" target="items">角龙的甲壳</A>×2<BR><A href="../items/items.html?00da" target="items">燕雀石</A>×8</TD>
+<TD class="tb-cell1"><A href="../items/items.html?01c2" target="items">角龙的尾巴</A>×1<BR><A href="../items/items.html?01be" target="items">角龙的甲壳</A>×2<BR><A href="../items/items.html?00da" target="items">燕雀石</A>×8</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1">碎颅強化版。<br>
 角龙の尾が、ハンマ<br>
@@ -682,7 +1178,20 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0090"class="tb-cell2" height="65">90</TD>
-<TD class="tb-cell1">禁闭之锤<BR>　 <IMG src="../images/gauge090.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./hammer.html#0059">战斗权杖</A>强化而来</FONT></TD>
+<TD class="tb-cell1">禁闭之锤<div class="gauge">
+  <div style="width:56px; background:#ee0000;" title="140"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:24px; background:#eeee00;" title="60"></div>
+  <div style="width:4px; background:#00ee00;" title="10"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:56px; background:#ee0000;" title="140"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:24px; background:#eeee00;" title="60"></div>
+  <div style="width:24px; background:#00ee00;" title="60"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./hammer.html#0059">战斗权杖</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">4</TD>
 <TD class="tb-cell3">12980ｚ</TD>
 <TD class="tb-cell2">624
@@ -700,7 +1209,20 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0091"class="tb-cell2" height="65">91</TD>
-<TD class="tb-cell1">硬玉权杖<BR>　 <IMG src="../images/gauge091.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./hammer.html#0096">锈蚀的槌</A>强化而来</FONT></TD>
+<TD class="tb-cell1">硬玉权杖<div class="gauge">
+  <div style="width:32px; background:#ee0000;" title="80"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:28px; background:#eeee00;" title="70"></div>
+  <div style="width:12px; background:#00ee00;" title="30"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:32px; background:#ee0000;" title="80"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:28px; background:#eeee00;" title="70"></div>
+  <div style="width:32px; background:#00ee00;" title="80"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./hammer.html#0096">锈蚀的槌</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">5</TD>
 <TD class="tb-cell3">29730ｚ</TD>
 <TD class="tb-cell2">728
@@ -710,7 +1232,7 @@ ShowLinks(1, 6);
 <TD class="tb-cell2">0％</TD>
 <TD class="tb-cell2"><A href="./hammer.html#0092">92</A></TD>
 <TD class="tb-cell1"><A href="../items/items.html?0243" target="items">炎妃龍的角</A>×3<BR><A href="../items/items.html?023f" target="items">炎妃龍的甲壳</A>×3<BR><A href="../items/items.html?00de" target="items">红莲石</A>×7</TD>
-<TD class="tb-cell1"><A href="../items/items.html?0243" target="items">炎妃龍的角</A>×2<BR><A href="../items/items.html?023f" target="items">炎妃龍的甲壳</A>×3<BR><A href="../items/items.html?00de" target="items">红莲石</A>×1</TD>
+<TD class="tb-cell1"><A href="../items/items.html?0243" target="items">炎妃龍的角</A>×2<BR><A href="../items/items.html?023f" target="items">炎妃龍的甲壳</A>×3<BR><A href="../items/items.html?00de" target="items">红莲石</A>×1<BR>（传说的工匠生产）</TD>
 <TD class="tb-cell1">≪焔の龍冠≫の二つ名を持つ<br>
 灼熱の轟槌。その威力は凄ま<br>
 じく隕石の衝突にも匹敵する。<br>
@@ -718,7 +1240,21 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0092"class="tb-cell2" height="65">92</TD>
-<TD class="tb-cell1">翡翠权杖<BR>　 <IMG src="../images/gauge092.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./hammer.html#0091">硬玉权杖</A>强化而来</FONT></TD>
+<TD class="tb-cell1">翡翠权杖<div class="gauge">
+  <div style="width:56px; background:#ee0000;" title="140"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:24px; background:#eeee00;" title="60"></div>
+  <div style="width:24px; background:#00ee00;" title="60"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:56px; background:#ee0000;" title="140"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:24px; background:#eeee00;" title="60"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:16px; background:#5050ff;" title="40"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./hammer.html#0091">硬玉权杖</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">5</TD>
 <TD class="tb-cell3">58750ｚ</TD>
 <TD class="tb-cell2">780
@@ -736,7 +1272,20 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0093"class="tb-cell2" height="65">93</TD>
-<TD class="tb-cell1">工房试制品枪锤<BR>　 <IMG src="../images/gauge093.gif" border="0" width="122" height="19"></TD>
+<TD class="tb-cell1">工房试制品枪锤<div class="gauge">
+  <div style="width:40px; background:#ee0000;" title="100"></div>
+  <div style="width:4px; background:#eea000;" title="10"></div>
+  <div style="width:12px; background:#eeee00;" title="30"></div>
+  <div style="width:44px; background:#00ee00;" title="110"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:40px; background:#ee0000;" title="100"></div>
+  <div style="width:4px; background:#eea000;" title="10"></div>
+  <div style="width:12px; background:#eeee00;" title="30"></div>
+  <div style="width:64px; background:#00ee00;" title="160"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div></TD>
 <TD class="tb-cell2">4</TD>
 <TD class="tb-cell3">27800ｚ</TD>
 <TD class="tb-cell2">676
@@ -754,7 +1303,21 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0094"class="tb-cell2" height="65">94</TD>
-<TD class="tb-cell1">死亡左轮<BR>　 <IMG src="../images/gauge094.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./hammer.html#0093">工房试制品枪锤</A>强化而来</FONT></TD>
+<TD class="tb-cell1">死亡左轮<div class="gauge">
+  <div style="width:40px; background:#ee0000;" title="100"></div>
+  <div style="width:4px; background:#eea000;" title="10"></div>
+  <div style="width:12px; background:#eeee00;" title="30"></div>
+  <div style="width:64px; background:#00ee00;" title="160"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:40px; background:#ee0000;" title="100"></div>
+  <div style="width:4px; background:#eea000;" title="10"></div>
+  <div style="width:12px; background:#eeee00;" title="30"></div>
+  <div style="width:68px; background:#00ee00;" title="170"></div>
+  <div style="width:16px; background:#5050ff;" title="40"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./hammer.html#0093">工房试制品枪锤</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">4</TD>
 <TD class="tb-cell3">32690ｚ</TD>
 <TD class="tb-cell2">780
@@ -772,7 +1335,15 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0095"class="tb-cell2" height="65">95</TD>
-<TD class="tb-cell1">严重锈蚀的槌<BR>　 <IMG src="../images/gauge095.gif" border="0" width="122" height="19"></TD>
+<TD class="tb-cell1">严重锈蚀的槌<div class="gauge">
+  <div style="width:60px; background:#ee0000;" title="150"></div>
+  <div style="width:100px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:76px; background:#ee0000;" title="190"></div>
+  <div style="width:4px; background:#eea000;" title="10"></div>
+  <div style="width:80px; background:#000000;"></div>
+</div></TD>
 <TD class="tb-cell2">1</TD>
 <TD class="tb-cell3">2500ｚ</TD>
 <TD class="tb-cell2">624
@@ -782,7 +1353,7 @@ ShowLinks(1, 6);
 <TD class="tb-cell2">0％</TD>
 <TD class="tb-cell2"><A href="./hammer.html#0096">96</A></TD>
 <TD class="tb-cell1">&nbsp;</TD>
-<TD class="tb-cell1"><A href="../items/items.html?0265" target="items">大锈块</A>×1</TD>
+<TD class="tb-cell1"><A href="../items/items.html?0265" target="items">大锈块</A>×1<BR>（概率生产）</TD>
 <TD class="tb-cell1">ハンマーとしての機能は果た<br>
 していない錆びた武器。<br>
 結晶研磨加工していくと…。<br>
@@ -790,7 +1361,19 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0096"class="tb-cell2" height="65">96</TD>
-<TD class="tb-cell1">锈蚀的槌<BR>　 <IMG src="../images/gauge096.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./hammer.html#0095">严重锈蚀的槌</A>强化而来</FONT></TD>
+<TD class="tb-cell1">锈蚀的槌<div class="gauge">
+  <div style="width:56px; background:#ee0000;" title="140"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:8px; background:#eeee00;" title="20"></div>
+  <div style="width:80px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:56px; background:#ee0000;" title="140"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:24px; background:#eeee00;" title="60"></div>
+  <div style="width:4px; background:#00ee00;" title="10"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./hammer.html#0095">严重锈蚀的槌</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">1</TD>
 <TD class="tb-cell3">5000ｚ</TD>
 <TD class="tb-cell2">676
@@ -808,7 +1391,21 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0097"class="tb-cell2 hc" height="65">97</TD>
-<TD class="tb-cell1 hc">钢冰棍<BR>　 <IMG src="../images/gauge097.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./hammer.html#0311">风化的槌</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc">钢冰棍<div class="gauge">
+  <div style="width:24px; background:#ee0000;" title="60"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:32px; background:#eeee00;" title="80"></div>
+  <div style="width:48px; background:#00ee00;" title="120"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:24px; background:#ee0000;" title="60"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:32px; background:#eeee00;" title="80"></div>
+  <div style="width:48px; background:#00ee00;" title="120"></div>
+  <div style="width:20px; background:#5050ff;" title="50"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./hammer.html#0311">风化的槌</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">7</TD>
 <TD class="tb-cell3 hc">75000ｚ</TD>
 <TD class="tb-cell2 hc">936
@@ -817,7 +1414,7 @@ ShowLinks(1, 6);
 <TD class="tb-cell2 hc">−−−</TD>
 <TD class="tb-cell2 hc">0％</TD>
 <TD class="tb-cell2 hc"><A href="./hammer.html#0433">433</A></TD>
-<TD class="tb-cell1 hc"><A href="../items/items.html?0225" target="items">钢龍的坚壳</A>×6<BR><A href="../items/items.html?0229" target="items">钢龍的尻尾</A>×1<BR><A href="../items/items.html?010b" target="items">珍稀丽金龟</A>×4</TD>
+<TD class="tb-cell1 hc"><A href="../items/items.html?0225" target="items">钢龍的坚壳</A>×6<BR><A href="../items/items.html?0229" target="items">钢龍的尾巴</A>×1<BR><A href="../items/items.html?010b" target="items">珍稀丽金龟</A>×4</TD>
 <TD class="tb-cell1 hc">&nbsp;</TD>
 <TD class="tb-cell1 hc">鋼龍の素材と古き槌との融合<br>
 により作られた冰冷槌。珠を<br>
@@ -826,7 +1423,21 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0098"class="tb-cell2" height="65">98</TD>
-<TD class="tb-cell1">龍息・核心<BR>　 <IMG src="../images/gauge098.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./hammer.html#0096">锈蚀的槌</A>强化而来</FONT></TD>
+<TD class="tb-cell1">龍息・核心<div class="gauge">
+  <div style="width:76px; background:#ee0000;" title="190"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:20px; background:#eeee00;" title="50"></div>
+  <div style="width:16px; background:#00ee00;" title="40"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:76px; background:#ee0000;" title="190"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:20px; background:#eeee00;" title="50"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:8px; background:#5050ff;" title="20"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./hammer.html#0096">锈蚀的槌</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">5</TD>
 <TD class="tb-cell3">35470ｚ</TD>
 <TD class="tb-cell2">936
@@ -844,7 +1455,15 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0099"class="tb-cell2" height="65">99</TD>
-<TD class="tb-cell1">骨块<BR>　 <IMG src="../images/gauge099.gif" border="0" width="122" height="19"></TD>
+<TD class="tb-cell1">骨块<div class="gauge">
+  <div style="width:60px; background:#ee0000;" title="150"></div>
+  <div style="width:100px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:76px; background:#ee0000;" title="190"></div>
+  <div style="width:4px; background:#eea000;" title="10"></div>
+  <div style="width:80px; background:#000000;"></div>
+</div></TD>
 <TD class="tb-cell2">1</TD>
 <TD class="tb-cell3">840ｚ</TD>
 <TD class="tb-cell2">416
@@ -862,7 +1481,19 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0100"class="tb-cell2" height="65">100</TD>
-<TD class="tb-cell1">大骨块<BR>　 <IMG src="../images/gauge100.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./hammer.html#0099">骨块</A>强化而来</FONT></TD>
+<TD class="tb-cell1">大骨块<div class="gauge">
+  <div style="width:32px; background:#ee0000;" title="80"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:20px; background:#eeee00;" title="50"></div>
+  <div style="width:80px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:32px; background:#ee0000;" title="80"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:28px; background:#eeee00;" title="70"></div>
+  <div style="width:12px; background:#00ee00;" title="30"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./hammer.html#0099">骨块</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">1</TD>
 <TD class="tb-cell3">1050ｚ</TD>
 <TD class="tb-cell2">728
@@ -880,7 +1511,20 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0101"class="tb-cell2" height="65">101</TD>
-<TD class="tb-cell1">龍灭<BR>　 <IMG src="../images/gauge101.gif" border="0" width="122" height="19"></TD>
+<TD class="tb-cell1">龍灭<div class="gauge">
+  <div style="width:24px; background:#ee0000;" title="60"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:32px; background:#eeee00;" title="80"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:24px; background:#ee0000;" title="60"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:32px; background:#eeee00;" title="80"></div>
+  <div style="width:48px; background:#00ee00;" title="120"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div></TD>
 <TD class="tb-cell2">5</TD>
 <TD class="tb-cell3">31680ｚ</TD>
 <TD class="tb-cell2">780
@@ -898,7 +1542,21 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0102"class="tb-cell2" height="65">102</TD>
-<TD class="tb-cell1">龍破<BR>　 <IMG src="../images/gauge102.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./hammer.html#0101">龍灭</A>强化而来</FONT></TD>
+<TD class="tb-cell1">龍破<div class="gauge">
+  <div style="width:24px; background:#ee0000;" title="60"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:32px; background:#eeee00;" title="80"></div>
+  <div style="width:48px; background:#00ee00;" title="120"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:24px; background:#ee0000;" title="60"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:32px; background:#eeee00;" title="80"></div>
+  <div style="width:48px; background:#00ee00;" title="120"></div>
+  <div style="width:20px; background:#5050ff;" title="50"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./hammer.html#0101">龍灭</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">5</TD>
 <TD class="tb-cell3">40160ｚ</TD>
 <TD class="tb-cell2">884
@@ -916,7 +1574,20 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0112"class="tb-cell2 hc" height="65">112</TD>
-<TD class="tb-cell1 hc">鬼铁<BR>　 <IMG src="../images/gauge112.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./hammer.html#0213">激锤猛攻</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc">鬼铁<div class="gauge">
+  <div style="width:24px; background:#ee0000;" title="60"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:32px; background:#eeee00;" title="80"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:24px; background:#ee0000;" title="60"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:32px; background:#eeee00;" title="80"></div>
+  <div style="width:48px; background:#00ee00;" title="120"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./hammer.html#0213">激锤猛攻</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">6</TD>
 <TD class="tb-cell3 hc">30000ｚ</TD>
 <TD class="tb-cell2 hc">832
@@ -934,7 +1605,21 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0212"class="tb-cell2" height="65">212</TD>
-<TD class="tb-cell1">破锤禁闭<BR>　 <IMG src="../images/gauge212.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./hammer.html#0089">角龙尾</A>强化而来</FONT></TD>
+<TD class="tb-cell1">破锤禁闭<div class="gauge">
+  <div style="width:40px; background:#ee0000;" title="100"></div>
+  <div style="width:4px; background:#eea000;" title="10"></div>
+  <div style="width:12px; background:#eeee00;" title="30"></div>
+  <div style="width:64px; background:#00ee00;" title="160"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:40px; background:#ee0000;" title="100"></div>
+  <div style="width:4px; background:#eea000;" title="10"></div>
+  <div style="width:12px; background:#eeee00;" title="30"></div>
+  <div style="width:68px; background:#00ee00;" title="170"></div>
+  <div style="width:16px; background:#5050ff;" title="40"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./hammer.html#0089">角龙尾</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">4</TD>
 <TD class="tb-cell3">31200ｚ</TD>
 <TD class="tb-cell2">832
@@ -943,7 +1628,7 @@ ShowLinks(1, 6);
 <TD class="tb-cell2">−−−</TD>
 <TD class="tb-cell2">0％</TD>
 <TD class="tb-cell2"><A href="./hammer.html#0062">62</A></TD>
-<TD class="tb-cell1"><A href="../items/items.html?01c2" target="items">角龙的尻尾</A>×3<BR><A href="../items/items.html?01be" target="items">角龙的甲壳</A>×8<BR><A href="../items/items.html?0108" target="items">粘着蝗虫</A>×21</TD>
+<TD class="tb-cell1"><A href="../items/items.html?01c2" target="items">角龙的尾巴</A>×3<BR><A href="../items/items.html?01be" target="items">角龙的甲壳</A>×8<BR><A href="../items/items.html?0108" target="items">黏着蝗虫</A>×21</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1">碎颅強化版。<br>
 角龙の尾が、ハンマ<br>
@@ -952,7 +1637,20 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0213"class="tb-cell2" height="65">213</TD>
-<TD class="tb-cell1">激锤猛攻<BR>　 <IMG src="../images/gauge213.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./hammer.html#0068">铁砧锤</A>强化而来</FONT></TD>
+<TD class="tb-cell1">激锤猛攻<div class="gauge">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:68px; background:#eeee00;" title="170"></div>
+  <div style="width:12px; background:#00ee00;" title="30"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:68px; background:#eeee00;" title="170"></div>
+  <div style="width:32px; background:#00ee00;" title="80"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./hammer.html#0068">铁砧锤</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">4</TD>
 <TD class="tb-cell3">38750ｚ</TD>
 <TD class="tb-cell2">832
@@ -970,7 +1668,21 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0214"class="tb-cell2" height="65">214</TD>
-<TD class="tb-cell1">束缚立方<BR>　 <IMG src="../images/gauge214.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./hammer.html#0090">禁闭之锤</A>强化而来</FONT></TD>
+<TD class="tb-cell1">束缚立方<div class="gauge">
+  <div style="width:76px; background:#ee0000;" title="190"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:20px; background:#eeee00;" title="50"></div>
+  <div style="width:16px; background:#00ee00;" title="40"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:76px; background:#ee0000;" title="190"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:20px; background:#eeee00;" title="50"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:8px; background:#5050ff;" title="20"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./hammer.html#0090">禁闭之锤</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">4</TD>
 <TD class="tb-cell3">31460ｚ</TD>
 <TD class="tb-cell2">780
@@ -988,7 +1700,19 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0215"class="tb-cell2 hc" height="65">215</TD>
-<TD class="tb-cell1 hc">铁拳<BR>　 <IMG src="../images/gauge215.gif" border="0" width="122" height="19"></TD>
+<TD class="tb-cell1 hc">铁拳<div class="gauge">
+  <div style="width:76px; background:#ee0000;" title="190"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:16px; background:#eeee00;" title="40"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:76px; background:#ee0000;" title="190"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:20px; background:#eeee00;" title="50"></div>
+  <div style="width:16px; background:#00ee00;" title="40"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div></TD>
 <TD class="tb-cell2 hc">7</TD>
 <TD class="tb-cell3 hc">100000ｚ</TD>
 <TD class="tb-cell2 hc">988
@@ -1006,7 +1730,18 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0224"class="tb-cell2" height="65">224</TD>
-<TD class="tb-cell1">晚安熊<BR>　 <IMG src="../images/gauge224.gif" border="0" width="122" height="19"></TD>
+<TD class="tb-cell1">晚安熊<div class="gauge">
+  <div style="width:20px; background:#ee0000;" title="50"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:24px; background:#eeee00;" title="60"></div>
+  <div style="width:100px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:20px; background:#ee0000;" title="50"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:44px; background:#eeee00;" title="110"></div>
+  <div style="width:80px; background:#000000;"></div>
+</div></TD>
 <TD class="tb-cell2">4</TD>
 <TD class="tb-cell3">5800ｚ</TD>
 <TD class="tb-cell2">260
@@ -1016,7 +1751,7 @@ ShowLinks(1, 6);
 <TD class="tb-cell2">0％</TD>
 <TD class="tb-cell2">&nbsp;</TD>
 <TD class="tb-cell1">&nbsp;</TD>
-<TD class="tb-cell1"><A href="../items/items.html?02e6" target="items">蛋券</A>×1<BR><A href="../items/items.html?02e7" target="items">宝石券</A>×1<BR><A href="../items/items.html?02e0" target="items">星铁</A>×1</TD>
+<TD class="tb-cell1"><A href="../items/items.html?02e6" target="items">蛋券</A>×1<BR><A href="../items/items.html?02e7" target="items">宝石券</A>×1<BR><A href="../items/items.html?02e0" target="items">星铁</A>×1<BR>（传说的工匠生产）</TD>
 <TD class="tb-cell1">街の公会の女性たちに愛好<br>
 されているクマのぬいぐるみ。<br>
 一緒に寝れば熟睡間違いなし。<br>
@@ -1024,7 +1759,19 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0233"class="tb-cell2 hc" height="65">233</TD>
-<TD class="tb-cell1 hc">电击熊<BR>　 <IMG src="../images/gauge233.gif" border="0" width="122" height="19"></TD>
+<TD class="tb-cell1 hc">电击熊<div class="gauge">
+  <div style="width:20px; background:#ee0000;" title="50"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:44px; background:#eeee00;" title="110"></div>
+  <div style="width:80px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:20px; background:#ee0000;" title="50"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:56px; background:#eeee00;" title="140"></div>
+  <div style="width:8px; background:#00ee00;" title="20"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div></TD>
 <TD class="tb-cell2 hc">4</TD>
 <TD class="tb-cell3 hc">523ｚ</TD>
 <TD class="tb-cell2 hc">520
@@ -1042,7 +1789,22 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0262"class="tb-cell2 hc" height="65">262</TD>
-<TD class="tb-cell1 hc">溶解锤【炼狱】<BR>　 <IMG src="../images/gauge262.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./hammer.html#0058">溶解锤</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc">熔解锤【炼狱】<div class="gauge">
+  <div style="width:32px; background:#ee0000;" title="80"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:28px; background:#eeee00;" title="70"></div>
+  <div style="width:44px; background:#00ee00;" title="110"></div>
+  <div style="width:8px; background:#5050ff;" title="20"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:32px; background:#ee0000;" title="80"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:28px; background:#eeee00;" title="70"></div>
+  <div style="width:44px; background:#00ee00;" title="110"></div>
+  <div style="width:20px; background:#5050ff;" title="50"></div>
+  <div style="width:8px; background:#ffffff;" title="20"></div>
+</div><FONT size="-2"><A href="./hammer.html#0058">熔解锤</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">6</TD>
 <TD class="tb-cell3 hc">65190ｚ</TD>
 <TD class="tb-cell2 hc">884
@@ -1060,7 +1822,21 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0298"class="tb-cell2 hc" height="65">298</TD>
-<TD class="tb-cell1 hc">鬼铁丸<BR>　 <IMG src="../images/gauge298.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./hammer.html#0112">鬼铁</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc">鬼铁丸<div class="gauge">
+  <div style="width:24px; background:#ee0000;" title="60"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:32px; background:#eeee00;" title="80"></div>
+  <div style="width:48px; background:#00ee00;" title="120"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:24px; background:#ee0000;" title="60"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:32px; background:#eeee00;" title="80"></div>
+  <div style="width:48px; background:#00ee00;" title="120"></div>
+  <div style="width:20px; background:#5050ff;" title="50"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./hammer.html#0112">鬼铁</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">7</TD>
 <TD class="tb-cell3 hc">120000ｚ</TD>
 <TD class="tb-cell2 hc">884
@@ -1078,7 +1854,22 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0299"class="tb-cell2 hc" height="65">299</TD>
-<TD class="tb-cell1 hc">正式采用机械锤<BR>　 <IMG src="../images/gauge299.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./hammer.html#0094">死亡左轮</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc">正式采用机械锤<div class="gauge">
+  <div style="width:32px; background:#ee0000;" title="80"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:28px; background:#eeee00;" title="70"></div>
+  <div style="width:44px; background:#00ee00;" title="110"></div>
+  <div style="width:8px; background:#5050ff;" title="20"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:32px; background:#ee0000;" title="80"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:28px; background:#eeee00;" title="70"></div>
+  <div style="width:44px; background:#00ee00;" title="110"></div>
+  <div style="width:20px; background:#5050ff;" title="50"></div>
+  <div style="width:8px; background:#ffffff;" title="20"></div>
+</div><FONT size="-2"><A href="./hammer.html#0094">死亡左轮</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">6</TD>
 <TD class="tb-cell3 hc">69800ｚ</TD>
 <TD class="tb-cell2 hc">936
@@ -1096,7 +1887,21 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0300"class="tb-cell2 hc" height="65">300</TD>
-<TD class="tb-cell1 hc">战争践踏<BR>　 <IMG src="../images/gauge300.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./hammer.html#0213">激锤猛攻</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc">战争践踏<div class="gauge">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:68px; background:#eeee00;" title="170"></div>
+  <div style="width:32px; background:#00ee00;" title="80"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:68px; background:#eeee00;" title="170"></div>
+  <div style="width:48px; background:#00ee00;" title="120"></div>
+  <div style="width:4px; background:#5050ff;" title="10"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./hammer.html#0213">激锤猛攻</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">6</TD>
 <TD class="tb-cell3 hc">53720ｚ</TD>
 <TD class="tb-cell2 hc">936
@@ -1114,7 +1919,22 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0301"class="tb-cell2 hc" height="65">301</TD>
-<TD class="tb-cell1 hc">战争怒击<BR>　 <IMG src="../images/gauge301.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./hammer.html#0300">战争践踏</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc">战争怒击<div class="gauge">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:68px; background:#eeee00;" title="170"></div>
+  <div style="width:48px; background:#00ee00;" title="120"></div>
+  <div style="width:4px; background:#5050ff;" title="10"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:68px; background:#eeee00;" title="170"></div>
+  <div style="width:48px; background:#00ee00;" title="120"></div>
+  <div style="width:16px; background:#5050ff;" title="40"></div>
+  <div style="width:8px; background:#ffffff;" title="20"></div>
+</div><FONT size="-2"><A href="./hammer.html#0300">战争践踏</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">6</TD>
 <TD class="tb-cell3 hc">75800ｚ</TD>
 <TD class="tb-cell2 hc">1040
@@ -1132,7 +1952,22 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0303"class="tb-cell2 hc" height="65">303</TD>
-<TD class="tb-cell1 hc">龍坏棍<BR>　 <IMG src="../images/gauge303.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./hammer.html#0102">龍破</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc">龍坏棍<div class="gauge">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:68px; background:#eeee00;" title="170"></div>
+  <div style="width:48px; background:#00ee00;" title="120"></div>
+  <div style="width:4px; background:#5050ff;" title="10"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:68px; background:#eeee00;" title="170"></div>
+  <div style="width:48px; background:#00ee00;" title="120"></div>
+  <div style="width:16px; background:#5050ff;" title="40"></div>
+  <div style="width:8px; background:#ffffff;" title="20"></div>
+</div><FONT size="-2"><A href="./hammer.html#0102">龍破</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">7</TD>
 <TD class="tb-cell3 hc">120000ｚ</TD>
 <TD class="tb-cell2 hc">988
@@ -1150,7 +1985,21 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0305"class="tb-cell2" height="65">305</TD>
-<TD class="tb-cell1">怪鸟喙击<BR>　 <IMG src="../images/gauge305.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./hammer.html#0085">怪鸟之颚</A>强化而来</FONT></TD>
+<TD class="tb-cell1">怪鸟喙击<div class="gauge">
+  <div style="width:36px; background:#ee0000;" title="90"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:52px; background:#eeee00;" title="130"></div>
+  <div style="width:24px; background:#00ee00;" title="60"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:36px; background:#ee0000;" title="90"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:52px; background:#eeee00;" title="130"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:16px; background:#5050ff;" title="40"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./hammer.html#0085">怪鸟之颚</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">4</TD>
 <TD class="tb-cell3">15580ｚ</TD>
 <TD class="tb-cell2">728
@@ -1168,7 +2017,22 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0306"class="tb-cell2 hc" height="65">306</TD>
-<TD class="tb-cell1 hc">大新星<BR>　 <IMG src="../images/gauge306.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./hammer.html#0067">水晶新星</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc">大新星<div class="gauge">
+  <div style="width:32px; background:#ee0000;" title="80"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:28px; background:#eeee00;" title="70"></div>
+  <div style="width:44px; background:#00ee00;" title="110"></div>
+  <div style="width:8px; background:#5050ff;" title="20"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:32px; background:#ee0000;" title="80"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:28px; background:#eeee00;" title="70"></div>
+  <div style="width:44px; background:#00ee00;" title="110"></div>
+  <div style="width:20px; background:#5050ff;" title="50"></div>
+  <div style="width:8px; background:#ffffff;" title="20"></div>
+</div><FONT size="-2"><A href="./hammer.html#0067">水晶新星</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">6</TD>
 <TD class="tb-cell3 hc">123150ｚ</TD>
 <TD class="tb-cell2 hc">936
@@ -1186,7 +2050,20 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0308"class="tb-cell2" height="65">308</TD>
-<TD class="tb-cell1">黑带大锤<BR>　 <IMG src="../images/gauge308.gif" border="0" width="122" height="19"></TD>
+<TD class="tb-cell1">黑带大锤<div class="gauge">
+  <div style="width:32px; background:#ee0000;" title="80"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:28px; background:#eeee00;" title="70"></div>
+  <div style="width:12px; background:#00ee00;" title="30"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:32px; background:#ee0000;" title="80"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:28px; background:#eeee00;" title="70"></div>
+  <div style="width:32px; background:#00ee00;" title="80"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div></TD>
 <TD class="tb-cell2">4</TD>
 <TD class="tb-cell3">10130ｚ</TD>
 <TD class="tb-cell2">780
@@ -1204,7 +2081,21 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0309"class="tb-cell2 hc" height="65">309</TD>
-<TD class="tb-cell1 hc">达人大锤<BR>　 <IMG src="../images/gauge309.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./hammer.html#0308">黑带大锤</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc">达人大锤<div class="gauge">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:68px; background:#eeee00;" title="170"></div>
+  <div style="width:32px; background:#00ee00;" title="80"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:68px; background:#eeee00;" title="170"></div>
+  <div style="width:48px; background:#00ee00;" title="120"></div>
+  <div style="width:4px; background:#5050ff;" title="10"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./hammer.html#0308">黑带大锤</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">6</TD>
 <TD class="tb-cell3 hc">21560ｚ</TD>
 <TD class="tb-cell2 hc">884
@@ -1222,7 +2113,17 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0310"class="tb-cell2 hc" height="65">310</TD>
-<TD class="tb-cell1 hc">严重风化的槌<BR>　 <IMG src="../images/gauge310.gif" border="0" width="122" height="19"></TD>
+<TD class="tb-cell1 hc">严重风化的槌<div class="gauge">
+  <div style="width:76px; background:#ee0000;" title="190"></div>
+  <div style="width:4px; background:#eea000;" title="10"></div>
+  <div style="width:80px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:76px; background:#ee0000;" title="190"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:16px; background:#eeee00;" title="40"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div></TD>
 <TD class="tb-cell2 hc">6</TD>
 <TD class="tb-cell3 hc">10000ｚ</TD>
 <TD class="tb-cell2 hc">780
@@ -1232,7 +2133,7 @@ ShowLinks(1, 6);
 <TD class="tb-cell2 hc">0％</TD>
 <TD class="tb-cell2 hc"><A href="./hammer.html#0311">311</A></TD>
 <TD class="tb-cell1 hc">&nbsp;</TD>
-<TD class="tb-cell1 hc"><A href="../items/items.html?026a" target="items">太古的大块</A>×1</TD>
+<TD class="tb-cell1 hc"><A href="../items/items.html?026a" target="items">太古的大块</A>×1<BR>（概率生产）</TD>
 <TD class="tb-cell1 hc">ハンマーとしての機能は果た<br>
 していない風化した武器。<br>
 復元加工していくと…。<br>
@@ -1240,7 +2141,19 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0311"class="tb-cell2 hc" height="65">311</TD>
-<TD class="tb-cell1 hc">风化的槌<BR>　 <IMG src="../images/gauge311.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./hammer.html#0310">严重风化的槌</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc">风化的槌<div class="gauge">
+  <div style="width:76px; background:#ee0000;" title="190"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:16px; background:#eeee00;" title="40"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:76px; background:#ee0000;" title="190"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:20px; background:#eeee00;" title="50"></div>
+  <div style="width:16px; background:#00ee00;" title="40"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./hammer.html#0310">严重风化的槌</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">6</TD>
 <TD class="tb-cell3 hc">20000ｚ</TD>
 <TD class="tb-cell2 hc">884
@@ -1258,7 +2171,22 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0313"class="tb-cell2 hc" height="65">313</TD>
-<TD class="tb-cell1 hc">律动・核心<BR>　 <IMG src="../images/gauge313.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./hammer.html#0311">风化的槌</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc">律动・核心<div class="gauge">
+  <div style="width:76px; background:#ee0000;" title="190"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:20px; background:#eeee00;" title="50"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:8px; background:#5050ff;" title="20"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:76px; background:#ee0000;" title="190"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:20px; background:#eeee00;" title="50"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:16px; background:#5050ff;" title="40"></div>
+  <div style="width:12px; background:#ffffff;" title="30"></div>
+</div><FONT size="-2"><A href="./hammer.html#0311">风化的槌</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">7</TD>
 <TD class="tb-cell3 hc">42500ｚ</TD>
 <TD class="tb-cell2 hc">1040
@@ -1276,7 +2204,22 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0369"class="tb-cell2 hc" height="65">369</TD>
-<TD class="tb-cell1 hc">死亡毒液锤<BR>　 <IMG src="../images/gauge369.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./hammer.html#0069">恶毒怪兽</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc">死亡毒液锤<div class="gauge">
+  <div style="width:76px; background:#ee0000;" title="190"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:20px; background:#eeee00;" title="50"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:8px; background:#5050ff;" title="20"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:76px; background:#ee0000;" title="190"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:20px; background:#eeee00;" title="50"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:16px; background:#5050ff;" title="40"></div>
+  <div style="width:12px; background:#ffffff;" title="30"></div>
+</div><FONT size="-2"><A href="./hammer.html#0069">恶毒怪兽</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">6</TD>
 <TD class="tb-cell3 hc">78600ｚ</TD>
 <TD class="tb-cell2 hc">936
@@ -1294,7 +2237,20 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0374"class="tb-cell2 hc" height="65">374</TD>
-<TD class="tb-cell1 hc">电击熊Ｇ<BR>　 <IMG src="../images/gauge374.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./hammer.html#0233">电击熊</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc">电击熊Ｇ<div class="gauge">
+  <div style="width:20px; background:#ee0000;" title="50"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:56px; background:#eeee00;" title="140"></div>
+  <div style="width:8px; background:#00ee00;" title="20"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:20px; background:#ee0000;" title="50"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:56px; background:#eeee00;" title="140"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./hammer.html#0233">电击熊</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">6</TD>
 <TD class="tb-cell3 hc">550ｚ</TD>
 <TD class="tb-cell2 hc">780
@@ -1312,7 +2268,20 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0424"class="tb-cell2" height="65">424</TD>
-<TD class="tb-cell1">野猪牙锤<BR>　 <IMG src="../images/gauge424.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./hammer.html#0061">野猪头锤</A>强化而来</FONT></TD>
+<TD class="tb-cell1">野猪牙锤<div class="gauge">
+  <div style="width:32px; background:#ee0000;" title="80"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:28px; background:#eeee00;" title="70"></div>
+  <div style="width:12px; background:#00ee00;" title="30"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:32px; background:#ee0000;" title="80"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:28px; background:#eeee00;" title="70"></div>
+  <div style="width:32px; background:#00ee00;" title="80"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./hammer.html#0061">野猪头锤</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">3</TD>
 <TD class="tb-cell3">7860ｚ</TD>
 <TD class="tb-cell2">572
@@ -1322,7 +2291,7 @@ ShowLinks(1, 6);
 <TD class="tb-cell2">0％</TD>
 <TD class="tb-cell2">&nbsp;</TD>
 <TD class="tb-cell1"><A href="../items/items.html?014e" target="items">大野猪的头</A>×1<BR><A href="../items/items.html?0141" target="items">大块骨</A>×5<BR><A href="../items/items.html?000f" target="items">鬼人药</A>×1</TD>
-<TD class="tb-cell1"><A href="../items/items.html?014f" target="items">大猪的皮</A>×4<BR><A href="../items/items.html?014e" target="items">大野猪的头</A>×1<BR><A href="../items/items.html?0141" target="items">大块骨</A>×5<BR><A href="../items/items.html?00ce" target="items">怪力之种</A>×3</TD>
+<TD class="tb-cell1"><A href="../items/items.html?014f" target="items">大猪的皮</A>×4<BR><A href="../items/items.html?014e" target="items">大野猪的头</A>×1<BR><A href="../items/items.html?0141" target="items">大块骨</A>×5<BR><A href="../items/items.html?00ce" target="items">怪力之种</A>×3<BR>（首次联动）</TD>
 <TD class="tb-cell1">強力な突進を持つドスファン<br>
 ゴの素材を使用したハンマー。<br>
 東方由来の武器とされている。<br>
@@ -1330,7 +2299,21 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0425"class="tb-cell2" height="65">425</TD>
-<TD class="tb-cell1">雪狮头锤改<BR>　 <IMG src="../images/gauge425.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./hammer.html#0075">雪狮头锤</A>强化而来</FONT></TD>
+<TD class="tb-cell1">雪狮头锤改<div class="gauge">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:68px; background:#eeee00;" title="170"></div>
+  <div style="width:32px; background:#00ee00;" title="80"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:68px; background:#eeee00;" title="170"></div>
+  <div style="width:48px; background:#00ee00;" title="120"></div>
+  <div style="width:4px; background:#5050ff;" title="10"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./hammer.html#0075">雪狮头锤</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">4</TD>
 <TD class="tb-cell3">25430ｚ</TD>
 <TD class="tb-cell2">728
@@ -1339,7 +2322,7 @@ ShowLinks(1, 6);
 <TD class="tb-cell2">−−−</TD>
 <TD class="tb-cell2">0％</TD>
 <TD class="tb-cell2"><A href="./hammer.html#0086">86</A></TD>
-<TD class="tb-cell1"><A href="../items/items.html?01fc" target="items">雪狮子的牙</A>×3<BR><A href="../items/items.html?0201" target="items">雪狮子的尻尾</A>×2<BR><A href="../items/items.html?010a" target="items">煌甲虫</A>×5</TD>
+<TD class="tb-cell1"><A href="../items/items.html?01fc" target="items">雪狮子的牙</A>×3<BR><A href="../items/items.html?0201" target="items">雪狮子的尾巴</A>×2<BR><A href="../items/items.html?010a" target="items">煌甲虫</A>×5</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1">雪狮子王の素材を使用し<br>
 たハンマー。振るう度に噴き<br>
@@ -1348,7 +2331,22 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0426"class="tb-cell2 hc" height="65">426</TD>
-<TD class="tb-cell1 hc">娜娜＝托莉<BR>　 <IMG src="../images/gauge426.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./hammer.html#0092">翡翠权杖</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc">娜娜＝托莉<div class="gauge">
+  <div style="width:36px; background:#ee0000;" title="90"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:52px; background:#eeee00;" title="130"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:16px; background:#5050ff;" title="40"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:36px; background:#ee0000;" title="90"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:52px; background:#eeee00;" title="130"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:20px; background:#5050ff;" title="50"></div>
+  <div style="width:16px; background:#ffffff;" title="40"></div>
+</div><FONT size="-2"><A href="./hammer.html#0092">翡翠权杖</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">7</TD>
 <TD class="tb-cell3 hc">150000ｚ</TD>
 <TD class="tb-cell2 hc">832
@@ -1366,7 +2364,21 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0427"class="tb-cell2" height="65">427</TD>
-<TD class="tb-cell1">碎击锚<BR>　 <IMG src="../images/gauge427.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./hammer.html#0074">锚锤</A>强化而来</FONT></TD>
+<TD class="tb-cell1">碎击锚<div class="gauge">
+  <div style="width:36px; background:#ee0000;" title="90"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:52px; background:#eeee00;" title="130"></div>
+  <div style="width:24px; background:#00ee00;" title="60"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:36px; background:#ee0000;" title="90"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:52px; background:#eeee00;" title="130"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:16px; background:#5050ff;" title="40"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./hammer.html#0074">锚锤</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">5</TD>
 <TD class="tb-cell3">28410ｚ</TD>
 <TD class="tb-cell2">780
@@ -1384,7 +2396,22 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0428"class="tb-cell2" height="65">428</TD>
-<TD class="tb-cell1">锤【狼】<BR>　 <IMG src="../images/gauge428.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./hammer.html#0076">锤【乌】</A>强化而来</FONT></TD>
+<TD class="tb-cell1">锤【狼】<div class="gauge">
+  <div style="width:56px; background:#ee0000;" title="140"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:24px; background:#eeee00;" title="60"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:16px; background:#5050ff;" title="40"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:56px; background:#ee0000;" title="140"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:24px; background:#eeee00;" title="60"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:16px; background:#5050ff;" title="40"></div>
+  <div style="width:20px; background:#ffffff;" title="50"></div>
+</div><FONT size="-2"><A href="./hammer.html#0076">锤【乌】</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">5</TD>
 <TD class="tb-cell3">41500ｚ</TD>
 <TD class="tb-cell2">884
@@ -1402,7 +2429,21 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0429"class="tb-cell2 hc" height="65">429</TD>
-<TD class="tb-cell1 hc">远古打击<BR>　 <IMG src="../images/gauge429.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./hammer.html#0215">铁拳</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc">远古打击<div class="gauge">
+  <div style="width:76px; background:#ee0000;" title="190"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:20px; background:#eeee00;" title="50"></div>
+  <div style="width:16px; background:#00ee00;" title="40"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:76px; background:#ee0000;" title="190"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:20px; background:#eeee00;" title="50"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:8px; background:#5050ff;" title="20"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./hammer.html#0215">铁拳</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">7</TD>
 <TD class="tb-cell3 hc">150000ｚ</TD>
 <TD class="tb-cell2 hc">1092
@@ -1420,7 +2461,22 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0430"class="tb-cell2 hc" height="65">430</TD>
-<TD class="tb-cell1 hc">角龙锤混沌造就者<BR>　 <IMG src="../images/gauge430.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./hammer.html#0062">双角魔锤</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc">角龙锤混沌造就者<div class="gauge">
+  <div style="width:40px; background:#ee0000;" title="100"></div>
+  <div style="width:4px; background:#eea000;" title="10"></div>
+  <div style="width:12px; background:#eeee00;" title="30"></div>
+  <div style="width:68px; background:#00ee00;" title="170"></div>
+  <div style="width:16px; background:#5050ff;" title="40"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:40px; background:#ee0000;" title="100"></div>
+  <div style="width:4px; background:#eea000;" title="10"></div>
+  <div style="width:12px; background:#eeee00;" title="30"></div>
+  <div style="width:68px; background:#00ee00;" title="170"></div>
+  <div style="width:24px; background:#5050ff;" title="60"></div>
+  <div style="width:12px; background:#ffffff;" title="30"></div>
+</div><FONT size="-2"><A href="./hammer.html#0062">双角魔锤</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">7</TD>
 <TD class="tb-cell3 hc">120000ｚ</TD>
 <TD class="tb-cell2 hc">936
@@ -1429,7 +2485,7 @@ ShowLinks(1, 6);
 <TD class="tb-cell2 hc">−−−</TD>
 <TD class="tb-cell2 hc">0％</TD>
 <TD class="tb-cell2 hc">&nbsp;</TD>
-<TD class="tb-cell1 hc"><A href="../items/items.html?01bd" target="items">优质的弯角</A>×2<BR><A href="../items/items.html?01c7" target="items">黑角龙的尻尾</A>×6<BR><A href="../items/items.html?0144" target="items">龙玉</A>×1</TD>
+<TD class="tb-cell1 hc"><A href="../items/items.html?01bd" target="items">优质的弯角</A>×2<BR><A href="../items/items.html?01c7" target="items">黑角龙的尾巴</A>×6<BR><A href="../items/items.html?0144" target="items">龙玉</A>×1</TD>
 <TD class="tb-cell1 hc">&nbsp;</TD>
 <TD class="tb-cell1 hc">漆黒の角と真红之角の競演。<br>
 この迫力は角竜の突進を思わ<br>
@@ -1438,7 +2494,22 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0431"class="tb-cell2 hc" height="65">431</TD>
-<TD class="tb-cell1 hc">上古遗物<BR>　 <IMG src="../images/gauge431.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./hammer.html#0081">龍头盖棍</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc">上古遗物<div class="gauge">
+  <div style="width:56px; background:#ee0000;" title="140"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:24px; background:#eeee00;" title="60"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:16px; background:#5050ff;" title="40"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:56px; background:#ee0000;" title="140"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:24px; background:#eeee00;" title="60"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:16px; background:#5050ff;" title="40"></div>
+  <div style="width:20px; background:#ffffff;" title="50"></div>
+</div><FONT size="-2"><A href="./hammer.html#0081">龍头盖棍</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">6</TD>
 <TD class="tb-cell3 hc">31250ｚ</TD>
 <TD class="tb-cell2 hc">780
@@ -1447,7 +2518,7 @@ ShowLinks(1, 6);
 <TD class="tb-cell2 hc">○○○</TD>
 <TD class="tb-cell2 hc">0％</TD>
 <TD class="tb-cell2 hc">&nbsp;</TD>
-<TD class="tb-cell1 hc"><A href="../items/items.html?0210" target="items">龙头壳</A>×6<BR><A href="../items/items.html?013c" target="items">古龍骨</A>×15<BR><A href="../items/items.html?0108" target="items">粘着蝗虫</A>×20</TD>
+<TD class="tb-cell1 hc"><A href="../items/items.html?0210" target="items">龙头壳</A>×6<BR><A href="../items/items.html?013c" target="items">古龍骨</A>×15<BR><A href="../items/items.html?0108" target="items">黏着蝗虫</A>×20</TD>
 <TD class="tb-cell1 hc">&nbsp;</TD>
 <TD class="tb-cell1 hc">大型の甲殻種が宿としていた、<br>
 飛竜の頭骨で作られた骨鎚。<br>
@@ -1456,7 +2527,22 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0432"class="tb-cell2 hc" height="65">432</TD>
-<TD class="tb-cell1 hc">岩龙怒击<BR>　 <IMG src="../images/gauge432.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./hammer.html#0088">岩龙打击</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc">岩龙怒击<div class="gauge">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:68px; background:#eeee00;" title="170"></div>
+  <div style="width:48px; background:#00ee00;" title="120"></div>
+  <div style="width:4px; background:#5050ff;" title="10"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:68px; background:#eeee00;" title="170"></div>
+  <div style="width:48px; background:#00ee00;" title="120"></div>
+  <div style="width:16px; background:#5050ff;" title="40"></div>
+  <div style="width:8px; background:#ffffff;" title="20"></div>
+</div><FONT size="-2"><A href="./hammer.html#0088">岩龙打击</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">6</TD>
 <TD class="tb-cell3 hc">46850ｚ</TD>
 <TD class="tb-cell2 hc">936
@@ -1474,7 +2560,22 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0433"class="tb-cell2 hc" height="65">433</TD>
-<TD class="tb-cell1 hc">伟岸＝达奥拉<BR>　 <IMG src="../images/gauge433.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./hammer.html#0097">钢冰棍</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc">宏伟＝达奥拉<div class="gauge">
+  <div style="width:24px; background:#ee0000;" title="60"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:32px; background:#eeee00;" title="80"></div>
+  <div style="width:48px; background:#00ee00;" title="120"></div>
+  <div style="width:20px; background:#5050ff;" title="50"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:24px; background:#ee0000;" title="60"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:32px; background:#eeee00;" title="80"></div>
+  <div style="width:48px; background:#00ee00;" title="120"></div>
+  <div style="width:24px; background:#5050ff;" title="60"></div>
+  <div style="width:16px; background:#ffffff;" title="40"></div>
+</div><FONT size="-2"><A href="./hammer.html#0097">钢冰棍</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">7</TD>
 <TD class="tb-cell3 hc">150000ｚ</TD>
 <TD class="tb-cell2 hc">988
@@ -1492,7 +2593,22 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0434"class="tb-cell2 hc" height="65">434</TD>
-<TD class="tb-cell1 hc">白猫锤<BR>　 <IMG src="../images/gauge434.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./hammer.html#0435">黑猫锤</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc">白猫锤<div class="gauge">
+  <div style="width:32px; background:#ee0000;" title="80"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:28px; background:#eeee00;" title="70"></div>
+  <div style="width:44px; background:#00ee00;" title="110"></div>
+  <div style="width:8px; background:#5050ff;" title="20"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:32px; background:#ee0000;" title="80"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:28px; background:#eeee00;" title="70"></div>
+  <div style="width:44px; background:#00ee00;" title="110"></div>
+  <div style="width:20px; background:#5050ff;" title="50"></div>
+  <div style="width:8px; background:#ffffff;" title="20"></div>
+</div><FONT size="-2"><A href="./hammer.html#0435">黑猫锤</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">6</TD>
 <TD class="tb-cell3 hc">25000ｚ</TD>
 <TD class="tb-cell2 hc">728
@@ -1510,7 +2626,21 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0435"class="tb-cell2" height="65">435</TD>
-<TD class="tb-cell1">黑猫锤<BR>　 <IMG src="../images/gauge435.gif" border="0" width="122" height="19"></TD>
+<TD class="tb-cell1">黑猫锤<div class="gauge">
+  <div style="width:40px; background:#ee0000;" title="100"></div>
+  <div style="width:4px; background:#eea000;" title="10"></div>
+  <div style="width:12px; background:#eeee00;" title="30"></div>
+  <div style="width:64px; background:#00ee00;" title="160"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:40px; background:#ee0000;" title="100"></div>
+  <div style="width:4px; background:#eea000;" title="10"></div>
+  <div style="width:12px; background:#eeee00;" title="30"></div>
+  <div style="width:68px; background:#00ee00;" title="170"></div>
+  <div style="width:16px; background:#5050ff;" title="40"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div></TD>
 <TD class="tb-cell2">4</TD>
 <TD class="tb-cell3">15000ｚ</TD>
 <TD class="tb-cell2">624
@@ -1520,7 +2650,7 @@ ShowLinks(1, 6);
 <TD class="tb-cell2">0％</TD>
 <TD class="tb-cell2"><A href="./hammer.html#0434">434</A></TD>
 <TD class="tb-cell1">&nbsp;</TD>
-<TD class="tb-cell1"><A href="../items/items.html?00db" target="items">辉龙石</A>×2<BR><A href="../items/items.html?0229" target="items">钢龍的尻尾</A>×1<BR><A href="../items/items.html?02f2" target="items">肉球的图章</A>×5</TD>
+<TD class="tb-cell1"><A href="../items/items.html?00db" target="items">辉龙石</A>×2<BR><A href="../items/items.html?0229" target="items">钢龍的尾巴</A>×1<BR><A href="../items/items.html?02f2" target="items">肉球的图章</A>×5<hr style="border-top: 1px solid black;"><A href="../items/items.html?02e0" target="items">星铁</A>×2<BR><A href="../items/items.html?02f2" target="items">肉球的图章</A>×3<BR>（沼地开放后联动）</TD>
 <TD class="tb-cell1">ニヒルな笑顔が魅力の黒い猫<br>
 槌。希少色のためマニアの間<br>
 では高額で取引されている品。<br>
@@ -1528,7 +2658,22 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0436"class="tb-cell2 hc" height="65">436</TD>
-<TD class="tb-cell1 hc">金猫锤<BR>　 <IMG src="../images/gauge436.gif" border="0" width="122" height="19"></TD>
+<TD class="tb-cell1 hc">金猫锤<div class="gauge">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:68px; background:#eeee00;" title="170"></div>
+  <div style="width:48px; background:#00ee00;" title="120"></div>
+  <div style="width:4px; background:#5050ff;" title="10"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:68px; background:#eeee00;" title="170"></div>
+  <div style="width:48px; background:#00ee00;" title="120"></div>
+  <div style="width:16px; background:#5050ff;" title="40"></div>
+  <div style="width:8px; background:#ffffff;" title="20"></div>
+</div></TD>
 <TD class="tb-cell2 hc">6</TD>
 <TD class="tb-cell3 hc">30000ｚ</TD>
 <TD class="tb-cell2 hc">676
@@ -1546,7 +2691,21 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0437"class="tb-cell2 hc" height="65">437</TD>
-<TD class="tb-cell1 hc">帝王龙虾重踏<BR>　 <IMG src="../images/gauge437.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./hammer.html#0071">龙虾重踏</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc">帝王龙虾重踏<div class="gauge">
+  <div style="width:20px; background:#ee0000;" title="50"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:56px; background:#eeee00;" title="140"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:20px; background:#ee0000;" title="50"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:56px; background:#eeee00;" title="140"></div>
+  <div style="width:40px; background:#00ee00;" title="100"></div>
+  <div style="width:8px; background:#5050ff;" title="20"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./hammer.html#0071">龙虾重踏</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">6</TD>
 <TD class="tb-cell3 hc">35880ｚ</TD>
 <TD class="tb-cell2 hc">780
@@ -1564,7 +2723,21 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0438"class="tb-cell2" height="65">438</TD>
-<TD class="tb-cell1">残暴之颚<BR>　 <IMG src="../images/gauge438.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./hammer.html#0085">怪鸟之颚</A>强化而来</FONT></TD>
+<TD class="tb-cell1">残暴之颚<div class="gauge">
+  <div style="width:20px; background:#ee0000;" title="50"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:56px; background:#eeee00;" title="140"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:20px; background:#ee0000;" title="50"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:56px; background:#eeee00;" title="140"></div>
+  <div style="width:40px; background:#00ee00;" title="100"></div>
+  <div style="width:8px; background:#5050ff;" title="20"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./hammer.html#0085">怪鸟之颚</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">3</TD>
 <TD class="tb-cell3">11370ｚ</TD>
 <TD class="tb-cell2">780
@@ -1573,7 +2746,7 @@ ShowLinks(1, 6);
 <TD class="tb-cell2">○−−</TD>
 <TD class="tb-cell2">0％</TD>
 <TD class="tb-cell2"><A href="./hammer.html#0069">69</A></TD>
-<TD class="tb-cell1"><A href="../items/items.html?0174" target="items">青怪鸟的甲壳</A>×8<BR><A href="../items/items.html?0173" target="items">青怪鸟的鳞</A>×4<BR><A href="../items/items.html?0108" target="items">粘着蝗虫</A>×6</TD>
+<TD class="tb-cell1"><A href="../items/items.html?0174" target="items">青怪鸟的甲壳</A>×8<BR><A href="../items/items.html?0173" target="items">青怪鸟的鳞</A>×4<BR><A href="../items/items.html?0108" target="items">黏着蝗虫</A>×6</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1">バイオレンスな強化版。<br>
 振るう度に怪鳥の笑い声と<br>
@@ -1582,7 +2755,21 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0473"class="tb-cell2 hc" height="65">473</TD>
-<TD class="tb-cell1 hc">邪龍破碎锤<BR>　 <IMG src="../images/gauge473.gif" border="0" width="122" height="19"></TD>
+<TD class="tb-cell1 hc">黑龍破碎者<div class="gauge">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:68px; background:#eeee00;" title="170"></div>
+  <div style="width:32px; background:#00ee00;" title="80"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:68px; background:#eeee00;" title="170"></div>
+  <div style="width:48px; background:#00ee00;" title="120"></div>
+  <div style="width:4px; background:#5050ff;" title="10"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div></TD>
 <TD class="tb-cell2 hc">7</TD>
 <TD class="tb-cell3 hc">100000ｚ</TD>
 <TD class="tb-cell2 hc">832
@@ -1592,15 +2779,30 @@ ShowLinks(1, 6);
 <TD class="tb-cell2 hc">0％</TD>
 <TD class="tb-cell2 hc"><A href="./hammer.html#0475">475</A>, <A href="./hammer.html#0476">476</A></TD>
 <TD class="tb-cell1 hc">&nbsp;</TD>
-<TD class="tb-cell1 hc"><A href="../items/items.html?01eb" target="items">黑龍的角</A>×2<BR><A href="../items/items.html?01ed" target="items">黑龍的甲壳</A>×6<BR><A href="../items/items.html?02e4" target="items">战友之绊</A>×10<BR><A href="../items/items.html?02e3" target="items">战友之证</A>×5</TD>
+<TD class="tb-cell1 hc"><A href="../items/items.html?01eb" target="items">黑龍的角</A>×2<BR><A href="../items/items.html?01ed" target="items">黑龍的甲壳</A>×6<BR><A href="../items/items.html?02e4" target="items">战友之纽带</A>×10<BR><A href="../items/items.html?02e3" target="items">战友之证</A>×5</TD>
 <TD class="tb-cell1 hc">邪龍黑龍を祀る神器。<br>
-〜大地の龍脈より命を受け<br>
-　御神体の南門へ注ぐ者也〜<br>
+～大地の龍脈より命を受け<br>
+　御神体の南門へ注ぐ者也～<br>
 </TD>
 </TR>
 <TR>
 <TD id="0475"class="tb-cell2 hc" height="65">475</TD>
-<TD class="tb-cell1 hc">火神破碎者<BR>　 <IMG src="../images/gauge475.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./hammer.html#0473">邪龍破碎锤</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc">红龍破碎者<div class="gauge">
+  <div style="width:36px; background:#ee0000;" title="90"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:52px; background:#eeee00;" title="130"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:16px; background:#5050ff;" title="40"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:36px; background:#ee0000;" title="90"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:52px; background:#eeee00;" title="130"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:20px; background:#5050ff;" title="50"></div>
+  <div style="width:16px; background:#ffffff;" title="40"></div>
+</div><FONT size="-2"><A href="./hammer.html#0473">黑龍破碎者</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">7</TD>
 <TD class="tb-cell3 hc">150000ｚ</TD>
 <TD class="tb-cell2 hc">988
@@ -1612,13 +2814,28 @@ ShowLinks(1, 6);
 <TD class="tb-cell1 hc"><A href="../items/items.html?01eb" target="items">黑龍的角</A>×3<BR><A href="../items/items.html?01ee" target="items">黑龍的眼</A>×2<BR><A href="../items/items.html?022c" target="items">钢龍的宝玉</A>×3</TD>
 <TD class="tb-cell1 hc">&nbsp;</TD>
 <TD class="tb-cell1 hc">邪龍黑龍を祀る神器。<br>
-〜大地の龍脈より命を受け<br>
-　御神体の南門へ注ぐ者也〜<br>
+～大地の龍脈より命を受け<br>
+　御神体の南門へ注ぐ者也～<br>
 </TD>
 </TR>
 <TR>
 <TD id="0476"class="tb-cell2 hc" height="65">476</TD>
-<TD class="tb-cell1 hc">祖龍破碎者<BR>　 <IMG src="../images/gauge476.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./hammer.html#0473">邪龍破碎锤</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc">祖龍破碎者<div class="gauge">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:68px; background:#eeee00;" title="170"></div>
+  <div style="width:48px; background:#00ee00;" title="120"></div>
+  <div style="width:4px; background:#5050ff;" title="10"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:68px; background:#eeee00;" title="170"></div>
+  <div style="width:48px; background:#00ee00;" title="120"></div>
+  <div style="width:16px; background:#5050ff;" title="40"></div>
+  <div style="width:8px; background:#ffffff;" title="20"></div>
+</div><FONT size="-2"><A href="./hammer.html#0473">黑龍破碎者</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">7</TD>
 <TD class="tb-cell3 hc">250000ｚ</TD>
 <TD class="tb-cell2 hc">884
@@ -1636,7 +2853,20 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0477"class="tb-cell2" height="65">477</TD>
-<TD class="tb-cell1">甲壳锤<BR>　 <IMG src="../images/gauge477.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./hammer.html#0073">巨大锤</A>强化而来</FONT></TD>
+<TD class="tb-cell1">甲壳锤<div class="gauge">
+  <div style="width:24px; background:#ee0000;" title="60"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:32px; background:#eeee00;" title="80"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:24px; background:#ee0000;" title="60"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:32px; background:#eeee00;" title="80"></div>
+  <div style="width:48px; background:#00ee00;" title="120"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./hammer.html#0073">巨大锤</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">4</TD>
 <TD class="tb-cell3">15780ｚ</TD>
 <TD class="tb-cell2">780
@@ -1654,7 +2884,22 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0482"class="tb-cell2 nc" height="65">482</TD>
-<TD class="tb-cell1 nc">生死悲号<BR>　 <IMG src="../images/gauge482.gif" border="0" width="122" height="19"></TD>
+<TD class="tb-cell1 nc">仙宿贝号<div class="gauge">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:68px; background:#eeee00;" title="170"></div>
+  <div style="width:48px; background:#00ee00;" title="120"></div>
+  <div style="width:16px; background:#5050ff;" title="40"></div>
+  <div style="width:8px; background:#ffffff;" title="20"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:68px; background:#eeee00;" title="170"></div>
+  <div style="width:48px; background:#00ee00;" title="120"></div>
+  <div style="width:16px; background:#5050ff;" title="40"></div>
+  <div style="width:8px; background:#ffffff;" title="20"></div>
+</div></TD>
 <TD class="tb-cell2 nc">7</TD>
 <TD class="tb-cell3 nc">255000ｚ</TD>
 <TD class="tb-cell2 nc">1144
@@ -1664,7 +2909,7 @@ ShowLinks(1, 6);
 <TD class="tb-cell2 nc">0％</TD>
 <TD class="tb-cell2 nc">&nbsp;</TD>
 <TD class="tb-cell1 nc">&nbsp;</TD>
-<TD class="tb-cell1 nc">&nbsp;</TD>
+<TD class="tb-cell1 nc">*开发者物品*<br>*无生产配方*</TD>
 <TD class="tb-cell1 nc"><br>
 <br>
 <br>

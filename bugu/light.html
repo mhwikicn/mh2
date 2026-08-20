@@ -8,6 +8,23 @@
 <LINK rel="stylesheet" href="../table.css" type="text/css">
 <SCRIPT src="../scripts/links.js"></SCRIPT>
 </HEAD>
+<SCRIPT src="../scripts/blink.js"></SCRIPT>
+<STYLE>
+.highlight-row td,
+.highlight-row th {
+  background-color: #c7edcc !important;
+  transition: background-color 0.3s ease;
+}
+.cnt-tb2 > tbody:first-child > tr:first-child {
+  position: sticky;
+  top: 0;
+  background-color: #996633;
+  z-index: 10;
+}
+.cnt-tb2 td[id] {
+  scroll-margin-top: 39px;
+}
+</STYLE>
 <BODY>
 <HR>
 <TABLE border="0" width="910">
@@ -34,7 +51,7 @@ ShowLinks(1, 6);
 </TBODY>
 </TABLE>
 <BR>
-<FONT SIZE="-1">* 攻击力表示为生产最初状态，经过最高等级加工后可以获得＋60的提升。<BR>
+<FONT SIZE="-1">* 攻击力表示为生产最初状态，经过最高等级加工后可以获得＋60的提升（等效于原始攻击＋50）。<BR>
 * 诸元栏表示的弹种名称为支持的速射弹种。<BR>
 * 可用弹种中装填数为红色的，表示发动对应弹种追加技能后相应的装填数。<BR>
 * 请注意，并非所有武器在游戏中都能获得。<BR>
@@ -50,7 +67,7 @@ ShowLinks(1, 6);
 <TH class="tb-th1" width="80">诸元</TH>
 <TH class="tb-th1" width="50">插孔</TH>
 <TH class="tb-th1" width="45">会心率</TH>
-<TH class="tb-th1" width="57">再装填<BR>反动</TH>
+<TH class="tb-th1" width="57">再装填<BR>反冲</TH>
 <TH class="tb-th1" colspan="4">可用弹种</TH>
 <TH class="tb-th1" width="140">生产必要素材</TH>
 <TH class="tb-th1" width="180">解说</TH>
@@ -354,7 +371,7 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0010"class="tb-cell2">10</TD>
-<TD class="tb-cell1">砂漠风暴</TD>
+<TD class="tb-cell1">沙漠风暴</TD>
 <TD class="tb-cell2">3</TD>
 <TD class="tb-cell3">2200ｚ</TD>
 <TD class="tb-cell2">攻击力：120</TD>
@@ -379,7 +396,7 @@ ShowLinks(1, 6);
 染色：2<BR>
 鬼人：1<BR>
 硬化：1</TD>
-<TD class="tb-cell1"><A href="../items/items.html?0182" target="items">砂龙的鳞</A>×5<BR><A href="../items/items.html?0184" target="items">砂龙的鳍</A>×1<BR><A href="../items/items.html?00da" target="items">燕雀石</A>×5<BR><A href="../items/items.html?00d8" target="items">铁矿石</A>×10</TD>
+<TD class="tb-cell1"><A href="../items/items.html?0182" target="items">沙龙的鳞</A>×5<BR><A href="../items/items.html?0184" target="items">沙龙的鳍</A>×1<BR><A href="../items/items.html?00da" target="items">燕雀石</A>×5<BR><A href="../items/items.html?00d8" target="items">铁矿石</A>×10</TD>
 <TD class="tb-cell1">リロードの高速化を図ったラ<br>
 イトボウガン。機動力を生か<br>
 した戦闘が可能。<br>
@@ -478,7 +495,7 @@ LV1 彻甲榴弹が速射対応に。<br>
 染色：2<BR>
 鬼人：1<BR>
 硬化：1</TD>
-<TD class="tb-cell1"><A href="../items/items.html?0263" target="items">锈块</A>×1</TD>
+<TD class="tb-cell1"><A href="../items/items.html?0263" target="items">锈块</A>×1<BR>（概率生产）</TD>
 <TD class="tb-cell1">公会製のボウガンとは設計<br>
 思想が異なる、正体不明の品。<br>
 しかし実射性能は非常に高い。<br>
@@ -613,7 +630,7 @@ LV1 彻甲榴弹が速射対応に。<br>
 <TD class="tb-cell1 hc"><A href="../items/items.html?0189" target="items">雌火龙的上鳞</A>×5<BR><A href="../items/items.html?018d" target="items">雌火龙的坚壳</A>×3<BR><A href="../items/items.html?00dc" target="items">灵鹤石</A>×6<BR><A href="../items/items.html?0019" target="items">怪物的浓汁</A>×10</TD>
 <TD class="tb-cell1 hc">対大型怪物用ボウガン<br>
 の究極形。機動性にも富み、<br>
-近〜中距離での運用には最適。<br>
+近～中距離での運用には最適。<br>
 </TD>
 </TR>
 <TR>
@@ -844,7 +861,7 @@ LV1 贯通弹が速射可能。<br>
 <TD class="tb-cell1 hc"><A href="../items/items.html?0144" target="items">龙玉</A>×1<BR><A href="../items/items.html?019a" target="items">火龙的逆鳞</A>×1<BR><A href="../items/items.html?018a" target="items">雌火龙的逆鳞</A>×1<BR><A href="../items/items.html?00e2" target="items">耀水晶</A>×1</TD>
 <TD class="tb-cell1 hc">凄まじい火力を有しながら、<br>
 ハイブリッドフレームの力で<br>
-反动を軽減。飛竜戦時に有用。<br>
+反冲を軽減。飛竜戦時に有用。<br>
 </TD>
 </TR>
 <TR>
@@ -1138,7 +1155,7 @@ LV1 散弹が速射対応。その弹<br>
 染色：2<BR>
 鬼人：1<BR>
 硬化：1</TD>
-<TD class="tb-cell1 hc"><A href="../items/items.html?017e" target="items">水龙的上鳞</A>×5<BR><A href="../items/items.html?017f" target="items">水龙的鳍</A>×4<BR><A href="../items/items.html?0108" target="items">粘着蝗虫</A>×6<BR><A href="../items/items.html?00dd" target="items">白鸠石</A>×5</TD>
+<TD class="tb-cell1 hc"><A href="../items/items.html?017e" target="items">水龙的上鳞</A>×5<BR><A href="../items/items.html?017f" target="items">水龙的鳍</A>×4<BR><A href="../items/items.html?0108" target="items">黏着蝗虫</A>×6<BR><A href="../items/items.html?00dd" target="items">白鸠石</A>×5</TD>
 <TD class="tb-cell1 hc">ほぼ全種の弹丸を発射できる、<br>
 画期的なライトボウガン。<br>
 火力も強化し実用度を増した。<br>
@@ -1146,7 +1163,7 @@ LV1 散弹が速射対応。その弹<br>
 </TR>
 <TR>
 <TD id="0047"class="tb-cell2">47</TD>
-<TD class="tb-cell1">砂暴</TD>
+<TD class="tb-cell1">沙暴</TD>
 <TD class="tb-cell2">3</TD>
 <TD class="tb-cell3">2600ｚ</TD>
 <TD class="tb-cell2">攻击力：120<BR>LV2 通常弹</TD>
@@ -1171,7 +1188,7 @@ LV1 散弹が速射対応。その弹<br>
 染色：2<BR>
 鬼人：1<BR>
 硬化：1</TD>
-<TD class="tb-cell1"><A href="../items/items.html?0187" target="items">砂龙的桃鳍</A>×1<BR><A href="../items/items.html?0186" target="items">砂龙的紫鳞</A>×2<BR><A href="../items/items.html?00da" target="items">燕雀石</A>×10</TD>
+<TD class="tb-cell1"><A href="../items/items.html?0187" target="items">沙龙的桃鳍</A>×1<BR><A href="../items/items.html?0186" target="items">沙龙的紫鳞</A>×2<BR><A href="../items/items.html?00da" target="items">燕雀石</A>×10</TD>
 <TD class="tb-cell1">高速装弹機構を小型化。その<br>
 空間をLV2 通常弹の速射機能<br>
 と装填数に割いた一丁。<br>
@@ -1179,7 +1196,7 @@ LV1 散弹が速射対応。その弹<br>
 </TR>
 <TR>
 <TD id="0048"class="tb-cell2 hc">48</TD>
-<TD class="tb-cell1 hc">砂漠暴风</TD>
+<TD class="tb-cell1 hc">沙漠暴风</TD>
 <TD class="tb-cell2 hc">6</TD>
 <TD class="tb-cell3 hc">4800ｚ</TD>
 <TD class="tb-cell2 hc">攻击力：156</TD>
@@ -1204,7 +1221,7 @@ LV1 散弹が速射対応。その弹<br>
 染色：2<BR>
 鬼人：1<BR>
 硬化：1</TD>
-<TD class="tb-cell1 hc"><A href="../items/items.html?0183" target="items">砂龙的上鳞</A>×5<BR><A href="../items/items.html?0185" target="items">砂龙的上鳍</A>×3<BR><A href="../items/items.html?00da" target="items">燕雀石</A>×10<BR><A href="../items/items.html?0107" target="items">王族花金龟</A>×3</TD>
+<TD class="tb-cell1 hc"><A href="../items/items.html?0183" target="items">沙龙的上鳞</A>×5<BR><A href="../items/items.html?0185" target="items">沙龙的上鳍</A>×3<BR><A href="../items/items.html?00da" target="items">燕雀石</A>×10<BR><A href="../items/items.html?0107" target="items">王族花金龟</A>×3</TD>
 <TD class="tb-cell1 hc">薬室の強度を増すため、希少<br>
 な素材を利用。設計限界ギリ<br>
 ギリまで威力を上げた武器。<br>
@@ -1212,7 +1229,7 @@ LV1 散弹が速射対応。その弹<br>
 </TR>
 <TR>
 <TD id="0049"class="tb-cell2 hc">49</TD>
-<TD class="tb-cell1 hc">砂暴改</TD>
+<TD class="tb-cell1 hc">沙暴改</TD>
 <TD class="tb-cell2 hc">7</TD>
 <TD class="tb-cell3 hc">6150ｚ</TD>
 <TD class="tb-cell2 hc">攻击力：168<BR>LV2 通常弹</TD>
@@ -1237,7 +1254,7 @@ LV1 散弹が速射対応。その弹<br>
 染色：2<BR>
 鬼人：1<BR>
 硬化：1</TD>
-<TD class="tb-cell1 hc"><A href="../items/items.html?0183" target="items">砂龙的上鳞</A>×6<BR><A href="../items/items.html?0187" target="items">砂龙的桃鳍</A>×2<BR><A href="../items/items.html?0186" target="items">砂龙的紫鳞</A>×5<BR><A href="../items/items.html?00dc" target="items">灵鹤石</A>×6</TD>
+<TD class="tb-cell1 hc"><A href="../items/items.html?0183" target="items">沙龙的上鳞</A>×6<BR><A href="../items/items.html?0187" target="items">沙龙的桃鳍</A>×2<BR><A href="../items/items.html?0186" target="items">沙龙的紫鳞</A>×5<BR><A href="../items/items.html?00dc" target="items">灵鹤石</A>×6</TD>
 <TD class="tb-cell1 hc">扱いが難しい属性弹に装填機<br>
 構が対応。LV2 通常弹の速射<br>
 対応を加え究極の砂嵐が誕生。<br>
@@ -1369,7 +1386,7 @@ LV1 彻甲榴弹の速射も健在。<br>
 染色：2<BR>
 鬼人：-<BR>
 硬化：-</TD>
-<TD class="tb-cell1"><A href="../items/items.html?0170" target="items">巨大的喙</A>×1<BR><A href="../items/items.html?016e" target="items">怪鸟的耳</A>×2<BR><A href="../items/items.html?01ac" target="items">浮肿柔皮</A>×2<BR><A href="../items/items.html?0108" target="items">粘着蝗虫</A>×3</TD>
+<TD class="tb-cell1"><A href="../items/items.html?0170" target="items">巨大的喙</A>×1<BR><A href="../items/items.html?016e" target="items">怪鸟的耳</A>×2<BR><A href="../items/items.html?01ac" target="items">浮肿柔皮</A>×2<BR><A href="../items/items.html?0108" target="items">黏着蝗虫</A>×3</TD>
 <TD class="tb-cell1">大怪鸟の頭部を素材と<br>
 して用いた軽量ボウガン。<br>
 大怪鳥の怒りが炸裂する。<br>
@@ -1501,7 +1518,7 @@ LV1 彻甲榴弹の速射も健在。<br>
 染色：2<BR>
 鬼人：1<BR>
 硬化：1</TD>
-<TD class="tb-cell1 hc"><A href="../items/items.html?0268" target="items">太古之块</A>×1</TD>
+<TD class="tb-cell1 hc"><A href="../items/items.html?0268" target="items">太古之块</A>×1<BR>（概率生产）</TD>
 <TD class="tb-cell1 hc">太古之块から磨き出された<br>
 公会品とは異なる謎の銃。<br>
 分類はライトボウガン。<br>
@@ -1633,7 +1650,7 @@ LV1 彻甲榴弹の速射も健在。<br>
 染色：2<BR>
 鬼人：-<BR>
 硬化：-</TD>
-<TD class="tb-cell1 nc">&nbsp;</TD>
+<TD class="tb-cell1 nc">*开发者物品*<br>*无生产配方*</TD>
 <TD class="tb-cell1 nc">金狮子の荒ぶる魂が宿る三連<br>
 筒。LV1 彻甲榴弹の速射に対<br>
 応、一面を焦土と化す。<br>
@@ -1897,7 +1914,7 @@ LV1 贯通弹が速射対応。<br>
 染色：2<BR>
 鬼人：1<BR>
 硬化：1</TD>
-<TD class="tb-cell1 hc"><A href="../items/items.html?0181" target="items">翠水龙的鳍</A>×4<BR><A href="../items/items.html?0180" target="items">翠水龙的鳞</A>×5<BR><A href="../items/items.html?0108" target="items">粘着蝗虫</A>×6<BR><A href="../items/items.html?00dd" target="items">白鸠石</A>×5</TD>
+<TD class="tb-cell1 hc"><A href="../items/items.html?0181" target="items">翠水龙的鳍</A>×4<BR><A href="../items/items.html?0180" target="items">翠水龙的鳞</A>×5<BR><A href="../items/items.html?0108" target="items">黏着蝗虫</A>×6<BR><A href="../items/items.html?00dd" target="items">白鸠石</A>×5</TD>
 <TD class="tb-cell1 hc">汎用性の高さ、LV2 通常弹の<br>
 速射対応はそのままに、吹き<br>
 荒ぶ嵐の如き攻击力を実現。<br>
@@ -1963,7 +1980,7 @@ LV1 贯通弹が速射対応。<br>
 染色：2<BR>
 鬼人：-<BR>
 硬化：-</TD>
-<TD class="tb-cell1"><A href="../items/items.html?0257" target="items">黑狼鸟的甲壳</A>×3<BR><A href="../items/items.html?0259" target="items">尖锐的喙</A>×2<BR><A href="../items/items.html?0256" target="items">黑狼鸟的鳞</A>×3<BR><A href="../items/items.html?0197" target="items">火龙的骨髓</A>×1</TD>
+<TD class="tb-cell1"><A href="../items/items.html?0257" target="items">黑狼鸟的甲壳</A>×3<BR><A href="../items/items.html?0259" target="items">尖锐的喙</A>×2<BR><A href="../items/items.html?0256" target="items">黑狼鸟的鳞</A>×3<BR><A href="../items/items.html?0197" target="items">火龙的骨髓</A>×1<BR>（讨伐炎妃龍后联动）</TD>
 <TD class="tb-cell1">黒狼鳥の顔を模した弩。使用<br>
 者が発する怒りの感情に反応<br>
 して引金は軽くなるという。<br>

@@ -8,6 +8,14 @@
 <LINK rel="stylesheet" href="../table.css" type="text/css">
 <SCRIPT src="../scripts/links.js"></SCRIPT>
 </HEAD>
+<SCRIPT src="../scripts/blink.js"></SCRIPT>
+<STYLE>
+.highlight-row td,
+.highlight-row th {
+  background-color: #c7edcc !important;
+  transition: background-color 0.3s ease;
+}
+</STYLE>
 <BODY>
 <HR>
 <TABLE border="0" width="910">
@@ -32,7 +40,7 @@ ShowLinks(1, 99);
 <TBODY>
 <TR>
 <TH class="tb-th1" width="40">No.</TH>
-<TH class="tb-th1" width="35">Lev.</TH>
+<TH class="tb-th1" width="35">Lv.</TH>
 <TH class="tb-th1" width="200">任务名</TH>
 <TH class="tb-th1" width="40">季节</TH>
 <TH class="tb-th1" width="50">契约金</TH>
@@ -257,7 +265,7 @@ ShowLinks(1, 99);
 <TABLE border="1" width="170" cellspacing="0" cellpadding="2" class="cnt-tb1">
 <TBODY>
 <TR>
-<TH colspan="2" class="tb-th1">追加报酬  7分以内クリア</TH>
+<TH colspan="2" class="tb-th1">追加报酬  7分以内完成</TH>
 </TR>
 <TR>
 <TD class="tb-cell11">
@@ -340,7 +348,7 @@ ShowLinks(1, 99);
 <TBODY>
 <TR>
 <TD class="tb-cell1">
-依頼主：女将<BR><BR>
+委托方：老板<BR><BR>
 委托内容：<BR>教官がこの前の演习で余った<BR>燃石炭を使用して1度演习をし<BR>たいんだってさ…懲りないね。<BR>まぁ、演习だと思って教官の<BR>わがままに付き合ってあげな。<BR>しっかりやるんだよ！
 <BR><BR>特殊条件：<BR>参加资格为ＨＲ３１以上
 </TD></TR></TBODY>
@@ -359,7 +367,7 @@ ShowLinks(1, 99);
 <TBODY>
 <TR>
 <TH class="tb-th1" width="40">No.</TH>
-<TH class="tb-th1" width="35">Lev.</TH>
+<TH class="tb-th1" width="35">Lv.</TH>
 <TH class="tb-th1" width="200">任务名</TH>
 <TH class="tb-th1" width="40">季节</TH>
 <TH class="tb-th1" width="50">契约金</TH>
@@ -569,7 +577,7 @@ ShowLinks(1, 99);
 <TABLE border="1" width="170" cellspacing="0" cellpadding="2" class="cnt-tb1">
 <TBODY>
 <TR>
-<TH colspan="2" class="tb-th1">追加报酬 15分以内クリア</TH>
+<TH colspan="2" class="tb-th1">追加报酬 15分以内完成</TH>
 </TR>
 <TR>
 <TD class="tb-cell11">
@@ -636,7 +644,7 @@ ShowLinks(1, 99);
 <TBODY>
 <TR>
 <TD class="tb-cell1">
-依頼主：女将<BR><BR>
+委托方：老板<BR><BR>
 委托内容：<BR>いよいよきたね。ハンターの<BR>登竜門と言ってもいい１００頭<BR>討伐の演习だよ！<BR>これを達成出来れば、アンタも<BR>一回り成長するはずだ！<BR>がんばるんだよ！いいね？
 <BR><BR>特殊条件：<BR>参加资格为ＨＲ３１以上
 </TD></TR></TBODY>
@@ -655,7 +663,7 @@ ShowLinks(1, 99);
 <TBODY>
 <TR>
 <TH class="tb-th1" width="40">No.</TH>
-<TH class="tb-th1" width="35">Lev.</TH>
+<TH class="tb-th1" width="35">Lv.</TH>
 <TH class="tb-th1" width="200">任务名</TH>
 <TH class="tb-th1" width="40">季节</TH>
 <TH class="tb-th1" width="50">契约金</TH>
@@ -871,7 +879,7 @@ ShowLinks(1, 99);
 <TABLE border="1" width="170" cellspacing="0" cellpadding="2" class="cnt-tb1">
 <TBODY>
 <TR>
-<TH colspan="2" class="tb-th1">追加报酬 10分以内クリア</TH>
+<TH colspan="2" class="tb-th1">追加报酬 10分以内完成</TH>
 </TR>
 <TR>
 <TD class="tb-cell11">
@@ -974,7 +982,7 @@ ShowLinks(1, 99);
 <TBODY>
 <TR>
 <TD class="tb-cell1">
-依頼主：女将<BR><BR>
+委托方：老板<BR><BR>
 委托内容：<BR>沼地のキノコを食い荒らす<BR>桃毛兽王を狩猟するのが<BR>この演习の目的だ！…と書いて<BR>あるね。アタシもアイツにゃ<BR>手を焼いてんだよ。<BR>しっかりやってきておくれ！
 <BR><BR>特殊条件：<BR>参加资格为ＨＲ３１以上
 </TD></TR></TBODY>
@@ -993,7 +1001,7 @@ ShowLinks(1, 99);
 <TBODY>
 <TR>
 <TH class="tb-th1" width="40">No.</TH>
-<TH class="tb-th1" width="35">Lev.</TH>
+<TH class="tb-th1" width="35">Lv.</TH>
 <TH class="tb-th1" width="200">任务名</TH>
 <TH class="tb-th1" width="40">季节</TH>
 <TH class="tb-th1" width="50">契约金</TH>
@@ -1147,7 +1155,7 @@ ShowLinks(1, 99);
 <TABLE border="1" width="170" cellspacing="0" cellpadding="2" class="cnt-tb1">
 <TBODY>
 <TR>
-<TH colspan="2" class="tb-th1">追加报酬 12分以内クリア</TH>
+<TH colspan="2" class="tb-th1">追加报酬 12分以内完成</TH>
 </TR>
 <TR>
 <TD class="tb-cell11">
@@ -1286,7 +1294,7 @@ ShowLinks(1, 99);
 <TBODY>
 <TR>
 <TD class="tb-cell1">
-依頼主：女将<BR><BR>
+委托方：老板<BR><BR>
 委托内容：<BR>この斗技场では怪物対<BR>ハンターのガチンコ勝負を<BR>やってもらうよ！<BR>今回の相手は将军镰蟹
 だね。鎌のようなハサミに切り<BR>裂かれないように気をつけな！
 <BR><BR>特殊条件：<BR>接受＆参加资格为<BR>ＨＲ１７以上
@@ -1306,7 +1314,7 @@ ShowLinks(1, 99);
 <TBODY>
 <TR>
 <TH class="tb-th1" width="40">No.</TH>
-<TH class="tb-th1" width="35">Lev.</TH>
+<TH class="tb-th1" width="35">Lv.</TH>
 <TH class="tb-th1" width="200">任务名</TH>
 <TH class="tb-th1" width="40">季节</TH>
 <TH class="tb-th1" width="50">契约金</TH>
@@ -1509,7 +1517,7 @@ ShowLinks(1, 99);
 <TBODY>
 <TR>
 <TD class="tb-cell1">
-依頼主：大众酒场公会<BR><BR>
+委托方：大众酒场公会<BR><BR>
 委托内容：<BR>古龍钢龍は今まで<BR>狩猟してきた怪物とは<BR>まったく異質…、その存在力<BR>は雨を嵐に変えるほどです。<BR>捕獲なんて無理なことは考え<BR>ないで慎重かつ着実に攻击を<BR>重ねるしかないと思います！
 <BR><BR>特殊条件：<BR>参加资格为ＨＲ２０以上
 </TD></TR></TBODY>
@@ -1528,7 +1536,7 @@ ShowLinks(1, 99);
 <TBODY>
 <TR>
 <TH class="tb-th1" width="40">No.</TH>
-<TH class="tb-th1" width="35">Lev.</TH>
+<TH class="tb-th1" width="35">Lv.</TH>
 <TH class="tb-th1" width="200">任务名</TH>
 <TH class="tb-th1" width="40">季节</TH>
 <TH class="tb-th1" width="50">契约金</TH>
@@ -1731,7 +1739,7 @@ ShowLinks(1, 99);
 <TBODY>
 <TR>
 <TD class="tb-cell1">
-依頼主：大众酒场公会<BR><BR>
+委托方：大众酒场公会<BR><BR>
 委托内容：<BR>古龍钢龍は今まで<BR>狩猟してきた怪物とは<BR>まったく異質…、その存在力<BR>は雨を嵐に変えるほどです。<BR>捕獲なんて無理なことは考え<BR>ないで慎重かつ着実に攻击を<BR>重ねるしかないと思います！
 <BR><BR>特殊条件：<BR>参加资格为ＨＲ２０以上
 </TD></TR></TBODY>
@@ -1750,7 +1758,7 @@ ShowLinks(1, 99);
 <TBODY>
 <TR>
 <TH class="tb-th1" width="40">No.</TH>
-<TH class="tb-th1" width="35">Lev.</TH>
+<TH class="tb-th1" width="35">Lv.</TH>
 <TH class="tb-th1" width="200">任务名</TH>
 <TH class="tb-th1" width="40">季节</TH>
 <TH class="tb-th1" width="50">契约金</TH>
@@ -1935,7 +1943,7 @@ ShowLinks(1, 99);
 <TBODY>
 <TR>
 <TD class="tb-cell1">
-依頼主：大众酒场公会<BR><BR>
+委托方：大众酒场公会<BR><BR>
 委托内容：<BR>霞龍は古龍種の中でも<BR>異端視されている存在です。<BR>密林の雨は彼に味方するよう<BR>に激しさを増すでしょう…。<BR>捕獲なんて無理なことは考え<BR>ないで慎重かつ着実に攻击を<BR>重ねるしかないと思います！
 <BR><BR>特殊条件：<BR>参加资格为ＨＲ２０以上
 </TD></TR></TBODY>
@@ -1954,7 +1962,7 @@ ShowLinks(1, 99);
 <TBODY>
 <TR>
 <TH class="tb-th1" width="40">No.</TH>
-<TH class="tb-th1" width="35">Lev.</TH>
+<TH class="tb-th1" width="35">Lv.</TH>
 <TH class="tb-th1" width="200">任务名</TH>
 <TH class="tb-th1" width="40">季节</TH>
 <TH class="tb-th1" width="50">契约金</TH>
@@ -2139,7 +2147,7 @@ ShowLinks(1, 99);
 <TBODY>
 <TR>
 <TD class="tb-cell1">
-依頼主：大众酒场公会<BR><BR>
+委托方：大众酒场公会<BR><BR>
 委托内容：<BR>霞龍は古龍種の中でも<BR>異端視されている存在です。<BR>密林の雨は彼に味方するよう<BR>に激しさを増すでしょう…。<BR>捕獲なんて無理なことは考え<BR>ないで慎重かつ着実に攻击を<BR>重ねるしかないと思います！
 <BR><BR>特殊条件：<BR>参加资格为ＨＲ２０以上
 </TD></TR></TBODY>
@@ -2158,7 +2166,7 @@ ShowLinks(1, 99);
 <TBODY>
 <TR>
 <TH class="tb-th1" width="40">No.</TH>
-<TH class="tb-th1" width="35">Lev.</TH>
+<TH class="tb-th1" width="35">Lv.</TH>
 <TH class="tb-th1" width="200">任务名</TH>
 <TH class="tb-th1" width="40">季节</TH>
 <TH class="tb-th1" width="50">契约金</TH>
@@ -2172,13 +2180,13 @@ ShowLinks(1, 99);
 <TR>
 <TD class="tb-cell2">2B14</TD>
 <TD class="tb-cell2">★４</TD>
-<TD class="tb-cell51">≪砂漠探索≫<BR>呼唤砂岚之龍</TD>
+<TD class="tb-cell51">≪沙漠探索≫<BR>呼唤沙暴之龍</TD>
 <TD class="tb-cell2"><BR><IMG src="../images/season1.gif" border="0"><BR>寒冷期</TD>
 <TD class="tb-cell3">500ｚ</TD>
 <TD class="tb-cell3">8200ｚ<BR>0ｚ<BR>0ｚ</TD>
 <TD class="tb-cell3">1300<BR>0<BR>0</TD>
 <TD class="tb-cell3">50分</TD>
-<TD class="tb-cell2">砂漠</TD>
+<TD class="tb-cell2">沙漠</TD>
 <TD class="tb-cell1">讨伐风翔龍１头<BR>无<BR>无</TD>
 <TD class="tb-cell1"><A href="../monslist/mons36.html" target="_blank">钢龍</A></TD>
 </TR>
@@ -2361,7 +2369,7 @@ ShowLinks(1, 99);
 <TBODY>
 <TR>
 <TD class="tb-cell1">
-依頼主：大众酒场公会<BR><BR>
+委托方：大众酒场公会<BR><BR>
 委托内容：<BR>古龍钢龍は今まで<BR>狩猟してきた怪物とは<BR>まったく異質…、自分の無力<BR>さを知ることになるかも…。<BR>捕獲なんて無理なことは考え<BR>ないで慎重かつ着実に攻击を<BR>重ねるしかないと思います！
 <BR><BR>特殊条件：<BR>参加资格为ＨＲ２０以上
 </TD></TR></TBODY>
@@ -2380,7 +2388,7 @@ ShowLinks(1, 99);
 <TBODY>
 <TR>
 <TH class="tb-th1" width="40">No.</TH>
-<TH class="tb-th1" width="35">Lev.</TH>
+<TH class="tb-th1" width="35">Lv.</TH>
 <TH class="tb-th1" width="200">任务名</TH>
 <TH class="tb-th1" width="40">季节</TH>
 <TH class="tb-th1" width="50">契约金</TH>
@@ -2394,13 +2402,13 @@ ShowLinks(1, 99);
 <TR>
 <TD class="tb-cell2">2B15</TD>
 <TD class="tb-cell2">★４</TD>
-<TD class="tb-cell51">≪砂漠探索≫<BR>呼唤砂岚之龍</TD>
+<TD class="tb-cell51">≪沙漠探索≫<BR>呼唤沙暴之龍</TD>
 <TD class="tb-cell2"><BR><IMG src="../images/season2.gif" border="0"><BR>繁殖期</TD>
 <TD class="tb-cell3">500ｚ</TD>
 <TD class="tb-cell3">8200ｚ<BR>0ｚ<BR>0ｚ</TD>
 <TD class="tb-cell3">1300<BR>0<BR>0</TD>
 <TD class="tb-cell3">50分</TD>
-<TD class="tb-cell2">砂漠</TD>
+<TD class="tb-cell2">沙漠</TD>
 <TD class="tb-cell1">讨伐风翔龍１头<BR>无<BR>无</TD>
 <TD class="tb-cell1"><A href="../monslist/mons36.html" target="_blank">钢龍</A></TD>
 </TR>
@@ -2583,7 +2591,7 @@ ShowLinks(1, 99);
 <TBODY>
 <TR>
 <TD class="tb-cell1">
-依頼主：大众酒场公会<BR><BR>
+委托方：大众酒场公会<BR><BR>
 委托内容：<BR>古龍钢龍は今まで<BR>狩猟してきた怪物とは<BR>まったく異質…、自分の無力<BR>さを知ることになるかも…。<BR>捕獲なんて無理なことは考え<BR>ないで慎重かつ着実に攻击を<BR>重ねるしかないと思います！
 <BR><BR>特殊条件：<BR>参加资格为ＨＲ２０以上
 </TD></TR></TBODY>
@@ -2602,7 +2610,7 @@ ShowLinks(1, 99);
 <TBODY>
 <TR>
 <TH class="tb-th1" width="40">No.</TH>
-<TH class="tb-th1" width="35">Lev.</TH>
+<TH class="tb-th1" width="35">Lv.</TH>
 <TH class="tb-th1" width="200">任务名</TH>
 <TH class="tb-th1" width="40">季节</TH>
 <TH class="tb-th1" width="50">契约金</TH>
@@ -2616,13 +2624,13 @@ ShowLinks(1, 99);
 <TR>
 <TD class="tb-cell2">2B16</TD>
 <TD class="tb-cell2">★４</TD>
-<TD class="tb-cell51">≪砂漠探索≫<BR>烧灼热砂之业炎</TD>
+<TD class="tb-cell51">≪沙漠探索≫<BR>烧灼热沙之业炎</TD>
 <TD class="tb-cell2"><BR><IMG src="../images/season1.gif" border="0"><BR>寒冷期</TD>
 <TD class="tb-cell3">500ｚ</TD>
 <TD class="tb-cell3">8400ｚ<BR>0ｚ<BR>0ｚ</TD>
 <TD class="tb-cell3">1400<BR>0<BR>0</TD>
 <TD class="tb-cell3">50分</TD>
-<TD class="tb-cell2">砂漠</TD>
+<TD class="tb-cell2">沙漠</TD>
 <TD class="tb-cell1">讨伐炎王龍１头<BR>无<BR>无</TD>
 <TD class="tb-cell1"><A href="../monslist/mons41.html" target="_blank">炎王龍</A></TD>
 </TR>
@@ -2800,7 +2808,7 @@ ShowLinks(1, 99);
 <TBODY>
 <TR>
 <TD class="tb-cell1">
-依頼主：大众酒场公会<BR><BR>
+委托方：大众酒场公会<BR><BR>
 委托内容：<BR>炎王龍提欧・提斯卡托尔は炎<BR>の化身とも云われる古龍で、<BR>ケタ違いの威圧感と強暴性は<BR>他の怪物とは別格…。<BR>捕獲なんて無理なことは考え<BR>ないで慎重かつ着実に攻击を<BR>重ねるしかないと思います！
 <BR><BR>特殊条件：<BR>参加资格为ＨＲ２０以上
 </TD></TR></TBODY>
@@ -2819,7 +2827,7 @@ ShowLinks(1, 99);
 <TBODY>
 <TR>
 <TH class="tb-th1" width="40">No.</TH>
-<TH class="tb-th1" width="35">Lev.</TH>
+<TH class="tb-th1" width="35">Lv.</TH>
 <TH class="tb-th1" width="200">任务名</TH>
 <TH class="tb-th1" width="40">季节</TH>
 <TH class="tb-th1" width="50">契约金</TH>
@@ -2833,13 +2841,13 @@ ShowLinks(1, 99);
 <TR>
 <TD class="tb-cell2">2B17</TD>
 <TD class="tb-cell2">★４</TD>
-<TD class="tb-cell51">≪砂漠探索≫<BR>烧灼热砂之业炎</TD>
+<TD class="tb-cell51">≪沙漠探索≫<BR>烧灼热沙之业炎</TD>
 <TD class="tb-cell2"><BR><IMG src="../images/season2.gif" border="0"><BR>繁殖期</TD>
 <TD class="tb-cell3">500ｚ</TD>
 <TD class="tb-cell3">8400ｚ<BR>0ｚ<BR>0ｚ</TD>
 <TD class="tb-cell3">1400<BR>0<BR>0</TD>
 <TD class="tb-cell3">50分</TD>
-<TD class="tb-cell2">砂漠</TD>
+<TD class="tb-cell2">沙漠</TD>
 <TD class="tb-cell1">讨伐炎王龍１头<BR>无<BR>无</TD>
 <TD class="tb-cell1"><A href="../monslist/mons41.html" target="_blank">炎王龍</A></TD>
 </TR>
@@ -3017,7 +3025,7 @@ ShowLinks(1, 99);
 <TBODY>
 <TR>
 <TD class="tb-cell1">
-依頼主：大众酒场公会<BR><BR>
+委托方：大众酒场公会<BR><BR>
 委托内容：<BR>炎王龍提欧・提斯卡托尔は炎<BR>の化身とも云われる古龍で、<BR>ケタ違いの威圧感と強暴性は<BR>他の怪物とは別格…。<BR>捕獲なんて無理なことは考え<BR>ないで慎重かつ着実に攻击を<BR>重ねるしかないと思います！
 <BR><BR>特殊条件：<BR>参加资格为ＨＲ２０以上
 </TD></TR></TBODY>
@@ -3036,7 +3044,7 @@ ShowLinks(1, 99);
 <TBODY>
 <TR>
 <TH class="tb-th1" width="40">No.</TH>
-<TH class="tb-th1" width="35">Lev.</TH>
+<TH class="tb-th1" width="35">Lv.</TH>
 <TH class="tb-th1" width="200">任务名</TH>
 <TH class="tb-th1" width="40">季节</TH>
 <TH class="tb-th1" width="50">契约金</TH>
@@ -3221,7 +3229,7 @@ ShowLinks(1, 99);
 <TBODY>
 <TR>
 <TD class="tb-cell1">
-依頼主：大众酒场公会<BR><BR>
+委托方：大众酒场公会<BR><BR>
 委托内容：<BR>霞龍は古龍種の中でも<BR>異端視されている存在です。<BR>姿無きところから姿を現わし<BR>熟練の狩人でも手に負えない。<BR>捕獲なんて無理なことは考え<BR>ないで慎重かつ着実に攻击を<BR>重ねるしかないと思います！
 <BR><BR>特殊条件：<BR>参加资格为ＨＲ２０以上
 </TD></TR></TBODY>
@@ -3240,7 +3248,7 @@ ShowLinks(1, 99);
 <TBODY>
 <TR>
 <TH class="tb-th1" width="40">No.</TH>
-<TH class="tb-th1" width="35">Lev.</TH>
+<TH class="tb-th1" width="35">Lv.</TH>
 <TH class="tb-th1" width="200">任务名</TH>
 <TH class="tb-th1" width="40">季节</TH>
 <TH class="tb-th1" width="50">契约金</TH>
@@ -3425,7 +3433,7 @@ ShowLinks(1, 99);
 <TBODY>
 <TR>
 <TD class="tb-cell1">
-依頼主：大众酒场公会<BR><BR>
+委托方：大众酒场公会<BR><BR>
 委托内容：<BR>霞龍は古龍種の中でも<BR>異端視されている存在です。<BR>姿無きところから姿を現わし<BR>熟練の狩人でも手に負えない。<BR>捕獲なんて無理なことは考え<BR>ないで慎重かつ着実に攻击を<BR>重ねるしかないと思います！
 <BR><BR>特殊条件：<BR>参加资格为ＨＲ２０以上
 </TD></TR></TBODY>
@@ -3444,7 +3452,7 @@ ShowLinks(1, 99);
 <TBODY>
 <TR>
 <TH class="tb-th1" width="40">No.</TH>
-<TH class="tb-th1" width="35">Lev.</TH>
+<TH class="tb-th1" width="35">Lv.</TH>
 <TH class="tb-th1" width="200">任务名</TH>
 <TH class="tb-th1" width="40">季节</TH>
 <TH class="tb-th1" width="50">契约金</TH>
@@ -3642,7 +3650,7 @@ ShowLinks(1, 99);
 <TBODY>
 <TR>
 <TD class="tb-cell1">
-依頼主：大众酒场公会<BR><BR>
+委托方：大众酒场公会<BR><BR>
 委托内容：<BR>炎王龍提欧・提斯卡托尔は炎<BR>の化身とも云われる古龍。<BR>炎をまといしその姿は近づく<BR>だけでその者の命を削る…。<BR>捕獲なんて無理なことは考え<BR>ないで慎重かつ着実に攻击を<BR>重ねるしかないと思います！
 <BR><BR>特殊条件：<BR>参加资格为ＨＲ２０以上
 </TD></TR></TBODY>
@@ -3661,7 +3669,7 @@ ShowLinks(1, 99);
 <TBODY>
 <TR>
 <TH class="tb-th1" width="40">No.</TH>
-<TH class="tb-th1" width="35">Lev.</TH>
+<TH class="tb-th1" width="35">Lv.</TH>
 <TH class="tb-th1" width="200">任务名</TH>
 <TH class="tb-th1" width="40">季节</TH>
 <TH class="tb-th1" width="50">契约金</TH>
@@ -3859,7 +3867,7 @@ ShowLinks(1, 99);
 <TBODY>
 <TR>
 <TD class="tb-cell1">
-依頼主：大众酒场公会<BR><BR>
+委托方：大众酒场公会<BR><BR>
 委托内容：<BR>炎王龍提欧・提斯卡托尔は炎<BR>の化身とも云われる古龍。<BR>炎をまといしその姿は近づく<BR>だけでその者の命を削る…。<BR>捕獲なんて無理なことは考え<BR>ないで慎重かつ着実に攻击を<BR>重ねるしかないと思います！
 <BR><BR>特殊条件：<BR>参加资格为ＨＲ２０以上
 </TD></TR></TBODY>
@@ -3878,7 +3886,7 @@ ShowLinks(1, 99);
 <TBODY>
 <TR>
 <TH class="tb-th1" width="40">No.</TH>
-<TH class="tb-th1" width="35">Lev.</TH>
+<TH class="tb-th1" width="35">Lv.</TH>
 <TH class="tb-th1" width="200">任务名</TH>
 <TH class="tb-th1" width="40">季节</TH>
 <TH class="tb-th1" width="50">契约金</TH>
@@ -3892,14 +3900,14 @@ ShowLinks(1, 99);
 <TR>
 <TD class="tb-cell2">2B2C</TD>
 <TD class="tb-cell2">★４</TD>
-<TD class="tb-cell51">≪雪山探索≫<BR>雪原驰骋之幻兽</TD>
+<TD class="tb-cell51">≪雪山探索≫<BR>驰骋雪原之幻兽</TD>
 <TD class="tb-cell2"><BR><IMG src="../images/season0.gif" border="0"><BR>温暖期</TD>
 <TD class="tb-cell3">450ｚ</TD>
 <TD class="tb-cell3">7200ｚ<BR>500ｚ<BR>0ｚ</TD>
 <TD class="tb-cell3">800<BR>100<BR>0</TD>
 <TD class="tb-cell3">50分</TD>
 <TD class="tb-cell2">雪山</TD>
-<TD class="tb-cell1">讨伐麒麟１头<BR>将公会烽旗升起于山顶<BR>无</TD>
+<TD class="tb-cell1">讨伐麒麟１头<BR>将公会旗帜升起于山顶<BR>无</TD>
 <TD class="tb-cell1"><A href="../monslist/mons21.html" target="_blank">麒麟</A></TD>
 </TR>
 </TBODY>
@@ -3984,16 +3992,16 @@ ShowLinks(1, 99);
 <TD class="tb-cell1"><A href="../items/items.html?0016" target="items">热饮</A>×1</TD>
 </TR>
 <TR>
-<TD class="tb-cell1"><A href="../items/items.html?02a6" target="items">公会烽旗</A>×1</TD>
+<TD class="tb-cell1"><A href="../items/items.html?02a6" target="items">公会旗帜</A>×1</TD>
 </TR>
 <TR>
-<TD class="tb-cell1"><A href="../items/items.html?02a6" target="items">公会烽旗</A>×1</TD>
+<TD class="tb-cell1"><A href="../items/items.html?02a6" target="items">公会旗帜</A>×1</TD>
 </TR>
 <TR>
-<TD class="tb-cell1"><A href="../items/items.html?02a6" target="items">公会烽旗</A>×1</TD>
+<TD class="tb-cell1"><A href="../items/items.html?02a6" target="items">公会旗帜</A>×1</TD>
 </TR>
 <TR>
-<TD class="tb-cell1"><A href="../items/items.html?02a6" target="items">公会烽旗</A>×1</TD>
+<TD class="tb-cell1"><A href="../items/items.html?02a6" target="items">公会旗帜</A>×1</TD>
 </TR>
 <TR>
 <TH class="tb-th2c">支线A达成支给品</TH>
@@ -4089,8 +4097,8 @@ ShowLinks(1, 99);
 <TBODY>
 <TR>
 <TD class="tb-cell1">
-依頼主：大众酒场公会<BR><BR>
-委托内容：<BR>古龍種に属される≪麒麟≫<BR>は、特定の生息域を持たない<BR>うえにその個体数の少なさか<BR>ら≪幻獣≫とも呼ばれる生き<BR>物です。雪山に行くなら山頂<BR>にウチの≪公会烽旗≫<BR>を立ててきてくださいね♪
+委托方：大众酒场公会<BR><BR>
+委托内容：<BR>古龍種に属される≪麒麟≫<BR>は、特定の生息域を持たない<BR>うえにその個体数の少なさか<BR>ら≪幻獣≫とも呼ばれる生き<BR>物です。雪山に行くなら山頂<BR>にウチの≪公会旗帜≫<BR>を立ててきてくださいね♪
 <BR><BR>特殊条件：<BR>参加资格为ＨＲ２０以上
 </TD></TR></TBODY>
 </TABLE>
@@ -4108,7 +4116,7 @@ ShowLinks(1, 99);
 <TBODY>
 <TR>
 <TH class="tb-th1" width="40">No.</TH>
-<TH class="tb-th1" width="35">Lev.</TH>
+<TH class="tb-th1" width="35">Lv.</TH>
 <TH class="tb-th1" width="200">任务名</TH>
 <TH class="tb-th1" width="40">季节</TH>
 <TH class="tb-th1" width="50">契约金</TH>
@@ -4122,7 +4130,7 @@ ShowLinks(1, 99);
 <TR>
 <TD class="tb-cell2">2B2D</TD>
 <TD class="tb-cell2">★４</TD>
-<TD class="tb-cell51">≪雪山探索≫<BR>雪原驰骋之幻兽</TD>
+<TD class="tb-cell51">≪雪山探索≫<BR>驰骋雪原之幻兽</TD>
 <TD class="tb-cell2"><BR><IMG src="../images/season2.gif" border="0"><BR>繁殖期</TD>
 <TD class="tb-cell3">450ｚ</TD>
 <TD class="tb-cell3">7200ｚ<BR>600ｚ<BR>0ｚ</TD>
@@ -4324,7 +4332,7 @@ ShowLinks(1, 99);
 <TBODY>
 <TR>
 <TD class="tb-cell1">
-依頼主：大众酒场公会<BR><BR>
+委托方：大众酒场公会<BR><BR>
 委托内容：<BR>古龍種に属される≪麒麟≫<BR>は、雷を自在にあやつるさま<BR>から≪幻獣≫と呼ばれる生き<BR>物です。アイテムを≪メラル<BR>ー≫に奪われたら焦らず取り<BR>返しましょう！逆にポーチを<BR>拾えるかも知れないですよ？
 <BR><BR>特殊条件：<BR>参加资格为ＨＲ２０以上
 </TD></TR></TBODY>
@@ -4343,7 +4351,7 @@ ShowLinks(1, 99);
 <TBODY>
 <TR>
 <TH class="tb-th1" width="40">No.</TH>
-<TH class="tb-th1" width="35">Lev.</TH>
+<TH class="tb-th1" width="35">Lv.</TH>
 <TH class="tb-th1" width="200">任务名</TH>
 <TH class="tb-th1" width="40">季节</TH>
 <TH class="tb-th1" width="50">契约金</TH>
@@ -4595,7 +4603,7 @@ ShowLinks(1, 99);
 <TBODY>
 <TR>
 <TD class="tb-cell1">
-依頼主：大众酒场公会<BR><BR>
+委托方：大众酒场公会<BR><BR>
 委托内容：<BR>古龍钢龍は今まで<BR>狩猟してきた怪物とは<BR>まったく異質、その存在力は<BR>雪原を吹雪に変えるほど…。<BR>捕獲なんて無理なことは考え<BR>ないで慎重かつ着実に攻击を<BR>重ねるしかないと思います！
 <BR><BR>特殊条件：<BR>参加资格为ＨＲ２０以上
 </TD></TR></TBODY>
@@ -4614,7 +4622,7 @@ ShowLinks(1, 99);
 <TBODY>
 <TR>
 <TH class="tb-th1" width="40">No.</TH>
-<TH class="tb-th1" width="35">Lev.</TH>
+<TH class="tb-th1" width="35">Lv.</TH>
 <TH class="tb-th1" width="200">任务名</TH>
 <TH class="tb-th1" width="40">季节</TH>
 <TH class="tb-th1" width="50">契约金</TH>
@@ -4866,7 +4874,7 @@ ShowLinks(1, 99);
 <TBODY>
 <TR>
 <TD class="tb-cell1">
-依頼主：大众酒场公会<BR><BR>
+委托方：大众酒场公会<BR><BR>
 委托内容：<BR>古龍钢龍は今まで<BR>狩猟してきた怪物とは<BR>まったく異質、その存在力は<BR>雪原を吹雪に変えるほど…。<BR>捕獲なんて無理なことは考え<BR>ないで慎重かつ着実に攻击を<BR>重ねるしかないと思います！
 <BR><BR>特殊条件：<BR>参加资格为ＨＲ２０以上
 </TD></TR></TBODY>
@@ -4885,7 +4893,7 @@ ShowLinks(1, 99);
 <TBODY>
 <TR>
 <TH class="tb-th1" width="40">No.</TH>
-<TH class="tb-th1" width="35">Lev.</TH>
+<TH class="tb-th1" width="35">Lv.</TH>
 <TH class="tb-th1" width="200">任务名</TH>
 <TH class="tb-th1" width="40">季节</TH>
 <TH class="tb-th1" width="50">契约金</TH>
@@ -5132,7 +5140,7 @@ ShowLinks(1, 99);
 <TBODY>
 <TR>
 <TD class="tb-cell1">
-依頼主：大众酒场公会<BR><BR>
+委托方：大众酒场公会<BR><BR>
 委托内容：<BR>炎王龍提欧・提斯卡托尔は炎<BR>の化身とも云われる古龍…。<BR>火山では全ての炎や熱が彼に<BR>味方してるって話です…。<BR>捕獲なんて無理なことは考え<BR>ないで慎重かつ着実に攻击を<BR>重ねるしかないと思います！
 <BR><BR>特殊条件：<BR>参加资格为ＨＲ２０以上
 </TD></TR></TBODY>
@@ -5151,7 +5159,7 @@ ShowLinks(1, 99);
 <TBODY>
 <TR>
 <TH class="tb-th1" width="40">No.</TH>
-<TH class="tb-th1" width="35">Lev.</TH>
+<TH class="tb-th1" width="35">Lv.</TH>
 <TH class="tb-th1" width="200">任务名</TH>
 <TH class="tb-th1" width="40">季节</TH>
 <TH class="tb-th1" width="50">契约金</TH>
@@ -5398,7 +5406,7 @@ ShowLinks(1, 99);
 <TBODY>
 <TR>
 <TD class="tb-cell1">
-依頼主：大众酒场公会<BR><BR>
+委托方：大众酒场公会<BR><BR>
 委托内容：<BR>炎王龍提欧・提斯卡托尔は炎<BR>の化身とも云われる古龍…。<BR>火山では全ての炎や熱が彼に<BR>味方してるって話です…。<BR>捕獲なんて無理なことは考え<BR>ないで慎重かつ着実に攻击を<BR>重ねるしかないと思います！
 <BR><BR>特殊条件：<BR>参加资格为ＨＲ２０以上
 </TD></TR></TBODY>
@@ -5417,7 +5425,7 @@ ShowLinks(1, 99);
 <TBODY>
 <TR>
 <TH class="tb-th1" width="40">No.</TH>
-<TH class="tb-th1" width="35">Lev.</TH>
+<TH class="tb-th1" width="35">Lv.</TH>
 <TH class="tb-th1" width="200">任务名</TH>
 <TH class="tb-th1" width="40">季节</TH>
 <TH class="tb-th1" width="50">契约金</TH>
@@ -5579,7 +5587,7 @@ ShowLinks(1, 99);
 <TBODY>
 <TR>
 <TD class="tb-cell1">
-依頼主：大众酒场公会<BR><BR>
+委托方：大众酒场公会<BR><BR>
 委托内容：<BR>この地の彼方に眠る、謎多き<BR>未開の地≪古塔≫に、幻獣<BR>≪麒麟≫が現れたようです！<BR>古塔へはいつでも行けるわけ<BR>じゃなく、天候や気候を始め<BR>とする環境が安定してる期間<BR>だけです。頑張って下さい！
 <BR><BR>特殊条件：<BR>参加资格为ＨＲ２０以上
 </TD></TR></TBODY>
@@ -5598,7 +5606,7 @@ ShowLinks(1, 99);
 <TBODY>
 <TR>
 <TH class="tb-th1" width="40">No.</TH>
-<TH class="tb-th1" width="35">Lev.</TH>
+<TH class="tb-th1" width="35">Lv.</TH>
 <TH class="tb-th1" width="200">任务名</TH>
 <TH class="tb-th1" width="40">季节</TH>
 <TH class="tb-th1" width="50">契约金</TH>
@@ -5760,7 +5768,7 @@ ShowLinks(1, 99);
 <TBODY>
 <TR>
 <TD class="tb-cell1">
-依頼主：大众酒场公会<BR><BR>
+委托方：大众酒场公会<BR><BR>
 委托内容：<BR>この地の彼方に眠る、謎多き<BR>未開の地≪古塔≫に、幻獣<BR>≪麒麟≫が現れたようです！<BR>古塔へはいつでも行けるわけ<BR>じゃなく、天候や気候を始め<BR>とする環境が安定してる期間<BR>だけです。頑張って下さい！
 <BR><BR>特殊条件：<BR>参加资格为ＨＲ２０以上
 </TD></TR></TBODY>
@@ -5779,7 +5787,7 @@ ShowLinks(1, 99);
 <TBODY>
 <TR>
 <TH class="tb-th1" width="40">No.</TH>
-<TH class="tb-th1" width="35">Lev.</TH>
+<TH class="tb-th1" width="35">Lv.</TH>
 <TH class="tb-th1" width="200">任务名</TH>
 <TH class="tb-th1" width="40">季节</TH>
 <TH class="tb-th1" width="50">契约金</TH>
@@ -5907,7 +5915,7 @@ ShowLinks(1, 99);
 </TR>
 <TR>
 <TD class="tb-cell11">
-<A href="../items/items.html?02e4" target="items">战友之绊</A>×1</TD>
+<A href="../items/items.html?02e4" target="items">战友之纽带</A>×1</TD>
 <TD class="tb-cell3">5％</TD>
 </TR>
 <TR>
@@ -5951,7 +5959,7 @@ ShowLinks(1, 99);
 <TBODY>
 <TR>
 <TD class="tb-cell1">
-依頼主：大众酒场公会<BR><BR>
+委托方：大众酒场公会<BR><BR>
 委托内容：<BR>古龍観測士より、怪しげな龍<BR>がとうとう砦に到達したとの<BR>知らせが入った！公式狩猟試<BR>験とは無関係ではあるが、砦<BR>に到達した謎の龍を全力で撃<BR>退するのじゃ！砦の迎撃兵器<BR>をしかと活用するがよいぞ！
 <BR><BR>特殊条件：<BR>参加资格为ＨＲ２０以上
 </TD></TR></TBODY>
@@ -5970,7 +5978,7 @@ ShowLinks(1, 99);
 <TBODY>
 <TR>
 <TH class="tb-th1" width="40">No.</TH>
-<TH class="tb-th1" width="35">Lev.</TH>
+<TH class="tb-th1" width="35">Lv.</TH>
 <TH class="tb-th1" width="200">任务名</TH>
 <TH class="tb-th1" width="40">季节</TH>
 <TH class="tb-th1" width="50">契约金</TH>
@@ -6306,7 +6314,7 @@ ShowLinks(1, 99);
 <TBODY>
 <TR>
 <TD class="tb-cell1">
-依頼主：大众酒场公会<BR><BR>
+委托方：大众酒场公会<BR><BR>
 委托内容：<BR>ドンドルマへの玄関口となる<BR>≪砦≫に老山龍ラオシャンロ<BR>ンが侵攻してきたようじゃ！<BR>砦の迎撃設備を最大限に活用<BR>し老山龍を撃退するのじゃ！<BR>戦力の及ばぬ者は老山龍の背<BR>に乗り≪龍药石≫を入手して<BR>納品ＢＯＸに納めるのじゃ！
 <BR><BR>特殊条件：<BR>接受＆参加资格为<BR>ＨＲ１７以上
 </TD></TR></TBODY>
@@ -6325,7 +6333,7 @@ ShowLinks(1, 99);
 <TBODY>
 <TR>
 <TH class="tb-th1" width="40">No.</TH>
-<TH class="tb-th1" width="35">Lev.</TH>
+<TH class="tb-th1" width="35">Lv.</TH>
 <TH class="tb-th1" width="200">任务名</TH>
 <TH class="tb-th1" width="40">季节</TH>
 <TH class="tb-th1" width="50">契约金</TH>
@@ -6543,9 +6551,9 @@ ShowLinks(1, 99);
 <TBODY>
 <TR>
 <TD class="tb-cell1">
-依頼主：大众酒场公会<BR><BR>
+委托方：大众酒场公会<BR><BR>
 委托内容：<BR>古龍予報所より緊急警告です！<BR>ドンドルマの領内に風翔龍<BR>钢龍が侵入しまし<BR>た！これよりドンドルマは、<BR>古龍の迎撃体制に入ります！<BR>迎撃区画に設置された迎撃設<BR>備を活用し古龍を撃退して頂<BR>けますようお願い致します！
-<BR><BR>特殊条件：<BR>なし
+<BR><BR>特殊条件：<BR>无
 </TD></TR></TBODY>
 </TABLE>
 </TD>
@@ -6562,7 +6570,7 @@ ShowLinks(1, 99);
 <TBODY>
 <TR>
 <TH class="tb-th1" width="40">No.</TH>
-<TH class="tb-th1" width="35">Lev.</TH>
+<TH class="tb-th1" width="35">Lv.</TH>
 <TH class="tb-th1" width="200">任务名</TH>
 <TH class="tb-th1" width="40">季节</TH>
 <TH class="tb-th1" width="50">契约金</TH>
@@ -6770,7 +6778,7 @@ ShowLinks(1, 99);
 <TBODY>
 <TR>
 <TD class="tb-cell1">
-依頼主：大众酒场公会<BR><BR>
+委托方：大众酒场公会<BR><BR>
 委托内容：<BR>古龍予報所より緊急警告です！<BR>ドンドルマの領内に炎王龍<BR>炎王龍が侵入しま<BR>した！これよりドンドルマは<BR>古龍の迎撃体制に入ります！<BR>迎撃区画に設置された迎撃設<BR>備を活用し古龍を撃退して頂<BR>けますようお願い致します！
 <BR><BR>特殊条件：<BR>接受＆参加资格为<BR>ＨＲ２２以上
 </TD></TR></TBODY>
@@ -6789,7 +6797,7 @@ ShowLinks(1, 99);
 <TBODY>
 <TR>
 <TH class="tb-th1" width="40">No.</TH>
-<TH class="tb-th1" width="35">Lev.</TH>
+<TH class="tb-th1" width="35">Lv.</TH>
 <TH class="tb-th1" width="200">任务名</TH>
 <TH class="tb-th1" width="40">季节</TH>
 <TH class="tb-th1" width="50">契约金</TH>
@@ -6922,7 +6930,7 @@ ShowLinks(1, 99);
 </TR>
 <TR>
 <TD class="tb-cell11">
-<A href="../items/items.html?02ab" target="items">龍食料</A>×1</TD>
+<A href="../items/items.html?02ab" target="items">龍饲料</A>×1</TD>
 <TD class="tb-cell3">15％</TD>
 </TR>
 <TR>
@@ -6932,37 +6940,37 @@ ShowLinks(1, 99);
 </TR>
 <TR>
 <TD class="tb-cell11">
-<A href="../items/items.html?02a8" target="items">古怪食料</A>×1</TD>
+<A href="../items/items.html?02a8" target="items">古怪饲料</A>×1</TD>
 <TD class="tb-cell3">6％</TD>
 </TR>
 <TR>
 <TD class="tb-cell11">
-<A href="../items/items.html?02a9" target="items">巨龍食料</A>×1</TD>
+<A href="../items/items.html?02a9" target="items">巨龍饲料</A>×1</TD>
 <TD class="tb-cell3">6％</TD>
 </TR>
 <TR>
 <TD class="tb-cell11">
-<A href="../items/items.html?02ad" target="items">红之龍食料</A>×1</TD>
+<A href="../items/items.html?02ad" target="items">红之龍饲料</A>×1</TD>
 <TD class="tb-cell3">6％</TD>
 </TR>
 <TR>
 <TD class="tb-cell11">
-<A href="../items/items.html?02ae" target="items">翠之龍食料</A>×1</TD>
+<A href="../items/items.html?02ae" target="items">翠之龍饲料</A>×1</TD>
 <TD class="tb-cell3">6％</TD>
 </TR>
 <TR>
 <TD class="tb-cell11">
-<A href="../items/items.html?02af" target="items">苍之龍食料</A>×1</TD>
+<A href="../items/items.html?02af" target="items">苍之龍饲料</A>×1</TD>
 <TD class="tb-cell3">6％</TD>
 </TR>
 <TR>
 <TD class="tb-cell11">
-<A href="../items/items.html?02aa" target="items">强龍食料</A>×1</TD>
+<A href="../items/items.html?02aa" target="items">强龍饲料</A>×1</TD>
 <TD class="tb-cell3">2％</TD>
 </TR>
 <TR>
 <TD class="tb-cell11">
-<A href="../items/items.html?02ac" target="items">究极龍食料</A>×1</TD>
+<A href="../items/items.html?02ac" target="items">究极龍饲料</A>×1</TD>
 <TD class="tb-cell3">2％</TD>
 </TR>
 <TR>
@@ -6986,9 +6994,9 @@ ShowLinks(1, 99);
 <TBODY>
 <TR>
 <TD class="tb-cell1">
-依頼主：大斗技会<BR><BR>
+委托方：大斗技会<BR><BR>
 委托内容：<BR>相手チームの怪物を<BR>討伐すれば勝利することが<BR>できます！この大斗技会の<BR>大斗技场には、一発逆転が<BR>狙える様々なアイテムが、<BR>地面に眠っています。相手<BR>怪物を狙うも、アイ<BR>テムを狙うも自由です！
-<BR><BR>特殊条件：<BR>なし
+<BR><BR>特殊条件：<BR>无
 </TD></TR></TBODY>
 </TABLE>
 </TD>

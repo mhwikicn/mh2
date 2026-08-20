@@ -8,6 +8,23 @@
 <LINK rel="stylesheet" href="../table.css" type="text/css">
 <SCRIPT src="../scripts/links.js"></SCRIPT>
 </HEAD>
+<SCRIPT src="../scripts/blink.js"></SCRIPT>
+<STYLE>
+.highlight-row td,
+.highlight-row th {
+  background-color: #c7edcc !important;
+  transition: background-color 0.3s ease;
+}
+.cnt-tb2 > tbody:first-child > tr:first-child {
+  position: sticky;
+  top: 0;
+  background-color: #996633;
+  z-index: 10;
+}
+.cnt-tb2 td[id] {
+  scroll-margin-top: 39px;
+}
+</STYLE>
 <BODY>
 <HR>
 <TABLE border="0" width="910">
@@ -34,7 +51,7 @@ ShowLinks(1, 6);
 </TBODY>
 </TABLE>
 <BR>
-<FONT SIZE="-1">* 攻击力表示为生产最初状态，经过最高等级加工后可以获得＋60的提升。<BR>
+<FONT SIZE="-1">* 攻击力表示为生产最初状态，经过最高等级加工后可获得＋60的提升（等效于原始攻击＋50），安装强力枪管后可获得＋24的提升（等效于原始攻击＋20）。<BR>
 * 可用弹种中装填数为红色的，表示发动对应弹种追加技能后相应的装填数。<BR>
 * 请注意，并非所有武器在游戏中都能获得。<BR>
 * <SPAN class="hc">　　　</SPAN>表示网络模式限定内容。
@@ -49,7 +66,7 @@ ShowLinks(1, 6);
 <TH class="tb-th1" width="80">诸元</TH>
 <TH class="tb-th1" width="50">插孔</TH>
 <TH class="tb-th1" width="45">会心率</TH>
-<TH class="tb-th1" width="57">再装填<BR>反动</TH>
+<TH class="tb-th1" width="57">再装填<BR>反冲</TH>
 <TH class="tb-th1" colspan="4">可用弹种</TH>
 <TH class="tb-th1" width="140">生产必要素材</TH>
 <TH class="tb-th1" width="180">解说</TH>
@@ -345,7 +362,7 @@ ShowLinks(1, 6);
 染色：2<BR>
 鬼人：-<BR>
 硬化：-</TD>
-<TD class="tb-cell1"><A href="../items/items.html?01e7" target="items">老山龍的甲壳</A>×4<BR><A href="../items/items.html?01e5" target="items">老山龍的鳞</A>×6<BR><A href="../items/items.html?018a" target="items">雌火龙的逆鳞</A>×2<BR><A href="../items/items.html?0108" target="items">粘着蝗虫</A>×8</TD>
+<TD class="tb-cell1"><A href="../items/items.html?01e7" target="items">老山龍的甲壳</A>×4<BR><A href="../items/items.html?01e5" target="items">老山龍的鳞</A>×6<BR><A href="../items/items.html?018a" target="items">雌火龙的逆鳞</A>×2<BR><A href="../items/items.html?0108" target="items">黏着蝗虫</A>×8</TD>
 <TD class="tb-cell1">老山龍の素材から作られた、<br>
 最高威力と防御性能を持つ<br>
 ヘビィボウガンの究極形態。<br>
@@ -411,7 +428,7 @@ ShowLinks(1, 6);
 染色：2<BR>
 鬼人：1<BR>
 硬化：-</TD>
-<TD class="tb-cell1"><A href="../items/items.html?0121" target="items">大力神王虫</A>×1<BR><A href="../items/items.html?01ce" target="items">爬虫的甲壳</A>×4<BR><A href="../items/items.html?01cb" target="items">巨蜂的坚壳</A>×2<BR><A href="../items/items.html?01c9" target="items">女王虫的尻尾</A>×1</TD>
+<TD class="tb-cell1"><A href="../items/items.html?0121" target="items">大力神王虫</A>×1<BR><A href="../items/items.html?01ce" target="items">爬虫的甲壳</A>×4<BR><A href="../items/items.html?01cb" target="items">巨蜂的坚壳</A>×2<BR><A href="../items/items.html?01c9" target="items">女王虫的尾巴</A>×1</TD>
 <TD class="tb-cell1">龍を倒すための特殊弹を運用<br>
 するために開発されたヘビィ<br>
 ボウガン。<br>
@@ -576,7 +593,7 @@ ShowLinks(1, 6);
 染色：2<BR>
 鬼人：-<BR>
 硬化：-</TD>
-<TD class="tb-cell1 hc"><A href="../items/items.html?017a" target="items">毒怪鸟的紫翼</A>×1<BR><A href="../items/items.html?0179" target="items">橡胶质的紫皮</A>×5<BR><A href="../items/items.html?0108" target="items">粘着蝗虫</A>×3</TD>
+<TD class="tb-cell1 hc"><A href="../items/items.html?017a" target="items">毒怪鸟的紫翼</A>×1<BR><A href="../items/items.html?0179" target="items">橡胶质的紫皮</A>×5<BR><A href="../items/items.html?0108" target="items">黏着蝗虫</A>×3</TD>
 <TD class="tb-cell1 hc">属性弹を揃えた战车术师<br>
 の究極形。城砦の大砲に匹敵<br>
 する火力を備えたボウガン。<br>
@@ -807,7 +824,7 @@ ShowLinks(1, 6);
 染色：2<BR>
 鬼人：-<BR>
 硬化：-</TD>
-<TD class="tb-cell1 hc"><A href="../items/items.html?01ec" target="items">黑龍的鳞</A>×2<BR><A href="../items/items.html?02ea" target="items">公会券</A>×2<BR><A href="../items/items.html?02e4" target="items">战友之绊</A>×5<BR><A href="../items/items.html?02e3" target="items">战友之证</A>×5</TD>
+<TD class="tb-cell1 hc"><A href="../items/items.html?01ec" target="items">黑龍的鳞</A>×2<BR><A href="../items/items.html?02ea" target="items">公会券</A>×2<BR><A href="../items/items.html?02e4" target="items">战友之纽带</A>×5<BR><A href="../items/items.html?02e3" target="items">战友之证</A>×5</TD>
 <TD class="tb-cell1 hc">手を触れることさえ嫌がる者<br>
 の多い、黒龍の素材を使った<br>
 恐るべき一丁。性能は未知数。<br>
@@ -972,7 +989,7 @@ ShowLinks(1, 6);
 染色：2<BR>
 鬼人：1<BR>
 硬化：-</TD>
-<TD class="tb-cell1 hc"><A href="../items/items.html?0019" target="items">怪物的浓汁</A>×10<BR><A href="../items/items.html?01c9" target="items">女王虫的尻尾</A>×1<BR><A href="../items/items.html?01cb" target="items">巨蜂的坚壳</A>×10<BR><A href="../items/items.html?0107" target="items">王族花金龟</A>×10</TD>
+<TD class="tb-cell1 hc"><A href="../items/items.html?0019" target="items">怪物的浓汁</A>×10<BR><A href="../items/items.html?01c9" target="items">女王虫的尾巴</A>×1<BR><A href="../items/items.html?01cb" target="items">巨蜂的坚壳</A>×10<BR><A href="../items/items.html?0107" target="items">王族花金龟</A>×10</TD>
 <TD class="tb-cell1 hc">灭龍弹を放てる数少ない武器。<br>
 これに狙われた者は、数秒で<br>
 ≪ハチの巣≫になる運命。<br>
@@ -1071,7 +1088,7 @@ ShowLinks(1, 6);
 染色：2<BR>
 鬼人：-<BR>
 硬化：-</TD>
-<TD class="tb-cell1"><A href="../items/items.html?0258" target="items">黑狼鸟的耳</A>×2<BR><A href="../items/items.html?0257" target="items">黑狼鸟的甲壳</A>×8<BR><A href="../items/items.html?0256" target="items">黑狼鸟的鳞</A>×3<BR><A href="../items/items.html?0197" target="items">火龙的骨髓</A>×1</TD>
+<TD class="tb-cell1"><A href="../items/items.html?0258" target="items">黑狼鸟的耳</A>×2<BR><A href="../items/items.html?0257" target="items">黑狼鸟的甲壳</A>×8<BR><A href="../items/items.html?0256" target="items">黑狼鸟的鳞</A>×3<BR><A href="../items/items.html?0197" target="items">火龙的骨髓</A>×1<BR>（讨伐炎妃龍后联动）</TD>
 <TD class="tb-cell1">不気味な迫力を持つ重弩。<br>
 眼前の敵を全て滅するまで<br>
 黒狼鳥の怒りは収まらない。<br>
@@ -1112,7 +1129,7 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0101"class="tb-cell2 hc">101</TD>
-<TD class="tb-cell1 hc">砦蟹球壳弩</TD>
+<TD class="tb-cell1 hc">高人球壳弩</TD>
 <TD class="tb-cell2 hc">7</TD>
 <TD class="tb-cell3 hc">16000ｚ</TD>
 <TD class="tb-cell2 hc">攻击力：252<BR>防御力：+10</TD>
@@ -1137,7 +1154,7 @@ ShowLinks(1, 6);
 染色：2<BR>
 鬼人：1<BR>
 硬化：1</TD>
-<TD class="tb-cell1 hc"><A href="../items/items.html?0221" target="items">砦蟹的铗</A>×2<BR><A href="../items/items.html?021f" target="items">砦蟹的甲壳</A>×5<BR><A href="../items/items.html?00de" target="items">红莲石</A>×6<BR><A href="../items/items.html?02e4" target="items">战友之绊</A>×5</TD>
+<TD class="tb-cell1 hc"><A href="../items/items.html?0221" target="items">砦蟹的铗</A>×2<BR><A href="../items/items.html?021f" target="items">砦蟹的甲壳</A>×5<BR><A href="../items/items.html?00de" target="items">红莲石</A>×6<BR><A href="../items/items.html?02e4" target="items">战友之纽带</A>×5</TD>
 <TD class="tb-cell1 hc">高い威力と独特の形状を持つ<br>
 ヘビィボウガン。非常に重量<br>
 があり、使いこなすのは困難。<br>
@@ -1203,7 +1220,7 @@ ShowLinks(1, 6);
 染色：2<BR>
 鬼人：1<BR>
 硬化：-</TD>
-<TD class="tb-cell1 nc">&nbsp;</TD>
+<TD class="tb-cell1 nc">*开发者物品*<br>*无生产配方*</TD>
 <TD class="tb-cell1 nc">理想的な機構を結集した究極<br>
 進化型。≪ボウガンの歴史を<br>
 終わらせた者≫の異名を持つ。<br>
@@ -1304,7 +1321,7 @@ ShowLinks(1, 6);
 硬化：-</TD>
 <TD class="tb-cell1 hc"><A href="../items/items.html?022c" target="items">钢龍的宝玉</A>×1<BR><A href="../items/items.html?0225" target="items">钢龍的坚壳</A>×5<BR><A href="../items/items.html?023d" target="items">古龍的血</A>×2<BR><A href="../items/items.html?013b" target="items">坚龙骨</A>×3</TD>
 <TD class="tb-cell1 hc">リボルバー機構の完成型。鋼<br>
-龍素材の強度と重量が低反动<br>
+龍素材の強度と重量が低反冲<br>
 高威力かつ高汎用性を支える。<br>
 </TD>
 </TR>

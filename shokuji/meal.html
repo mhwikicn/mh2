@@ -1,0 +1,670 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<META name="GENERATOR" content="IBM WebSphere Studio Homepage Builder Version 9.0.3.0 for Windows">
+<META http-equiv="Content-Style-Type" content="text/css">
+<TITLE>怪物猎人２解析情报　关于料理机制</TITLE>
+<LINK rel="stylesheet" href="../table.css" type="text/css">
+<SCRIPT src="../scripts/links.js"></SCRIPT>
+</HEAD>
+<BODY>
+<HR>
+<TABLE border="0" width="910">
+<TBODY>
+<TR>
+<TD width="300" height="66" valign="middle" align="center"><SPAN id="logo"></SPAN></TD>
+<TD valign="top" class="tb-cell0"><SPAN id="links"></SPAN></TD>
+<TD width="150" class="tb-cell0"><SPAN id="counter"></SPAN></TD>
+</TR>
+</TBODY>
+</TABLE>
+<SCRIPT language="JavaScript">
+<!--
+ShowLinks(1, 99);
+// -->
+</SCRIPT>
+<HR>
+<H2>关于料理机制</H2>
+
+<TABLE border="0" width="800">
+<TD id="00" colspan="3" class="zb-cell5">●　<B>食材数据表</B></TD>
+<TABLE border="1" cellspacing="0" cellpadding="2" class="cnt-tb2" width="800">
+<P class="tb-cell0">HP表示体力，ST表示耐力，ATK表示攻击力，DEF表示防御力。食材的效果点数在各季节之间变化的情况，可大致表示其是否应季。<br>
+注意，效果点数不直接表示最终效果，需根据下方的机制进行计算。</P>
+
+<TBODY>
+<TR>
+<TH class="tb-th1" width="130" rowspan="2">食材</TH>
+<TH class="tb-th1" width="50" rowspan="2">稀有度</TH>
+<TH class="tb-th1" width="80" rowspan="2">料理点数</TH>
+<TH class="tb-th1" width="540" colspan="3">效果点数</TH>
+</TR>
+<TR>
+<TH class="tb-th1" width="180" style="background-color: #ffb440">温暖期</TH>
+<TH class="tb-th1" width="180" style="background-color: #20a0f0">寒冷期</TH>
+<TH class="tb-th1" width="180" style="background-color: #20f020">繁殖期</TH>
+</TR>
+<TR>
+<TD class="tb-cell2"><A href="../items/items.html?010d" target="items">丛林葱</A></td>
+<TD class="tb-cell2">2</td>
+<TD class="tb-cell2">13</td>
+<TD class="tb-cell2">ST+5p</td>
+<TD class="tb-cell2">ST+5p</td>
+<TD class="tb-cell2">ST+5p</td>
+</TR>
+<TR>
+<TD class="tb-cell2"><A href="../items/items.html?010e" target="items">薄片仙人掌</A></td>
+<TD class="tb-cell2">2</td>
+<TD class="tb-cell2">14</td>
+<TD class="tb-cell2"></td>
+<TD class="tb-cell2">ST+10p</td>
+<TD class="tb-cell2">ST-5p</td>
+</TR>
+<TR>
+<TD class="tb-cell2"><A href="../items/items.html?010f" target="items">稀有洋葱</A></td>
+<TD class="tb-cell2">3</td>
+<TD class="tb-cell2">15</td>
+<TD class="tb-cell2">ST-5p</td>
+<TD class="tb-cell2"></td>
+<TD class="tb-cell2">ST+10p</td>
+</TR>
+<TR>
+<TD class="tb-cell2"><A href="../items/items.html?0110" target="items">雪花番茄</A></td>
+<TD class="tb-cell2">3</td>
+<TD class="tb-cell2">0</td>
+<TD class="tb-cell2">ST-15p</td>
+<TD class="tb-cell2">ST+20p</td>
+<TD class="tb-cell2">ST+5p</td>
+</TR>
+<TR>
+<TD class="tb-cell2"><A href="../items/items.html?0111" target="items">鬼松茸</A></td>
+<TD class="tb-cell2">4</td>
+<TD class="tb-cell2">1</td>
+<TD class="tb-cell2">ST+30p</td>
+<TD class="tb-cell2">ST-10p</td>
+<TD class="tb-cell2">ST+10p</td>
+</TR>
+<TR>
+<TD class="tb-cell2"><A href="../items/items.html?0112" target="items">沃米尔麦</A></td>
+<TD class="tb-cell2">1</td>
+<TD class="tb-cell2">2</td>
+<TD class="tb-cell2">HP+5p</td>
+<TD class="tb-cell2"></td>
+<TD class="tb-cell2">HP+5p</td>
+</TR>
+<TR>
+<TD class="tb-cell2"><A href="../items/items.html?0113" target="items">混杂豆</A></td>
+<TD class="tb-cell2">2</td>
+<TD class="tb-cell2">3</td>
+<TD class="tb-cell2">HP+5p</td>
+<TD class="tb-cell2">HP-5p</td>
+<TD class="tb-cell2">HP+10p</td>
+</TR>
+<TR>
+<TD class="tb-cell2"><A href="../items/items.html?0114" target="items">顽固面包</A></td>
+<TD class="tb-cell2">2</td>
+<TD class="tb-cell2">4</td>
+<TD class="tb-cell2"></td>
+<TD class="tb-cell2">HP+5p</td>
+<TD class="tb-cell2">HP+10p</td>
+</TR>
+<TR>
+<TD class="tb-cell2"><A href="../items/items.html?0115" target="items">银舍利草</A></td>
+<TD class="tb-cell2">3</td>
+<TD class="tb-cell2">5</td>
+<TD class="tb-cell2">HP-5p</td>
+<TD class="tb-cell2">HP+20p</td>
+<TD class="tb-cell2">HP+5p</td>
+</TR>
+<TR>
+<TD class="tb-cell2"><A href="../items/items.html?0116" target="items">古代豆</A></td>
+<TD class="tb-cell2">5</td>
+<TD class="tb-cell2">6</td>
+<TD class="tb-cell2">HP-5p</td>
+<TD class="tb-cell2">HP+30p</td>
+<TD class="tb-cell2">HP+10p</td>
+</TR>
+<TR>
+<TD class="tb-cell2"><A href="../items/items.html?0117" target="items">白色肝脏</A></td>
+<TD class="tb-cell2">2</td>
+<TD class="tb-cell2">7</td>
+<TD class="tb-cell2">ATK-5p</td>
+<TD class="tb-cell2"></td>
+<TD class="tb-cell2">ATK+5p</td>
+</TR>
+<TR>
+<TD class="tb-cell2"><A href="../items/items.html?0118" target="items">波波舌</A></td>
+<TD class="tb-cell2">3</td>
+<TD class="tb-cell2">8</td>
+<TD class="tb-cell2">ATK-5p</td>
+<TD class="tb-cell2">ATK+10p</td>
+<TD class="tb-cell2"></td>
+</TR>
+<TR>
+<TD class="tb-cell2"><A href="../items/items.html?0119" target="items">电龙渍菜</A></td>
+<TD class="tb-cell2">3</td>
+<TD class="tb-cell2">9</td>
+<TD class="tb-cell2">ATK+5p</td>
+<TD class="tb-cell2">ATK-10p</td>
+<TD class="tb-cell2">ATK+10p</td>
+</TR>
+<TR>
+<TD class="tb-cell2"><A href="../items/items.html?011a" target="items">蛇龙肉眼</A></td>
+<TD class="tb-cell2">4</td>
+<TD class="tb-cell2">10</td>
+<TD class="tb-cell2">ATK+5p</td>
+<TD class="tb-cell2">ATK+20p</td>
+<TD class="tb-cell2">ATK-10p</td>
+</TR>
+<TR>
+<TD class="tb-cell2"><A href="../items/items.html?011b" target="items">龙尾肉</A></td>
+<TD class="tb-cell2">5</td>
+<TD class="tb-cell2">11</td>
+<TD class="tb-cell2">ATK+5p</td>
+<TD class="tb-cell2">ATK+30p</td>
+<TD class="tb-cell2">ATK+10p</td>
+</TR>
+<TR>
+<TD class="tb-cell2"><A href="../items/items.html?011c" target="items">音符鱼</A></td>
+<TD class="tb-cell2">2</td>
+<TD class="tb-cell2">12</td>
+<TD class="tb-cell2"></td>
+<TD class="tb-cell2">DEF+5p</td>
+<TD class="tb-cell2">DEF-5p</td>
+</TR>
+<TR>
+<TD class="tb-cell2"><A href="../items/items.html?00eb" target="items">刺身鱼</A></td>
+<TD class="tb-cell2">1</td>
+<TD class="tb-cell2">11</td>
+<TD class="tb-cell2">DEF-5p</td>
+<TD class="tb-cell2"></td>
+<TD class="tb-cell2">DEF+10p</td>
+</TR>
+<TR>
+<TD class="tb-cell2"><A href="../items/items.html?011d" target="items">蛇形鲑鱼</A></td>
+<TD class="tb-cell2">4</td>
+<TD class="tb-cell2">13</td>
+<TD class="tb-cell2">DEF+10p</td>
+<TD class="tb-cell2">DEF-15p</td>
+<TD class="tb-cell2">DEF+5p</td>
+</TR>
+<TR>
+<TD class="tb-cell2"><A href="../items/items.html?00fd" target="items">古代鱼</A></td>
+<TD class="tb-cell2">5</td>
+<TD class="tb-cell2">13</td>
+<TD class="tb-cell2">DEF-10p</td>
+<TD class="tb-cell2">DEF+20p</td>
+<TD class="tb-cell2">DEF+5p</td>
+</TR>
+<TR>
+<TD class="tb-cell2"><A href="../items/items.html?00fa" target="items">旗鱼</A></td>
+<TD class="tb-cell2">5</td>
+<TD class="tb-cell2">10</td>
+<TD class="tb-cell2">DEF+25p</td>
+<TD class="tb-cell2">DEF-10p</td>
+<TD class="tb-cell2">DEF+10p</td>
+</TR>
+<TR>
+<TD class="tb-cell2"><A href="../items/items.html?011e" target="items">米虫</A></td>
+<TD class="tb-cell2">2</td>
+<TD class="tb-cell2">14</td>
+<TD class="tb-cell2">HP+5p, ST+5p</td>
+<TD class="tb-cell2">HP-5p, ST-5p</td>
+<TD class="tb-cell2">HP-5p, ST+5p</td>
+</TR>
+<TR>
+<TD class="tb-cell2"><A href="../items/items.html?0103" target="items">不死虫</A></td>
+<TD class="tb-cell2">4</td>
+<TD class="tb-cell2">3</td>
+<TD class="tb-cell2">HP+5p</td>
+<TD class="tb-cell2">HP+5p, ST+5p</td>
+<TD class="tb-cell2"></td>
+</TR>
+<TR>
+<TD class="tb-cell2"><A href="../items/items.html?011f" target="items">调味蠕虫</A></td>
+<TD class="tb-cell2">3</td>
+<TD class="tb-cell2">15</td>
+<TD class="tb-cell2">HP-10p, ST-10p</td>
+<TD class="tb-cell2">HP+5p, ST+10p</td>
+<TD class="tb-cell2">HP-10p, ST+5p</td>
+</TR>
+<TR>
+<TD class="tb-cell2"><A href="../items/items.html?0120" target="items">蜜蜻蜓</A></td>
+<TD class="tb-cell2">3</td>
+<TD class="tb-cell2">0</td>
+<TD class="tb-cell2">HP+5p, ST+5p</td>
+<TD class="tb-cell2">HP+10p, ST+5p</td>
+<TD class="tb-cell2">HP+5p, ST+5p</td>
+</TR>
+<TR>
+<TD class="tb-cell2"><A href="../items/items.html?0121" target="items">大力神王虫</A></td>
+<TD class="tb-cell2">5</td>
+<TD class="tb-cell2">1</td>
+<TD class="tb-cell2">HP+5p, ST+10p</td>
+<TD class="tb-cell2">HP-10p, ST-10p</td>
+<TD class="tb-cell2">HP+10p, ST+15p</td>
+</TR>
+<TR>
+<TD class="tb-cell2"><A href="../items/items.html?0122" target="items">红油</A></td>
+<TD class="tb-cell2">2</td>
+<TD class="tb-cell2">2</td>
+<TD class="tb-cell2">HP+5p, ST-5p</td>
+<TD class="tb-cell2">HP+5p, ST+5p</td>
+<TD class="tb-cell2">HP+5p, ST-5p</td>
+</TR>
+<TR>
+<TD class="tb-cell2"><A href="../items/items.html?0123" target="items">强力猪油</A></td>
+<TD class="tb-cell2">3</td>
+<TD class="tb-cell2">3</td>
+<TD class="tb-cell2">HP-5p, ST+15p</td>
+<TD class="tb-cell2">HP-5p, ST-5p</td>
+<TD class="tb-cell2">HP+5p, ST+5p</td>
+</TR>
+<TR>
+<TD class="tb-cell2"><A href="../items/items.html?0124" target="items">长寿果酱</A></td>
+<TD class="tb-cell2">4</td>
+<TD class="tb-cell2">4</td>
+<TD class="tb-cell2">HP+10p</td>
+<TD class="tb-cell2">ST+10p</td>
+<TD class="tb-cell2">HP+10p, ST+10p</td>
+</TR>
+<TR>
+<TD class="tb-cell2"><A href="../items/items.html?0125" target="items">干麦淇淋</A></td>
+<TD class="tb-cell2">2</td>
+<TD class="tb-cell2">5</td>
+<TD class="tb-cell2">DEF+5p</td>
+<TD class="tb-cell2">DEF-5p</td>
+<TD class="tb-cell2"></td>
+</TR>
+<TR>
+<TD class="tb-cell2"><A href="../items/items.html?0126" target="items">猛牛黄油</A></td>
+<TD class="tb-cell2">3</td>
+<TD class="tb-cell2">6</td>
+<TD class="tb-cell2">DEF-15p</td>
+<TD class="tb-cell2">DEF+5p</td>
+<TD class="tb-cell2">DEF+10p</td>
+</TR>
+<TR>
+<TD class="tb-cell2"><A href="../items/items.html?0127" target="items">皇家乳酪</A></td>
+<TD class="tb-cell2">4</td>
+<TD class="tb-cell2">7</td>
+<TD class="tb-cell2">DEF+5p</td>
+<TD class="tb-cell2">DEF+10p</td>
+<TD class="tb-cell2">DEF+15p</td>
+</TR>
+<TR>
+<TD class="tb-cell2"><A href="../items/items.html?0128" target="items">霍皮酒</A></td>
+<TD class="tb-cell2">2</td>
+<TD class="tb-cell2">8</td>
+<TD class="tb-cell2">ATK+10p</td>
+<TD class="tb-cell2">ATK+5p</td>
+<TD class="tb-cell2">ATK-5p</td>
+</TR>
+<TR>
+<TD class="tb-cell2"><A href="../items/items.html?0129" target="items">祝福葡萄酒</A></td>
+<TD class="tb-cell2">3</td>
+<TD class="tb-cell2">9</td>
+<TD class="tb-cell2">ATK+5p</td>
+<TD class="tb-cell2">ATK-5p</td>
+<TD class="tb-cell2">ATK+15p</td>
+</TR>
+<TR>
+<TD class="tb-cell2"><A href="../items/items.html?012a" target="items">黄金芋酒</A></td>
+<TD class="tb-cell2">5</td>
+<TD class="tb-cell2">10</td>
+<TD class="tb-cell2">ATK+5p</td>
+<TD class="tb-cell2"></td>
+<TD class="tb-cell2">ATK+20p</td>
+</TR>
+<TR>
+<TD class="tb-cell2"><A href="../items/items.html?012b" target="items">怪物卵</A></td>
+<TD class="tb-cell2">3</td>
+<TD class="tb-cell2">11</td>
+<TD class="tb-cell2">ATK-5p, DEF+10p</td>
+<TD class="tb-cell2">ATK+5p, DEF+5p</td>
+<TD class="tb-cell2">ATK+10p, DEF+5p</td>
+</TR>
+<TR>
+<TD class="tb-cell2"><A href="../items/items.html?012c" target="items">小猪煎饼</A></td>
+<TD class="tb-cell2">1</td>
+<TD class="tb-cell2">12</td>
+<TD class="tb-cell2">ST-5p, ATK-5p</td>
+<TD class="tb-cell2">ST-5p, ATK-5p</td>
+<TD class="tb-cell2">ST-5p, ATK-5p</td>
+</TR>
+</TBODY>
+</TABLE>
+</TABLE><br>
+<P class="tb-cell0">实际的料理根据上表中<b>食材组合的料理点数之和除以16</b>的<b>余数</b>，决定料理结果与效果点数倍率，规则见下表。</P>
+<TABLE border="0" width="800">
+<TD id="01" colspan="3" class="zb-cell5">●　<B>料理结果</B></TD>
+
+<TABLE border="1" cellspacing="0" cellpadding="2" class="cnt-tb2" width="400">
+<TBODY>
+<TR>
+<TH class="tb-th1" width="40">余数</TH>
+<TH class="tb-th1" width="120">料理结果</TH>
+<TH class="tb-th1" width="40">效果点数倍率</TH>
+</TR>
+<TR>
+<TD class="tb-cell2">0</td>
+<TD class="tb-cell2">惊人炖菜</td>
+<TD class="tb-cell2">1</td>
+</TR>
+<TR>
+<TD class="tb-cell2">1</td>
+<TD class="tb-cell2">心跳意式炖饭</td>
+<TD class="tb-cell2">1</td>
+</TR>
+<TR>
+<TD class="tb-cell2">2</td>
+<TD class="tb-cell2">销魂点心</td>
+<TD class="tb-cell2">2</td>
+</TR>
+<TR>
+<TD class="tb-cell2">3</td>
+<TD class="tb-cell2">勇气炒饭</td>
+<TD class="tb-cell2">2</td>
+</TR>
+<TR>
+<TD class="tb-cell2">4</td>
+<TD class="tb-cell2">烂烂沙拉</td>
+<TD class="tb-cell2">1</td>
+</TR>
+<TR>
+<TD class="tb-cell2">5</td>
+<TD class="tb-cell2">心动多利亚饭</td>
+<TD class="tb-cell2">-1.5</td>
+</TR>
+<TR>
+<TD class="tb-cell2">6</td>
+<TD class="tb-cell2">帕帕拉意面</td>
+<TD class="tb-cell2">1.5</td>
+</TR>
+<TR>
+<TD class="tb-cell2">7</td>
+<TD class="tb-cell2">油炸鼓鼓菜</td>
+<TD class="tb-cell2">1</td>
+</TR>
+<TR>
+<TD class="tb-cell2">8</td>
+<TD class="tb-cell2">咕噜炸肉饼</td>
+<TD class="tb-cell2">1</td>
+</TR>
+<TR>
+<TD class="tb-cell2">9</td>
+<TD class="tb-cell2">摇曳脆皮烙菜</td>
+<TD class="tb-cell2">1.5</td>
+</TR>
+<TR>
+<TD class="tb-cell2">10</td>
+<TD class="tb-cell2">烂糊火锅</td>
+<TD class="tb-cell2">2</td>
+</TR>
+<TR>
+<TD class="tb-cell2">11</td>
+<TD class="tb-cell2">咚咚汤</td>
+<TD class="tb-cell2">-1.5</td>
+</TR>
+<TR>
+<TD class="tb-cell2">12</td>
+<TD class="tb-cell2">江波披萨</td>
+<TD class="tb-cell2">1.5</td>
+</TR>
+<TR>
+<TD class="tb-cell2">13</td>
+<TD class="tb-cell2">闪光拉面</td>
+<TD class="tb-cell2">1</td>
+</TR>
+<TR>
+<TD class="tb-cell2">14</td>
+<TD class="tb-cell2">哭哭咖哩</td>
+<TD class="tb-cell2">1.5</td>
+</TR>
+<TR>
+<TD class="tb-cell2">15</td>
+<TD class="tb-cell2">安安杂碎</td>
+<TD class="tb-cell2">1</td>
+</TR>
+</TBODY>
+</TABLE>
+</TABLE><br>
+<P class="tb-cell0">再将食材组合的<b>各效果点数</b>分别与<b>效果点数倍率相乘</b>（注意存在正负数计算），其结果根据下表对应值决定最终的实际效果加成。<br>
+为简化显示，表中使用±符号来同时表示正负两种情况。最终结果出现负数的场合，则为负面效果，对应表中的负值。<br>
+攻击力的增减量，表示的是原始攻击的增减值。因此，状态面板显示的攻击力变动要在变动值基础上乘以对应武器的倍数来计算。<BR>
+　　（武器的种类与倍数：　大剑/太刀=4.8倍　　片手剑/双剑=1.4倍　　长枪/铳枪=2.3倍　　大锤/狩猎笛=5.2倍　　枪弩/弓=1.2倍）</P>
+<TABLE border="0" width="800">
+<TD id="02" colspan="3" class="zb-cell5">●　<B>料理效果</B></TD>
+
+<TABLE border="1" cellspacing="0" cellpadding="2" class="cnt-tb2" width="800">
+<TBODY>
+<TR>
+<TH class="tb-th1" width="80"></TH>
+<TH class="tb-th1" width="720" colspan="6">效果点数范围与实际效果</TH>
+</TR>
+<TR>
+<TH class="tb-th1" width="80">类别</td>
+<TH class="tb-th1" width="120">0±5p</td>
+<TH class="tb-th1" width="120">±(6~10)p</td>
+<TH class="tb-th1" width="120">±(11~15)p</td>
+<TH class="tb-th1" width="120">±(16~20)p</td>
+<TH class="tb-th1" width="120">±(21~25)p</td>
+<TH class="tb-th1" width="120">±26p~</td>
+</TR>
+<TR>
+<TD class="tb-cell2">HP</td>
+<TD class="tb-cell2">0</td>
+<TD class="tb-cell2">±10</td>
+<TD class="tb-cell2">±20</td>
+<TD class="tb-cell2">±30</td>
+<TD class="tb-cell2">±40</td>
+<TD class="tb-cell2">±50</td>
+</TR>
+<TR>
+<TD class="tb-cell2">ST</td>
+<TD class="tb-cell2">0</td>
+<TD class="tb-cell2">±25</td>
+<TD class="tb-cell2">±25</td>
+<TD class="tb-cell2">±25</td>
+<TD class="tb-cell2">±50</td>
+<TD class="tb-cell2">±50</td>
+</TR>
+<TR>
+<TD class="tb-cell2">ATK</td>
+<TD class="tb-cell2">0</td>
+<TD class="tb-cell2">±3</td>
+<TD class="tb-cell2">±3</td>
+<TD class="tb-cell2">±3</td>
+<TD class="tb-cell2">±5</td>
+<TD class="tb-cell2">±5</td>
+</TR>
+<TR>
+<TD class="tb-cell2">DEF</td>
+<TD class="tb-cell2">0</td>
+<TD class="tb-cell2">±10</td>
+<TD class="tb-cell2">±10</td>
+<TD class="tb-cell2">±10</td>
+<TD class="tb-cell2">±20</td>
+<TD class="tb-cell2">±20</td>
+</TR>
+</TBODY>
+</TABLE>
+</TABLE>
+<br>
+<P class="tb-cell0">例如，温暖期的调味蠕虫+小猪煎饼组合：<br>
+　效果点数为：(HP-10p, ST-10p)+(ST-5p, ATK-5p)=(HP-10p, ST-15p, ATK-5p)<br>
+　料理点数合计为：15+12=27，除以16的余数为：27mod16=11<br>
+　余数11对应的料理结果为：咚咚汤，效果点数倍率为：-1.5<br>
+　最终效果点数为：(HP-10p, ST-15p, ATK-5p)x(-1.5)=(HP15p, ST22.5p, ATK7.5p)<br>
+　查表得到对应实际效果：体力+20, 耐力+50, 攻击力+3<br><br>
+再例如，寒冷期的雪花番茄+银舍利草组合：<br>
+　效果点数为：(ST+20p)+(HP+20p)=(HP+20p, ST+20p)<br>
+　料理点数合计为：0+5=5，除以16的余数为：5mod16=5<br>
+　余数5对应的料理结果为：心动多利亚饭，效果点数倍率为：-1.5<br>
+　最终效果点数为：(HP+20p, ST+20p)x(-1.5)=(HP-30p, ST-30p)<br>
+　查表得到对应实际效果：体力-50, 耐力-50<br><br>
+由此不难得知，在食材不应季（效果点数为负值）的情况下，可以根据料理点数将其搭配组合成“心动多利亚饭”或“咚咚汤”，<br>
+获得-1.5的效果点数倍率，由此负负得正，最终反而实现正面的料理效果。<br>
+同样地，对于食材合适的情形（效果点数为正值），要避免出现“心动多利亚饭”或“咚咚汤”的组合，否则最终效果点数反而会变为负值。<br>
+由于食材与季节变化多样，计算比较复杂，记住几个常用且易得的食材组合与对应季节可能会更加方便。
+</P>
+<br>
+<TABLE border="0" width="800">
+<TD id="03" colspan="3" class="zb-cell5">●　<B>魅惑的料理</B></TD>
+<TABLE border="0" width="800">
+<P class="tb-cell0">消耗食材用餐的同时会获得魅惑点数，每当魅惑点数达到300点，便会触发一次魅惑的料理。<br>
+此时无需消耗食材即可享受一次料理招待，其效果由“我的家”的等级决定，无法自行选择食材决定效果。<br>
+累计50次魅惑的料理后，可由猫侍从处获赠武器 <A href="../bugu/twin.html#0462" target="weapon">双剑勺铲</A> 。<br>
+每次用餐获得魅惑点数与食材的稀有度之和、用餐人数（线上模式）以及料理的最终效果点数有关。<br>
+如料理最终效果点数为负值（用餐后倒地），则按照稀有度之和为“≤4”计算。<br>
+“我的家”为LV1时，最大用餐人数为2人；LV2时，最大用餐人数为4人；LV3时，最大用餐人数为10人。
+</P>
+<TBODY>
+<TD valign="top" width="360">
+<TABLE border="1" cellspacing="0" cellpadding="2" class="cnt-tb2" width="360">
+<TBODY>
+<TR>
+<TH class="tb-th1" width="90" rowspan="2">用餐人数</TH>
+<TH class="tb-th1" width="270" colspan="3">食材稀有度之和与对应魅惑点数</TH>
+</TR>
+<TR>
+<TH class="tb-th1" width="90">≤4</TH>
+<TH class="tb-th1" width="90">5~7</TH>
+<TH class="tb-th1" width="90">≥8</TH>
+</TR>
+  <tr>
+    <TD class="tb-cell2">1</td>
+    <TD class="tb-cell2">11</td>
+    <TD class="tb-cell2">22</td>
+    <TD class="tb-cell2">33</td>
+  </tr>
+  <tr>
+    <TD class="tb-cell2">2</td>
+    <TD class="tb-cell2">12</td>
+    <TD class="tb-cell2">24</td>
+    <TD class="tb-cell2">36</td>
+  </tr>
+  <tr>
+    <TD class="tb-cell2">3</td>
+    <TD class="tb-cell2">13</td>
+    <TD class="tb-cell2">26</td>
+    <TD class="tb-cell2">39</td>
+  </tr>
+  <tr>
+    <TD class="tb-cell2">4</td>
+    <TD class="tb-cell2">14</td>
+    <TD class="tb-cell2">28</td>
+    <TD class="tb-cell2">42</td>
+  </tr>
+  <tr>
+    <TD class="tb-cell2">5</td>
+    <TD class="tb-cell2">15</td>
+    <TD class="tb-cell2">30</td>
+    <TD class="tb-cell2">45</td>
+  </tr>
+  <tr>
+    <TD class="tb-cell2">6</td>
+    <TD class="tb-cell2">16</td>
+    <TD class="tb-cell2">32</td>
+    <TD class="tb-cell2">48</td>
+  </tr>
+  <tr>
+    <TD class="tb-cell2">7</td>
+    <TD class="tb-cell2">17</td>
+    <TD class="tb-cell2">34</td>
+    <TD class="tb-cell2">51</td>
+  </tr>
+  <tr>
+    <TD class="tb-cell2">8</td>
+    <TD class="tb-cell2">18</td>
+    <TD class="tb-cell2">36</td>
+    <TD class="tb-cell2">54</td>
+  </tr>
+  <tr>
+    <TD class="tb-cell2">9</td>
+    <TD class="tb-cell2">19</td>
+    <TD class="tb-cell2">38</td>
+    <TD class="tb-cell2">57</td>
+  </tr>
+  <tr>
+    <TD class="tb-cell2">10</td>
+    <TD class="tb-cell2">20</td>
+    <TD class="tb-cell2">40</td>
+    <TD class="tb-cell2">60</td>
+  </tr>
+</TBODY>
+</TABLE>
+</TD>
+<TD valign="top" width="360">
+<TABLE border="1" cellspacing="0" cellpadding="2" class="cnt-tb2" width="360">
+<TBODY>
+<TR>
+<TH class="tb-th1" width="150" rowspan="2">魅惑料理效果</TH>
+<TH class="tb-th1" width="210" colspan="3">我的家等级与对应概率</TH>
+</TR>
+<TR>
+<TH class="tb-th1" width="70">LV1</TH>
+<TH class="tb-th1" width="70">LV2</TH>
+<TH class="tb-th1" width="70">LV3</TH>
+</TR>
+  <tr>
+    <TD class="tb-cell2">体力+30, 耐力+25</td>
+    <TD class="tb-cell2">30%</td>
+    <TD class="tb-cell2">25%</td>
+    <TD class="tb-cell2">20%</td>
+  </tr>
+  <tr>
+    <TD class="tb-cell2">体力+50, 耐力+50</td>
+    <TD class="tb-cell2">10%</td>
+    <TD class="tb-cell2">20%</td>
+    <TD class="tb-cell2">30%</td>
+  </tr>
+  <tr>
+    <TD class="tb-cell2">攻击力+3, 防御力+10</td>
+    <TD class="tb-cell2">40%</td>
+    <TD class="tb-cell2">30%</td>
+    <TD class="tb-cell2">20%</td>
+  </tr>
+  <tr>
+    <TD class="tb-cell2">攻击力+5, 防御力+20</td>
+    <TD class="tb-cell2">20%</td>
+    <TD class="tb-cell2">25%</td>
+    <TD class="tb-cell2">30%</td>
+  </tr>
+</TBODY>
+</TABLE>
+</TD>
+</TBODY>
+</TABLE>
+</TABLE>
+<br>
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+Last update : 2026/06/30
+<BR>
+<BR>
+<BR>
+
+</BODY>
+</HTML>

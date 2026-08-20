@@ -8,6 +8,55 @@
 <LINK rel="stylesheet" href="../table.css" type="text/css">
 <SCRIPT src="../scripts/links.js"></SCRIPT>
 </HEAD>
+<SCRIPT src="../scripts/blink.js"></SCRIPT>
+<STYLE>
+.gauge {
+  width: 160px;
+  margin: 0 auto;
+  display: flex;
+  height: 10px;
+  line-height: 0;
+  font-size: 0;
+  border-top: 1px solid gray;
+  border-bottom: 1px dotted gray;
+  border-left: 1px solid gray;
+  border-right: 1px solid gray;
+}
+.gauge-ext {
+  width: 160px;
+  margin: 0 auto;
+  display: flex;
+  height: 10px;
+  line-height: 0;
+  font-size: 0;
+  border-bottom: 1px solid gray;
+  border-left: 1px solid gray;
+  border-right: 1px solid gray;
+}
+.tb-cell1 font[size="-2"] {
+  display: block;
+  text-align: center;
+  margin-top: 2px;
+}
+.cnt-tb2 {
+  table-layout: fixed;
+  width: 1080px;
+}
+.highlight-row td,
+.highlight-row th {
+  background-color: #c7edcc !important;
+  transition: background-color 0.3s ease;
+}
+.cnt-tb2 > tbody:first-child > tr:first-child {
+  position: sticky;
+  top: 0;
+  background-color: #996633;
+  z-index: 10;
+}
+.cnt-tb2 td[id] {
+  scroll-margin-top: 39px;
+}
+</STYLE>
 <BODY>
 <HR>
 <TABLE border="0" width="910">
@@ -33,37 +82,51 @@ ShowLinks(1, 6);
 </TBODY>
 </TABLE>
 <BR>
-<FONT SIZE="-1">* 武器名称下方的锋利度，上段表示无技能，下段表示 <B>锋利度等级＋１</B> 时的武器锋利度。<BR>* 会心率高于０％的武器，青色锋利度时有＋５％，白色锋利度时有＋１０％的提升。<BR>* 请注意，并非所有武器在游戏中都能获得。<BR>
+<FONT SIZE="-1">* 武器名称下方的锋利度，上段表示无技能，下段表示 <B>锋利度等级＋1</B> 时的武器锋利度。<BR>* 会心率高于0％的武器，青色锋利度时有＋5％，白色锋利度时有＋10％的提升。<BR>* 请注意，并非所有武器在游戏中都能获得。<BR>
 * <SPAN class="hc">　　　</SPAN>表示网络模式限定内容。
 </FONT>
 <TABLE border="1" cellspacing="0" cellpadding="2" class="cnt-tb2" width="1080">
 <TBODY>
 <TR>
-<TH class="tb-th1" width="35">武器<BR>No.</TH><TH class="tb-th1" width="160">名称</TH>
+<TH class="tb-th1" width="35">武器<BR>No.</TH>
+<TH class="tb-th1" width="165">名称</TH>
 <TH class="tb-th1" width="25">稀<BR>有</TH>
-<TH class="tb-th1" width="55">价格</TH>
-<TH class="tb-th1" width="70">攻击力</TH>
+<TH class="tb-th1" width="65">价格</TH>
+<TH class="tb-th1" width="55">攻击力</TH>
 <TH class="tb-th1" width="60">属性</TH>
 <TH class="tb-th1" width="50">插孔</TH>
 <TH class="tb-th1" width="50">会心率</TH>
-<TH class="tb-th1" width="72">強化可能<BR>武器No.</TH>
-<TH class="tb-th1" width="140">强化必要素材</TH>
-<TH class="tb-th1" width="140">生产必要素材</TH>
-<TH class="tb-th1" width="180">解说</TH>
+<TH class="tb-th1" width="62">可强化至<BR>武器No.</TH>
+<TH class="tb-th1" width="130">强化必要素材</TH>
+<TH class="tb-th1" width="130">生产必要素材</TH>
+<TH class="tb-th1" width="190">解说</TH>
 </TR>
 <TR>
 <TD id="0110"class="tb-cell2" height="65">110</TD>
-<TD class="tb-cell1">铁铳枪<BR>　 <IMG src="../images/gauge110.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./lance.html#0104">铁枪改</A>强化而来</FONT></TD>
+<TD class="tb-cell1">铁铳枪<div class="gauge">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:16px; background:#eeee00;" title="40"></div>
+  <div style="width:4px; background:#00ee00;" title="10"></div>
+  <div style="width:100px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:16px; background:#eeee00;" title="40"></div>
+  <div style="width:24px; background:#00ee00;" title="60"></div>
+  <div style="width:80px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./lance.html#0104">铁枪改</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">2</TD>
 <TD class="tb-cell3">5050ｚ</TD>
 <TD class="tb-cell2">230
-<BR>【通常型】</TD>
+<BR>通常型</TD>
 <TD class="tb-cell2"><BR>炮击LV1</TD>
 <TD class="tb-cell2">−−−</TD>
 <TD class="tb-cell2">0％</TD>
 <TD class="tb-cell2"><A href="./gunlance.html#0113">113</A></TD>
 <TD class="tb-cell1"><A href="../items/items.html?00d8" target="items">铁矿石</A>×15<BR><A href="../items/items.html?00d6" target="items">阳光石</A>×5<BR><A href="../items/items.html?0020" target="items">爆药</A>×5</TD>
-<TD class="tb-cell1"><A href="../items/items.html?00da" target="items">燕雀石</A>×5<BR><A href="../items/items.html?00d8" target="items">铁矿石</A>×20<BR><A href="../items/items.html?0020" target="items">爆药</A>×5<BR><A href="../items/items.html?0134" target="items">火炎袋</A>×1</TD>
+<TD class="tb-cell1"><A href="../items/items.html?00da" target="items">燕雀石</A>×5<BR><A href="../items/items.html?00d8" target="items">铁矿石</A>×20<BR><A href="../items/items.html?0020" target="items">爆药</A>×5<BR><A href="../items/items.html?0134" target="items">火炎袋</A>×1<hr style="border-top: 1px solid black;"><A href="../items/items.html?00d8" target="items">铁矿石</A>×5<BR><A href="../items/items.html?00d6" target="items">阳光石</A>×10<BR><A href="../items/items.html?0020" target="items">爆药</A>×5<BR>（首次联动）</TD>
 <TD class="tb-cell1">安価に作成可能なガンランス。<br>
 性能面でも安定している。<br>
 まずはこれから。砲撃LV1。<br>
@@ -71,11 +134,24 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0113"class="tb-cell2" height="65">113</TD>
-<TD class="tb-cell1">铁铳枪改<BR>　 <IMG src="../images/gauge113.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./gunlance.html#0110">铁铳枪</A>强化而来</FONT></TD>
+<TD class="tb-cell1">铁铳枪改<div class="gauge">
+  <div style="width:20px; background:#ee0000;" title="50"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:20px; background:#eeee00;" title="50"></div>
+  <div style="width:12px; background:#00ee00;" title="30"></div>
+  <div style="width:80px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:20px; background:#ee0000;" title="50"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:20px; background:#eeee00;" title="50"></div>
+  <div style="width:32px; background:#00ee00;" title="80"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./gunlance.html#0110">铁铳枪</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">2</TD>
 <TD class="tb-cell3">8370ｚ</TD>
 <TD class="tb-cell2">253
-<BR>【通常型】</TD>
+<BR>通常型</TD>
 <TD class="tb-cell2"><BR>炮击LV1</TD>
 <TD class="tb-cell2">○−−</TD>
 <TD class="tb-cell2">0％</TD>
@@ -89,11 +165,24 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0114"class="tb-cell2" height="65">114</TD>
-<TD class="tb-cell1">讨伐队正式铳枪<BR>　 <IMG src="../images/gauge114.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./gunlance.html#0402">钢制铳枪</A>强化而来</FONT></TD>
+<TD class="tb-cell1">讨伐队正式铳枪<div class="gauge">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:16px; background:#eeee00;" title="40"></div>
+  <div style="width:44px; background:#00ee00;" title="110"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:16px; background:#eeee00;" title="40"></div>
+  <div style="width:64px; background:#00ee00;" title="160"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./gunlance.html#0402">钢制铳枪</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">4</TD>
 <TD class="tb-cell3">21100ｚ</TD>
 <TD class="tb-cell2">345
-<BR>【通常型】</TD>
+<BR>通常型</TD>
 <TD class="tb-cell2"><BR>炮击LV2</TD>
 <TD class="tb-cell2">○○−</TD>
 <TD class="tb-cell2">0％</TD>
@@ -107,16 +196,30 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0116"class="tb-cell2 hc" height="65">116</TD>
-<TD class="tb-cell1 hc">银色战车<BR>　 <IMG src="../images/gauge116.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./gunlance.html#0411">近卫队正式铳枪</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc">银色战车<div class="gauge">
+  <div style="width:20px; background:#ee0000;" title="50"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:20px; background:#eeee00;" title="50"></div>
+  <div style="width:52px; background:#00ee00;" title="130"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:20px; background:#ee0000;" title="50"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:20px; background:#eeee00;" title="50"></div>
+  <div style="width:64px; background:#00ee00;" title="160"></div>
+  <div style="width:8px; background:#5050ff;" title="20"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./gunlance.html#0411">近卫队正式铳枪</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">6</TD>
 <TD class="tb-cell3 hc">59200ｚ</TD>
 <TD class="tb-cell2 hc">414
-<BR>【放射型】</TD>
+<BR>放射型</TD>
 <TD class="tb-cell2 hc"><BR>炮击LV3</TD>
 <TD class="tb-cell2 hc">○○−</TD>
 <TD class="tb-cell2 hc">0％</TD>
 <TD class="tb-cell2 hc"><A href="./gunlance.html#0409">409</A></TD>
-<TD class="tb-cell1 hc"><A href="../items/items.html?01a9" target="items">银火龙的尻尾</A>×1<BR><A href="../items/items.html?01a8" target="items">银火龙的坚壳</A>×5<BR><A href="../items/items.html?01a7" target="items">银火龙的上鳞</A>×3</TD>
+<TD class="tb-cell1 hc"><A href="../items/items.html?01a9" target="items">银火龙的尾巴</A>×1<BR><A href="../items/items.html?01a8" target="items">银火龙的坚壳</A>×5<BR><A href="../items/items.html?01a7" target="items">银火龙的上鳞</A>×3</TD>
 <TD class="tb-cell1 hc">&nbsp;</TD>
 <TD class="tb-cell1 hc">銀火竜の素材を用いた銃槍。<br>
 全体が銀色の鱗で覆われ高貴<br>
@@ -125,17 +228,31 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0121"class="tb-cell2" height="65">121</TD>
-<TD class="tb-cell1">娜娜＝号叫<BR>　 <IMG src="../images/gauge121.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./gunlance.html#0114">讨伐队正式铳枪</A>强化而来</FONT></TD>
+<TD class="tb-cell1">娜娜＝号叫<div class="gauge">
+  <div style="width:36px; background:#ee0000;" title="90"></div>
+  <div style="width:20px; background:#eea000;" title="50"></div>
+  <div style="width:36px; background:#eeee00;" title="90"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:36px; background:#ee0000;" title="90"></div>
+  <div style="width:20px; background:#eea000;" title="50"></div>
+  <div style="width:36px; background:#eeee00;" title="90"></div>
+  <div style="width:40px; background:#00ee00;" title="100"></div>
+  <div style="width:8px; background:#5050ff;" title="20"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./gunlance.html#0114">讨伐队正式铳枪</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">5</TD>
 <TD class="tb-cell3">35950ｚ</TD>
 <TD class="tb-cell2">322
-<BR>【扩散型】</TD>
+<BR>扩散型</TD>
 <TD class="tb-cell2"><BR>炮击LV1</TD>
 <TD class="tb-cell2">−−−</TD>
 <TD class="tb-cell2">0％</TD>
 <TD class="tb-cell2"><A href="./gunlance.html#0124">124</A></TD>
-<TD class="tb-cell1"><A href="../items/items.html?0242" target="items">炎妃龍的尻尾</A>×1<BR><A href="../items/items.html?023f" target="items">炎妃龍的甲壳</A>×3<BR><A href="../items/items.html?0239" target="items">炎之龍鳞</A>×5</TD>
-<TD class="tb-cell1"><A href="../items/items.html?0242" target="items">炎妃龍的尻尾</A>×1<BR><A href="../items/items.html?023f" target="items">炎妃龍的甲壳</A>×5<BR><A href="../items/items.html?00db" target="items">辉龙石</A>×5<BR><A href="../items/items.html?02e0" target="items">星铁</A>×5</TD>
+<TD class="tb-cell1"><A href="../items/items.html?0242" target="items">炎妃龍的尾巴</A>×1<BR><A href="../items/items.html?023f" target="items">炎妃龍的甲壳</A>×3<BR><A href="../items/items.html?0239" target="items">炎之龍鳞</A>×5</TD>
+<TD class="tb-cell1"><A href="../items/items.html?0242" target="items">炎妃龍的尾巴</A>×1<BR><A href="../items/items.html?023f" target="items">炎妃龍的甲壳</A>×5<BR><A href="../items/items.html?00db" target="items">辉龙石</A>×5<BR><A href="../items/items.html?02e0" target="items">星铁</A>×5<BR>（传说的工匠生产）</TD>
 <TD class="tb-cell1">炎妃龍の素材を丹念に研磨し<br>
 織り込んだ銃槍。蒼炎の一撃<br>
 が獲物を砕く。砲撃LV1。<br>
@@ -143,11 +260,26 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0124"class="tb-cell2" height="65">124</TD>
-<TD class="tb-cell1">娜娜＝咆哮<BR>　 <IMG src="../images/gauge124.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./gunlance.html#0121">娜娜＝号叫</A>强化而来</FONT></TD>
+<TD class="tb-cell1">娜娜＝咆哮<div class="gauge">
+  <div style="width:36px; background:#ee0000;" title="90"></div>
+  <div style="width:20px; background:#eea000;" title="50"></div>
+  <div style="width:36px; background:#eeee00;" title="90"></div>
+  <div style="width:40px; background:#00ee00;" title="100"></div>
+  <div style="width:8px; background:#5050ff;" title="20"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:36px; background:#ee0000;" title="90"></div>
+  <div style="width:20px; background:#eea000;" title="50"></div>
+  <div style="width:36px; background:#eeee00;" title="90"></div>
+  <div style="width:40px; background:#00ee00;" title="100"></div>
+  <div style="width:20px; background:#5050ff;" title="50"></div>
+  <div style="width:8px; background:#ffffff;" title="20"></div>
+</div><FONT size="-2"><A href="./gunlance.html#0121">娜娜＝号叫</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">5</TD>
 <TD class="tb-cell3">72750ｚ</TD>
 <TD class="tb-cell2">368
-<BR>【扩散型】</TD>
+<BR>扩散型</TD>
 <TD class="tb-cell2"><BR>炮击LV2</TD>
 <TD class="tb-cell2">−−−</TD>
 <TD class="tb-cell2">0％</TD>
@@ -161,11 +293,24 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0126"class="tb-cell2" height="65">126</TD>
-<TD class="tb-cell1">白铳枪<BR>　 <IMG src="../images/gauge126.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./gunlance.html#0402">钢制铳枪</A>强化而来</FONT></TD>
+<TD class="tb-cell1">白铳枪<div class="gauge">
+  <div style="width:20px; background:#ee0000;" title="50"></div>
+  <div style="width:20px; background:#eea000;" title="50"></div>
+  <div style="width:36px; background:#eeee00;" title="90"></div>
+  <div style="width:24px; background:#00ee00;" title="60"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:20px; background:#ee0000;" title="50"></div>
+  <div style="width:20px; background:#eea000;" title="50"></div>
+  <div style="width:36px; background:#eeee00;" title="90"></div>
+  <div style="width:44px; background:#00ee00;" title="110"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./gunlance.html#0402">钢制铳枪</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">4</TD>
 <TD class="tb-cell3">14350ｚ</TD>
 <TD class="tb-cell2">299
-<BR>【放射型】</TD>
+<BR>放射型</TD>
 <TD class="tb-cell2">防御+8<BR>炮击LV1</TD>
 <TD class="tb-cell2">−−−</TD>
 <TD class="tb-cell2">0％</TD>
@@ -179,11 +324,25 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0130"class="tb-cell2 hc" height="65">130</TD>
-<TD class="tb-cell1 hc">黑加农炮<BR>　 <IMG src="../images/gauge130.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./gunlance.html#0405">白加农炮</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc">黑加农炮<div class="gauge">
+  <div style="width:36px; background:#ee0000;" title="90"></div>
+  <div style="width:20px; background:#eea000;" title="50"></div>
+  <div style="width:36px; background:#eeee00;" title="90"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:36px; background:#ee0000;" title="90"></div>
+  <div style="width:20px; background:#eea000;" title="50"></div>
+  <div style="width:36px; background:#eeee00;" title="90"></div>
+  <div style="width:40px; background:#00ee00;" title="100"></div>
+  <div style="width:8px; background:#5050ff;" title="20"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./gunlance.html#0405">白加农炮</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">6</TD>
 <TD class="tb-cell3 hc">33250ｚ</TD>
 <TD class="tb-cell2 hc">414
-<BR>【放射型】</TD>
+<BR>放射型</TD>
 <TD class="tb-cell2 hc">防御+8<BR>炮击LV2</TD>
 <TD class="tb-cell2 hc">○−−</TD>
 <TD class="tb-cell2 hc">0％</TD>
@@ -197,11 +356,24 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0133"class="tb-cell2" height="65">133</TD>
-<TD class="tb-cell1">地狱叮刺<BR>　 <IMG src="../images/gauge133.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./gunlance.html#0113">铁铳枪改</A>强化而来</FONT></TD>
+<TD class="tb-cell1">地狱叮刺<div class="gauge">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:68px; background:#eeee00;" title="170"></div>
+  <div style="width:4px; background:#00ee00;" title="10"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:68px; background:#eeee00;" title="170"></div>
+  <div style="width:24px; background:#00ee00;" title="60"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./gunlance.html#0113">铁铳枪改</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">4</TD>
 <TD class="tb-cell3">13210ｚ</TD>
 <TD class="tb-cell2">299
-<BR>【通常型】</TD>
+<BR>通常型</TD>
 <TD class="tb-cell2">冰190<BR>炮击LV2</TD>
 <TD class="tb-cell2">○−−</TD>
 <TD class="tb-cell2">0％</TD>
@@ -215,11 +387,23 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0134"class="tb-cell2 hc" height="65">134</TD>
-<TD class="tb-cell1 hc">重击手<BR>　 <IMG src="../images/gauge134.gif" border="0" width="122" height="19"></TD>
+<TD class="tb-cell1 hc">重击手<div class="gauge">
+  <div style="width:28px; background:#ee0000;" title="70"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:56px; background:#eeee00;" title="140"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:28px; background:#ee0000;" title="70"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:60px; background:#eeee00;" title="150"></div>
+  <div style="width:16px; background:#00ee00;" title="40"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div></TD>
 <TD class="tb-cell2 hc">6</TD>
 <TD class="tb-cell3 hc">60000ｚ</TD>
 <TD class="tb-cell2 hc">345
-<BR>【扩散型】</TD>
+<BR>扩散型</TD>
 <TD class="tb-cell2 hc">毒290<BR>炮击LV2</TD>
 <TD class="tb-cell2 hc">−−−</TD>
 <TD class="tb-cell2 hc">0％</TD>
@@ -233,11 +417,25 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0137"class="tb-cell2 hc" height="65">137</TD>
-<TD class="tb-cell1 hc">铗剪铳枪<BR>　 <IMG src="../images/gauge137.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./lance.html#0439">骨钳枪改</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc">铗剪铳枪<div class="gauge">
+  <div style="width:20px; background:#ee0000;" title="50"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:20px; background:#eeee00;" title="50"></div>
+  <div style="width:52px; background:#00ee00;" title="130"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:20px; background:#ee0000;" title="50"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:20px; background:#eeee00;" title="50"></div>
+  <div style="width:64px; background:#00ee00;" title="160"></div>
+  <div style="width:8px; background:#5050ff;" title="20"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./lance.html#0439">骨钳枪改</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">6</TD>
 <TD class="tb-cell3 hc">25000ｚ</TD>
 <TD class="tb-cell2 hc">368
-<BR>【通常型】</TD>
+<BR>通常型</TD>
 <TD class="tb-cell2 hc">防御+16<BR>炮击LV2</TD>
 <TD class="tb-cell2 hc">○−−</TD>
 <TD class="tb-cell2 hc">0％</TD>
@@ -251,17 +449,31 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0138"class="tb-cell2 hc" height="65">138</TD>
-<TD class="tb-cell1 hc">龍木之枪<BR>　 <IMG src="../images/gauge138.gif" border="0" width="122" height="19"></TD>
+<TD class="tb-cell1 hc">龍木之枪<div class="gauge">
+  <div style="width:28px; background:#ee0000;" title="70"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:60px; background:#eeee00;" title="150"></div>
+  <div style="width:16px; background:#00ee00;" title="40"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:28px; background:#ee0000;" title="70"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:60px; background:#eeee00;" title="150"></div>
+  <div style="width:24px; background:#00ee00;" title="60"></div>
+  <div style="width:12px; background:#5050ff;" title="30"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div></TD>
 <TD class="tb-cell2 hc">7</TD>
 <TD class="tb-cell3 hc">75000ｚ</TD>
 <TD class="tb-cell2 hc">345
-<BR>【扩散型】</TD>
+<BR>扩散型</TD>
 <TD class="tb-cell2 hc">麻痹180<BR>炮击LV3</TD>
 <TD class="tb-cell2 hc">○−−</TD>
 <TD class="tb-cell2 hc">0％</TD>
 <TD class="tb-cell2 hc"><A href="./gunlance.html#0410">410</A></TD>
 <TD class="tb-cell1 hc">&nbsp;</TD>
-<TD class="tb-cell1 hc"><A href="../items/items.html?0250" target="items">龍木</A>×6<BR><A href="../items/items.html?024c" target="items">浮岳龍的鳍</A>×2<BR><A href="../items/items.html?0106" target="items">雷光虫</A>×20<BR><A href="../items/items.html?023b" target="items">炎龍的尘粉</A>×1</TD>
+<TD class="tb-cell1 hc"><A href="../items/items.html?0250" target="items">龍木</A>×6<BR><A href="../items/items.html?024c" target="items">浮岳龍的鳍</A>×2<BR><A href="../items/items.html?0106" target="items">雷光虫</A>×20<BR><A href="../items/items.html?023b" target="items">炎龍的尘粉</A>×1<BR>（传说的工匠生产）</TD>
 <TD class="tb-cell1 hc">龍木を加工し作られた、<br>
 竜人族秘伝の銃槍。砲撃LV3。<br>
 構造上、中折れ式ではない。<br>
@@ -269,11 +481,24 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0402"class="tb-cell2" height="65">402</TD>
-<TD class="tb-cell1">钢制铳枪<BR>　 <IMG src="../images/gauge402.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./gunlance.html#0113">铁铳枪改</A>强化而来</FONT></TD>
+<TD class="tb-cell1">钢制铳枪<div class="gauge">
+  <div style="width:20px; background:#ee0000;" title="50"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:20px; background:#eeee00;" title="50"></div>
+  <div style="width:32px; background:#00ee00;" title="80"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:20px; background:#ee0000;" title="50"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:20px; background:#eeee00;" title="50"></div>
+  <div style="width:52px; background:#00ee00;" title="130"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./gunlance.html#0113">铁铳枪改</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">3</TD>
 <TD class="tb-cell3">11050ｚ</TD>
 <TD class="tb-cell2">299
-<BR>【通常型】</TD>
+<BR>通常型</TD>
 <TD class="tb-cell2"><BR>炮击LV2</TD>
 <TD class="tb-cell2">○○−</TD>
 <TD class="tb-cell2">0％</TD>
@@ -287,11 +512,25 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0403"class="tb-cell2 hc" height="65">403</TD>
-<TD class="tb-cell1 hc">大强击手<BR>　 <IMG src="../images/gauge403.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./gunlance.html#0134">重击手</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc">大强击手<div class="gauge">
+  <div style="width:28px; background:#ee0000;" title="70"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:60px; background:#eeee00;" title="150"></div>
+  <div style="width:16px; background:#00ee00;" title="40"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:28px; background:#ee0000;" title="70"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:60px; background:#eeee00;" title="150"></div>
+  <div style="width:24px; background:#00ee00;" title="60"></div>
+  <div style="width:12px; background:#5050ff;" title="30"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./gunlance.html#0134">重击手</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">6</TD>
 <TD class="tb-cell3 hc">120000ｚ</TD>
 <TD class="tb-cell2 hc">391
-<BR>【扩散型】</TD>
+<BR>扩散型</TD>
 <TD class="tb-cell2 hc">毒320<BR>炮击LV2</TD>
 <TD class="tb-cell2 hc">−−−</TD>
 <TD class="tb-cell2 hc">0％</TD>
@@ -305,11 +544,25 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0404"class="tb-cell2" height="65">404</TD>
-<TD class="tb-cell1">地狱螫刺<BR>　 <IMG src="../images/gauge404.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./gunlance.html#0133">地狱叮刺</A>强化而来</FONT></TD>
+<TD class="tb-cell1">地狱螫刺<div class="gauge">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:68px; background:#eeee00;" title="170"></div>
+  <div style="width:24px; background:#00ee00;" title="60"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:68px; background:#eeee00;" title="170"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:16px; background:#5050ff;" title="40"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./gunlance.html#0133">地狱叮刺</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">4</TD>
 <TD class="tb-cell3">24750ｚ</TD>
 <TD class="tb-cell2">345
-<BR>【通常型】</TD>
+<BR>通常型</TD>
 <TD class="tb-cell2">冰270<BR>炮击LV2</TD>
 <TD class="tb-cell2">○○−</TD>
 <TD class="tb-cell2">0％</TD>
@@ -323,11 +576,25 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0405"class="tb-cell2" height="65">405</TD>
-<TD class="tb-cell1">白加农炮<BR>　 <IMG src="../images/gauge405.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./gunlance.html#0126">白铳枪</A>强化而来</FONT></TD>
+<TD class="tb-cell1">白加农炮<div class="gauge">
+  <div style="width:20px; background:#ee0000;" title="50"></div>
+  <div style="width:20px; background:#eea000;" title="50"></div>
+  <div style="width:36px; background:#eeee00;" title="90"></div>
+  <div style="width:44px; background:#00ee00;" title="110"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:20px; background:#ee0000;" title="50"></div>
+  <div style="width:20px; background:#eea000;" title="50"></div>
+  <div style="width:36px; background:#eeee00;" title="90"></div>
+  <div style="width:52px; background:#00ee00;" title="130"></div>
+  <div style="width:12px; background:#5050ff;" title="30"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./gunlance.html#0126">白铳枪</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">4</TD>
 <TD class="tb-cell3">24450ｚ</TD>
 <TD class="tb-cell2">391
-<BR>【放射型】</TD>
+<BR>放射型</TD>
 <TD class="tb-cell2">防御+8<BR>炮击LV2</TD>
 <TD class="tb-cell2">○−−</TD>
 <TD class="tb-cell2">0％</TD>
@@ -341,11 +608,26 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0406"class="tb-cell2 hc" height="65">406</TD>
-<TD class="tb-cell1 hc">娜娜＝爆炎<BR>　 <IMG src="../images/gauge406.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./gunlance.html#0124">娜娜＝咆哮</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc">娜娜＝爆炎<div class="gauge">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:68px; background:#eeee00;" title="170"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:16px; background:#4040ff;" title="40"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:68px; background:#eeee00;" title="170"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:20px; background:#4040ff;" title="50"></div>
+  <div style="width:16px; background:#ffffff;" title="40"></div>
+</div><FONT size="-2"><A href="./gunlance.html#0124">娜娜＝咆哮</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">7</TD>
 <TD class="tb-cell3 hc">170000ｚ</TD>
 <TD class="tb-cell2 hc">414
-<BR>【扩散型】</TD>
+<BR>扩散型</TD>
 <TD class="tb-cell2 hc"><BR>炮击LV3</TD>
 <TD class="tb-cell2 hc">−−−</TD>
 <TD class="tb-cell2 hc">0％</TD>
@@ -359,11 +641,26 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0407"class="tb-cell2 hc" height="65">407</TD>
-<TD class="tb-cell1 hc">铗剪加农炮<BR>　 <IMG src="../images/gauge407.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./gunlance.html#0137">铗剪铳枪</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc">铗剪加农炮<div class="gauge">
+  <div style="width:20px; background:#ee0000;" title="50"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:20px; background:#eeee00;" title="50"></div>
+  <div style="width:64px; background:#00ee00;" title="160"></div>
+  <div style="width:8px; background:#5050ff;" title="20"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:20px; background:#ee0000;" title="50"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:20px; background:#eeee00;" title="50"></div>
+  <div style="width:64px; background:#00ee00;" title="160"></div>
+  <div style="width:20px; background:#5050ff;" title="50"></div>
+  <div style="width:8px; background:#ffffff;" title="20"></div>
+</div><FONT size="-2"><A href="./gunlance.html#0137">铗剪铳枪</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">6</TD>
 <TD class="tb-cell3 hc">40000ｚ</TD>
 <TD class="tb-cell2 hc">391
-<BR>【通常型】</TD>
+<BR>通常型</TD>
 <TD class="tb-cell2 hc">防御+18<BR>炮击LV3</TD>
 <TD class="tb-cell2 hc">○−−</TD>
 <TD class="tb-cell2 hc">0％</TD>
@@ -377,11 +674,26 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0408"class="tb-cell2 hc" height="65">408</TD>
-<TD class="tb-cell1 hc">黑血加农炮<BR>　 <IMG src="../images/gauge408.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./gunlance.html#0130">黑加农炮</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc">黑血加农炮<div class="gauge">
+  <div style="width:36px; background:#ee0000;" title="90"></div>
+  <div style="width:20px; background:#eea000;" title="50"></div>
+  <div style="width:36px; background:#eeee00;" title="90"></div>
+  <div style="width:40px; background:#00ee00;" title="100"></div>
+  <div style="width:8px; background:#5050ff;" title="20"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:36px; background:#ee0000;" title="90"></div>
+  <div style="width:20px; background:#eea000;" title="50"></div>
+  <div style="width:36px; background:#eeee00;" title="90"></div>
+  <div style="width:40px; background:#00ee00;" title="100"></div>
+  <div style="width:20px; background:#5050ff;" title="50"></div>
+  <div style="width:8px; background:#ffffff;" title="20"></div>
+</div><FONT size="-2"><A href="./gunlance.html#0130">黑加农炮</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">6</TD>
 <TD class="tb-cell3 hc">41550ｚ</TD>
 <TD class="tb-cell2 hc">437
-<BR>【放射型】</TD>
+<BR>放射型</TD>
 <TD class="tb-cell2 hc">防御+8<BR>炮击LV3</TD>
 <TD class="tb-cell2 hc">○−−</TD>
 <TD class="tb-cell2 hc">0％</TD>
@@ -395,16 +707,31 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0409"class="tb-cell2 hc" height="65">409</TD>
-<TD class="tb-cell1 hc">枪炮战车<BR>　 <IMG src="../images/gauge409.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./gunlance.html#0116">银色战车</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc">枪炮战车<div class="gauge">
+  <div style="width:20px; background:#ee0000;" title="50"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:20px; background:#eeee00;" title="50"></div>
+  <div style="width:64px; background:#00ee00;" title="160"></div>
+  <div style="width:8px; background:#5050ff;" title="20"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:20px; background:#ee0000;" title="50"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:20px; background:#eeee00;" title="50"></div>
+  <div style="width:64px; background:#00ee00;" title="160"></div>
+  <div style="width:20px; background:#5050ff;" title="50"></div>
+  <div style="width:8px; background:#ffffff;" title="20"></div>
+</div><FONT size="-2"><A href="./gunlance.html#0116">银色战车</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">7</TD>
 <TD class="tb-cell3 hc">76600ｚ</TD>
 <TD class="tb-cell2 hc">437
-<BR>【放射型】</TD>
+<BR>放射型</TD>
 <TD class="tb-cell2 hc"><BR>炮击LV3</TD>
 <TD class="tb-cell2 hc">○○−</TD>
 <TD class="tb-cell2 hc">0％</TD>
 <TD class="tb-cell2 hc">&nbsp;</TD>
-<TD class="tb-cell1 hc"><A href="../items/items.html?01a9" target="items">银火龙的尻尾</A>×3<BR><A href="../items/items.html?01ab" target="items">银火龙的翼</A>×1<BR><A href="../items/items.html?019b" target="items">火龙的红玉</A>×1</TD>
+<TD class="tb-cell1 hc"><A href="../items/items.html?01a9" target="items">银火龙的尾巴</A>×3<BR><A href="../items/items.html?01ab" target="items">银火龙的翼</A>×1<BR><A href="../items/items.html?019b" target="items">火龙的红玉</A>×1</TD>
 <TD class="tb-cell1 hc">&nbsp;</TD>
 <TD class="tb-cell1 hc">銀火竜の素材を用いた銃槍。<br>
 全体が銀色の鱗で覆われ高貴<br>
@@ -413,11 +740,26 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0410"class="tb-cell2 hc" height="65">410</TD>
-<TD class="tb-cell1 hc">龍木之枪【金刚】<BR>　 <IMG src="../images/gauge410.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./gunlance.html#0138">龍木之枪</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc">龍木之枪【金刚】<div class="gauge">
+  <div style="width:28px; background:#ee0000;" title="70"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:60px; background:#eeee00;" title="150"></div>
+  <div style="width:24px; background:#00ee00;" title="60"></div>
+  <div style="width:12px; background:#5050ff;" title="30"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:28px; background:#ee0000;" title="70"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:60px; background:#eeee00;" title="150"></div>
+  <div style="width:24px; background:#00ee00;" title="60"></div>
+  <div style="width:16px; background:#5050ff;" title="40"></div>
+  <div style="width:16px; background:#ffffff;" title="40"></div>
+</div><FONT size="-2"><A href="./gunlance.html#0138">龍木之枪</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">7</TD>
 <TD class="tb-cell3 hc">150000ｚ</TD>
 <TD class="tb-cell2 hc">368
-<BR>【扩散型】</TD>
+<BR>扩散型</TD>
 <TD class="tb-cell2 hc">麻痹230<BR>炮击LV3</TD>
 <TD class="tb-cell2 hc">○○−</TD>
 <TD class="tb-cell2 hc">0％</TD>
@@ -431,11 +773,25 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0411"class="tb-cell2" height="65">411</TD>
-<TD class="tb-cell1">近卫队正式铳枪<BR>　 <IMG src="../images/gauge411.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./gunlance.html#0114">讨伐队正式铳枪</A>强化而来</FONT></TD>
+<TD class="tb-cell1">近卫队正式铳枪<div class="gauge">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:16px; background:#eeee00;" title="40"></div>
+  <div style="width:64px; background:#00ee00;" title="160"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:16px; background:#eeee00;" title="40"></div>
+  <div style="width:64px; background:#00ee00;" title="160"></div>
+  <div style="width:20px; background:#5050ff;" title="50"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./gunlance.html#0114">讨伐队正式铳枪</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">4</TD>
 <TD class="tb-cell3">33400ｚ</TD>
 <TD class="tb-cell2">391
-<BR>【通常型】</TD>
+<BR>通常型</TD>
 <TD class="tb-cell2"><BR>炮击LV2</TD>
 <TD class="tb-cell2">○○−</TD>
 <TD class="tb-cell2">0％</TD>
@@ -449,17 +805,32 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0467"class="tb-cell2 nc" height="65">467</TD>
-<TD class="tb-cell1 nc">银日战车<BR>　 <IMG src="../images/gauge467.gif" border="0" width="122" height="19"></TD>
+<TD class="tb-cell1 nc">毁灭射线<div class="gauge">
+  <div style="width:20px; background:#ee0000;" title="50"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:20px; background:#eeee00;" title="50"></div>
+  <div style="width:64px; background:#00ee00;" title="160"></div>
+  <div style="width:20px; background:#5050ff;" title="50"></div>
+  <div style="width:8px; background:#ffffff;" title="20"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:20px; background:#ee0000;" title="50"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:20px; background:#eeee00;" title="50"></div>
+  <div style="width:64px; background:#00ee00;" title="160"></div>
+  <div style="width:20px; background:#5050ff;" title="50"></div>
+  <div style="width:8px; background:#ffffff;" title="20"></div>
+</div></TD>
 <TD class="tb-cell2 nc">7</TD>
 <TD class="tb-cell3 nc">240000ｚ</TD>
 <TD class="tb-cell2 nc">483
-<BR>【放射型】</TD>
+<BR>放射型</TD>
 <TD class="tb-cell2 nc"><BR>炮击LV1</TD>
 <TD class="tb-cell2 nc">−−−</TD>
 <TD class="tb-cell2 nc">0％</TD>
 <TD class="tb-cell2 nc">&nbsp;</TD>
 <TD class="tb-cell1 nc">&nbsp;</TD>
-<TD class="tb-cell1 nc">&nbsp;</TD>
+<TD class="tb-cell1 nc">*开发者物品*<br>*无生产配方*</TD>
 <TD class="tb-cell1 nc"><br>
 <br>
 <br>

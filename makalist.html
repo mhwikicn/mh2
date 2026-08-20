@@ -8,6 +8,23 @@
 <LINK rel="stylesheet" href="./table.css" type="text/css">
 <SCRIPT src="./scripts/links.js"></SCRIPT>
 </HEAD>
+<SCRIPT src="./scripts/blink.js"></SCRIPT>
+<STYLE>
+.highlight-row td,
+.highlight-row th {
+  background-color: #c7edcc !important;
+  transition: background-color 0.3s ease;
+}
+.cnt-tb2 > tbody:first-child > tr:first-child {
+  position: sticky;
+  top: 0;
+  background-color: #996633;
+  z-index: 10;
+}
+.cnt-tb2 td[id] {
+  scroll-margin-top: 22px;
+}
+</STYLE>
 <BODY>
 <HR>
 <TABLE border="0" width="910">

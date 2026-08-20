@@ -8,6 +8,55 @@
 <LINK rel="stylesheet" href="../table.css" type="text/css">
 <SCRIPT src="../scripts/links.js"></SCRIPT>
 </HEAD>
+<SCRIPT src="../scripts/blink.js"></SCRIPT>
+<STYLE>
+.gauge {
+  width: 160px;
+  margin: 0 auto;
+  display: flex;
+  height: 10px;
+  line-height: 0;
+  font-size: 0;
+  border-top: 1px solid gray;
+  border-bottom: 1px dotted gray;
+  border-left: 1px solid gray;
+  border-right: 1px solid gray;
+}
+.gauge-ext {
+  width: 160px;
+  margin: 0 auto;
+  display: flex;
+  height: 10px;
+  line-height: 0;
+  font-size: 0;
+  border-bottom: 1px solid gray;
+  border-left: 1px solid gray;
+  border-right: 1px solid gray;
+}
+.tb-cell1 font[size="-2"] {
+  display: block;
+  text-align: center;
+  margin-top: 2px;
+}
+.cnt-tb2 {
+  table-layout: fixed;
+  width: 1080px;
+}
+.highlight-row td,
+.highlight-row th {
+  background-color: #c7edcc !important;
+  transition: background-color 0.3s ease;
+}
+.cnt-tb2 > tbody:first-child > tr:first-child {
+  position: sticky;
+  top: 0;
+  background-color: #996633;
+  z-index: 10;
+}
+.cnt-tb2 td[id] {
+  scroll-margin-top: 39px;
+}
+</STYLE>
 <BODY>
 <HR>
 <TABLE border="0" width="910">
@@ -33,26 +82,41 @@ ShowLinks(1, 6);
 </TBODY>
 </TABLE>
 <BR>
-<FONT SIZE="-1">* 武器名称下方的锋利度，上段表示无技能，下段表示 <B>锋利度等级＋１</B> 时的武器锋利度。<BR>* 会心率高于０％的武器，青色锋利度时有＋５％，白色锋利度时有＋１０％的提升。<BR>* 请注意，并非所有武器在游戏中都能获得。<BR>
+<FONT SIZE="-1">* 武器名称下方的锋利度，上段表示无技能，下段表示 <B>锋利度等级＋1</B> 时的武器锋利度。<BR>* 会心率高于0％的武器，青色锋利度时有＋5％，白色锋利度时有＋10％的提升。<BR>* 请注意，并非所有武器在游戏中都能获得。<BR>
 * <SPAN class="hc">　　　</SPAN>表示网络模式限定内容。 </FONT>
 <TABLE border="1" cellspacing="0" cellpadding="2" class="cnt-tb2" width="1080">
 <TBODY>
 <TR>
-<TH class="tb-th1" width="35">武器<BR>No.</TH><TH class="tb-th1" width="160">名称</TH>
+<TH class="tb-th1" width="35">武器<BR>No.</TH>
+<TH class="tb-th1" width="165">名称</TH>
 <TH class="tb-th1" width="25">稀<BR>有</TH>
-<TH class="tb-th1" width="55">价格</TH>
+<TH class="tb-th1" width="65">价格</TH>
 <TH class="tb-th1" width="55">攻击力</TH>
 <TH class="tb-th1" width="60">属性</TH>
 <TH class="tb-th1" width="50">插孔</TH>
 <TH class="tb-th1" width="50">会心率</TH>
-<TH class="tb-th1" width="72">強化可能<BR>武器No.</TH>
-<TH class="tb-th1" width="140">强化必要素材</TH>
-<TH class="tb-th1" width="140">生产必要素材</TH>
-<TH class="tb-th1" width="180">解说</TH>
+<TH class="tb-th1" width="62">可强化至<BR>武器No.</TH>
+<TH class="tb-th1" width="130">强化必要素材</TH>
+<TH class="tb-th1" width="130">生产必要素材</TH>
+<TH class="tb-th1" width="190">解说</TH>
 </TR>
 <TR>
 <TD id="0005"class="tb-cell2" height="65">5</TD>
-<TD class="tb-cell1">天下无双刀<BR>　 <IMG src="../images/gauge005.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./tachi.html#0015">骨刀【龙牙】</A>强化而来</FONT></TD>
+<TD class="tb-cell1">天下无双刀<div class="gauge">
+  <div style="width:32px; background:#ee0000;" title="80"></div>
+  <div style="width:12px; background:#eea000;" title="30"></div>
+  <div style="width:44px; background:#eeee00;" title="110"></div>
+  <div style="width:32px; background:#00ee00;" title="80"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:32px; background:#ee0000;" title="80"></div>
+  <div style="width:12px; background:#eea000;" title="30"></div>
+  <div style="width:44px; background:#eeee00;" title="110"></div>
+  <div style="width:40px; background:#00ee00;" title="100"></div>
+  <div style="width:12px; background:#5050ff;" title="30"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./tachi.html#0015">骨刀【龙牙】</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">4</TD>
 <TD class="tb-cell3">22750ｚ</TD>
 <TD class="tb-cell2">768
@@ -70,7 +134,19 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0010"class="tb-cell2" height="65">10</TD>
-<TD class="tb-cell1">铁刀<BR>　 <IMG src="../images/gauge010.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./sword.html#0002">铁剑改</A>强化而来</FONT></TD>
+<TD class="tb-cell1">铁刀<div class="gauge">
+  <div style="width:20px; background:#ee0000;" title="50"></div>
+  <div style="width:12px; background:#eea000;" title="30"></div>
+  <div style="width:28px; background:#eeee00;" title="70"></div>
+  <div style="width:100px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:20px; background:#ee0000;" title="50"></div>
+  <div style="width:12px; background:#eea000;" title="30"></div>
+  <div style="width:36px; background:#eeee00;" title="90"></div>
+  <div style="width:12px; background:#00ee00;" title="30"></div>
+  <div style="width:80px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./sword.html#0002">铁剑改</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">2</TD>
 <TD class="tb-cell3">3150ｚ</TD>
 <TD class="tb-cell2">480
@@ -80,7 +156,7 @@ ShowLinks(1, 6);
 <TD class="tb-cell2">0％</TD>
 <TD class="tb-cell2"><A href="./tachi.html#0011">11</A></TD>
 <TD class="tb-cell1"><A href="../items/items.html?00d8" target="items">铁矿石</A>×5<BR><A href="../items/items.html?00da" target="items">燕雀石</A>×3<BR><A href="../items/items.html?00d9" target="items">大地的结晶</A>×5</TD>
-<TD class="tb-cell1"><A href="../items/items.html?00da" target="items">燕雀石</A>×5<BR><A href="../items/items.html?00d8" target="items">铁矿石</A>×8<BR><A href="../items/items.html?00d9" target="items">大地的结晶</A>×7<BR><A href="../items/items.html?00ac" target="items">砥石</A>×12</TD>
+<TD class="tb-cell1"><A href="../items/items.html?00da" target="items">燕雀石</A>×5<BR><A href="../items/items.html?00d8" target="items">铁矿石</A>×8<BR><A href="../items/items.html?00d9" target="items">大地的结晶</A>×7<BR><A href="../items/items.html?00ac" target="items">砥石</A>×12<hr style="border-top: 1px solid black;"><A href="../items/items.html?00da" target="items">燕雀石</A>×3<BR><A href="../items/items.html?00d6" target="items">阳光石</A>×3<BR>（首次联动）</TD>
 <TD class="tb-cell1">東方伝来の加工技術の剣。<br>
 丹念に加工された刃は強靭で、<br>
 粘りがある。手入れは重要。<br>
@@ -88,7 +164,20 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0011"class="tb-cell2" height="65">11</TD>
-<TD class="tb-cell1">铁刀【禊】<BR>　 <IMG src="../images/gauge011.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./tachi.html#0010">铁刀</A>强化而来</FONT></TD>
+<TD class="tb-cell1">铁刀【禊】<div class="gauge">
+  <div style="width:20px; background:#ee0000;" title="50"></div>
+  <div style="width:12px; background:#eea000;" title="30"></div>
+  <div style="width:36px; background:#eeee00;" title="90"></div>
+  <div style="width:12px; background:#00ee00;" title="30"></div>
+  <div style="width:80px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:20px; background:#ee0000;" title="50"></div>
+  <div style="width:12px; background:#eea000;" title="30"></div>
+  <div style="width:36px; background:#eeee00;" title="90"></div>
+  <div style="width:32px; background:#00ee00;" title="80"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./tachi.html#0010">铁刀</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">2</TD>
 <TD class="tb-cell3">5580ｚ</TD>
 <TD class="tb-cell2">528
@@ -106,7 +195,20 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0012"class="tb-cell2" height="65">12</TD>
-<TD class="tb-cell1">铁刀【神乐】<BR>　 <IMG src="../images/gauge012.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./tachi.html#0011">铁刀【禊】</A>强化而来</FONT></TD>
+<TD class="tb-cell1">铁刀【神乐】<div class="gauge">
+  <div style="width:52px; background:#ee0000;" title="130"></div>
+  <div style="width:4px; background:#eea000;" title="10"></div>
+  <div style="width:24px; background:#eeee00;" title="60"></div>
+  <div style="width:20px; background:#00ee00;" title="50"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:52px; background:#ee0000;" title="130"></div>
+  <div style="width:4px; background:#eea000;" title="10"></div>
+  <div style="width:24px; background:#eeee00;" title="60"></div>
+  <div style="width:40px; background:#00ee00;" title="100"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./tachi.html#0011">铁刀【禊】</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">2</TD>
 <TD class="tb-cell3">9420ｚ</TD>
 <TD class="tb-cell2">576
@@ -124,7 +226,18 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0013"class="tb-cell2" height="65">13</TD>
-<TD class="tb-cell1">骨刀【狼牙】<BR>　 <IMG src="../images/gauge013.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./sword.html#0029">骨刀改</A>强化而来</FONT></TD>
+<TD class="tb-cell1">骨刀【狼牙】<div class="gauge">
+  <div style="width:32px; background:#ee0000;" title="80"></div>
+  <div style="width:12px; background:#eea000;" title="30"></div>
+  <div style="width:16px; background:#eeee00;" title="40"></div>
+  <div style="width:100px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:32px; background:#ee0000;" title="80"></div>
+  <div style="width:12px; background:#eea000;" title="30"></div>
+  <div style="width:36px; background:#eeee00;" title="90"></div>
+  <div style="width:80px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./sword.html#0029">骨剑改</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">2</TD>
 <TD class="tb-cell3">2340ｚ</TD>
 <TD class="tb-cell2">432
@@ -142,7 +255,19 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0014"class="tb-cell2" height="65">14</TD>
-<TD class="tb-cell1">骨刀【鲛牙】<BR>　 <IMG src="../images/gauge014.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./tachi.html#0013">骨刀【狼牙】</A>强化而来</FONT></TD>
+<TD class="tb-cell1">骨刀【鲛牙】<div class="gauge">
+  <div style="width:32px; background:#ee0000;" title="80"></div>
+  <div style="width:12px; background:#eea000;" title="30"></div>
+  <div style="width:36px; background:#eeee00;" title="90"></div>
+  <div style="width:80px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:32px; background:#ee0000;" title="80"></div>
+  <div style="width:12px; background:#eea000;" title="30"></div>
+  <div style="width:44px; background:#eeee00;" title="110"></div>
+  <div style="width:12px; background:#00ee00;" title="30"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./tachi.html#0013">骨刀【狼牙】</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">2</TD>
 <TD class="tb-cell3">4650ｚ</TD>
 <TD class="tb-cell2">480
@@ -160,7 +285,20 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0015"class="tb-cell2" height="65">15</TD>
-<TD class="tb-cell1">骨刀【龙牙】<BR>　 <IMG src="../images/gauge015.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./tachi.html#0014">骨刀【鲛牙】</A>强化而来</FONT></TD>
+<TD class="tb-cell1">骨刀【龙牙】<div class="gauge">
+  <div style="width:32px; background:#ee0000;" title="80"></div>
+  <div style="width:12px; background:#eea000;" title="30"></div>
+  <div style="width:44px; background:#eeee00;" title="110"></div>
+  <div style="width:12px; background:#00ee00;" title="30"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:32px; background:#ee0000;" title="80"></div>
+  <div style="width:12px; background:#eea000;" title="30"></div>
+  <div style="width:44px; background:#eeee00;" title="110"></div>
+  <div style="width:32px; background:#00ee00;" title="80"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./tachi.html#0014">骨刀【鲛牙】</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">2</TD>
 <TD class="tb-cell3">8250ｚ</TD>
 <TD class="tb-cell2">624
@@ -178,7 +316,20 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0016"class="tb-cell2" height="65">16</TD>
-<TD class="tb-cell1">黑刀【零之型】<BR>　 <IMG src="../images/gauge016.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./tachi.html#0013">骨刀【狼牙】</A>强化而来</FONT></TD>
+<TD class="tb-cell1">黑刀【零之型】<div class="gauge">
+  <div style="width:52px; background:#ee0000;" title="130"></div>
+  <div style="width:4px; background:#eea000;" title="10"></div>
+  <div style="width:24px; background:#eeee00;" title="60"></div>
+  <div style="width:20px; background:#00ee00;" title="50"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:52px; background:#ee0000;" title="130"></div>
+  <div style="width:4px; background:#eea000;" title="10"></div>
+  <div style="width:24px; background:#eeee00;" title="60"></div>
+  <div style="width:40px; background:#00ee00;" title="100"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./tachi.html#0013">骨刀【狼牙】</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">3</TD>
 <TD class="tb-cell3">12350ｚ</TD>
 <TD class="tb-cell2">576
@@ -196,7 +347,21 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0017"class="tb-cell2" height="65">17</TD>
-<TD class="tb-cell1">黑刀【贰之型】<BR>　 <IMG src="../images/gauge017.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./tachi.html#0016">黑刀【零之型】</A>强化而来</FONT></TD>
+<TD class="tb-cell1">黑刀【贰之型】<div class="gauge">
+  <div style="width:52px; background:#ee0000;" title="130"></div>
+  <div style="width:4px; background:#eea000;" title="10"></div>
+  <div style="width:24px; background:#eeee00;" title="60"></div>
+  <div style="width:40px; background:#00ee00;" title="100"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:52px; background:#ee0000;" title="130"></div>
+  <div style="width:4px; background:#eea000;" title="10"></div>
+  <div style="width:24px; background:#eeee00;" title="60"></div>
+  <div style="width:52px; background:#00ee00;" title="130"></div>
+  <div style="width:8px; background:#5050ff;" title="20"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./tachi.html#0016">黑刀【零之型】</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">4</TD>
 <TD class="tb-cell3">15580ｚ</TD>
 <TD class="tb-cell2">672
@@ -214,7 +379,21 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0019"class="tb-cell2 hc" height="65">19</TD>
-<TD class="tb-cell1 hc">飞龙刀【朱】<BR>　 <IMG src="../images/gauge019.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./tachi.html#0051">龍刀【红莲】</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc">飞龙刀【朱】<div class="gauge">
+  <div style="width:52px; background:#ee0000;" title="130"></div>
+  <div style="width:4px; background:#eea000;" title="10"></div>
+  <div style="width:24px; background:#eeee00;" title="60"></div>
+  <div style="width:40px; background:#00ee00;" title="100"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:52px; background:#ee0000;" title="130"></div>
+  <div style="width:4px; background:#eea000;" title="10"></div>
+  <div style="width:24px; background:#eeee00;" title="60"></div>
+  <div style="width:52px; background:#00ee00;" title="130"></div>
+  <div style="width:8px; background:#5050ff;" title="20"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./tachi.html#0051">龍刀【红莲】</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">6</TD>
 <TD class="tb-cell3 hc">75000ｚ</TD>
 <TD class="tb-cell2 hc">864
@@ -223,7 +402,7 @@ ShowLinks(1, 6);
 <TD class="tb-cell2 hc">−−−</TD>
 <TD class="tb-cell2 hc">0％</TD>
 <TD class="tb-cell2 hc"><A href="./tachi.html#0389">389</A></TD>
-<TD class="tb-cell1 hc"><A href="../items/items.html?019e" target="items">火龙的尻尾</A>×3<BR><A href="../items/items.html?019d" target="items">火龙的坚壳</A>×4<BR><A href="../items/items.html?019a" target="items">火龙的逆鳞</A>×1</TD>
+<TD class="tb-cell1 hc"><A href="../items/items.html?019e" target="items">火龙的尾巴</A>×3<BR><A href="../items/items.html?019d" target="items">火龙的坚壳</A>×4<BR><A href="../items/items.html?019a" target="items">火龙的逆鳞</A>×1</TD>
 <TD class="tb-cell1 hc">&nbsp;</TD>
 <TD class="tb-cell1 hc">落日の色に染まる飛竜刀。<br>
 朱く強靭な刃は一太刀ごとに、<br>
@@ -232,7 +411,20 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0022"class="tb-cell2" height="65">22</TD>
-<TD class="tb-cell1">飞龙刀【青叶】<BR>　 <IMG src="../images/gauge022.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./tachi.html#0014">骨刀【鲛牙】</A>强化而来</FONT></TD>
+<TD class="tb-cell1">飞龙刀【青叶】<div class="gauge">
+  <div style="width:52px; background:#ee0000;" title="130"></div>
+  <div style="width:4px; background:#eea000;" title="10"></div>
+  <div style="width:24px; background:#eeee00;" title="60"></div>
+  <div style="width:20px; background:#00ee00;" title="50"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:52px; background:#ee0000;" title="130"></div>
+  <div style="width:4px; background:#eea000;" title="10"></div>
+  <div style="width:24px; background:#eeee00;" title="60"></div>
+  <div style="width:40px; background:#00ee00;" title="100"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./tachi.html#0014">骨刀【鲛牙】</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">3</TD>
 <TD class="tb-cell3">18560ｚ</TD>
 <TD class="tb-cell2">528
@@ -242,7 +434,7 @@ ShowLinks(1, 6);
 <TD class="tb-cell2">0％</TD>
 <TD class="tb-cell2"><A href="./tachi.html#0383">383</A></TD>
 <TD class="tb-cell1"><A href="../items/items.html?00da" target="items">燕雀石</A>×15<BR><A href="../items/items.html?018e" target="items">雌火龙的棘</A>×1<BR><A href="../items/items.html?018c" target="items">雌火龙的甲壳</A>×4</TD>
-<TD class="tb-cell1"><A href="../items/items.html?00da" target="items">燕雀石</A>×15<BR><A href="../items/items.html?018e" target="items">雌火龙的棘</A>×1<BR><A href="../items/items.html?018c" target="items">雌火龙的甲壳</A>×6<BR><A href="../items/items.html?010a" target="items">煌甲虫</A>×3</TD>
+<TD class="tb-cell1"><A href="../items/items.html?00da" target="items">燕雀石</A>×15<BR><A href="../items/items.html?018e" target="items">雌火龙的棘</A>×1<BR><A href="../items/items.html?018c" target="items">雌火龙的甲壳</A>×6<BR><A href="../items/items.html?010a" target="items">煌甲虫</A>×3<BR>（沼地开放后联动）</TD>
 <TD class="tb-cell1">雌火竜の素材を用いて作られ<br>
 た深緑の飛竜刀。高い鋭さと、<br>
 威力を両立した利刃である。<br>
@@ -250,7 +442,21 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0026"class="tb-cell2 hc" height="65">26</TD>
-<TD class="tb-cell1 hc">黑暗镰刀<BR>　 <IMG src="../images/gauge026.gif" border="0" width="122" height="19"></TD>
+<TD class="tb-cell1 hc">黑暗镰刀<div class="gauge">
+  <div style="width:48px; background:#ee0000;" title="120"></div>
+  <div style="width:44px; background:#eea000;" title="110"></div>
+  <div style="width:20px; background:#eeee00;" title="50"></div>
+  <div style="width:8px; background:#00ee00;" title="20"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:48px; background:#ee0000;" title="120"></div>
+  <div style="width:44px; background:#eea000;" title="110"></div>
+  <div style="width:20px; background:#eeee00;" title="50"></div>
+  <div style="width:16px; background:#00ee00;" title="40"></div>
+  <div style="width:12px; background:#5050ff;" title="30"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div></TD>
 <TD class="tb-cell2 hc">6</TD>
 <TD class="tb-cell3 hc">16700ｚ</TD>
 <TD class="tb-cell2 hc">720
@@ -268,7 +474,21 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0027"class="tb-cell2 hc" height="65">27</TD>
-<TD class="tb-cell1 hc">黑暗折磨<BR>　 <IMG src="../images/gauge027.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./tachi.html#0026">黑暗镰刀</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc">黑暗折磨<div class="gauge">
+  <div style="width:72px; background:#ee0000;" title="180"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:28px; background:#eeee00;" title="70"></div>
+  <div style="width:12px; background:#00ee00;" title="30"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:72px; background:#ee0000;" title="180"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:28px; background:#eeee00;" title="70"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:4px; background:#5050ff;" title="10"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./tachi.html#0026">黑暗镰刀</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">6</TD>
 <TD class="tb-cell3 hc">25750ｚ</TD>
 <TD class="tb-cell2 hc">768
@@ -286,7 +506,22 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0031"class="tb-cell2 hc" height="65">31</TD>
-<TD class="tb-cell1 hc">黑刀【参之型】<BR>　 <IMG src="../images/gauge031.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./tachi.html#0017">黑刀【贰之型】</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc">黑刀【叁之型】<div class="gauge">
+  <div style="width:52px; background:#ee0000;" title="130"></div>
+  <div style="width:4px; background:#eea000;" title="10"></div>
+  <div style="width:24px; background:#eeee00;" title="60"></div>
+  <div style="width:52px; background:#00ee00;" title="130"></div>
+  <div style="width:8px; background:#5050ff;" title="20"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:52px; background:#ee0000;" title="130"></div>
+  <div style="width:4px; background:#eea000;" title="10"></div>
+  <div style="width:24px; background:#eeee00;" title="60"></div>
+  <div style="width:52px; background:#00ee00;" title="130"></div>
+  <div style="width:16px; background:#5050ff;" title="40"></div>
+  <div style="width:12px; background:#ffffff;" title="30"></div>
+</div><FONT size="-2"><A href="./tachi.html#0017">黑刀【贰之型】</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">6</TD>
 <TD class="tb-cell3 hc">50000ｚ</TD>
 <TD class="tb-cell2 hc">816
@@ -304,7 +539,21 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0049"class="tb-cell2 hc" height="65">49</TD>
-<TD class="tb-cell1 hc">龍木之太刀<BR>　 <IMG src="../images/gauge049.gif" border="0" width="122" height="19"></TD>
+<TD class="tb-cell1 hc">龍木之太刀<div class="gauge">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:72px; background:#eeee00;" title="180"></div>
+  <div style="width:8px; background:#00ee00;" title="20"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:72px; background:#eeee00;" title="180"></div>
+  <div style="width:16px; background:#00ee00;" title="40"></div>
+  <div style="width:12px; background:#5050ff;" title="30"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div></TD>
 <TD class="tb-cell2 hc">6</TD>
 <TD class="tb-cell3 hc">75000ｚ</TD>
 <TD class="tb-cell2 hc">624
@@ -314,15 +563,28 @@ ShowLinks(1, 6);
 <TD class="tb-cell2 hc">0％</TD>
 <TD class="tb-cell2 hc"><A href="./tachi.html#0388">388</A></TD>
 <TD class="tb-cell1 hc">&nbsp;</TD>
-<TD class="tb-cell1 hc"><A href="../items/items.html?0250" target="items">龍木</A>×3<BR><A href="../items/items.html?024f" target="items">龍苔</A>×1<BR><A href="../items/items.html?024c" target="items">浮岳龍的鳍</A>×3<BR><A href="../items/items.html?0106" target="items">雷光虫</A>×15</TD>
+<TD class="tb-cell1 hc"><A href="../items/items.html?0250" target="items">龍木</A>×3<BR><A href="../items/items.html?024f" target="items">龍苔</A>×1<BR><A href="../items/items.html?024c" target="items">浮岳龍的鳍</A>×3<BR><A href="../items/items.html?0106" target="items">雷光虫</A>×15<BR>（传说的工匠生产）</TD>
 <TD class="tb-cell1 hc">幾百の暦を経た龍木刀。<br>
-〜龍ヨリ生マレシ古木ノ心<br>
-　アマネク命全テヲ封ズル〜<br>
+～龍ヨリ生マレシ古木ノ心<br>
+　アマネク命全テヲ封ズル～<br>
 </TD>
 </TR>
 <TR>
 <TD id="0050"class="tb-cell2" height="65">50</TD>
-<TD class="tb-cell1">龍刀【焰】<BR>　 <IMG src="../images/gauge050.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./tachi.html#0015">骨刀【龙牙】</A>强化而来</FONT></TD>
+<TD class="tb-cell1">龍刀【焰】<div class="gauge">
+  <div style="width:64px; background:#ee0000;" title="160"></div>
+  <div style="width:12px; background:#eea000;" title="30"></div>
+  <div style="width:8px; background:#eeee00;" title="20"></div>
+  <div style="width:16px; background:#00ee00;" title="40"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:64px; background:#ee0000;" title="160"></div>
+  <div style="width:12px; background:#eea000;" title="30"></div>
+  <div style="width:8px; background:#eeee00;" title="20"></div>
+  <div style="width:36px; background:#00ee00;" title="90"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./tachi.html#0015">骨刀【龙牙】</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">4</TD>
 <TD class="tb-cell3">34550ｚ</TD>
 <TD class="tb-cell2">720
@@ -340,7 +602,21 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0051"class="tb-cell2" height="65">51</TD>
-<TD class="tb-cell1">龍刀【红莲】<BR>　 <IMG src="../images/gauge051.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./tachi.html#0050">龍刀【焰】</A>强化而来</FONT></TD>
+<TD class="tb-cell1">龍刀【红莲】<div class="gauge">
+  <div style="width:64px; background:#ee0000;" title="160"></div>
+  <div style="width:12px; background:#eea000;" title="30"></div>
+  <div style="width:8px; background:#eeee00;" title="20"></div>
+  <div style="width:36px; background:#00ee00;" title="90"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:64px; background:#ee0000;" title="160"></div>
+  <div style="width:12px; background:#eea000;" title="30"></div>
+  <div style="width:8px; background:#eeee00;" title="20"></div>
+  <div style="width:36px; background:#00ee00;" title="90"></div>
+  <div style="width:20px; background:#5050ff;" title="50"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./tachi.html#0050">龍刀【焰】</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">5</TD>
 <TD class="tb-cell3">42750ｚ</TD>
 <TD class="tb-cell2">816
@@ -358,7 +634,20 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0208"class="tb-cell2" height="65">208</TD>
-<TD class="tb-cell1">斩破刀<BR>　 <IMG src="../images/gauge208.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./tachi.html#0012">铁刀【神乐】</A>强化而来</FONT></TD>
+<TD class="tb-cell1">斩破刀<div class="gauge">
+  <div style="width:20px; background:#ee0000;" title="50"></div>
+  <div style="width:12px; background:#eea000;" title="30"></div>
+  <div style="width:36px; background:#eeee00;" title="90"></div>
+  <div style="width:32px; background:#00ee00;" title="80"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:20px; background:#ee0000;" title="50"></div>
+  <div style="width:12px; background:#eea000;" title="30"></div>
+  <div style="width:36px; background:#eeee00;" title="90"></div>
+  <div style="width:52px; background:#00ee00;" title="130"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./tachi.html#0012">铁刀【神乐】</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">4</TD>
 <TD class="tb-cell3">18980ｚ</TD>
 <TD class="tb-cell2">624
@@ -376,7 +665,22 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0209"class="tb-cell2 hc" height="65">209</TD>
-<TD class="tb-cell1 hc">天上天下无双刀<BR>　 <IMG src="../images/gauge209.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./tachi.html#0005">天下无双刀</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc">天上天下无双刀<div class="gauge">
+  <div style="width:32px; background:#ee0000;" title="80"></div>
+  <div style="width:12px; background:#eea000;" title="30"></div>
+  <div style="width:44px; background:#eeee00;" title="110"></div>
+  <div style="width:40px; background:#00ee00;" title="100"></div>
+  <div style="width:12px; background:#5050ff;" title="30"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:32px; background:#ee0000;" title="80"></div>
+  <div style="width:12px; background:#eea000;" title="30"></div>
+  <div style="width:44px; background:#eeee00;" title="110"></div>
+  <div style="width:40px; background:#00ee00;" title="100"></div>
+  <div style="width:24px; background:#5050ff;" title="60"></div>
+  <div style="width:8px; background:#ffffff;" title="20"></div>
+</div><FONT size="-2"><A href="./tachi.html#0005">天下无双刀</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">6</TD>
 <TD class="tb-cell3 hc">50000ｚ</TD>
 <TD class="tb-cell2 hc">912
@@ -394,7 +698,20 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0266"class="tb-cell2" height="65">266</TD>
-<TD class="tb-cell1">深红镰刀<BR>　 <IMG src="../images/gauge266.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./sword.html#0024">死刑</A>强化而来</FONT></TD>
+<TD class="tb-cell1">深红镰刀<div class="gauge">
+  <div style="width:36px; background:#ee0000;" title="90"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:44px; background:#eeee00;" title="110"></div>
+  <div style="width:4px; background:#00ee00;" title="10"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:36px; background:#ee0000;" title="90"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:44px; background:#eeee00;" title="110"></div>
+  <div style="width:24px; background:#00ee00;" title="60"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./sword.html#0024">处刑</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">3</TD>
 <TD class="tb-cell3">18250ｚ</TD>
 <TD class="tb-cell2">816
@@ -412,7 +729,21 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0267"class="tb-cell2" height="65">267</TD>
-<TD class="tb-cell1">白色螳螂<BR>　 <IMG src="../images/gauge267.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./sword.html#0024">死刑</A>强化而来</FONT><BR><FONT size="-2">　　<A href="./tachi.html#0385">一角龙镰刀</A>强化而来</FONT></TD>
+<TD class="tb-cell1">白色螳螂<div class="gauge">
+  <div style="width:72px; background:#ee0000;" title="180"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:28px; background:#eeee00;" title="70"></div>
+  <div style="width:12px; background:#00ee00;" title="30"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:72px; background:#ee0000;" title="180"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:28px; background:#eeee00;" title="70"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:4px; background:#5050ff;" title="10"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./sword.html#0024">处刑</A> 强化而来</FONT><FONT size="-2"><A href="./tachi.html#0385">一角龙镰刀</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">4</TD>
 <TD class="tb-cell3">32500ｚ</TD>
 <TD class="tb-cell2">816
@@ -430,7 +761,20 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0271"class="tb-cell2" height="65">271</TD>
-<TD class="tb-cell1">军刀<BR>　 <IMG src="../images/gauge271.gif" border="0" width="122" height="19"></TD>
+<TD class="tb-cell1">军刀<div class="gauge">
+  <div style="width:32px; background:#ee0000;" title="80"></div>
+  <div style="width:12px; background:#eea000;" title="30"></div>
+  <div style="width:44px; background:#eeee00;" title="110"></div>
+  <div style="width:12px; background:#00ee00;" title="30"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:32px; background:#ee0000;" title="80"></div>
+  <div style="width:12px; background:#eea000;" title="30"></div>
+  <div style="width:44px; background:#eeee00;" title="110"></div>
+  <div style="width:32px; background:#00ee00;" title="80"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div></TD>
 <TD class="tb-cell2">4</TD>
 <TD class="tb-cell3">32050ｚ</TD>
 <TD class="tb-cell2">576
@@ -440,7 +784,7 @@ ShowLinks(1, 6);
 <TD class="tb-cell2">0％</TD>
 <TD class="tb-cell2"><A href="./tachi.html#0272">272</A></TD>
 <TD class="tb-cell1">&nbsp;</TD>
-<TD class="tb-cell1"><A href="../items/items.html?023f" target="items">炎妃龍的甲壳</A>×4<BR><A href="../items/items.html?0243" target="items">炎妃龍的角</A>×1<BR><A href="../items/items.html?0239" target="items">炎之龍鳞</A>×3<BR><A href="../items/items.html?02e0" target="items">星铁</A>×5</TD>
+<TD class="tb-cell1"><A href="../items/items.html?023f" target="items">炎妃龍的甲壳</A>×4<BR><A href="../items/items.html?0243" target="items">炎妃龍的角</A>×1<BR><A href="../items/items.html?0239" target="items">炎之龍鳞</A>×3<BR><A href="../items/items.html?02e0" target="items">星铁</A>×5<BR>（传说的工匠生产）</TD>
 <TD class="tb-cell1">炎妃龍の力を秘めた蒼き麗刀。<br>
 斬られた相手は、蒼白き炎に<br>
 包まれ、瞬きの間に塵と化す。<br>
@@ -448,7 +792,21 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0272"class="tb-cell2" height="65">272</TD>
-<TD class="tb-cell1">军刀【狮子舞】<BR>　 <IMG src="../images/gauge272.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./tachi.html#0271">军刀</A>强化而来</FONT></TD>
+<TD class="tb-cell1">军刀【狮子舞】<div class="gauge">
+  <div style="width:36px; background:#ee0000;" title="90"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:44px; background:#eeee00;" title="110"></div>
+  <div style="width:24px; background:#00ee00;" title="60"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:36px; background:#ee0000;" title="90"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:44px; background:#eeee00;" title="110"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:16px; background:#5050ff;" title="40"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./tachi.html#0271">军刀</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">5</TD>
 <TD class="tb-cell3">62500ｚ</TD>
 <TD class="tb-cell2">624
@@ -466,7 +824,20 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0273"class="tb-cell2 hc" height="65">273</TD>
-<TD class="tb-cell1 hc">守卫者之剑<BR>　 <IMG src="../images/gauge273.gif" border="0" width="122" height="19"></TD>
+<TD class="tb-cell1 hc">守卫者之剑<div class="gauge">
+  <div style="width:20px; background:#ee0000;" title="50"></div>
+  <div style="width:12px; background:#eea000;" title="30"></div>
+  <div style="width:36px; background:#eeee00;" title="90"></div>
+  <div style="width:32px; background:#00ee00;" title="80"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:20px; background:#ee0000;" title="50"></div>
+  <div style="width:12px; background:#eea000;" title="30"></div>
+  <div style="width:36px; background:#eeee00;" title="90"></div>
+  <div style="width:52px; background:#00ee00;" title="130"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div></TD>
 <TD class="tb-cell2 hc">6</TD>
 <TD class="tb-cell3 hc">21150ｚ</TD>
 <TD class="tb-cell2 hc">720
@@ -476,7 +847,7 @@ ShowLinks(1, 6);
 <TD class="tb-cell2 hc">0％</TD>
 <TD class="tb-cell2 hc"><A href="./tachi.html#0387">387</A></TD>
 <TD class="tb-cell1 hc">&nbsp;</TD>
-<TD class="tb-cell1 hc"><A href="../items/items.html?0269" target="items">太古的板状块</A>×1</TD>
+<TD class="tb-cell1 hc"><A href="../items/items.html?0269" target="items">太古的板状块</A>×1<BR>（概率生产）</TD>
 <TD class="tb-cell1 hc">悠久の時を経て甦った公会<br>
 創成期の太刀。荒削りながら<br>
 も加工技術に遜色はない。<br>
@@ -484,7 +855,22 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0274"class="tb-cell2 hc" height="65">274</TD>
-<TD class="tb-cell1 hc">鬼神斩破刀<BR>　 <IMG src="../images/gauge274.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./tachi.html#0285">鬼斩破</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc">鬼神斩破刀<div class="gauge">
+  <div style="width:64px; background:#ee0000;" title="160"></div>
+  <div style="width:12px; background:#eea000;" title="30"></div>
+  <div style="width:8px; background:#eeee00;" title="20"></div>
+  <div style="width:36px; background:#00ee00;" title="90"></div>
+  <div style="width:20px; background:#5050ff;" title="50"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:64px; background:#ee0000;" title="160"></div>
+  <div style="width:12px; background:#eea000;" title="30"></div>
+  <div style="width:8px; background:#eeee00;" title="20"></div>
+  <div style="width:36px; background:#00ee00;" title="90"></div>
+  <div style="width:28px; background:#5050ff;" title="70"></div>
+  <div style="width:12px; background:#ffffff;" title="30"></div>
+</div><FONT size="-2"><A href="./tachi.html#0285">鬼斩破</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">6</TD>
 <TD class="tb-cell3 hc">78630ｚ</TD>
 <TD class="tb-cell2 hc">816
@@ -502,7 +888,21 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0277"class="tb-cell2 hc" height="65">277</TD>
-<TD class="tb-cell1 hc">镰威太刀<BR>　 <IMG src="../images/gauge277.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./tachi.html#0027">黑暗折磨</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc">镰威太刀<div class="gauge">
+  <div style="width:48px; background:#ee0000;" title="120"></div>
+  <div style="width:44px; background:#eea000;" title="110"></div>
+  <div style="width:20px; background:#eeee00;" title="50"></div>
+  <div style="width:16px; background:#00ee00;" title="40"></div>
+  <div style="width:12px; background:#5050ff;" title="30"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:48px; background:#ee0000;" title="120"></div>
+  <div style="width:44px; background:#eea000;" title="110"></div>
+  <div style="width:20px; background:#eeee00;" title="50"></div>
+  <div style="width:16px; background:#00ee00;" title="40"></div>
+  <div style="width:32px; background:#5050ff;" title="80"></div>
+</div><FONT size="-2"><A href="./tachi.html#0027">黑暗折磨</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">6</TD>
 <TD class="tb-cell3 hc">72880ｚ</TD>
 <TD class="tb-cell2 hc">912
@@ -520,7 +920,22 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0280"class="tb-cell2 hc" height="65">280</TD>
-<TD class="tb-cell1 hc">龍刀【胧火】<BR>　 <IMG src="../images/gauge280.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./tachi.html#0051">龍刀【红莲】</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc">龍刀【胧火】<div class="gauge">
+  <div style="width:64px; background:#ee0000;" title="160"></div>
+  <div style="width:12px; background:#eea000;" title="30"></div>
+  <div style="width:8px; background:#eeee00;" title="20"></div>
+  <div style="width:36px; background:#00ee00;" title="90"></div>
+  <div style="width:20px; background:#5050ff;" title="50"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:64px; background:#ee0000;" title="160"></div>
+  <div style="width:12px; background:#eea000;" title="30"></div>
+  <div style="width:8px; background:#eeee00;" title="20"></div>
+  <div style="width:36px; background:#00ee00;" title="90"></div>
+  <div style="width:28px; background:#5050ff;" title="70"></div>
+  <div style="width:12px; background:#ffffff;" title="30"></div>
+</div><FONT size="-2"><A href="./tachi.html#0051">龍刀【红莲】</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">7</TD>
 <TD class="tb-cell3 hc">120000ｚ</TD>
 <TD class="tb-cell2 hc">768
@@ -529,7 +944,7 @@ ShowLinks(1, 6);
 <TD class="tb-cell2 hc">○−−</TD>
 <TD class="tb-cell2 hc">0％</TD>
 <TD class="tb-cell2 hc">&nbsp;</TD>
-<TD class="tb-cell1 hc"><A href="../items/items.html?01e9" target="items">老山龍的苍角</A>×3<BR><A href="../items/items.html?0243" target="items">炎妃龍的角</A>×5<BR><A href="../items/items.html?02e4" target="items">战友之绊</A>×5</TD>
+<TD class="tb-cell1 hc"><A href="../items/items.html?01e9" target="items">老山龍的苍角</A>×3<BR><A href="../items/items.html?0243" target="items">炎妃龍的角</A>×5<BR><A href="../items/items.html?02e4" target="items">战友之纽带</A>×5</TD>
 <TD class="tb-cell1 hc">&nbsp;</TD>
 <TD class="tb-cell1 hc">刀そのものが龍を憎んでいる<br>
 と言われる妖刀。大型の飛竜<br>
@@ -538,7 +953,21 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0285"class="tb-cell2" height="65">285</TD>
-<TD class="tb-cell1">鬼斩破<BR>　 <IMG src="../images/gauge285.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./tachi.html#0208">斩破刀</A>强化而来</FONT></TD>
+<TD class="tb-cell1">鬼斩破<div class="gauge">
+  <div style="width:52px; background:#ee0000;" title="130"></div>
+  <div style="width:4px; background:#eea000;" title="10"></div>
+  <div style="width:24px; background:#eeee00;" title="60"></div>
+  <div style="width:40px; background:#00ee00;" title="100"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:52px; background:#ee0000;" title="130"></div>
+  <div style="width:4px; background:#eea000;" title="10"></div>
+  <div style="width:24px; background:#eeee00;" title="60"></div>
+  <div style="width:52px; background:#00ee00;" title="130"></div>
+  <div style="width:8px; background:#5050ff;" title="20"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./tachi.html#0208">斩破刀</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">5</TD>
 <TD class="tb-cell3">28560ｚ</TD>
 <TD class="tb-cell2">672
@@ -556,7 +985,21 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0292"class="tb-cell2 hc" height="65">292</TD>
-<TD class="tb-cell1 hc">蟹切刀<BR>　 <IMG src="../images/gauge292.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./tachi.html#0027">黑暗折磨</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc">蟹切刀<div class="gauge">
+  <div style="width:36px; background:#ee0000;" title="90"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:44px; background:#eeee00;" title="110"></div>
+  <div style="width:24px; background:#00ee00;" title="60"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:36px; background:#ee0000;" title="90"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:44px; background:#eeee00;" title="110"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:16px; background:#5050ff;" title="40"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./tachi.html#0027">黑暗折磨</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">6</TD>
 <TD class="tb-cell3 hc">34450ｚ</TD>
 <TD class="tb-cell2 hc">816
@@ -574,7 +1017,21 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0371"class="tb-cell2 hc" height="65">371</TD>
-<TD class="tb-cell1 hc">鬼薙刀<BR>　 <IMG src="../images/gauge371.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./tachi.html#0027">黑暗折磨</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc">鬼薙刀<div class="gauge">
+  <div style="width:36px; background:#ee0000;" title="90"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:44px; background:#eeee00;" title="110"></div>
+  <div style="width:24px; background:#00ee00;" title="60"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:36px; background:#ee0000;" title="90"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:44px; background:#eeee00;" title="110"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:16px; background:#5050ff;" title="40"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./tachi.html#0027">黑暗折磨</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">6</TD>
 <TD class="tb-cell3 hc">75000ｚ</TD>
 <TD class="tb-cell2 hc">816
@@ -583,7 +1040,7 @@ ShowLinks(1, 6);
 <TD class="tb-cell2 hc">−−−</TD>
 <TD class="tb-cell2 hc">10％</TD>
 <TD class="tb-cell2 hc"><A href="./tachi.html#0390">390</A></TD>
-<TD class="tb-cell1 hc"><A href="../items/items.html?020a" target="items">金狮子的锐牙</A>×3<BR><A href="../items/items.html?020d" target="items">金狮子的尻尾</A>×2<BR><A href="../items/items.html?02e6" target="items">蛋券</A>×5</TD>
+<TD class="tb-cell1 hc"><A href="../items/items.html?020a" target="items">金狮子的锐牙</A>×3<BR><A href="../items/items.html?020d" target="items">金狮子的尾巴</A>×2<BR><A href="../items/items.html?02e6" target="items">蛋券</A>×5</TD>
 <TD class="tb-cell1 hc">&nbsp;</TD>
 <TD class="tb-cell1 hc">東方の力ある僧が語った秘伝<br>
 をもとに打たれた大刀。偉大<br>
@@ -592,7 +1049,20 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0372"class="tb-cell2 hc" height="65">372</TD>
-<TD class="tb-cell1 hc">双刃锈剑<BR>　 <IMG src="../images/gauge372.gif" border="0" width="122" height="19"></TD>
+<TD class="tb-cell1 hc">双刃锈剑<div class="gauge">
+  <div style="width:20px; background:#ee0000;" title="50"></div>
+  <div style="width:12px; background:#eea000;" title="30"></div>
+  <div style="width:36px; background:#eeee00;" title="90"></div>
+  <div style="width:32px; background:#00ee00;" title="80"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:20px; background:#ee0000;" title="50"></div>
+  <div style="width:12px; background:#eea000;" title="30"></div>
+  <div style="width:36px; background:#eeee00;" title="90"></div>
+  <div style="width:52px; background:#00ee00;" title="130"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div></TD>
 <TD class="tb-cell2 hc">5</TD>
 <TD class="tb-cell3 hc">50000ｚ</TD>
 <TD class="tb-cell2 hc">768
@@ -610,7 +1080,21 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0373"class="tb-cell2 hc" height="65">373</TD>
-<TD class="tb-cell1 hc">双刃锋剑<BR>　 <IMG src="../images/gauge373.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./tachi.html#0372">双刃锈剑</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc">双刃锋剑<div class="gauge">
+  <div style="width:20px; background:#ee0000;" title="50"></div>
+  <div style="width:12px; background:#eea000;" title="30"></div>
+  <div style="width:36px; background:#eeee00;" title="90"></div>
+  <div style="width:52px; background:#00ee00;" title="130"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:20px; background:#ee0000;" title="50"></div>
+  <div style="width:12px; background:#eea000;" title="30"></div>
+  <div style="width:36px; background:#eeee00;" title="90"></div>
+  <div style="width:56px; background:#00ee00;" title="140"></div>
+  <div style="width:16px; background:#5050ff;" title="40"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./tachi.html#0372">双刃锈剑</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">6</TD>
 <TD class="tb-cell3 hc">75000ｚ</TD>
 <TD class="tb-cell2 hc">816
@@ -628,7 +1112,22 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0381"class="tb-cell2 hc" height="65">381</TD>
-<TD class="tb-cell1 hc">斩老刀【素戋呜尊】<BR>　 <IMG src="../images/gauge381.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./tachi.html#0484">大长老的胁差</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc">斩老刀【素戋呜尊】<div class="gauge">
+  <div style="width:36px; background:#ee0000;" title="90"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:44px; background:#eeee00;" title="110"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:16px; background:#5050ff;" title="40"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:36px; background:#ee0000;" title="90"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:44px; background:#eeee00;" title="110"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:24px; background:#5050ff;" title="60"></div>
+  <div style="width:12px; background:#ffffff;" title="30"></div>
+</div><FONT size="-2"><A href="./tachi.html#0484">大长老的胁差</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">6</TD>
 <TD class="tb-cell3 hc">82500ｚ</TD>
 <TD class="tb-cell2 hc">816
@@ -646,7 +1145,22 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0382"class="tb-cell2 hc" height="65">382</TD>
-<TD class="tb-cell1 hc">大名切割刃<BR>　 <IMG src="../images/gauge382.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./tachi.html#0292">蟹切刀</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc">大名切割刃<div class="gauge">
+  <div style="width:36px; background:#ee0000;" title="90"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:44px; background:#eeee00;" title="110"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:16px; background:#5050ff;" title="40"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:36px; background:#ee0000;" title="90"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:44px; background:#eeee00;" title="110"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:24px; background:#5050ff;" title="60"></div>
+  <div style="width:12px; background:#ffffff;" title="30"></div>
+</div><FONT size="-2"><A href="./tachi.html#0292">蟹切刀</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">6</TD>
 <TD class="tb-cell3 hc">43250ｚ</TD>
 <TD class="tb-cell2 hc">864
@@ -664,7 +1178,21 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0383"class="tb-cell2" height="65">383</TD>
-<TD class="tb-cell1">飞龙刀【翠】<BR>　 <IMG src="../images/gauge383.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./tachi.html#0022">飞龙刀【青叶】</A>强化而来</FONT></TD>
+<TD class="tb-cell1">飞龙刀【翠】<div class="gauge">
+  <div style="width:52px; background:#ee0000;" title="130"></div>
+  <div style="width:4px; background:#eea000;" title="10"></div>
+  <div style="width:24px; background:#eeee00;" title="60"></div>
+  <div style="width:40px; background:#00ee00;" title="100"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:52px; background:#ee0000;" title="130"></div>
+  <div style="width:4px; background:#eea000;" title="10"></div>
+  <div style="width:24px; background:#eeee00;" title="60"></div>
+  <div style="width:52px; background:#00ee00;" title="130"></div>
+  <div style="width:8px; background:#5050ff;" title="20"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./tachi.html#0022">飞龙刀【青叶】</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">4</TD>
 <TD class="tb-cell3">36980ｚ</TD>
 <TD class="tb-cell2">624
@@ -682,7 +1210,21 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0384"class="tb-cell2 hc" height="65">384</TD>
-<TD class="tb-cell1 hc">军刀【狮子王】<BR>　 <IMG src="../images/gauge384.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./tachi.html#0272">军刀【狮子舞】</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc">军刀【狮子王】<div class="gauge">
+  <div style="width:48px; background:#ee0000;" title="120"></div>
+  <div style="width:44px; background:#eea000;" title="110"></div>
+  <div style="width:20px; background:#eeee00;" title="50"></div>
+  <div style="width:16px; background:#00ee00;" title="40"></div>
+  <div style="width:12px; background:#5050ff;" title="30"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:48px; background:#ee0000;" title="120"></div>
+  <div style="width:44px; background:#eea000;" title="110"></div>
+  <div style="width:20px; background:#eeee00;" title="50"></div>
+  <div style="width:16px; background:#00ee00;" title="40"></div>
+  <div style="width:32px; background:#5050ff;" title="80"></div>
+</div><FONT size="-2"><A href="./tachi.html#0272">军刀【狮子舞】</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">7</TD>
 <TD class="tb-cell3 hc">160000ｚ</TD>
 <TD class="tb-cell2 hc">768
@@ -700,7 +1242,21 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0385"class="tb-cell2" height="65">385</TD>
-<TD class="tb-cell1">一角龙镰刀<BR>　 <IMG src="../images/gauge385.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./tachi.html#0266">深红镰刀</A>强化而来</FONT><BR><FONT size="-2">　　<A href="./tachi.html#0267">白色螳螂</A>强化而来</FONT></TD>
+<TD class="tb-cell1">一角龙镰刀<div class="gauge">
+  <div style="width:36px; background:#ee0000;" title="90"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:44px; background:#eeee00;" title="110"></div>
+  <div style="width:24px; background:#00ee00;" title="60"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:36px; background:#ee0000;" title="90"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:44px; background:#eeee00;" title="110"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:16px; background:#5050ff;" title="40"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./tachi.html#0266">深红镰刀</A> 强化而来</FONT><FONT size="-2"><A href="./tachi.html#0267">白色螳螂</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">4</TD>
 <TD class="tb-cell3">27800ｚ</TD>
 <TD class="tb-cell2">864
@@ -718,7 +1274,22 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0386"class="tb-cell2 hc" height="65">386</TD>
-<TD class="tb-cell1 hc">冰霜死神<BR>　 <IMG src="../images/gauge386.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./tachi.html#0267">白色螳螂</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc">冰霜死神<div class="gauge">
+  <div style="width:72px; background:#ee0000;" title="180"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:28px; background:#eeee00;" title="70"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:4px; background:#5050ff;" title="10"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:72px; background:#ee0000;" title="180"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:28px; background:#eeee00;" title="70"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:16px; background:#5050ff;" title="40"></div>
+  <div style="width:8px; background:#ffffff;" title="20"></div>
+</div><FONT size="-2"><A href="./tachi.html#0267">白色螳螂</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">6</TD>
 <TD class="tb-cell3 hc">91800ｚ</TD>
 <TD class="tb-cell2 hc">912
@@ -736,7 +1307,21 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0387"class="tb-cell2 hc" height="65">387</TD>
-<TD class="tb-cell1 hc">帝国之剑<BR>　 <IMG src="../images/gauge387.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./tachi.html#0273">守卫者之剑</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc">帝国之剑<div class="gauge">
+  <div style="width:20px; background:#ee0000;" title="50"></div>
+  <div style="width:12px; background:#eea000;" title="30"></div>
+  <div style="width:36px; background:#eeee00;" title="90"></div>
+  <div style="width:52px; background:#00ee00;" title="130"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:20px; background:#ee0000;" title="50"></div>
+  <div style="width:12px; background:#eea000;" title="30"></div>
+  <div style="width:36px; background:#eeee00;" title="90"></div>
+  <div style="width:56px; background:#00ee00;" title="140"></div>
+  <div style="width:16px; background:#5050ff;" title="40"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./tachi.html#0273">守卫者之剑</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">6</TD>
 <TD class="tb-cell3 hc">51600ｚ</TD>
 <TD class="tb-cell2 hc">768
@@ -754,7 +1339,22 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0388"class="tb-cell2 hc" height="65">388</TD>
-<TD class="tb-cell1 hc">龍木之太刀【神凭】<BR>　 <IMG src="../images/gauge388.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./tachi.html#0049">龍木之太刀</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc">龍木之太刀【神凭】<div class="gauge">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:72px; background:#eeee00;" title="180"></div>
+  <div style="width:16px; background:#00ee00;" title="40"></div>
+  <div style="width:12px; background:#5050ff;" title="30"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:72px; background:#eeee00;" title="180"></div>
+  <div style="width:16px; background:#00ee00;" title="40"></div>
+  <div style="width:16px; background:#5050ff;" title="40"></div>
+  <div style="width:16px; background:#ffffff;" title="40"></div>
+</div><FONT size="-2"><A href="./tachi.html#0049">龍木之太刀</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">7</TD>
 <TD class="tb-cell3 hc">150000ｚ</TD>
 <TD class="tb-cell2 hc">672
@@ -766,13 +1366,28 @@ ShowLinks(1, 6);
 <TD class="tb-cell1 hc"><A href="../items/items.html?0250" target="items">龍木</A>×5<BR><A href="../items/items.html?024e" target="items">浮岳龍的体液</A>×3<BR><A href="../items/items.html?02e3" target="items">战友之证</A>×5</TD>
 <TD class="tb-cell1 hc">&nbsp;</TD>
 <TD class="tb-cell1 hc">幾百の暦を経た龍木刀。<br>
-〜龍ヨリ生マレシ古木ノ心<br>
-　アマネク命全テヲ封ズル〜<br>
+～龍ヨリ生マレシ古木ノ心<br>
+　アマネク命全テヲ封ズル～<br>
 </TD>
 </TR>
 <TR>
 <TD id="0389"class="tb-cell2 hc" height="65">389</TD>
-<TD class="tb-cell1 hc">飞龙刀【枫】<BR>　 <IMG src="../images/gauge389.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./tachi.html#0019">飞龙刀【朱】</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc">飞龙刀【枫】<div class="gauge">
+  <div style="width:20px; background:#ee0000;" title="50"></div>
+  <div style="width:12px; background:#eea000;" title="30"></div>
+  <div style="width:36px; background:#eeee00;" title="90"></div>
+  <div style="width:56px; background:#00ee00;" title="140"></div>
+  <div style="width:16px; background:#5050ff;" title="40"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:20px; background:#ee0000;" title="50"></div>
+  <div style="width:12px; background:#eea000;" title="30"></div>
+  <div style="width:36px; background:#eeee00;" title="90"></div>
+  <div style="width:56px; background:#00ee00;" title="140"></div>
+  <div style="width:24px; background:#5050ff;" title="60"></div>
+  <div style="width:12px; background:#ffffff;" title="30"></div>
+</div><FONT size="-2"><A href="./tachi.html#0019">飞龙刀【朱】</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">7</TD>
 <TD class="tb-cell3 hc">150000ｚ</TD>
 <TD class="tb-cell2 hc">912
@@ -790,7 +1405,22 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0390"class="tb-cell2 hc" height="65">390</TD>
-<TD class="tb-cell1 hc">大鬼薙刀<BR>　 <IMG src="../images/gauge390.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./tachi.html#0371">鬼薙刀</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc">大鬼薙刀<div class="gauge">
+  <div style="width:72px; background:#ee0000;" title="180"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:28px; background:#eeee00;" title="70"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:4px; background:#5050ff;" title="10"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:72px; background:#ee0000;" title="180"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:28px; background:#eeee00;" title="70"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:16px; background:#5050ff;" title="40"></div>
+  <div style="width:8px; background:#ffffff;" title="20"></div>
+</div><FONT size="-2"><A href="./tachi.html#0371">鬼薙刀</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">7</TD>
 <TD class="tb-cell3 hc">150000ｚ</TD>
 <TD class="tb-cell2 hc">864
@@ -799,7 +1429,7 @@ ShowLinks(1, 6);
 <TD class="tb-cell2 hc">−−−</TD>
 <TD class="tb-cell2 hc">10％</TD>
 <TD class="tb-cell2 hc">&nbsp;</TD>
-<TD class="tb-cell1 hc"><A href="../items/items.html?020c" target="items">金狮子的尖爪</A>×4<BR><A href="../items/items.html?020d" target="items">金狮子的尻尾</A>×4<BR><A href="../items/items.html?024e" target="items">浮岳龍的体液</A>×5</TD>
+<TD class="tb-cell1 hc"><A href="../items/items.html?020c" target="items">金狮子的尖爪</A>×4<BR><A href="../items/items.html?020d" target="items">金狮子的尾巴</A>×4<BR><A href="../items/items.html?024e" target="items">浮岳龍的体液</A>×5</TD>
 <TD class="tb-cell1 hc">&nbsp;</TD>
 <TD class="tb-cell1 hc">東方の力ある僧が語った秘伝<br>
 をもとに打たれた大刀。偉大<br>
@@ -808,7 +1438,22 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0391"class="tb-cell2 hc" height="65">391</TD>
-<TD class="tb-cell1 hc">双刃蜕剑<BR>　 <IMG src="../images/gauge391.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./tachi.html#0373">双刃锋剑</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc">双刃蜕剑<div class="gauge">
+  <div style="width:52px; background:#ee0000;" title="130"></div>
+  <div style="width:4px; background:#eea000;" title="10"></div>
+  <div style="width:24px; background:#eeee00;" title="60"></div>
+  <div style="width:52px; background:#00ee00;" title="130"></div>
+  <div style="width:8px; background:#5050ff;" title="20"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:52px; background:#ee0000;" title="130"></div>
+  <div style="width:4px; background:#eea000;" title="10"></div>
+  <div style="width:24px; background:#eeee00;" title="60"></div>
+  <div style="width:52px; background:#00ee00;" title="130"></div>
+  <div style="width:16px; background:#5050ff;" title="40"></div>
+  <div style="width:12px; background:#ffffff;" title="30"></div>
+</div><FONT size="-2"><A href="./tachi.html#0373">双刃锋剑</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">7</TD>
 <TD class="tb-cell3 hc">150000ｚ</TD>
 <TD class="tb-cell2 hc">864
@@ -826,7 +1471,20 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0466"class="tb-cell2 nc" height="65">466</TD>
-<TD class="tb-cell1 nc">军刀【狮子炎王】<BR>　 <IMG src="../images/gauge466.gif" border="0" width="122" height="19"></TD>
+<TD class="tb-cell1 nc">军刀【狮子炎王】<div class="gauge">
+  <div style="width:48px; background:#ee0000;" title="120"></div>
+  <div style="width:44px; background:#eea000;" title="110"></div>
+  <div style="width:20px; background:#eeee00;" title="50"></div>
+  <div style="width:16px; background:#00ee00;" title="40"></div>
+  <div style="width:32px; background:#5050ff;" title="80"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:48px; background:#ee0000;" title="120"></div>
+  <div style="width:44px; background:#eea000;" title="110"></div>
+  <div style="width:20px; background:#eeee00;" title="50"></div>
+  <div style="width:16px; background:#00ee00;" title="40"></div>
+  <div style="width:32px; background:#5050ff;" title="80"></div>
+</div></TD>
 <TD class="tb-cell2 nc">7</TD>
 <TD class="tb-cell3 nc">200000ｚ</TD>
 <TD class="tb-cell2 nc">864
@@ -836,7 +1494,7 @@ ShowLinks(1, 6);
 <TD class="tb-cell2 nc">0％</TD>
 <TD class="tb-cell2 nc">&nbsp;</TD>
 <TD class="tb-cell1 nc">&nbsp;</TD>
-<TD class="tb-cell1 nc">&nbsp;</TD>
+<TD class="tb-cell1 nc">*开发者物品*<br>*无生产配方*</TD>
 <TD class="tb-cell1 nc"><br>
 <br>
 <br>
@@ -844,7 +1502,21 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0472"class="tb-cell2 hc" height="65">472</TD>
-<TD class="tb-cell1 hc">太刀扇【伽瓦斯】<BR>　 <IMG src="../images/gauge472.gif" border="0" width="122" height="19"></TD>
+<TD class="tb-cell1 hc">太刀扇【伽瓦斯】<div class="gauge">
+  <div style="width:64px; background:#ee0000;" title="160"></div>
+  <div style="width:12px; background:#eea000;" title="30"></div>
+  <div style="width:8px; background:#eeee00;" title="20"></div>
+  <div style="width:36px; background:#00ee00;" title="90"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:64px; background:#ee0000;" title="160"></div>
+  <div style="width:12px; background:#eea000;" title="30"></div>
+  <div style="width:8px; background:#eeee00;" title="20"></div>
+  <div style="width:36px; background:#00ee00;" title="90"></div>
+  <div style="width:20px; background:#5050ff;" title="50"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div></TD>
 <TD class="tb-cell2 hc">6</TD>
 <TD class="tb-cell3 hc">350ｚ</TD>
 <TD class="tb-cell2 hc">624
@@ -862,7 +1534,22 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0478"class="tb-cell2 hc" height="65">478</TD>
-<TD class="tb-cell1 hc">飞龙刀【葵】<BR>　 <IMG src="../images/gauge478.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./tachi.html#0383">飞龙刀【翠】</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc">飞龙刀【葵】<div class="gauge">
+  <div style="width:52px; background:#ee0000;" title="130"></div>
+  <div style="width:4px; background:#eea000;" title="10"></div>
+  <div style="width:24px; background:#eeee00;" title="60"></div>
+  <div style="width:52px; background:#00ee00;" title="130"></div>
+  <div style="width:8px; background:#5050ff;" title="20"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:52px; background:#ee0000;" title="130"></div>
+  <div style="width:4px; background:#eea000;" title="10"></div>
+  <div style="width:24px; background:#eeee00;" title="60"></div>
+  <div style="width:52px; background:#00ee00;" title="130"></div>
+  <div style="width:16px; background:#5050ff;" title="40"></div>
+  <div style="width:12px; background:#ffffff;" title="30"></div>
+</div><FONT size="-2"><A href="./tachi.html#0383">飞龙刀【翠】</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">7</TD>
 <TD class="tb-cell3 hc">120000ｚ</TD>
 <TD class="tb-cell2 hc">672
@@ -880,7 +1567,21 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0484"class="tb-cell2 hc" height="65">484</TD>
-<TD class="tb-cell1 hc">大长老的胁差<BR>　 <IMG src="../images/gauge484.gif" border="0" width="122" height="19"></TD>
+<TD class="tb-cell1 hc">大长老的胁差<div class="gauge">
+  <div style="width:36px; background:#ee0000;" title="90"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:44px; background:#eeee00;" title="110"></div>
+  <div style="width:24px; background:#00ee00;" title="60"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:36px; background:#ee0000;" title="90"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:44px; background:#eeee00;" title="110"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:16px; background:#5050ff;" title="40"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div></TD>
 <TD class="tb-cell2 hc">6</TD>
 <TD class="tb-cell3 hc">50000ｚ</TD>
 <TD class="tb-cell2 hc">768

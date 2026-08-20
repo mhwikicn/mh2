@@ -52,13 +52,13 @@ ShowLinks(1, 1);
 <TD height="25" class="tb-cell51">&nbsp;11&nbsp;<A href="./mons0c.html">食草龙</A></TD>
 <TD class="tb-cell51">&nbsp;12&nbsp;<A href="./mons19.html">甲壳草食龙</A></TD>
 <TD class="tb-cell51">&nbsp;13&nbsp;<A href="./mons10.html">蓝速龙</A></TD>
-<TD class="tb-cell51">&nbsp;14&nbsp;<A href="./mons23.html">白速龙</A></TD>
+<TD class="tb-cell51">&nbsp;14&nbsp;<A href="./mons23.html">白蓝速龙</A></TD>
 <TD class="tb-cell51">&nbsp;16&nbsp;<A href="./mons0d.html">黄速龙</A></TD>
 </TR>
 <TR>
 <TD height="25" class="tb-cell51">&nbsp;18&nbsp;<A href="./mons1e.html">红速龙</A></TD>
 <TD class="tb-cell51">&nbsp;25&nbsp;<A href="./mons3f.html">蛇龙</A></TD>
-<TD class="tb-cell51">&nbsp;41&nbsp;<A href="./mons22.html">砂龙</A></TD>
+<TD class="tb-cell51">&nbsp;41&nbsp;<A href="./mons22.html">沙龙</A></TD>
 <TD class="tb-cell51">&nbsp;45&nbsp;<A href="./mons42.html">小盾蟹</A></TD>
 <TD class="tb-cell51">&nbsp;47&nbsp;<A href="./mons49.html">小镰蟹</A></TD>
 </TR>
@@ -108,7 +108,7 @@ ShowLinks(1, 1);
 <TD height="25" class="tb-cell51">&nbsp;38&nbsp;<A href="./mons2c.html">一角龙【亚种】</A></TD>
 <TD class="tb-cell51">&nbsp;39&nbsp;<A href="./mons0e.html">角龙</A></TD>
 <TD class="tb-cell51">&nbsp;40&nbsp;<A href="./mons2b.html">角龙【亚种】</A></TD>
-<TD class="tb-cell51">&nbsp;42&nbsp;<A href="./mons08.html">砂龙王</A></TD>
+<TD class="tb-cell51">&nbsp;42&nbsp;<A href="./mons08.html">沙龙王</A></TD>
 <TD class="tb-cell51">&nbsp;43&nbsp;<A href="./mons15.html">水龙</A></TD>
 </TR>
 <TR>
@@ -155,7 +155,7 @@ ShowLinks(1, 1);
 <BR>
 <B>体力</B><BR>
 怪物的体力，根据各级别（单机、网络下位、网络上位）的基准值进行上下浮动。<BR>
-数据一览显示了最小〜最大的范围，但实际值由任务设定的基准值决定，不会有显示的范围那样大的波动。<BR>
+数据一览显示了最小~最大的范围，但实际值由任务设定的基准值决定，不会有显示的范围那样大的波动。<BR>
 有些怪物数据是恒定值没有波动。<BR>
 <BR>
 <BR>
@@ -173,7 +173,7 @@ ShowLinks(1, 1);
 <BR>
 <B>登场任务与出现尺寸范围</B><BR>
 怪物的登场任务一览。怪物的最小与最大尺寸范围由具体任务决定，表中显示其尺寸范围。<BR>
-尺寸范围以 最小出现尺寸 〜 基本尺寸 〜 最大出现尺寸 的格式显示。<BR>
+尺寸范围以 最小出现尺寸 ~ 基本尺寸 ~ 最大出现尺寸 的格式显示。<BR>
 （线上模式下最小尺寸与最大尺寸值存在变动的可能）<BR>
 <BR>
 <BR>
@@ -187,7 +187,7 @@ ShowLinks(1, 1);
 <BR>
 <B>硬直耐性与部位破坏・切断</B><BR>
 怪物的特定部位受到一定的伤害后，会产生「硬直」动作。<BR>
-每个部位设定了一个计数，逐步减去该部位受到的伤害，当结果达到０以下时触发。（硬直时间）<BR>
+每个部位设定了一个计数，逐步减去该部位受到的伤害，当结果达到0以下时触发。（硬直时间）<BR>
 计数归零后，重新分配同样的原始计数值，并重复以上过程。<BR>
 硬直造成的具体动作因怪物与部位而异。（例如，许多飞龙会在左右足发生硬直时跌倒）<BR>
 <BR>
@@ -207,11 +207,11 @@ ShowLinks(1, 1);
 一定时间后异常状态将被解除，怪物对该属性的耐性值上升。<BR>
 体内的蓄积值会随时间经过而减少，攻击间隔较长的话将很难使怪物进入异常状态。<BR>
 <BR>
-怪物进入毒状态时，毒蓄积值将变为０，毒状态下再次进行毒攻击可以继续增加蓄积值。<BR>
-此时蓄积值最高可以达到当前的耐性值−１，毒状态下蓄积值不会减少。<BR>
+怪物进入毒状态时，毒蓄积值将变为0，毒状态下再次进行毒攻击可以继续增加蓄积值。<BR>
+此时蓄积值最高可以达到当前的耐性值−1，毒状态下蓄积值不会减少。<BR>
 当毒状态解除时，蓄积值不变，因此在毒状态下进行毒攻击，对于使怪物再次进入毒状态是有效的。<BR>
 <BR>
-对于麻痹与睡眠状态，异常状态中无法增加蓄积值。异常状态解除后，需要从０开始再进行蓄积。<BR>
+对于麻痹与睡眠状态，异常状态中无法增加蓄积值。异常状态解除后，需要从0开始再进行蓄积。<BR>
 <BR>
 可捕获的怪物，其麻醉耐性均为100，且不会上升。捕获用麻醉球/捕获用麻醉弹通常情况下的蓄积值均为80。<BR>
 <BR>
@@ -226,7 +226,7 @@ ShowLinks(1, 1);
 <BR>
 <BR>
 <B>剥取</B><BR>
-表示剥取时可能获得的素材。发动剥取名人技能时，剥取次数增加１。<BR>
+表示剥取时可能获得的素材。发动剥取名人技能时，剥取次数增加1。<BR>
 （* 请注意，对于目前尚未出现的怪物，其剥取数据尚未确定）<BR>
 演习任务中的剥取内容请参考之前公布的 <A href="../picklist.html">剥取素材一览</A> 。<BR>
 <BR>

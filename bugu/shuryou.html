@@ -8,6 +8,55 @@
 <LINK rel="stylesheet" href="../table.css" type="text/css">
 <SCRIPT src="../scripts/links.js"></SCRIPT>
 </HEAD>
+<SCRIPT src="../scripts/blink.js"></SCRIPT>
+<STYLE>
+.gauge {
+  width: 160px;
+  margin: 0 auto;
+  display: flex;
+  height: 10px;
+  line-height: 0;
+  font-size: 0;
+  border-top: 1px solid gray;
+  border-bottom: 1px dotted gray;
+  border-left: 1px solid gray;
+  border-right: 1px solid gray;
+}
+.gauge-ext {
+  width: 160px;
+  margin: 0 auto;
+  display: flex;
+  height: 10px;
+  line-height: 0;
+  font-size: 0;
+  border-bottom: 1px solid gray;
+  border-left: 1px solid gray;
+  border-right: 1px solid gray;
+}
+.tb-cell1 font[size="-2"] {
+  display: block;
+  text-align: center;
+  margin-top: 2px;
+}
+.cnt-tb2 {
+  table-layout: fixed;
+  width: 1080px;
+}
+.highlight-row td,
+.highlight-row th {
+  background-color: #c7edcc !important;
+  transition: background-color 0.3s ease;
+}
+.cnt-tb2 > tbody:first-child > tr:first-child {
+  position: sticky;
+  top: 0;
+  background-color: #996633;
+  z-index: 10;
+}
+.cnt-tb2 td[id] {
+  scroll-margin-top: 39px;
+}
+</STYLE>
 <BODY>
 <HR>
 <TABLE border="0" width="910">
@@ -33,25 +82,39 @@ ShowLinks(1, 6);
 </TBODY>
 </TABLE>
 <BR>
-<FONT SIZE="-1">* 武器名称下方的锋利度，上段表示无技能，下段表示 <B>锋利度等级＋１</B> 时的武器锋利度。<BR>* 会心率高于０％的武器，青色锋利度时有＋５％，白色锋利度时有＋１０％的提升。<BR>* 请注意，并非所有武器在游戏中都能获得。<BR>
+<FONT SIZE="-1">* 武器名称下方的锋利度，上段表示无技能，下段表示 <B>锋利度等级＋1</B> 时的武器锋利度。<BR>* 会心率高于0％的武器，青色锋利度时有＋5％，白色锋利度时有＋10％的提升。<BR>* 请注意，并非所有武器在游戏中都能获得。<BR>
 * <SPAN class="hc">　　　</SPAN>表示网络模式限定内容。</FONT>
 <TABLE border="1" cellspacing="0" cellpadding="2" class="cnt-tb2" width="1080">
 <TBODY>
 <TR>
-<TH class="tb-th1" width="35">武器<BR>No.</TH><TH class="tb-th1" width="160">名称</TH>
+<TH class="tb-th1" width="35">武器<BR>No.</TH>
+<TH class="tb-th1" width="165">名称</TH>
 <TH class="tb-th1" width="25">稀<BR>有</TH>
-<TH class="tb-th1" width="55">价格</TH>
+<TH class="tb-th1" width="65">价格</TH>
 <TH class="tb-th1" width="55">攻击力</TH>
 <TH class="tb-th1" width="60">属性</TH>
 <TH class="tb-th1" width="50">插孔</TH>
 <TH class="tb-th1" width="50">会心率</TH>
-<TH class="tb-th1" width="72">強化可能<BR>武器No.</TH>
-<TH class="tb-th1" width="140">强化必要素材</TH>
-<TH class="tb-th1" width="140">生产必要素材</TH>
-<TH class="tb-th1" width="180">解说</TH>
+<TH class="tb-th1" width="62">可强化至<BR>武器No.</TH>
+<TH class="tb-th1" width="130">强化必要素材</TH>
+<TH class="tb-th1" width="130">生产必要素材</TH>
+<TH class="tb-th1" width="190">解说</TH>
 <TR>
 <TD id="0294"class="tb-cell2" height="65">294</TD>
-<TD class="tb-cell1">骨笛<BR>　 <IMG src="../images/gauge294.gif" border="0" width="122" height="19"></TD>
+<TD class="tb-cell1">骨笛<div class="gauge">
+  <div style="width:40px; background:#ee0000;" title="100"></div>
+  <div style="width:4px; background:#eea000;" title="10"></div>
+  <div style="width:12px; background:#eeee00;" title="30"></div>
+  <div style="width:4px; background:#00ee00;" title="10"></div>
+  <div style="width:100px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:40px; background:#ee0000;" title="100"></div>
+  <div style="width:4px; background:#eea000;" title="10"></div>
+  <div style="width:12px; background:#eeee00;" title="30"></div>
+  <div style="width:24px; background:#00ee00;" title="60"></div>
+  <div style="width:80px; background:#000000;"></div>
+</div></TD>
 <TD class="tb-cell2">2</TD>
 <TD class="tb-cell3">3110ｚ</TD>
 <TD class="tb-cell2">520
@@ -69,7 +132,19 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0295"class="tb-cell2" height="65">295</TD>
-<TD class="tb-cell1">战鼓<BR>　 <IMG src="../images/gauge295.gif" border="0" width="122" height="19"></TD>
+<TD class="tb-cell1">战鼓<div class="gauge">
+  <div style="width:20px; background:#ee0000;" title="50"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:44px; background:#eeee00;" title="110"></div>
+  <div style="width:80px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:20px; background:#ee0000;" title="50"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:56px; background:#eeee00;" title="140"></div>
+  <div style="width:8px; background:#00ee00;" title="20"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div></TD>
 <TD class="tb-cell2">3</TD>
 <TD class="tb-cell3">7650ｚ</TD>
 <TD class="tb-cell2">624
@@ -87,7 +162,20 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0296"class="tb-cell2" height="65">296</TD>
-<TD class="tb-cell1">音波琉璃笛<BR>　 <IMG src="../images/gauge296.gif" border="0" width="122" height="19"></TD>
+<TD class="tb-cell1">音波琉璃笛<div class="gauge">
+  <div style="width:32px; background:#ee0000;" title="80"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:28px; background:#eeee00;" title="70"></div>
+  <div style="width:12px; background:#00ee00;" title="30"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:32px; background:#ee0000;" title="80"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:28px; background:#eeee00;" title="70"></div>
+  <div style="width:32px; background:#00ee00;" title="80"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div></TD>
 <TD class="tb-cell2">3</TD>
 <TD class="tb-cell3">12300ｚ</TD>
 <TD class="tb-cell2">676
@@ -97,7 +185,7 @@ ShowLinks(1, 6);
 <TD class="tb-cell2">0％</TD>
 <TD class="tb-cell2"><A href="./shuryou.html#0297">297</A></TD>
 <TD class="tb-cell1">&nbsp;</TD>
-<TD class="tb-cell1"><A href="../items/items.html?00e1" target="items">光水晶</A>×1<BR><A href="../items/items.html?01cc" target="items">巨蜂的羽</A>×6<BR><A href="../items/items.html?01d0" target="items">爬虫的羽</A>×6<BR><A href="../items/items.html?0108" target="items">粘着蝗虫</A>×3</TD>
+<TD class="tb-cell1"><A href="../items/items.html?00e1" target="items">光水晶</A>×1<BR><A href="../items/items.html?01cc" target="items">巨蜂的羽</A>×6<BR><A href="../items/items.html?01d0" target="items">爬虫的羽</A>×6<BR><A href="../items/items.html?0108" target="items">黏着蝗虫</A>×3</TD>
 <TD class="tb-cell1">巨大な虫の羽を幾重にも重ね<br>
 た狩猟笛。その共鳴により、<br>
 羽音にも似た音色を奏でる。<br>
@@ -105,7 +193,21 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0297"class="tb-cell2" height="65">297</TD>
-<TD class="tb-cell1">音波琉璃笛改<BR>　 <IMG src="../images/gauge297.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./shuryou.html#0296">音波琉璃笛</A>强化而来</FONT></TD>
+<TD class="tb-cell1">音波琉璃笛改<div class="gauge">
+  <div style="width:32px; background:#ee0000;" title="80"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:28px; background:#eeee00;" title="70"></div>
+  <div style="width:32px; background:#00ee00;" title="80"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:32px; background:#ee0000;" title="80"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:28px; background:#eeee00;" title="70"></div>
+  <div style="width:44px; background:#00ee00;" title="110"></div>
+  <div style="width:8px; background:#5050ff;" title="20"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./shuryou.html#0296">音波琉璃笛</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">3</TD>
 <TD class="tb-cell3">17540ｚ</TD>
 <TD class="tb-cell2">728
@@ -123,7 +225,20 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0302"class="tb-cell2" height="65">302</TD>
-<TD class="tb-cell1">金属风笛<BR>　 <IMG src="../images/gauge302.gif" border="0" width="122" height="19"></TD>
+<TD class="tb-cell1">金属风笛<div class="gauge">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:68px; background:#eeee00;" title="170"></div>
+  <div style="width:12px; background:#00ee00;" title="30"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:68px; background:#eeee00;" title="170"></div>
+  <div style="width:32px; background:#00ee00;" title="80"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div></TD>
 <TD class="tb-cell2">4</TD>
 <TD class="tb-cell3">19450ｚ</TD>
 <TD class="tb-cell2">676
@@ -141,7 +256,20 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0304"class="tb-cell2" height="65">304</TD>
-<TD class="tb-cell1">电龙笛<BR>　 <IMG src="../images/gauge304.gif" border="0" width="122" height="19"></TD>
+<TD class="tb-cell1">电龙笛<div class="gauge">
+  <div style="width:36px; background:#ee0000;" title="90"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:52px; background:#eeee00;" title="130"></div>
+  <div style="width:4px; background:#00ee00;" title="10"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:36px; background:#ee0000;" title="90"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:52px; background:#eeee00;" title="130"></div>
+  <div style="width:24px; background:#00ee00;" title="60"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div></TD>
 <TD class="tb-cell2">4</TD>
 <TD class="tb-cell3">22300ｚ</TD>
 <TD class="tb-cell2">780
@@ -159,7 +287,20 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0307"class="tb-cell2" height="65">307</TD>
-<TD class="tb-cell1">占卜陶笛<BR>　 <IMG src="../images/gauge307.gif" border="0" width="122" height="19"></TD>
+<TD class="tb-cell1">占卜陶笛<div class="gauge">
+  <div style="width:56px; background:#ee0000;" title="140"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:24px; background:#eeee00;" title="60"></div>
+  <div style="width:4px; background:#00ee00;" title="10"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:56px; background:#ee0000;" title="140"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:24px; background:#eeee00;" title="60"></div>
+  <div style="width:24px; background:#00ee00;" title="60"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div></TD>
 <TD class="tb-cell2">5</TD>
 <TD class="tb-cell3">50000ｚ</TD>
 <TD class="tb-cell2">832
@@ -169,15 +310,29 @@ ShowLinks(1, 6);
 <TD class="tb-cell2">0％</TD>
 <TD class="tb-cell2"><A href="./shuryou.html#0312">312</A></TD>
 <TD class="tb-cell1">&nbsp;</TD>
-<TD class="tb-cell1"><A href="../items/items.html?0236" target="items">霞龍的尻尾</A>×1<BR><A href="../items/items.html?0230" target="items">霞龍的皮</A>×4<BR><A href="../items/items.html?0235" target="items">霞龍的翼膜</A>×2<BR><A href="../items/items.html?00db" target="items">辉龙石</A>×5</TD>
+<TD class="tb-cell1"><A href="../items/items.html?0236" target="items">霞龍的尾巴</A>×1<BR><A href="../items/items.html?0230" target="items">霞龍的皮</A>×4<BR><A href="../items/items.html?0235" target="items">霞龍的翼膜</A>×2<BR><A href="../items/items.html?00db" target="items">辉龙石</A>×5</TD>
 <TD class="tb-cell1">幻想的な音色を奏でる狩猟笛。<br>
-西方の大砂漠を治める国には<br>
+西方の大沙漠を治める国には<br>
 似た形の秘宝があるという。<br>
 </TD>
 </TR>
 <TR>
 <TD id="0312"class="tb-cell2" height="65">312</TD>
-<TD class="tb-cell1">占卜陶笛改<BR>　 <IMG src="../images/gauge312.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./shuryou.html#0307">占卜陶笛</A>强化而来</FONT></TD>
+<TD class="tb-cell1">占卜陶笛改<div class="gauge">
+  <div style="width:56px; background:#ee0000;" title="140"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:24px; background:#eeee00;" title="60"></div>
+  <div style="width:24px; background:#00ee00;" title="60"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:56px; background:#ee0000;" title="140"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:24px; background:#eeee00;" title="60"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:16px; background:#5050ff;" title="40"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./shuryou.html#0307">占卜陶笛</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">5</TD>
 <TD class="tb-cell3">75000ｚ</TD>
 <TD class="tb-cell2">884
@@ -186,16 +341,29 @@ ShowLinks(1, 6);
 <TD class="tb-cell2">−−−</TD>
 <TD class="tb-cell2">0％</TD>
 <TD class="tb-cell2"><A href="./shuryou.html#0397">397</A></TD>
-<TD class="tb-cell1"><A href="../items/items.html?0236" target="items">霞龍的尻尾</A>×3<BR><A href="../items/items.html?0232" target="items">霞龍的角</A>×1<BR><A href="../items/items.html?00db" target="items">辉龙石</A>×10</TD>
+<TD class="tb-cell1"><A href="../items/items.html?0236" target="items">霞龍的尾巴</A>×3<BR><A href="../items/items.html?0232" target="items">霞龍的角</A>×1<BR><A href="../items/items.html?00db" target="items">辉龙石</A>×10</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1">幻想的な音色を奏でる狩猟笛。<br>
-西方の大砂漠を治める国には<br>
+西方の大沙漠を治める国には<br>
 似た形の秘宝があるという。<br>
 </TD>
 </TR>
 <TR>
 <TD id="0314"class="tb-cell2 hc" height="65">314</TD>
-<TD class="tb-cell1 hc">战争手鼓<BR>　 <IMG src="../images/gauge314.gif" border="0" width="122" height="19"></TD>
+<TD class="tb-cell1 hc">战争手鼓<div class="gauge">
+  <div style="width:36px; background:#ee0000;" title="90"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:52px; background:#eeee00;" title="130"></div>
+  <div style="width:4px; background:#00ee00;" title="10"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:36px; background:#ee0000;" title="90"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:52px; background:#eeee00;" title="130"></div>
+  <div style="width:24px; background:#00ee00;" title="60"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div></TD>
 <TD class="tb-cell2 hc">6</TD>
 <TD class="tb-cell3 hc">39800ｚ</TD>
 <TD class="tb-cell2 hc">780
@@ -213,7 +381,21 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0315"class="tb-cell2 hc" height="65">315</TD>
-<TD class="tb-cell1 hc">血腥笛<BR>　 <IMG src="../images/gauge315.gif" border="0" width="122" height="19"></TD>
+<TD class="tb-cell1 hc">血腥笛<div class="gauge">
+  <div style="width:56px; background:#ee0000;" title="140"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:24px; background:#eeee00;" title="60"></div>
+  <div style="width:24px; background:#00ee00;" title="60"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:56px; background:#ee0000;" title="140"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:24px; background:#eeee00;" title="60"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:16px; background:#5050ff;" title="40"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div></TD>
 <TD class="tb-cell2 hc">6</TD>
 <TD class="tb-cell3 hc">60000ｚ</TD>
 <TD class="tb-cell2 hc">884
@@ -231,7 +413,21 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0316"class="tb-cell2 hc" height="65">316</TD>
-<TD class="tb-cell1 hc">青铜钟<BR>　 <IMG src="../images/gauge316.gif" border="0" width="122" height="19"></TD>
+<TD class="tb-cell1 hc">青铜钟<div class="gauge">
+  <div style="width:36px; background:#ee0000;" title="90"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:52px; background:#eeee00;" title="130"></div>
+  <div style="width:24px; background:#00ee00;" title="60"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:36px; background:#ee0000;" title="90"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:52px; background:#eeee00;" title="130"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:16px; background:#5050ff;" title="40"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div></TD>
 <TD class="tb-cell2 hc">7</TD>
 <TD class="tb-cell3 hc">60000ｚ</TD>
 <TD class="tb-cell2 hc">468
@@ -241,7 +437,7 @@ ShowLinks(1, 6);
 <TD class="tb-cell2 hc">0％</TD>
 <TD class="tb-cell2 hc"><A href="./shuryou.html#0400">400</A></TD>
 <TD class="tb-cell1 hc">&nbsp;</TD>
-<TD class="tb-cell1 hc"><A href="../items/items.html?0221" target="items">砦蟹的铗</A>×2<BR><A href="../items/items.html?021f" target="items">砦蟹的甲壳</A>×6<BR><A href="../items/items.html?0220" target="items">砦蟹的背甲</A>×2<BR><A href="../items/items.html?02e4" target="items">战友之绊</A>×5</TD>
+<TD class="tb-cell1 hc"><A href="../items/items.html?0221" target="items">砦蟹的铗</A>×2<BR><A href="../items/items.html?021f" target="items">砦蟹的甲壳</A>×6<BR><A href="../items/items.html?0220" target="items">砦蟹的背甲</A>×2<BR><A href="../items/items.html?02e4" target="items">战友之纽带</A>×5</TD>
 <TD class="tb-cell1 hc">古の文献を元に形作られた鐘。<br>
 非常に重量があり、殴られた<br>
 者が原型を保つことは不可能。<br>
@@ -249,7 +445,21 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0317"class="tb-cell2 hc" height="65">317</TD>
-<TD class="tb-cell1 hc">龍木之笛<BR>　 <IMG src="../images/gauge317.gif" border="0" width="122" height="19"></TD>
+<TD class="tb-cell1 hc">龍木之笛<div class="gauge">
+  <div style="width:76px; background:#ee0000;" title="190"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:20px; background:#eeee00;" title="50"></div>
+  <div style="width:16px; background:#00ee00;" title="40"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:76px; background:#ee0000;" title="190"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:20px; background:#eeee00;" title="50"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:8px; background:#5050ff;" title="20"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div></TD>
 <TD class="tb-cell2 hc">7</TD>
 <TD class="tb-cell3 hc">75000ｚ</TD>
 <TD class="tb-cell2 hc">572
@@ -259,7 +469,7 @@ ShowLinks(1, 6);
 <TD class="tb-cell2 hc">0％</TD>
 <TD class="tb-cell2 hc"><A href="./shuryou.html#0401">401</A></TD>
 <TD class="tb-cell1 hc">&nbsp;</TD>
-<TD class="tb-cell1 hc"><A href="../items/items.html?0250" target="items">龍木</A>×6<BR><A href="../items/items.html?024f" target="items">龍苔</A>×2<BR><A href="../items/items.html?024c" target="items">浮岳龍的鳍</A>×4<BR><A href="../items/items.html?0106" target="items">雷光虫</A>×23</TD>
+<TD class="tb-cell1 hc"><A href="../items/items.html?0250" target="items">龍木</A>×6<BR><A href="../items/items.html?024f" target="items">龍苔</A>×2<BR><A href="../items/items.html?024c" target="items">浮岳龍的鳍</A>×4<BR><A href="../items/items.html?0106" target="items">雷光虫</A>×23<BR>（传说的工匠生产）</TD>
 <TD class="tb-cell1 hc">極東の技法により不思議な<br>
 調べを奏でる大笛。龍を呼ぶ<br>
 ための道具であるという。<br>
@@ -267,7 +477,20 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0392"class="tb-cell2" height="65">392</TD>
-<TD class="tb-cell1">骨笛改<BR>　 <IMG src="../images/gauge392.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./shuryou.html#0294">骨笛</A>强化而来</FONT></TD>
+<TD class="tb-cell1">骨笛改<div class="gauge">
+  <div style="width:40px; background:#ee0000;" title="100"></div>
+  <div style="width:4px; background:#eea000;" title="10"></div>
+  <div style="width:12px; background:#eeee00;" title="30"></div>
+  <div style="width:24px; background:#00ee00;" title="60"></div>
+  <div style="width:80px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:40px; background:#ee0000;" title="100"></div>
+  <div style="width:4px; background:#eea000;" title="10"></div>
+  <div style="width:12px; background:#eeee00;" title="30"></div>
+  <div style="width:44px; background:#00ee00;" title="110"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./shuryou.html#0294">骨笛</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">2</TD>
 <TD class="tb-cell3">5830ｚ</TD>
 <TD class="tb-cell2">676
@@ -285,7 +508,21 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0393"class="tb-cell2" height="65">393</TD>
-<TD class="tb-cell1">战鼓改<BR>　 <IMG src="../images/gauge393.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./shuryou.html#0295">战鼓</A>强化而来</FONT></TD>
+<TD class="tb-cell1">战鼓改<div class="gauge">
+  <div style="width:20px; background:#ee0000;" title="50"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:56px; background:#eeee00;" title="140"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:20px; background:#ee0000;" title="50"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:56px; background:#eeee00;" title="140"></div>
+  <div style="width:40px; background:#00ee00;" title="100"></div>
+  <div style="width:8px; background:#5050ff;" title="20"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./shuryou.html#0295">战鼓</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">3</TD>
 <TD class="tb-cell3">13670ｚ</TD>
 <TD class="tb-cell2">728
@@ -303,7 +540,22 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0394"class="tb-cell2 hc" height="65">394</TD>
-<TD class="tb-cell1 hc">女王琉璃笛<BR>　 <IMG src="../images/gauge394.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./shuryou.html#0297">音波琉璃笛改</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc">女王琉璃笛<div class="gauge">
+  <div style="width:32px; background:#ee0000;" title="80"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:28px; background:#eeee00;" title="70"></div>
+  <div style="width:44px; background:#00ee00;" title="110"></div>
+  <div style="width:8px; background:#5050ff;" title="20"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:32px; background:#ee0000;" title="80"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:28px; background:#eeee00;" title="70"></div>
+  <div style="width:44px; background:#00ee00;" title="110"></div>
+  <div style="width:20px; background:#5050ff;" title="50"></div>
+  <div style="width:8px; background:#ffffff;" title="20"></div>
+</div><FONT size="-2"><A href="./shuryou.html#0297">音波琉璃笛改</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">6</TD>
 <TD class="tb-cell3 hc">99800ｚ</TD>
 <TD class="tb-cell2 hc">832
@@ -321,7 +573,21 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0395"class="tb-cell2" height="65">395</TD>
-<TD class="tb-cell1">电龙长笛<BR>　 <IMG src="../images/gauge395.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./shuryou.html#0304">电龙笛</A>强化而来</FONT></TD>
+<TD class="tb-cell1">电龙长笛<div class="gauge">
+  <div style="width:36px; background:#ee0000;" title="90"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:52px; background:#eeee00;" title="130"></div>
+  <div style="width:24px; background:#00ee00;" title="60"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:36px; background:#ee0000;" title="90"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:52px; background:#eeee00;" title="130"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:16px; background:#5050ff;" title="40"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./shuryou.html#0304">电龙笛</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">4</TD>
 <TD class="tb-cell3">34350ｚ</TD>
 <TD class="tb-cell2">832
@@ -339,7 +605,21 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0396"class="tb-cell2" height="65">396</TD>
-<TD class="tb-cell1">巨风笛<BR>　 <IMG src="../images/gauge396.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./shuryou.html#0302">金属风笛</A>强化而来</FONT></TD>
+<TD class="tb-cell1">巨风笛<div class="gauge">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:68px; background:#eeee00;" title="170"></div>
+  <div style="width:32px; background:#00ee00;" title="80"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:68px; background:#eeee00;" title="170"></div>
+  <div style="width:48px; background:#00ee00;" title="120"></div>
+  <div style="width:4px; background:#5050ff;" title="10"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./shuryou.html#0302">金属风笛</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">4</TD>
 <TD class="tb-cell3">36270ｚ</TD>
 <TD class="tb-cell2">780
@@ -357,7 +637,22 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0397"class="tb-cell2 hc" height="65">397</TD>
-<TD class="tb-cell1 hc">诅咒陶笛<BR>　 <IMG src="../images/gauge397.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./shuryou.html#0312">占卜陶笛改</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc">诅咒陶笛<div class="gauge">
+  <div style="width:56px; background:#ee0000;" title="140"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:24px; background:#eeee00;" title="60"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:16px; background:#5050ff;" title="40"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:56px; background:#ee0000;" title="140"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:24px; background:#eeee00;" title="60"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:16px; background:#5050ff;" title="40"></div>
+  <div style="width:20px; background:#ffffff;" title="50"></div>
+</div><FONT size="-2"><A href="./shuryou.html#0312">占卜陶笛改</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">7</TD>
 <TD class="tb-cell3 hc">150000ｚ</TD>
 <TD class="tb-cell2 hc">988
@@ -369,13 +664,27 @@ ShowLinks(1, 6);
 <TD class="tb-cell1 hc"><A href="../items/items.html?0231" target="items">霞龍的上皮</A>×12<BR><A href="../items/items.html?00dc" target="items">灵鹤石</A>×28<BR><A href="../items/items.html?0237" target="items">霞龍的宝玉</A>×3</TD>
 <TD class="tb-cell1 hc">&nbsp;</TD>
 <TD class="tb-cell1 hc">幻想的な音色を奏でる狩猟笛。<br>
-西方の大砂漠を治める国には<br>
+西方の大沙漠を治める国には<br>
 似た形の秘宝があるという。<br>
 </TD>
 </TR>
 <TR>
 <TD id="0398"class="tb-cell2 hc" height="65">398</TD>
-<TD class="tb-cell1 hc">战争康茄鼓<BR>　 <IMG src="../images/gauge398.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./shuryou.html#0314">战争手鼓</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc">战争康茄鼓<div class="gauge">
+  <div style="width:36px; background:#ee0000;" title="90"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:52px; background:#eeee00;" title="130"></div>
+  <div style="width:24px; background:#00ee00;" title="60"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:36px; background:#ee0000;" title="90"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:52px; background:#eeee00;" title="130"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:16px; background:#5050ff;" title="40"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div><FONT size="-2"><A href="./shuryou.html#0314">战争手鼓</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">6</TD>
 <TD class="tb-cell3 hc">100000ｚ</TD>
 <TD class="tb-cell2 hc">936
@@ -393,7 +702,22 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0399"class="tb-cell2 hc" height="65">399</TD>
-<TD class="tb-cell1 hc">血腥长笛<BR>　 <IMG src="../images/gauge399.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./shuryou.html#0315">血腥笛</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc">血腥长笛<div class="gauge">
+  <div style="width:56px; background:#ee0000;" title="140"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:24px; background:#eeee00;" title="60"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:16px; background:#5050ff;" title="40"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:56px; background:#ee0000;" title="140"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:24px; background:#eeee00;" title="60"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:16px; background:#5050ff;" title="40"></div>
+  <div style="width:20px; background:#ffffff;" title="50"></div>
+</div><FONT size="-2"><A href="./shuryou.html#0315">血腥笛</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">6</TD>
 <TD class="tb-cell3 hc">120000ｚ</TD>
 <TD class="tb-cell2 hc">936
@@ -411,7 +735,22 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0400"class="tb-cell2 hc" height="65">400</TD>
-<TD class="tb-cell1 hc">砦蟹大钟<BR>　 <IMG src="../images/gauge400.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./shuryou.html#0316">青铜钟</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc">高人之钟<div class="gauge">
+  <div style="width:36px; background:#ee0000;" title="90"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:52px; background:#eeee00;" title="130"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:16px; background:#5050ff;" title="40"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:36px; background:#ee0000;" title="90"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:52px; background:#eeee00;" title="130"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:20px; background:#5050ff;" title="50"></div>
+  <div style="width:16px; background:#ffffff;" title="40"></div>
+</div><FONT size="-2"><A href="./shuryou.html#0316">青铜钟</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">7</TD>
 <TD class="tb-cell3 hc">120000ｚ</TD>
 <TD class="tb-cell2 hc">624
@@ -429,7 +768,22 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0401"class="tb-cell2 hc" height="65">401</TD>
-<TD class="tb-cell1 hc">龍木之笛【宿神】<BR>　 <IMG src="../images/gauge401.gif" border="0" width="122" height="19"><BR><FONT size="-2">　　<A href="./shuryou.html#0317">龍木之笛</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc">龍木之笛【宿神】<div class="gauge">
+  <div style="width:76px; background:#ee0000;" title="190"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:20px; background:#eeee00;" title="50"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:8px; background:#5050ff;" title="20"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:76px; background:#ee0000;" title="190"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:20px; background:#eeee00;" title="50"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:16px; background:#5050ff;" title="40"></div>
+  <div style="width:12px; background:#ffffff;" title="30"></div>
+</div><FONT size="-2"><A href="./shuryou.html#0317">龍木之笛</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">7</TD>
 <TD class="tb-cell3 hc">150000ｚ</TD>
 <TD class="tb-cell2 hc">676
@@ -447,7 +801,22 @@ ShowLinks(1, 6);
 </TR>
 <TR>
 <TD id="0470"class="tb-cell2 nc" height="65">470</TD>
-<TD class="tb-cell1 nc">大钟仙高人<BR>　 <IMG src="../images/gauge470.gif" border="0" width="122" height="19"></TD>
+<TD class="tb-cell1 nc">大钟仙高人<div class="gauge">
+  <div style="width:36px; background:#ee0000;" title="90"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:52px; background:#eeee00;" title="130"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:20px; background:#5050ff;" title="50"></div>
+  <div style="width:16px; background:#ffffff;" title="40"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:36px; background:#ee0000;" title="90"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:52px; background:#eeee00;" title="130"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:20px; background:#5050ff;" title="50"></div>
+  <div style="width:16px; background:#ffffff;" title="40"></div>
+</div></TD>
 <TD class="tb-cell2 nc">7</TD>
 <TD class="tb-cell3 nc">150000ｚ</TD>
 <TD class="tb-cell2 nc">1144
@@ -457,7 +826,7 @@ ShowLinks(1, 6);
 <TD class="tb-cell2 nc">0％</TD>
 <TD class="tb-cell2 nc">&nbsp;</TD>
 <TD class="tb-cell1 nc">&nbsp;</TD>
-<TD class="tb-cell1 nc">&nbsp;</TD>
+<TD class="tb-cell1 nc">*开发者物品*<br>*无生产配方*</TD>
 <TD class="tb-cell1 nc"><br>
 <br>
 <br>
@@ -468,6 +837,42 @@ ShowLinks(1, 6);
 <BR>
 <BR>
 Last update : 2011/12/16
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
 <BR>
 <BR>
 <BR>

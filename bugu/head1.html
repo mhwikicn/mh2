@@ -8,6 +8,32 @@
 <LINK rel="stylesheet" href="../table.css" type="text/css">
 <SCRIPT src="../scripts/links.js"></SCRIPT>
 </HEAD>
+<SCRIPT src="../scripts/blink.js"></SCRIPT>
+<STYLE>
+.tb-cell1 font[size="-2"] {
+  display: block;
+  text-align: center;
+  margin-top: 2px;
+}
+.cnt-tb2 {
+  table-layout: fixed;
+  width: 900px;
+}
+.highlight-row td,
+.highlight-row th {
+  background-color: #c7edcc !important;
+  transition: background-color 0.3s ease;
+}
+.cnt-tb2 > tbody:first-child > tr:first-child {
+  position: sticky;
+  top: 0;
+  background-color: #996633;
+  z-index: 10;
+}
+.cnt-tb2 td[id] {
+  scroll-margin-top: 20px;
+}
+</STYLE>
 <BODY>
 <HR>
 <TABLE border="0" width="910">
@@ -34,13 +60,13 @@ ShowLinks(1, 7);
 <TBODY>
 <TR>
 <TH class="tb-th1" width="30">No.</TH>
-<TH class="tb-th1" width="63">名称</TH>
-<TH class="tb-th1" width="130">等级２</TH>
-<TH class="tb-th1" width="130">等级３</TH>
-<TH class="tb-th1" width="130">等级４</TH>
-<TH class="tb-th1" width="130">等级５</TH>
-<TH class="tb-th1" width="130">等级６</TH>
-<TH class="tb-th1" width="130">等级７</TH>
+<TH class="tb-th1" width="120">名称</TH>
+<TH class="tb-th1" width="120">等级2</TH>
+<TH class="tb-th1" width="120">等级3</TH>
+<TH class="tb-th1" width="120">等级4</TH>
+<TH class="tb-th1" width="120">等级5</TH>
+<TH class="tb-th1" width="120">等级6</TH>
+<TH class="tb-th1" width="120">等级7</TH>
 </TR>
 <TR>
 <TD id="0001"class="tb-cell2" height="90">1</TD>
@@ -78,7 +104,7 @@ ShowLinks(1, 7);
 <TD class="tb-cell1">
 <A href="../items/items.html?0162" target="items">黄速龙的皮</A>×1<BR><A href="../items/items.html?00d6" target="items">阳光石</A>×1<BR><BR><BR>　【216ｚ】</TD>
 <TD class="tb-cell1">
-<A href="../items/items.html?014f" target="items">大猪的皮</A>×1<BR><A href="../items/items.html?0163" target="items">黄速龙王的皮</A>×1<BR><A href="../items/items.html?0108" target="items">粘着蝗虫</A>×1<BR><BR>　【288ｚ】</TD>
+<A href="../items/items.html?014f" target="items">大猪的皮</A>×1<BR><A href="../items/items.html?0163" target="items">黄速龙王的皮</A>×1<BR><A href="../items/items.html?0108" target="items">黏着蝗虫</A>×1<BR><BR>　【288ｚ】</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?0169" target="items">红速龙王的皮</A>×1<BR><A href="../items/items.html?0150" target="items">大猪的硬皮</A>×1<BR><A href="../items/items.html?00d6" target="items">阳光石</A>×1<BR><A href="../items/items.html?00dc" target="items"><FONT color="#ff0000">灵鹤石</FONT></A><FONT color="#ff0000">×1</FONT><BR>　【288ｚ】</TD>
 <TD class="tb-cell1">&nbsp;</TD>
@@ -92,7 +118,7 @@ ShowLinks(1, 7);
 <TD class="tb-cell1">
 <A href="../items/items.html?0162" target="items">黄速龙的皮</A>×1<BR><A href="../items/items.html?00d6" target="items">阳光石</A>×1<BR><BR><BR>　【216ｚ】</TD>
 <TD class="tb-cell1">
-<A href="../items/items.html?014f" target="items">大猪的皮</A>×1<BR><A href="../items/items.html?0163" target="items">黄速龙王的皮</A>×1<BR><A href="../items/items.html?0108" target="items">粘着蝗虫</A>×1<BR><BR>　【288ｚ】</TD>
+<A href="../items/items.html?014f" target="items">大猪的皮</A>×1<BR><A href="../items/items.html?0163" target="items">黄速龙王的皮</A>×1<BR><A href="../items/items.html?0108" target="items">黏着蝗虫</A>×1<BR><BR>　【288ｚ】</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?0169" target="items">红速龙王的皮</A>×1<BR><A href="../items/items.html?0150" target="items">大猪的硬皮</A>×1<BR><A href="../items/items.html?00d6" target="items">阳光石</A>×1<BR><A href="../items/items.html?00dc" target="items"><FONT color="#ff0000">灵鹤石</FONT></A><FONT color="#ff0000">×1</FONT><BR>　【288ｚ】</TD>
 <TD class="tb-cell1">&nbsp;</TD>
@@ -111,16 +137,6 @@ ShowLinks(1, 7);
 <A href="../items/items.html?0153" target="items">雪山鹿的毛皮</A>×2<BR><A href="../items/items.html?01fc" target="items">雪狮子的牙</A>×2<BR><A href="../items/items.html?0150" target="items"><FONT color="#ff0000">大猪的硬皮</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?013c" target="items">古龍骨</A>×1<BR>　【416ｚ】</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1">&nbsp;</TD>
-</TR>
-<TR>
-<TH class="tb-th1" width="30">No.</TH>
-<TH class="tb-th1" width="63">名称</TH>
-<TH class="tb-th1" width="130">等级２</TH>
-<TH class="tb-th1" width="130">等级３</TH>
-<TH class="tb-th1" width="130">等级４</TH>
-<TH class="tb-th1" width="130">等级５</TH>
-<TH class="tb-th1" width="130">等级６</TH>
-<TH class="tb-th1" width="130">等级７</TH>
 </TR>
 <TR>
 <TD id="0006"class="tb-cell2" height="90">6</TD>
@@ -144,7 +160,7 @@ ShowLinks(1, 7);
 <TD class="tb-cell1">
 <A href="../items/items.html?0155" target="items">蓝速龙的牙</A>×2<BR><A href="../items/items.html?00d9" target="items">大地的结晶</A>×1<BR><BR><BR>　【480ｚ】</TD>
 <TD class="tb-cell1">
-<A href="../items/items.html?0159" target="items"><FONT color="#ff0000">蓝速龙王的皮</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?00d8" target="items">铁矿石</A>×1<BR><A href="../items/items.html?0108" target="items">粘着蝗虫</A>×1<BR><BR>　【600ｚ】</TD>
+<A href="../items/items.html?0159" target="items"><FONT color="#ff0000">蓝速龙王的皮</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?00d8" target="items">铁矿石</A>×1<BR><A href="../items/items.html?0108" target="items">黏着蝗虫</A>×1<BR><BR>　【600ｚ】</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?0159" target="items">蓝速龙王的皮</A>×1<BR><A href="../items/items.html?0157" target="items"><FONT color="#ff0000">蓝速龙的上鳞</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?00db" target="items">辉龙石</A>×1<BR><BR>　【720ｚ】</TD>
 <TD class="tb-cell1">&nbsp;</TD>
@@ -158,7 +174,7 @@ ShowLinks(1, 7);
 <TD class="tb-cell1">
 <A href="../items/items.html?0155" target="items">蓝速龙的牙</A>×2<BR><A href="../items/items.html?00d9" target="items">大地的结晶</A>×1<BR><BR><BR>　【480ｚ】</TD>
 <TD class="tb-cell1">
-<A href="../items/items.html?0159" target="items"><FONT color="#ff0000">蓝速龙王的皮</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?00d8" target="items">铁矿石</A>×1<BR><A href="../items/items.html?0108" target="items">粘着蝗虫</A>×1<BR><BR>　【600ｚ】</TD>
+<A href="../items/items.html?0159" target="items"><FONT color="#ff0000">蓝速龙王的皮</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?00d8" target="items">铁矿石</A>×1<BR><A href="../items/items.html?0108" target="items">黏着蝗虫</A>×1<BR><BR>　【600ｚ】</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?0159" target="items">蓝速龙王的皮</A>×1<BR><A href="../items/items.html?0157" target="items"><FONT color="#ff0000">蓝速龙的上鳞</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?00db" target="items">辉龙石</A>×1<BR><BR>　【720ｚ】</TD>
 <TD class="tb-cell1">&nbsp;</TD>
@@ -193,16 +209,6 @@ ShowLinks(1, 7);
 <TD class="tb-cell1">&nbsp;</TD>
 </TR>
 <TR>
-<TH class="tb-th1" width="30">No.</TH>
-<TH class="tb-th1" width="63">名称</TH>
-<TH class="tb-th1" width="130">等级２</TH>
-<TH class="tb-th1" width="130">等级３</TH>
-<TH class="tb-th1" width="130">等级４</TH>
-<TH class="tb-th1" width="130">等级５</TH>
-<TH class="tb-th1" width="130">等级６</TH>
-<TH class="tb-th1" width="130">等级７</TH>
-</TR>
-<TR>
 <TD id="0011"class="tb-cell2" height="90">11</TD>
 <TD class="tb-cell1">巨蜂头盔</TD>
 <TD class="tb-cell1">
@@ -210,7 +216,7 @@ ShowLinks(1, 7);
 <TD class="tb-cell1">
 <A href="../items/items.html?01ca" target="items">巨蜂的甲壳</A>×1<BR><A href="../items/items.html?00d8" target="items">铁矿石</A>×1<BR><A href="../items/items.html?00d6" target="items"><FONT color="#ff0000">阳光石</FONT></A><FONT color="#ff0000">×1</FONT><BR><BR>　【492ｚ】</TD>
 <TD class="tb-cell1">
-<A href="../items/items.html?01cc" target="items">巨蜂的羽</A>×1<BR><A href="../items/items.html?01cb" target="items"><FONT color="#ff0000">巨蜂的坚壳</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0108" target="items">粘着蝗虫</A>×1<BR><BR>　【656ｚ】</TD>
+<A href="../items/items.html?01cc" target="items">巨蜂的羽</A>×1<BR><A href="../items/items.html?01cb" target="items"><FONT color="#ff0000">巨蜂的坚壳</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0108" target="items">黏着蝗虫</A>×1<BR><BR>　【656ｚ】</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?01cb" target="items">巨蜂的坚壳</A>×1<BR><A href="../items/items.html?0019" target="items"><FONT color="#ff0000">怪物的浓汁</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?00da" target="items">燕雀石</A>×1<BR><BR>　【656ｚ】</TD>
 <TD class="tb-cell1">&nbsp;</TD>
@@ -224,7 +230,7 @@ ShowLinks(1, 7);
 <TD class="tb-cell1">
 <A href="../items/items.html?01ca" target="items">巨蜂的甲壳</A>×1<BR><A href="../items/items.html?00d8" target="items">铁矿石</A>×1<BR><A href="../items/items.html?00d6" target="items"><FONT color="#ff0000">阳光石</FONT></A><FONT color="#ff0000">×1</FONT><BR><BR>　【492ｚ】</TD>
 <TD class="tb-cell1">
-<A href="../items/items.html?01cc" target="items">巨蜂的羽</A>×1<BR><A href="../items/items.html?01cb" target="items"><FONT color="#ff0000">巨蜂的坚壳</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0108" target="items">粘着蝗虫</A>×1<BR><BR>　【656ｚ】</TD>
+<A href="../items/items.html?01cc" target="items">巨蜂的羽</A>×1<BR><A href="../items/items.html?01cb" target="items"><FONT color="#ff0000">巨蜂的坚壳</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0108" target="items">黏着蝗虫</A>×1<BR><BR>　【656ｚ】</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?01cb" target="items">巨蜂的坚壳</A>×1<BR><A href="../items/items.html?0019" target="items"><FONT color="#ff0000">怪物的浓汁</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?00da" target="items">燕雀石</A>×1<BR><BR>　【656ｚ】</TD>
 <TD class="tb-cell1">&nbsp;</TD>
@@ -238,7 +244,7 @@ ShowLinks(1, 7);
 <TD class="tb-cell1">
 <A href="../items/items.html?01ce" target="items">爬虫的甲壳</A>×1<BR><A href="../items/items.html?00d8" target="items">铁矿石</A>×1<BR><A href="../items/items.html?00d6" target="items"><FONT color="#ff0000">阳光石</FONT></A><FONT color="#ff0000">×1</FONT><BR><BR>　【492ｚ】</TD>
 <TD class="tb-cell1">
-<A href="../items/items.html?01d0" target="items">爬虫的羽</A>×1<BR><A href="../items/items.html?01cf" target="items"><FONT color="#ff0000">爬虫的头</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0108" target="items">粘着蝗虫</A>×1<BR><BR>　【656ｚ】</TD>
+<A href="../items/items.html?01d0" target="items">爬虫的羽</A>×1<BR><A href="../items/items.html?01cf" target="items"><FONT color="#ff0000">爬虫的头</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0108" target="items">黏着蝗虫</A>×1<BR><BR>　【656ｚ】</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?01cf" target="items">爬虫的头</A>×1<BR><A href="../items/items.html?0019" target="items"><FONT color="#ff0000">怪物的浓汁</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?00da" target="items">燕雀石</A>×1<BR><BR>　【656ｚ】</TD>
 <TD class="tb-cell1">&nbsp;</TD>
@@ -252,7 +258,7 @@ ShowLinks(1, 7);
 <TD class="tb-cell1">
 <A href="../items/items.html?01ce" target="items">爬虫的甲壳</A>×1<BR><A href="../items/items.html?00d8" target="items">铁矿石</A>×1<BR><A href="../items/items.html?00d6" target="items"><FONT color="#ff0000">阳光石</FONT></A><FONT color="#ff0000">×1</FONT><BR><BR>　【492ｚ】</TD>
 <TD class="tb-cell1">
-<A href="../items/items.html?01d0" target="items">爬虫的羽</A>×1<BR><A href="../items/items.html?01cf" target="items"><FONT color="#ff0000">爬虫的头</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0108" target="items">粘着蝗虫</A>×1<BR><BR>　【656ｚ】</TD>
+<A href="../items/items.html?01d0" target="items">爬虫的羽</A>×1<BR><A href="../items/items.html?01cf" target="items"><FONT color="#ff0000">爬虫的头</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0108" target="items">黏着蝗虫</A>×1<BR><BR>　【656ｚ】</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?01cf" target="items">爬虫的头</A>×1<BR><A href="../items/items.html?0019" target="items"><FONT color="#ff0000">怪物的浓汁</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?00da" target="items">燕雀石</A>×1<BR><BR>　【656ｚ】</TD>
 <TD class="tb-cell1">&nbsp;</TD>
@@ -260,7 +266,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0015"class="tb-cell2" height="90">15</TD>
-<TD class="tb-cell1">精炼矿石头盔</TD>
+<TD class="tb-cell1">高等合金头盔</TD>
 <TD class="tb-cell1">
 <A href="../items/items.html?00d8" target="items">铁矿石</A>×1<BR><A href="../items/items.html?00d6" target="items">阳光石</A>×1<BR><BR><BR>　【492ｚ】</TD>
 <TD class="tb-cell1">
@@ -273,18 +279,8 @@ ShowLinks(1, 7);
 <TD class="tb-cell1">&nbsp;</TD>
 </TR>
 <TR>
-<TH class="tb-th1" width="30">No.</TH>
-<TH class="tb-th1" width="63">名称</TH>
-<TH class="tb-th1" width="130">等级２</TH>
-<TH class="tb-th1" width="130">等级３</TH>
-<TH class="tb-th1" width="130">等级４</TH>
-<TH class="tb-th1" width="130">等级５</TH>
-<TH class="tb-th1" width="130">等级６</TH>
-<TH class="tb-th1" width="130">等级７</TH>
-</TR>
-<TR>
 <TD id="0016"class="tb-cell2" height="90">16</TD>
-<TD class="tb-cell1">精炼矿石软帽</TD>
+<TD class="tb-cell1">高等合金软帽</TD>
 <TD class="tb-cell1">
 <A href="../items/items.html?00d8" target="items">铁矿石</A>×1<BR><A href="../items/items.html?00d6" target="items">阳光石</A>×1<BR><BR><BR>　【492ｚ】</TD>
 <TD class="tb-cell1">
@@ -302,7 +298,7 @@ ShowLinks(1, 7);
 <TD class="tb-cell1">
 <A href="../items/items.html?014f" target="items">大猪的皮</A>×1<BR><A href="../items/items.html?0162" target="items">黄速龙的皮</A>×1<BR><BR><BR>　【570ｚ】</TD>
 <TD class="tb-cell1">
-<A href="../items/items.html?0163" target="items"><FONT color="#ff0000">黄速龙王的皮</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?00d6" target="items">阳光石</A>×1<BR><A href="../items/items.html?0108" target="items">粘着蝗虫</A>×1<BR><BR>　【570ｚ】</TD>
+<A href="../items/items.html?0163" target="items"><FONT color="#ff0000">黄速龙王的皮</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?00d6" target="items">阳光石</A>×1<BR><A href="../items/items.html?0108" target="items">黏着蝗虫</A>×1<BR><BR>　【570ｚ】</TD>
 <TD class="tb-cell1">
 <A href="../items/items.html?0160" target="items">黄速龙的鳞</A>×1<BR><A href="../items/items.html?00da" target="items"><FONT color="#ff0000">燕雀石</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?013a" target="items">龙骨【大】</A>×1<BR><BR>　【760ｚ】</TD>
 <TD class="tb-cell1 hc">
@@ -316,7 +312,7 @@ ShowLinks(1, 7);
 <TD class="tb-cell1">
 <A href="../items/items.html?014f" target="items">大猪的皮</A>×1<BR><A href="../items/items.html?0162" target="items">黄速龙的皮</A>×1<BR><BR><BR>　【570ｚ】</TD>
 <TD class="tb-cell1">
-<A href="../items/items.html?0163" target="items"><FONT color="#ff0000">黄速龙王的皮</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?00d6" target="items">阳光石</A>×1<BR><A href="../items/items.html?0108" target="items">粘着蝗虫</A>×1<BR><BR>　【570ｚ】</TD>
+<A href="../items/items.html?0163" target="items"><FONT color="#ff0000">黄速龙王的皮</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?00d6" target="items">阳光石</A>×1<BR><A href="../items/items.html?0108" target="items">黏着蝗虫</A>×1<BR><BR>　【570ｚ】</TD>
 <TD class="tb-cell1">
 <A href="../items/items.html?0160" target="items">黄速龙的鳞</A>×1<BR><A href="../items/items.html?00da" target="items"><FONT color="#ff0000">燕雀石</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?013a" target="items">龙骨【大】</A>×1<BR><BR>　【760ｚ】</TD>
 <TD class="tb-cell1 hc">
@@ -330,7 +326,7 @@ ShowLinks(1, 7);
 <TD class="tb-cell1">
 <A href="../items/items.html?014f" target="items">大猪的皮</A>×1<BR><A href="../items/items.html?0168" target="items">红速龙的皮</A>×1<BR><BR><BR>　【600ｚ】</TD>
 <TD class="tb-cell1">
-<A href="../items/items.html?0169" target="items"><FONT color="#ff0000">红速龙王的皮</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?00e4" target="items">冰结晶</A>×1<BR><A href="../items/items.html?0108" target="items">粘着蝗虫</A>×1<BR><BR>　【600ｚ】</TD>
+<A href="../items/items.html?0169" target="items"><FONT color="#ff0000">红速龙王的皮</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?00e4" target="items">冰结晶</A>×1<BR><A href="../items/items.html?0108" target="items">黏着蝗虫</A>×1<BR><BR>　【600ｚ】</TD>
 <TD class="tb-cell1">
 <A href="../items/items.html?0166" target="items">红速龙的鳞</A>×1<BR><A href="../items/items.html?00da" target="items"><FONT color="#ff0000">燕雀石</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?013a" target="items">龙骨【大】</A>×1<BR><BR>　【800ｚ】</TD>
 <TD class="tb-cell1 hc">
@@ -344,23 +340,13 @@ ShowLinks(1, 7);
 <TD class="tb-cell1">
 <A href="../items/items.html?014f" target="items">大猪的皮</A>×1<BR><A href="../items/items.html?0168" target="items">红速龙的皮</A>×1<BR><BR><BR>　【600ｚ】</TD>
 <TD class="tb-cell1">
-<A href="../items/items.html?0169" target="items"><FONT color="#ff0000">红速龙王的皮</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?00e4" target="items">冰结晶</A>×1<BR><A href="../items/items.html?0108" target="items">粘着蝗虫</A>×1<BR><BR>　【600ｚ】</TD>
+<A href="../items/items.html?0169" target="items"><FONT color="#ff0000">红速龙王的皮</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?00e4" target="items">冰结晶</A>×1<BR><A href="../items/items.html?0108" target="items">黏着蝗虫</A>×1<BR><BR>　【600ｚ】</TD>
 <TD class="tb-cell1">
 <A href="../items/items.html?0166" target="items">红速龙的鳞</A>×1<BR><A href="../items/items.html?00da" target="items"><FONT color="#ff0000">燕雀石</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?013a" target="items">龙骨【大】</A>×1<BR><BR>　【800ｚ】</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?0169" target="items">红速龙王的皮</A>×1<BR><A href="../items/items.html?0167" target="items"><FONT color="#ff0000">红速龙的上鳞</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?00da" target="items">燕雀石</A>×1<BR><A href="../items/items.html?0019" target="items">怪物的浓汁</A>×1<BR>　【800ｚ】</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1">&nbsp;</TD>
-</TR>
-<TR>
-<TH class="tb-th1" width="30">No.</TH>
-<TH class="tb-th1" width="63">名称</TH>
-<TH class="tb-th1" width="130">等级２</TH>
-<TH class="tb-th1" width="130">等级３</TH>
-<TH class="tb-th1" width="130">等级４</TH>
-<TH class="tb-th1" width="130">等级５</TH>
-<TH class="tb-th1" width="130">等级６</TH>
-<TH class="tb-th1" width="130">等级７</TH>
 </TR>
 <TR>
 <TD id="0021"class="tb-cell2" height="90">21</TD>
@@ -392,29 +378,29 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0023"class="tb-cell2" height="90">23</TD>
-<TD class="tb-cell1">砂龙头盔</TD>
+<TD class="tb-cell1">沙龙头盔</TD>
 <TD class="tb-cell1">
-<A href="../items/items.html?0182" target="items">砂龙的鳞</A>×1<BR><A href="../items/items.html?00e4" target="items">冰结晶</A>×1<BR><BR><BR>　【825ｚ】</TD>
+<A href="../items/items.html?0182" target="items">沙龙的鳞</A>×1<BR><A href="../items/items.html?00e4" target="items">冰结晶</A>×1<BR><BR><BR>　【825ｚ】</TD>
 <TD class="tb-cell1">
-<A href="../items/items.html?0184" target="items"><FONT color="#ff0000">砂龙的鳍</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?017c" target="items">鱼龙的牙</A>×1<BR><A href="../items/items.html?0018" target="items">怪物的体液</A>×1<BR><BR>　【1100ｚ】</TD>
+<A href="../items/items.html?0184" target="items"><FONT color="#ff0000">沙龙的鳍</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?017c" target="items">鱼龙的牙</A>×1<BR><A href="../items/items.html?0018" target="items">怪物的体液</A>×1<BR><BR>　【1100ｚ】</TD>
 <TD class="tb-cell1">
-<A href="../items/items.html?0182" target="items"><FONT color="#ff0000">砂龙的鳞</FONT></A><FONT color="#ff0000">×2</FONT><BR><A href="../items/items.html?017d" target="items">水龙的鳞</A>×1<BR><A href="../items/items.html?00da" target="items">燕雀石</A>×1<BR><BR>　【1375ｚ】</TD>
+<A href="../items/items.html?0182" target="items"><FONT color="#ff0000">沙龙的鳞</FONT></A><FONT color="#ff0000">×2</FONT><BR><A href="../items/items.html?017d" target="items">水龙的鳞</A>×1<BR><A href="../items/items.html?00da" target="items">燕雀石</A>×1<BR><BR>　【1375ｚ】</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?0184" target="items">砂龙的鳍</A>×2<BR><A href="../items/items.html?0182" target="items">砂龙的鳞</A>×2<BR><A href="../items/items.html?0183" target="items"><FONT color="#ff0000">砂龙的上鳞</FONT></A><FONT color="#ff0000">×2</FONT><BR><A href="../items/items.html?00da" target="items">燕雀石</A>×1<BR>　【1650ｚ】</TD>
+<A href="../items/items.html?0184" target="items">沙龙的鳍</A>×2<BR><A href="../items/items.html?0182" target="items">沙龙的鳞</A>×2<BR><A href="../items/items.html?0183" target="items"><FONT color="#ff0000">沙龙的上鳞</FONT></A><FONT color="#ff0000">×2</FONT><BR><A href="../items/items.html?00da" target="items">燕雀石</A>×1<BR>　【1650ｚ】</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 </TR>
 <TR>
 <TD id="0024"class="tb-cell2" height="90">24</TD>
-<TD class="tb-cell1">砂龙软帽</TD>
+<TD class="tb-cell1">沙龙软帽</TD>
 <TD class="tb-cell1">
-<A href="../items/items.html?0182" target="items">砂龙的鳞</A>×1<BR><A href="../items/items.html?00e4" target="items">冰结晶</A>×1<BR><BR><BR>　【825ｚ】</TD>
+<A href="../items/items.html?0182" target="items">沙龙的鳞</A>×1<BR><A href="../items/items.html?00e4" target="items">冰结晶</A>×1<BR><BR><BR>　【825ｚ】</TD>
 <TD class="tb-cell1">
-<A href="../items/items.html?0184" target="items"><FONT color="#ff0000">砂龙的鳍</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?017c" target="items">鱼龙的牙</A>×1<BR><A href="../items/items.html?0018" target="items">怪物的体液</A>×1<BR><BR>　【1100ｚ】</TD>
+<A href="../items/items.html?0184" target="items"><FONT color="#ff0000">沙龙的鳍</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?017c" target="items">鱼龙的牙</A>×1<BR><A href="../items/items.html?0018" target="items">怪物的体液</A>×1<BR><BR>　【1100ｚ】</TD>
 <TD class="tb-cell1">
-<A href="../items/items.html?0182" target="items"><FONT color="#ff0000">砂龙的鳞</FONT></A><FONT color="#ff0000">×2</FONT><BR><A href="../items/items.html?017d" target="items">水龙的鳞</A>×1<BR><A href="../items/items.html?00da" target="items">燕雀石</A>×1<BR><BR>　【1375ｚ】</TD>
+<A href="../items/items.html?0182" target="items"><FONT color="#ff0000">沙龙的鳞</FONT></A><FONT color="#ff0000">×2</FONT><BR><A href="../items/items.html?017d" target="items">水龙的鳞</A>×1<BR><A href="../items/items.html?00da" target="items">燕雀石</A>×1<BR><BR>　【1375ｚ】</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?0184" target="items">砂龙的鳍</A>×2<BR><A href="../items/items.html?0182" target="items">砂龙的鳞</A>×2<BR><A href="../items/items.html?0183" target="items"><FONT color="#ff0000">砂龙的上鳞</FONT></A><FONT color="#ff0000">×2</FONT><BR><A href="../items/items.html?00da" target="items">燕雀石</A>×1<BR>　【1650ｚ】</TD>
+<A href="../items/items.html?0184" target="items">沙龙的鳍</A>×2<BR><A href="../items/items.html?0182" target="items">沙龙的鳞</A>×2<BR><A href="../items/items.html?0183" target="items"><FONT color="#ff0000">沙龙的上鳞</FONT></A><FONT color="#ff0000">×2</FONT><BR><A href="../items/items.html?00da" target="items">燕雀石</A>×1<BR>　【1650ｚ】</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 </TR>
@@ -431,16 +417,6 @@ ShowLinks(1, 7);
 <A href="../items/items.html?018e" target="items">雌火龙的棘</A>×1<BR><A href="../items/items.html?0189" target="items"><FONT color="#ff0000">雌火龙的上鳞</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?00dc" target="items">灵鹤石</A>×1<BR><BR>　【2550ｚ】</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1">&nbsp;</TD>
-</TR>
-<TR>
-<TH class="tb-th1" width="30">No.</TH>
-<TH class="tb-th1" width="63">名称</TH>
-<TH class="tb-th1" width="130">等级２</TH>
-<TH class="tb-th1" width="130">等级３</TH>
-<TH class="tb-th1" width="130">等级４</TH>
-<TH class="tb-th1" width="130">等级５</TH>
-<TH class="tb-th1" width="130">等级６</TH>
-<TH class="tb-th1" width="130">等级７</TH>
 </TR>
 <TR>
 <TD id="0026"class="tb-cell2" height="90">26</TD>
@@ -513,24 +489,14 @@ ShowLinks(1, 7);
 <TD class="tb-cell1">&nbsp;</TD>
 </TR>
 <TR>
-<TH class="tb-th1" width="30">No.</TH>
-<TH class="tb-th1" width="63">名称</TH>
-<TH class="tb-th1" width="130">等级２</TH>
-<TH class="tb-th1" width="130">等级３</TH>
-<TH class="tb-th1" width="130">等级４</TH>
-<TH class="tb-th1" width="130">等级５</TH>
-<TH class="tb-th1" width="130">等级６</TH>
-<TH class="tb-th1" width="130">等级７</TH>
-</TR>
-<TR>
 <TD id="0031"class="tb-cell2" height="90">31</TD>
 <TD class="tb-cell1">水龙头盔</TD>
 <TD class="tb-cell1">
 <A href="../items/items.html?017f" target="items">水龙的鳍</A>×1<BR><A href="../items/items.html?0018" target="items">怪物的体液</A>×1<BR><BR><BR>　【1275ｚ】</TD>
 <TD class="tb-cell1">
-<A href="../items/items.html?0184" target="items">砂龙的鳍</A>×1<BR><A href="../items/items.html?017d" target="items">水龙的鳞</A>×1<BR><A href="../items/items.html?00e4" target="items">冰结晶</A>×1<BR><A href="../items/items.html?010a" target="items"><FONT color="#ff0000">煌甲虫</FONT></A><FONT color="#ff0000">×1</FONT><BR>　【1700ｚ】</TD>
+<A href="../items/items.html?0184" target="items">沙龙的鳍</A>×1<BR><A href="../items/items.html?017d" target="items">水龙的鳞</A>×1<BR><A href="../items/items.html?00e4" target="items">冰结晶</A>×1<BR><A href="../items/items.html?010a" target="items"><FONT color="#ff0000">煌甲虫</FONT></A><FONT color="#ff0000">×1</FONT><BR>　【1700ｚ】</TD>
 <TD class="tb-cell1">
-<A href="../items/items.html?0182" target="items">砂龙的鳞</A>×1<BR><A href="../items/items.html?017f" target="items">水龙的鳍</A>×1<BR><A href="../items/items.html?00db" target="items"><FONT color="#ff0000">辉龙石</FONT></A><FONT color="#ff0000">×1</FONT><BR><BR>　【2125ｚ】</TD>
+<A href="../items/items.html?0182" target="items">沙龙的鳞</A>×1<BR><A href="../items/items.html?017f" target="items">水龙的鳍</A>×1<BR><A href="../items/items.html?00db" target="items"><FONT color="#ff0000">辉龙石</FONT></A><FONT color="#ff0000">×1</FONT><BR><BR>　【2125ｚ】</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?017d" target="items">水龙的鳞</A>×3<BR><A href="../items/items.html?017e" target="items"><FONT color="#ff0000">水龙的上鳞</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?00e4" target="items">冰结晶</A>×2<BR><A href="../items/items.html?023d" target="items">古龍的血</A>×1<BR>　【2550ｚ】</TD>
 <TD class="tb-cell1">&nbsp;</TD>
@@ -542,9 +508,9 @@ ShowLinks(1, 7);
 <TD class="tb-cell1">
 <A href="../items/items.html?017f" target="items">水龙的鳍</A>×1<BR><A href="../items/items.html?0018" target="items">怪物的体液</A>×1<BR><BR><BR>　【1275ｚ】</TD>
 <TD class="tb-cell1">
-<A href="../items/items.html?0184" target="items">砂龙的鳍</A>×1<BR><A href="../items/items.html?017d" target="items">水龙的鳞</A>×1<BR><A href="../items/items.html?00e4" target="items">冰结晶</A>×1<BR><A href="../items/items.html?010a" target="items"><FONT color="#ff0000">煌甲虫</FONT></A><FONT color="#ff0000">×1</FONT><BR>　【1700ｚ】</TD>
+<A href="../items/items.html?0184" target="items">沙龙的鳍</A>×1<BR><A href="../items/items.html?017d" target="items">水龙的鳞</A>×1<BR><A href="../items/items.html?00e4" target="items">冰结晶</A>×1<BR><A href="../items/items.html?010a" target="items"><FONT color="#ff0000">煌甲虫</FONT></A><FONT color="#ff0000">×1</FONT><BR>　【1700ｚ】</TD>
 <TD class="tb-cell1">
-<A href="../items/items.html?0182" target="items">砂龙的鳞</A>×1<BR><A href="../items/items.html?017f" target="items">水龙的鳍</A>×1<BR><A href="../items/items.html?00db" target="items"><FONT color="#ff0000">辉龙石</FONT></A><FONT color="#ff0000">×1</FONT><BR><BR>　【2125ｚ】</TD>
+<A href="../items/items.html?0182" target="items">沙龙的鳞</A>×1<BR><A href="../items/items.html?017f" target="items">水龙的鳍</A>×1<BR><A href="../items/items.html?00db" target="items"><FONT color="#ff0000">辉龙石</FONT></A><FONT color="#ff0000">×1</FONT><BR><BR>　【2125ｚ】</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?017d" target="items">水龙的鳞</A>×3<BR><A href="../items/items.html?017e" target="items"><FONT color="#ff0000">水龙的上鳞</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?00e4" target="items">冰结晶</A>×2<BR><A href="../items/items.html?023d" target="items">古龍的血</A>×1<BR>　【2550ｚ】</TD>
 <TD class="tb-cell1">&nbsp;</TD>
@@ -554,7 +520,7 @@ ShowLinks(1, 7);
 <TD id="0033"class="tb-cell2" height="90">33</TD>
 <TD class="tb-cell1">帝王龙虾头盔</TD>
 <TD class="tb-cell1">
-<A href="../items/items.html?01d2" target="items">虾之小壳</A>×1<BR><A href="../items/items.html?00e4" target="items">冰结晶</A>×1<BR><A href="../items/items.html?0108" target="items">粘着蝗虫</A>×1<BR><BR>　【980ｚ】</TD>
+<A href="../items/items.html?01d2" target="items">虾之小壳</A>×1<BR><A href="../items/items.html?00e4" target="items">冰结晶</A>×1<BR><A href="../items/items.html?0108" target="items">黏着蝗虫</A>×1<BR><BR>　【980ｚ】</TD>
 <TD class="tb-cell1">
 <A href="../items/items.html?01d3" target="items">虾之大壳</A>×1<BR><A href="../items/items.html?00d8" target="items"><FONT color="#ff0000">铁矿石</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0018" target="items">怪物的体液</A>×1<BR><BR>　【1273ｚ】</TD>
 <TD class="tb-cell1">
@@ -591,16 +557,6 @@ ShowLinks(1, 7);
 <A href="../items/items.html?01b4" target="items">岩龙的翼</A>×1<BR><A href="../items/items.html?01b3" target="items"><FONT color="#ff0000">岩龙的坚壳</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?00de" target="items">红莲石</A>×1<BR><BR>　【3008ｚ】</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1">&nbsp;</TD>
-</TR>
-<TR>
-<TH class="tb-th1" width="30">No.</TH>
-<TH class="tb-th1" width="63">名称</TH>
-<TH class="tb-th1" width="130">等级２</TH>
-<TH class="tb-th1" width="130">等级３</TH>
-<TH class="tb-th1" width="130">等级４</TH>
-<TH class="tb-th1" width="130">等级５</TH>
-<TH class="tb-th1" width="130">等级６</TH>
-<TH class="tb-th1" width="130">等级７</TH>
 </TR>
 <TR>
 <TD id="0036"class="tb-cell2" height="90">36</TD>
@@ -673,16 +629,6 @@ ShowLinks(1, 7);
 <TD class="tb-cell1">&nbsp;</TD>
 </TR>
 <TR>
-<TH class="tb-th1" width="30">No.</TH>
-<TH class="tb-th1" width="63">名称</TH>
-<TH class="tb-th1" width="130">等级２</TH>
-<TH class="tb-th1" width="130">等级３</TH>
-<TH class="tb-th1" width="130">等级４</TH>
-<TH class="tb-th1" width="130">等级５</TH>
-<TH class="tb-th1" width="130">等级６</TH>
-<TH class="tb-th1" width="130">等级７</TH>
-</TR>
-<TR>
 <TD id="0041"class="tb-cell2" height="90">41</TD>
 <TD class="tb-cell1">铠龙软帽</TD>
 <TD class="tb-cell1">
@@ -740,7 +686,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0045"class="tb-cell2" height="90">45</TD>
-<TD class="tb-cell1">混沌头饰</TD>
+<TD class="tb-cell1">混沌包包头</TD>
 <TD class="tb-cell1">
 <A href="../items/items.html?00c4" target="items">蓝蘑菇</A>×2<BR><A href="../items/items.html?00c6" target="items">麻痹蘑菇</A>×2<BR><A href="../items/items.html?0202" target="items"><FONT color="#ff0000">桃毛兽的毛</FONT></A><FONT color="#ff0000">×2</FONT><BR><BR>　【2000ｚ】</TD>
 <TD class="tb-cell1">
@@ -755,20 +701,10 @@ ShowLinks(1, 7);
 <A href="../items/items.html?0111" target="items">鬼松茸</A>×2<BR><A href="../items/items.html?00c9" target="items">曼德拉菇</A>×2<BR><A href="../items/items.html?020e" target="items"><FONT color="#ff0000">黄金之毛</FONT></A><FONT color="#ff0000">×2</FONT><BR><BR>　【10000ｚ】</TD>
 </TR>
 <TR>
-<TH class="tb-th1" width="30">No.</TH>
-<TH class="tb-th1" width="63">名称</TH>
-<TH class="tb-th1" width="130">等级２</TH>
-<TH class="tb-th1" width="130">等级３</TH>
-<TH class="tb-th1" width="130">等级４</TH>
-<TH class="tb-th1" width="130">等级５</TH>
-<TH class="tb-th1" width="130">等级６</TH>
-<TH class="tb-th1" width="130">等级７</TH>
-</TR>
-<TR>
 <TD id="0046"class="tb-cell2 hc" height="90">46</TD>
 <TD class="tb-cell1 hc">花瓣头冠</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?00b5" target="items">太阳草</A>×1<BR><A href="../items/items.html?00b6" target="items">落阳草</A>×1<BR><A href="../items/items.html?00bc" target="items">粘着草</A>×1<BR><BR>　【600ｚ】</TD>
+<A href="../items/items.html?00b5" target="items">太阳草</A>×1<BR><A href="../items/items.html?00b6" target="items">落阳草</A>×1<BR><A href="../items/items.html?00bc" target="items">黏着草</A>×1<BR><BR>　【600ｚ】</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?00ba" target="items">藤叶</A>×1<BR><A href="../items/items.html?00c0" target="items">辣椒</A>×1<BR><A href="../items/items.html?00bd" target="items">木天蓼</A>×1<BR><BR>　【720ｚ】</TD>
 <TD class="tb-cell1 hc">
@@ -786,7 +722,7 @@ ShowLinks(1, 7);
 <TD class="tb-cell1">
 <A href="../items/items.html?00eb" target="items">刺身鱼</A>×3<BR><A href="../items/items.html?011c" target="items">音符鱼</A>×3<BR><BR><BR>　【600ｚ】</TD>
 <TD class="tb-cell1">
-<A href="../items/items.html?00f2" target="items">大切味鱼</A>×3<BR><A href="../items/items.html?00ea" target="items"><FONT color="#ff0000">切味鱼</FONT></A><FONT color="#ff0000">×3</FONT><BR><BR><BR>　【720ｚ】</TD>
+<A href="../items/items.html?00f2" target="items">大刀背鱼</A>×3<BR><A href="../items/items.html?00ea" target="items"><FONT color="#ff0000">刀背鱼</FONT></A><FONT color="#ff0000">×3</FONT><BR><BR><BR>　【720ｚ】</TD>
 <TD class="tb-cell1">
 <A href="../items/items.html?00f5" target="items">大炸裂沙丁鱼</A>×3<BR><A href="../items/items.html?00ee" target="items"><FONT color="#ff0000">炸裂沙丁鱼</FONT></A><FONT color="#ff0000">×3</FONT><BR><BR><BR>　【879ｚ】</TD>
 <TD class="tb-cell1">
@@ -843,16 +779,6 @@ ShowLinks(1, 7);
 <A href="../items/items.html?02c6" target="items">鸟龙的硬币</A>×1<BR><A href="../items/items.html?02c8" target="items"><FONT color="#ff0000">鱼龙的硬币</FONT></A><FONT color="#ff0000">×1</FONT><BR><BR><BR>　【2200ｚ】</TD>
 <TD class="tb-cell1">
 <A href="../items/items.html?02ce" target="items">坚实的硬币</A>×1<BR><A href="../items/items.html?02cd" target="items">豪华的硬币</A>×1<BR><A href="../items/items.html?02cc" target="items"><FONT color="#ff0000">永远的硬币</FONT></A><FONT color="#ff0000">×1</FONT><BR><BR>　【3079ｚ】</TD>
-</TR>
-<TR>
-<TH class="tb-th1" width="30">No.</TH>
-<TH class="tb-th1" width="63">名称</TH>
-<TH class="tb-th1" width="130">等级２</TH>
-<TH class="tb-th1" width="130">等级３</TH>
-<TH class="tb-th1" width="130">等级４</TH>
-<TH class="tb-th1" width="130">等级５</TH>
-<TH class="tb-th1" width="130">等级６</TH>
-<TH class="tb-th1" width="130">等级７</TH>
 </TR>
 <TR>
 <TD id="0051"class="tb-cell2" height="90">51</TD>
@@ -913,16 +839,6 @@ ShowLinks(1, 7);
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1">&nbsp;</TD>
-</TR>
-<TR>
-<TH class="tb-th1" width="30">No.</TH>
-<TH class="tb-th1" width="63">名称</TH>
-<TH class="tb-th1" width="130">等级２</TH>
-<TH class="tb-th1" width="130">等级３</TH>
-<TH class="tb-th1" width="130">等级４</TH>
-<TH class="tb-th1" width="130">等级５</TH>
-<TH class="tb-th1" width="130">等级６</TH>
-<TH class="tb-th1" width="130">等级７</TH>
 </TR>
 <TR>
 <TD id="0056"class="tb-cell2" height="90">56</TD>
@@ -991,18 +907,8 @@ ShowLinks(1, 7);
 <TD class="tb-cell1">&nbsp;</TD>
 </TR>
 <TR>
-<TH class="tb-th1" width="30">No.</TH>
-<TH class="tb-th1" width="63">名称</TH>
-<TH class="tb-th1" width="130">等级２</TH>
-<TH class="tb-th1" width="130">等级３</TH>
-<TH class="tb-th1" width="130">等级４</TH>
-<TH class="tb-th1" width="130">等级５</TH>
-<TH class="tb-th1" width="130">等级６</TH>
-<TH class="tb-th1" width="130">等级７</TH>
-</TR>
-<TR>
 <TD id="0061"class="tb-cell2" height="90">61</TD>
-<TD class="tb-cell1">助理兜帽</TD>
+<TD class="tb-cell1">助手兜帽</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?02e0" target="items"><FONT color="#ff0000">星铁</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?02e6" target="items"><FONT color="#ff0000">蛋券</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?02e7" target="items"><FONT color="#ff0000">宝石券</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?02ea" target="items"><FONT color="#ff0000">公会券</FONT></A><FONT color="#ff0000">×1</FONT><BR>　【5600ｚ】</TD>
 <TD class="tb-cell1 hc">
@@ -1016,7 +922,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0062"class="tb-cell2" height="90">62</TD>
-<TD class="tb-cell1">医师眼镜</TD>
+<TD class="tb-cell1">治愈者眼镜</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?02e0" target="items"><FONT color="#ff0000">星铁</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?02e6" target="items"><FONT color="#ff0000">蛋券</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?02e7" target="items"><FONT color="#ff0000">宝石券</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?02ea" target="items"><FONT color="#ff0000">公会券</FONT></A><FONT color="#ff0000">×1</FONT><BR>　【5600ｚ】</TD>
 <TD class="tb-cell1 hc">
@@ -1052,7 +958,7 @@ ShowLinks(1, 7);
 <TD class="tb-cell1">
 <A href="../items/items.html?025a" target="items"><FONT color="#ff0000">黑狼鸟的翼</FONT></A><FONT color="#ff0000">×2</FONT><BR><A href="../items/items.html?025c" target="items">黑狼鸟的鬣毛</A>×1<BR><A href="../items/items.html?00da" target="items">燕雀石</A>×1<BR><A href="../items/items.html?010a" target="items">煌甲虫</A>×1<BR>　【2400ｚ】</TD>
 <TD class="tb-cell1">
-<A href="../items/items.html?0257" target="items"><FONT color="#ff0000">黑狼鸟的甲壳</FONT></A><FONT color="#ff0000">×2</FONT><BR><A href="../items/items.html?025b" target="items">黑狼鸟的尻尾</A>×1<BR><A href="../items/items.html?0259" target="items">尖锐的喙</A>×1<BR><A href="../items/items.html?00de" target="items">红莲石</A>×1<BR>　【3000ｚ】</TD>
+<A href="../items/items.html?0257" target="items"><FONT color="#ff0000">黑狼鸟的甲壳</FONT></A><FONT color="#ff0000">×2</FONT><BR><A href="../items/items.html?025b" target="items">黑狼鸟的尾巴</A>×1<BR><A href="../items/items.html?0259" target="items">尖锐的喙</A>×1<BR><A href="../items/items.html?00de" target="items">红莲石</A>×1<BR>　【3000ｚ】</TD>
 <TD class="tb-cell1">
 <A href="../items/items.html?0256" target="items">黑狼鸟的鳞</A>×2<BR><A href="../items/items.html?025c" target="items"><FONT color="#ff0000">黑狼鸟的鬣毛</FONT></A><FONT color="#ff0000">×3</FONT><BR><A href="../items/items.html?0258" target="items">黑狼鸟的耳</A>×1<BR><A href="../items/items.html?00db" target="items">辉龙石</A>×1<BR>　【3600ｚ】</TD>
 <TD class="tb-cell1">&nbsp;</TD>
@@ -1066,21 +972,11 @@ ShowLinks(1, 7);
 <TD class="tb-cell1">
 <A href="../items/items.html?025a" target="items"><FONT color="#ff0000">黑狼鸟的翼</FONT></A><FONT color="#ff0000">×2</FONT><BR><A href="../items/items.html?025c" target="items">黑狼鸟的鬣毛</A>×1<BR><A href="../items/items.html?00da" target="items">燕雀石</A>×1<BR><A href="../items/items.html?010a" target="items">煌甲虫</A>×1<BR>　【2400ｚ】</TD>
 <TD class="tb-cell1">
-<A href="../items/items.html?0257" target="items"><FONT color="#ff0000">黑狼鸟的甲壳</FONT></A><FONT color="#ff0000">×2</FONT><BR><A href="../items/items.html?025b" target="items">黑狼鸟的尻尾</A>×1<BR><A href="../items/items.html?0259" target="items">尖锐的喙</A>×1<BR><A href="../items/items.html?00de" target="items">红莲石</A>×1<BR>　【3000ｚ】</TD>
+<A href="../items/items.html?0257" target="items"><FONT color="#ff0000">黑狼鸟的甲壳</FONT></A><FONT color="#ff0000">×2</FONT><BR><A href="../items/items.html?025b" target="items">黑狼鸟的尾巴</A>×1<BR><A href="../items/items.html?0259" target="items">尖锐的喙</A>×1<BR><A href="../items/items.html?00de" target="items">红莲石</A>×1<BR>　【3000ｚ】</TD>
 <TD class="tb-cell1">
 <A href="../items/items.html?0256" target="items">黑狼鸟的鳞</A>×2<BR><A href="../items/items.html?025c" target="items"><FONT color="#ff0000">黑狼鸟的鬣毛</FONT></A><FONT color="#ff0000">×3</FONT><BR><A href="../items/items.html?0258" target="items">黑狼鸟的耳</A>×1<BR><A href="../items/items.html?00db" target="items">辉龙石</A>×1<BR>　【3600ｚ】</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1">&nbsp;</TD>
-</TR>
-<TR>
-<TH class="tb-th1" width="30">No.</TH>
-<TH class="tb-th1" width="63">名称</TH>
-<TH class="tb-th1" width="130">等级２</TH>
-<TH class="tb-th1" width="130">等级３</TH>
-<TH class="tb-th1" width="130">等级４</TH>
-<TH class="tb-th1" width="130">等级５</TH>
-<TH class="tb-th1" width="130">等级６</TH>
-<TH class="tb-th1" width="130">等级７</TH>
 </TR>
 <TR>
 <TD id="0066"class="tb-cell2" height="90">66</TD>
@@ -1090,7 +986,7 @@ ShowLinks(1, 7);
 <TD class="tb-cell1">
 <A href="../items/items.html?025a" target="items"><FONT color="#ff0000">黑狼鸟的翼</FONT></A><FONT color="#ff0000">×2</FONT><BR><A href="../items/items.html?025c" target="items">黑狼鸟的鬣毛</A>×1<BR><A href="../items/items.html?00da" target="items">燕雀石</A>×1<BR><A href="../items/items.html?010a" target="items">煌甲虫</A>×1<BR>　【3000ｚ】</TD>
 <TD class="tb-cell1">
-<A href="../items/items.html?0257" target="items"><FONT color="#ff0000">黑狼鸟的甲壳</FONT></A><FONT color="#ff0000">×2</FONT><BR><A href="../items/items.html?025b" target="items">黑狼鸟的尻尾</A>×1<BR><A href="../items/items.html?0259" target="items">尖锐的喙</A>×1<BR><A href="../items/items.html?00de" target="items">红莲石</A>×1<BR>　【3600ｚ】</TD>
+<A href="../items/items.html?0257" target="items"><FONT color="#ff0000">黑狼鸟的甲壳</FONT></A><FONT color="#ff0000">×2</FONT><BR><A href="../items/items.html?025b" target="items">黑狼鸟的尾巴</A>×1<BR><A href="../items/items.html?0259" target="items">尖锐的喙</A>×1<BR><A href="../items/items.html?00de" target="items">红莲石</A>×1<BR>　【3600ｚ】</TD>
 <TD class="tb-cell1">
 <A href="../items/items.html?0256" target="items">黑狼鸟的鳞</A>×2<BR><A href="../items/items.html?025c" target="items"><FONT color="#ff0000">黑狼鸟的鬣毛</FONT></A><FONT color="#ff0000">×3</FONT><BR><A href="../items/items.html?0258" target="items">黑狼鸟的耳</A>×1<BR><A href="../items/items.html?00db" target="items">辉龙石</A>×1<BR>　【4800ｚ】</TD>
 <TD class="tb-cell1">&nbsp;</TD>
@@ -1153,18 +1049,8 @@ ShowLinks(1, 7);
 <TD class="tb-cell1">&nbsp;</TD>
 </TR>
 <TR>
-<TH class="tb-th1" width="30">No.</TH>
-<TH class="tb-th1" width="63">名称</TH>
-<TH class="tb-th1" width="130">等级２</TH>
-<TH class="tb-th1" width="130">等级３</TH>
-<TH class="tb-th1" width="130">等级４</TH>
-<TH class="tb-th1" width="130">等级５</TH>
-<TH class="tb-th1" width="130">等级６</TH>
-<TH class="tb-th1" width="130">等级７</TH>
-</TR>
-<TR>
 <TD id="0071"class="tb-cell2 hc" height="90">71</TD>
-<TD class="tb-cell1 hc">邪龍之首</TD>
+<TD class="tb-cell1 hc">黑龍之首</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?01ec" target="items"><FONT color="#ff0000">黑龍的鳞</FONT></A><FONT color="#ff0000">×2</FONT><BR><A href="../items/items.html?01ef" target="items"><FONT color="#ff0000">黑龍的翼膜</FONT></A><FONT color="#ff0000">×2</FONT><BR><A href="../items/items.html?0225" target="items"><FONT color="#ff0000">钢龍的坚壳</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?018a" target="items"><FONT color="#ff0000">雌火龙的逆鳞</FONT></A><FONT color="#ff0000">×1</FONT><BR>　【9000ｚ】</TD>
 <TD class="tb-cell1 hc">
@@ -1178,7 +1064,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0072"class="tb-cell2 hc" height="90">72</TD>
-<TD class="tb-cell1 hc">邪龍之面</TD>
+<TD class="tb-cell1 hc">黑龍之面</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?01ec" target="items"><FONT color="#ff0000">黑龍的鳞</FONT></A><FONT color="#ff0000">×2</FONT><BR><A href="../items/items.html?01ef" target="items"><FONT color="#ff0000">黑龍的翼膜</FONT></A><FONT color="#ff0000">×2</FONT><BR><A href="../items/items.html?0225" target="items"><FONT color="#ff0000">钢龍的坚壳</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?018a" target="items"><FONT color="#ff0000">雌火龙的逆鳞</FONT></A><FONT color="#ff0000">×1</FONT><BR>　【9000ｚ】</TD>
 <TD class="tb-cell1 hc">
@@ -1233,16 +1119,6 @@ ShowLinks(1, 7);
 <TD class="tb-cell1">&nbsp;</TD>
 </TR>
 <TR>
-<TH class="tb-th1" width="30">No.</TH>
-<TH class="tb-th1" width="63">名称</TH>
-<TH class="tb-th1" width="130">等级２</TH>
-<TH class="tb-th1" width="130">等级３</TH>
-<TH class="tb-th1" width="130">等级４</TH>
-<TH class="tb-th1" width="130">等级５</TH>
-<TH class="tb-th1" width="130">等级６</TH>
-<TH class="tb-th1" width="130">等级７</TH>
-</TR>
-<TR>
 <TD id="0076"class="tb-cell2" height="90">76</TD>
 <TD class="tb-cell1">猎人Ｕ软帽</TD>
 <TD class="tb-cell1 hc">
@@ -1260,7 +1136,7 @@ ShowLinks(1, 7);
 <TD id="0077"class="tb-cell2" height="90">77</TD>
 <TD class="tb-cell1">骸骨Ｕ头盔</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?0150" target="items"><FONT color="#ff0000">大猪的硬皮</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0140" target="items">棒状之骨</A>×3<BR><A href="../items/items.html?0108" target="items">粘着蝗虫</A>×2<BR><BR>　【1350ｚ】</TD>
+<A href="../items/items.html?0150" target="items"><FONT color="#ff0000">大猪的硬皮</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0140" target="items">棒状之骨</A>×3<BR><A href="../items/items.html?0108" target="items">黏着蝗虫</A>×2<BR><BR>　【1350ｚ】</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?0169" target="items">红速龙王的皮</A>×1<BR><A href="../items/items.html?0139" target="items"><FONT color="#ff0000">龙骨【中】</FONT></A><FONT color="#ff0000">×3</FONT><BR><A href="../items/items.html?0018" target="items">怪物的体液</A>×2<BR><A href="../items/items.html?023d" target="items">古龍的血</A>×1<BR>　【1620ｚ】</TD>
 <TD class="tb-cell1 hc">
@@ -1274,7 +1150,7 @@ ShowLinks(1, 7);
 <TD id="0078"class="tb-cell2" height="90">78</TD>
 <TD class="tb-cell1">骸骨Ｕ软帽</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?0150" target="items"><FONT color="#ff0000">大猪的硬皮</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0140" target="items">棒状之骨</A>×3<BR><A href="../items/items.html?0108" target="items">粘着蝗虫</A>×2<BR><BR>　【1350ｚ】</TD>
+<A href="../items/items.html?0150" target="items"><FONT color="#ff0000">大猪的硬皮</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0140" target="items">棒状之骨</A>×3<BR><A href="../items/items.html?0108" target="items">黏着蝗虫</A>×2<BR><BR>　【1350ｚ】</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?0169" target="items">红速龙王的皮</A>×1<BR><A href="../items/items.html?0139" target="items"><FONT color="#ff0000">龙骨【中】</FONT></A><FONT color="#ff0000">×3</FONT><BR><A href="../items/items.html?0018" target="items">怪物的体液</A>×2<BR><A href="../items/items.html?023d" target="items">古龍的血</A>×1<BR>　【1620ｚ】</TD>
 <TD class="tb-cell1 hc">
@@ -1313,16 +1189,6 @@ ShowLinks(1, 7);
 <TD class="tb-cell1">&nbsp;</TD>
 </TR>
 <TR>
-<TH class="tb-th1" width="30">No.</TH>
-<TH class="tb-th1" width="63">名称</TH>
-<TH class="tb-th1" width="130">等级２</TH>
-<TH class="tb-th1" width="130">等级３</TH>
-<TH class="tb-th1" width="130">等级４</TH>
-<TH class="tb-th1" width="130">等级５</TH>
-<TH class="tb-th1" width="130">等级６</TH>
-<TH class="tb-th1" width="130">等级７</TH>
-</TR>
-<TR>
 <TD id="0081"class="tb-cell2" height="90">81</TD>
 <TD class="tb-cell1">战斗Ｕ头盔</TD>
 <TD class="tb-cell1 hc">
@@ -1356,7 +1222,7 @@ ShowLinks(1, 7);
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?01cc" target="items">巨蜂的羽</A>×1<BR><A href="../items/items.html?0019" target="items"><FONT color="#ff0000">怪物的浓汁</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?023d" target="items">古龍的血</A>×1<BR><BR>　【1950ｚ】</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?01ca" target="items">巨蜂的甲壳</A>×1<BR><A href="../items/items.html?01cd" target="items">巨蜂的薄羽</A>×1<BR><A href="../items/items.html?0108" target="items">粘着蝗虫</A>×1<BR><A href="../items/items.html?00dc" target="items"><FONT color="#ff0000">灵鹤石</FONT></A><FONT color="#ff0000">×1</FONT><BR>　【2600ｚ】</TD>
+<A href="../items/items.html?01ca" target="items">巨蜂的甲壳</A>×1<BR><A href="../items/items.html?01cd" target="items">巨蜂的薄羽</A>×1<BR><A href="../items/items.html?0108" target="items">黏着蝗虫</A>×1<BR><A href="../items/items.html?00dc" target="items"><FONT color="#ff0000">灵鹤石</FONT></A><FONT color="#ff0000">×1</FONT><BR>　【2600ｚ】</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?0018" target="items">怪物的体液</A>×1<BR><A href="../items/items.html?010a" target="items">煌甲虫</A>×1<BR><A href="../items/items.html?0107" target="items"><FONT color="#ff0000">王族花金龟</FONT></A><FONT color="#ff0000">×1</FONT><BR><BR>　【3250ｚ】</TD>
 <TD class="tb-cell1 hc">
@@ -1370,7 +1236,7 @@ ShowLinks(1, 7);
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?01cc" target="items">巨蜂的羽</A>×1<BR><A href="../items/items.html?0019" target="items"><FONT color="#ff0000">怪物的浓汁</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?023d" target="items">古龍的血</A>×1<BR><BR>　【1950ｚ】</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?01ca" target="items">巨蜂的甲壳</A>×1<BR><A href="../items/items.html?01cd" target="items">巨蜂的薄羽</A>×1<BR><A href="../items/items.html?0108" target="items">粘着蝗虫</A>×1<BR><A href="../items/items.html?00dc" target="items"><FONT color="#ff0000">灵鹤石</FONT></A><FONT color="#ff0000">×1</FONT><BR>　【2600ｚ】</TD>
+<A href="../items/items.html?01ca" target="items">巨蜂的甲壳</A>×1<BR><A href="../items/items.html?01cd" target="items">巨蜂的薄羽</A>×1<BR><A href="../items/items.html?0108" target="items">黏着蝗虫</A>×1<BR><A href="../items/items.html?00dc" target="items"><FONT color="#ff0000">灵鹤石</FONT></A><FONT color="#ff0000">×1</FONT><BR>　【2600ｚ】</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?0018" target="items">怪物的体液</A>×1<BR><A href="../items/items.html?010a" target="items">煌甲虫</A>×1<BR><A href="../items/items.html?0107" target="items"><FONT color="#ff0000">王族花金龟</FONT></A><FONT color="#ff0000">×1</FONT><BR><BR>　【3250ｚ】</TD>
 <TD class="tb-cell1 hc">
@@ -1384,7 +1250,7 @@ ShowLinks(1, 7);
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?01d0" target="items">爬虫的羽</A>×1<BR><A href="../items/items.html?0019" target="items"><FONT color="#ff0000">怪物的浓汁</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?023d" target="items">古龍的血</A>×1<BR><BR>　【2600ｚ】</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?01ce" target="items">爬虫的甲壳</A>×1<BR><A href="../items/items.html?01d1" target="items">爬虫的薄羽</A>×1<BR><A href="../items/items.html?0108" target="items">粘着蝗虫</A>×1<BR><A href="../items/items.html?00dc" target="items"><FONT color="#ff0000">灵鹤石</FONT></A><FONT color="#ff0000">×1</FONT><BR>　【3250ｚ】</TD>
+<A href="../items/items.html?01ce" target="items">爬虫的甲壳</A>×1<BR><A href="../items/items.html?01d1" target="items">爬虫的薄羽</A>×1<BR><A href="../items/items.html?0108" target="items">黏着蝗虫</A>×1<BR><A href="../items/items.html?00dc" target="items"><FONT color="#ff0000">灵鹤石</FONT></A><FONT color="#ff0000">×1</FONT><BR>　【3250ｚ】</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?0018" target="items">怪物的体液</A>×1<BR><A href="../items/items.html?010a" target="items">煌甲虫</A>×1<BR><A href="../items/items.html?0107" target="items"><FONT color="#ff0000">王族花金龟</FONT></A><FONT color="#ff0000">×1</FONT><BR><BR>　【3900ｚ】</TD>
 <TD class="tb-cell1 hc">
@@ -1393,22 +1259,12 @@ ShowLinks(1, 7);
 <TD class="tb-cell1">&nbsp;</TD>
 </TR>
 <TR>
-<TH class="tb-th1" width="30">No.</TH>
-<TH class="tb-th1" width="63">名称</TH>
-<TH class="tb-th1" width="130">等级２</TH>
-<TH class="tb-th1" width="130">等级３</TH>
-<TH class="tb-th1" width="130">等级４</TH>
-<TH class="tb-th1" width="130">等级５</TH>
-<TH class="tb-th1" width="130">等级６</TH>
-<TH class="tb-th1" width="130">等级７</TH>
-</TR>
-<TR>
 <TD id="0086"class="tb-cell2" height="90">86</TD>
 <TD class="tb-cell1">爬虫Ｕ软帽</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?01d0" target="items">爬虫的羽</A>×1<BR><A href="../items/items.html?0019" target="items"><FONT color="#ff0000">怪物的浓汁</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?023d" target="items">古龍的血</A>×1<BR><BR>　【2600ｚ】</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?01ce" target="items">爬虫的甲壳</A>×1<BR><A href="../items/items.html?01d1" target="items">爬虫的薄羽</A>×1<BR><A href="../items/items.html?0108" target="items">粘着蝗虫</A>×1<BR><A href="../items/items.html?00dc" target="items"><FONT color="#ff0000">灵鹤石</FONT></A><FONT color="#ff0000">×1</FONT><BR>　【3250ｚ】</TD>
+<A href="../items/items.html?01ce" target="items">爬虫的甲壳</A>×1<BR><A href="../items/items.html?01d1" target="items">爬虫的薄羽</A>×1<BR><A href="../items/items.html?0108" target="items">黏着蝗虫</A>×1<BR><A href="../items/items.html?00dc" target="items"><FONT color="#ff0000">灵鹤石</FONT></A><FONT color="#ff0000">×1</FONT><BR>　【3250ｚ】</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?0018" target="items">怪物的体液</A>×1<BR><A href="../items/items.html?010a" target="items">煌甲虫</A>×1<BR><A href="../items/items.html?0107" target="items"><FONT color="#ff0000">王族花金龟</FONT></A><FONT color="#ff0000">×1</FONT><BR><BR>　【3900ｚ】</TD>
 <TD class="tb-cell1 hc">
@@ -1418,7 +1274,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0087"class="tb-cell2" height="90">87</TD>
-<TD class="tb-cell1">精炼矿石Ｕ头盔</TD>
+<TD class="tb-cell1">高等合金Ｕ头盔</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?00d8" target="items">铁矿石</A>×1<BR><A href="../items/items.html?00d6" target="items">阳光石</A>×1<BR><A href="../items/items.html?00de" target="items">红莲石</A>×1<BR><A href="../items/items.html?00dc" target="items"><FONT color="#ff0000">灵鹤石</FONT></A><FONT color="#ff0000">×1</FONT><BR>　【2325ｚ】</TD>
 <TD class="tb-cell1 hc">
@@ -1432,7 +1288,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0088"class="tb-cell2" height="90">88</TD>
-<TD class="tb-cell1">精炼矿石Ｕ软帽</TD>
+<TD class="tb-cell1">高等合金Ｕ软帽</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?00d8" target="items">铁矿石</A>×1<BR><A href="../items/items.html?00d6" target="items">阳光石</A>×1<BR><A href="../items/items.html?00de" target="items">红莲石</A>×1<BR><A href="../items/items.html?00dc" target="items"><FONT color="#ff0000">灵鹤石</FONT></A><FONT color="#ff0000">×1</FONT><BR>　【2325ｚ】</TD>
 <TD class="tb-cell1 hc">
@@ -1448,7 +1304,7 @@ ShowLinks(1, 7);
 <TD id="0089"class="tb-cell2" height="90">89</TD>
 <TD class="tb-cell1">黄速龙Ｕ头盔</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?0161" target="items"><FONT color="#ff0000">黄速龙的上鳞</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0252" target="items">蛇龙的皮</A>×1<BR><A href="../items/items.html?00da" target="items">燕雀石</A>×1<BR><A href="../items/items.html?0108" target="items">粘着蝗虫</A>×1<BR>　【2475ｚ】</TD>
+<A href="../items/items.html?0161" target="items"><FONT color="#ff0000">黄速龙的上鳞</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0252" target="items">蛇龙的皮</A>×1<BR><A href="../items/items.html?00da" target="items">燕雀石</A>×1<BR><A href="../items/items.html?0108" target="items">黏着蝗虫</A>×1<BR>　【2475ｚ】</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?014f" target="items">大猪的皮</A>×1<BR><A href="../items/items.html?0162" target="items">黄速龙的皮</A>×1<BR><A href="../items/items.html?0130" target="items"><FONT color="#ff0000">麻痹袋</FONT></A><FONT color="#ff0000">×2</FONT><BR><BR>　【3300ｚ】</TD>
 <TD class="tb-cell1 hc">
@@ -1462,7 +1318,7 @@ ShowLinks(1, 7);
 <TD id="0090"class="tb-cell2" height="90">90</TD>
 <TD class="tb-cell1">黄速龙Ｕ软帽</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?0161" target="items"><FONT color="#ff0000">黄速龙的上鳞</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0252" target="items">蛇龙的皮</A>×1<BR><A href="../items/items.html?00da" target="items">燕雀石</A>×1<BR><A href="../items/items.html?0108" target="items">粘着蝗虫</A>×1<BR>　【2475ｚ】</TD>
+<A href="../items/items.html?0161" target="items"><FONT color="#ff0000">黄速龙的上鳞</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0252" target="items">蛇龙的皮</A>×1<BR><A href="../items/items.html?00da" target="items">燕雀石</A>×1<BR><A href="../items/items.html?0108" target="items">黏着蝗虫</A>×1<BR>　【2475ｚ】</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?014f" target="items">大猪的皮</A>×1<BR><A href="../items/items.html?0162" target="items">黄速龙的皮</A>×1<BR><A href="../items/items.html?0130" target="items"><FONT color="#ff0000">麻痹袋</FONT></A><FONT color="#ff0000">×2</FONT><BR><BR>　【3300ｚ】</TD>
 <TD class="tb-cell1 hc">
@@ -1473,20 +1329,10 @@ ShowLinks(1, 7);
 <TD class="tb-cell1">&nbsp;</TD>
 </TR>
 <TR>
-<TH class="tb-th1" width="30">No.</TH>
-<TH class="tb-th1" width="63">名称</TH>
-<TH class="tb-th1" width="130">等级２</TH>
-<TH class="tb-th1" width="130">等级３</TH>
-<TH class="tb-th1" width="130">等级４</TH>
-<TH class="tb-th1" width="130">等级５</TH>
-<TH class="tb-th1" width="130">等级６</TH>
-<TH class="tb-th1" width="130">等级７</TH>
-</TR>
-<TR>
 <TD id="0091"class="tb-cell2" height="90">91</TD>
 <TD class="tb-cell1">红速龙Ｕ头盔</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?0167" target="items"><FONT color="#ff0000">红速龙的上鳞</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0230" target="items">霞龍的皮</A>×1<BR><A href="../items/items.html?00da" target="items">燕雀石</A>×1<BR><A href="../items/items.html?0108" target="items">粘着蝗虫</A>×1<BR>　【2475ｚ】</TD>
+<A href="../items/items.html?0167" target="items"><FONT color="#ff0000">红速龙的上鳞</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0230" target="items">霞龍的皮</A>×1<BR><A href="../items/items.html?00da" target="items">燕雀石</A>×1<BR><A href="../items/items.html?0108" target="items">黏着蝗虫</A>×1<BR>　【2475ｚ】</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?014f" target="items">大猪的皮</A>×1<BR><A href="../items/items.html?0168" target="items">红速龙的皮</A>×1<BR><A href="../items/items.html?00e3" target="items"><FONT color="#ff0000">抗菌石</FONT></A><FONT color="#ff0000">×2</FONT><BR><BR>　【3300ｚ】</TD>
 <TD class="tb-cell1 hc">
@@ -1500,7 +1346,7 @@ ShowLinks(1, 7);
 <TD id="0092"class="tb-cell2" height="90">92</TD>
 <TD class="tb-cell1">红速龙Ｕ软帽</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?0167" target="items"><FONT color="#ff0000">红速龙的上鳞</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0230" target="items">霞龍的皮</A>×1<BR><A href="../items/items.html?00da" target="items">燕雀石</A>×1<BR><A href="../items/items.html?0108" target="items">粘着蝗虫</A>×1<BR>　【2475ｚ】</TD>
+<A href="../items/items.html?0167" target="items"><FONT color="#ff0000">红速龙的上鳞</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0230" target="items">霞龍的皮</A>×1<BR><A href="../items/items.html?00da" target="items">燕雀石</A>×1<BR><A href="../items/items.html?0108" target="items">黏着蝗虫</A>×1<BR>　【2475ｚ】</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?014f" target="items">大猪的皮</A>×1<BR><A href="../items/items.html?0168" target="items">红速龙的皮</A>×1<BR><A href="../items/items.html?00e3" target="items"><FONT color="#ff0000">抗菌石</FONT></A><FONT color="#ff0000">×2</FONT><BR><BR>　【3300ｚ】</TD>
 <TD class="tb-cell1 hc">
@@ -1540,39 +1386,29 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0095"class="tb-cell2" height="90">95</TD>
-<TD class="tb-cell1">砂龙Ｕ头盔</TD>
+<TD class="tb-cell1">沙龙Ｕ头盔</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?0187" target="items">砂龙的桃鳍</A>×1<BR><A href="../items/items.html?0183" target="items"><FONT color="#ff0000">砂龙的上鳞</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?00e4" target="items">冰结晶</A>×2<BR><A href="../items/items.html?00da" target="items">燕雀石</A>×2<BR>　【1880ｚ】</TD>
+<A href="../items/items.html?0187" target="items">沙龙的桃鳍</A>×1<BR><A href="../items/items.html?0183" target="items"><FONT color="#ff0000">沙龙的上鳞</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?00e4" target="items">冰结晶</A>×2<BR><A href="../items/items.html?00da" target="items">燕雀石</A>×2<BR>　【1880ｚ】</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?0186" target="items">砂龙的紫鳞</A>×2<BR><A href="../items/items.html?0185" target="items"><FONT color="#ff0000">砂龙的上鳍</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?00da" target="items">燕雀石</A>×1<BR><A href="../items/items.html?023d" target="items">古龍的血</A>×1<BR>　【2443ｚ】</TD>
+<A href="../items/items.html?0186" target="items">沙龙的紫鳞</A>×2<BR><A href="../items/items.html?0185" target="items"><FONT color="#ff0000">沙龙的上鳍</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?00da" target="items">燕雀石</A>×1<BR><A href="../items/items.html?023d" target="items">古龍的血</A>×1<BR>　【2443ｚ】</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?0254" target="items">条纹的皮</A>×1<BR><A href="../items/items.html?0187" target="items"><FONT color="#ff0000">砂龙的桃鳍</FONT></A><FONT color="#ff0000">×2</FONT><BR><A href="../items/items.html?00db" target="items">辉龙石</A>×1<BR><A href="../items/items.html?00dc" target="items">灵鹤石</A>×1<BR>　【2820ｚ】</TD>
+<A href="../items/items.html?0254" target="items">条纹的皮</A>×1<BR><A href="../items/items.html?0187" target="items"><FONT color="#ff0000">沙龙的桃鳍</FONT></A><FONT color="#ff0000">×2</FONT><BR><A href="../items/items.html?00db" target="items">辉龙石</A>×1<BR><A href="../items/items.html?00dc" target="items">灵鹤石</A>×1<BR>　【2820ｚ】</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?0182" target="items">砂龙的鳞</A>×2<BR><A href="../items/items.html?017e" target="items">水龙的上鳞</A>×1<BR><A href="../items/items.html?0186" target="items"><FONT color="#ff0000">砂龙的紫鳞</FONT></A><FONT color="#ff0000">×2</FONT><BR><A href="../items/items.html?024f" target="items">龍苔</A>×1<BR>　【3384ｚ】</TD>
+<A href="../items/items.html?0182" target="items">沙龙的鳞</A>×2<BR><A href="../items/items.html?017e" target="items">水龙的上鳞</A>×1<BR><A href="../items/items.html?0186" target="items"><FONT color="#ff0000">沙龙的紫鳞</FONT></A><FONT color="#ff0000">×2</FONT><BR><A href="../items/items.html?024f" target="items">龍苔</A>×1<BR>　【3384ｚ】</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1">&nbsp;</TD>
-</TR>
-<TR>
-<TH class="tb-th1" width="30">No.</TH>
-<TH class="tb-th1" width="63">名称</TH>
-<TH class="tb-th1" width="130">等级２</TH>
-<TH class="tb-th1" width="130">等级３</TH>
-<TH class="tb-th1" width="130">等级４</TH>
-<TH class="tb-th1" width="130">等级５</TH>
-<TH class="tb-th1" width="130">等级６</TH>
-<TH class="tb-th1" width="130">等级７</TH>
 </TR>
 <TR>
 <TD id="0096"class="tb-cell2" height="90">96</TD>
-<TD class="tb-cell1">砂龙Ｕ软帽</TD>
+<TD class="tb-cell1">沙龙Ｕ软帽</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?0187" target="items">砂龙的桃鳍</A>×1<BR><A href="../items/items.html?0183" target="items"><FONT color="#ff0000">砂龙的上鳞</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?00e4" target="items">冰结晶</A>×2<BR><A href="../items/items.html?00da" target="items">燕雀石</A>×2<BR>　【1880ｚ】</TD>
+<A href="../items/items.html?0187" target="items">沙龙的桃鳍</A>×1<BR><A href="../items/items.html?0183" target="items"><FONT color="#ff0000">沙龙的上鳞</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?00e4" target="items">冰结晶</A>×2<BR><A href="../items/items.html?00da" target="items">燕雀石</A>×2<BR>　【1880ｚ】</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?0186" target="items">砂龙的紫鳞</A>×2<BR><A href="../items/items.html?0185" target="items"><FONT color="#ff0000">砂龙的上鳍</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?00da" target="items">燕雀石</A>×1<BR><A href="../items/items.html?023d" target="items">古龍的血</A>×1<BR>　【2443ｚ】</TD>
+<A href="../items/items.html?0186" target="items">沙龙的紫鳞</A>×2<BR><A href="../items/items.html?0185" target="items"><FONT color="#ff0000">沙龙的上鳍</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?00da" target="items">燕雀石</A>×1<BR><A href="../items/items.html?023d" target="items">古龍的血</A>×1<BR>　【2443ｚ】</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?0254" target="items">条纹的皮</A>×1<BR><A href="../items/items.html?0187" target="items"><FONT color="#ff0000">砂龙的桃鳍</FONT></A><FONT color="#ff0000">×2</FONT><BR><A href="../items/items.html?00db" target="items">辉龙石</A>×1<BR><A href="../items/items.html?00dc" target="items">灵鹤石</A>×1<BR>　【2820ｚ】</TD>
+<A href="../items/items.html?0254" target="items">条纹的皮</A>×1<BR><A href="../items/items.html?0187" target="items"><FONT color="#ff0000">沙龙的桃鳍</FONT></A><FONT color="#ff0000">×2</FONT><BR><A href="../items/items.html?00db" target="items">辉龙石</A>×1<BR><A href="../items/items.html?00dc" target="items">灵鹤石</A>×1<BR>　【2820ｚ】</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?0182" target="items">砂龙的鳞</A>×2<BR><A href="../items/items.html?017e" target="items">水龙的上鳞</A>×1<BR><A href="../items/items.html?0186" target="items"><FONT color="#ff0000">砂龙的紫鳞</FONT></A><FONT color="#ff0000">×2</FONT><BR><A href="../items/items.html?024f" target="items">龍苔</A>×1<BR>　【3384ｚ】</TD>
+<A href="../items/items.html?0182" target="items">沙龙的鳞</A>×2<BR><A href="../items/items.html?017e" target="items">水龙的上鳞</A>×1<BR><A href="../items/items.html?0186" target="items"><FONT color="#ff0000">沙龙的紫鳞</FONT></A><FONT color="#ff0000">×2</FONT><BR><A href="../items/items.html?024f" target="items">龍苔</A>×1<BR>　【3384ｚ】</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 </TR>
@@ -1633,16 +1469,6 @@ ShowLinks(1, 7);
 <TD class="tb-cell1">&nbsp;</TD>
 </TR>
 <TR>
-<TH class="tb-th1" width="30">No.</TH>
-<TH class="tb-th1" width="63">名称</TH>
-<TH class="tb-th1" width="130">等级２</TH>
-<TH class="tb-th1" width="130">等级３</TH>
-<TH class="tb-th1" width="130">等级４</TH>
-<TH class="tb-th1" width="130">等级５</TH>
-<TH class="tb-th1" width="130">等级６</TH>
-<TH class="tb-th1" width="130">等级７</TH>
-</TR>
-<TR>
 <TD id="0101"class="tb-cell2" height="90">101</TD>
 <TD class="tb-cell1">雄龙魂头盔</TD>
 <TD class="tb-cell1 hc">
@@ -1650,7 +1476,7 @@ ShowLinks(1, 7);
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?01a1" target="items">苍火龙的鳞</A>×1<BR><A href="../items/items.html?022a" target="items">钢龍的爪</A>×1<BR><A href="../items/items.html?01a4" target="items"><FONT color="#ff0000">苍火龙的坚壳</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?023d" target="items">古龍的血</A>×1<BR>　【7800ｚ】</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?01a3" target="items">苍火龙的甲壳</A>×2<BR><A href="../items/items.html?01a6" target="items">苍火龙的翼</A>×1<BR><A href="../items/items.html?01a2" target="items"><FONT color="#ff0000">苍火龙的上鳞</FONT></A><FONT color="#ff0000">×2</FONT><BR><A href="../items/items.html?01a5" target="items">苍火龙的尻尾</A>×1<BR>　【9750ｚ】</TD>
+<A href="../items/items.html?01a3" target="items">苍火龙的甲壳</A>×2<BR><A href="../items/items.html?01a6" target="items">苍火龙的翼</A>×1<BR><A href="../items/items.html?01a2" target="items"><FONT color="#ff0000">苍火龙的上鳞</FONT></A><FONT color="#ff0000">×2</FONT><BR><A href="../items/items.html?01a5" target="items">苍火龙的尾巴</A>×1<BR>　【9750ｚ】</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?018a" target="items">雌火龙的逆鳞</A>×1<BR><A href="../items/items.html?01a4" target="items"><FONT color="#ff0000">苍火龙的坚壳</FONT></A><FONT color="#ff0000">×2</FONT><BR><A href="../items/items.html?00db" target="items">辉龙石</A>×2<BR><A href="../items/items.html?023b" target="items">炎龍的尘粉</A>×1<BR>　【11700ｚ】</TD>
 <TD class="tb-cell1">&nbsp;</TD>
@@ -1664,7 +1490,7 @@ ShowLinks(1, 7);
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?01a1" target="items">苍火龙的鳞</A>×1<BR><A href="../items/items.html?022a" target="items">钢龍的爪</A>×1<BR><A href="../items/items.html?01a4" target="items"><FONT color="#ff0000">苍火龙的坚壳</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?023d" target="items">古龍的血</A>×1<BR>　【7800ｚ】</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?01a3" target="items">苍火龙的甲壳</A>×2<BR><A href="../items/items.html?01a6" target="items">苍火龙的翼</A>×1<BR><A href="../items/items.html?01a2" target="items"><FONT color="#ff0000">苍火龙的上鳞</FONT></A><FONT color="#ff0000">×2</FONT><BR><A href="../items/items.html?01a5" target="items">苍火龙的尻尾</A>×1<BR>　【9750ｚ】</TD>
+<A href="../items/items.html?01a3" target="items">苍火龙的甲壳</A>×2<BR><A href="../items/items.html?01a6" target="items">苍火龙的翼</A>×1<BR><A href="../items/items.html?01a2" target="items"><FONT color="#ff0000">苍火龙的上鳞</FONT></A><FONT color="#ff0000">×2</FONT><BR><A href="../items/items.html?01a5" target="items">苍火龙的尾巴</A>×1<BR>　【9750ｚ】</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?018a" target="items">雌火龙的逆鳞</A>×1<BR><A href="../items/items.html?01a4" target="items"><FONT color="#ff0000">苍火龙的坚壳</FONT></A><FONT color="#ff0000">×2</FONT><BR><A href="../items/items.html?00db" target="items">辉龙石</A>×2<BR><A href="../items/items.html?023b" target="items">炎龍的尘粉</A>×1<BR>　【11700ｚ】</TD>
 <TD class="tb-cell1">&nbsp;</TD>
@@ -1674,13 +1500,13 @@ ShowLinks(1, 7);
 <TD id="0103"class="tb-cell2" height="90">103</TD>
 <TD class="tb-cell1">水龙Ｕ头盔</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?017d" target="items">水龙的鳞</A>×3<BR><A href="../items/items.html?0184" target="items">砂龙的鳍</A>×1<BR><A href="../items/items.html?0181" target="items"><FONT color="#ff0000">翠水龙的鳍</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?00ac" target="items">砥石</A>×5<BR>　【3769ｚ】</TD>
+<A href="../items/items.html?017d" target="items">水龙的鳞</A>×3<BR><A href="../items/items.html?0184" target="items">沙龙的鳍</A>×1<BR><A href="../items/items.html?0181" target="items"><FONT color="#ff0000">翠水龙的鳍</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?00ac" target="items">砥石</A>×5<BR>　【3769ｚ】</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?0180" target="items"><FONT color="#ff0000">翠水龙的鳞</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0183" target="items">砂龙的上鳞</A>×1<BR><A href="../items/items.html?00d9" target="items">大地的结晶</A>×3<BR><A href="../items/items.html?023d" target="items">古龍的血</A>×1<BR>　【4930ｚ】</TD>
+<A href="../items/items.html?0180" target="items"><FONT color="#ff0000">翠水龙的鳞</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0183" target="items">沙龙的上鳞</A>×1<BR><A href="../items/items.html?00d9" target="items">大地的结晶</A>×3<BR><A href="../items/items.html?023d" target="items">古龍的血</A>×1<BR>　【4930ｚ】</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?0181" target="items"><FONT color="#ff0000">翠水龙的鳍</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0185" target="items">砂龙的上鳍</A>×1<BR><A href="../items/items.html?010a" target="items">煌甲虫</A>×1<BR><A href="../items/items.html?0019" target="items">怪物的浓汁</A>×1<BR>　【5800ｚ】</TD>
+<A href="../items/items.html?0181" target="items"><FONT color="#ff0000">翠水龙的鳍</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0185" target="items">沙龙的上鳍</A>×1<BR><A href="../items/items.html?010a" target="items">煌甲虫</A>×1<BR><A href="../items/items.html?0019" target="items">怪物的浓汁</A>×1<BR>　【5800ｚ】</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?0180" target="items"><FONT color="#ff0000">翠水龙的鳞</FONT></A><FONT color="#ff0000">×3</FONT><BR><A href="../items/items.html?0183" target="items">砂龙的上鳞</A>×2<BR><A href="../items/items.html?0226" target="items">钢之龍鳞</A>×1<BR><A href="../items/items.html?024f" target="items">龍苔</A>×1<BR>　【6670ｚ】</TD>
+<A href="../items/items.html?0180" target="items"><FONT color="#ff0000">翠水龙的鳞</FONT></A><FONT color="#ff0000">×3</FONT><BR><A href="../items/items.html?0183" target="items">沙龙的上鳞</A>×2<BR><A href="../items/items.html?0226" target="items">钢之龍鳞</A>×1<BR><A href="../items/items.html?024f" target="items">龍苔</A>×1<BR>　【6670ｚ】</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 </TR>
@@ -1688,13 +1514,13 @@ ShowLinks(1, 7);
 <TD id="0104"class="tb-cell2" height="90">104</TD>
 <TD class="tb-cell1">水龙Ｕ软帽</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?017d" target="items">水龙的鳞</A>×3<BR><A href="../items/items.html?0184" target="items">砂龙的鳍</A>×1<BR><A href="../items/items.html?0181" target="items"><FONT color="#ff0000">翠水龙的鳍</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?00ac" target="items">砥石</A>×5<BR>　【3769ｚ】</TD>
+<A href="../items/items.html?017d" target="items">水龙的鳞</A>×3<BR><A href="../items/items.html?0184" target="items">沙龙的鳍</A>×1<BR><A href="../items/items.html?0181" target="items"><FONT color="#ff0000">翠水龙的鳍</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?00ac" target="items">砥石</A>×5<BR>　【3769ｚ】</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?0180" target="items"><FONT color="#ff0000">翠水龙的鳞</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0183" target="items">砂龙的上鳞</A>×1<BR><A href="../items/items.html?00d9" target="items">大地的结晶</A>×3<BR><A href="../items/items.html?023d" target="items">古龍的血</A>×1<BR>　【4930ｚ】</TD>
+<A href="../items/items.html?0180" target="items"><FONT color="#ff0000">翠水龙的鳞</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0183" target="items">沙龙的上鳞</A>×1<BR><A href="../items/items.html?00d9" target="items">大地的结晶</A>×3<BR><A href="../items/items.html?023d" target="items">古龍的血</A>×1<BR>　【4930ｚ】</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?0181" target="items"><FONT color="#ff0000">翠水龙的鳍</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0185" target="items">砂龙的上鳍</A>×1<BR><A href="../items/items.html?010a" target="items">煌甲虫</A>×1<BR><A href="../items/items.html?0019" target="items">怪物的浓汁</A>×1<BR>　【5800ｚ】</TD>
+<A href="../items/items.html?0181" target="items"><FONT color="#ff0000">翠水龙的鳍</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0185" target="items">沙龙的上鳍</A>×1<BR><A href="../items/items.html?010a" target="items">煌甲虫</A>×1<BR><A href="../items/items.html?0019" target="items">怪物的浓汁</A>×1<BR>　【5800ｚ】</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?0180" target="items"><FONT color="#ff0000">翠水龙的鳞</FONT></A><FONT color="#ff0000">×3</FONT><BR><A href="../items/items.html?0183" target="items">砂龙的上鳞</A>×2<BR><A href="../items/items.html?0226" target="items">钢之龍鳞</A>×1<BR><A href="../items/items.html?024f" target="items">龍苔</A>×1<BR>　【6670ｚ】</TD>
+<A href="../items/items.html?0180" target="items"><FONT color="#ff0000">翠水龙的鳞</FONT></A><FONT color="#ff0000">×3</FONT><BR><A href="../items/items.html?0183" target="items">沙龙的上鳞</A>×2<BR><A href="../items/items.html?0226" target="items">钢之龍鳞</A>×1<BR><A href="../items/items.html?024f" target="items">龍苔</A>×1<BR>　【6670ｚ】</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 </TR>
@@ -1711,16 +1537,6 @@ ShowLinks(1, 7);
 <A href="../items/items.html?01b4" target="items"><FONT color="#ff0000">岩龙的翼</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?00db" target="items">辉龙石</A>×2<BR><A href="../items/items.html?00dd" target="items">白鸠石</A>×2<BR><A href="../items/items.html?023b" target="items">炎龍的尘粉</A>×1<BR>　【4860ｚ】</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1">&nbsp;</TD>
-</TR>
-<TR>
-<TH class="tb-th1" width="30">No.</TH>
-<TH class="tb-th1" width="63">名称</TH>
-<TH class="tb-th1" width="130">等级２</TH>
-<TH class="tb-th1" width="130">等级３</TH>
-<TH class="tb-th1" width="130">等级４</TH>
-<TH class="tb-th1" width="130">等级５</TH>
-<TH class="tb-th1" width="130">等级６</TH>
-<TH class="tb-th1" width="130">等级７</TH>
 </TR>
 <TR>
 <TD id="0106"class="tb-cell2" height="90">106</TD>
@@ -1740,7 +1556,7 @@ ShowLinks(1, 7);
 <TD id="0107"class="tb-cell2" height="90">107</TD>
 <TD class="tb-cell1">角龙Ｕ头盔</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?01c5" target="items">黑角龙的甲壳</A>×1<BR><A href="../items/items.html?01c7" target="items">黑角龙的尻尾</A>×1<BR><A href="../items/items.html?01c8" target="items"><FONT color="#ff0000">黑角龙的坚壳</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?00da" target="items">燕雀石</A>×2<BR>　【6120ｚ】</TD>
+<A href="../items/items.html?01c5" target="items">黑角龙的甲壳</A>×1<BR><A href="../items/items.html?01c7" target="items">黑角龙的尾巴</A>×1<BR><A href="../items/items.html?01c8" target="items"><FONT color="#ff0000">黑角龙的坚壳</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?00da" target="items">燕雀石</A>×2<BR>　【6120ｚ】</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?01c5" target="items"><FONT color="#ff0000">黑角龙的甲壳</FONT></A><FONT color="#ff0000">×2</FONT><BR><A href="../items/items.html?0177" target="items">橡胶质的上皮</A>×1<BR><A href="../items/items.html?013a" target="items">龙骨【大】</A>×1<BR><A href="../items/items.html?023d" target="items">古龍的血</A>×1<BR>　【7344ｚ】</TD>
 <TD class="tb-cell1 hc">
@@ -1754,7 +1570,7 @@ ShowLinks(1, 7);
 <TD id="0108"class="tb-cell2" height="90">108</TD>
 <TD class="tb-cell1">角龙Ｕ软帽</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?01c5" target="items">黑角龙的甲壳</A>×1<BR><A href="../items/items.html?01c7" target="items">黑角龙的尻尾</A>×1<BR><A href="../items/items.html?01c8" target="items"><FONT color="#ff0000">黑角龙的坚壳</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?00da" target="items">燕雀石</A>×2<BR>　【6120ｚ】</TD>
+<A href="../items/items.html?01c5" target="items">黑角龙的甲壳</A>×1<BR><A href="../items/items.html?01c7" target="items">黑角龙的尾巴</A>×1<BR><A href="../items/items.html?01c8" target="items"><FONT color="#ff0000">黑角龙的坚壳</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?00da" target="items">燕雀石</A>×2<BR>　【6120ｚ】</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?01c5" target="items"><FONT color="#ff0000">黑角龙的甲壳</FONT></A><FONT color="#ff0000">×2</FONT><BR><A href="../items/items.html?0177" target="items">橡胶质的上皮</A>×1<BR><A href="../items/items.html?013a" target="items">龙骨【大】</A>×1<BR><A href="../items/items.html?023d" target="items">古龍的血</A>×1<BR>　【7344ｚ】</TD>
 <TD class="tb-cell1 hc">
@@ -1793,16 +1609,6 @@ ShowLinks(1, 7);
 <TD class="tb-cell1">&nbsp;</TD>
 </TR>
 <TR>
-<TH class="tb-th1" width="30">No.</TH>
-<TH class="tb-th1" width="63">名称</TH>
-<TH class="tb-th1" width="130">等级２</TH>
-<TH class="tb-th1" width="130">等级３</TH>
-<TH class="tb-th1" width="130">等级４</TH>
-<TH class="tb-th1" width="130">等级５</TH>
-<TH class="tb-th1" width="130">等级６</TH>
-<TH class="tb-th1" width="130">等级７</TH>
-</TR>
-<TR>
 <TD id="0111"class="tb-cell2" height="90">111</TD>
 <TD class="tb-cell1">铠龙Ｕ头盔</TD>
 <TD class="tb-cell1 hc">
@@ -1836,7 +1642,7 @@ ShowLinks(1, 7);
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?02ea" target="items"><FONT color="#ff0000">公会券</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0328" target="items">美声珠</A>×1<BR><BR><BR>　【8800ｚ】</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?02e4" target="items"><FONT color="#ff0000">战友之绊</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0351" target="items">防音珠</A>×1<BR><BR><BR>　【11439ｚ】</TD>
+<A href="../items/items.html?02e4" target="items"><FONT color="#ff0000">战友之纽带</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0351" target="items">防音珠</A>×1<BR><BR><BR>　【11439ｚ】</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?02ea" target="items"><FONT color="#ff0000">公会券</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0350" target="items">美食珠</A>×1<BR><BR><BR>　【13200ｚ】</TD>
 <TD class="tb-cell1 hc">
@@ -1850,7 +1656,7 @@ ShowLinks(1, 7);
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?02ea" target="items"><FONT color="#ff0000">公会券</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0328" target="items">美声珠</A>×1<BR><BR><BR>　【8800ｚ】</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?02e4" target="items"><FONT color="#ff0000">战友之绊</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0351" target="items">防音珠</A>×1<BR><BR><BR>　【11439ｚ】</TD>
+<A href="../items/items.html?02e4" target="items"><FONT color="#ff0000">战友之纽带</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0351" target="items">防音珠</A>×1<BR><BR><BR>　【11439ｚ】</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?02ea" target="items"><FONT color="#ff0000">公会券</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0350" target="items">美食珠</A>×1<BR><BR><BR>　【13200ｚ】</TD>
 <TD class="tb-cell1 hc">
@@ -1873,16 +1679,6 @@ ShowLinks(1, 7);
 <TD class="tb-cell1">&nbsp;</TD>
 </TR>
 <TR>
-<TH class="tb-th1" width="30">No.</TH>
-<TH class="tb-th1" width="63">名称</TH>
-<TH class="tb-th1" width="130">等级２</TH>
-<TH class="tb-th1" width="130">等级３</TH>
-<TH class="tb-th1" width="130">等级４</TH>
-<TH class="tb-th1" width="130">等级５</TH>
-<TH class="tb-th1" width="130">等级６</TH>
-<TH class="tb-th1" width="130">等级７</TH>
-</TR>
-<TR>
 <TD id="0116"class="tb-cell2 hc" height="90">116</TD>
 <TD class="tb-cell1 hc">守卫者Ｕ面具</TD>
 <TD class="tb-cell1 hc">
@@ -1898,7 +1694,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0117"class="tb-cell2 hc" height="90">117</TD>
-<TD class="tb-cell1 hc">助理Ｕ兜帽</TD>
+<TD class="tb-cell1 hc">助手Ｕ兜帽</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?02cf" target="items"><FONT color="#ff0000">公会硬币</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?02c7" target="items"><FONT color="#ff0000">飞龙的硬币</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?01ed" target="items"><FONT color="#ff0000">黑龍的甲壳</FONT></A><FONT color="#ff0000">×1</FONT><BR><BR>　【12000ｚ】</TD>
 <TD class="tb-cell1 hc">
@@ -1912,7 +1708,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0118"class="tb-cell2 hc" height="90">118</TD>
-<TD class="tb-cell1 hc">医师Ｕ贝雷帽</TD>
+<TD class="tb-cell1 hc">治愈者Ｕ贝雷帽</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?02cf" target="items"><FONT color="#ff0000">公会硬币</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?02c7" target="items"><FONT color="#ff0000">飞龙的硬币</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?01ed" target="items"><FONT color="#ff0000">黑龍的甲壳</FONT></A><FONT color="#ff0000">×1</FONT><BR><BR>　【12000ｚ】</TD>
 <TD class="tb-cell1 hc">
@@ -1930,9 +1726,9 @@ ShowLinks(1, 7);
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?01e9" target="items"><FONT color="#ff0000">老山龍的苍角</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0240" target="items">炎妃龍的鬣毛</A>×2<BR><A href="../items/items.html?02e8" target="items">勇气之证</A>×1<BR><A href="../items/items.html?013c" target="items">古龍骨</A>×2<BR>　【19500ｚ】</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?01ea" target="items"><FONT color="#ff0000">老山龍的苍甲壳</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0243" target="items">炎妃龍的角</A>×1<BR><A href="../items/items.html?02e4" target="items">战友之绊</A>×1<BR><A href="../items/items.html?023d" target="items">古龍的血</A>×1<BR>　【23400ｚ】</TD>
+<A href="../items/items.html?01ea" target="items"><FONT color="#ff0000">老山龍的苍甲壳</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0243" target="items">炎妃龍的角</A>×1<BR><A href="../items/items.html?02e4" target="items">战友之纽带</A>×1<BR><A href="../items/items.html?023d" target="items">古龍的血</A>×1<BR>　【23400ｚ】</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?01e9" target="items"><FONT color="#ff0000">老山龍的苍角</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0242" target="items">炎妃龍的尻尾</A>×1<BR><A href="../items/items.html?02e3" target="items">战友之证</A>×1<BR><A href="../items/items.html?0144" target="items">龙玉</A>×1<BR>　【28599ｚ】</TD>
+<A href="../items/items.html?01e9" target="items"><FONT color="#ff0000">老山龍的苍角</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0242" target="items">炎妃龍的尾巴</A>×1<BR><A href="../items/items.html?02e3" target="items">战友之证</A>×1<BR><A href="../items/items.html?0144" target="items">龙玉</A>×1<BR>　【28599ｚ】</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?01ea" target="items"><FONT color="#ff0000">老山龍的苍甲壳</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?018a" target="items">雌火龙的逆鳞</A>×1<BR><A href="../items/items.html?00de" target="items">红莲石</A>×3<BR><A href="../items/items.html?023b" target="items">炎龍的尘粉</A>×1<BR>　【32500ｚ】</TD>
 <TD class="tb-cell1">&nbsp;</TD>
@@ -1944,23 +1740,13 @@ ShowLinks(1, 7);
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?01e9" target="items"><FONT color="#ff0000">老山龍的苍角</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0240" target="items">炎妃龍的鬣毛</A>×2<BR><A href="../items/items.html?02e8" target="items">勇气之证</A>×1<BR><A href="../items/items.html?013c" target="items">古龍骨</A>×2<BR>　【19500ｚ】</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?01ea" target="items"><FONT color="#ff0000">老山龍的苍甲壳</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0243" target="items">炎妃龍的角</A>×1<BR><A href="../items/items.html?02e4" target="items">战友之绊</A>×1<BR><A href="../items/items.html?023d" target="items">古龍的血</A>×1<BR>　【23400ｚ】</TD>
+<A href="../items/items.html?01ea" target="items"><FONT color="#ff0000">老山龍的苍甲壳</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0243" target="items">炎妃龍的角</A>×1<BR><A href="../items/items.html?02e4" target="items">战友之纽带</A>×1<BR><A href="../items/items.html?023d" target="items">古龍的血</A>×1<BR>　【23400ｚ】</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?01e9" target="items"><FONT color="#ff0000">老山龍的苍角</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0242" target="items">炎妃龍的尻尾</A>×1<BR><A href="../items/items.html?02e3" target="items">战友之证</A>×1<BR><A href="../items/items.html?0144" target="items">龙玉</A>×1<BR>　【28599ｚ】</TD>
+<A href="../items/items.html?01e9" target="items"><FONT color="#ff0000">老山龍的苍角</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0242" target="items">炎妃龍的尾巴</A>×1<BR><A href="../items/items.html?02e3" target="items">战友之证</A>×1<BR><A href="../items/items.html?0144" target="items">龙玉</A>×1<BR>　【28599ｚ】</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?01ea" target="items"><FONT color="#ff0000">老山龍的苍甲壳</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?018a" target="items">雌火龙的逆鳞</A>×1<BR><A href="../items/items.html?00de" target="items">红莲石</A>×3<BR><A href="../items/items.html?023b" target="items">炎龍的尘粉</A>×1<BR>　【32500ｚ】</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1">&nbsp;</TD>
-</TR>
-<TR>
-<TH class="tb-th1" width="30">No.</TH>
-<TH class="tb-th1" width="63">名称</TH>
-<TH class="tb-th1" width="130">等级２</TH>
-<TH class="tb-th1" width="130">等级３</TH>
-<TH class="tb-th1" width="130">等级４</TH>
-<TH class="tb-th1" width="130">等级５</TH>
-<TH class="tb-th1" width="130">等级６</TH>
-<TH class="tb-th1" width="130">等级７</TH>
 </TR>
 <TR>
 <TD id="0121"class="tb-cell2 hc" height="90">121</TD>
@@ -1968,9 +1754,9 @@ ShowLinks(1, 7);
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?01e9" target="items"><FONT color="#ff0000">老山龍的苍角</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0240" target="items">炎妃龍的鬣毛</A>×2<BR><A href="../items/items.html?02e8" target="items">勇气之证</A>×1<BR><A href="../items/items.html?013c" target="items">古龍骨</A>×2<BR>　【19500ｚ】</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?01ea" target="items"><FONT color="#ff0000">老山龍的苍甲壳</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0243" target="items">炎妃龍的角</A>×1<BR><A href="../items/items.html?02e4" target="items">战友之绊</A>×1<BR><A href="../items/items.html?023d" target="items">古龍的血</A>×1<BR>　【23400ｚ】</TD>
+<A href="../items/items.html?01ea" target="items"><FONT color="#ff0000">老山龍的苍甲壳</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0243" target="items">炎妃龍的角</A>×1<BR><A href="../items/items.html?02e4" target="items">战友之纽带</A>×1<BR><A href="../items/items.html?023d" target="items">古龍的血</A>×1<BR>　【23400ｚ】</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?01e9" target="items"><FONT color="#ff0000">老山龍的苍角</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0242" target="items">炎妃龍的尻尾</A>×1<BR><A href="../items/items.html?02e3" target="items">战友之证</A>×1<BR><A href="../items/items.html?0144" target="items">龙玉</A>×1<BR>　【28599ｚ】</TD>
+<A href="../items/items.html?01e9" target="items"><FONT color="#ff0000">老山龍的苍角</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0242" target="items">炎妃龍的尾巴</A>×1<BR><A href="../items/items.html?02e3" target="items">战友之证</A>×1<BR><A href="../items/items.html?0144" target="items">龙玉</A>×1<BR>　【28599ｚ】</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?01ea" target="items"><FONT color="#ff0000">老山龍的苍甲壳</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?018a" target="items">雌火龙的逆鳞</A>×1<BR><A href="../items/items.html?00de" target="items">红莲石</A>×3<BR><A href="../items/items.html?023b" target="items">炎龍的尘粉</A>×1<BR>　【32500ｚ】</TD>
 <TD class="tb-cell1">&nbsp;</TD>
@@ -1982,9 +1768,9 @@ ShowLinks(1, 7);
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?01e9" target="items"><FONT color="#ff0000">老山龍的苍角</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0240" target="items">炎妃龍的鬣毛</A>×2<BR><A href="../items/items.html?02e8" target="items">勇气之证</A>×1<BR><A href="../items/items.html?013c" target="items">古龍骨</A>×2<BR>　【19500ｚ】</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?01ea" target="items"><FONT color="#ff0000">老山龍的苍甲壳</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0243" target="items">炎妃龍的角</A>×1<BR><A href="../items/items.html?02e4" target="items">战友之绊</A>×1<BR><A href="../items/items.html?023d" target="items">古龍的血</A>×1<BR>　【23400ｚ】</TD>
+<A href="../items/items.html?01ea" target="items"><FONT color="#ff0000">老山龍的苍甲壳</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0243" target="items">炎妃龍的角</A>×1<BR><A href="../items/items.html?02e4" target="items">战友之纽带</A>×1<BR><A href="../items/items.html?023d" target="items">古龍的血</A>×1<BR>　【23400ｚ】</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?01e9" target="items"><FONT color="#ff0000">老山龍的苍角</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0242" target="items">炎妃龍的尻尾</A>×1<BR><A href="../items/items.html?02e3" target="items">战友之证</A>×1<BR><A href="../items/items.html?0144" target="items">龙玉</A>×1<BR>　【28599ｚ】</TD>
+<A href="../items/items.html?01e9" target="items"><FONT color="#ff0000">老山龍的苍角</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0242" target="items">炎妃龍的尾巴</A>×1<BR><A href="../items/items.html?02e3" target="items">战友之证</A>×1<BR><A href="../items/items.html?0144" target="items">龙玉</A>×1<BR>　【28599ｚ】</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?01ea" target="items"><FONT color="#ff0000">老山龍的苍甲壳</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?018a" target="items">雌火龙的逆鳞</A>×1<BR><A href="../items/items.html?00de" target="items">红莲石</A>×3<BR><A href="../items/items.html?023b" target="items">炎龍的尘粉</A>×1<BR>　【32500ｚ】</TD>
 <TD class="tb-cell1">&nbsp;</TD>
@@ -1992,7 +1778,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0123"class="tb-cell2 hc" height="90">123</TD>
-<TD class="tb-cell1 hc">魔龍之首</TD>
+<TD class="tb-cell1 hc">红龍之首</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?01f2" target="items"><FONT color="#ff0000">黑龍的红壳</FONT></A><FONT color="#ff0000">×2</FONT><BR><A href="../items/items.html?01f4" target="items"><FONT color="#ff0000">黑龍的红翼</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?019a" target="items"><FONT color="#ff0000">火龙的逆鳞</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?018b" target="items"><FONT color="#ff0000">雌火龙的红玉</FONT></A><FONT color="#ff0000">×1</FONT><BR>　【22500ｚ】</TD>
 <TD class="tb-cell1 hc">
@@ -2006,7 +1792,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0124"class="tb-cell2 hc" height="90">124</TD>
-<TD class="tb-cell1 hc">魔龍之面</TD>
+<TD class="tb-cell1 hc">红龍之面</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?01f2" target="items"><FONT color="#ff0000">黑龍的红壳</FONT></A><FONT color="#ff0000">×2</FONT><BR><A href="../items/items.html?01f4" target="items"><FONT color="#ff0000">黑龍的红翼</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?019a" target="items"><FONT color="#ff0000">火龙的逆鳞</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?018b" target="items"><FONT color="#ff0000">雌火龙的红玉</FONT></A><FONT color="#ff0000">×1</FONT><BR>　【22500ｚ】</TD>
 <TD class="tb-cell1 hc">
@@ -2031,16 +1817,6 @@ ShowLinks(1, 7);
 <A href="../items/items.html?0195" target="items"><FONT color="#ff0000">金火龙的坚壳</FONT></A><FONT color="#ff0000">×2</FONT><BR><A href="../items/items.html?01e6" target="items">老山龍的红玉</A>×1<BR><A href="../items/items.html?00de" target="items">红莲石</A>×2<BR><A href="../items/items.html?024f" target="items">龍苔</A>×1<BR>　【54000ｚ】</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1">&nbsp;</TD>
-</TR>
-<TR>
-<TH class="tb-th1" width="30">No.</TH>
-<TH class="tb-th1" width="63">名称</TH>
-<TH class="tb-th1" width="130">等级２</TH>
-<TH class="tb-th1" width="130">等级３</TH>
-<TH class="tb-th1" width="130">等级４</TH>
-<TH class="tb-th1" width="130">等级５</TH>
-<TH class="tb-th1" width="130">等级６</TH>
-<TH class="tb-th1" width="130">等级７</TH>
 </TR>
 <TR>
 <TD id="0126"class="tb-cell2 hc" height="90">126</TD>
@@ -2113,16 +1889,6 @@ ShowLinks(1, 7);
 <TD class="tb-cell1">&nbsp;</TD>
 </TR>
 <TR>
-<TH class="tb-th1" width="30">No.</TH>
-<TH class="tb-th1" width="63">名称</TH>
-<TH class="tb-th1" width="130">等级２</TH>
-<TH class="tb-th1" width="130">等级３</TH>
-<TH class="tb-th1" width="130">等级４</TH>
-<TH class="tb-th1" width="130">等级５</TH>
-<TH class="tb-th1" width="130">等级６</TH>
-<TH class="tb-th1" width="130">等级７</TH>
-</TR>
-<TR>
 <TD id="0131"class="tb-cell2" height="90">131</TD>
 <TD class="tb-cell1">猎人Ｓ头盔</TD>
 <TD class="tb-cell1 hc">
@@ -2154,7 +1920,7 @@ ShowLinks(1, 7);
 <TD id="0133"class="tb-cell2" height="90">133</TD>
 <TD class="tb-cell1">骸骨Ｓ头盔</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?0150" target="items"><FONT color="#ff0000">大猪的硬皮</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0140" target="items">棒状之骨</A>×3<BR><A href="../items/items.html?0108" target="items">粘着蝗虫</A>×2<BR><BR>　【1500ｚ】</TD>
+<A href="../items/items.html?0150" target="items"><FONT color="#ff0000">大猪的硬皮</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0140" target="items">棒状之骨</A>×3<BR><A href="../items/items.html?0108" target="items">黏着蝗虫</A>×2<BR><BR>　【1500ｚ】</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?0159" target="items">蓝速龙王的皮</A>×1<BR><A href="../items/items.html?0139" target="items"><FONT color="#ff0000">龙骨【中】</FONT></A><FONT color="#ff0000">×3</FONT><BR><A href="../items/items.html?0018" target="items">怪物的体液</A>×2<BR><A href="../items/items.html?013b" target="items">坚龙骨</A>×1<BR>　【2000ｚ】</TD>
 <TD class="tb-cell1 hc">
@@ -2168,7 +1934,7 @@ ShowLinks(1, 7);
 <TD id="0134"class="tb-cell2" height="90">134</TD>
 <TD class="tb-cell1">骸骨Ｓ软帽</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?0150" target="items"><FONT color="#ff0000">大猪的硬皮</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0140" target="items">棒状之骨</A>×3<BR><A href="../items/items.html?0108" target="items">粘着蝗虫</A>×2<BR><BR>　【1500ｚ】</TD>
+<A href="../items/items.html?0150" target="items"><FONT color="#ff0000">大猪的硬皮</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0140" target="items">棒状之骨</A>×3<BR><A href="../items/items.html?0108" target="items">黏着蝗虫</A>×2<BR><BR>　【1500ｚ】</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?0159" target="items">蓝速龙王的皮</A>×1<BR><A href="../items/items.html?0139" target="items"><FONT color="#ff0000">龙骨【中】</FONT></A><FONT color="#ff0000">×3</FONT><BR><A href="../items/items.html?0018" target="items">怪物的体液</A>×2<BR><A href="../items/items.html?013b" target="items">坚龙骨</A>×1<BR>　【2000ｚ】</TD>
 <TD class="tb-cell1 hc">
@@ -2182,7 +1948,7 @@ ShowLinks(1, 7);
 <TD id="0135"class="tb-cell2" height="90">135</TD>
 <TD class="tb-cell1">蓝速龙Ｓ头盔</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?0158" target="items">蓝速龙的皮</A>×3<BR><A href="../items/items.html?0157" target="items"><FONT color="#ff0000">蓝速龙的上鳞</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?00d9" target="items">大地的结晶</A>×1<BR><A href="../items/items.html?0108" target="items">粘着蝗虫</A>×1<BR>　【1800ｚ】</TD>
+<A href="../items/items.html?0158" target="items">蓝速龙的皮</A>×3<BR><A href="../items/items.html?0157" target="items"><FONT color="#ff0000">蓝速龙的上鳞</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?00d9" target="items">大地的结晶</A>×1<BR><A href="../items/items.html?0108" target="items">黏着蝗虫</A>×1<BR>　【1800ｚ】</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?0156" target="items"><FONT color="#ff0000">蓝速龙的鳞</FONT></A><FONT color="#ff0000">×3</FONT><BR><A href="../items/items.html?0252" target="items">蛇龙的皮</A>×1<BR><A href="../items/items.html?00d6" target="items">阳光石</A>×1<BR><A href="../items/items.html?00da" target="items">燕雀石</A>×1<BR>　【2400ｚ】</TD>
 <TD class="tb-cell1 hc">
@@ -2193,20 +1959,10 @@ ShowLinks(1, 7);
 <TD class="tb-cell1">&nbsp;</TD>
 </TR>
 <TR>
-<TH class="tb-th1" width="30">No.</TH>
-<TH class="tb-th1" width="63">名称</TH>
-<TH class="tb-th1" width="130">等级２</TH>
-<TH class="tb-th1" width="130">等级３</TH>
-<TH class="tb-th1" width="130">等级４</TH>
-<TH class="tb-th1" width="130">等级５</TH>
-<TH class="tb-th1" width="130">等级６</TH>
-<TH class="tb-th1" width="130">等级７</TH>
-</TR>
-<TR>
 <TD id="0136"class="tb-cell2" height="90">136</TD>
 <TD class="tb-cell1">蓝速龙Ｓ软帽</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?0158" target="items">蓝速龙的皮</A>×3<BR><A href="../items/items.html?0157" target="items"><FONT color="#ff0000">蓝速龙的上鳞</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?00d9" target="items">大地的结晶</A>×1<BR><A href="../items/items.html?0108" target="items">粘着蝗虫</A>×1<BR>　【1800ｚ】</TD>
+<A href="../items/items.html?0158" target="items">蓝速龙的皮</A>×3<BR><A href="../items/items.html?0157" target="items"><FONT color="#ff0000">蓝速龙的上鳞</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?00d9" target="items">大地的结晶</A>×1<BR><A href="../items/items.html?0108" target="items">黏着蝗虫</A>×1<BR>　【1800ｚ】</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?0156" target="items"><FONT color="#ff0000">蓝速龙的鳞</FONT></A><FONT color="#ff0000">×3</FONT><BR><A href="../items/items.html?0252" target="items">蛇龙的皮</A>×1<BR><A href="../items/items.html?00d6" target="items">阳光石</A>×1<BR><A href="../items/items.html?00da" target="items">燕雀石</A>×1<BR>　【2400ｚ】</TD>
 <TD class="tb-cell1 hc">
@@ -2250,7 +2006,7 @@ ShowLinks(1, 7);
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?01cc" target="items">巨蜂的羽</A>×1<BR><A href="../items/items.html?0019" target="items"><FONT color="#ff0000">怪物的浓汁</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?023d" target="items">古龍的血</A>×1<BR><A href="../items/items.html?0121" target="items">大力神王虫</A>×1<BR>　【2250ｚ】</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?01ca" target="items"><FONT color="#ff0000">巨蜂的甲壳</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0108" target="items">粘着蝗虫</A>×1<BR><A href="../items/items.html?010a" target="items">煌甲虫</A>×1<BR><A href="../items/items.html?00dc" target="items">灵鹤石</A>×1<BR>　【3000ｚ】</TD>
+<A href="../items/items.html?01ca" target="items"><FONT color="#ff0000">巨蜂的甲壳</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0108" target="items">黏着蝗虫</A>×1<BR><A href="../items/items.html?010a" target="items">煌甲虫</A>×1<BR><A href="../items/items.html?00dc" target="items">灵鹤石</A>×1<BR>　【3000ｚ】</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?01cd" target="items"><FONT color="#ff0000">巨蜂的薄羽</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0018" target="items">怪物的体液</A>×1<BR><A href="../items/items.html?023d" target="items">古龍的血</A>×1<BR><A href="../items/items.html?0107" target="items">王族花金龟</A>×1<BR>　【3750ｚ】</TD>
 <TD class="tb-cell1 hc">
@@ -2264,7 +2020,7 @@ ShowLinks(1, 7);
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?01cc" target="items">巨蜂的羽</A>×1<BR><A href="../items/items.html?0019" target="items"><FONT color="#ff0000">怪物的浓汁</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?023d" target="items">古龍的血</A>×1<BR><A href="../items/items.html?0121" target="items">大力神王虫</A>×1<BR>　【2250ｚ】</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?01ca" target="items"><FONT color="#ff0000">巨蜂的甲壳</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0108" target="items">粘着蝗虫</A>×1<BR><A href="../items/items.html?010a" target="items">煌甲虫</A>×1<BR><A href="../items/items.html?00dc" target="items">灵鹤石</A>×1<BR>　【3000ｚ】</TD>
+<A href="../items/items.html?01ca" target="items"><FONT color="#ff0000">巨蜂的甲壳</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0108" target="items">黏着蝗虫</A>×1<BR><A href="../items/items.html?010a" target="items">煌甲虫</A>×1<BR><A href="../items/items.html?00dc" target="items">灵鹤石</A>×1<BR>　【3000ｚ】</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?01cd" target="items"><FONT color="#ff0000">巨蜂的薄羽</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0018" target="items">怪物的体液</A>×1<BR><A href="../items/items.html?023d" target="items">古龍的血</A>×1<BR><A href="../items/items.html?0107" target="items">王族花金龟</A>×1<BR>　【3750ｚ】</TD>
 <TD class="tb-cell1 hc">
@@ -2273,22 +2029,12 @@ ShowLinks(1, 7);
 <TD class="tb-cell1">&nbsp;</TD>
 </TR>
 <TR>
-<TH class="tb-th1" width="30">No.</TH>
-<TH class="tb-th1" width="63">名称</TH>
-<TH class="tb-th1" width="130">等级２</TH>
-<TH class="tb-th1" width="130">等级３</TH>
-<TH class="tb-th1" width="130">等级４</TH>
-<TH class="tb-th1" width="130">等级５</TH>
-<TH class="tb-th1" width="130">等级６</TH>
-<TH class="tb-th1" width="130">等级７</TH>
-</TR>
-<TR>
 <TD id="0141"class="tb-cell2" height="90">141</TD>
 <TD class="tb-cell1">爬虫Ｓ头盔</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?01d0" target="items">爬虫的羽</A>×1<BR><A href="../items/items.html?0019" target="items"><FONT color="#ff0000">怪物的浓汁</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?023d" target="items">古龍的血</A>×1<BR><A href="../items/items.html?0121" target="items">大力神王虫</A>×1<BR>　【2175ｚ】</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?01ce" target="items"><FONT color="#ff0000">爬虫的甲壳</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0108" target="items">粘着蝗虫</A>×1<BR><A href="../items/items.html?010a" target="items">煌甲虫</A>×1<BR><A href="../items/items.html?00dc" target="items">灵鹤石</A>×1<BR>　【2900ｚ】</TD>
+<A href="../items/items.html?01ce" target="items"><FONT color="#ff0000">爬虫的甲壳</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0108" target="items">黏着蝗虫</A>×1<BR><A href="../items/items.html?010a" target="items">煌甲虫</A>×1<BR><A href="../items/items.html?00dc" target="items">灵鹤石</A>×1<BR>　【2900ｚ】</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?01d1" target="items"><FONT color="#ff0000">爬虫的薄羽</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0018" target="items">怪物的体液</A>×1<BR><A href="../items/items.html?023d" target="items">古龍的血</A>×1<BR><A href="../items/items.html?0107" target="items">王族花金龟</A>×1<BR>　【3625ｚ】</TD>
 <TD class="tb-cell1 hc">
@@ -2302,7 +2048,7 @@ ShowLinks(1, 7);
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?01d0" target="items">爬虫的羽</A>×1<BR><A href="../items/items.html?0019" target="items"><FONT color="#ff0000">怪物的浓汁</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?023d" target="items">古龍的血</A>×1<BR><A href="../items/items.html?0121" target="items">大力神王虫</A>×1<BR>　【2175ｚ】</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?01ce" target="items"><FONT color="#ff0000">爬虫的甲壳</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0108" target="items">粘着蝗虫</A>×1<BR><A href="../items/items.html?010a" target="items">煌甲虫</A>×1<BR><A href="../items/items.html?00dc" target="items">灵鹤石</A>×1<BR>　【2900ｚ】</TD>
+<A href="../items/items.html?01ce" target="items"><FONT color="#ff0000">爬虫的甲壳</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0108" target="items">黏着蝗虫</A>×1<BR><A href="../items/items.html?010a" target="items">煌甲虫</A>×1<BR><A href="../items/items.html?00dc" target="items">灵鹤石</A>×1<BR>　【2900ｚ】</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?01d1" target="items"><FONT color="#ff0000">爬虫的薄羽</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0018" target="items">怪物的体液</A>×1<BR><A href="../items/items.html?023d" target="items">古龍的血</A>×1<BR><A href="../items/items.html?0107" target="items">王族花金龟</A>×1<BR>　【3625ｚ】</TD>
 <TD class="tb-cell1 hc">
@@ -2312,7 +2058,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0143"class="tb-cell2" height="90">143</TD>
-<TD class="tb-cell1">精炼矿石Ｓ头盔</TD>
+<TD class="tb-cell1">高等合金Ｓ头盔</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?00d8" target="items">铁矿石</A>×1<BR><A href="../items/items.html?00d6" target="items">阳光石</A>×1<BR><A href="../items/items.html?00dc" target="items"><FONT color="#ff0000">灵鹤石</FONT></A><FONT color="#ff0000">×1</FONT><BR><BR>　【2550ｚ】</TD>
 <TD class="tb-cell1 hc">
@@ -2326,7 +2072,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0144"class="tb-cell2" height="90">144</TD>
-<TD class="tb-cell1">精炼矿石Ｓ软帽</TD>
+<TD class="tb-cell1">高等合金Ｓ软帽</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?00d8" target="items">铁矿石</A>×1<BR><A href="../items/items.html?00d6" target="items">阳光石</A>×1<BR><A href="../items/items.html?00dc" target="items"><FONT color="#ff0000">灵鹤石</FONT></A><FONT color="#ff0000">×1</FONT><BR><BR>　【2550ｚ】</TD>
 <TD class="tb-cell1 hc">
@@ -2351,16 +2097,6 @@ ShowLinks(1, 7);
 <A href="../items/items.html?0162" target="items">黄速龙的皮</A>×4<BR><A href="../items/items.html?0161" target="items"><FONT color="#ff0000">黄速龙的上鳞</FONT></A><FONT color="#ff0000">×2</FONT><BR><A href="../items/items.html?0019" target="items">怪物的浓汁</A>×1<BR><A href="../items/items.html?00dc" target="items">灵鹤石</A>×1<BR>　【5550ｚ】</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1">&nbsp;</TD>
-</TR>
-<TR>
-<TH class="tb-th1" width="30">No.</TH>
-<TH class="tb-th1" width="63">名称</TH>
-<TH class="tb-th1" width="130">等级２</TH>
-<TH class="tb-th1" width="130">等级３</TH>
-<TH class="tb-th1" width="130">等级４</TH>
-<TH class="tb-th1" width="130">等级５</TH>
-<TH class="tb-th1" width="130">等级６</TH>
-<TH class="tb-th1" width="130">等级７</TH>
 </TR>
 <TR>
 <TD id="0146"class="tb-cell2" height="90">146</TD>
@@ -2433,16 +2169,6 @@ ShowLinks(1, 7);
 <TD class="tb-cell1">&nbsp;</TD>
 </TR>
 <TR>
-<TH class="tb-th1" width="30">No.</TH>
-<TH class="tb-th1" width="63">名称</TH>
-<TH class="tb-th1" width="130">等级２</TH>
-<TH class="tb-th1" width="130">等级３</TH>
-<TH class="tb-th1" width="130">等级４</TH>
-<TH class="tb-th1" width="130">等级５</TH>
-<TH class="tb-th1" width="130">等级６</TH>
-<TH class="tb-th1" width="130">等级７</TH>
-</TR>
-<TR>
 <TD id="0151"class="tb-cell2" height="90">151</TD>
 <TD class="tb-cell1">毒怪鸟Ｓ头盔</TD>
 <TD class="tb-cell1 hc">
@@ -2472,29 +2198,29 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0153"class="tb-cell2" height="90">153</TD>
-<TD class="tb-cell1">砂龙Ｓ头盔</TD>
+<TD class="tb-cell1">沙龙Ｓ头盔</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?0183" target="items"><FONT color="#ff0000">砂龙的上鳞</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?00da" target="items">燕雀石</A>×2<BR><A href="../items/items.html?00dc" target="items">灵鹤石</A>×1<BR><BR>　【3375ｚ】</TD>
+<A href="../items/items.html?0183" target="items"><FONT color="#ff0000">沙龙的上鳞</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?00da" target="items">燕雀石</A>×2<BR><A href="../items/items.html?00dc" target="items">灵鹤石</A>×1<BR><BR>　【3375ｚ】</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?017e" target="items">水龙的上鳞</A>×1<BR><A href="../items/items.html?0185" target="items"><FONT color="#ff0000">砂龙的上鳍</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?00db" target="items">辉龙石</A>×2<BR><A href="../items/items.html?0144" target="items">龙玉</A>×1<BR>　【4050ｚ】</TD>
+<A href="../items/items.html?017e" target="items">水龙的上鳞</A>×1<BR><A href="../items/items.html?0185" target="items"><FONT color="#ff0000">沙龙的上鳍</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?00db" target="items">辉龙石</A>×2<BR><A href="../items/items.html?0144" target="items">龙玉</A>×1<BR>　【4050ｚ】</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?0183" target="items"><FONT color="#ff0000">砂龙的上鳞</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0185" target="items">砂龙的上鳍</A>×2<BR><A href="../items/items.html?00dc" target="items">灵鹤石</A>×2<BR><BR>　【4949ｚ】</TD>
+<A href="../items/items.html?0183" target="items"><FONT color="#ff0000">沙龙的上鳞</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0185" target="items">沙龙的上鳍</A>×2<BR><A href="../items/items.html?00dc" target="items">灵鹤石</A>×2<BR><BR>　【4949ｚ】</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?0182" target="items">砂龙的鳞</A>×2<BR><A href="../items/items.html?017e" target="items">水龙的上鳞</A>×1<BR><A href="../items/items.html?0183" target="items"><FONT color="#ff0000">砂龙的上鳞</FONT></A><FONT color="#ff0000">×2</FONT><BR><A href="../items/items.html?024e" target="items">浮岳龍的体液</A>×1<BR>　【5625ｚ】</TD>
+<A href="../items/items.html?0182" target="items">沙龙的鳞</A>×2<BR><A href="../items/items.html?017e" target="items">水龙的上鳞</A>×1<BR><A href="../items/items.html?0183" target="items"><FONT color="#ff0000">沙龙的上鳞</FONT></A><FONT color="#ff0000">×2</FONT><BR><A href="../items/items.html?024e" target="items">浮岳龍的体液</A>×1<BR>　【5625ｚ】</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 </TR>
 <TR>
 <TD id="0154"class="tb-cell2" height="90">154</TD>
-<TD class="tb-cell1">砂龙Ｓ软帽</TD>
+<TD class="tb-cell1">沙龙Ｓ软帽</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?0183" target="items"><FONT color="#ff0000">砂龙的上鳞</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?00da" target="items">燕雀石</A>×2<BR><A href="../items/items.html?00dc" target="items">灵鹤石</A>×1<BR><BR>　【3375ｚ】</TD>
+<A href="../items/items.html?0183" target="items"><FONT color="#ff0000">沙龙的上鳞</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?00da" target="items">燕雀石</A>×2<BR><A href="../items/items.html?00dc" target="items">灵鹤石</A>×1<BR><BR>　【3375ｚ】</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?017e" target="items">水龙的上鳞</A>×1<BR><A href="../items/items.html?0185" target="items"><FONT color="#ff0000">砂龙的上鳍</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?00db" target="items">辉龙石</A>×2<BR><A href="../items/items.html?0144" target="items">龙玉</A>×1<BR>　【4050ｚ】</TD>
+<A href="../items/items.html?017e" target="items">水龙的上鳞</A>×1<BR><A href="../items/items.html?0185" target="items"><FONT color="#ff0000">沙龙的上鳍</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?00db" target="items">辉龙石</A>×2<BR><A href="../items/items.html?0144" target="items">龙玉</A>×1<BR>　【4050ｚ】</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?0183" target="items"><FONT color="#ff0000">砂龙的上鳞</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0185" target="items">砂龙的上鳍</A>×2<BR><A href="../items/items.html?00dc" target="items">灵鹤石</A>×2<BR><BR>　【4949ｚ】</TD>
+<A href="../items/items.html?0183" target="items"><FONT color="#ff0000">沙龙的上鳞</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0185" target="items">沙龙的上鳍</A>×2<BR><A href="../items/items.html?00dc" target="items">灵鹤石</A>×2<BR><BR>　【4949ｚ】</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?0182" target="items">砂龙的鳞</A>×2<BR><A href="../items/items.html?017e" target="items">水龙的上鳞</A>×1<BR><A href="../items/items.html?0183" target="items"><FONT color="#ff0000">砂龙的上鳞</FONT></A><FONT color="#ff0000">×2</FONT><BR><A href="../items/items.html?024e" target="items">浮岳龍的体液</A>×1<BR>　【5625ｚ】</TD>
+<A href="../items/items.html?0182" target="items">沙龙的鳞</A>×2<BR><A href="../items/items.html?017e" target="items">水龙的上鳞</A>×1<BR><A href="../items/items.html?0183" target="items"><FONT color="#ff0000">沙龙的上鳞</FONT></A><FONT color="#ff0000">×2</FONT><BR><A href="../items/items.html?024e" target="items">浮岳龍的体液</A>×1<BR>　【5625ｚ】</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 </TR>
@@ -2511,16 +2237,6 @@ ShowLinks(1, 7);
 <A href="../items/items.html?019a" target="items">火龙的逆鳞</A>×1<BR><A href="../items/items.html?018d" target="items"><FONT color="#ff0000">雌火龙的坚壳</FONT></A><FONT color="#ff0000">×2</FONT><BR><A href="../items/items.html?00db" target="items">辉龙石</A>×2<BR><A href="../items/items.html?00dd" target="items">白鸠石</A>×1<BR>　【9000ｚ】</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1">&nbsp;</TD>
-</TR>
-<TR>
-<TH class="tb-th1" width="30">No.</TH>
-<TH class="tb-th1" width="63">名称</TH>
-<TH class="tb-th1" width="130">等级２</TH>
-<TH class="tb-th1" width="130">等级３</TH>
-<TH class="tb-th1" width="130">等级４</TH>
-<TH class="tb-th1" width="130">等级５</TH>
-<TH class="tb-th1" width="130">等级６</TH>
-<TH class="tb-th1" width="130">等级７</TH>
 </TR>
 <TR>
 <TD id="0156"class="tb-cell2" height="90">156</TD>
@@ -2593,24 +2309,14 @@ ShowLinks(1, 7);
 <TD class="tb-cell1">&nbsp;</TD>
 </TR>
 <TR>
-<TH class="tb-th1" width="30">No.</TH>
-<TH class="tb-th1" width="63">名称</TH>
-<TH class="tb-th1" width="130">等级２</TH>
-<TH class="tb-th1" width="130">等级３</TH>
-<TH class="tb-th1" width="130">等级４</TH>
-<TH class="tb-th1" width="130">等级５</TH>
-<TH class="tb-th1" width="130">等级６</TH>
-<TH class="tb-th1" width="130">等级７</TH>
-</TR>
-<TR>
 <TD id="0161"class="tb-cell2" height="90">161</TD>
 <TD class="tb-cell1">水龙Ｓ头盔</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?017d" target="items">水龙的鳞</A>×3<BR><A href="../items/items.html?017e" target="items"><FONT color="#ff0000">水龙的上鳞</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?00ac" target="items">砥石</A>×5<BR><BR>　【4549ｚ】</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?017f" target="items">水龙的鳍</A>×1<BR><A href="../items/items.html?0183" target="items"><FONT color="#ff0000">砂龙的上鳞</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?00d9" target="items">大地的结晶</A>×3<BR><A href="../items/items.html?0144" target="items">龙玉</A>×1<BR>　【5950ｚ】</TD>
+<A href="../items/items.html?017f" target="items">水龙的鳍</A>×1<BR><A href="../items/items.html?0183" target="items"><FONT color="#ff0000">沙龙的上鳞</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?00d9" target="items">大地的结晶</A>×3<BR><A href="../items/items.html?0144" target="items">龙玉</A>×1<BR>　【5950ｚ】</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?017e" target="items">水龙的上鳞</A>×1<BR><A href="../items/items.html?0185" target="items"><FONT color="#ff0000">砂龙的上鳍</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?010a" target="items">煌甲虫</A>×1<BR><A href="../items/items.html?010b" target="items">珍稀丽金龟</A>×1<BR>　【7000ｚ】</TD>
+<A href="../items/items.html?017e" target="items">水龙的上鳞</A>×1<BR><A href="../items/items.html?0185" target="items"><FONT color="#ff0000">沙龙的上鳍</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?010a" target="items">煌甲虫</A>×1<BR><A href="../items/items.html?010b" target="items">珍稀丽金龟</A>×1<BR>　【7000ｚ】</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?017d" target="items">水龙的鳞</A>×3<BR><A href="../items/items.html?017e" target="items"><FONT color="#ff0000">水龙的上鳞</FONT></A><FONT color="#ff0000">×2</FONT><BR><A href="../items/items.html?0226" target="items">钢之龍鳞</A>×1<BR><A href="../items/items.html?024e" target="items">浮岳龍的体液</A>×1<BR>　【8050ｚ】</TD>
 <TD class="tb-cell1">&nbsp;</TD>
@@ -2622,9 +2328,9 @@ ShowLinks(1, 7);
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?017d" target="items">水龙的鳞</A>×3<BR><A href="../items/items.html?017e" target="items"><FONT color="#ff0000">水龙的上鳞</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?00ac" target="items">砥石</A>×5<BR><BR>　【4549ｚ】</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?017f" target="items">水龙的鳍</A>×1<BR><A href="../items/items.html?0183" target="items"><FONT color="#ff0000">砂龙的上鳞</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?00d9" target="items">大地的结晶</A>×3<BR><A href="../items/items.html?0144" target="items">龙玉</A>×1<BR>　【5950ｚ】</TD>
+<A href="../items/items.html?017f" target="items">水龙的鳍</A>×1<BR><A href="../items/items.html?0183" target="items"><FONT color="#ff0000">沙龙的上鳞</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?00d9" target="items">大地的结晶</A>×3<BR><A href="../items/items.html?0144" target="items">龙玉</A>×1<BR>　【5950ｚ】</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?017e" target="items">水龙的上鳞</A>×1<BR><A href="../items/items.html?0185" target="items"><FONT color="#ff0000">砂龙的上鳍</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?010a" target="items">煌甲虫</A>×1<BR><A href="../items/items.html?010b" target="items">珍稀丽金龟</A>×1<BR>　【7000ｚ】</TD>
+<A href="../items/items.html?017e" target="items">水龙的上鳞</A>×1<BR><A href="../items/items.html?0185" target="items"><FONT color="#ff0000">沙龙的上鳍</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?010a" target="items">煌甲虫</A>×1<BR><A href="../items/items.html?010b" target="items">珍稀丽金龟</A>×1<BR>　【7000ｚ】</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?017d" target="items">水龙的鳞</A>×3<BR><A href="../items/items.html?017e" target="items"><FONT color="#ff0000">水龙的上鳞</FONT></A><FONT color="#ff0000">×2</FONT><BR><A href="../items/items.html?0226" target="items">钢之龍鳞</A>×1<BR><A href="../items/items.html?024e" target="items">浮岳龍的体液</A>×1<BR>　【8050ｚ】</TD>
 <TD class="tb-cell1">&nbsp;</TD>
@@ -2662,7 +2368,7 @@ ShowLinks(1, 7);
 <TD id="0165"class="tb-cell2" height="90">165</TD>
 <TD class="tb-cell1">角龙Ｓ头盔</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?01bd" target="items">优质的弯角</A>×1<BR><A href="../items/items.html?01c2" target="items">角龙的尻尾</A>×1<BR><A href="../items/items.html?01bf" target="items"><FONT color="#ff0000">角龙的坚壳</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?00da" target="items">燕雀石</A>×2<BR>　【6750ｚ】</TD>
+<A href="../items/items.html?01bd" target="items">优质的弯角</A>×1<BR><A href="../items/items.html?01c2" target="items">角龙的尾巴</A>×1<BR><A href="../items/items.html?01bf" target="items"><FONT color="#ff0000">角龙的坚壳</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?00da" target="items">燕雀石</A>×2<BR>　【6750ｚ】</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?01be" target="items"><FONT color="#ff0000">角龙的甲壳</FONT></A><FONT color="#ff0000">×2</FONT><BR><A href="../items/items.html?0161" target="items">黄速龙的上鳞</A>×1<BR><A href="../items/items.html?013a" target="items">龙骨【大】</A>×1<BR><A href="../items/items.html?0144" target="items">龙玉</A>×1<BR>　【9000ｚ】</TD>
 <TD class="tb-cell1 hc">
@@ -2673,20 +2379,10 @@ ShowLinks(1, 7);
 <TD class="tb-cell1">&nbsp;</TD>
 </TR>
 <TR>
-<TH class="tb-th1" width="30">No.</TH>
-<TH class="tb-th1" width="63">名称</TH>
-<TH class="tb-th1" width="130">等级２</TH>
-<TH class="tb-th1" width="130">等级３</TH>
-<TH class="tb-th1" width="130">等级４</TH>
-<TH class="tb-th1" width="130">等级５</TH>
-<TH class="tb-th1" width="130">等级６</TH>
-<TH class="tb-th1" width="130">等级７</TH>
-</TR>
-<TR>
 <TD id="0166"class="tb-cell2" height="90">166</TD>
 <TD class="tb-cell1">角龙Ｓ软帽</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?01bd" target="items">优质的弯角</A>×1<BR><A href="../items/items.html?01c2" target="items">角龙的尻尾</A>×1<BR><A href="../items/items.html?01bf" target="items"><FONT color="#ff0000">角龙的坚壳</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?00da" target="items">燕雀石</A>×2<BR>　【6750ｚ】</TD>
+<A href="../items/items.html?01bd" target="items">优质的弯角</A>×1<BR><A href="../items/items.html?01c2" target="items">角龙的尾巴</A>×1<BR><A href="../items/items.html?01bf" target="items"><FONT color="#ff0000">角龙的坚壳</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?00da" target="items">燕雀石</A>×2<BR>　【6750ｚ】</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?01be" target="items"><FONT color="#ff0000">角龙的甲壳</FONT></A><FONT color="#ff0000">×2</FONT><BR><A href="../items/items.html?0161" target="items">黄速龙的上鳞</A>×1<BR><A href="../items/items.html?013a" target="items">龙骨【大】</A>×1<BR><A href="../items/items.html?0144" target="items">龙玉</A>×1<BR>　【9000ｚ】</TD>
 <TD class="tb-cell1 hc">
@@ -2753,22 +2449,12 @@ ShowLinks(1, 7);
 <TD class="tb-cell1">&nbsp;</TD>
 </TR>
 <TR>
-<TH class="tb-th1" width="30">No.</TH>
-<TH class="tb-th1" width="63">名称</TH>
-<TH class="tb-th1" width="130">等级２</TH>
-<TH class="tb-th1" width="130">等级３</TH>
-<TH class="tb-th1" width="130">等级４</TH>
-<TH class="tb-th1" width="130">等级５</TH>
-<TH class="tb-th1" width="130">等级６</TH>
-<TH class="tb-th1" width="130">等级７</TH>
-</TR>
-<TR>
 <TD id="0171"class="tb-cell2 hc" height="90">171</TD>
 <TD class="tb-cell1 hc">忍之面・天</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?02ea" target="items"><FONT color="#ff0000">公会券</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0328" target="items">美声珠</A>×1<BR><BR><BR>　【17250ｚ】</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?02e4" target="items"><FONT color="#ff0000">战友之绊</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0351" target="items">防音珠</A>×1<BR><BR><BR>　【23000ｚ】</TD>
+<A href="../items/items.html?02e4" target="items"><FONT color="#ff0000">战友之纽带</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0351" target="items">防音珠</A>×1<BR><BR><BR>　【23000ｚ】</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?02ea" target="items"><FONT color="#ff0000">公会券</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0350" target="items">美食珠</A>×1<BR><BR><BR>　【28750ｚ】</TD>
 <TD class="tb-cell1 hc">
@@ -2782,7 +2468,7 @@ ShowLinks(1, 7);
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?02ea" target="items"><FONT color="#ff0000">公会券</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0328" target="items">美声珠</A>×1<BR><BR><BR>　【17250ｚ】</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?02e4" target="items"><FONT color="#ff0000">战友之绊</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0351" target="items">防音珠</A>×1<BR><BR><BR>　【23000ｚ】</TD>
+<A href="../items/items.html?02e4" target="items"><FONT color="#ff0000">战友之纽带</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0351" target="items">防音珠</A>×1<BR><BR><BR>　【23000ｚ】</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?02ea" target="items"><FONT color="#ff0000">公会券</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0350" target="items">美食珠</A>×1<BR><BR><BR>　【28750ｚ】</TD>
 <TD class="tb-cell1 hc">
@@ -2798,7 +2484,7 @@ ShowLinks(1, 7);
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?02ea" target="items"><FONT color="#ff0000">公会券</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?02c8" target="items"><FONT color="#ff0000">鱼龙的硬币</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?01f4" target="items"><FONT color="#ff0000">黑龍的红翼</FONT></A><FONT color="#ff0000">×1</FONT><BR><BR>　【20000ｚ】</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?02e4" target="items"><FONT color="#ff0000">战友之绊</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?02c9" target="items"><FONT color="#ff0000">牙兽的硬币</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?01f0" target="items"><FONT color="#ff0000">黑龍的红角</FONT></A><FONT color="#ff0000">×1</FONT><BR><BR>　【25000ｚ】</TD>
+<A href="../items/items.html?02e4" target="items"><FONT color="#ff0000">战友之纽带</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?02c9" target="items"><FONT color="#ff0000">牙兽的硬币</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?01f0" target="items"><FONT color="#ff0000">黑龍的红角</FONT></A><FONT color="#ff0000">×1</FONT><BR><BR>　【25000ｚ】</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?02e3" target="items"><FONT color="#ff0000">战友之证</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?02ca" target="items"><FONT color="#ff0000">甲壳的硬币</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?01ee" target="items"><FONT color="#ff0000">黑龍的眼</FONT></A><FONT color="#ff0000">×1</FONT><BR><BR>　【30000ｚ】</TD>
 <TD class="tb-cell1">&nbsp;</TD>
@@ -2812,7 +2498,7 @@ ShowLinks(1, 7);
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?02ea" target="items"><FONT color="#ff0000">公会券</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?02c8" target="items"><FONT color="#ff0000">鱼龙的硬币</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?01f4" target="items"><FONT color="#ff0000">黑龍的红翼</FONT></A><FONT color="#ff0000">×1</FONT><BR><BR>　【20000ｚ】</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?02e4" target="items"><FONT color="#ff0000">战友之绊</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?02c9" target="items"><FONT color="#ff0000">牙兽的硬币</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?01f0" target="items"><FONT color="#ff0000">黑龍的红角</FONT></A><FONT color="#ff0000">×1</FONT><BR><BR>　【25000ｚ】</TD>
+<A href="../items/items.html?02e4" target="items"><FONT color="#ff0000">战友之纽带</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?02c9" target="items"><FONT color="#ff0000">牙兽的硬币</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?01f0" target="items"><FONT color="#ff0000">黑龍的红角</FONT></A><FONT color="#ff0000">×1</FONT><BR><BR>　【25000ｚ】</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?02e3" target="items"><FONT color="#ff0000">战友之证</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?02ca" target="items"><FONT color="#ff0000">甲壳的硬币</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?01ee" target="items"><FONT color="#ff0000">黑龍的眼</FONT></A><FONT color="#ff0000">×1</FONT><BR><BR>　【30000ｚ】</TD>
 <TD class="tb-cell1">&nbsp;</TD>
@@ -2826,21 +2512,11 @@ ShowLinks(1, 7);
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?02ea" target="items"><FONT color="#ff0000">公会券</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?02c8" target="items"><FONT color="#ff0000">鱼龙的硬币</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?01f4" target="items"><FONT color="#ff0000">黑龍的红翼</FONT></A><FONT color="#ff0000">×1</FONT><BR><BR>　【20000ｚ】</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?02e4" target="items"><FONT color="#ff0000">战友之绊</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?02c9" target="items"><FONT color="#ff0000">牙兽的硬币</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?01f0" target="items"><FONT color="#ff0000">黑龍的红角</FONT></A><FONT color="#ff0000">×1</FONT><BR><BR>　【25000ｚ】</TD>
+<A href="../items/items.html?02e4" target="items"><FONT color="#ff0000">战友之纽带</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?02c9" target="items"><FONT color="#ff0000">牙兽的硬币</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?01f0" target="items"><FONT color="#ff0000">黑龍的红角</FONT></A><FONT color="#ff0000">×1</FONT><BR><BR>　【25000ｚ】</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?02e3" target="items"><FONT color="#ff0000">战友之证</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?02ca" target="items"><FONT color="#ff0000">甲壳的硬币</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?01ee" target="items"><FONT color="#ff0000">黑龍的眼</FONT></A><FONT color="#ff0000">×1</FONT><BR><BR>　【30000ｚ】</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1">&nbsp;</TD>
-</TR>
-<TR>
-<TH class="tb-th1" width="30">No.</TH>
-<TH class="tb-th1" width="63">名称</TH>
-<TH class="tb-th1" width="130">等级２</TH>
-<TH class="tb-th1" width="130">等级３</TH>
-<TH class="tb-th1" width="130">等级４</TH>
-<TH class="tb-th1" width="130">等级５</TH>
-<TH class="tb-th1" width="130">等级６</TH>
-<TH class="tb-th1" width="130">等级７</TH>
 </TR>
 <TR>
 <TD id="0176"class="tb-cell2 hc" height="90">176</TD>
@@ -2850,7 +2526,7 @@ ShowLinks(1, 7);
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?02ea" target="items"><FONT color="#ff0000">公会券</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?02c8" target="items"><FONT color="#ff0000">鱼龙的硬币</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?01f4" target="items"><FONT color="#ff0000">黑龍的红翼</FONT></A><FONT color="#ff0000">×1</FONT><BR><BR>　【20000ｚ】</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?02e4" target="items"><FONT color="#ff0000">战友之绊</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?02c9" target="items"><FONT color="#ff0000">牙兽的硬币</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?01f0" target="items"><FONT color="#ff0000">黑龍的红角</FONT></A><FONT color="#ff0000">×1</FONT><BR><BR>　【25000ｚ】</TD>
+<A href="../items/items.html?02e4" target="items"><FONT color="#ff0000">战友之纽带</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?02c9" target="items"><FONT color="#ff0000">牙兽的硬币</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?01f0" target="items"><FONT color="#ff0000">黑龍的红角</FONT></A><FONT color="#ff0000">×1</FONT><BR><BR>　【25000ｚ】</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?02e3" target="items"><FONT color="#ff0000">战友之证</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?02ca" target="items"><FONT color="#ff0000">甲壳的硬币</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?01ee" target="items"><FONT color="#ff0000">黑龍的眼</FONT></A><FONT color="#ff0000">×1</FONT><BR><BR>　【30000ｚ】</TD>
 <TD class="tb-cell1">&nbsp;</TD>
@@ -2862,9 +2538,9 @@ ShowLinks(1, 7);
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?01e4" target="items"><FONT color="#ff0000">老山龍的角</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0247" target="items">炎王龍的鬣毛</A>×2<BR><A href="../items/items.html?02e8" target="items">勇气之证</A>×1<BR><A href="../items/items.html?013c" target="items">古龍骨</A>×2<BR>　【30000ｚ】</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?01e8" target="items"><FONT color="#ff0000">老山龍的坚壳</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?024a" target="items">炎王龍的角</A>×2<BR><A href="../items/items.html?02e4" target="items">战友之绊</A>×1<BR><A href="../items/items.html?023d" target="items">古龍的血</A>×1<BR>　【37500ｚ】</TD>
+<A href="../items/items.html?01e8" target="items"><FONT color="#ff0000">老山龍的坚壳</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?024a" target="items">炎王龍的角</A>×2<BR><A href="../items/items.html?02e4" target="items">战友之纽带</A>×1<BR><A href="../items/items.html?023d" target="items">古龍的血</A>×1<BR>　【37500ｚ】</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?01e4" target="items"><FONT color="#ff0000">老山龍的角</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0249" target="items">炎王龍的尻尾</A>×2<BR><A href="../items/items.html?02e3" target="items">战友之证</A>×1<BR><A href="../items/items.html?0144" target="items">龙玉</A>×1<BR>　【45000ｚ】</TD>
+<A href="../items/items.html?01e4" target="items"><FONT color="#ff0000">老山龍的角</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0249" target="items">炎王龍的尾巴</A>×2<BR><A href="../items/items.html?02e3" target="items">战友之证</A>×1<BR><A href="../items/items.html?0144" target="items">龙玉</A>×1<BR>　【45000ｚ】</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?01e8" target="items"><FONT color="#ff0000">老山龍的坚壳</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?019a" target="items">火龙的逆鳞</A>×1<BR><A href="../items/items.html?00de" target="items">红莲石</A>×3<BR><A href="../items/items.html?023b" target="items">炎龍的尘粉</A>×1<BR>　【60000ｚ】</TD>
 <TD class="tb-cell1">&nbsp;</TD>
@@ -2876,9 +2552,9 @@ ShowLinks(1, 7);
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?01e4" target="items"><FONT color="#ff0000">老山龍的角</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0247" target="items">炎王龍的鬣毛</A>×2<BR><A href="../items/items.html?02e8" target="items">勇气之证</A>×1<BR><A href="../items/items.html?013c" target="items">古龍骨</A>×2<BR>　【30000ｚ】</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?01e8" target="items"><FONT color="#ff0000">老山龍的坚壳</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?024a" target="items">炎王龍的角</A>×2<BR><A href="../items/items.html?02e4" target="items">战友之绊</A>×1<BR><A href="../items/items.html?023d" target="items">古龍的血</A>×1<BR>　【37500ｚ】</TD>
+<A href="../items/items.html?01e8" target="items"><FONT color="#ff0000">老山龍的坚壳</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?024a" target="items">炎王龍的角</A>×2<BR><A href="../items/items.html?02e4" target="items">战友之纽带</A>×1<BR><A href="../items/items.html?023d" target="items">古龍的血</A>×1<BR>　【37500ｚ】</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?01e4" target="items"><FONT color="#ff0000">老山龍的角</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0249" target="items">炎王龍的尻尾</A>×2<BR><A href="../items/items.html?02e3" target="items">战友之证</A>×1<BR><A href="../items/items.html?0144" target="items">龙玉</A>×1<BR>　【45000ｚ】</TD>
+<A href="../items/items.html?01e4" target="items"><FONT color="#ff0000">老山龍的角</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0249" target="items">炎王龍的尾巴</A>×2<BR><A href="../items/items.html?02e3" target="items">战友之证</A>×1<BR><A href="../items/items.html?0144" target="items">龙玉</A>×1<BR>　【45000ｚ】</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?01e8" target="items"><FONT color="#ff0000">老山龍的坚壳</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?019a" target="items">火龙的逆鳞</A>×1<BR><A href="../items/items.html?00de" target="items">红莲石</A>×3<BR><A href="../items/items.html?023b" target="items">炎龍的尘粉</A>×1<BR>　【60000ｚ】</TD>
 <TD class="tb-cell1">&nbsp;</TD>
@@ -2890,9 +2566,9 @@ ShowLinks(1, 7);
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?01e4" target="items"><FONT color="#ff0000">老山龍的角</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0247" target="items">炎王龍的鬣毛</A>×2<BR><A href="../items/items.html?02e8" target="items">勇气之证</A>×1<BR><A href="../items/items.html?013c" target="items">古龍骨</A>×2<BR>　【30000ｚ】</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?01e8" target="items"><FONT color="#ff0000">老山龍的坚壳</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?024a" target="items">炎王龍的角</A>×2<BR><A href="../items/items.html?02e4" target="items">战友之绊</A>×1<BR><A href="../items/items.html?023d" target="items">古龍的血</A>×1<BR>　【37500ｚ】</TD>
+<A href="../items/items.html?01e8" target="items"><FONT color="#ff0000">老山龍的坚壳</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?024a" target="items">炎王龍的角</A>×2<BR><A href="../items/items.html?02e4" target="items">战友之纽带</A>×1<BR><A href="../items/items.html?023d" target="items">古龍的血</A>×1<BR>　【37500ｚ】</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?01e4" target="items"><FONT color="#ff0000">老山龍的角</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0249" target="items">炎王龍的尻尾</A>×2<BR><A href="../items/items.html?02e3" target="items">战友之证</A>×1<BR><A href="../items/items.html?0144" target="items">龙玉</A>×1<BR>　【45000ｚ】</TD>
+<A href="../items/items.html?01e4" target="items"><FONT color="#ff0000">老山龍的角</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0249" target="items">炎王龍的尾巴</A>×2<BR><A href="../items/items.html?02e3" target="items">战友之证</A>×1<BR><A href="../items/items.html?0144" target="items">龙玉</A>×1<BR>　【45000ｚ】</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?01e8" target="items"><FONT color="#ff0000">老山龍的坚壳</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?019a" target="items">火龙的逆鳞</A>×1<BR><A href="../items/items.html?00de" target="items">红莲石</A>×3<BR><A href="../items/items.html?023b" target="items">炎龍的尘粉</A>×1<BR>　【60000ｚ】</TD>
 <TD class="tb-cell1">&nbsp;</TD>
@@ -2904,27 +2580,17 @@ ShowLinks(1, 7);
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?01e4" target="items"><FONT color="#ff0000">老山龍的角</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0247" target="items">炎王龍的鬣毛</A>×2<BR><A href="../items/items.html?02e8" target="items">勇气之证</A>×1<BR><A href="../items/items.html?013c" target="items">古龍骨</A>×2<BR>　【30000ｚ】</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?01e8" target="items"><FONT color="#ff0000">老山龍的坚壳</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?024a" target="items">炎王龍的角</A>×2<BR><A href="../items/items.html?02e4" target="items">战友之绊</A>×1<BR><A href="../items/items.html?023d" target="items">古龍的血</A>×1<BR>　【37500ｚ】</TD>
+<A href="../items/items.html?01e8" target="items"><FONT color="#ff0000">老山龍的坚壳</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?024a" target="items">炎王龍的角</A>×2<BR><A href="../items/items.html?02e4" target="items">战友之纽带</A>×1<BR><A href="../items/items.html?023d" target="items">古龍的血</A>×1<BR>　【37500ｚ】</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?01e4" target="items"><FONT color="#ff0000">老山龍的角</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0249" target="items">炎王龍的尻尾</A>×2<BR><A href="../items/items.html?02e3" target="items">战友之证</A>×1<BR><A href="../items/items.html?0144" target="items">龙玉</A>×1<BR>　【45000ｚ】</TD>
+<A href="../items/items.html?01e4" target="items"><FONT color="#ff0000">老山龍的角</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0249" target="items">炎王龍的尾巴</A>×2<BR><A href="../items/items.html?02e3" target="items">战友之证</A>×1<BR><A href="../items/items.html?0144" target="items">龙玉</A>×1<BR>　【45000ｚ】</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?01e8" target="items"><FONT color="#ff0000">老山龍的坚壳</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?019a" target="items">火龙的逆鳞</A>×1<BR><A href="../items/items.html?00de" target="items">红莲石</A>×3<BR><A href="../items/items.html?023b" target="items">炎龍的尘粉</A>×1<BR>　【60000ｚ】</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 </TR>
 <TR>
-<TH class="tb-th1" width="30">No.</TH>
-<TH class="tb-th1" width="63">名称</TH>
-<TH class="tb-th1" width="130">等级２</TH>
-<TH class="tb-th1" width="130">等级３</TH>
-<TH class="tb-th1" width="130">等级４</TH>
-<TH class="tb-th1" width="130">等级５</TH>
-<TH class="tb-th1" width="130">等级６</TH>
-<TH class="tb-th1" width="130">等级７</TH>
-</TR>
-<TR>
 <TD id="0181"class="tb-cell2 hc" height="90">181</TD>
-<TD class="tb-cell1 hc">邪龍Ｓ之首</TD>
+<TD class="tb-cell1 hc">黑龍Ｓ之首</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?01ed" target="items"><FONT color="#ff0000">黑龍的甲壳</FONT></A><FONT color="#ff0000">×2</FONT><BR><A href="../items/items.html?01ef" target="items"><FONT color="#ff0000">黑龍的翼膜</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?019a" target="items"><FONT color="#ff0000">火龙的逆鳞</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?018b" target="items"><FONT color="#ff0000">雌火龙的红玉</FONT></A><FONT color="#ff0000">×1</FONT><BR>　【40000ｚ】</TD>
 <TD class="tb-cell1 hc">
@@ -2938,7 +2604,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0182"class="tb-cell2 hc" height="90">182</TD>
-<TD class="tb-cell1 hc">邪龍Ｓ之面</TD>
+<TD class="tb-cell1 hc">黑龍Ｓ之面</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?01ed" target="items"><FONT color="#ff0000">黑龍的甲壳</FONT></A><FONT color="#ff0000">×2</FONT><BR><A href="../items/items.html?01ef" target="items"><FONT color="#ff0000">黑龍的翼膜</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?019a" target="items"><FONT color="#ff0000">火龙的逆鳞</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?018b" target="items"><FONT color="#ff0000">雌火龙的红玉</FONT></A><FONT color="#ff0000">×1</FONT><BR>　【40000ｚ】</TD>
 <TD class="tb-cell1 hc">
@@ -2993,16 +2659,6 @@ ShowLinks(1, 7);
 <TD class="tb-cell1">&nbsp;</TD>
 </TR>
 <TR>
-<TH class="tb-th1" width="30">No.</TH>
-<TH class="tb-th1" width="63">名称</TH>
-<TH class="tb-th1" width="130">等级２</TH>
-<TH class="tb-th1" width="130">等级３</TH>
-<TH class="tb-th1" width="130">等级４</TH>
-<TH class="tb-th1" width="130">等级５</TH>
-<TH class="tb-th1" width="130">等级６</TH>
-<TH class="tb-th1" width="130">等级７</TH>
-</TR>
-<TR>
 <TD id="0186"class="tb-cell2" height="90">186</TD>
 <TD class="tb-cell1">盾蟹Ｕ软帽</TD>
 <TD class="tb-cell1 hc">
@@ -3052,7 +2708,7 @@ ShowLinks(1, 7);
 <TD class="tb-cell1">
 <A href="../items/items.html?01fb" target="items">尖锐的爪</A>×1<BR><A href="../items/items.html?0203" target="items"><FONT color="#ff0000">极彩色的毛</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0141" target="items">大块骨</A>×1<BR><A href="../items/items.html?0018" target="items">怪物的体液</A>×1<BR>　【1123ｚ】</TD>
 <TD class="tb-cell1">
-<A href="../items/items.html?0204" target="items"><FONT color="#ff0000">桃毛兽的爪</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0205" target="items">桃毛兽的牙</A>×1<BR><A href="../items/items.html?0108" target="items">粘着蝗虫</A>×2<BR><A href="../items/items.html?0254" target="items">条纹的皮</A>×1<BR>　【1372ｚ】</TD>
+<A href="../items/items.html?0204" target="items"><FONT color="#ff0000">桃毛兽的爪</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0205" target="items">桃毛兽的牙</A>×1<BR><A href="../items/items.html?0108" target="items">黏着蝗虫</A>×2<BR><A href="../items/items.html?0254" target="items">条纹的皮</A>×1<BR>　【1372ｚ】</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?0203" target="items">极彩色的毛</A>×2<BR><A href="../items/items.html?0206" target="items"><FONT color="#ff0000">桃毛兽的刚毛</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0150" target="items">大猪的硬皮</A>×2<BR><A href="../items/items.html?0019" target="items">怪物的浓汁</A>×1<BR>　【1560ｚ】</TD>
 <TD class="tb-cell1">&nbsp;</TD>
@@ -3066,21 +2722,11 @@ ShowLinks(1, 7);
 <TD class="tb-cell1">
 <A href="../items/items.html?01fb" target="items">尖锐的爪</A>×1<BR><A href="../items/items.html?0203" target="items"><FONT color="#ff0000">极彩色的毛</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0141" target="items">大块骨</A>×1<BR><A href="../items/items.html?0018" target="items">怪物的体液</A>×1<BR>　【1123ｚ】</TD>
 <TD class="tb-cell1">
-<A href="../items/items.html?0204" target="items"><FONT color="#ff0000">桃毛兽的爪</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0205" target="items">桃毛兽的牙</A>×1<BR><A href="../items/items.html?0108" target="items">粘着蝗虫</A>×2<BR><A href="../items/items.html?0254" target="items">条纹的皮</A>×1<BR>　【1372ｚ】</TD>
+<A href="../items/items.html?0204" target="items"><FONT color="#ff0000">桃毛兽的爪</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0205" target="items">桃毛兽的牙</A>×1<BR><A href="../items/items.html?0108" target="items">黏着蝗虫</A>×2<BR><A href="../items/items.html?0254" target="items">条纹的皮</A>×1<BR>　【1372ｚ】</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?0203" target="items">极彩色的毛</A>×2<BR><A href="../items/items.html?0206" target="items"><FONT color="#ff0000">桃毛兽的刚毛</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0150" target="items">大猪的硬皮</A>×2<BR><A href="../items/items.html?0019" target="items">怪物的浓汁</A>×1<BR>　【1560ｚ】</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1">&nbsp;</TD>
-</TR>
-<TR>
-<TH class="tb-th1" width="30">No.</TH>
-<TH class="tb-th1" width="63">名称</TH>
-<TH class="tb-th1" width="130">等级２</TH>
-<TH class="tb-th1" width="130">等级３</TH>
-<TH class="tb-th1" width="130">等级４</TH>
-<TH class="tb-th1" width="130">等级５</TH>
-<TH class="tb-th1" width="130">等级６</TH>
-<TH class="tb-th1" width="130">等级７</TH>
 </TR>
 <TR>
 <TD id="0191"class="tb-cell2" height="90">191</TD>
@@ -3144,23 +2790,13 @@ ShowLinks(1, 7);
 <TD class="tb-cell1">
 <A href="../items/items.html?01fe" target="items">雪狮子的毛</A>×2<BR><A href="../items/items.html?015e" target="items">蓝速龙的白皮</A>×1<BR><A href="../items/items.html?0141" target="items">大块骨</A>×1<BR><BR>　【1320ｚ】</TD>
 <TD class="tb-cell1">
-<A href="../items/items.html?01fb" target="items">尖锐的爪</A>×2<BR><A href="../items/items.html?0200" target="items"><FONT color="#ff0000">雪狮子的髭</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0140" target="items">棒状之骨</A>×1<BR><A href="../items/items.html?0108" target="items">粘着蝗虫</A>×1<BR>　【1760ｚ】</TD>
+<A href="../items/items.html?01fb" target="items">尖锐的爪</A>×2<BR><A href="../items/items.html?0200" target="items"><FONT color="#ff0000">雪狮子的髭</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0140" target="items">棒状之骨</A>×1<BR><A href="../items/items.html?0108" target="items">黏着蝗虫</A>×1<BR>　【1760ｚ】</TD>
 <TD class="tb-cell1">
-<A href="../items/items.html?0201" target="items"><FONT color="#ff0000">雪狮子的尻尾</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?01fc" target="items">雪狮子的牙</A>×1<BR><A href="../items/items.html?01e0" target="items">麒麟的鬣毛</A>×1<BR><A href="../items/items.html?0018" target="items">怪物的体液</A>×1<BR>　【2200ｚ】</TD>
+<A href="../items/items.html?0201" target="items"><FONT color="#ff0000">雪狮子的尾巴</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?01fc" target="items">雪狮子的牙</A>×1<BR><A href="../items/items.html?01e0" target="items">麒麟的鬣毛</A>×1<BR><A href="../items/items.html?0018" target="items">怪物的体液</A>×1<BR>　【2200ｚ】</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?0200" target="items">雪狮子的髭</A>×1<BR><A href="../items/items.html?01ff" target="items"><FONT color="#ff0000">雪狮子的刚毛</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0254" target="items">条纹的皮</A>×1<BR><A href="../items/items.html?0019" target="items">怪物的浓汁</A>×1<BR>　【2640ｚ】</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1">&nbsp;</TD>
-</TR>
-<TR>
-<TH class="tb-th1" width="30">No.</TH>
-<TH class="tb-th1" width="63">名称</TH>
-<TH class="tb-th1" width="130">等级２</TH>
-<TH class="tb-th1" width="130">等级３</TH>
-<TH class="tb-th1" width="130">等级４</TH>
-<TH class="tb-th1" width="130">等级５</TH>
-<TH class="tb-th1" width="130">等级６</TH>
-<TH class="tb-th1" width="130">等级７</TH>
 </TR>
 <TR>
 <TD id="0196"class="tb-cell2" height="90">196</TD>
@@ -3168,9 +2804,9 @@ ShowLinks(1, 7);
 <TD class="tb-cell1">
 <A href="../items/items.html?01fe" target="items">雪狮子的毛</A>×2<BR><A href="../items/items.html?015e" target="items">蓝速龙的白皮</A>×1<BR><A href="../items/items.html?0141" target="items">大块骨</A>×1<BR><BR>　【1320ｚ】</TD>
 <TD class="tb-cell1">
-<A href="../items/items.html?01fb" target="items">尖锐的爪</A>×2<BR><A href="../items/items.html?0200" target="items"><FONT color="#ff0000">雪狮子的髭</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0140" target="items">棒状之骨</A>×1<BR><A href="../items/items.html?0108" target="items">粘着蝗虫</A>×1<BR>　【1760ｚ】</TD>
+<A href="../items/items.html?01fb" target="items">尖锐的爪</A>×2<BR><A href="../items/items.html?0200" target="items"><FONT color="#ff0000">雪狮子的髭</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0140" target="items">棒状之骨</A>×1<BR><A href="../items/items.html?0108" target="items">黏着蝗虫</A>×1<BR>　【1760ｚ】</TD>
 <TD class="tb-cell1">
-<A href="../items/items.html?0201" target="items"><FONT color="#ff0000">雪狮子的尻尾</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?01fc" target="items">雪狮子的牙</A>×1<BR><A href="../items/items.html?01e0" target="items">麒麟的鬣毛</A>×1<BR><A href="../items/items.html?0018" target="items">怪物的体液</A>×1<BR>　【2200ｚ】</TD>
+<A href="../items/items.html?0201" target="items"><FONT color="#ff0000">雪狮子的尾巴</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?01fc" target="items">雪狮子的牙</A>×1<BR><A href="../items/items.html?01e0" target="items">麒麟的鬣毛</A>×1<BR><A href="../items/items.html?0018" target="items">怪物的体液</A>×1<BR>　【2200ｚ】</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?0200" target="items">雪狮子的髭</A>×1<BR><A href="../items/items.html?01ff" target="items"><FONT color="#ff0000">雪狮子的刚毛</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0254" target="items">条纹的皮</A>×1<BR><A href="../items/items.html?0019" target="items">怪物的浓汁</A>×1<BR>　【2640ｚ】</TD>
 <TD class="tb-cell1">&nbsp;</TD>
@@ -3184,7 +2820,7 @@ ShowLinks(1, 7);
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?01fc" target="items">雪狮子的牙</A>×1<BR><A href="../items/items.html?0240" target="items">炎妃龍的鬣毛</A>×1<BR><A href="../items/items.html?01ff" target="items"><FONT color="#ff0000">雪狮子的刚毛</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?023d" target="items">古龍的血</A>×1<BR>　【4726ｚ】</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?0200" target="items">雪狮子的髭</A>×1<BR><A href="../items/items.html?0201" target="items">雪狮子的尻尾</A>×1<BR><A href="../items/items.html?0189" target="items">雌火龙的上鳞</A>×1<BR><A href="../items/items.html?01fd" target="items"><FONT color="#ff0000">雪狮子的锐牙</FONT></A><FONT color="#ff0000">×1</FONT><BR>　【5560ｚ】</TD>
+<A href="../items/items.html?0200" target="items">雪狮子的髭</A>×1<BR><A href="../items/items.html?0201" target="items">雪狮子的尾巴</A>×1<BR><A href="../items/items.html?0189" target="items">雌火龙的上鳞</A>×1<BR><A href="../items/items.html?01fd" target="items"><FONT color="#ff0000">雪狮子的锐牙</FONT></A><FONT color="#ff0000">×1</FONT><BR>　【5560ｚ】</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?01ff" target="items"><FONT color="#ff0000">雪狮子的刚毛</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?00dd" target="items">白鸠石</A>×1<BR><A href="../items/items.html?013c" target="items">古龍骨</A>×1<BR><A href="../items/items.html?024f" target="items">龍苔</A>×1<BR>　【6394ｚ】</TD>
 <TD class="tb-cell1">&nbsp;</TD>
@@ -3198,7 +2834,7 @@ ShowLinks(1, 7);
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?01fc" target="items">雪狮子的牙</A>×1<BR><A href="../items/items.html?0240" target="items">炎妃龍的鬣毛</A>×1<BR><A href="../items/items.html?01ff" target="items"><FONT color="#ff0000">雪狮子的刚毛</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?023d" target="items">古龍的血</A>×1<BR>　【4726ｚ】</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?0200" target="items">雪狮子的髭</A>×1<BR><A href="../items/items.html?0201" target="items">雪狮子的尻尾</A>×1<BR><A href="../items/items.html?0189" target="items">雌火龙的上鳞</A>×1<BR><A href="../items/items.html?01fd" target="items"><FONT color="#ff0000">雪狮子的锐牙</FONT></A><FONT color="#ff0000">×1</FONT><BR>　【5560ｚ】</TD>
+<A href="../items/items.html?0200" target="items">雪狮子的髭</A>×1<BR><A href="../items/items.html?0201" target="items">雪狮子的尾巴</A>×1<BR><A href="../items/items.html?0189" target="items">雌火龙的上鳞</A>×1<BR><A href="../items/items.html?01fd" target="items"><FONT color="#ff0000">雪狮子的锐牙</FONT></A><FONT color="#ff0000">×1</FONT><BR>　【5560ｚ】</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?01ff" target="items"><FONT color="#ff0000">雪狮子的刚毛</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?00dd" target="items">白鸠石</A>×1<BR><A href="../items/items.html?013c" target="items">古龍骨</A>×1<BR><A href="../items/items.html?024f" target="items">龍苔</A>×1<BR>　【6394ｚ】</TD>
 <TD class="tb-cell1">&nbsp;</TD>
@@ -3212,7 +2848,7 @@ ShowLinks(1, 7);
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?01fc" target="items">雪狮子的牙</A>×1<BR><A href="../items/items.html?01e0" target="items">麒麟的鬣毛</A>×1<BR><A href="../items/items.html?01ff" target="items"><FONT color="#ff0000">雪狮子的刚毛</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0144" target="items">龙玉</A>×1<BR>　【6120ｚ】</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?0201" target="items">雪狮子的尻尾</A>×1<BR><A href="../items/items.html?01de" target="items">麒麟的皮</A>×1<BR><A href="../items/items.html?01fd" target="items"><FONT color="#ff0000">雪狮子的锐牙</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0019" target="items">怪物的浓汁</A>×1<BR>　【7479ｚ】</TD>
+<A href="../items/items.html?0201" target="items">雪狮子的尾巴</A>×1<BR><A href="../items/items.html?01de" target="items">麒麟的皮</A>×1<BR><A href="../items/items.html?01fd" target="items"><FONT color="#ff0000">雪狮子的锐牙</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0019" target="items">怪物的浓汁</A>×1<BR>　【7479ｚ】</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?0200" target="items">雪狮子的髭</A>×2<BR><A href="../items/items.html?01ff" target="items"><FONT color="#ff0000">雪狮子的刚毛</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?013b" target="items">坚龙骨</A>×1<BR><A href="../items/items.html?024e" target="items">浮岳龍的体液</A>×1<BR>　【8500ｚ】</TD>
 <TD class="tb-cell1">&nbsp;</TD>
@@ -3226,21 +2862,11 @@ ShowLinks(1, 7);
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?01fc" target="items">雪狮子的牙</A>×1<BR><A href="../items/items.html?01e0" target="items">麒麟的鬣毛</A>×1<BR><A href="../items/items.html?01ff" target="items"><FONT color="#ff0000">雪狮子的刚毛</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0144" target="items">龙玉</A>×1<BR>　【6120ｚ】</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?0201" target="items">雪狮子的尻尾</A>×1<BR><A href="../items/items.html?01de" target="items">麒麟的皮</A>×1<BR><A href="../items/items.html?01fd" target="items"><FONT color="#ff0000">雪狮子的锐牙</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0019" target="items">怪物的浓汁</A>×1<BR>　【7479ｚ】</TD>
+<A href="../items/items.html?0201" target="items">雪狮子的尾巴</A>×1<BR><A href="../items/items.html?01de" target="items">麒麟的皮</A>×1<BR><A href="../items/items.html?01fd" target="items"><FONT color="#ff0000">雪狮子的锐牙</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0019" target="items">怪物的浓汁</A>×1<BR>　【7479ｚ】</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?0200" target="items">雪狮子的髭</A>×2<BR><A href="../items/items.html?01ff" target="items"><FONT color="#ff0000">雪狮子的刚毛</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?013b" target="items">坚龙骨</A>×1<BR><A href="../items/items.html?024e" target="items">浮岳龍的体液</A>×1<BR>　【8500ｚ】</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1">&nbsp;</TD>
-</TR>
-<TR>
-<TH class="tb-th1" width="30">No.</TH>
-<TH class="tb-th1" width="63">名称</TH>
-<TH class="tb-th1" width="130">等级２</TH>
-<TH class="tb-th1" width="130">等级３</TH>
-<TH class="tb-th1" width="130">等级４</TH>
-<TH class="tb-th1" width="130">等级５</TH>
-<TH class="tb-th1" width="130">等级６</TH>
-<TH class="tb-th1" width="130">等级７</TH>
 </TR>
 <TR>
 <TD id="0201"class="tb-cell2" height="90">201</TD>
@@ -3313,16 +2939,6 @@ ShowLinks(1, 7);
 <TD class="tb-cell1">&nbsp;</TD>
 </TR>
 <TR>
-<TH class="tb-th1" width="30">No.</TH>
-<TH class="tb-th1" width="63">名称</TH>
-<TH class="tb-th1" width="130">等级２</TH>
-<TH class="tb-th1" width="130">等级３</TH>
-<TH class="tb-th1" width="130">等级４</TH>
-<TH class="tb-th1" width="130">等级５</TH>
-<TH class="tb-th1" width="130">等级６</TH>
-<TH class="tb-th1" width="130">等级７</TH>
-</TR>
-<TR>
 <TD id="0206"class="tb-cell2" height="90">206</TD>
 <TD class="tb-cell1">镰蟹Ｓ软帽</TD>
 <TD class="tb-cell1 hc">
@@ -3393,18 +3009,8 @@ ShowLinks(1, 7);
 <TD class="tb-cell1">&nbsp;</TD>
 </TR>
 <TR>
-<TH class="tb-th1" width="30">No.</TH>
-<TH class="tb-th1" width="63">名称</TH>
-<TH class="tb-th1" width="130">等级２</TH>
-<TH class="tb-th1" width="130">等级３</TH>
-<TH class="tb-th1" width="130">等级４</TH>
-<TH class="tb-th1" width="130">等级５</TH>
-<TH class="tb-th1" width="130">等级６</TH>
-<TH class="tb-th1" width="130">等级７</TH>
-</TR>
-<TR>
 <TD id="0211"class="tb-cell2" height="90">211</TD>
-<TD class="tb-cell1">乞沙拏刃头盔</TD>
+<TD class="tb-cell1">库夏那刃头盔</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?0226" target="items">钢之龍鳞</A>×3<BR><A href="../items/items.html?0227" target="items">钢龍的翼膜</A>×1<BR><A href="../items/items.html?0225" target="items"><FONT color="#ff0000">钢龍的坚壳</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?013c" target="items">古龍骨</A>×2<BR>　【10399ｚ】</TD>
 <TD class="tb-cell1 hc">
@@ -3412,13 +3018,13 @@ ShowLinks(1, 7);
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?0228" target="items"><FONT color="#ff0000">钢龍的角</FONT></A><FONT color="#ff0000">×2</FONT><BR><A href="../items/items.html?00dd" target="items">白鸠石</A>×1<BR><A href="../items/items.html?00dc" target="items">灵鹤石</A>×1<BR><A href="../items/items.html?024e" target="items">浮岳龍的体液</A>×1<BR>　【16000ｚ】</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?0229" target="items">钢龍的尻尾</A>×1<BR><A href="../items/items.html?0225" target="items"><FONT color="#ff0000">钢龍的坚壳</FONT></A><FONT color="#ff0000">×2</FONT><BR><A href="../items/items.html?018b" target="items">雌火龙的红玉</A>×1<BR><A href="../items/items.html?023b" target="items">炎龍的尘粉</A>×1<BR>　【18400ｚ】</TD>
+<A href="../items/items.html?0229" target="items">钢龍的尾巴</A>×1<BR><A href="../items/items.html?0225" target="items"><FONT color="#ff0000">钢龍的坚壳</FONT></A><FONT color="#ff0000">×2</FONT><BR><A href="../items/items.html?018b" target="items">雌火龙的红玉</A>×1<BR><A href="../items/items.html?023b" target="items">炎龍的尘粉</A>×1<BR>　【18400ｚ】</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 </TR>
 <TR>
 <TD id="0212"class="tb-cell2" height="90">212</TD>
-<TD class="tb-cell1">乞沙拏尖头盔</TD>
+<TD class="tb-cell1">库夏那尖头盔</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?0226" target="items">钢之龍鳞</A>×3<BR><A href="../items/items.html?0227" target="items">钢龍的翼膜</A>×1<BR><A href="../items/items.html?0225" target="items"><FONT color="#ff0000">钢龍的坚壳</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?013c" target="items">古龍骨</A>×2<BR>　【10399ｚ】</TD>
 <TD class="tb-cell1 hc">
@@ -3426,7 +3032,7 @@ ShowLinks(1, 7);
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?0228" target="items"><FONT color="#ff0000">钢龍的角</FONT></A><FONT color="#ff0000">×2</FONT><BR><A href="../items/items.html?00dd" target="items">白鸠石</A>×1<BR><A href="../items/items.html?00dc" target="items">灵鹤石</A>×1<BR><A href="../items/items.html?024e" target="items">浮岳龍的体液</A>×1<BR>　【16000ｚ】</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?0229" target="items">钢龍的尻尾</A>×1<BR><A href="../items/items.html?0225" target="items"><FONT color="#ff0000">钢龍的坚壳</FONT></A><FONT color="#ff0000">×2</FONT><BR><A href="../items/items.html?018b" target="items">雌火龙的红玉</A>×1<BR><A href="../items/items.html?023b" target="items">炎龍的尘粉</A>×1<BR>　【18400ｚ】</TD>
+<A href="../items/items.html?0229" target="items">钢龍的尾巴</A>×1<BR><A href="../items/items.html?0225" target="items"><FONT color="#ff0000">钢龍的坚壳</FONT></A><FONT color="#ff0000">×2</FONT><BR><A href="../items/items.html?018b" target="items">雌火龙的红玉</A>×1<BR><A href="../items/items.html?023b" target="items">炎龍的尘粉</A>×1<BR>　【18400ｚ】</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 </TR>
@@ -3440,7 +3046,7 @@ ShowLinks(1, 7);
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?0234" target="items">霞龍的爪</A>×2<BR><A href="../items/items.html?0231" target="items"><FONT color="#ff0000">霞龍的上皮</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?013c" target="items">古龍骨</A>×3<BR><A href="../items/items.html?024e" target="items">浮岳龍的体液</A>×1<BR>　【19799ｚ】</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?0236" target="items"><FONT color="#ff0000">霞龍的尻尾</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?01e6" target="items">老山龍的红玉</A>×1<BR><A href="../items/items.html?0144" target="items">龙玉</A>×1<BR><A href="../items/items.html?00e2" target="items">耀水晶</A>×1<BR>　【22500ｚ】</TD>
+<A href="../items/items.html?0236" target="items"><FONT color="#ff0000">霞龍的尾巴</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?01e6" target="items">老山龍的红玉</A>×1<BR><A href="../items/items.html?0144" target="items">龙玉</A>×1<BR><A href="../items/items.html?00e2" target="items">耀水晶</A>×1<BR>　【22500ｚ】</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 </TR>
@@ -3454,13 +3060,13 @@ ShowLinks(1, 7);
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?0234" target="items">霞龍的爪</A>×2<BR><A href="../items/items.html?0231" target="items"><FONT color="#ff0000">霞龍的上皮</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?013c" target="items">古龍骨</A>×3<BR><A href="../items/items.html?024e" target="items">浮岳龍的体液</A>×1<BR>　【19799ｚ】</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?0236" target="items"><FONT color="#ff0000">霞龍的尻尾</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?01e6" target="items">老山龍的红玉</A>×1<BR><A href="../items/items.html?0144" target="items">龙玉</A>×1<BR><A href="../items/items.html?00e2" target="items">耀水晶</A>×1<BR>　【22500ｚ】</TD>
+<A href="../items/items.html?0236" target="items"><FONT color="#ff0000">霞龍的尾巴</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?01e6" target="items">老山龍的红玉</A>×1<BR><A href="../items/items.html?0144" target="items">龙玉</A>×1<BR><A href="../items/items.html?00e2" target="items">耀水晶</A>×1<BR>　【22500ｚ】</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 </TR>
 <TR>
 <TD id="0215"class="tb-cell2" height="90">215</TD>
-<TD class="tb-cell1">女帝皇冠</TD>
+<TD class="tb-cell1">女帝之冕</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?0240" target="items">炎妃龍的鬣毛</A>×1<BR><A href="../items/items.html?023b" target="items"><FONT color="#ff0000">炎龍的尘粉</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?00db" target="items">辉龙石</A>×1<BR><A href="../items/items.html?00de" target="items">红莲石</A>×1<BR>　【18000ｚ】</TD>
 <TD class="tb-cell1 hc">
@@ -3468,23 +3074,13 @@ ShowLinks(1, 7);
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?023a" target="items">炎龍的爪</A>×3<BR><A href="../items/items.html?0243" target="items">炎妃龍的角</A>×1<BR><A href="../items/items.html?018a" target="items"><FONT color="#ff0000">雌火龙的逆鳞</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?02e8" target="items">勇气之证</A>×1<BR>　【27000ｚ】</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?023f" target="items">炎妃龍的甲壳</A>×3<BR><A href="../items/items.html?0242" target="items">炎妃龍的尻尾</A>×1<BR><A href="../items/items.html?018b" target="items"><FONT color="#ff0000">雌火龙的红玉</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0144" target="items">龙玉</A>×1<BR>　【36000ｚ】</TD>
+<A href="../items/items.html?023f" target="items">炎妃龍的甲壳</A>×3<BR><A href="../items/items.html?0242" target="items">炎妃龍的尾巴</A>×1<BR><A href="../items/items.html?018b" target="items"><FONT color="#ff0000">雌火龙的红玉</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0144" target="items">龙玉</A>×1<BR>　【36000ｚ】</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1">&nbsp;</TD>
-</TR>
-<TR>
-<TH class="tb-th1" width="30">No.</TH>
-<TH class="tb-th1" width="63">名称</TH>
-<TH class="tb-th1" width="130">等级２</TH>
-<TH class="tb-th1" width="130">等级３</TH>
-<TH class="tb-th1" width="130">等级４</TH>
-<TH class="tb-th1" width="130">等级５</TH>
-<TH class="tb-th1" width="130">等级６</TH>
-<TH class="tb-th1" width="130">等级７</TH>
 </TR>
 <TR>
 <TD id="0216"class="tb-cell2" height="90">216</TD>
-<TD class="tb-cell1">女帝皇面</TD>
+<TD class="tb-cell1">女帝面具</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?0240" target="items">炎妃龍的鬣毛</A>×1<BR><A href="../items/items.html?023b" target="items"><FONT color="#ff0000">炎龍的尘粉</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?00db" target="items">辉龙石</A>×1<BR><A href="../items/items.html?00de" target="items">红莲石</A>×1<BR>　【18000ｚ】</TD>
 <TD class="tb-cell1 hc">
@@ -3492,7 +3088,7 @@ ShowLinks(1, 7);
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?023a" target="items">炎龍的爪</A>×3<BR><A href="../items/items.html?0243" target="items">炎妃龍的角</A>×1<BR><A href="../items/items.html?018a" target="items"><FONT color="#ff0000">雌火龙的逆鳞</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?02e8" target="items">勇气之证</A>×1<BR>　【27000ｚ】</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?023f" target="items">炎妃龍的甲壳</A>×3<BR><A href="../items/items.html?0242" target="items">炎妃龍的尻尾</A>×1<BR><A href="../items/items.html?018b" target="items"><FONT color="#ff0000">雌火龙的红玉</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0144" target="items">龙玉</A>×1<BR>　【36000ｚ】</TD>
+<A href="../items/items.html?023f" target="items">炎妃龍的甲壳</A>×3<BR><A href="../items/items.html?0242" target="items">炎妃龍的尾巴</A>×1<BR><A href="../items/items.html?018b" target="items"><FONT color="#ff0000">雌火龙的红玉</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0144" target="items">龙玉</A>×1<BR>　【36000ｚ】</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 </TR>
@@ -3504,7 +3100,7 @@ ShowLinks(1, 7);
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?0220" target="items"><FONT color="#ff0000">砦蟹的背甲</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0222" target="items">砦蟹的尖爪</A>×1<BR><A href="../items/items.html?02e8" target="items">勇气之证</A>×1<BR><A href="../items/items.html?010b" target="items">珍稀丽金龟</A>×1<BR>　【18700ｚ】</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?021f" target="items">砦蟹的甲壳</A>×2<BR><A href="../items/items.html?0221" target="items"><FONT color="#ff0000">砦蟹的铗</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?02e4" target="items">战友之绊</A>×1<BR><A href="../items/items.html?024e" target="items">浮岳龍的体液</A>×1<BR>　【22000ｚ】</TD>
+<A href="../items/items.html?021f" target="items">砦蟹的甲壳</A>×2<BR><A href="../items/items.html?0221" target="items"><FONT color="#ff0000">砦蟹的铗</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?02e4" target="items">战友之纽带</A>×1<BR><A href="../items/items.html?024e" target="items">浮岳龍的体液</A>×1<BR>　【22000ｚ】</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?0220" target="items"><FONT color="#ff0000">砦蟹的背甲</FONT></A><FONT color="#ff0000">×2</FONT><BR><A href="../items/items.html?0221" target="items">砦蟹的铗</A>×2<BR><A href="../items/items.html?0237" target="items">霞龍的宝玉</A>×1<BR><A href="../items/items.html?0144" target="items">龙玉</A>×1<BR>　【25300ｚ】</TD>
 <TD class="tb-cell1">&nbsp;</TD>
@@ -3518,7 +3114,7 @@ ShowLinks(1, 7);
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?0220" target="items"><FONT color="#ff0000">砦蟹的背甲</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0222" target="items">砦蟹的尖爪</A>×1<BR><A href="../items/items.html?02e8" target="items">勇气之证</A>×1<BR><A href="../items/items.html?010b" target="items">珍稀丽金龟</A>×1<BR>　【18700ｚ】</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?021f" target="items">砦蟹的甲壳</A>×2<BR><A href="../items/items.html?0221" target="items"><FONT color="#ff0000">砦蟹的铗</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?02e4" target="items">战友之绊</A>×1<BR><A href="../items/items.html?024e" target="items">浮岳龍的体液</A>×1<BR>　【22000ｚ】</TD>
+<A href="../items/items.html?021f" target="items">砦蟹的甲壳</A>×2<BR><A href="../items/items.html?0221" target="items"><FONT color="#ff0000">砦蟹的铗</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?02e4" target="items">战友之纽带</A>×1<BR><A href="../items/items.html?024e" target="items">浮岳龍的体液</A>×1<BR>　【22000ｚ】</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?0220" target="items"><FONT color="#ff0000">砦蟹的背甲</FONT></A><FONT color="#ff0000">×2</FONT><BR><A href="../items/items.html?0221" target="items">砦蟹的铗</A>×2<BR><A href="../items/items.html?0237" target="items">霞龍的宝玉</A>×1<BR><A href="../items/items.html?0144" target="items">龙玉</A>×1<BR>　【25300ｚ】</TD>
 <TD class="tb-cell1">&nbsp;</TD>
@@ -3526,7 +3122,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0219"class="tb-cell2" height="90">219</TD>
-<TD class="tb-cell1">凯撒皇冠</TD>
+<TD class="tb-cell1">帝王之冠</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?023a" target="items">炎龍的爪</A>×1<BR><A href="../items/items.html?0247" target="items">炎王龍的鬣毛</A>×1<BR><A href="../items/items.html?0246" target="items"><FONT color="#ff0000">炎王龍的坚壳</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?00de" target="items">红莲石</A>×1<BR>　【18000ｚ】</TD>
 <TD class="tb-cell1 hc">
@@ -3534,13 +3130,13 @@ ShowLinks(1, 7);
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?024a" target="items">炎王龍的角</A>×2<BR><A href="../items/items.html?023b" target="items"><FONT color="#ff0000">炎龍的尘粉</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?013c" target="items">古龍骨</A>×3<BR><A href="../items/items.html?023d" target="items">古龍的血</A>×1<BR>　【30000ｚ】</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?0249" target="items"><FONT color="#ff0000">炎王龍的尻尾</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?019b" target="items">火龙的红玉</A>×1<BR><A href="../items/items.html?020e" target="items">黄金之毛</A>×1<BR><A href="../items/items.html?024e" target="items">浮岳龍的体液</A>×1<BR>　【36000ｚ】</TD>
+<A href="../items/items.html?0249" target="items"><FONT color="#ff0000">炎王龍的尾巴</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?019b" target="items">火龙的红玉</A>×1<BR><A href="../items/items.html?020e" target="items">黄金之毛</A>×1<BR><A href="../items/items.html?024e" target="items">浮岳龍的体液</A>×1<BR>　【36000ｚ】</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 </TR>
 <TR>
 <TD id="0220"class="tb-cell2" height="90">220</TD>
-<TD class="tb-cell1">凯撒皇面</TD>
+<TD class="tb-cell1">帝王面具</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?023a" target="items">炎龍的爪</A>×1<BR><A href="../items/items.html?0247" target="items">炎王龍的鬣毛</A>×1<BR><A href="../items/items.html?0246" target="items"><FONT color="#ff0000">炎王龍的坚壳</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?00de" target="items">红莲石</A>×1<BR>　【18000ｚ】</TD>
 <TD class="tb-cell1 hc">
@@ -3548,19 +3144,9 @@ ShowLinks(1, 7);
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?024a" target="items">炎王龍的角</A>×2<BR><A href="../items/items.html?023b" target="items"><FONT color="#ff0000">炎龍的尘粉</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?013c" target="items">古龍骨</A>×3<BR><A href="../items/items.html?023d" target="items">古龍的血</A>×1<BR>　【30000ｚ】</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?0249" target="items"><FONT color="#ff0000">炎王龍的尻尾</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?019b" target="items">火龙的红玉</A>×1<BR><A href="../items/items.html?020e" target="items">黄金之毛</A>×1<BR><A href="../items/items.html?024e" target="items">浮岳龍的体液</A>×1<BR>　【36000ｚ】</TD>
+<A href="../items/items.html?0249" target="items"><FONT color="#ff0000">炎王龍的尾巴</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?019b" target="items">火龙的红玉</A>×1<BR><A href="../items/items.html?020e" target="items">黄金之毛</A>×1<BR><A href="../items/items.html?024e" target="items">浮岳龍的体液</A>×1<BR>　【36000ｚ】</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1">&nbsp;</TD>
-</TR>
-<TR>
-<TH class="tb-th1" width="30">No.</TH>
-<TH class="tb-th1" width="63">名称</TH>
-<TH class="tb-th1" width="130">等级２</TH>
-<TH class="tb-th1" width="130">等级３</TH>
-<TH class="tb-th1" width="130">等级４</TH>
-<TH class="tb-th1" width="130">等级５</TH>
-<TH class="tb-th1" width="130">等级６</TH>
-<TH class="tb-th1" width="130">等级７</TH>
 </TR>
 <TR>
 <TD id="0221"class="tb-cell2 hc" height="90">221</TD>
@@ -3598,7 +3184,7 @@ ShowLinks(1, 7);
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?020b" target="items">金狮子的黑毛</A>×1<BR><A href="../items/items.html?020c" target="items"><FONT color="#ff0000">金狮子的尖爪</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?020e" target="items">黄金之毛</A>×1<BR><A href="../items/items.html?0144" target="items">龙玉</A>×1<BR>　【30000ｚ】</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?020d" target="items"><FONT color="#ff0000">金狮子的尻尾</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0253" target="items">蛇龙的上皮</A>×1<BR><A href="../items/items.html?0194" target="items">金火龙的上鳞</A>×1<BR><A href="../items/items.html?024f" target="items">龍苔</A>×1<BR>　【37500ｚ】</TD>
+<A href="../items/items.html?020d" target="items"><FONT color="#ff0000">金狮子的尾巴</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0253" target="items">蛇龙的上皮</A>×1<BR><A href="../items/items.html?0194" target="items">金火龙的上鳞</A>×1<BR><A href="../items/items.html?024f" target="items">龍苔</A>×1<BR>　【37500ｚ】</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?020b" target="items">金狮子的黑毛</A>×3<BR><A href="../items/items.html?020e" target="items">黄金之毛</A>×2<BR><A href="../items/items.html?022c" target="items"><FONT color="#ff0000">钢龍的宝玉</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?02e8" target="items">勇气之证</A>×1<BR>　【45000ｚ】</TD>
 <TD class="tb-cell1">&nbsp;</TD>
@@ -3612,7 +3198,7 @@ ShowLinks(1, 7);
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?020b" target="items">金狮子的黑毛</A>×1<BR><A href="../items/items.html?020c" target="items"><FONT color="#ff0000">金狮子的尖爪</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?020e" target="items">黄金之毛</A>×1<BR><A href="../items/items.html?0144" target="items">龙玉</A>×1<BR>　【30000ｚ】</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?020d" target="items"><FONT color="#ff0000">金狮子的尻尾</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0253" target="items">蛇龙的上皮</A>×1<BR><A href="../items/items.html?0194" target="items">金火龙的上鳞</A>×1<BR><A href="../items/items.html?024f" target="items">龍苔</A>×1<BR>　【37500ｚ】</TD>
+<A href="../items/items.html?020d" target="items"><FONT color="#ff0000">金狮子的尾巴</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0253" target="items">蛇龙的上皮</A>×1<BR><A href="../items/items.html?0194" target="items">金火龙的上鳞</A>×1<BR><A href="../items/items.html?024f" target="items">龍苔</A>×1<BR>　【37500ｚ】</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?020b" target="items">金狮子的黑毛</A>×3<BR><A href="../items/items.html?020e" target="items">黄金之毛</A>×2<BR><A href="../items/items.html?022c" target="items"><FONT color="#ff0000">钢龍的宝玉</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?02e8" target="items">勇气之证</A>×1<BR>　【45000ｚ】</TD>
 <TD class="tb-cell1">&nbsp;</TD>
@@ -3631,16 +3217,6 @@ ShowLinks(1, 7);
 <A href="../items/items.html?022c" target="items"><FONT color="#ff0000">钢龍的宝玉</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?023c" target="items"><FONT color="#ff0000">炎龍的宝玉</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0237" target="items"><FONT color="#ff0000">霞龍的宝玉</FONT></A><FONT color="#ff0000">×1</FONT><BR><BR>　【62500ｚ】</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1">&nbsp;</TD>
-</TR>
-<TR>
-<TH class="tb-th1" width="30">No.</TH>
-<TH class="tb-th1" width="63">名称</TH>
-<TH class="tb-th1" width="130">等级２</TH>
-<TH class="tb-th1" width="130">等级３</TH>
-<TH class="tb-th1" width="130">等级４</TH>
-<TH class="tb-th1" width="130">等级５</TH>
-<TH class="tb-th1" width="130">等级６</TH>
-<TH class="tb-th1" width="130">等级７</TH>
 </TR>
 <TR>
 <TD id="0226"class="tb-cell2 hc" height="90">226</TD>
@@ -3672,7 +3248,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0228"class="tb-cell2" height="90">228</TD>
-<TD class="tb-cell1">白速龙伪装头</TD>
+<TD class="tb-cell1">雪蓝速龙伪装头</TD>
 <TD class="tb-cell1">
 <A href="../items/items.html?02c3" target="items">白带硬币</A>×1<BR><A href="../items/items.html?02c4" target="items">黑带硬币</A>×1<BR><A href="../items/items.html?02c5" target="items">达人硬币</A>×1<BR><BR>　【780ｚ】</TD>
 <TD class="tb-cell1">
@@ -3715,16 +3291,6 @@ ShowLinks(1, 7);
 <A href="../items/items.html?02ea" target="items"><FONT color="#ff0000">公会券</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?02ca" target="items">甲壳的硬币</A>×1<BR><A href="../items/items.html?02c8" target="items">鱼龙的硬币</A>×1<BR><A href="../items/items.html?02cb" target="items">古龍的硬币</A>×1<BR>　【7500ｚ】</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1">&nbsp;</TD>
-</TR>
-<TR>
-<TH class="tb-th1" width="30">No.</TH>
-<TH class="tb-th1" width="63">名称</TH>
-<TH class="tb-th1" width="130">等级２</TH>
-<TH class="tb-th1" width="130">等级３</TH>
-<TH class="tb-th1" width="130">等级４</TH>
-<TH class="tb-th1" width="130">等级５</TH>
-<TH class="tb-th1" width="130">等级６</TH>
-<TH class="tb-th1" width="130">等级７</TH>
 </TR>
 <TR>
 <TD id="0231"class="tb-cell2" height="90">231</TD>
@@ -3786,21 +3352,11 @@ ShowLinks(1, 7);
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?02ea" target="items"><FONT color="#ff0000">公会券</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?02c8" target="items"><FONT color="#ff0000">鱼龙的硬币</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?01f7" target="items"><FONT color="#ff0000">祖龍的翼膜</FONT></A><FONT color="#ff0000">×1</FONT><BR><BR>　【20000ｚ】</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?02e4" target="items"><FONT color="#ff0000">战友之绊</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?02c9" target="items"><FONT color="#ff0000">牙兽的硬币</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?01f8" target="items"><FONT color="#ff0000">祖龍的角</FONT></A><FONT color="#ff0000">×1</FONT><BR><BR>　【25000ｚ】</TD>
+<A href="../items/items.html?02e4" target="items"><FONT color="#ff0000">战友之纽带</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?02c9" target="items"><FONT color="#ff0000">牙兽的硬币</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?01f8" target="items"><FONT color="#ff0000">祖龍的角</FONT></A><FONT color="#ff0000">×1</FONT><BR><BR>　【25000ｚ】</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?02e3" target="items"><FONT color="#ff0000">战友之证</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?02ca" target="items"><FONT color="#ff0000">甲壳的硬币</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?01ee" target="items"><FONT color="#ff0000">黑龍的眼</FONT></A><FONT color="#ff0000">×1</FONT><BR><BR>　【30000ｚ】</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1">&nbsp;</TD>
-</TR>
-<TR>
-<TH class="tb-th1" width="30">No.</TH>
-<TH class="tb-th1" width="63">名称</TH>
-<TH class="tb-th1" width="130">等级２</TH>
-<TH class="tb-th1" width="130">等级３</TH>
-<TH class="tb-th1" width="130">等级４</TH>
-<TH class="tb-th1" width="130">等级５</TH>
-<TH class="tb-th1" width="130">等级６</TH>
-<TH class="tb-th1" width="130">等级７</TH>
 </TR>
 <TR>
 <TD id="0236"class="tb-cell2 hc" height="90">236</TD>
@@ -3810,7 +3366,7 @@ ShowLinks(1, 7);
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?02ea" target="items"><FONT color="#ff0000">公会券</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?02c8" target="items"><FONT color="#ff0000">鱼龙的硬币</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?01f7" target="items"><FONT color="#ff0000">祖龍的翼膜</FONT></A><FONT color="#ff0000">×1</FONT><BR><BR>　【20000ｚ】</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?02e4" target="items"><FONT color="#ff0000">战友之绊</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?02c9" target="items"><FONT color="#ff0000">牙兽的硬币</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?01f8" target="items"><FONT color="#ff0000">祖龍的角</FONT></A><FONT color="#ff0000">×1</FONT><BR><BR>　【25000ｚ】</TD>
+<A href="../items/items.html?02e4" target="items"><FONT color="#ff0000">战友之纽带</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?02c9" target="items"><FONT color="#ff0000">牙兽的硬币</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?01f8" target="items"><FONT color="#ff0000">祖龍的角</FONT></A><FONT color="#ff0000">×1</FONT><BR><BR>　【25000ｚ】</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?02e3" target="items"><FONT color="#ff0000">战友之证</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?02ca" target="items"><FONT color="#ff0000">甲壳的硬币</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?01ee" target="items"><FONT color="#ff0000">黑龍的眼</FONT></A><FONT color="#ff0000">×1</FONT><BR><BR>　【30000ｚ】</TD>
 <TD class="tb-cell1">&nbsp;</TD>
@@ -3824,7 +3380,7 @@ ShowLinks(1, 7);
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?02ea" target="items"><FONT color="#ff0000">公会券</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?02c8" target="items"><FONT color="#ff0000">鱼龙的硬币</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?01f7" target="items"><FONT color="#ff0000">祖龍的翼膜</FONT></A><FONT color="#ff0000">×1</FONT><BR><BR>　【20000ｚ】</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?02e4" target="items"><FONT color="#ff0000">战友之绊</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?02c9" target="items"><FONT color="#ff0000">牙兽的硬币</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?01f8" target="items"><FONT color="#ff0000">祖龍的角</FONT></A><FONT color="#ff0000">×1</FONT><BR><BR>　【25000ｚ】</TD>
+<A href="../items/items.html?02e4" target="items"><FONT color="#ff0000">战友之纽带</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?02c9" target="items"><FONT color="#ff0000">牙兽的硬币</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?01f8" target="items"><FONT color="#ff0000">祖龍的角</FONT></A><FONT color="#ff0000">×1</FONT><BR><BR>　【25000ｚ】</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?02e3" target="items"><FONT color="#ff0000">战友之证</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?02ca" target="items"><FONT color="#ff0000">甲壳的硬币</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?01ee" target="items"><FONT color="#ff0000">黑龍的眼</FONT></A><FONT color="#ff0000">×1</FONT><BR><BR>　【30000ｚ】</TD>
 <TD class="tb-cell1">&nbsp;</TD>
@@ -3838,7 +3394,7 @@ ShowLinks(1, 7);
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?02ea" target="items"><FONT color="#ff0000">公会券</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?02c8" target="items"><FONT color="#ff0000">鱼龙的硬币</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?01f7" target="items"><FONT color="#ff0000">祖龍的翼膜</FONT></A><FONT color="#ff0000">×1</FONT><BR><BR>　【20000ｚ】</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?02e4" target="items"><FONT color="#ff0000">战友之绊</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?02c9" target="items"><FONT color="#ff0000">牙兽的硬币</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?01f8" target="items"><FONT color="#ff0000">祖龍的角</FONT></A><FONT color="#ff0000">×1</FONT><BR><BR>　【25000ｚ】</TD>
+<A href="../items/items.html?02e4" target="items"><FONT color="#ff0000">战友之纽带</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?02c9" target="items"><FONT color="#ff0000">牙兽的硬币</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?01f8" target="items"><FONT color="#ff0000">祖龍的角</FONT></A><FONT color="#ff0000">×1</FONT><BR><BR>　【25000ｚ】</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?02e3" target="items"><FONT color="#ff0000">战友之证</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?02ca" target="items"><FONT color="#ff0000">甲壳的硬币</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?01ee" target="items"><FONT color="#ff0000">黑龍的眼</FONT></A><FONT color="#ff0000">×1</FONT><BR><BR>　【30000ｚ】</TD>
 <TD class="tb-cell1">&nbsp;</TD>
@@ -3848,7 +3404,7 @@ ShowLinks(1, 7);
 <TD id="0239"class="tb-cell2" height="90">239</TD>
 <TD class="tb-cell1">帝王龙虾软帽</TD>
 <TD class="tb-cell1">
-<A href="../items/items.html?01d2" target="items">虾之小壳</A>×1<BR><A href="../items/items.html?00e4" target="items">冰结晶</A>×1<BR><A href="../items/items.html?0108" target="items">粘着蝗虫</A>×1<BR><BR>　【980ｚ】</TD>
+<A href="../items/items.html?01d2" target="items">虾之小壳</A>×1<BR><A href="../items/items.html?00e4" target="items">冰结晶</A>×1<BR><A href="../items/items.html?0108" target="items">黏着蝗虫</A>×1<BR><BR>　【980ｚ】</TD>
 <TD class="tb-cell1">
 <A href="../items/items.html?01d3" target="items">虾之大壳</A>×1<BR><A href="../items/items.html?00d8" target="items"><FONT color="#ff0000">铁矿石</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0018" target="items">怪物的体液</A>×1<BR><BR>　【1273ｚ】</TD>
 <TD class="tb-cell1">
@@ -3867,16 +3423,6 @@ ShowLinks(1, 7);
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1">&nbsp;</TD>
-</TR>
-<TR>
-<TH class="tb-th1" width="30">No.</TH>
-<TH class="tb-th1" width="63">名称</TH>
-<TH class="tb-th1" width="130">等级２</TH>
-<TH class="tb-th1" width="130">等级３</TH>
-<TH class="tb-th1" width="130">等级４</TH>
-<TH class="tb-th1" width="130">等级５</TH>
-<TH class="tb-th1" width="130">等级６</TH>
-<TH class="tb-th1" width="130">等级７</TH>
 </TR>
 <TR>
 <TD id="0241"class="tb-cell2" height="90">241</TD>
@@ -3910,7 +3456,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0244"class="tb-cell2" height="90">244</TD>
-<TD class="tb-cell1">职人耳饰</TD>
+<TD class="tb-cell1">工匠耳饰</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1">&nbsp;</TD>
@@ -3927,16 +3473,6 @@ ShowLinks(1, 7);
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1">&nbsp;</TD>
-</TR>
-<TR>
-<TH class="tb-th1" width="30">No.</TH>
-<TH class="tb-th1" width="63">名称</TH>
-<TH class="tb-th1" width="130">等级２</TH>
-<TH class="tb-th1" width="130">等级３</TH>
-<TH class="tb-th1" width="130">等级４</TH>
-<TH class="tb-th1" width="130">等级５</TH>
-<TH class="tb-th1" width="130">等级６</TH>
-<TH class="tb-th1" width="130">等级７</TH>
 </TR>
 <TR>
 <TD id="0246"class="tb-cell2" height="90">246</TD>
@@ -3991,16 +3527,6 @@ ShowLinks(1, 7);
 <A href="../items/items.html?00fe" target="items"><FONT color="#ff0000">女王虾</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?02cf" target="items">公会硬币</A>×1<BR><A href="../items/items.html?02f3" target="items">Fami通券</A>×1<BR><BR>　【16665ｚ】</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1">&nbsp;</TD>
-</TR>
-<TR>
-<TH class="tb-th1" width="30">No.</TH>
-<TH class="tb-th1" width="63">名称</TH>
-<TH class="tb-th1" width="130">等级２</TH>
-<TH class="tb-th1" width="130">等级３</TH>
-<TH class="tb-th1" width="130">等级４</TH>
-<TH class="tb-th1" width="130">等级５</TH>
-<TH class="tb-th1" width="130">等级６</TH>
-<TH class="tb-th1" width="130">等级７</TH>
 </TR>
 <TR>
 <TD id="0251"class="tb-cell2 hc" height="90">251</TD>

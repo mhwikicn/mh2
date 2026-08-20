@@ -8,6 +8,32 @@
 <LINK rel="stylesheet" href="../table.css" type="text/css">
 <SCRIPT src="../scripts/links.js"></SCRIPT>
 </HEAD>
+<SCRIPT src="../scripts/blink.js"></SCRIPT>
+<STYLE>
+.tb-cell1 font[size="-2"] {
+  display: block;
+  text-align: center;
+  margin-top: 2px;
+}
+.cnt-tb2 {
+  table-layout: fixed;
+  width: 1080px;
+}
+.highlight-row td,
+.highlight-row th {
+  background-color: #c7edcc !important;
+  transition: background-color 0.3s ease;
+}
+.cnt-tb2 > tbody:first-child > tr:first-child {
+  position: sticky;
+  top: 0;
+  background-color: #996633;
+  z-index: 10;
+}
+.cnt-tb2 td[id] {
+  scroll-margin-top: 37px;
+}
+</STYLE>
 <BODY>
 <HR>
 <TABLE border="0" width="910">
@@ -33,7 +59,7 @@ ShowLinks(1, 7);
 </TBODY>
 </TABLE>
 <BR>
-<FONT SIZE="-1">* 防御・插孔栏对应各个等级的数值。价格为等级１的生产/强化。（商店直接购买时价格为２倍）<BR>
+<FONT SIZE="-1">* 防御・插孔栏对应各个等级的数值。价格为等级1的生产/强化。（商店直接购买时价格为2倍）<BR>
 * 点击防具名，将打开新窗口显示等级提升必要素材一览与费用信息。<BR>
 * <FONT color="#ff0000">红字</FONT>表示关键素材，未入手的话相关条目不会在列表中出现。（直接生产的情况下，原则上第一素材为关键素材）<BR>
 * 请注意，并非所有防具在游戏中都能获得。<BR>
@@ -58,7 +84,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0001"class="tb-cell2" height="65">1</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0001" target="_blank">轻革铠甲</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0001" target="armorlv">轻革铠甲</A></TD>
 <TD class="tb-cell2">&nbsp;</TD>
 <TD class="tb-cell2">1</TD>
 <TD class="tb-cell3">150</TD>
@@ -87,7 +113,7 @@ ShowLinks(1, 7);
 </TABLE>
 </TD>
 <TD class="tb-cell2">
-<A href="./armor.html#0068">68</A>, <A href="./armor.html#0127">127</A><BR>（Lv3以上）</TD>
+<A href="./armor.html#0068">68</A>, <A href="./armor.html#0127">127</A><BR>Lv3以上</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1"><A href="../items/items.html?00d8" target="items">铁矿石</A>×1<BR><A href="../items/items.html?0152" target="items">精灵鹿的皮</A>×1</TD>
 <TD class="tb-cell1">革をベースに軽い素材で作ら<br>
@@ -97,7 +123,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0002"class="tb-cell2" height="65">2</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0002" target="_blank">锁链铠甲</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0002" target="armorlv">锁链铠甲</A></TD>
 <TD class="tb-cell2">&nbsp;</TD>
 <TD class="tb-cell2">1</TD>
 <TD class="tb-cell3">300</TD>
@@ -118,7 +144,7 @@ ShowLinks(1, 7);
 <TBODY>
 <TR>
 <TD nowrap><FONT size="-1">
-体力<BR>反覆无常<BR>特殊攻击</FONT></TD>
+体力<BR>反复无常<BR>特殊攻击</FONT></TD>
 <TD nowrap align="right"><FONT size="-1">
 +2<BR>+1<BR>+3</FONT></TD>
 </TR>
@@ -126,7 +152,7 @@ ShowLinks(1, 7);
 </TABLE>
 </TD>
 <TD class="tb-cell2">
-<A href="./armor.html#0069">69</A>, <A href="./armor.html#0128">128</A><BR>（Lv3以上）</TD>
+<A href="./armor.html#0069">69</A>, <A href="./armor.html#0128">128</A><BR>Lv3以上</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1"><A href="../items/items.html?00d8" target="items">铁矿石</A>×1<BR><A href="../items/items.html?00d9" target="items">大地的结晶</A>×1<BR><A href="../items/items.html?0152" target="items">精灵鹿的皮</A>×1</TD>
 <TD class="tb-cell1">チェーンで编まれた胴用装備。<br>
@@ -136,7 +162,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0003"class="tb-cell2" height="65">3</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0003" target="_blank">猎人铠甲</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0003" target="armorlv">猎人铠甲</A></TD>
 <TD class="tb-cell2">剑士<BR>专用</TD>
 <TD class="tb-cell2">1</TD>
 <TD class="tb-cell3">720</TD>
@@ -165,7 +191,7 @@ ShowLinks(1, 7);
 </TABLE>
 </TD>
 <TD class="tb-cell2">
-<A href="./armor.html#0070">70</A>, <A href="./armor.html#0129">129</A><BR>（Lv3以上）</TD>
+<A href="./armor.html#0070">70</A>, <A href="./armor.html#0129">129</A><BR>Lv3以上</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1"><A href="../items/items.html?00d8" target="items">铁矿石</A>×2<BR><A href="../items/items.html?014d" target="items">大野猪的毛皮</A>×1<BR><A href="../items/items.html?0152" target="items">精灵鹿的皮</A>×1</TD>
 <TD class="tb-cell1">ハンター用に作られた胴用<br>
@@ -175,7 +201,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0004"class="tb-cell2" height="65">4</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0004" target="_blank">猎人轻甲</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0004" target="armorlv">猎人轻甲</A></TD>
 <TD class="tb-cell2">射手<BR>专用</TD>
 <TD class="tb-cell2">1</TD>
 <TD class="tb-cell3">720</TD>
@@ -204,7 +230,7 @@ ShowLinks(1, 7);
 </TABLE>
 </TD>
 <TD class="tb-cell2">
-<A href="./armor.html#0071">71</A>, <A href="./armor.html#0130">130</A><BR>（Lv3以上）</TD>
+<A href="./armor.html#0071">71</A>, <A href="./armor.html#0130">130</A><BR>Lv3以上</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1"><A href="../items/items.html?00d8" target="items">铁矿石</A>×2<BR><A href="../items/items.html?014d" target="items">大野猪的毛皮</A>×1<BR><A href="../items/items.html?0152" target="items">精灵鹿的皮</A>×1</TD>
 <TD class="tb-cell1">ハンター用に作られた胴用<br>
@@ -214,7 +240,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0005"class="tb-cell2" height="65">5</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0005" target="_blank">骸骨铠甲</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0005" target="armorlv">骸骨铠甲</A></TD>
 <TD class="tb-cell2">剑士<BR>专用</TD>
 <TD class="tb-cell2">1</TD>
 <TD class="tb-cell3">1040</TD>
@@ -243,7 +269,7 @@ ShowLinks(1, 7);
 </TABLE>
 </TD>
 <TD class="tb-cell2">
-<A href="./armor.html#0072">72</A>, <A href="./armor.html#0131">131</A><BR>（Lv3以上）</TD>
+<A href="./armor.html#0072">72</A>, <A href="./armor.html#0131">131</A><BR>Lv3以上</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1"><A href="../items/items.html?0138" target="items">龙骨【小】</A>×2<BR><A href="../items/items.html?0140" target="items">棒状之骨</A>×1<BR><A href="../items/items.html?0152" target="items">精灵鹿的皮</A>×1</TD>
 <TD class="tb-cell1">怪物の骨をベースに<br>
@@ -253,7 +279,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0006"class="tb-cell2" height="65">6</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0006" target="_blank">骸骨轻甲</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0006" target="armorlv">骸骨轻甲</A></TD>
 <TD class="tb-cell2">射手<BR>专用</TD>
 <TD class="tb-cell2">1</TD>
 <TD class="tb-cell3">1040</TD>
@@ -282,7 +308,7 @@ ShowLinks(1, 7);
 </TABLE>
 </TD>
 <TD class="tb-cell2">
-<A href="./armor.html#0073">73</A>, <A href="./armor.html#0132">132</A><BR>（Lv3以上）</TD>
+<A href="./armor.html#0073">73</A>, <A href="./armor.html#0132">132</A><BR>Lv3以上</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1"><A href="../items/items.html?0138" target="items">龙骨【小】</A>×2<BR><A href="../items/items.html?0140" target="items">棒状之骨</A>×1<BR><A href="../items/items.html?0152" target="items">精灵鹿的皮</A>×1</TD>
 <TD class="tb-cell1">怪物の骨を使った、<br>
@@ -292,7 +318,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0007"class="tb-cell2" height="65">7</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0007" target="_blank">蓝速龙铠甲</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0007" target="armorlv">蓝速龙铠甲</A></TD>
 <TD class="tb-cell2">剑士<BR>专用</TD>
 <TD class="tb-cell2">2</TD>
 <TD class="tb-cell3">1200</TD>
@@ -321,7 +347,7 @@ ShowLinks(1, 7);
 </TABLE>
 </TD>
 <TD class="tb-cell2">
-<A href="./armor.html#0074">74</A>, <A href="./armor.html#0133">133</A><BR>（Lv3以上）</TD>
+<A href="./armor.html#0074">74</A>, <A href="./armor.html#0133">133</A><BR>Lv3以上</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1"><A href="../items/items.html?0158" target="items">蓝速龙的皮</A>×2<BR><A href="../items/items.html?0156" target="items">蓝速龙的鳞</A>×2<BR><A href="../items/items.html?00d8" target="items">铁矿石</A>×3</TD>
 <TD class="tb-cell1">蓝速龙の素材で作られた胴<br>
@@ -331,7 +357,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0008"class="tb-cell2" height="65">8</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0008" target="_blank">蓝速龙轻甲</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0008" target="armorlv">蓝速龙轻甲</A></TD>
 <TD class="tb-cell2">&nbsp;</TD>
 <TD class="tb-cell2">2</TD>
 <TD class="tb-cell3">1200</TD>
@@ -360,7 +386,7 @@ ShowLinks(1, 7);
 </TABLE>
 </TD>
 <TD class="tb-cell2">
-<A href="./armor.html#0075">75</A>, <A href="./armor.html#0134">134</A><BR>（Lv3以上）</TD>
+<A href="./armor.html#0075">75</A>, <A href="./armor.html#0134">134</A><BR>Lv3以上</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1"><A href="../items/items.html?0158" target="items">蓝速龙的皮</A>×2<BR><A href="../items/items.html?0156" target="items">蓝速龙的鳞</A>×2<BR><A href="../items/items.html?00d8" target="items">铁矿石</A>×3</TD>
 <TD class="tb-cell1">蓝速龙の素材と良質な鉱石<br>
@@ -370,7 +396,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0009"class="tb-cell2" height="65">9</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0009" target="_blank">战斗铠甲</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0009" target="armorlv">战斗铠甲</A></TD>
 <TD class="tb-cell2">剑士<BR>专用</TD>
 <TD class="tb-cell2">2</TD>
 <TD class="tb-cell3">1200</TD>
@@ -399,7 +425,7 @@ ShowLinks(1, 7);
 </TABLE>
 </TD>
 <TD class="tb-cell2">
-<A href="./armor.html#0076">76</A>, <A href="./armor.html#0135">135</A><BR>（Lv3以上）</TD>
+<A href="./armor.html#0076">76</A>, <A href="./armor.html#0135">135</A><BR>Lv3以上</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1"><A href="../items/items.html?016b" target="items">怪鸟的鳞</A>×2<BR><A href="../items/items.html?014d" target="items">大野猪的毛皮</A>×1<BR><A href="../items/items.html?00d9" target="items">大地的结晶</A>×3<BR><A href="../items/items.html?00ac" target="items">砥石</A>×3</TD>
 <TD class="tb-cell1">ハンター用に作られた胴用<br>
@@ -409,7 +435,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0010"class="tb-cell2" height="65">10</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0010" target="_blank">战斗轻甲</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0010" target="armorlv">战斗轻甲</A></TD>
 <TD class="tb-cell2">射手<BR>专用</TD>
 <TD class="tb-cell2">2</TD>
 <TD class="tb-cell3">1200</TD>
@@ -438,7 +464,7 @@ ShowLinks(1, 7);
 </TABLE>
 </TD>
 <TD class="tb-cell2">
-<A href="./armor.html#0077">77</A>, <A href="./armor.html#0136">136</A><BR>（Lv3以上）</TD>
+<A href="./armor.html#0077">77</A>, <A href="./armor.html#0136">136</A><BR>Lv3以上</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1"><A href="../items/items.html?016b" target="items">怪鸟的鳞</A>×2<BR><A href="../items/items.html?014d" target="items">大野猪的毛皮</A>×1<BR><A href="../items/items.html?0064" target="items">空心骨【小】</A>×3<BR><A href="../items/items.html?0063" target="items">空心果</A>×3</TD>
 <TD class="tb-cell1">ハンター用に作られた胴用<br>
@@ -448,7 +474,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0011"class="tb-cell2" height="65">11</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0011" target="_blank">巨蜂铠甲</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0011" target="armorlv">巨蜂铠甲</A></TD>
 <TD class="tb-cell2">&nbsp;</TD>
 <TD class="tb-cell2">2</TD>
 <TD class="tb-cell3">1640</TD>
@@ -477,7 +503,7 @@ ShowLinks(1, 7);
 </TABLE>
 </TD>
 <TD class="tb-cell2">
-<A href="./armor.html#0078">78</A>, <A href="./armor.html#0137">137</A><BR>（Lv3以上）</TD>
+<A href="./armor.html#0078">78</A>, <A href="./armor.html#0137">137</A><BR>Lv3以上</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1"><A href="../items/items.html?01cc" target="items">巨蜂的羽</A>×6<BR><A href="../items/items.html?00da" target="items">燕雀石</A>×2<BR><A href="../items/items.html?00d6" target="items">阳光石</A>×3<BR><A href="../items/items.html?0018" target="items">怪物的体液</A>×1</TD>
 <TD class="tb-cell1">巨蜂の素材で覆われた<br>
@@ -487,7 +513,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0012"class="tb-cell2" height="65">12</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0012" target="_blank">巨蜂轻甲</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0012" target="armorlv">巨蜂轻甲</A></TD>
 <TD class="tb-cell2">&nbsp;</TD>
 <TD class="tb-cell2">2</TD>
 <TD class="tb-cell3">1640</TD>
@@ -516,7 +542,7 @@ ShowLinks(1, 7);
 </TABLE>
 </TD>
 <TD class="tb-cell2">
-<A href="./armor.html#0079">79</A>, <A href="./armor.html#0138">138</A><BR>（Lv3以上）</TD>
+<A href="./armor.html#0079">79</A>, <A href="./armor.html#0138">138</A><BR>Lv3以上</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1"><A href="../items/items.html?01ca" target="items">巨蜂的甲壳</A>×3<BR><A href="../items/items.html?00da" target="items">燕雀石</A>×2<BR><A href="../items/items.html?00d6" target="items">阳光石</A>×3<BR><A href="../items/items.html?0018" target="items">怪物的体液</A>×1</TD>
 <TD class="tb-cell1">巨蜂の素材で覆われた<br>
@@ -526,7 +552,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0013"class="tb-cell2" height="65">13</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0013" target="_blank">爬虫铠甲</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0013" target="armorlv">爬虫铠甲</A></TD>
 <TD class="tb-cell2">剑士<BR>专用</TD>
 <TD class="tb-cell2">2</TD>
 <TD class="tb-cell3">1640</TD>
@@ -555,7 +581,7 @@ ShowLinks(1, 7);
 </TABLE>
 </TD>
 <TD class="tb-cell2">
-<A href="./armor.html#0080">80</A>, <A href="./armor.html#0139">139</A><BR>（Lv3以上）</TD>
+<A href="./armor.html#0080">80</A>, <A href="./armor.html#0139">139</A><BR>Lv3以上</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1"><A href="../items/items.html?01ce" target="items">爬虫的甲壳</A>×2<BR><A href="../items/items.html?01d0" target="items">爬虫的羽</A>×1<BR><A href="../items/items.html?00e4" target="items">冰结晶</A>×3<BR><A href="../items/items.html?0018" target="items">怪物的体液</A>×1</TD>
 <TD class="tb-cell1">強固な爬虫の殻で覆わ<br>
@@ -565,7 +591,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0014"class="tb-cell2" height="65">14</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0014" target="_blank">爬虫轻甲</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0014" target="armorlv">爬虫轻甲</A></TD>
 <TD class="tb-cell2">射手<BR>专用</TD>
 <TD class="tb-cell2">2</TD>
 <TD class="tb-cell3">1640</TD>
@@ -594,7 +620,7 @@ ShowLinks(1, 7);
 </TABLE>
 </TD>
 <TD class="tb-cell2">
-<A href="./armor.html#0081">81</A>, <A href="./armor.html#0140">140</A><BR>（Lv3以上）</TD>
+<A href="./armor.html#0081">81</A>, <A href="./armor.html#0140">140</A><BR>Lv3以上</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1"><A href="../items/items.html?01ce" target="items">爬虫的甲壳</A>×2<BR><A href="../items/items.html?01d0" target="items">爬虫的羽</A>×1<BR><A href="../items/items.html?00e4" target="items">冰结晶</A>×3<BR><A href="../items/items.html?0018" target="items">怪物的体液</A>×1</TD>
 <TD class="tb-cell1">強固な爬虫の殻で覆わ<br>
@@ -604,7 +630,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0015"class="tb-cell2" height="65">15</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0015" target="_blank">精炼矿石铠甲</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0015" target="armorlv">高等合金铠甲</A></TD>
 <TD class="tb-cell2">&nbsp;</TD>
 <TD class="tb-cell2">2</TD>
 <TD class="tb-cell3">1640</TD>
@@ -633,7 +659,7 @@ ShowLinks(1, 7);
 </TABLE>
 </TD>
 <TD class="tb-cell2">
-<A href="./armor.html#0082">82</A>, <A href="./armor.html#0141">141</A><BR>（Lv3以上）</TD>
+<A href="./armor.html#0082">82</A>, <A href="./armor.html#0141">141</A><BR>Lv3以上</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1"><A href="../items/items.html?00e1" target="items">光水晶</A>×1<BR><A href="../items/items.html?00da" target="items">燕雀石</A>×2<BR><A href="../items/items.html?00d9" target="items">大地的结晶</A>×1<BR><A href="../items/items.html?00d6" target="items">阳光石</A>×2</TD>
 <TD class="tb-cell1">貴重な鉱石が主成分の胴用<br>
@@ -643,7 +669,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0016"class="tb-cell2" height="65">16</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0016" target="_blank">精炼矿石轻甲</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0016" target="armorlv">高等合金轻甲</A></TD>
 <TD class="tb-cell2">&nbsp;</TD>
 <TD class="tb-cell2">2</TD>
 <TD class="tb-cell3">1640</TD>
@@ -672,7 +698,7 @@ ShowLinks(1, 7);
 </TABLE>
 </TD>
 <TD class="tb-cell2">
-<A href="./armor.html#0083">83</A>, <A href="./armor.html#0142">142</A><BR>（Lv3以上）</TD>
+<A href="./armor.html#0083">83</A>, <A href="./armor.html#0142">142</A><BR>Lv3以上</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1"><A href="../items/items.html?00e1" target="items">光水晶</A>×1<BR><A href="../items/items.html?00da" target="items">燕雀石</A>×2<BR><A href="../items/items.html?00d9" target="items">大地的结晶</A>×1<BR><A href="../items/items.html?00d6" target="items">阳光石</A>×2</TD>
 <TD class="tb-cell1">貴重な鉱石が主成分の<br>
@@ -682,7 +708,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0017"class="tb-cell2" height="65">17</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0017" target="_blank">黄速龙铠甲</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0017" target="armorlv">黄速龙铠甲</A></TD>
 <TD class="tb-cell2">剑士<BR>专用</TD>
 <TD class="tb-cell2">2</TD>
 <TD class="tb-cell3">1900</TD>
@@ -711,7 +737,7 @@ ShowLinks(1, 7);
 </TABLE>
 </TD>
 <TD class="tb-cell2">
-<A href="./armor.html#0084">84</A>, <A href="./armor.html#0143">143</A><BR>（Lv3以上）</TD>
+<A href="./armor.html#0084">84</A>, <A href="./armor.html#0143">143</A><BR>Lv3以上</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1"><A href="../items/items.html?0163" target="items">黄速龙王的皮</A>×1<BR><A href="../items/items.html?0162" target="items">黄速龙的皮</A>×3<BR><A href="../items/items.html?0160" target="items">黄速龙的鳞</A>×2</TD>
 <TD class="tb-cell1">黄速龙の素材で作られた<br>
@@ -721,7 +747,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0018"class="tb-cell2" height="65">18</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0018" target="_blank">黄速龙轻甲</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0018" target="armorlv">黄速龙轻甲</A></TD>
 <TD class="tb-cell2">&nbsp;</TD>
 <TD class="tb-cell2">2</TD>
 <TD class="tb-cell3">1900</TD>
@@ -750,7 +776,7 @@ ShowLinks(1, 7);
 </TABLE>
 </TD>
 <TD class="tb-cell2">
-<A href="./armor.html#0085">85</A>, <A href="./armor.html#0144">144</A><BR>（Lv3以上）</TD>
+<A href="./armor.html#0085">85</A>, <A href="./armor.html#0144">144</A><BR>Lv3以上</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1"><A href="../items/items.html?0163" target="items">黄速龙王的皮</A>×1<BR><A href="../items/items.html?0162" target="items">黄速龙的皮</A>×3<BR><A href="../items/items.html?0160" target="items">黄速龙的鳞</A>×2</TD>
 <TD class="tb-cell1">黄速龙の素材を使った<br>
@@ -760,7 +786,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0019"class="tb-cell2" height="65">19</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0019" target="_blank">怪鸟铠甲</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0019" target="armorlv">怪鸟铠甲</A></TD>
 <TD class="tb-cell2">剑士<BR>专用</TD>
 <TD class="tb-cell2">3</TD>
 <TD class="tb-cell3">3450</TD>
@@ -789,7 +815,7 @@ ShowLinks(1, 7);
 </TABLE>
 </TD>
 <TD class="tb-cell2">
-<A href="./armor.html#0086">86</A>, <A href="./armor.html#0145">145</A><BR>（Lv3以上）</TD>
+<A href="./armor.html#0086">86</A>, <A href="./armor.html#0145">145</A><BR>Lv3以上</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1"><A href="../items/items.html?016c" target="items">怪鸟的甲壳</A>×2<BR><A href="../items/items.html?016b" target="items">怪鸟的鳞</A>×3<BR><A href="../items/items.html?0172" target="items">怪鸟的翼膜</A>×1<BR><A href="../items/items.html?00d8" target="items">铁矿石</A>×3</TD>
 <TD class="tb-cell1">怪鳥の素材で作られた胴装備。<br>
@@ -799,7 +825,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0020"class="tb-cell2" height="65">20</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0020" target="_blank">怪鸟轻甲</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0020" target="armorlv">怪鸟轻甲</A></TD>
 <TD class="tb-cell2">射手<BR>专用</TD>
 <TD class="tb-cell2">3</TD>
 <TD class="tb-cell3">3450</TD>
@@ -828,7 +854,7 @@ ShowLinks(1, 7);
 </TABLE>
 </TD>
 <TD class="tb-cell2">
-<A href="./armor.html#0087">87</A>, <A href="./armor.html#0146">146</A><BR>（Lv3以上）</TD>
+<A href="./armor.html#0087">87</A>, <A href="./armor.html#0146">146</A><BR>Lv3以上</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1"><A href="../items/items.html?016c" target="items">怪鸟的甲壳</A>×2<BR><A href="../items/items.html?016b" target="items">怪鸟的鳞</A>×3<BR><A href="../items/items.html?0172" target="items">怪鸟的翼膜</A>×1<BR><A href="../items/items.html?00d8" target="items">铁矿石</A>×3</TD>
 <TD class="tb-cell1">大怪鸟の素材で作られ<br>
@@ -838,7 +864,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0021"class="tb-cell2" height="65">21</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0021" target="_blank">红速龙铠甲</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0021" target="armorlv">红速龙铠甲</A></TD>
 <TD class="tb-cell2">剑士<BR>专用</TD>
 <TD class="tb-cell2">2</TD>
 <TD class="tb-cell3">2000</TD>
@@ -867,7 +893,7 @@ ShowLinks(1, 7);
 </TABLE>
 </TD>
 <TD class="tb-cell2">
-<A href="./armor.html#0088">88</A>, <A href="./armor.html#0147">147</A><BR>（Lv3以上）</TD>
+<A href="./armor.html#0088">88</A>, <A href="./armor.html#0147">147</A><BR>Lv3以上</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1"><A href="../items/items.html?0169" target="items">红速龙王的皮</A>×1<BR><A href="../items/items.html?0168" target="items">红速龙的皮</A>×2<BR><A href="../items/items.html?0166" target="items">红速龙的鳞</A>×1<BR><A href="../items/items.html?00da" target="items">燕雀石</A>×1</TD>
 <TD class="tb-cell1">红速龙素材で作られた胴用<br>
@@ -877,7 +903,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0022"class="tb-cell2" height="65">22</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0022" target="_blank">红速龙轻甲</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0022" target="armorlv">红速龙轻甲</A></TD>
 <TD class="tb-cell2">&nbsp;</TD>
 <TD class="tb-cell2">2</TD>
 <TD class="tb-cell3">2000</TD>
@@ -906,7 +932,7 @@ ShowLinks(1, 7);
 </TABLE>
 </TD>
 <TD class="tb-cell2">
-<A href="./armor.html#0089">89</A>, <A href="./armor.html#0148">148</A><BR>（Lv3以上）</TD>
+<A href="./armor.html#0089">89</A>, <A href="./armor.html#0148">148</A><BR>Lv3以上</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1"><A href="../items/items.html?0169" target="items">红速龙王的皮</A>×1<BR><A href="../items/items.html?0168" target="items">红速龙的皮</A>×2<BR><A href="../items/items.html?0166" target="items">红速龙的鳞</A>×1<BR><A href="../items/items.html?00da" target="items">燕雀石</A>×1</TD>
 <TD class="tb-cell1">赤い鱗が美しい胴用装備。<br>
@@ -916,7 +942,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0023"class="tb-cell2" height="65">23</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0023" target="_blank">毒怪鸟铠甲</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0023" target="armorlv">毒怪鸟铠甲</A></TD>
 <TD class="tb-cell2">剑士<BR>专用</TD>
 <TD class="tb-cell2">3</TD>
 <TD class="tb-cell3">3750</TD>
@@ -945,7 +971,7 @@ ShowLinks(1, 7);
 </TABLE>
 </TD>
 <TD class="tb-cell2">
-<A href="./armor.html#0090">90</A>, <A href="./armor.html#0149">149</A><BR>（Lv3以上）</TD>
+<A href="./armor.html#0090">90</A>, <A href="./armor.html#0149">149</A><BR>Lv3以上</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1"><A href="../items/items.html?0176" target="items">橡胶质的皮</A>×3<BR><A href="../items/items.html?00e3" target="items">抗菌石</A>×2<BR><A href="../items/items.html?014f" target="items">大猪的皮</A>×1<BR><A href="../items/items.html?00d9" target="items">大地的结晶</A>×3</TD>
 <TD class="tb-cell1">毒怪鸟の皮で覆われた胴用<br>
@@ -955,7 +981,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0024"class="tb-cell2" height="65">24</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0024" target="_blank">毒怪鸟轻甲</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0024" target="armorlv">毒怪鸟轻甲</A></TD>
 <TD class="tb-cell2">射手<BR>专用</TD>
 <TD class="tb-cell2">3</TD>
 <TD class="tb-cell3">3750</TD>
@@ -984,7 +1010,7 @@ ShowLinks(1, 7);
 </TABLE>
 </TD>
 <TD class="tb-cell2">
-<A href="./armor.html#0091">91</A>, <A href="./armor.html#0150">150</A><BR>（Lv3以上）</TD>
+<A href="./armor.html#0091">91</A>, <A href="./armor.html#0150">150</A><BR>Lv3以上</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1"><A href="../items/items.html?0176" target="items">橡胶质的皮</A>×3<BR><A href="../items/items.html?00e3" target="items">抗菌石</A>×2<BR><A href="../items/items.html?014f" target="items">大猪的皮</A>×1<BR><A href="../items/items.html?00d9" target="items">大地的结晶</A>×3</TD>
 <TD class="tb-cell1">毒怪鸟の皮で覆われた胴用<br>
@@ -994,7 +1020,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0025"class="tb-cell2" height="65">25</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0025" target="_blank">砂龙铠甲</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0025" target="armorlv">沙龙铠甲</A></TD>
 <TD class="tb-cell2">剑士<BR>专用</TD>
 <TD class="tb-cell2">2</TD>
 <TD class="tb-cell3">2750</TD>
@@ -1023,17 +1049,17 @@ ShowLinks(1, 7);
 </TABLE>
 </TD>
 <TD class="tb-cell2">
-<A href="./armor.html#0092">92</A>, <A href="./armor.html#0151">151</A><BR>（Lv3以上）</TD>
+<A href="./armor.html#0092">92</A>, <A href="./armor.html#0151">151</A><BR>Lv3以上</TD>
 <TD class="tb-cell1">&nbsp;</TD>
-<TD class="tb-cell1"><A href="../items/items.html?0184" target="items">砂龙的鳍</A>×1<BR><A href="../items/items.html?0182" target="items">砂龙的鳞</A>×3<BR><A href="../items/items.html?00da" target="items">燕雀石</A>×1<BR><A href="../items/items.html?0156" target="items">蓝速龙的鳞</A>×2</TD>
-<TD class="tb-cell1">砂龙の素材で作られた<br>
+<TD class="tb-cell1"><A href="../items/items.html?0184" target="items">沙龙的鳍</A>×1<BR><A href="../items/items.html?0182" target="items">沙龙的鳞</A>×3<BR><A href="../items/items.html?00da" target="items">燕雀石</A>×1<BR><A href="../items/items.html?0156" target="items">蓝速龙的鳞</A>×2</TD>
+<TD class="tb-cell1">沙龙の素材で作られた<br>
 胴用装備。その鱗は、高い<br>
 防御力を持つ反面、雷に弱い。
 </TD>
 </TR>
 <TR>
 <TD id="0026"class="tb-cell2" height="65">26</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0026" target="_blank">砂龙轻甲</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0026" target="armorlv">沙龙轻甲</A></TD>
 <TD class="tb-cell2">射手<BR>专用</TD>
 <TD class="tb-cell2">2</TD>
 <TD class="tb-cell3">2750</TD>
@@ -1062,9 +1088,9 @@ ShowLinks(1, 7);
 </TABLE>
 </TD>
 <TD class="tb-cell2">
-<A href="./armor.html#0093">93</A>, <A href="./armor.html#0152">152</A><BR>（Lv3以上）</TD>
+<A href="./armor.html#0093">93</A>, <A href="./armor.html#0152">152</A><BR>Lv3以上</TD>
 <TD class="tb-cell1">&nbsp;</TD>
-<TD class="tb-cell1"><A href="../items/items.html?0184" target="items">砂龙的鳍</A>×1<BR><A href="../items/items.html?0182" target="items">砂龙的鳞</A>×3<BR><A href="../items/items.html?00da" target="items">燕雀石</A>×1<BR><A href="../items/items.html?0156" target="items">蓝速龙的鳞</A>×2</TD>
+<TD class="tb-cell1"><A href="../items/items.html?0184" target="items">沙龙的鳍</A>×1<BR><A href="../items/items.html?0182" target="items">沙龙的鳞</A>×3<BR><A href="../items/items.html?00da" target="items">燕雀石</A>×1<BR><A href="../items/items.html?0156" target="items">蓝速龙的鳞</A>×2</TD>
 <TD class="tb-cell1">砂竜の素材を良質なものだけ<br>
 集めて作った胴用装備。肩を<br>
 飾るヒレがトレードマーク。
@@ -1072,7 +1098,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0027"class="tb-cell2" height="65">27</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0027" target="_blank">钢制铠甲</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0027" target="armorlv">钢制铠甲</A></TD>
 <TD class="tb-cell2">剑士<BR>专用</TD>
 <TD class="tb-cell2">2</TD>
 <TD class="tb-cell3">3150</TD>
@@ -1101,7 +1127,7 @@ ShowLinks(1, 7);
 </TABLE>
 </TD>
 <TD class="tb-cell2">
-<A href="./armor.html#0094">94</A>, <A href="./armor.html#0153">153</A><BR>（Lv3以上）</TD>
+<A href="./armor.html#0094">94</A>, <A href="./armor.html#0153">153</A><BR>Lv3以上</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1"><A href="../items/items.html?00e1" target="items">光水晶</A>×1<BR><A href="../items/items.html?00d6" target="items">阳光石</A>×2<BR><A href="../items/items.html?00da" target="items">燕雀石</A>×2<BR><A href="../items/items.html?00d9" target="items">大地的结晶</A>×1</TD>
 <TD class="tb-cell1">特殊な鉱石をふんだんに使っ<br>
@@ -1111,7 +1137,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0028"class="tb-cell2" height="65">28</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0028" target="_blank">雌火龙铠甲</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0028" target="armorlv">雌火龙铠甲</A></TD>
 <TD class="tb-cell2">剑士<BR>专用</TD>
 <TD class="tb-cell2">3</TD>
 <TD class="tb-cell3">4250</TD>
@@ -1132,7 +1158,7 @@ ShowLinks(1, 7);
 <TBODY>
 <TR>
 <TD nowrap><FONT size="-1">
-体力<BR>听觉保护<BR>反覆无常</FONT></TD>
+体力<BR>听觉保护<BR>反复无常</FONT></TD>
 <TD nowrap align="right"><FONT size="-1">
 +2<BR>+2<BR>-2</FONT></TD>
 </TR>
@@ -1140,7 +1166,7 @@ ShowLinks(1, 7);
 </TABLE>
 </TD>
 <TD class="tb-cell2">
-<A href="./armor.html#0095">95</A>, <A href="./armor.html#0154">154</A><BR>（Lv3以上）</TD>
+<A href="./armor.html#0095">95</A>, <A href="./armor.html#0154">154</A><BR>Lv3以上</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1"><A href="../items/items.html?018c" target="items">雌火龙的甲壳</A>×3<BR><A href="../items/items.html?0188" target="items">雌火龙的鳞</A>×2<BR><A href="../items/items.html?00da" target="items">燕雀石</A>×2<BR><A href="../items/items.html?00d6" target="items">阳光石</A>×1</TD>
 <TD class="tb-cell1">大地を支配する女王にふさわ<br>
@@ -1150,7 +1176,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0029"class="tb-cell2" height="65">29</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0029" target="_blank">雌火龙轻甲</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0029" target="armorlv">雌火龙轻甲</A></TD>
 <TD class="tb-cell2">射手<BR>专用</TD>
 <TD class="tb-cell2">3</TD>
 <TD class="tb-cell3">4250</TD>
@@ -1171,7 +1197,7 @@ ShowLinks(1, 7);
 <TBODY>
 <TR>
 <TD nowrap><FONT size="-1">
-体力<BR>耐力<BR>反覆无常</FONT></TD>
+体力<BR>耐力<BR>反复无常</FONT></TD>
 <TD nowrap align="right"><FONT size="-1">
 +2<BR>+2<BR>-2</FONT></TD>
 </TR>
@@ -1179,7 +1205,7 @@ ShowLinks(1, 7);
 </TABLE>
 </TD>
 <TD class="tb-cell2">
-<A href="./armor.html#0096">96</A>, <A href="./armor.html#0155">155</A><BR>（Lv3以上）</TD>
+<A href="./armor.html#0096">96</A>, <A href="./armor.html#0155">155</A><BR>Lv3以上</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1"><A href="../items/items.html?018c" target="items">雌火龙的甲壳</A>×3<BR><A href="../items/items.html?0188" target="items">雌火龙的鳞</A>×2<BR><A href="../items/items.html?00da" target="items">燕雀石</A>×2<BR><A href="../items/items.html?00d6" target="items">阳光石</A>×1</TD>
 <TD class="tb-cell1">大地を支配する女王にふさわ<br>
@@ -1189,7 +1215,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0030"class="tb-cell2" height="65">30</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0030" target="_blank">电龙铠甲</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0030" target="armorlv">电龙铠甲</A></TD>
 <TD class="tb-cell2">&nbsp;</TD>
 <TD class="tb-cell2">3</TD>
 <TD class="tb-cell3">4750</TD>
@@ -1218,7 +1244,7 @@ ShowLinks(1, 7);
 </TABLE>
 </TD>
 <TD class="tb-cell2">
-<A href="./armor.html#0097">97</A>, <A href="./armor.html#0156">156</A><BR>（Lv3以上）</TD>
+<A href="./armor.html#0097">97</A>, <A href="./armor.html#0156">156</A><BR>Lv3以上</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1"><A href="../items/items.html?01ac" target="items">浮肿柔皮</A>×3<BR><A href="../items/items.html?01ae" target="items">白化的脊肉</A>×1<BR><A href="../items/items.html?00da" target="items">燕雀石</A>×2<BR><A href="../items/items.html?0021" target="items">生命之粉</A>×1</TD>
 <TD class="tb-cell1">电龙の皮で覆われた胴用<br>
@@ -1228,7 +1254,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0031"class="tb-cell2" height="65">31</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0031" target="_blank">电龙轻甲</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0031" target="armorlv">电龙轻甲</A></TD>
 <TD class="tb-cell2">&nbsp;</TD>
 <TD class="tb-cell2">3</TD>
 <TD class="tb-cell3">4750</TD>
@@ -1257,7 +1283,7 @@ ShowLinks(1, 7);
 </TABLE>
 </TD>
 <TD class="tb-cell2">
-<A href="./armor.html#0098">98</A>, <A href="./armor.html#0157">157</A><BR>（Lv3以上）</TD>
+<A href="./armor.html#0098">98</A>, <A href="./armor.html#0157">157</A><BR>Lv3以上</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1"><A href="../items/items.html?01ac" target="items">浮肿柔皮</A>×3<BR><A href="../items/items.html?01ae" target="items">白化的脊肉</A>×1<BR><A href="../items/items.html?00da" target="items">燕雀石</A>×2<BR><A href="../items/items.html?0021" target="items">生命之粉</A>×1</TD>
 <TD class="tb-cell1">电龙の皮で覆われた胴用<br>
@@ -1267,7 +1293,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0032"class="tb-cell2" height="65">32</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0032" target="_blank">雄火龙铠甲</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0032" target="armorlv">雄火龙铠甲</A></TD>
 <TD class="tb-cell2">剑士<BR>专用</TD>
 <TD class="tb-cell2">5</TD>
 <TD class="tb-cell3">7900</TD>
@@ -1296,7 +1322,7 @@ ShowLinks(1, 7);
 </TABLE>
 </TD>
 <TD class="tb-cell2">
-<A href="./armor.html#0099">99</A>, <A href="./armor.html#0158">158</A><BR>（Lv3以上）</TD>
+<A href="./armor.html#0099">99</A>, <A href="./armor.html#0158">158</A><BR>Lv3以上</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1"><A href="../items/items.html?01a0" target="items">火龙的翼</A>×1<BR><A href="../items/items.html?019c" target="items">火龙的甲壳</A>×3<BR><A href="../items/items.html?0198" target="items">火龙的鳞</A>×2<BR><A href="../items/items.html?00db" target="items">辉龙石</A>×2</TD>
 <TD class="tb-cell1">空の支配者の寵愛を受けた<br>
@@ -1306,7 +1332,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0033"class="tb-cell2" height="65">33</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0033" target="_blank">雄火龙轻甲</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0033" target="armorlv">雄火龙轻甲</A></TD>
 <TD class="tb-cell2">射手<BR>专用</TD>
 <TD class="tb-cell2">5</TD>
 <TD class="tb-cell3">7900</TD>
@@ -1335,7 +1361,7 @@ ShowLinks(1, 7);
 </TABLE>
 </TD>
 <TD class="tb-cell2">
-<A href="./armor.html#0100">100</A>, <A href="./armor.html#0159">159</A><BR>（Lv3以上）</TD>
+<A href="./armor.html#0100">100</A>, <A href="./armor.html#0159">159</A><BR>Lv3以上</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1"><A href="../items/items.html?01a0" target="items">火龙的翼</A>×1<BR><A href="../items/items.html?019c" target="items">火龙的甲壳</A>×3<BR><A href="../items/items.html?0198" target="items">火龙的鳞</A>×2<BR><A href="../items/items.html?00db" target="items">辉龙石</A>×2</TD>
 <TD class="tb-cell1">炎を従える王者の防具。例え<br>
@@ -1345,7 +1371,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0034"class="tb-cell2" height="65">34</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0034" target="_blank">水龙铠甲</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0034" target="armorlv">水龙铠甲</A></TD>
 <TD class="tb-cell2">剑士<BR>专用</TD>
 <TD class="tb-cell2">3</TD>
 <TD class="tb-cell3">4250</TD>
@@ -1374,9 +1400,9 @@ ShowLinks(1, 7);
 </TABLE>
 </TD>
 <TD class="tb-cell2">
-<A href="./armor.html#0101">101</A>, <A href="./armor.html#0160">160</A><BR>（Lv3以上）</TD>
+<A href="./armor.html#0101">101</A>, <A href="./armor.html#0160">160</A><BR>Lv3以上</TD>
 <TD class="tb-cell1">&nbsp;</TD>
-<TD class="tb-cell1"><A href="../items/items.html?017d" target="items">水龙的鳞</A>×2<BR><A href="../items/items.html?0182" target="items">砂龙的鳞</A>×3<BR><A href="../items/items.html?017f" target="items">水龙的鳍</A>×1<BR><A href="../items/items.html?00e4" target="items">冰结晶</A>×3</TD>
+<TD class="tb-cell1"><A href="../items/items.html?017d" target="items">水龙的鳞</A>×2<BR><A href="../items/items.html?0182" target="items">沙龙的鳞</A>×3<BR><A href="../items/items.html?017f" target="items">水龙的鳍</A>×1<BR><A href="../items/items.html?00e4" target="items">冰结晶</A>×3</TD>
 <TD class="tb-cell1">水龙の鱗が細かく縫い<br>
 込まれた胴装備。体に密着し、<br>
 どんな衝撃も容易に吸収する。
@@ -1384,7 +1410,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0035"class="tb-cell2" height="65">35</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0035" target="_blank">水龙轻甲</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0035" target="armorlv">水龙轻甲</A></TD>
 <TD class="tb-cell2">射手<BR>专用</TD>
 <TD class="tb-cell2">3</TD>
 <TD class="tb-cell3">4250</TD>
@@ -1413,9 +1439,9 @@ ShowLinks(1, 7);
 </TABLE>
 </TD>
 <TD class="tb-cell2">
-<A href="./armor.html#0102">102</A>, <A href="./armor.html#0161">161</A><BR>（Lv3以上）</TD>
+<A href="./armor.html#0102">102</A>, <A href="./armor.html#0161">161</A><BR>Lv3以上</TD>
 <TD class="tb-cell1">&nbsp;</TD>
-<TD class="tb-cell1"><A href="../items/items.html?017d" target="items">水龙的鳞</A>×2<BR><A href="../items/items.html?0182" target="items">砂龙的鳞</A>×3<BR><A href="../items/items.html?017f" target="items">水龙的鳍</A>×1<BR><A href="../items/items.html?00e4" target="items">冰结晶</A>×3</TD>
+<TD class="tb-cell1"><A href="../items/items.html?017d" target="items">水龙的鳞</A>×2<BR><A href="../items/items.html?0182" target="items">沙龙的鳞</A>×3<BR><A href="../items/items.html?017f" target="items">水龙的鳍</A>×1<BR><A href="../items/items.html?00e4" target="items">冰结晶</A>×3</TD>
 <TD class="tb-cell1">水龙の鱗を縫い込んだ<br>
 スーツにヒレで装飾を施した<br>
 胴用装備。襟元に注目。
@@ -1423,7 +1449,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0036"class="tb-cell2" height="65">36</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0036" target="_blank">帝王龙虾之壳</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0036" target="armorlv">帝王龙虾之壳</A></TD>
 <TD class="tb-cell2">剑士<BR>专用</TD>
 <TD class="tb-cell2">5</TD>
 <TD class="tb-cell3">4900</TD>
@@ -1452,7 +1478,7 @@ ShowLinks(1, 7);
 </TABLE>
 </TD>
 <TD class="tb-cell2">
-<A href="./armor.html#0240">240</A><BR>（Lv3以上）</TD>
+<A href="./armor.html#0240">240</A><BR>Lv3以上</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1"><A href="../items/items.html?01d3" target="items">虾之大壳</A>×1<BR><A href="../items/items.html?01d2" target="items">虾之小壳</A>×3<BR><A href="../items/items.html?00da" target="items">燕雀石</A>×2<BR><A href="../items/items.html?00e4" target="items">冰结晶</A>×3</TD>
 <TD class="tb-cell1">キングロブスタの殻をベース<br>
@@ -1462,7 +1488,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0037"class="tb-cell2" height="65">37</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0037" target="_blank">帝王龙虾之皮</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0037" target="armorlv">帝王龙虾之皮</A></TD>
 <TD class="tb-cell2">射手<BR>专用</TD>
 <TD class="tb-cell2">5</TD>
 <TD class="tb-cell3">4900</TD>
@@ -1491,7 +1517,7 @@ ShowLinks(1, 7);
 </TABLE>
 </TD>
 <TD class="tb-cell2">
-<A href="./armor.html#0241">241</A><BR>（Lv3以上）</TD>
+<A href="./armor.html#0241">241</A><BR>Lv3以上</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1"><A href="../items/items.html?01d3" target="items">虾之大壳</A>×1<BR><A href="../items/items.html?01d2" target="items">虾之小壳</A>×3<BR><A href="../items/items.html?00da" target="items">燕雀石</A>×2<BR><A href="../items/items.html?00e4" target="items">冰结晶</A>×3</TD>
 <TD class="tb-cell1">エビの殻を層状に重ねて仕上<br>
@@ -1501,7 +1527,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0038"class="tb-cell2" height="65">38</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0038" target="_blank">岩龙铠甲</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0038" target="armorlv">岩龙铠甲</A></TD>
 <TD class="tb-cell2">剑士<BR>专用</TD>
 <TD class="tb-cell2">3</TD>
 <TD class="tb-cell3">3760</TD>
@@ -1530,7 +1556,7 @@ ShowLinks(1, 7);
 </TABLE>
 </TD>
 <TD class="tb-cell2">
-<A href="./armor.html#0103">103</A>, <A href="./armor.html#0162">162</A><BR>（Lv3以上）</TD>
+<A href="./armor.html#0103">103</A>, <A href="./armor.html#0162">162</A><BR>Lv3以上</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1"><A href="../items/items.html?01b2" target="items">岩龙的甲壳</A>×3<BR><A href="../items/items.html?00da" target="items">燕雀石</A>×6<BR><A href="../items/items.html?00d6" target="items">阳光石</A>×3<BR><A href="../items/items.html?00d9" target="items">大地的结晶</A>×3</TD>
 <TD class="tb-cell1">岩龙の素材で作られた<br>
@@ -1540,7 +1566,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0039"class="tb-cell2" height="65">39</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0039" target="_blank">岩龙轻甲</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0039" target="armorlv">岩龙轻甲</A></TD>
 <TD class="tb-cell2">射手<BR>专用</TD>
 <TD class="tb-cell2">3</TD>
 <TD class="tb-cell3">3760</TD>
@@ -1569,7 +1595,7 @@ ShowLinks(1, 7);
 </TABLE>
 </TD>
 <TD class="tb-cell2">
-<A href="./armor.html#0104">104</A>, <A href="./armor.html#0163">163</A><BR>（Lv3以上）</TD>
+<A href="./armor.html#0104">104</A>, <A href="./armor.html#0163">163</A><BR>Lv3以上</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1"><A href="../items/items.html?01b2" target="items">岩龙的甲壳</A>×3<BR><A href="../items/items.html?00da" target="items">燕雀石</A>×6<BR><A href="../items/items.html?00d6" target="items">阳光石</A>×3<BR><A href="../items/items.html?00d9" target="items">大地的结晶</A>×3</TD>
 <TD class="tb-cell1">岩龙の素材で作られた<br>
@@ -1579,7 +1605,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0040"class="tb-cell2" height="65">40</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0040" target="_blank">角龙铠甲</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0040" target="armorlv">角龙铠甲</A></TD>
 <TD class="tb-cell2">剑士<BR>专用</TD>
 <TD class="tb-cell2">3</TD>
 <TD class="tb-cell3">7000</TD>
@@ -1608,17 +1634,17 @@ ShowLinks(1, 7);
 </TABLE>
 </TD>
 <TD class="tb-cell2">
-<A href="./armor.html#0105">105</A>, <A href="./armor.html#0164">164</A><BR>（Lv3以上）</TD>
+<A href="./armor.html#0105">105</A>, <A href="./armor.html#0164">164</A><BR>Lv3以上</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1"><A href="../items/items.html?01bc" target="items">弯曲的角</A>×1<BR><A href="../items/items.html?01c0" target="items">角龙的背甲</A>×1<BR><A href="../items/items.html?01be" target="items">角龙的甲壳</A>×2<BR><A href="../items/items.html?00da" target="items">燕雀石</A>×1</TD>
 <TD class="tb-cell1">角龙の素材で作られ<br>
 た胴用装備。凄まじい強度を<br>
-誇る、砂漠の覇者の証。
+誇る、沙漠の覇者の証。
 </TD>
 </TR>
 <TR>
 <TD id="0041"class="tb-cell2" height="65">41</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0041" target="_blank">角龙轻甲</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0041" target="armorlv">角龙轻甲</A></TD>
 <TD class="tb-cell2">射手<BR>专用</TD>
 <TD class="tb-cell2">3</TD>
 <TD class="tb-cell3">7000</TD>
@@ -1647,7 +1673,7 @@ ShowLinks(1, 7);
 </TABLE>
 </TD>
 <TD class="tb-cell2">
-<A href="./armor.html#0106">106</A>, <A href="./armor.html#0165">165</A><BR>（Lv3以上）</TD>
+<A href="./armor.html#0106">106</A>, <A href="./armor.html#0165">165</A><BR>Lv3以上</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1"><A href="../items/items.html?01bc" target="items">弯曲的角</A>×1<BR><A href="../items/items.html?01c0" target="items">角龙的背甲</A>×1<BR><A href="../items/items.html?01be" target="items">角龙的甲壳</A>×2<BR><A href="../items/items.html?00da" target="items">燕雀石</A>×1</TD>
 <TD class="tb-cell1">巨大な角を使用した角竜素材<br>
@@ -1657,7 +1683,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0042"class="tb-cell2" height="65">42</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0042" target="_blank">一角龙铠甲</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0042" target="armorlv">一角龙铠甲</A></TD>
 <TD class="tb-cell2">剑士<BR>专用</TD>
 <TD class="tb-cell2">3</TD>
 <TD class="tb-cell3">7000</TD>
@@ -1686,7 +1712,7 @@ ShowLinks(1, 7);
 </TABLE>
 </TD>
 <TD class="tb-cell2">
-<A href="./armor.html#0107">107</A>, <A href="./armor.html#0166">166</A><BR>（Lv3以上）</TD>
+<A href="./armor.html#0107">107</A>, <A href="./armor.html#0166">166</A><BR>Lv3以上</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1"><A href="../items/items.html?01d7" target="items">一角龙的甲壳</A>×2<BR><A href="../items/items.html?01d6" target="items">真红之角</A>×2<BR><A href="../items/items.html?01d8" target="items">一角龙的背甲</A>×1<BR><A href="../items/items.html?0018" target="items">怪物的体液</A>×1</TD>
 <TD class="tb-cell1">一角龙の見事な角が特徴<br>
@@ -1696,7 +1722,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0043"class="tb-cell2" height="65">43</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0043" target="_blank">一角龙轻甲</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0043" target="armorlv">一角龙轻甲</A></TD>
 <TD class="tb-cell2">射手<BR>专用</TD>
 <TD class="tb-cell2">3</TD>
 <TD class="tb-cell3">7000</TD>
@@ -1725,7 +1751,7 @@ ShowLinks(1, 7);
 </TABLE>
 </TD>
 <TD class="tb-cell2">
-<A href="./armor.html#0108">108</A>, <A href="./armor.html#0167">167</A><BR>（Lv3以上）</TD>
+<A href="./armor.html#0108">108</A>, <A href="./armor.html#0167">167</A><BR>Lv3以上</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1"><A href="../items/items.html?01d7" target="items">一角龙的甲壳</A>×2<BR><A href="../items/items.html?01d6" target="items">真红之角</A>×2<BR><A href="../items/items.html?01d8" target="items">一角龙的背甲</A>×1<BR><A href="../items/items.html?0018" target="items">怪物的体液</A>×1</TD>
 <TD class="tb-cell1">一角龙の素材で作られた<br>
@@ -1735,7 +1761,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0044"class="tb-cell2" height="65">44</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0044" target="_blank">铠龙铠甲</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0044" target="armorlv">铠龙铠甲</A></TD>
 <TD class="tb-cell2">剑士<BR>专用</TD>
 <TD class="tb-cell2">3</TD>
 <TD class="tb-cell3">7750</TD>
@@ -1764,7 +1790,7 @@ ShowLinks(1, 7);
 </TABLE>
 </TD>
 <TD class="tb-cell2">
-<A href="./armor.html#0109">109</A>, <A href="./armor.html#0168">168</A><BR>（Lv3以上）</TD>
+<A href="./armor.html#0109">109</A>, <A href="./armor.html#0168">168</A><BR>Lv3以上</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1"><A href="../items/items.html?01b6" target="items">铠龙的甲壳</A>×3<BR><A href="../items/items.html?01b8" target="items">铠龙的头壳</A>×1<BR><A href="../items/items.html?0018" target="items">怪物的体液</A>×2<BR><A href="../items/items.html?00d8" target="items">铁矿石</A>×7</TD>
 <TD class="tb-cell1">铠龙の素材で作られた<br>
@@ -1774,7 +1800,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0045"class="tb-cell2" height="65">45</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0045" target="_blank">铠龙轻甲</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0045" target="armorlv">铠龙轻甲</A></TD>
 <TD class="tb-cell2">射手<BR>专用</TD>
 <TD class="tb-cell2">3</TD>
 <TD class="tb-cell3">7750</TD>
@@ -1795,7 +1821,7 @@ ShowLinks(1, 7);
 <TBODY>
 <TR>
 <TD nowrap><FONT size="-1">
-扩散弹追加<BR>耐暑<BR>反覆无常</FONT></TD>
+扩散弹追加<BR>耐暑<BR>反复无常</FONT></TD>
 <TD nowrap align="right"><FONT size="-1">
 +2<BR>+2<BR>-2</FONT></TD>
 </TR>
@@ -1803,7 +1829,7 @@ ShowLinks(1, 7);
 </TABLE>
 </TD>
 <TD class="tb-cell2">
-<A href="./armor.html#0110">110</A>, <A href="./armor.html#0169">169</A><BR>（Lv3以上）</TD>
+<A href="./armor.html#0110">110</A>, <A href="./armor.html#0169">169</A><BR>Lv3以上</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1"><A href="../items/items.html?01b6" target="items">铠龙的甲壳</A>×3<BR><A href="../items/items.html?01b8" target="items">铠龙的头壳</A>×1<BR><A href="../items/items.html?0018" target="items">怪物的体液</A>×2<BR><A href="../items/items.html?00d8" target="items">铁矿石</A>×7</TD>
 <TD class="tb-cell1">铠龙の甲殻で作られた<br>
@@ -1813,7 +1839,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0046"class="tb-cell2" height="65">46</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0046" target="_blank">黑带铠甲</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0046" target="armorlv">黑带铠甲</A></TD>
 <TD class="tb-cell2">&nbsp;</TD>
 <TD class="tb-cell2">5</TD>
 <TD class="tb-cell3">3000</TD>
@@ -1842,7 +1868,7 @@ ShowLinks(1, 7);
 </TABLE>
 </TD>
 <TD class="tb-cell2">
-<A href="./armor.html#0226">226</A><BR>（Lv5以上）</TD>
+<A href="./armor.html#0226">226</A><BR>Lv5以上</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1"><A href="../items/items.html?02ca" target="items">甲壳的硬币</A>×3<BR><A href="../items/items.html?02c5" target="items">达人硬币</A>×3<BR><A href="../items/items.html?02ce" target="items">坚实的硬币</A>×3</TD>
 <TD class="tb-cell1">道場の卒業者に贈られる、<br>
@@ -1852,7 +1878,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0047"class="tb-cell2" height="65">47</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0047" target="_blank">苔猪胸</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0047" target="armorlv">苔猪胸</A></TD>
 <TD class="tb-cell2">&nbsp;</TD>
 <TD class="tb-cell2">5</TD>
 <TD class="tb-cell3">320</TD>
@@ -1882,7 +1908,7 @@ ShowLinks(1, 7);
 </TD>
 <TD class="tb-cell2">&nbsp;</TD>
 <TD class="tb-cell1">&nbsp;</TD>
-<TD class="tb-cell1"><A href="../items/items.html?014b" target="items">苔猪的皮</A>×3<BR><A href="../items/items.html?014d" target="items">大野猪的毛皮</A>×1<BR><A href="../items/items.html?014f" target="items">大猪的皮</A>×1<BR><A href="../items/items.html?0108" target="items">粘着蝗虫</A>×1</TD>
+<TD class="tb-cell1"><A href="../items/items.html?014b" target="items">苔猪的苔皮</A>×3<BR><A href="../items/items.html?014d" target="items">大野猪的毛皮</A>×1<BR><A href="../items/items.html?014f" target="items">大猪的皮</A>×1<BR><A href="../items/items.html?0108" target="items">黏着蝗虫</A>×1</TD>
 <TD class="tb-cell1">苔猪の胴部を模した胴用装備。<br>
 苔猪になりきって大自然に身<br>
 を委ねよう！
@@ -1890,7 +1916,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0048"class="tb-cell2 hc" height="65">48</TD>
-<TD class="tb-cell1 hc"><A href="./armor1.html#0048" target="_blank">花瓣铠甲</A></TD>
+<TD class="tb-cell1 hc"><A href="./armor1.html#0048" target="armorlv">花瓣铠甲</A></TD>
 <TD class="tb-cell2 hc">&nbsp;</TD>
 <TD class="tb-cell2 hc">5</TD>
 <TD class="tb-cell3 hc">2000</TD>
@@ -1928,7 +1954,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0049"class="tb-cell2" height="65">49</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0049" target="_blank">鱼鳞腰裙</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0049" target="armorlv">鱼鳞腰裙</A></TD>
 <TD class="tb-cell2">&nbsp;</TD>
 <TD class="tb-cell2">5</TD>
 <TD class="tb-cell3">2000</TD>
@@ -1966,7 +1992,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0050"class="tb-cell2" height="65">50</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0050" target="_blank">餐馆马甲</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0050" target="armorlv">餐馆马甲</A></TD>
 <TD class="tb-cell2">&nbsp;</TD>
 <TD class="tb-cell2">5</TD>
 <TD class="tb-cell3">2000</TD>
@@ -2004,7 +2030,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0051"class="tb-cell2" height="65">51</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0051" target="_blank">蓝速龙之躯</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0051" target="armorlv">蓝速龙之躯</A></TD>
 <TD class="tb-cell2">&nbsp;</TD>
 <TD class="tb-cell2">5</TD>
 <TD class="tb-cell3">2000</TD>
@@ -2042,7 +2068,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0052"class="tb-cell2" height="65">52</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0052" target="_blank">黄速龙之躯</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0052" target="armorlv">黄速龙之躯</A></TD>
 <TD class="tb-cell2">&nbsp;</TD>
 <TD class="tb-cell2">5</TD>
 <TD class="tb-cell3">2200</TD>
@@ -2080,7 +2106,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0053"class="tb-cell2" height="65">53</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0053" target="_blank">红速龙之躯</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0053" target="armorlv">红速龙之躯</A></TD>
 <TD class="tb-cell2">&nbsp;</TD>
 <TD class="tb-cell2">5</TD>
 <TD class="tb-cell3">2400</TD>
@@ -2118,7 +2144,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0054"class="tb-cell2" height="65">54</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0054" target="_blank">忍之装束・阳</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0054" target="armorlv">忍之装束・阳</A></TD>
 <TD class="tb-cell2">&nbsp;</TD>
 <TD class="tb-cell2">4</TD>
 <TD class="tb-cell3">14000</TD>
@@ -2147,7 +2173,7 @@ ShowLinks(1, 7);
 </TABLE>
 </TD>
 <TD class="tb-cell2">
-<A href="./armor.html#0111">111</A>, <A href="./armor.html#0170">170</A><BR>（Lv3以上）</TD>
+<A href="./armor.html#0111">111</A>, <A href="./armor.html#0170">170</A><BR>Lv3以上</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1"><A href="../items/items.html?0243" target="items">炎妃龍的角</A>×1<BR><A href="../items/items.html?02e8" target="items">勇气之证</A>×1<BR><A href="../items/items.html?02ca" target="items">甲壳的硬币</A>×2<BR><A href="../items/items.html?02e0" target="items">星铁</A>×3</TD>
 <TD class="tb-cell1">試練を乗り越えんとする者<br>
@@ -2157,7 +2183,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0055"class="tb-cell2" height="65">55</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0055" target="_blank">忍之装束・阴</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0055" target="armorlv">忍之装束・阴</A></TD>
 <TD class="tb-cell2">&nbsp;</TD>
 <TD class="tb-cell2">4</TD>
 <TD class="tb-cell3">14000</TD>
@@ -2186,7 +2212,7 @@ ShowLinks(1, 7);
 </TABLE>
 </TD>
 <TD class="tb-cell2">
-<A href="./armor.html#0112">112</A>, <A href="./armor.html#0171">171</A><BR>（Lv3以上）</TD>
+<A href="./armor.html#0112">112</A>, <A href="./armor.html#0171">171</A><BR>Lv3以上</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1"><A href="../items/items.html?0243" target="items">炎妃龍的角</A>×1<BR><A href="../items/items.html?02e8" target="items">勇气之证</A>×1<BR><A href="../items/items.html?02ca" target="items">甲壳的硬币</A>×2<BR><A href="../items/items.html?02e0" target="items">星铁</A>×3</TD>
 <TD class="tb-cell1">試練を乗り越えんとする者<br>
@@ -2196,7 +2222,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0056"class="tb-cell2" height="65">56</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0056" target="_blank">守卫者制服</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0056" target="armorlv">守卫者制服</A></TD>
 <TD class="tb-cell2">男性<BR>专用</TD>
 <TD class="tb-cell2">4</TD>
 <TD class="tb-cell3">14000</TD>
@@ -2225,7 +2251,7 @@ ShowLinks(1, 7);
 </TABLE>
 </TD>
 <TD class="tb-cell2">
-<A href="./armor.html#0113">113</A>, <A href="./armor.html#0172">172</A><BR>, <A href="./armor.html#0236">236</A><BR>（Lv3以上）</TD>
+<A href="./armor.html#0113">113</A>, <A href="./armor.html#0172">172</A><BR>, <A href="./armor.html#0236">236</A><BR>Lv3以上</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1"><A href="../items/items.html?0235" target="items">霞龍的翼膜</A>×2<BR><A href="../items/items.html?02cb" target="items">古龍的硬币</A>×1<BR><A href="../items/items.html?02cd" target="items">豪华的硬币</A>×1<BR><A href="../items/items.html?02e0" target="items">星铁</A>×1</TD>
 <TD class="tb-cell1">街を守護するという騎士の、<br>
@@ -2235,7 +2261,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0057"class="tb-cell2" height="65">57</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0057" target="_blank">守卫者马甲</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0057" target="armorlv">守卫者马甲</A></TD>
 <TD class="tb-cell2">男性<BR>专用</TD>
 <TD class="tb-cell2">4</TD>
 <TD class="tb-cell3">14000</TD>
@@ -2264,7 +2290,7 @@ ShowLinks(1, 7);
 </TABLE>
 </TD>
 <TD class="tb-cell2">
-<A href="./armor.html#0114">114</A>, <A href="./armor.html#0173">173</A><BR>, <A href="./armor.html#0237">237</A><BR>（Lv3以上）</TD>
+<A href="./armor.html#0114">114</A>, <A href="./armor.html#0173">173</A><BR>, <A href="./armor.html#0237">237</A><BR>Lv3以上</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1"><A href="../items/items.html?0235" target="items">霞龍的翼膜</A>×2<BR><A href="../items/items.html?02cb" target="items">古龍的硬币</A>×1<BR><A href="../items/items.html?02cd" target="items">豪华的硬币</A>×1<BR><A href="../items/items.html?02e0" target="items">星铁</A>×1</TD>
 <TD class="tb-cell1">街を守護するという騎士の、<br>
@@ -2274,7 +2300,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0058"class="tb-cell2" height="65">58</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0058" target="_blank">助理马甲</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0058" target="armorlv">助手马甲</A></TD>
 <TD class="tb-cell2">女性<BR>专用</TD>
 <TD class="tb-cell2">4</TD>
 <TD class="tb-cell3">14000</TD>
@@ -2303,7 +2329,7 @@ ShowLinks(1, 7);
 </TABLE>
 </TD>
 <TD class="tb-cell2">
-<A href="./armor.html#0115">115</A>, <A href="./armor.html#0174">174</A><BR>, <A href="./armor.html#0238">238</A><BR>（Lv3以上）</TD>
+<A href="./armor.html#0115">115</A>, <A href="./armor.html#0174">174</A><BR>, <A href="./armor.html#0238">238</A><BR>Lv3以上</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1"><A href="../items/items.html?0235" target="items">霞龍的翼膜</A>×2<BR><A href="../items/items.html?02cb" target="items">古龍的硬币</A>×1<BR><A href="../items/items.html?02cd" target="items">豪华的硬币</A>×1<BR><A href="../items/items.html?02e0" target="items">星铁</A>×1</TD>
 <TD class="tb-cell1">お店の看板娘の制服の市販版。<br>
@@ -2313,7 +2339,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0059"class="tb-cell2" height="65">59</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0059" target="_blank">医师马甲</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0059" target="armorlv">治愈者马甲</A></TD>
 <TD class="tb-cell2">女性<BR>专用</TD>
 <TD class="tb-cell2">4</TD>
 <TD class="tb-cell3">14000</TD>
@@ -2342,7 +2368,7 @@ ShowLinks(1, 7);
 </TABLE>
 </TD>
 <TD class="tb-cell2">
-<A href="./armor.html#0116">116</A>, <A href="./armor.html#0175">175</A><BR>, <A href="./armor.html#0239">239</A><BR>（Lv3以上）</TD>
+<A href="./armor.html#0116">116</A>, <A href="./armor.html#0175">175</A><BR>, <A href="./armor.html#0239">239</A><BR>Lv3以上</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1"><A href="../items/items.html?0235" target="items">霞龍的翼膜</A>×2<BR><A href="../items/items.html?02cb" target="items">古龍的硬币</A>×1<BR><A href="../items/items.html?02cd" target="items">豪华的硬币</A>×1<BR><A href="../items/items.html?02e0" target="items">星铁</A>×1</TD>
 <TD class="tb-cell1">お店の女性スタッフ用の<br>
@@ -2352,7 +2378,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0060"class="tb-cell2" height="65">60</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0060" target="_blank">黑狼鸟铠甲</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0060" target="armorlv">黑狼鸟铠甲</A></TD>
 <TD class="tb-cell2">剑士<BR>专用</TD>
 <TD class="tb-cell2">5</TD>
 <TD class="tb-cell3">6000</TD>
@@ -2390,7 +2416,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0061"class="tb-cell2" height="65">61</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0061" target="_blank">黑狼鸟轻甲</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0061" target="armorlv">黑狼鸟轻甲</A></TD>
 <TD class="tb-cell2">射手<BR>专用</TD>
 <TD class="tb-cell2">5</TD>
 <TD class="tb-cell3">6000</TD>
@@ -2428,7 +2454,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0062"class="tb-cell2" height="65">62</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0062" target="_blank">晓丸【胴当】</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0062" target="armorlv">晓丸【胴当】</A></TD>
 <TD class="tb-cell2">男性<BR>剑士<BR>专用</TD>
 <TD class="tb-cell2">5</TD>
 <TD class="tb-cell3">15000</TD>
@@ -2457,7 +2483,7 @@ ShowLinks(1, 7);
 </TABLE>
 </TD>
 <TD class="tb-cell2">
-<A href="./armor.html#0117">117</A>, <A href="./armor.html#0176">176</A><BR>（Lv3以上）</TD>
+<A href="./armor.html#0117">117</A>, <A href="./armor.html#0176">176</A><BR>Lv3以上</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1"><A href="../items/items.html?01e3" target="items">老山龍的大爪</A>×1<BR><A href="../items/items.html?01e5" target="items">老山龍的鳞</A>×3<BR><A href="../items/items.html?01e7" target="items">老山龍的甲壳</A>×2<BR><A href="../items/items.html?00de" target="items">红莲石</A>×1</TD>
 <TD class="tb-cell1">老山龍の素材で作られた男性<br>
@@ -2467,7 +2493,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0063"class="tb-cell2" height="65">63</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0063" target="_blank">曙丸【胴当】</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0063" target="armorlv">曙丸【胴当】</A></TD>
 <TD class="tb-cell2">男性<BR>射手<BR>专用</TD>
 <TD class="tb-cell2">5</TD>
 <TD class="tb-cell3">15000</TD>
@@ -2496,7 +2522,7 @@ ShowLinks(1, 7);
 </TABLE>
 </TD>
 <TD class="tb-cell2">
-<A href="./armor.html#0118">118</A>, <A href="./armor.html#0177">177</A><BR>（Lv3以上）</TD>
+<A href="./armor.html#0118">118</A>, <A href="./armor.html#0177">177</A><BR>Lv3以上</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1"><A href="../items/items.html?01e3" target="items">老山龍的大爪</A>×1<BR><A href="../items/items.html?01e5" target="items">老山龍的鳞</A>×3<BR><A href="../items/items.html?01e7" target="items">老山龍的甲壳</A>×2<BR><A href="../items/items.html?00de" target="items">红莲石</A>×1</TD>
 <TD class="tb-cell1">老山龍の素材で作られた男性<br>
@@ -2506,7 +2532,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0064"class="tb-cell2" height="65">64</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0064" target="_blank">凛【胸当】</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0064" target="armorlv">凛【胸当】</A></TD>
 <TD class="tb-cell2">女性<BR>剑士<BR>专用</TD>
 <TD class="tb-cell2">5</TD>
 <TD class="tb-cell3">15000</TD>
@@ -2535,7 +2561,7 @@ ShowLinks(1, 7);
 </TABLE>
 </TD>
 <TD class="tb-cell2">
-<A href="./armor.html#0119">119</A>, <A href="./armor.html#0178">178</A><BR>（Lv3以上）</TD>
+<A href="./armor.html#0119">119</A>, <A href="./armor.html#0178">178</A><BR>Lv3以上</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1"><A href="../items/items.html?01e3" target="items">老山龍的大爪</A>×1<BR><A href="../items/items.html?01e5" target="items">老山龍的鳞</A>×3<BR><A href="../items/items.html?01e7" target="items">老山龍的甲壳</A>×2<BR><A href="../items/items.html?00de" target="items">红莲石</A>×1</TD>
 <TD class="tb-cell1">老山龍の素材で作られた女性<br>
@@ -2545,7 +2571,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0065"class="tb-cell2" height="65">65</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0065" target="_blank">艳【胸当】</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0065" target="armorlv">艳【胸当】</A></TD>
 <TD class="tb-cell2">女性<BR>射手<BR>专用</TD>
 <TD class="tb-cell2">5</TD>
 <TD class="tb-cell3">15000</TD>
@@ -2574,7 +2600,7 @@ ShowLinks(1, 7);
 </TABLE>
 </TD>
 <TD class="tb-cell2">
-<A href="./armor.html#0120">120</A>, <A href="./armor.html#0179">179</A><BR>（Lv3以上）</TD>
+<A href="./armor.html#0120">120</A>, <A href="./armor.html#0179">179</A><BR>Lv3以上</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1"><A href="../items/items.html?01e3" target="items">老山龍的大爪</A>×1<BR><A href="../items/items.html?01e5" target="items">老山龍的鳞</A>×3<BR><A href="../items/items.html?01e7" target="items">老山龍的甲壳</A>×2<BR><A href="../items/items.html?00de" target="items">红莲石</A>×1</TD>
 <TD class="tb-cell1">老山龍の素材で作られた女性<br>
@@ -2584,7 +2610,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0066"class="tb-cell2 hc" height="65">66</TD>
-<TD class="tb-cell1 hc"><A href="./armor1.html#0066" target="_blank">邪龍之皮</A></TD>
+<TD class="tb-cell1 hc"><A href="./armor1.html#0066" target="armorlv">黑龍之皮</A></TD>
 <TD class="tb-cell2 hc">剑士<BR>专用</TD>
 <TD class="tb-cell2 hc">7</TD>
 <TD class="tb-cell3 hc">22500</TD>
@@ -2613,7 +2639,7 @@ ShowLinks(1, 7);
 </TABLE>
 </TD>
 <TD class="tb-cell2 hc">
-<A href="./armor.html#0121">121</A>, <A href="./armor.html#0180">180</A><BR>（Lv3以上）</TD>
+<A href="./armor.html#0121">121</A>, <A href="./armor.html#0180">180</A><BR>Lv3以上</TD>
 <TD class="tb-cell1 hc">&nbsp;</TD>
 <TD class="tb-cell1 hc"><A href="../items/items.html?01ed" target="items">黑龍的甲壳</A>×2<BR><A href="../items/items.html?01ec" target="items">黑龍的鳞</A>×3<BR><A href="../items/items.html?0220" target="items">砦蟹的背甲</A>×3<BR><A href="../items/items.html?0144" target="items">龙玉</A>×1</TD>
 <TD class="tb-cell1 hc">黒龍の鼓動が感じられるかの<br>
@@ -2623,7 +2649,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0067"class="tb-cell2 hc" height="65">67</TD>
-<TD class="tb-cell1 hc"><A href="./armor1.html#0067" target="_blank">邪龍之肤</A></TD>
+<TD class="tb-cell1 hc"><A href="./armor1.html#0067" target="armorlv">黑龍之肤</A></TD>
 <TD class="tb-cell2 hc">射手<BR>专用</TD>
 <TD class="tb-cell2 hc">7</TD>
 <TD class="tb-cell3 hc">22500</TD>
@@ -2644,7 +2670,7 @@ ShowLinks(1, 7);
 <TBODY>
 <TR>
 <TD nowrap><FONT size="-1">
-装填<BR>反动<BR>散弹追加<BR>体力</FONT></TD>
+装填<BR>反冲<BR>散弹追加<BR>体力</FONT></TD>
 <TD nowrap align="right"><FONT size="-1">
 +2<BR>+3<BR>+2<BR>-2</FONT></TD>
 </TR>
@@ -2652,7 +2678,7 @@ ShowLinks(1, 7);
 </TABLE>
 </TD>
 <TD class="tb-cell2 hc">
-<A href="./armor.html#0122">122</A>, <A href="./armor.html#0181">181</A><BR>（Lv3以上）</TD>
+<A href="./armor.html#0122">122</A>, <A href="./armor.html#0181">181</A><BR>Lv3以上</TD>
 <TD class="tb-cell1 hc">&nbsp;</TD>
 <TD class="tb-cell1 hc"><A href="../items/items.html?01ed" target="items">黑龍的甲壳</A>×2<BR><A href="../items/items.html?01ec" target="items">黑龍的鳞</A>×3<BR><A href="../items/items.html?0220" target="items">砦蟹的背甲</A>×3<BR><A href="../items/items.html?0144" target="items">龙玉</A>×1</TD>
 <TD class="tb-cell1 hc">凄まじい防御性能を発揮する<br>
@@ -2662,7 +2688,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0068"class="tb-cell2" height="65">68</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0068" target="_blank">轻革Ｕ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0001">轻革铠甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0068" target="armorlv">轻革Ｕ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0001">轻革铠甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">&nbsp;</TD>
 <TD class="tb-cell2">4</TD>
 <TD class="tb-cell3">2280</TD>
@@ -2683,7 +2709,7 @@ ShowLinks(1, 7);
 <TBODY>
 <TR>
 <TD nowrap><FONT size="-1">
-采取<BR>反覆无常</FONT></TD>
+采取<BR>反复无常</FONT></TD>
 <TD nowrap align="right"><FONT size="-1">
 +3<BR>+2</FONT></TD>
 </TR>
@@ -2701,7 +2727,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0069"class="tb-cell2" height="65">69</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0069" target="_blank">锁链Ｕ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0002">锁链铠甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0069" target="armorlv">锁链Ｕ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0002">锁链铠甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">&nbsp;</TD>
 <TD class="tb-cell2">4</TD>
 <TD class="tb-cell3">2400</TD>
@@ -2740,7 +2766,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0070"class="tb-cell2" height="65">70</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0070" target="_blank">猎人Ｕ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0003">猎人铠甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0070" target="armorlv">猎人Ｕ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0003">猎人铠甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">剑士<BR>专用</TD>
 <TD class="tb-cell2">4</TD>
 <TD class="tb-cell3">4800</TD>
@@ -2779,7 +2805,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0071"class="tb-cell2" height="65">71</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0071" target="_blank">猎人Ｕ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0004">猎人轻甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0071" target="armorlv">猎人Ｕ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0004">猎人轻甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">射手<BR>专用</TD>
 <TD class="tb-cell2">4</TD>
 <TD class="tb-cell3">4800</TD>
@@ -2818,7 +2844,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0072"class="tb-cell2" height="65">72</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0072" target="_blank">骸骨Ｕ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0005">骸骨铠甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0072" target="armorlv">骸骨Ｕ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0005">骸骨铠甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">剑士<BR>专用</TD>
 <TD class="tb-cell2">4</TD>
 <TD class="tb-cell3">5400</TD>
@@ -2857,7 +2883,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0073"class="tb-cell2" height="65">73</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0073" target="_blank">骸骨Ｕ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0006">骸骨轻甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0073" target="armorlv">骸骨Ｕ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0006">骸骨轻甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">射手<BR>专用</TD>
 <TD class="tb-cell2">4</TD>
 <TD class="tb-cell3">5400</TD>
@@ -2896,7 +2922,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0074"class="tb-cell2" height="65">74</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0074" target="_blank">蓝速龙Ｕ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0007">蓝速龙铠甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0074" target="armorlv">蓝速龙Ｕ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0007">蓝速龙铠甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">剑士<BR>专用</TD>
 <TD class="tb-cell2">5</TD>
 <TD class="tb-cell3">6000</TD>
@@ -2935,7 +2961,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0075"class="tb-cell2" height="65">75</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0075" target="_blank">蓝速龙Ｕ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0008">蓝速龙轻甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0075" target="armorlv">蓝速龙Ｕ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0008">蓝速龙轻甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">射手<BR>专用</TD>
 <TD class="tb-cell2">5</TD>
 <TD class="tb-cell3">6000</TD>
@@ -2974,7 +3000,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0076"class="tb-cell2" height="65">76</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0076" target="_blank">战斗Ｕ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0009">战斗铠甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0076" target="armorlv">战斗Ｕ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0009">战斗铠甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">剑士<BR>专用</TD>
 <TD class="tb-cell2">4</TD>
 <TD class="tb-cell3">6900</TD>
@@ -3013,7 +3039,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0077"class="tb-cell2" height="65">77</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0077" target="_blank">战斗Ｕ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0010">战斗轻甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0077" target="armorlv">战斗Ｕ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0010">战斗轻甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">射手<BR>专用</TD>
 <TD class="tb-cell2">4</TD>
 <TD class="tb-cell3">6900</TD>
@@ -3052,7 +3078,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0078"class="tb-cell2" height="65">78</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0078" target="_blank">巨蜂Ｕ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0011">巨蜂铠甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0078" target="armorlv">巨蜂Ｕ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0011">巨蜂铠甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">剑士<BR>专用</TD>
 <TD class="tb-cell2">5</TD>
 <TD class="tb-cell3">7800</TD>
@@ -3091,7 +3117,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0079"class="tb-cell2" height="65">79</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0079" target="_blank">巨蜂Ｕ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0012">巨蜂轻甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0079" target="armorlv">巨蜂Ｕ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0012">巨蜂轻甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">射手<BR>专用</TD>
 <TD class="tb-cell2">5</TD>
 <TD class="tb-cell3">7800</TD>
@@ -3112,7 +3138,7 @@ ShowLinks(1, 7);
 <TBODY>
 <TR>
 <TD nowrap><FONT size="-1">
-麻痹<BR>贯通弹追加<BR>反覆无常<BR>回复速度</FONT></TD>
+麻痹<BR>贯通弹追加<BR>反复无常<BR>回复速度</FONT></TD>
 <TD nowrap align="right"><FONT size="-1">
 +2<BR>+1<BR>-1<BR>+3</FONT></TD>
 </TR>
@@ -3130,7 +3156,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0080"class="tb-cell2" height="65">80</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0080" target="_blank">爬虫Ｕ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0013">爬虫铠甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0080" target="armorlv">爬虫Ｕ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0013">爬虫铠甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">剑士<BR>专用</TD>
 <TD class="tb-cell2">5</TD>
 <TD class="tb-cell3">7800</TD>
@@ -3169,7 +3195,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0081"class="tb-cell2" height="65">81</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0081" target="_blank">爬虫Ｕ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0014">爬虫轻甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0081" target="armorlv">爬虫Ｕ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0014">爬虫轻甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">射手<BR>专用</TD>
 <TD class="tb-cell2">5</TD>
 <TD class="tb-cell3">7800</TD>
@@ -3208,7 +3234,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0082"class="tb-cell2" height="65">82</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0082" target="_blank">精炼矿石Ｕ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0015">精炼矿石铠甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0082" target="armorlv">高等合金Ｕ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0015">高等合金铠甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">剑士<BR>专用</TD>
 <TD class="tb-cell2">5</TD>
 <TD class="tb-cell3">9300</TD>
@@ -3247,7 +3273,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0083"class="tb-cell2" height="65">83</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0083" target="_blank">精炼矿石Ｕ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0016">精炼矿石轻甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0083" target="armorlv">高等合金Ｕ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0016">高等合金轻甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">射手<BR>专用</TD>
 <TD class="tb-cell2">5</TD>
 <TD class="tb-cell3">9300</TD>
@@ -3286,7 +3312,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0084"class="tb-cell2" height="65">84</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0084" target="_blank">黄速龙Ｕ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0017">黄速龙铠甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0084" target="armorlv">黄速龙Ｕ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0017">黄速龙铠甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">剑士<BR>专用</TD>
 <TD class="tb-cell2">5</TD>
 <TD class="tb-cell3">9900</TD>
@@ -3325,7 +3351,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0085"class="tb-cell2" height="65">85</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0085" target="_blank">黄速龙Ｕ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0018">黄速龙轻甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0085" target="armorlv">黄速龙Ｕ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0018">黄速龙轻甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">射手<BR>专用</TD>
 <TD class="tb-cell2">5</TD>
 <TD class="tb-cell3">9900</TD>
@@ -3364,7 +3390,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0086"class="tb-cell2" height="65">86</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0086" target="_blank">怪鸟Ｕ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0019">怪鸟铠甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0086" target="armorlv">怪鸟Ｕ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0019">怪鸟铠甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">剑士<BR>专用</TD>
 <TD class="tb-cell2">6</TD>
 <TD class="tb-cell3">11100</TD>
@@ -3403,7 +3429,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0087"class="tb-cell2" height="65">87</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0087" target="_blank">怪鸟Ｕ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0020">怪鸟轻甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0087" target="armorlv">怪鸟Ｕ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0020">怪鸟轻甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">射手<BR>专用</TD>
 <TD class="tb-cell2">6</TD>
 <TD class="tb-cell3">11100</TD>
@@ -3442,7 +3468,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0088"class="tb-cell2" height="65">88</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0088" target="_blank">红速龙Ｕ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0021">红速龙铠甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0088" target="armorlv">红速龙Ｕ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0021">红速龙铠甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">剑士<BR>专用</TD>
 <TD class="tb-cell2">5</TD>
 <TD class="tb-cell3">9900</TD>
@@ -3481,7 +3507,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0089"class="tb-cell2" height="65">89</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0089" target="_blank">红速龙Ｕ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0022">红速龙轻甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0089" target="armorlv">红速龙Ｕ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0022">红速龙轻甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">射手<BR>专用</TD>
 <TD class="tb-cell2">5</TD>
 <TD class="tb-cell3">9900</TD>
@@ -3520,7 +3546,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0090"class="tb-cell2" height="65">90</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0090" target="_blank">毒怪鸟Ｕ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0023">毒怪鸟铠甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0090" target="armorlv">毒怪鸟Ｕ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0023">毒怪鸟铠甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">剑士<BR>专用</TD>
 <TD class="tb-cell2">6</TD>
 <TD class="tb-cell3">12000</TD>
@@ -3559,7 +3585,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0091"class="tb-cell2" height="65">91</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0091" target="_blank">毒怪鸟Ｕ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0024">毒怪鸟轻甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0091" target="armorlv">毒怪鸟Ｕ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0024">毒怪鸟轻甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">射手<BR>专用</TD>
 <TD class="tb-cell2">6</TD>
 <TD class="tb-cell3">12000</TD>
@@ -3598,7 +3624,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0092"class="tb-cell2" height="65">92</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0092" target="_blank">砂龙Ｕ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0025">砂龙铠甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0092" target="armorlv">沙龙Ｕ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0025">沙龙铠甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">剑士<BR>专用</TD>
 <TD class="tb-cell2">6</TD>
 <TD class="tb-cell3">11280</TD>
@@ -3628,16 +3654,16 @@ ShowLinks(1, 7);
 </TD>
 <TD class="tb-cell2">&nbsp;</TD>
 <TD class="tb-cell1">
-<A href="../items/items.html?0254" target="items"><FONT color="#ff0000">条纹的皮</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0186" target="items">砂龙的紫鳞</A>×1<BR><A href="../items/items.html?0187" target="items">砂龙的桃鳍</A>×1<BR><A href="../items/items.html?00e4" target="items">冰结晶</A>×3</TD>
+<A href="../items/items.html?0254" target="items"><FONT color="#ff0000">条纹的皮</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0186" target="items">沙龙的紫鳞</A>×1<BR><A href="../items/items.html?0187" target="items">沙龙的桃鳍</A>×1<BR><A href="../items/items.html?00e4" target="items">冰结晶</A>×3</TD>
 <TD class="tb-cell1">&nbsp;</TD>
-<TD class="tb-cell1">砂龙の素材で作られた<br>
+<TD class="tb-cell1">沙龙の素材で作られた<br>
 胴用装備。その鱗は、高い<br>
 防御力を持つ反面、雷に弱い。
 </TD>
 </TR>
 <TR>
 <TD id="0093"class="tb-cell2" height="65">93</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0093" target="_blank">砂龙Ｕ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0026">砂龙轻甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0093" target="armorlv">沙龙Ｕ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0026">沙龙轻甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">射手<BR>专用</TD>
 <TD class="tb-cell2">6</TD>
 <TD class="tb-cell3">11280</TD>
@@ -3667,7 +3693,7 @@ ShowLinks(1, 7);
 </TD>
 <TD class="tb-cell2">&nbsp;</TD>
 <TD class="tb-cell1">
-<A href="../items/items.html?0254" target="items"><FONT color="#ff0000">条纹的皮</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0186" target="items">砂龙的紫鳞</A>×1<BR><A href="../items/items.html?0187" target="items">砂龙的桃鳍</A>×1<BR><A href="../items/items.html?00e4" target="items">冰结晶</A>×3</TD>
+<A href="../items/items.html?0254" target="items"><FONT color="#ff0000">条纹的皮</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0186" target="items">沙龙的紫鳞</A>×1<BR><A href="../items/items.html?0187" target="items">沙龙的桃鳍</A>×1<BR><A href="../items/items.html?00e4" target="items">冰结晶</A>×3</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1">砂竜の素材を良質なものだけ<br>
 集めて作った胴用装備。肩を<br>
@@ -3676,7 +3702,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0094"class="tb-cell2" height="65">94</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0094" target="_blank">钢制Ｕ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0027">钢制铠甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0094" target="armorlv">钢制Ｕ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0027">钢制铠甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">剑士<BR>专用</TD>
 <TD class="tb-cell2">6</TD>
 <TD class="tb-cell3">13380</TD>
@@ -3715,7 +3741,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0095"class="tb-cell2" height="65">95</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0095" target="_blank">雌龙心铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0028">雌火龙铠甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0095" target="armorlv">雌龙心铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0028">雌火龙铠甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">剑士<BR>专用</TD>
 <TD class="tb-cell2">6</TD>
 <TD class="tb-cell3">16200</TD>
@@ -3744,7 +3770,7 @@ ShowLinks(1, 7);
 </TABLE>
 </TD>
 <TD class="tb-cell2">
-<A href="./armor.html#0123">123</A><BR>（Lv5以上）</TD>
+<A href="./armor.html#0123">123</A><BR>Lv5以上</TD>
 <TD class="tb-cell1">
 <A href="../items/items.html?0190" target="items">樱火龙的鳞</A>×2<BR><A href="../items/items.html?0192" target="items">樱火龙的甲壳</A>×1<BR><A href="../items/items.html?0163" target="items">黄速龙王的皮</A>×1<BR><A href="../items/items.html?00db" target="items"><FONT color="#ff0000">辉龙石</FONT></A><FONT color="#ff0000">×1</FONT></TD>
 <TD class="tb-cell1">&nbsp;</TD>
@@ -3755,7 +3781,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0096"class="tb-cell2" height="65">96</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0096" target="_blank">雌龙心轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0029">雌火龙轻甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0096" target="armorlv">雌龙心轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0029">雌火龙轻甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">射手<BR>专用</TD>
 <TD class="tb-cell2">6</TD>
 <TD class="tb-cell3">16200</TD>
@@ -3784,7 +3810,7 @@ ShowLinks(1, 7);
 </TABLE>
 </TD>
 <TD class="tb-cell2">
-<A href="./armor.html#0124">124</A><BR>（Lv5以上）</TD>
+<A href="./armor.html#0124">124</A><BR>Lv5以上</TD>
 <TD class="tb-cell1">
 <A href="../items/items.html?0190" target="items">樱火龙的鳞</A>×2<BR><A href="../items/items.html?0192" target="items">樱火龙的甲壳</A>×1<BR><A href="../items/items.html?0163" target="items">黄速龙王的皮</A>×1<BR><A href="../items/items.html?00db" target="items"><FONT color="#ff0000">辉龙石</FONT></A><FONT color="#ff0000">×1</FONT></TD>
 <TD class="tb-cell1">&nbsp;</TD>
@@ -3795,7 +3821,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0097"class="tb-cell2" height="65">97</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0097" target="_blank">电龙Ｕ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0030">电龙铠甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0097" target="armorlv">电龙Ｕ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0030">电龙铠甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">剑士<BR>专用</TD>
 <TD class="tb-cell2">6</TD>
 <TD class="tb-cell3">16800</TD>
@@ -3834,7 +3860,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0098"class="tb-cell2" height="65">98</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0098" target="_blank">电龙Ｕ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0031">电龙轻甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0098" target="armorlv">电龙Ｕ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0031">电龙轻甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">射手<BR>专用</TD>
 <TD class="tb-cell2">6</TD>
 <TD class="tb-cell3">16800</TD>
@@ -3855,7 +3881,7 @@ ShowLinks(1, 7);
 <TBODY>
 <TR>
 <TD nowrap><FONT size="-1">
-回复速度<BR>广域<BR>反动<BR>气绝</FONT></TD>
+回复速度<BR>广域<BR>反冲<BR>气绝</FONT></TD>
 <TD nowrap align="right"><FONT size="-1">
 +2<BR>+3<BR>+1<BR>-1</FONT></TD>
 </TR>
@@ -3873,7 +3899,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0099"class="tb-cell2" height="65">99</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0099" target="_blank">雄龙魂铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0032">雄火龙铠甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0099" target="armorlv">雄龙魂铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0032">雄火龙铠甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">剑士<BR>专用</TD>
 <TD class="tb-cell2">6</TD>
 <TD class="tb-cell3">23400</TD>
@@ -3902,7 +3928,7 @@ ShowLinks(1, 7);
 </TABLE>
 </TD>
 <TD class="tb-cell2">
-<A href="./armor.html#0125">125</A><BR>（Lv5以上）</TD>
+<A href="./armor.html#0125">125</A><BR>Lv5以上</TD>
 <TD class="tb-cell1">
 <A href="../items/items.html?01a1" target="items"><FONT color="#ff0000">苍火龙的鳞</FONT></A><FONT color="#ff0000">×2</FONT><BR><A href="../items/items.html?01a3" target="items">苍火龙的甲壳</A>×1<BR><A href="../items/items.html?0197" target="items">火龙的骨髓</A>×1<BR><A href="../items/items.html?00db" target="items">辉龙石</A>×1</TD>
 <TD class="tb-cell1">&nbsp;</TD>
@@ -3913,7 +3939,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0100"class="tb-cell2" height="65">100</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0100" target="_blank">雄龙魂轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0033">雄火龙轻甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0100" target="armorlv">雄龙魂轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0033">雄火龙轻甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">射手<BR>专用</TD>
 <TD class="tb-cell2">6</TD>
 <TD class="tb-cell3">23400</TD>
@@ -3942,7 +3968,7 @@ ShowLinks(1, 7);
 </TABLE>
 </TD>
 <TD class="tb-cell2">
-<A href="./armor.html#0126">126</A><BR>（Lv5以上）</TD>
+<A href="./armor.html#0126">126</A><BR>Lv5以上</TD>
 <TD class="tb-cell1">
 <A href="../items/items.html?01a1" target="items"><FONT color="#ff0000">苍火龙的鳞</FONT></A><FONT color="#ff0000">×2</FONT><BR><A href="../items/items.html?01a3" target="items">苍火龙的甲壳</A>×1<BR><A href="../items/items.html?0197" target="items">火龙的骨髓</A>×1<BR><A href="../items/items.html?00db" target="items">辉龙石</A>×1</TD>
 <TD class="tb-cell1">&nbsp;</TD>
@@ -3953,7 +3979,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0101"class="tb-cell2" height="65">101</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0101" target="_blank">水龙Ｕ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0034">水龙铠甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0101" target="armorlv">水龙Ｕ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0034">水龙铠甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">剑士<BR>专用</TD>
 <TD class="tb-cell2">6</TD>
 <TD class="tb-cell3">17400</TD>
@@ -3983,7 +4009,7 @@ ShowLinks(1, 7);
 </TD>
 <TD class="tb-cell2">&nbsp;</TD>
 <TD class="tb-cell1">
-<A href="../items/items.html?0184" target="items">砂龙的鳍</A>×1<BR><A href="../items/items.html?0180" target="items"><FONT color="#ff0000">翠水龙的鳞</FONT></A><FONT color="#ff0000">×2</FONT><BR><A href="../items/items.html?010a" target="items">煌甲虫</A>×1<BR><A href="../items/items.html?00db" target="items">辉龙石</A>×1</TD>
+<A href="../items/items.html?0184" target="items">沙龙的鳍</A>×1<BR><A href="../items/items.html?0180" target="items"><FONT color="#ff0000">翠水龙的鳞</FONT></A><FONT color="#ff0000">×2</FONT><BR><A href="../items/items.html?010a" target="items">煌甲虫</A>×1<BR><A href="../items/items.html?00db" target="items">辉龙石</A>×1</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1">水龙の鱗が細かく縫い<br>
 込まれた胴装備。体に密着し、<br>
@@ -3992,7 +4018,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0102"class="tb-cell2" height="65">102</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0102" target="_blank">水龙Ｕ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0035">水龙轻甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0102" target="armorlv">水龙Ｕ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0035">水龙轻甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">射手<BR>专用</TD>
 <TD class="tb-cell2">6</TD>
 <TD class="tb-cell3">17400</TD>
@@ -4022,7 +4048,7 @@ ShowLinks(1, 7);
 </TD>
 <TD class="tb-cell2">&nbsp;</TD>
 <TD class="tb-cell1">
-<A href="../items/items.html?0184" target="items">砂龙的鳍</A>×1<BR><A href="../items/items.html?0180" target="items"><FONT color="#ff0000">翠水龙的鳞</FONT></A><FONT color="#ff0000">×2</FONT><BR><A href="../items/items.html?010a" target="items">煌甲虫</A>×1<BR><A href="../items/items.html?00db" target="items">辉龙石</A>×1</TD>
+<A href="../items/items.html?0184" target="items">沙龙的鳍</A>×1<BR><A href="../items/items.html?0180" target="items"><FONT color="#ff0000">翠水龙的鳞</FONT></A><FONT color="#ff0000">×2</FONT><BR><A href="../items/items.html?010a" target="items">煌甲虫</A>×1<BR><A href="../items/items.html?00db" target="items">辉龙石</A>×1</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1">水龙の鱗を縫い込んだ<br>
 スーツにヒレで装飾を施した<br>
@@ -4031,7 +4057,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0103"class="tb-cell2" height="65">103</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0103" target="_blank">岩龙Ｕ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0038">岩龙铠甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0103" target="armorlv">岩龙Ｕ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0038">岩龙铠甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">剑士<BR>专用</TD>
 <TD class="tb-cell2">6</TD>
 <TD class="tb-cell3">16200</TD>
@@ -4070,7 +4096,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0104"class="tb-cell2" height="65">104</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0104" target="_blank">岩龙Ｕ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0039">岩龙轻甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0104" target="armorlv">岩龙Ｕ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0039">岩龙轻甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">射手<BR>专用</TD>
 <TD class="tb-cell2">6</TD>
 <TD class="tb-cell3">16200</TD>
@@ -4109,7 +4135,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0105"class="tb-cell2" height="65">105</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0105" target="_blank">角龙Ｕ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0040">角龙铠甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0105" target="armorlv">角龙Ｕ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0040">角龙铠甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">剑士<BR>专用</TD>
 <TD class="tb-cell2">6</TD>
 <TD class="tb-cell3">24480</TD>
@@ -4143,12 +4169,12 @@ ShowLinks(1, 7);
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1">角龙の素材で作られ<br>
 た胴用装備。凄まじい強度を<br>
-誇る、砂漠の覇者の証。
+誇る、沙漠の覇者の証。
 </TD>
 </TR>
 <TR>
 <TD id="0106"class="tb-cell2" height="65">106</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0106" target="_blank">角龙Ｕ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0041">角龙轻甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0106" target="armorlv">角龙Ｕ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0041">角龙轻甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">射手<BR>专用</TD>
 <TD class="tb-cell2">6</TD>
 <TD class="tb-cell3">24480</TD>
@@ -4187,7 +4213,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0107"class="tb-cell2" height="65">107</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0107" target="_blank">一角魔铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0042">一角龙铠甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0107" target="armorlv">一角魔铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0042">一角龙铠甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">剑士<BR>专用</TD>
 <TD class="tb-cell2">6</TD>
 <TD class="tb-cell3">27000</TD>
@@ -4226,7 +4252,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0108"class="tb-cell2" height="65">108</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0108" target="_blank">一角魔轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0043">一角龙轻甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0108" target="armorlv">一角魔轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0043">一角龙轻甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">射手<BR>专用</TD>
 <TD class="tb-cell2">6</TD>
 <TD class="tb-cell3">27000</TD>
@@ -4265,7 +4291,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0109"class="tb-cell2" height="65">109</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0109" target="_blank">铠龙Ｕ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0044">铠龙铠甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0109" target="armorlv">铠龙Ｕ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0044">铠龙铠甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">剑士<BR>专用</TD>
 <TD class="tb-cell2">6</TD>
 <TD class="tb-cell3">28800</TD>
@@ -4304,7 +4330,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0110"class="tb-cell2" height="65">110</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0110" target="_blank">铠龙Ｕ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0045">铠龙轻甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0110" target="armorlv">铠龙Ｕ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0045">铠龙轻甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">射手<BR>专用</TD>
 <TD class="tb-cell2">6</TD>
 <TD class="tb-cell3">28800</TD>
@@ -4325,7 +4351,7 @@ ShowLinks(1, 7);
 <TBODY>
 <TR>
 <TD nowrap><FONT size="-1">
-反动<BR>防御<BR>体力<BR>饥饿</FONT></TD>
+反冲<BR>防御<BR>体力<BR>饥饿</FONT></TD>
 <TD nowrap align="right"><FONT size="-1">
 +2<BR>+2<BR>+1<BR>-2</FONT></TD>
 </TR>
@@ -4343,7 +4369,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0111"class="tb-cell2" height="65">111</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0111" target="_blank">忍之装束・空</A><BR><BR><FONT size="-2"><A href="./armor.html#0054">忍之装束・阳</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0111" target="armorlv">忍之装束・空</A><BR><BR><FONT size="-2"><A href="./armor.html#0054">忍之装束・阳</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">&nbsp;</TD>
 <TD class="tb-cell2">6</TD>
 <TD class="tb-cell3">52800</TD>
@@ -4382,7 +4408,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0112"class="tb-cell2" height="65">112</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0112" target="_blank">忍之装束・海</A><BR><BR><FONT size="-2"><A href="./armor.html#0055">忍之装束・阴</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0112" target="armorlv">忍之装束・海</A><BR><BR><FONT size="-2"><A href="./armor.html#0055">忍之装束・阴</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">&nbsp;</TD>
 <TD class="tb-cell2">6</TD>
 <TD class="tb-cell3">52800</TD>
@@ -4421,7 +4447,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0113"class="tb-cell2 hc" height="65">113</TD>
-<TD class="tb-cell1 hc"><BR><BR><A href="./armor1.html#0113" target="_blank">守卫者Ｕ制服</A><BR><BR><FONT size="-2"><A href="./armor.html#0056">守卫者制服</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc"><BR><BR><A href="./armor1.html#0113" target="armorlv">守卫者Ｕ制服</A><BR><BR><FONT size="-2"><A href="./armor.html#0056">守卫者制服</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">男性<BR>专用</TD>
 <TD class="tb-cell2 hc">6</TD>
 <TD class="tb-cell3 hc">48000</TD>
@@ -4460,7 +4486,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0114"class="tb-cell2 hc" height="65">114</TD>
-<TD class="tb-cell1 hc"><BR><BR><A href="./armor1.html#0114" target="_blank">守卫者Ｕ马甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0057">守卫者马甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc"><BR><BR><A href="./armor1.html#0114" target="armorlv">守卫者Ｕ马甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0057">守卫者马甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">男性<BR>专用</TD>
 <TD class="tb-cell2 hc">6</TD>
 <TD class="tb-cell3 hc">48000</TD>
@@ -4499,7 +4525,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0115"class="tb-cell2 hc" height="65">115</TD>
-<TD class="tb-cell1 hc"><BR><BR><A href="./armor1.html#0115" target="_blank">助理Ｕ马甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0058">助理马甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc"><BR><BR><A href="./armor1.html#0115" target="armorlv">助手Ｕ马甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0058">助手马甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">女性<BR>专用</TD>
 <TD class="tb-cell2 hc">6</TD>
 <TD class="tb-cell3 hc">48000</TD>
@@ -4538,7 +4564,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0116"class="tb-cell2 hc" height="65">116</TD>
-<TD class="tb-cell1 hc"><BR><BR><A href="./armor1.html#0116" target="_blank">医师Ｕ马甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0059">医师马甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc"><BR><BR><A href="./armor1.html#0116" target="armorlv">治愈者Ｕ马甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0059">治愈者马甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">女性<BR>专用</TD>
 <TD class="tb-cell2 hc">6</TD>
 <TD class="tb-cell3 hc">48000</TD>
@@ -4577,7 +4603,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0117"class="tb-cell2 hc" height="65">117</TD>
-<TD class="tb-cell1 hc"><BR><BR><A href="./armor1.html#0117" target="_blank">晓丸・皇【胴当】</A><BR><BR><FONT size="-2"><A href="./armor.html#0062">晓丸【胴当】</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc"><BR><BR><A href="./armor1.html#0117" target="armorlv">晓丸・皇【胴当】</A><BR><BR><FONT size="-2"><A href="./armor.html#0062">晓丸【胴当】</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">男性<BR>剑士<BR>专用</TD>
 <TD class="tb-cell2 hc">7</TD>
 <TD class="tb-cell3 hc">78000</TD>
@@ -4616,7 +4642,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0118"class="tb-cell2 hc" height="65">118</TD>
-<TD class="tb-cell1 hc"><BR><BR><A href="./armor1.html#0118" target="_blank">曙丸・皇【胴当】</A><BR><BR><FONT size="-2"><A href="./armor.html#0063">曙丸【胴当】</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc"><BR><BR><A href="./armor1.html#0118" target="armorlv">曙丸・皇【胴当】</A><BR><BR><FONT size="-2"><A href="./armor.html#0063">曙丸【胴当】</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">男性<BR>射手<BR>专用</TD>
 <TD class="tb-cell2 hc">7</TD>
 <TD class="tb-cell3 hc">78000</TD>
@@ -4655,7 +4681,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0119"class="tb-cell2 hc" height="65">119</TD>
-<TD class="tb-cell1 hc"><BR><BR><A href="./armor1.html#0119" target="_blank">凛・皇【胸当】</A><BR><BR><FONT size="-2"><A href="./armor.html#0064">凛【胸当】</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc"><BR><BR><A href="./armor1.html#0119" target="armorlv">凛・皇【胸当】</A><BR><BR><FONT size="-2"><A href="./armor.html#0064">凛【胸当】</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">女性<BR>剑士<BR>专用</TD>
 <TD class="tb-cell2 hc">7</TD>
 <TD class="tb-cell3 hc">78000</TD>
@@ -4694,7 +4720,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0120"class="tb-cell2 hc" height="65">120</TD>
-<TD class="tb-cell1 hc"><BR><BR><A href="./armor1.html#0120" target="_blank">艳・皇【胸当】</A><BR><BR><FONT size="-2"><A href="./armor.html#0065">艳【胸当】</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc"><BR><BR><A href="./armor1.html#0120" target="armorlv">艳・皇【胸当】</A><BR><BR><FONT size="-2"><A href="./armor.html#0065">艳【胸当】</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">女性<BR>射手<BR>专用</TD>
 <TD class="tb-cell2 hc">7</TD>
 <TD class="tb-cell3 hc">78000</TD>
@@ -4733,7 +4759,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0121"class="tb-cell2 hc" height="65">121</TD>
-<TD class="tb-cell1 hc"><BR><BR><A href="./armor1.html#0121" target="_blank">魔龍之皮</A><BR><BR><FONT size="-2"><A href="./armor.html#0066">邪龍之皮</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc"><BR><BR><A href="./armor1.html#0121" target="armorlv">红龍之皮</A><BR><BR><FONT size="-2"><A href="./armor.html#0066">黑龍之皮</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">剑士<BR>专用</TD>
 <TD class="tb-cell2 hc">7</TD>
 <TD class="tb-cell3 hc">90000</TD>
@@ -4762,7 +4788,7 @@ ShowLinks(1, 7);
 </TABLE>
 </TD>
 <TD class="tb-cell2 hc">
-<A href="./armor.html#0224">224</A><BR>（Lv3以上）</TD>
+<A href="./armor.html#0224">224</A><BR>Lv3以上</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?01f1" target="items"><FONT color="#ff0000">黑龍的红鳞</FONT></A><FONT color="#ff0000">×2</FONT><BR><A href="../items/items.html?01f0" target="items"><FONT color="#ff0000">黑龍的红角</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?018a" target="items"><FONT color="#ff0000">雌火龙的逆鳞</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?023d" target="items"><FONT color="#ff0000">古龍的血</FONT></A><FONT color="#ff0000">×1</FONT></TD>
 <TD class="tb-cell1 hc">&nbsp;</TD>
@@ -4773,7 +4799,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0122"class="tb-cell2 hc" height="65">122</TD>
-<TD class="tb-cell1 hc"><BR><BR><A href="./armor1.html#0122" target="_blank">魔龍之肤</A><BR><BR><FONT size="-2"><A href="./armor.html#0067">邪龍之肤</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc"><BR><BR><A href="./armor1.html#0122" target="armorlv">红龍之肤</A><BR><BR><FONT size="-2"><A href="./armor.html#0067">黑龍之肤</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">射手<BR>专用</TD>
 <TD class="tb-cell2 hc">7</TD>
 <TD class="tb-cell3 hc">90000</TD>
@@ -4802,7 +4828,7 @@ ShowLinks(1, 7);
 </TABLE>
 </TD>
 <TD class="tb-cell2 hc">
-<A href="./armor.html#0225">225</A><BR>（Lv3以上）</TD>
+<A href="./armor.html#0225">225</A><BR>Lv3以上</TD>
 <TD class="tb-cell1 hc">
 <A href="../items/items.html?01f1" target="items"><FONT color="#ff0000">黑龍的红鳞</FONT></A><FONT color="#ff0000">×2</FONT><BR><A href="../items/items.html?01f0" target="items"><FONT color="#ff0000">黑龍的红角</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?018a" target="items"><FONT color="#ff0000">雌火龙的逆鳞</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?023d" target="items"><FONT color="#ff0000">古龍的血</FONT></A><FONT color="#ff0000">×1</FONT></TD>
 <TD class="tb-cell1 hc">&nbsp;</TD>
@@ -4813,7 +4839,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0123"class="tb-cell2 hc" height="65">123</TD>
-<TD class="tb-cell1 hc"><BR><BR><A href="./armor1.html#0123" target="_blank">金月铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0095">雌龙心铠甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc"><BR><BR><A href="./armor1.html#0123" target="armorlv">金月铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0095">雌龙心铠甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">剑士<BR>专用</TD>
 <TD class="tb-cell2 hc">7</TD>
 <TD class="tb-cell3 hc">108000</TD>
@@ -4852,7 +4878,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0124"class="tb-cell2 hc" height="65">124</TD>
-<TD class="tb-cell1 hc"><BR><BR><A href="./armor1.html#0124" target="_blank">金月轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0096">雌龙心轻甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc"><BR><BR><A href="./armor1.html#0124" target="armorlv">金月轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0096">雌龙心轻甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">射手<BR>专用</TD>
 <TD class="tb-cell2 hc">7</TD>
 <TD class="tb-cell3 hc">108000</TD>
@@ -4891,7 +4917,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0125"class="tb-cell2 hc" height="65">125</TD>
-<TD class="tb-cell1 hc"><BR><BR><A href="./armor1.html#0125" target="_blank">银日铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0099">雄龙魂铠甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc"><BR><BR><A href="./armor1.html#0125" target="armorlv">银日铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0099">雄龙魂铠甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">剑士<BR>专用</TD>
 <TD class="tb-cell2 hc">7</TD>
 <TD class="tb-cell3 hc">114000</TD>
@@ -4921,7 +4947,7 @@ ShowLinks(1, 7);
 </TD>
 <TD class="tb-cell2 hc">&nbsp;</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?01a8" target="items"><FONT color="#ff0000">银火龙的坚壳</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?01a9" target="items">银火龙的尻尾</A>×1<BR><A href="../items/items.html?0227" target="items">钢龍的翼膜</A>×1<BR><A href="../items/items.html?023b" target="items">炎龍的尘粉</A>×1</TD>
+<A href="../items/items.html?01a8" target="items"><FONT color="#ff0000">银火龙的坚壳</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?01a9" target="items">银火龙的尾巴</A>×1<BR><A href="../items/items.html?0227" target="items">钢龍的翼膜</A>×1<BR><A href="../items/items.html?023b" target="items">炎龍的尘粉</A>×1</TD>
 <TD class="tb-cell1 hc">&nbsp;</TD>
 <TD class="tb-cell1 hc">冰点下の炎に霞む、銀の太陽<br>
 の輝きを放つ防具。いかなる<br>
@@ -4930,7 +4956,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0126"class="tb-cell2 hc" height="65">126</TD>
-<TD class="tb-cell1 hc"><BR><BR><A href="./armor1.html#0126" target="_blank">银日轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0100">雄龙魂轻甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc"><BR><BR><A href="./armor1.html#0126" target="armorlv">银日轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0100">雄龙魂轻甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">射手<BR>专用</TD>
 <TD class="tb-cell2 hc">7</TD>
 <TD class="tb-cell3 hc">114000</TD>
@@ -4960,7 +4986,7 @@ ShowLinks(1, 7);
 </TD>
 <TD class="tb-cell2 hc">&nbsp;</TD>
 <TD class="tb-cell1 hc">
-<A href="../items/items.html?01a8" target="items"><FONT color="#ff0000">银火龙的坚壳</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?01a9" target="items">银火龙的尻尾</A>×1<BR><A href="../items/items.html?0227" target="items">钢龍的翼膜</A>×1<BR><A href="../items/items.html?023b" target="items">炎龍的尘粉</A>×1</TD>
+<A href="../items/items.html?01a8" target="items"><FONT color="#ff0000">银火龙的坚壳</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?01a9" target="items">银火龙的尾巴</A>×1<BR><A href="../items/items.html?0227" target="items">钢龍的翼膜</A>×1<BR><A href="../items/items.html?023b" target="items">炎龍的尘粉</A>×1</TD>
 <TD class="tb-cell1 hc">&nbsp;</TD>
 <TD class="tb-cell1 hc">熱いという言葉すら超越した、<br>
 銀色の炎をともす雄火龙<br>
@@ -4969,7 +4995,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0127"class="tb-cell2" height="65">127</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0127" target="_blank">轻革Ｓ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0001">轻革铠甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0127" target="armorlv">轻革Ｓ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0001">轻革铠甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">&nbsp;</TD>
 <TD class="tb-cell2">4</TD>
 <TD class="tb-cell3">2700</TD>
@@ -5008,7 +5034,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0128"class="tb-cell2" height="65">128</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0128" target="_blank">锁链Ｓ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0002">锁链铠甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0128" target="armorlv">锁链Ｓ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0002">锁链铠甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">&nbsp;</TD>
 <TD class="tb-cell2">4</TD>
 <TD class="tb-cell3">3300</TD>
@@ -5047,7 +5073,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0129"class="tb-cell2" height="65">129</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0129" target="_blank">猎人Ｓ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0003">猎人铠甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0129" target="armorlv">猎人Ｓ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0003">猎人铠甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">剑士<BR>专用</TD>
 <TD class="tb-cell2">4</TD>
 <TD class="tb-cell3">5520</TD>
@@ -5086,7 +5112,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0130"class="tb-cell2" height="65">130</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0130" target="_blank">猎人Ｓ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0004">猎人轻甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0130" target="armorlv">猎人Ｓ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0004">猎人轻甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">射手<BR>专用</TD>
 <TD class="tb-cell2">4</TD>
 <TD class="tb-cell3">5520</TD>
@@ -5125,7 +5151,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0131"class="tb-cell2" height="65">131</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0131" target="_blank">骸骨Ｓ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0005">骸骨铠甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0131" target="armorlv">骸骨Ｓ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0005">骸骨铠甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">剑士<BR>专用</TD>
 <TD class="tb-cell2">4</TD>
 <TD class="tb-cell3">6000</TD>
@@ -5164,7 +5190,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0132"class="tb-cell2" height="65">132</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0132" target="_blank">骸骨Ｓ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0006">骸骨轻甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0132" target="armorlv">骸骨Ｓ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0006">骸骨轻甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">射手<BR>专用</TD>
 <TD class="tb-cell2">4</TD>
 <TD class="tb-cell3">6000</TD>
@@ -5203,7 +5229,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0133"class="tb-cell2" height="65">133</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0133" target="_blank">蓝速龙Ｓ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0007">蓝速龙铠甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0133" target="armorlv">蓝速龙Ｓ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0007">蓝速龙铠甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">剑士<BR>专用</TD>
 <TD class="tb-cell2">5</TD>
 <TD class="tb-cell3">7200</TD>
@@ -5242,7 +5268,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0134"class="tb-cell2" height="65">134</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0134" target="_blank">蓝速龙Ｓ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0008">蓝速龙轻甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0134" target="armorlv">蓝速龙Ｓ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0008">蓝速龙轻甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">射手<BR>专用</TD>
 <TD class="tb-cell2">5</TD>
 <TD class="tb-cell3">7200</TD>
@@ -5281,7 +5307,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0135"class="tb-cell2" height="65">135</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0135" target="_blank">战斗Ｓ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0009">战斗铠甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0135" target="armorlv">战斗Ｓ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0009">战斗铠甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">剑士<BR>专用</TD>
 <TD class="tb-cell2">4</TD>
 <TD class="tb-cell3">8100</TD>
@@ -5320,7 +5346,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0136"class="tb-cell2" height="65">136</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0136" target="_blank">战斗Ｓ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0010">战斗轻甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0136" target="armorlv">战斗Ｓ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0010">战斗轻甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">射手<BR>专用</TD>
 <TD class="tb-cell2">4</TD>
 <TD class="tb-cell3">8100</TD>
@@ -5359,7 +5385,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0137"class="tb-cell2" height="65">137</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0137" target="_blank">巨蜂Ｓ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0011">巨蜂铠甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0137" target="armorlv">巨蜂Ｓ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0011">巨蜂铠甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">剑士<BR>专用</TD>
 <TD class="tb-cell2">5</TD>
 <TD class="tb-cell3">9000</TD>
@@ -5398,7 +5424,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0138"class="tb-cell2" height="65">138</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0138" target="_blank">巨蜂Ｓ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0012">巨蜂轻甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0138" target="armorlv">巨蜂Ｓ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0012">巨蜂轻甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">射手<BR>专用</TD>
 <TD class="tb-cell2">5</TD>
 <TD class="tb-cell3">9000</TD>
@@ -5437,7 +5463,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0139"class="tb-cell2" height="65">139</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0139" target="_blank">爬虫Ｓ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0013">爬虫铠甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0139" target="armorlv">爬虫Ｓ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0013">爬虫铠甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">剑士<BR>专用</TD>
 <TD class="tb-cell2">5</TD>
 <TD class="tb-cell3">8700</TD>
@@ -5476,7 +5502,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0140"class="tb-cell2" height="65">140</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0140" target="_blank">爬虫Ｓ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0014">爬虫轻甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0140" target="armorlv">爬虫Ｓ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0014">爬虫轻甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">射手<BR>专用</TD>
 <TD class="tb-cell2">5</TD>
 <TD class="tb-cell3">8700</TD>
@@ -5515,7 +5541,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0141"class="tb-cell2" height="65">141</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0141" target="_blank">精炼矿石Ｓ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0015">精炼矿石铠甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0141" target="armorlv">高等合金Ｓ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0015">高等合金铠甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">剑士<BR>专用</TD>
 <TD class="tb-cell2">5</TD>
 <TD class="tb-cell3">10200</TD>
@@ -5554,7 +5580,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0142"class="tb-cell2" height="65">142</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0142" target="_blank">精炼矿石Ｓ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0016">精炼矿石轻甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0142" target="armorlv">高等合金Ｓ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0016">高等合金轻甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">射手<BR>专用</TD>
 <TD class="tb-cell2">5</TD>
 <TD class="tb-cell3">10200</TD>
@@ -5593,7 +5619,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0143"class="tb-cell2" height="65">143</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0143" target="_blank">黄速龙Ｓ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0017">黄速龙铠甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0143" target="armorlv">黄速龙Ｓ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0017">黄速龙铠甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">剑士<BR>专用</TD>
 <TD class="tb-cell2">5</TD>
 <TD class="tb-cell3">11100</TD>
@@ -5623,7 +5649,7 @@ ShowLinks(1, 7);
 </TD>
 <TD class="tb-cell2">&nbsp;</TD>
 <TD class="tb-cell1">
-<A href="../items/items.html?0154" target="items"><FONT color="#ff0000">雪山鹿的角</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0160" target="items">黄速龙的鳞</A>×1<BR><A href="../items/items.html?0163" target="items">黄速龙王的皮</A>×1<BR><A href="../items/items.html?0108" target="items">粘着蝗虫</A>×1</TD>
+<A href="../items/items.html?0154" target="items"><FONT color="#ff0000">雪山鹿的角</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0160" target="items">黄速龙的鳞</A>×1<BR><A href="../items/items.html?0163" target="items">黄速龙王的皮</A>×1<BR><A href="../items/items.html?0108" target="items">黏着蝗虫</A>×1</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1">黄速龙の素材で作られた<br>
 胴用装備。蓝速龙铠甲に<br>
@@ -5632,7 +5658,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0144"class="tb-cell2" height="65">144</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0144" target="_blank">黄速龙Ｓ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0018">黄速龙轻甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0144" target="armorlv">黄速龙Ｓ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0018">黄速龙轻甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">射手<BR>专用</TD>
 <TD class="tb-cell2">5</TD>
 <TD class="tb-cell3">11100</TD>
@@ -5662,7 +5688,7 @@ ShowLinks(1, 7);
 </TD>
 <TD class="tb-cell2">&nbsp;</TD>
 <TD class="tb-cell1">
-<A href="../items/items.html?0154" target="items"><FONT color="#ff0000">雪山鹿的角</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0160" target="items">黄速龙的鳞</A>×1<BR><A href="../items/items.html?0163" target="items">黄速龙王的皮</A>×1<BR><A href="../items/items.html?0108" target="items">粘着蝗虫</A>×1</TD>
+<A href="../items/items.html?0154" target="items"><FONT color="#ff0000">雪山鹿的角</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0160" target="items">黄速龙的鳞</A>×1<BR><A href="../items/items.html?0163" target="items">黄速龙王的皮</A>×1<BR><A href="../items/items.html?0108" target="items">黏着蝗虫</A>×1</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1">黄速龙の素材を使った<br>
 胴用装備。分厚い金属製の<br>
@@ -5671,7 +5697,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0145"class="tb-cell2" height="65">145</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0145" target="_blank">怪鸟Ｓ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0019">怪鸟铠甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0145" target="armorlv">怪鸟Ｓ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0019">怪鸟铠甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">剑士<BR>专用</TD>
 <TD class="tb-cell2">6</TD>
 <TD class="tb-cell3">14700</TD>
@@ -5710,7 +5736,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0146"class="tb-cell2" height="65">146</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0146" target="_blank">怪鸟Ｓ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0020">怪鸟轻甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0146" target="armorlv">怪鸟Ｓ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0020">怪鸟轻甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">射手<BR>专用</TD>
 <TD class="tb-cell2">6</TD>
 <TD class="tb-cell3">14700</TD>
@@ -5749,7 +5775,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0147"class="tb-cell2" height="65">147</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0147" target="_blank">红速龙Ｓ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0021">红速龙铠甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0147" target="armorlv">红速龙Ｓ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0021">红速龙铠甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">剑士<BR>专用</TD>
 <TD class="tb-cell2">5</TD>
 <TD class="tb-cell3">11280</TD>
@@ -5779,7 +5805,7 @@ ShowLinks(1, 7);
 </TD>
 <TD class="tb-cell2">&nbsp;</TD>
 <TD class="tb-cell1">
-<A href="../items/items.html?0154" target="items"><FONT color="#ff0000">雪山鹿的角</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0166" target="items">红速龙的鳞</A>×1<BR><A href="../items/items.html?0169" target="items">红速龙王的皮</A>×1<BR><A href="../items/items.html?0108" target="items">粘着蝗虫</A>×1</TD>
+<A href="../items/items.html?0154" target="items"><FONT color="#ff0000">雪山鹿的角</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0166" target="items">红速龙的鳞</A>×1<BR><A href="../items/items.html?0169" target="items">红速龙王的皮</A>×1<BR><A href="../items/items.html?0108" target="items">黏着蝗虫</A>×1</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1">红速龙素材で作られた胴用<br>
 装備。複雑な加工手順を踏み、<br>
@@ -5788,7 +5814,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0148"class="tb-cell2" height="65">148</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0148" target="_blank">红速龙Ｓ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0022">红速龙轻甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0148" target="armorlv">红速龙Ｓ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0022">红速龙轻甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">射手<BR>专用</TD>
 <TD class="tb-cell2">5</TD>
 <TD class="tb-cell3">11280</TD>
@@ -5818,7 +5844,7 @@ ShowLinks(1, 7);
 </TD>
 <TD class="tb-cell2">&nbsp;</TD>
 <TD class="tb-cell1">
-<A href="../items/items.html?0154" target="items"><FONT color="#ff0000">雪山鹿的角</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0166" target="items">红速龙的鳞</A>×1<BR><A href="../items/items.html?0169" target="items">红速龙王的皮</A>×1<BR><A href="../items/items.html?0108" target="items">粘着蝗虫</A>×1</TD>
+<A href="../items/items.html?0154" target="items"><FONT color="#ff0000">雪山鹿的角</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0166" target="items">红速龙的鳞</A>×1<BR><A href="../items/items.html?0169" target="items">红速龙王的皮</A>×1<BR><A href="../items/items.html?0108" target="items">黏着蝗虫</A>×1</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1">赤い鱗が美しい胴用装備。<br>
 红速龙素材を、手作業で<br>
@@ -5827,7 +5853,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0149"class="tb-cell2" height="65">149</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0149" target="_blank">毒怪鸟Ｓ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0023">毒怪鸟铠甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0149" target="armorlv">毒怪鸟Ｓ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0023">毒怪鸟铠甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">剑士<BR>专用</TD>
 <TD class="tb-cell2">6</TD>
 <TD class="tb-cell3">14100</TD>
@@ -5866,7 +5892,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0150"class="tb-cell2" height="65">150</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0150" target="_blank">毒怪鸟Ｓ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0024">毒怪鸟轻甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0150" target="armorlv">毒怪鸟Ｓ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0024">毒怪鸟轻甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">射手<BR>专用</TD>
 <TD class="tb-cell2">6</TD>
 <TD class="tb-cell3">14100</TD>
@@ -5905,7 +5931,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0151"class="tb-cell2" height="65">151</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0151" target="_blank">砂龙Ｓ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0025">砂龙铠甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0151" target="armorlv">沙龙Ｓ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0025">沙龙铠甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">剑士<BR>专用</TD>
 <TD class="tb-cell2">6</TD>
 <TD class="tb-cell3">13500</TD>
@@ -5937,14 +5963,14 @@ ShowLinks(1, 7);
 <TD class="tb-cell1">
 <A href="../items/items.html?0254" target="items"><FONT color="#ff0000">条纹的皮</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?017f" target="items">水龙的鳍</A>×1<BR><A href="../items/items.html?00e4" target="items">冰结晶</A>×3<BR><A href="../items/items.html?00db" target="items">辉龙石</A>×1</TD>
 <TD class="tb-cell1">&nbsp;</TD>
-<TD class="tb-cell1">砂龙の素材で作られた<br>
+<TD class="tb-cell1">沙龙の素材で作られた<br>
 胴用装備。その鱗は、高い<br>
 防御力を持つ反面、雷に弱い。
 </TD>
 </TR>
 <TR>
 <TD id="0152"class="tb-cell2" height="65">152</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0152" target="_blank">砂龙Ｓ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0026">砂龙轻甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0152" target="armorlv">沙龙Ｓ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0026">沙龙轻甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">射手<BR>专用</TD>
 <TD class="tb-cell2">6</TD>
 <TD class="tb-cell3">13500</TD>
@@ -5983,7 +6009,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0153"class="tb-cell2" height="65">153</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0153" target="_blank">钢制Ｓ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0027">钢制铠甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0153" target="armorlv">钢制Ｓ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0027">钢制铠甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">剑士<BR>专用</TD>
 <TD class="tb-cell2">6</TD>
 <TD class="tb-cell3">15300</TD>
@@ -6022,7 +6048,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0154"class="tb-cell2" height="65">154</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0154" target="_blank">雌火龙Ｓ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0028">雌火龙铠甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0154" target="armorlv">雌火龙Ｓ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0028">雌火龙铠甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">剑士<BR>专用</TD>
 <TD class="tb-cell2">6</TD>
 <TD class="tb-cell3">18000</TD>
@@ -6061,7 +6087,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0155"class="tb-cell2" height="65">155</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0155" target="_blank">雌火龙Ｓ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0029">雌火龙轻甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0155" target="armorlv">雌火龙Ｓ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0029">雌火龙轻甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">射手<BR>专用</TD>
 <TD class="tb-cell2">6</TD>
 <TD class="tb-cell3">18000</TD>
@@ -6100,7 +6126,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0156"class="tb-cell2" height="65">156</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0156" target="_blank">电龙Ｓ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0030">电龙铠甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0156" target="armorlv">电龙Ｓ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0030">电龙铠甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">剑士<BR>专用</TD>
 <TD class="tb-cell2">6</TD>
 <TD class="tb-cell3">18900</TD>
@@ -6139,7 +6165,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0157"class="tb-cell2" height="65">157</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0157" target="_blank">电龙Ｓ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0031">电龙轻甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0157" target="armorlv">电龙Ｓ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0031">电龙轻甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">射手<BR>专用</TD>
 <TD class="tb-cell2">6</TD>
 <TD class="tb-cell3">18900</TD>
@@ -6178,7 +6204,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0158"class="tb-cell2 hc" height="65">158</TD>
-<TD class="tb-cell1 hc"><BR><BR><A href="./armor1.html#0158" target="_blank">雄火龙Ｓ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0032">雄火龙铠甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc"><BR><BR><A href="./armor1.html#0158" target="armorlv">雄火龙Ｓ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0032">雄火龙铠甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">剑士<BR>专用</TD>
 <TD class="tb-cell2 hc">7</TD>
 <TD class="tb-cell3 hc">28800</TD>
@@ -6217,7 +6243,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0159"class="tb-cell2 hc" height="65">159</TD>
-<TD class="tb-cell1 hc"><BR><BR><A href="./armor1.html#0159" target="_blank">雄火龙Ｓ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0033">雄火龙轻甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc"><BR><BR><A href="./armor1.html#0159" target="armorlv">雄火龙Ｓ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0033">雄火龙轻甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">射手<BR>专用</TD>
 <TD class="tb-cell2 hc">7</TD>
 <TD class="tb-cell3 hc">28800</TD>
@@ -6256,7 +6282,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0160"class="tb-cell2" height="65">160</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0160" target="_blank">水龙Ｓ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0034">水龙铠甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0160" target="armorlv">水龙Ｓ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0034">水龙铠甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">剑士<BR>专用</TD>
 <TD class="tb-cell2">6</TD>
 <TD class="tb-cell3">21000</TD>
@@ -6295,7 +6321,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0161"class="tb-cell2" height="65">161</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0161" target="_blank">水龙Ｓ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0035">水龙轻甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0161" target="armorlv">水龙Ｓ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0035">水龙轻甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">射手<BR>专用</TD>
 <TD class="tb-cell2">6</TD>
 <TD class="tb-cell3">21000</TD>
@@ -6334,7 +6360,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0162"class="tb-cell2" height="65">162</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0162" target="_blank">岩龙Ｓ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0038">岩龙铠甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0162" target="armorlv">岩龙Ｓ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0038">岩龙铠甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">剑士<BR>专用</TD>
 <TD class="tb-cell2">6</TD>
 <TD class="tb-cell3">18000</TD>
@@ -6373,7 +6399,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0163"class="tb-cell2" height="65">163</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0163" target="_blank">岩龙Ｓ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0039">岩龙轻甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0163" target="armorlv">岩龙Ｓ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0039">岩龙轻甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">射手<BR>专用</TD>
 <TD class="tb-cell2">6</TD>
 <TD class="tb-cell3">18000</TD>
@@ -6412,7 +6438,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0164"class="tb-cell2" height="65">164</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0164" target="_blank">角龙Ｓ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0040">角龙铠甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0164" target="armorlv">角龙Ｓ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0040">角龙铠甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">剑士<BR>专用</TD>
 <TD class="tb-cell2">6</TD>
 <TD class="tb-cell3">27000</TD>
@@ -6446,12 +6472,12 @@ ShowLinks(1, 7);
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1">角龙の素材で作られ<br>
 た胴用装備。凄まじい強度を<br>
-誇る、砂漠の覇者の証。
+誇る、沙漠の覇者の証。
 </TD>
 </TR>
 <TR>
 <TD id="0165"class="tb-cell2" height="65">165</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0165" target="_blank">角龙Ｓ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0041">角龙轻甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0165" target="armorlv">角龙Ｓ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0041">角龙轻甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">射手<BR>专用</TD>
 <TD class="tb-cell2">6</TD>
 <TD class="tb-cell3">27000</TD>
@@ -6490,7 +6516,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0166"class="tb-cell2" height="65">166</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0166" target="_blank">一角龙Ｓ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0042">一角龙铠甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0166" target="armorlv">一角龙Ｓ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0042">一角龙铠甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">剑士<BR>专用</TD>
 <TD class="tb-cell2">6</TD>
 <TD class="tb-cell3">30000</TD>
@@ -6529,7 +6555,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0167"class="tb-cell2" height="65">167</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0167" target="_blank">一角龙Ｓ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0043">一角龙轻甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0167" target="armorlv">一角龙Ｓ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0043">一角龙轻甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">射手<BR>专用</TD>
 <TD class="tb-cell2">6</TD>
 <TD class="tb-cell3">30000</TD>
@@ -6568,7 +6594,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0168"class="tb-cell2" height="65">168</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0168" target="_blank">铠龙Ｓ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0044">铠龙铠甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0168" target="armorlv">铠龙Ｓ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0044">铠龙铠甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">剑士<BR>专用</TD>
 <TD class="tb-cell2">6</TD>
 <TD class="tb-cell3">36000</TD>
@@ -6607,7 +6633,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0169"class="tb-cell2" height="65">169</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0169" target="_blank">铠龙Ｓ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0045">铠龙轻甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0169" target="armorlv">铠龙Ｓ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0045">铠龙轻甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">射手<BR>专用</TD>
 <TD class="tb-cell2">6</TD>
 <TD class="tb-cell3">36000</TD>
@@ -6628,7 +6654,7 @@ ShowLinks(1, 7);
 <TBODY>
 <TR>
 <TD nowrap><FONT size="-1">
-反动<BR>防御<BR>饥饿</FONT></TD>
+反冲<BR>防御<BR>饥饿</FONT></TD>
 <TD nowrap align="right"><FONT size="-1">
 +3<BR>+3<BR>-3</FONT></TD>
 </TR>
@@ -6646,7 +6672,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0170"class="tb-cell2" height="65">170</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0170" target="_blank">忍之装束・天</A><BR><BR><FONT size="-2"><A href="./armor.html#0054">忍之装束・阳</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0170" target="armorlv">忍之装束・天</A><BR><BR><FONT size="-2"><A href="./armor.html#0054">忍之装束・阳</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">&nbsp;</TD>
 <TD class="tb-cell2">6</TD>
 <TD class="tb-cell3">69000</TD>
@@ -6685,7 +6711,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0171"class="tb-cell2" height="65">171</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0171" target="_blank">忍之装束・地</A><BR><BR><FONT size="-2"><A href="./armor.html#0055">忍之装束・阴</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0171" target="armorlv">忍之装束・地</A><BR><BR><FONT size="-2"><A href="./armor.html#0055">忍之装束・阴</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">&nbsp;</TD>
 <TD class="tb-cell2">6</TD>
 <TD class="tb-cell3">69000</TD>
@@ -6724,7 +6750,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0172"class="tb-cell2 hc" height="65">172</TD>
-<TD class="tb-cell1 hc"><BR><BR><A href="./armor1.html#0172" target="_blank">公会卫队制服红</A><BR><BR><FONT size="-2"><A href="./armor.html#0056">守卫者制服</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc"><BR><BR><A href="./armor1.html#0172" target="armorlv">公会卫队制服红</A><BR><BR><FONT size="-2"><A href="./armor.html#0056">守卫者制服</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">男性<BR>专用</TD>
 <TD class="tb-cell2 hc">6</TD>
 <TD class="tb-cell3 hc">60000</TD>
@@ -6763,7 +6789,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0173"class="tb-cell2 hc" height="65">173</TD>
-<TD class="tb-cell1 hc"><BR><BR><A href="./armor1.html#0173" target="_blank">公会卫队马甲红</A><BR><BR><FONT size="-2"><A href="./armor.html#0057">守卫者马甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc"><BR><BR><A href="./armor1.html#0173" target="armorlv">公会卫队马甲红</A><BR><BR><FONT size="-2"><A href="./armor.html#0057">守卫者马甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">男性<BR>专用</TD>
 <TD class="tb-cell2 hc">6</TD>
 <TD class="tb-cell3 hc">60000</TD>
@@ -6802,7 +6828,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0174"class="tb-cell2 hc" height="65">174</TD>
-<TD class="tb-cell1 hc"><BR><BR><A href="./armor1.html#0174" target="_blank">公会卫队制服红</A><BR><BR><FONT size="-2"><A href="./armor.html#0058">助理马甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc"><BR><BR><A href="./armor1.html#0174" target="armorlv">公会卫队制服红</A><BR><BR><FONT size="-2"><A href="./armor.html#0058">助手马甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">女性<BR>专用</TD>
 <TD class="tb-cell2 hc">6</TD>
 <TD class="tb-cell3 hc">60000</TD>
@@ -6841,7 +6867,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0175"class="tb-cell2 hc" height="65">175</TD>
-<TD class="tb-cell1 hc"><BR><BR><A href="./armor1.html#0175" target="_blank">公会卫队马甲红</A><BR><BR><FONT size="-2"><A href="./armor.html#0059">医师马甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc"><BR><BR><A href="./armor1.html#0175" target="armorlv">公会卫队马甲红</A><BR><BR><FONT size="-2"><A href="./armor.html#0059">治愈者马甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">女性<BR>专用</TD>
 <TD class="tb-cell2 hc">6</TD>
 <TD class="tb-cell3 hc">60000</TD>
@@ -6880,7 +6906,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0176"class="tb-cell2 hc" height="65">176</TD>
-<TD class="tb-cell1 hc"><BR><BR><A href="./armor1.html#0176" target="_blank">晓丸・霸【胴当】</A><BR><BR><FONT size="-2"><A href="./armor.html#0062">晓丸【胴当】</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc"><BR><BR><A href="./armor1.html#0176" target="armorlv">晓丸・霸【胴当】</A><BR><BR><FONT size="-2"><A href="./armor.html#0062">晓丸【胴当】</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">男性<BR>剑士<BR>专用</TD>
 <TD class="tb-cell2 hc">7</TD>
 <TD class="tb-cell3 hc">90000</TD>
@@ -6919,7 +6945,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0177"class="tb-cell2 hc" height="65">177</TD>
-<TD class="tb-cell1 hc"><BR><BR><A href="./armor1.html#0177" target="_blank">曙丸・霸【胴当】</A><BR><BR><FONT size="-2"><A href="./armor.html#0063">曙丸【胴当】</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc"><BR><BR><A href="./armor1.html#0177" target="armorlv">曙丸・霸【胴当】</A><BR><BR><FONT size="-2"><A href="./armor.html#0063">曙丸【胴当】</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">男性<BR>射手<BR>专用</TD>
 <TD class="tb-cell2 hc">7</TD>
 <TD class="tb-cell3 hc">90000</TD>
@@ -6958,7 +6984,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0178"class="tb-cell2 hc" height="65">178</TD>
-<TD class="tb-cell1 hc"><BR><BR><A href="./armor1.html#0178" target="_blank">凛・霸【胸当】</A><BR><BR><FONT size="-2"><A href="./armor.html#0064">凛【胸当】</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc"><BR><BR><A href="./armor1.html#0178" target="armorlv">凛・霸【胸当】</A><BR><BR><FONT size="-2"><A href="./armor.html#0064">凛【胸当】</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">女性<BR>剑士<BR>专用</TD>
 <TD class="tb-cell2 hc">7</TD>
 <TD class="tb-cell3 hc">90000</TD>
@@ -6997,7 +7023,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0179"class="tb-cell2 hc" height="65">179</TD>
-<TD class="tb-cell1 hc"><BR><BR><A href="./armor1.html#0179" target="_blank">艳・霸【胸当】</A><BR><BR><FONT size="-2"><A href="./armor.html#0065">艳【胸当】</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc"><BR><BR><A href="./armor1.html#0179" target="armorlv">艳・霸【胸当】</A><BR><BR><FONT size="-2"><A href="./armor.html#0065">艳【胸当】</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">女性<BR>射手<BR>专用</TD>
 <TD class="tb-cell2 hc">7</TD>
 <TD class="tb-cell3 hc">90000</TD>
@@ -7036,7 +7062,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0180"class="tb-cell2 hc" height="65">180</TD>
-<TD class="tb-cell1 hc"><BR><BR><A href="./armor1.html#0180" target="_blank">邪龍Ｓ之皮</A><BR><BR><FONT size="-2"><A href="./armor.html#0066">邪龍之皮</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc"><BR><BR><A href="./armor1.html#0180" target="armorlv">黑龍Ｓ之皮</A><BR><BR><FONT size="-2"><A href="./armor.html#0066">黑龍之皮</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">剑士<BR>专用</TD>
 <TD class="tb-cell2 hc">7</TD>
 <TD class="tb-cell3 hc">120000</TD>
@@ -7075,7 +7101,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0181"class="tb-cell2 hc" height="65">181</TD>
-<TD class="tb-cell1 hc"><BR><BR><A href="./armor1.html#0181" target="_blank">邪龍Ｓ之肤</A><BR><BR><FONT size="-2"><A href="./armor.html#0067">邪龍之肤</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc"><BR><BR><A href="./armor1.html#0181" target="armorlv">黑龍Ｓ之肤</A><BR><BR><FONT size="-2"><A href="./armor.html#0067">黑龍之肤</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">射手<BR>专用</TD>
 <TD class="tb-cell2 hc">7</TD>
 <TD class="tb-cell3 hc">120000</TD>
@@ -7114,7 +7140,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0182"class="tb-cell2" height="65">182</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0182" target="_blank">盾蟹铠甲</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0182" target="armorlv">盾蟹铠甲</A></TD>
 <TD class="tb-cell2">剑士<BR>专用</TD>
 <TD class="tb-cell2">3</TD>
 <TD class="tb-cell3">3120</TD>
@@ -7143,7 +7169,7 @@ ShowLinks(1, 7);
 </TABLE>
 </TD>
 <TD class="tb-cell2">
-<A href="./armor.html#0184">184</A>, <A href="./armor.html#0186">186</A><BR>（Lv3以上）</TD>
+<A href="./armor.html#0184">184</A>, <A href="./armor.html#0186">186</A><BR>Lv3以上</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1"><A href="../items/items.html?0212" target="items">盾蟹的甲壳</A>×2<BR><A href="../items/items.html?0213" target="items">盾蟹的爪</A>×1<BR><A href="../items/items.html?00da" target="items">燕雀石</A>×1<BR><A href="../items/items.html?0141" target="items">大块骨</A>×2</TD>
 <TD class="tb-cell1">盾蟹の素材を使用した胴装備。<br>
@@ -7153,7 +7179,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0183"class="tb-cell2" height="65">183</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0183" target="_blank">盾蟹轻甲</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0183" target="armorlv">盾蟹轻甲</A></TD>
 <TD class="tb-cell2">射手<BR>专用</TD>
 <TD class="tb-cell2">3</TD>
 <TD class="tb-cell3">3120</TD>
@@ -7182,7 +7208,7 @@ ShowLinks(1, 7);
 </TABLE>
 </TD>
 <TD class="tb-cell2">
-<A href="./armor.html#0185">185</A>, <A href="./armor.html#0187">187</A><BR>（Lv3以上）</TD>
+<A href="./armor.html#0185">185</A>, <A href="./armor.html#0187">187</A><BR>Lv3以上</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1"><A href="../items/items.html?0212" target="items">盾蟹的甲壳</A>×2<BR><A href="../items/items.html?0213" target="items">盾蟹的爪</A>×1<BR><A href="../items/items.html?00da" target="items">燕雀石</A>×1<BR><A href="../items/items.html?0141" target="items">大块骨</A>×2</TD>
 <TD class="tb-cell1">大名盾蟹の素材を<br>
@@ -7192,7 +7218,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0184"class="tb-cell2" height="65">184</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0184" target="_blank">盾蟹Ｕ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0182">盾蟹铠甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0184" target="armorlv">盾蟹Ｕ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0182">盾蟹铠甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">剑士<BR>专用</TD>
 <TD class="tb-cell2">6</TD>
 <TD class="tb-cell3">18000</TD>
@@ -7231,7 +7257,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0185"class="tb-cell2" height="65">185</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0185" target="_blank">盾蟹Ｕ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0183">盾蟹轻甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0185" target="armorlv">盾蟹Ｕ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0183">盾蟹轻甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">射手<BR>专用</TD>
 <TD class="tb-cell2">6</TD>
 <TD class="tb-cell3">18000</TD>
@@ -7270,7 +7296,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0186"class="tb-cell2" height="65">186</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0186" target="_blank">盾蟹Ｓ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0182">盾蟹铠甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0186" target="armorlv">盾蟹Ｓ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0182">盾蟹铠甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">剑士<BR>专用</TD>
 <TD class="tb-cell2">6</TD>
 <TD class="tb-cell3">19800</TD>
@@ -7309,7 +7335,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0187"class="tb-cell2" height="65">187</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0187" target="_blank">盾蟹Ｓ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0183">盾蟹轻甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0187" target="armorlv">盾蟹Ｓ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0183">盾蟹轻甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">射手<BR>专用</TD>
 <TD class="tb-cell2">6</TD>
 <TD class="tb-cell3">19800</TD>
@@ -7348,7 +7374,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0188"class="tb-cell2" height="65">188</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0188" target="_blank">桃毛铠甲</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0188" target="armorlv">桃毛铠甲</A></TD>
 <TD class="tb-cell2">剑士<BR>专用</TD>
 <TD class="tb-cell2">3</TD>
 <TD class="tb-cell3">3120</TD>
@@ -7377,9 +7403,9 @@ ShowLinks(1, 7);
 </TABLE>
 </TD>
 <TD class="tb-cell2">
-<A href="./armor.html#0190">190</A>, <A href="./armor.html#0192">192</A><BR>（Lv3以上）</TD>
+<A href="./armor.html#0190">190</A>, <A href="./armor.html#0192">192</A><BR>Lv3以上</TD>
 <TD class="tb-cell1">&nbsp;</TD>
-<TD class="tb-cell1"><A href="../items/items.html?0205" target="items">桃毛兽的牙</A>×2<BR><A href="../items/items.html?0202" target="items">桃毛兽的毛</A>×2<BR><A href="../items/items.html?0139" target="items">龙骨【中】</A>×2<BR><A href="../items/items.html?0108" target="items">粘着蝗虫</A>×1</TD>
+<TD class="tb-cell1"><A href="../items/items.html?0205" target="items">桃毛兽的牙</A>×2<BR><A href="../items/items.html?0202" target="items">桃毛兽的毛</A>×2<BR><A href="../items/items.html?0139" target="items">龙骨【中】</A>×2<BR><A href="../items/items.html?0108" target="items">黏着蝗虫</A>×1</TD>
 <TD class="tb-cell1">桃毛兽王の素材で作られた<br>
 胴用装備。大きく開いた胸元<br>
 がワイルドさを演出。
@@ -7387,7 +7413,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0189"class="tb-cell2" height="65">189</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0189" target="_blank">桃毛轻甲</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0189" target="armorlv">桃毛轻甲</A></TD>
 <TD class="tb-cell2">射手<BR>专用</TD>
 <TD class="tb-cell2">3</TD>
 <TD class="tb-cell3">3120</TD>
@@ -7416,9 +7442,9 @@ ShowLinks(1, 7);
 </TABLE>
 </TD>
 <TD class="tb-cell2">
-<A href="./armor.html#0191">191</A>, <A href="./armor.html#0193">193</A><BR>（Lv3以上）</TD>
+<A href="./armor.html#0191">191</A>, <A href="./armor.html#0193">193</A><BR>Lv3以上</TD>
 <TD class="tb-cell1">&nbsp;</TD>
-<TD class="tb-cell1"><A href="../items/items.html?0205" target="items">桃毛兽的牙</A>×2<BR><A href="../items/items.html?0202" target="items">桃毛兽的毛</A>×2<BR><A href="../items/items.html?0139" target="items">龙骨【中】</A>×2<BR><A href="../items/items.html?0108" target="items">粘着蝗虫</A>×1</TD>
+<TD class="tb-cell1"><A href="../items/items.html?0205" target="items">桃毛兽的牙</A>×2<BR><A href="../items/items.html?0202" target="items">桃毛兽的毛</A>×2<BR><A href="../items/items.html?0139" target="items">龙骨【中】</A>×2<BR><A href="../items/items.html?0108" target="items">黏着蝗虫</A>×1</TD>
 <TD class="tb-cell1">桃毛兽王の素材で作られた<br>
 胴用装備。大きく晒した胸元<br>
 はセクシーな魅力に溢れる。
@@ -7426,7 +7452,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0190"class="tb-cell2" height="65">190</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0190" target="_blank">桃毛Ｕ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0188">桃毛铠甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0190" target="armorlv">桃毛Ｕ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0188">桃毛铠甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">剑士<BR>专用</TD>
 <TD class="tb-cell2">6</TD>
 <TD class="tb-cell3">13200</TD>
@@ -7465,7 +7491,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0191"class="tb-cell2" height="65">191</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0191" target="_blank">桃毛Ｕ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0189">桃毛轻甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0191" target="armorlv">桃毛Ｕ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0189">桃毛轻甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">射手<BR>专用</TD>
 <TD class="tb-cell2">6</TD>
 <TD class="tb-cell3">13200</TD>
@@ -7504,7 +7530,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0192"class="tb-cell2" height="65">192</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0192" target="_blank">桃毛Ｓ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0188">桃毛铠甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0192" target="armorlv">桃毛Ｓ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0188">桃毛铠甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">剑士<BR>专用</TD>
 <TD class="tb-cell2">6</TD>
 <TD class="tb-cell3">15000</TD>
@@ -7543,7 +7569,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0193"class="tb-cell2" height="65">193</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0193" target="_blank">桃毛Ｓ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0189">桃毛轻甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0193" target="armorlv">桃毛Ｓ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0189">桃毛轻甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">射手<BR>专用</TD>
 <TD class="tb-cell2">6</TD>
 <TD class="tb-cell3">15000</TD>
@@ -7582,7 +7608,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0194"class="tb-cell2" height="65">194</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0194" target="_blank">雪狮铠甲</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0194" target="armorlv">雪狮铠甲</A></TD>
 <TD class="tb-cell2">剑士<BR>专用</TD>
 <TD class="tb-cell2">3</TD>
 <TD class="tb-cell3">4400</TD>
@@ -7611,7 +7637,7 @@ ShowLinks(1, 7);
 </TABLE>
 </TD>
 <TD class="tb-cell2">
-<A href="./armor.html#0196">196</A>, <A href="./armor.html#0198">198</A><BR>（Lv3以上）</TD>
+<A href="./armor.html#0196">196</A>, <A href="./armor.html#0198">198</A><BR>Lv3以上</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1"><A href="../items/items.html?0200" target="items">雪狮子的髭</A>×1<BR><A href="../items/items.html?01fe" target="items">雪狮子的毛</A>×2<BR><A href="../items/items.html?015e" target="items">蓝速龙的白皮</A>×3<BR><A href="../items/items.html?0163" target="items">黄速龙王的皮</A>×1</TD>
 <TD class="tb-cell1">雪狮子王の素材で作られ<br>
@@ -7621,7 +7647,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0195"class="tb-cell2" height="65">195</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0195" target="_blank">雪狮轻甲</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0195" target="armorlv">雪狮轻甲</A></TD>
 <TD class="tb-cell2">射手<BR>专用</TD>
 <TD class="tb-cell2">3</TD>
 <TD class="tb-cell3">4400</TD>
@@ -7650,7 +7676,7 @@ ShowLinks(1, 7);
 </TABLE>
 </TD>
 <TD class="tb-cell2">
-<A href="./armor.html#0197">197</A>, <A href="./armor.html#0199">199</A><BR>（Lv3以上）</TD>
+<A href="./armor.html#0197">197</A>, <A href="./armor.html#0199">199</A><BR>Lv3以上</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1"><A href="../items/items.html?0200" target="items">雪狮子的髭</A>×1<BR><A href="../items/items.html?01fe" target="items">雪狮子的毛</A>×2<BR><A href="../items/items.html?015e" target="items">蓝速龙的白皮</A>×3<BR><A href="../items/items.html?0163" target="items">黄速龙王的皮</A>×1</TD>
 <TD class="tb-cell1">雪獅子の素材で作られた胴用<br>
@@ -7660,7 +7686,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0196"class="tb-cell2" height="65">196</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0196" target="_blank">雪狮Ｕ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0194">雪狮铠甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0196" target="armorlv">雪狮Ｕ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0194">雪狮铠甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">剑士<BR>专用</TD>
 <TD class="tb-cell2">6</TD>
 <TD class="tb-cell3">16680</TD>
@@ -7690,7 +7716,7 @@ ShowLinks(1, 7);
 </TD>
 <TD class="tb-cell2">&nbsp;</TD>
 <TD class="tb-cell1">
-<A href="../items/items.html?01e0" target="items"><FONT color="#ff0000">麒麟的鬣毛</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0201" target="items">雪狮子的尻尾</A>×1<BR><A href="../items/items.html?0163" target="items">黄速龙王的皮</A>×1<BR><A href="../items/items.html?00cc" target="items">七色蒲公英</A>×1</TD>
+<A href="../items/items.html?01e0" target="items"><FONT color="#ff0000">麒麟的鬣毛</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0201" target="items">雪狮子的尾巴</A>×1<BR><A href="../items/items.html?0163" target="items">黄速龙王的皮</A>×1<BR><A href="../items/items.html?00cc" target="items">七色蒲公英</A>×1</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1">雪狮子王の素材で作られ<br>
 た胴用装備。オリエンタルな<br>
@@ -7699,7 +7725,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0197"class="tb-cell2" height="65">197</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0197" target="_blank">雪狮Ｕ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0195">雪狮轻甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0197" target="armorlv">雪狮Ｕ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0195">雪狮轻甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">射手<BR>专用</TD>
 <TD class="tb-cell2">6</TD>
 <TD class="tb-cell3">16680</TD>
@@ -7729,7 +7755,7 @@ ShowLinks(1, 7);
 </TD>
 <TD class="tb-cell2">&nbsp;</TD>
 <TD class="tb-cell1">
-<A href="../items/items.html?01e0" target="items"><FONT color="#ff0000">麒麟的鬣毛</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0201" target="items">雪狮子的尻尾</A>×1<BR><A href="../items/items.html?0163" target="items">黄速龙王的皮</A>×1<BR><A href="../items/items.html?00cc" target="items">七色蒲公英</A>×1</TD>
+<A href="../items/items.html?01e0" target="items"><FONT color="#ff0000">麒麟的鬣毛</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0201" target="items">雪狮子的尾巴</A>×1<BR><A href="../items/items.html?0163" target="items">黄速龙王的皮</A>×1<BR><A href="../items/items.html?00cc" target="items">七色蒲公英</A>×1</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1">雪獅子の素材で作られた胴用<br>
 装備。薄手だが、随所に使用<br>
@@ -7738,7 +7764,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0198"class="tb-cell2" height="65">198</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0198" target="_blank">雪狮Ｓ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0194">雪狮铠甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0198" target="armorlv">雪狮Ｓ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0194">雪狮铠甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">剑士<BR>专用</TD>
 <TD class="tb-cell2">6</TD>
 <TD class="tb-cell3">20400</TD>
@@ -7768,7 +7794,7 @@ ShowLinks(1, 7);
 </TD>
 <TD class="tb-cell2">&nbsp;</TD>
 <TD class="tb-cell1">
-<A href="../items/items.html?01e0" target="items"><FONT color="#ff0000">麒麟的鬣毛</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0201" target="items">雪狮子的尻尾</A>×1<BR><A href="../items/items.html?015e" target="items">蓝速龙的白皮</A>×1<BR><A href="../items/items.html?00e4" target="items">冰结晶</A>×1</TD>
+<A href="../items/items.html?01e0" target="items"><FONT color="#ff0000">麒麟的鬣毛</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0201" target="items">雪狮子的尾巴</A>×1<BR><A href="../items/items.html?015e" target="items">蓝速龙的白皮</A>×1<BR><A href="../items/items.html?00e4" target="items">冰结晶</A>×1</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1">雪狮子王の素材で作られ<br>
 た胴用装備。オリエンタルな<br>
@@ -7777,7 +7803,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0199"class="tb-cell2" height="65">199</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0199" target="_blank">雪狮Ｓ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0195">雪狮轻甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0199" target="armorlv">雪狮Ｓ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0195">雪狮轻甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">射手<BR>专用</TD>
 <TD class="tb-cell2">6</TD>
 <TD class="tb-cell3">20400</TD>
@@ -7807,7 +7833,7 @@ ShowLinks(1, 7);
 </TD>
 <TD class="tb-cell2">&nbsp;</TD>
 <TD class="tb-cell1">
-<A href="../items/items.html?01e0" target="items"><FONT color="#ff0000">麒麟的鬣毛</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0201" target="items">雪狮子的尻尾</A>×1<BR><A href="../items/items.html?015e" target="items">蓝速龙的白皮</A>×1<BR><A href="../items/items.html?00e4" target="items">冰结晶</A>×1</TD>
+<A href="../items/items.html?01e0" target="items"><FONT color="#ff0000">麒麟的鬣毛</FONT></A><FONT color="#ff0000">×1</FONT><BR><A href="../items/items.html?0201" target="items">雪狮子的尾巴</A>×1<BR><A href="../items/items.html?015e" target="items">蓝速龙的白皮</A>×1<BR><A href="../items/items.html?00e4" target="items">冰结晶</A>×1</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1">雪獅子の素材で作られた胴用<br>
 装備。薄手だが、随所に使用<br>
@@ -7816,7 +7842,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0200"class="tb-cell2" height="65">200</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0200" target="_blank">镰蟹铠甲</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0200" target="armorlv">镰蟹铠甲</A></TD>
 <TD class="tb-cell2">剑士<BR>专用</TD>
 <TD class="tb-cell2">3</TD>
 <TD class="tb-cell3">4500</TD>
@@ -7845,7 +7871,7 @@ ShowLinks(1, 7);
 </TABLE>
 </TD>
 <TD class="tb-cell2">
-<A href="./armor.html#0202">202</A>, <A href="./armor.html#0204">204</A><BR>（Lv3以上）</TD>
+<A href="./armor.html#0202">202</A>, <A href="./armor.html#0204">204</A><BR>Lv3以上</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1"><A href="../items/items.html?021c" target="items">镰蟹的爪</A>×1<BR><A href="../items/items.html?0218" target="items">镰蟹的甲壳</A>×1<BR><A href="../items/items.html?00d9" target="items">大地的结晶</A>×2<BR><A href="../items/items.html?010a" target="items">煌甲虫</A>×1</TD>
 <TD class="tb-cell1">鎌蟹の堅固なブレード部分を<br>
@@ -7855,7 +7881,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0201"class="tb-cell2" height="65">201</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0201" target="_blank">镰蟹轻甲</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0201" target="armorlv">镰蟹轻甲</A></TD>
 <TD class="tb-cell2">射手<BR>专用</TD>
 <TD class="tb-cell2">3</TD>
 <TD class="tb-cell3">4500</TD>
@@ -7884,7 +7910,7 @@ ShowLinks(1, 7);
 </TABLE>
 </TD>
 <TD class="tb-cell2">
-<A href="./armor.html#0203">203</A>, <A href="./armor.html#0205">205</A><BR>（Lv3以上）</TD>
+<A href="./armor.html#0203">203</A>, <A href="./armor.html#0205">205</A><BR>Lv3以上</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1"><A href="../items/items.html?021c" target="items">镰蟹的爪</A>×1<BR><A href="../items/items.html?0218" target="items">镰蟹的甲壳</A>×1<BR><A href="../items/items.html?00d9" target="items">大地的结晶</A>×2<BR><A href="../items/items.html?010a" target="items">煌甲虫</A>×1</TD>
 <TD class="tb-cell1">将军镰蟹の素材で<br>
@@ -7894,7 +7920,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0202"class="tb-cell2" height="65">202</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0202" target="_blank">镰蟹Ｕ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0200">镰蟹铠甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0202" target="armorlv">镰蟹Ｕ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0200">镰蟹铠甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">剑士<BR>专用</TD>
 <TD class="tb-cell2">6</TD>
 <TD class="tb-cell3">19440</TD>
@@ -7933,7 +7959,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0203"class="tb-cell2" height="65">203</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0203" target="_blank">镰蟹Ｕ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0201">镰蟹轻甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0203" target="armorlv">镰蟹Ｕ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0201">镰蟹轻甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">射手<BR>专用</TD>
 <TD class="tb-cell2">6</TD>
 <TD class="tb-cell3">19440</TD>
@@ -7972,7 +7998,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0204"class="tb-cell2" height="65">204</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0204" target="_blank">镰蟹Ｓ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0200">镰蟹铠甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0204" target="armorlv">镰蟹Ｓ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0200">镰蟹铠甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">剑士<BR>专用</TD>
 <TD class="tb-cell2">6</TD>
 <TD class="tb-cell3">23400</TD>
@@ -8011,7 +8037,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0205"class="tb-cell2" height="65">205</TD>
-<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0205" target="_blank">镰蟹Ｓ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0201">镰蟹轻甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1"><BR><BR><A href="./armor1.html#0205" target="armorlv">镰蟹Ｓ轻甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0201">镰蟹轻甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2">射手<BR>专用</TD>
 <TD class="tb-cell2">6</TD>
 <TD class="tb-cell3">23400</TD>
@@ -8050,7 +8076,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0206"class="tb-cell2" height="65">206</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0206" target="_blank">麒麟马甲</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0206" target="armorlv">麒麟马甲</A></TD>
 <TD class="tb-cell2">剑士<BR>专用</TD>
 <TD class="tb-cell2">5</TD>
 <TD class="tb-cell3">17500</TD>
@@ -8071,7 +8097,7 @@ ShowLinks(1, 7);
 <TBODY>
 <TR>
 <TD nowrap><FONT size="-1">
-全耐性ＵＰ<BR>抗菌・抗毒<BR>搬运<BR>效果持续</FONT></TD>
+全耐性UP<BR>抗菌・抗毒<BR>搬运<BR>效果持续</FONT></TD>
 <TD nowrap align="right"><FONT size="-1">
 +2<BR>+2<BR>+1<BR>-2</FONT></TD>
 </TR>
@@ -8079,7 +8105,7 @@ ShowLinks(1, 7);
 </TABLE>
 </TD>
 <TD class="tb-cell2">
-<A href="./armor.html#0208">208</A><BR>（Lv3以上）</TD>
+<A href="./armor.html#0208">208</A><BR>Lv3以上</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1"><A href="../items/items.html?01de" target="items">麒麟的皮</A>×1<BR><A href="../items/items.html?01e0" target="items">麒麟的鬣毛</A>×3<BR><A href="../items/items.html?013c" target="items">古龍骨</A>×1<BR><A href="../items/items.html?015e" target="items">蓝速龙的白皮</A>×3</TD>
 <TD class="tb-cell1">天を裂く雷で编まれたとされ<br>
@@ -8089,7 +8115,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0207"class="tb-cell2" height="65">207</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0207" target="_blank">麒麟披肩</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0207" target="armorlv">麒麟披肩</A></TD>
 <TD class="tb-cell2">射手<BR>专用</TD>
 <TD class="tb-cell2">5</TD>
 <TD class="tb-cell3">17500</TD>
@@ -8110,7 +8136,7 @@ ShowLinks(1, 7);
 <TBODY>
 <TR>
 <TD nowrap><FONT size="-1">
-全耐性ＵＰ<BR>抗菌・抗毒<BR>搬运<BR>效果持续</FONT></TD>
+全耐性UP<BR>抗菌・抗毒<BR>搬运<BR>效果持续</FONT></TD>
 <TD nowrap align="right"><FONT size="-1">
 +2<BR>+2<BR>+1<BR>-2</FONT></TD>
 </TR>
@@ -8118,7 +8144,7 @@ ShowLinks(1, 7);
 </TABLE>
 </TD>
 <TD class="tb-cell2">
-<A href="./armor.html#0209">209</A><BR>（Lv3以上）</TD>
+<A href="./armor.html#0209">209</A><BR>Lv3以上</TD>
 <TD class="tb-cell1">&nbsp;</TD>
 <TD class="tb-cell1"><A href="../items/items.html?01de" target="items">麒麟的皮</A>×1<BR><A href="../items/items.html?01e0" target="items">麒麟的鬣毛</A>×3<BR><A href="../items/items.html?013c" target="items">古龍骨</A>×1<BR><A href="../items/items.html?015e" target="items">蓝速龙的白皮</A>×3</TD>
 <TD class="tb-cell1">闇夜でも仄白く明滅する光衣。<br>
@@ -8128,7 +8154,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0208"class="tb-cell2 hc" height="65">208</TD>
-<TD class="tb-cell1 hc"><BR><BR><A href="./armor1.html#0208" target="_blank">麒麟Ｓ马甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0206">麒麟马甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc"><BR><BR><A href="./armor1.html#0208" target="armorlv">麒麟Ｓ马甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0206">麒麟马甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">剑士<BR>专用</TD>
 <TD class="tb-cell2 hc">7</TD>
 <TD class="tb-cell3 hc">54000</TD>
@@ -8149,7 +8175,7 @@ ShowLinks(1, 7);
 <TBODY>
 <TR>
 <TD nowrap><FONT size="-1">
-全耐性ＵＰ<BR>抗菌・抗毒<BR>效果持续</FONT></TD>
+全耐性UP<BR>抗菌・抗毒<BR>效果持续</FONT></TD>
 <TD nowrap align="right"><FONT size="-1">
 +3<BR>+3<BR>-1</FONT></TD>
 </TR>
@@ -8167,7 +8193,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0209"class="tb-cell2 hc" height="65">209</TD>
-<TD class="tb-cell1 hc"><BR><BR><A href="./armor1.html#0209" target="_blank">麒麟Ｓ披肩</A><BR><BR><FONT size="-2"><A href="./armor.html#0207">麒麟披肩</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc"><BR><BR><A href="./armor1.html#0209" target="armorlv">麒麟Ｓ披肩</A><BR><BR><FONT size="-2"><A href="./armor.html#0207">麒麟披肩</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">射手<BR>专用</TD>
 <TD class="tb-cell2 hc">7</TD>
 <TD class="tb-cell3 hc">54000</TD>
@@ -8188,7 +8214,7 @@ ShowLinks(1, 7);
 <TBODY>
 <TR>
 <TD nowrap><FONT size="-1">
-全耐性ＵＰ<BR>抗菌・抗毒<BR>效果持续</FONT></TD>
+全耐性UP<BR>抗菌・抗毒<BR>效果持续</FONT></TD>
 <TD nowrap align="right"><FONT size="-1">
 +3<BR>+3<BR>-1</FONT></TD>
 </TR>
@@ -8206,7 +8232,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0210"class="tb-cell2" height="65">210</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0210" target="_blank">乞沙拏铠甲</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0210" target="armorlv">库夏那铠甲</A></TD>
 <TD class="tb-cell2">剑士<BR>专用</TD>
 <TD class="tb-cell2">7</TD>
 <TD class="tb-cell3">40000</TD>
@@ -8244,7 +8270,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0211"class="tb-cell2" height="65">211</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0211" target="_blank">乞沙拏轻甲</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0211" target="armorlv">库夏那轻甲</A></TD>
 <TD class="tb-cell2">射手<BR>专用</TD>
 <TD class="tb-cell2">7</TD>
 <TD class="tb-cell3">40000</TD>
@@ -8282,7 +8308,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0212"class="tb-cell2" height="65">212</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0212" target="_blank">弥都波【胸当】</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0212" target="armorlv">弥都波【胸当】</A></TD>
 <TD class="tb-cell2">剑士<BR>专用</TD>
 <TD class="tb-cell2">7</TD>
 <TD class="tb-cell3">45000</TD>
@@ -8320,7 +8346,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0213"class="tb-cell2" height="65">213</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0213" target="_blank">丰玉【胸当】</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0213" target="armorlv">丰玉【胸当】</A></TD>
 <TD class="tb-cell2">射手<BR>专用</TD>
 <TD class="tb-cell2">7</TD>
 <TD class="tb-cell3">45000</TD>
@@ -8358,7 +8384,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0214"class="tb-cell2" height="65">214</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0214" target="_blank">女帝铠甲</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0214" target="armorlv">女帝铠甲</A></TD>
 <TD class="tb-cell2">剑士<BR>专用</TD>
 <TD class="tb-cell2">7</TD>
 <TD class="tb-cell3">45000</TD>
@@ -8388,7 +8414,7 @@ ShowLinks(1, 7);
 </TD>
 <TD class="tb-cell2">&nbsp;</TD>
 <TD class="tb-cell1">&nbsp;</TD>
-<TD class="tb-cell1"><A href="../items/items.html?0241" target="items">炎妃龍的翼膜</A>×2<BR><A href="../items/items.html?0240" target="items">炎妃龍的鬣毛</A>×2<BR><A href="../items/items.html?00db" target="items">辉龙石</A>×1<BR><A href="../items/items.html?00de" target="items">红莲石</A>×3</TD>
+<TD class="tb-cell1"><A href="../items/items.html?0241" target="items">炎妃龍的翼膜</A>×2<BR><A href="../items/items.html?0240" target="items">炎妃龍的鬣毛</A>×2<BR><A href="../items/items.html?00db" target="items">辉龙石</A>×1<BR><A href="../items/items.html?00de" target="items">红莲石</A>×3<BR>（传说的工匠生产）</TD>
 <TD class="tb-cell1">炎妃龍娜娜・提斯卡托莉の<br>
 青き炎を封じ込めた胴用装備。<br>
 牢固たる塔の如き荘厳さ。
@@ -8396,7 +8422,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0215"class="tb-cell2" height="65">215</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0215" target="_blank">女帝轻甲</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0215" target="armorlv">女帝轻甲</A></TD>
 <TD class="tb-cell2">射手<BR>专用</TD>
 <TD class="tb-cell2">7</TD>
 <TD class="tb-cell3">45000</TD>
@@ -8426,7 +8452,7 @@ ShowLinks(1, 7);
 </TD>
 <TD class="tb-cell2">&nbsp;</TD>
 <TD class="tb-cell1">&nbsp;</TD>
-<TD class="tb-cell1"><A href="../items/items.html?0241" target="items">炎妃龍的翼膜</A>×2<BR><A href="../items/items.html?0240" target="items">炎妃龍的鬣毛</A>×2<BR><A href="../items/items.html?00db" target="items">辉龙石</A>×1<BR><A href="../items/items.html?00de" target="items">红莲石</A>×3</TD>
+<TD class="tb-cell1"><A href="../items/items.html?0241" target="items">炎妃龍的翼膜</A>×2<BR><A href="../items/items.html?0240" target="items">炎妃龍的鬣毛</A>×2<BR><A href="../items/items.html?00db" target="items">辉龙石</A>×1<BR><A href="../items/items.html?00de" target="items">红莲石</A>×3<BR>（传说的工匠生产）</TD>
 <TD class="tb-cell1">青き業火をまとう炎妃龍。<br>
 その素材を竜人秘伝の技術で<br>
 練り上げた至高の胴用装備。
@@ -8434,7 +8460,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0216"class="tb-cell2 hc" height="65">216</TD>
-<TD class="tb-cell1 hc"><A href="./armor1.html#0216" target="_blank">金刚【胴当】</A></TD>
+<TD class="tb-cell1 hc"><A href="./armor1.html#0216" target="armorlv">金刚【胴当】</A></TD>
 <TD class="tb-cell2 hc">剑士<BR>专用</TD>
 <TD class="tb-cell2 hc">7</TD>
 <TD class="tb-cell3 hc">55000</TD>
@@ -8472,7 +8498,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0217"class="tb-cell2 hc" height="65">217</TD>
-<TD class="tb-cell1 hc"><A href="./armor1.html#0217" target="_blank">不动【胴当】</A></TD>
+<TD class="tb-cell1 hc"><A href="./armor1.html#0217" target="armorlv">不动【胴当】</A></TD>
 <TD class="tb-cell2 hc">射手<BR>专用</TD>
 <TD class="tb-cell2 hc">7</TD>
 <TD class="tb-cell3 hc">55000</TD>
@@ -8510,7 +8536,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0218"class="tb-cell2" height="65">218</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0218" target="_blank">凯撒铠甲</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0218" target="armorlv">帝王铠甲</A></TD>
 <TD class="tb-cell2">剑士<BR>专用</TD>
 <TD class="tb-cell2">7</TD>
 <TD class="tb-cell3">60000</TD>
@@ -8540,7 +8566,7 @@ ShowLinks(1, 7);
 </TD>
 <TD class="tb-cell2">&nbsp;</TD>
 <TD class="tb-cell1">&nbsp;</TD>
-<TD class="tb-cell1"><A href="../items/items.html?0248" target="items">炎王龍的翼膜</A>×2<BR><A href="../items/items.html?0247" target="items">炎王龍的鬣毛</A>×1<BR><A href="../items/items.html?00de" target="items">红莲石</A>×3<BR><A href="../items/items.html?023d" target="items">古龍的血</A>×1</TD>
+<TD class="tb-cell1"><A href="../items/items.html?0248" target="items">炎王龍的翼膜</A>×2<BR><A href="../items/items.html?0247" target="items">炎王龍的鬣毛</A>×1<BR><A href="../items/items.html?00de" target="items">红莲石</A>×3<BR><A href="../items/items.html?023d" target="items">古龍的血</A>×1<BR>（传说的工匠生产）</TD>
 <TD class="tb-cell1">炎王龍提欧・提斯卡托尔の<br>
 赤き炎を封じ込めた胴用装備。<br>
 伝説上の覇王の如き峻厳さ。
@@ -8548,7 +8574,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0219"class="tb-cell2" height="65">219</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0219" target="_blank">凯撒轻甲</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0219" target="armorlv">帝王轻甲</A></TD>
 <TD class="tb-cell2">射手<BR>专用</TD>
 <TD class="tb-cell2">7</TD>
 <TD class="tb-cell3">60000</TD>
@@ -8578,7 +8604,7 @@ ShowLinks(1, 7);
 </TD>
 <TD class="tb-cell2">&nbsp;</TD>
 <TD class="tb-cell1">&nbsp;</TD>
-<TD class="tb-cell1"><A href="../items/items.html?0248" target="items">炎王龍的翼膜</A>×2<BR><A href="../items/items.html?0247" target="items">炎王龍的鬣毛</A>×1<BR><A href="../items/items.html?00de" target="items">红莲石</A>×3<BR><A href="../items/items.html?023d" target="items">古龍的血</A>×1</TD>
+<TD class="tb-cell1"><A href="../items/items.html?0248" target="items">炎王龍的翼膜</A>×2<BR><A href="../items/items.html?0247" target="items">炎王龍的鬣毛</A>×1<BR><A href="../items/items.html?00de" target="items">红莲石</A>×3<BR><A href="../items/items.html?023d" target="items">古龍的血</A>×1<BR>（传说的工匠生产）</TD>
 <TD class="tb-cell1">赤き業火をまとう炎王龍。<br>
 その素材を秘伝の技術で<br>
 練り上げた至上の胴用装備。
@@ -8586,7 +8612,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0220"class="tb-cell2 hc" height="65">220</TD>
-<TD class="tb-cell1 hc"><A href="./armor1.html#0220" target="_blank">夜叉【羽衣】</A></TD>
+<TD class="tb-cell1 hc"><A href="./armor1.html#0220" target="armorlv">夜叉【羽衣】</A></TD>
 <TD class="tb-cell2 hc">剑士<BR>专用</TD>
 <TD class="tb-cell2 hc">7</TD>
 <TD class="tb-cell3 hc">63000</TD>
@@ -8607,7 +8633,7 @@ ShowLinks(1, 7);
 <TBODY>
 <TR>
 <TD nowrap><FONT size="-1">
-达人<BR>耐力<BR>反覆无常<BR>加护</FONT></TD>
+达人<BR>耐力<BR>反复无常<BR>加护</FONT></TD>
 <TD nowrap align="right"><FONT size="-1">
 +2<BR>+2<BR>+2<BR>-3</FONT></TD>
 </TR>
@@ -8616,7 +8642,7 @@ ShowLinks(1, 7);
 </TD>
 <TD class="tb-cell2 hc">&nbsp;</TD>
 <TD class="tb-cell1 hc">&nbsp;</TD>
-<TD class="tb-cell1 hc"><A href="../items/items.html?024d" target="items">浮岳龍的皮</A>×2<BR><A href="../items/items.html?024c" target="items">浮岳龍的鳍</A>×1<BR><A href="../items/items.html?0250" target="items">龍木</A>×1<BR><A href="../items/items.html?023d" target="items">古龍的血</A>×1</TD>
+<TD class="tb-cell1 hc"><A href="../items/items.html?024d" target="items">浮岳龍的皮</A>×2<BR><A href="../items/items.html?024c" target="items">浮岳龍的鳍</A>×1<BR><A href="../items/items.html?0250" target="items">龍木</A>×1<BR><A href="../items/items.html?023d" target="items">古龍的血</A>×1<BR>（传说的工匠生产）</TD>
 <TD class="tb-cell1 hc">東方に住む神々の戦装束を模<br>
 した胴装備。羽衣の如き形状<br>
 は風をはらみ衝撃を吸収する。
@@ -8624,7 +8650,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0221"class="tb-cell2 hc" height="65">221</TD>
-<TD class="tb-cell1 hc"><A href="./armor1.html#0221" target="_blank">修罗【羽衣】</A></TD>
+<TD class="tb-cell1 hc"><A href="./armor1.html#0221" target="armorlv">修罗【羽衣】</A></TD>
 <TD class="tb-cell2 hc">射手<BR>专用</TD>
 <TD class="tb-cell2 hc">7</TD>
 <TD class="tb-cell3 hc">63000</TD>
@@ -8645,7 +8671,7 @@ ShowLinks(1, 7);
 <TBODY>
 <TR>
 <TD nowrap><FONT size="-1">
-装填数<BR>耐力<BR>反覆无常<BR>加护</FONT></TD>
+装填数<BR>耐力<BR>反复无常<BR>加护</FONT></TD>
 <TD nowrap align="right"><FONT size="-1">
 +2<BR>+2<BR>+2<BR>-3</FONT></TD>
 </TR>
@@ -8654,7 +8680,7 @@ ShowLinks(1, 7);
 </TD>
 <TD class="tb-cell2 hc">&nbsp;</TD>
 <TD class="tb-cell1 hc">&nbsp;</TD>
-<TD class="tb-cell1 hc"><A href="../items/items.html?024d" target="items">浮岳龍的皮</A>×2<BR><A href="../items/items.html?024c" target="items">浮岳龍的鳍</A>×1<BR><A href="../items/items.html?0250" target="items">龍木</A>×1<BR><A href="../items/items.html?023d" target="items">古龍的血</A>×1</TD>
+<TD class="tb-cell1 hc"><A href="../items/items.html?024d" target="items">浮岳龍的皮</A>×2<BR><A href="../items/items.html?024c" target="items">浮岳龍的鳍</A>×1<BR><A href="../items/items.html?0250" target="items">龍木</A>×1<BR><A href="../items/items.html?023d" target="items">古龍的血</A>×1<BR>（传说的工匠生产）</TD>
 <TD class="tb-cell1 hc">東方の極楽に住まう神々の戦<br>
 装束を模した胴用装備。浮岳<br>
 龍の素材と伝説の技術の結晶。
@@ -8662,7 +8688,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0222"class="tb-cell2 hc" height="65">222</TD>
-<TD class="tb-cell1 hc"><A href="./armor1.html#0222" target="_blank">金色之羽织</A></TD>
+<TD class="tb-cell1 hc"><A href="./armor1.html#0222" target="armorlv">金色之羽织</A></TD>
 <TD class="tb-cell2 hc">剑士<BR>专用</TD>
 <TD class="tb-cell2 hc">7</TD>
 <TD class="tb-cell3 hc">75000</TD>
@@ -8700,7 +8726,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0223"class="tb-cell2 hc" height="65">223</TD>
-<TD class="tb-cell1 hc"><A href="./armor1.html#0223" target="_blank">黑子之装束</A></TD>
+<TD class="tb-cell1 hc"><A href="./armor1.html#0223" target="armorlv">黑子之装束</A></TD>
 <TD class="tb-cell2 hc">射手<BR>专用</TD>
 <TD class="tb-cell2 hc">7</TD>
 <TD class="tb-cell3 hc">75000</TD>
@@ -8738,7 +8764,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0224"class="tb-cell2 hc" height="65">224</TD>
-<TD class="tb-cell1 hc"><BR><BR><A href="./armor1.html#0224" target="_blank">祖龍之皮</A><BR><BR><FONT size="-2"><A href="./armor.html#0121">魔龍之皮</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc"><BR><BR><A href="./armor1.html#0224" target="armorlv">祖龍之皮</A><BR><BR><FONT size="-2"><A href="./armor.html#0121">红龍之皮</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">剑士<BR>专用</TD>
 <TD class="tb-cell2 hc">7</TD>
 <TD class="tb-cell3 hc">150000</TD>
@@ -8777,7 +8803,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0225"class="tb-cell2 hc" height="65">225</TD>
-<TD class="tb-cell1 hc"><BR><BR><A href="./armor1.html#0225" target="_blank">祖龍之肤</A><BR><BR><FONT size="-2"><A href="./armor.html#0122">魔龍之肤</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc"><BR><BR><A href="./armor1.html#0225" target="armorlv">祖龍之肤</A><BR><BR><FONT size="-2"><A href="./armor.html#0122">红龍之肤</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">射手<BR>专用</TD>
 <TD class="tb-cell2 hc">7</TD>
 <TD class="tb-cell3 hc">150000</TD>
@@ -8816,7 +8842,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0226"class="tb-cell2 hc" height="65">226</TD>
-<TD class="tb-cell1 hc"><BR><BR><A href="./armor1.html#0226" target="_blank">黑带Ｓ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0046">黑带铠甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc"><BR><BR><A href="./armor1.html#0226" target="armorlv">黑带Ｓ铠甲</A><BR><BR><FONT size="-2"><A href="./armor.html#0046">黑带铠甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">&nbsp;</TD>
 <TD class="tb-cell2 hc">6</TD>
 <TD class="tb-cell3 hc">30000</TD>
@@ -8855,7 +8881,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0227"class="tb-cell2" height="65">227</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0227" target="_blank">白速龙之躯</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0227" target="armorlv">雪蓝速龙之躯</A></TD>
 <TD class="tb-cell2">&nbsp;</TD>
 <TD class="tb-cell2">5</TD>
 <TD class="tb-cell3">2600</TD>
@@ -8893,7 +8919,7 @@ ShowLinks(1, 7);
 </TR>
 <TR>
 <TD id="0228"class="tb-cell2 hc" height="65">228</TD>
-<TD class="tb-cell1 hc"><BR><BR><A href="./armor1.html#0228" target="_blank">Fami通Ｔ恤衫Ｓ</A><BR><BR><FONT size="-2"><A href="./armor.html#0235">Fami通Ｔ恤衫</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc"><BR><BR><A href="./armor1.html#0228" target="armorlv">Fami通Ｔ恤衫Ｓ</A><BR><BR><FONT size="-2"><A href="./armor.html#0235">Fami通Ｔ恤衫</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">&nbsp;</TD>
 <TD class="tb-cell2 hc">6</TD>
 <TD class="tb-cell3 hc">12000</TD>
@@ -8932,7 +8958,7 @@ Fami通Ｔ恤衫！！<br>
 </TR>
 <TR>
 <TD id="0229"class="tb-cell2" height="65">229</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0229" target="_blank">蛇龙之躯</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0229" target="armorlv">蛇龙之躯</A></TD>
 <TD class="tb-cell2">&nbsp;</TD>
 <TD class="tb-cell2">5</TD>
 <TD class="tb-cell3">2800</TD>
@@ -8953,7 +8979,7 @@ Fami通Ｔ恤衫！！<br>
 <TBODY>
 <TR>
 <TD nowrap><FONT size="-1">
-匠<BR>散弹强化<BR>耐力<BR>全耐性ＵＰ</FONT></TD>
+匠<BR>散弹强化<BR>耐力<BR>全耐性UP</FONT></TD>
 <TD nowrap align="right"><FONT size="-1">
 +1<BR>+1<BR>+3<BR>-4</FONT></TD>
 </TR>
@@ -8970,7 +8996,7 @@ Fami通Ｔ恤衫！！<br>
 </TR>
 <TR>
 <TD id="0230"class="tb-cell2" height="65">230</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0230" target="_blank">公会骑士制服</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0230" target="armorlv">公会骑士制服</A></TD>
 <TD class="tb-cell2">男性<BR>专用</TD>
 <TD class="tb-cell2">5</TD>
 <TD class="tb-cell3">12500</TD>
@@ -9000,7 +9026,7 @@ Fami通Ｔ恤衫！！<br>
 </TD>
 <TD class="tb-cell2">&nbsp;</TD>
 <TD class="tb-cell1">&nbsp;</TD>
-<TD class="tb-cell1"><A href="../items/items.html?02ca" target="items">甲壳的硬币</A>×1<BR><A href="../items/items.html?02c3" target="items">白带硬币</A>×2<BR><A href="../items/items.html?02e0" target="items">星铁</A>×3<BR><A href="../items/items.html?00db" target="items">辉龙石</A>×1</TD>
+<TD class="tb-cell1"><A href="../items/items.html?02ca" target="items">甲壳的硬币</A>×1<BR><A href="../items/items.html?02c3" target="items">白带硬币</A>×2<BR><A href="../items/items.html?02e0" target="items">星铁</A>×3<BR><A href="../items/items.html?00db" target="items">辉龙石</A>×1<BR>（传说的工匠生产）<hr style="border-top: 1px solid black;"><A href="../items/items.html?02e0" target="items">星铁</A>×1<BR><A href="../items/items.html?02c4" target="items">黑带硬币</A>×1<BR>（讨伐炎妃龍后联动）<BR>（传说的工匠生产）</TD>
 <TD class="tb-cell1">公会ナイトたちが人々の前<br>
 に姿を現す際に着用する服。<br>
 その他の姿は一切記録にない。
@@ -9008,7 +9034,7 @@ Fami通Ｔ恤衫！！<br>
 </TR>
 <TR>
 <TD id="0231"class="tb-cell2" height="65">231</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0231" target="_blank">公会骑士马甲</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0231" target="armorlv">公会骑士马甲</A></TD>
 <TD class="tb-cell2">男性<BR>专用</TD>
 <TD class="tb-cell2">5</TD>
 <TD class="tb-cell3">12500</TD>
@@ -9038,7 +9064,7 @@ Fami通Ｔ恤衫！！<br>
 </TD>
 <TD class="tb-cell2">&nbsp;</TD>
 <TD class="tb-cell1">&nbsp;</TD>
-<TD class="tb-cell1"><A href="../items/items.html?02ca" target="items">甲壳的硬币</A>×1<BR><A href="../items/items.html?02c3" target="items">白带硬币</A>×2<BR><A href="../items/items.html?02e0" target="items">星铁</A>×3<BR><A href="../items/items.html?00db" target="items">辉龙石</A>×1</TD>
+<TD class="tb-cell1"><A href="../items/items.html?02ca" target="items">甲壳的硬币</A>×1<BR><A href="../items/items.html?02c3" target="items">白带硬币</A>×2<BR><A href="../items/items.html?02e0" target="items">星铁</A>×3<BR><A href="../items/items.html?00db" target="items">辉龙石</A>×1<BR>（传说的工匠生产）<hr style="border-top: 1px solid black;"><A href="../items/items.html?02e0" target="items">星铁</A>×1<BR><A href="../items/items.html?02c4" target="items">黑带硬币</A>×1<BR>（讨伐炎妃龍后联动）<BR>（传说的工匠生产）</TD>
 <TD class="tb-cell1">公会ナイト用に作られた、<br>
 儀礼用の服。万一の事態に備<br>
 えてか防御性能も非常に高い。
@@ -9046,7 +9072,7 @@ Fami通Ｔ恤衫！！<br>
 </TR>
 <TR>
 <TD id="0232"class="tb-cell2" height="65">232</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0232" target="_blank">女仆背心</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0232" target="armorlv">女仆背心</A></TD>
 <TD class="tb-cell2">女性<BR>专用</TD>
 <TD class="tb-cell2">5</TD>
 <TD class="tb-cell3">12500</TD>
@@ -9076,7 +9102,7 @@ Fami通Ｔ恤衫！！<br>
 </TD>
 <TD class="tb-cell2">&nbsp;</TD>
 <TD class="tb-cell1">&nbsp;</TD>
-<TD class="tb-cell1"><A href="../items/items.html?02ca" target="items">甲壳的硬币</A>×1<BR><A href="../items/items.html?02c3" target="items">白带硬币</A>×2<BR><A href="../items/items.html?02e0" target="items">星铁</A>×3<BR><A href="../items/items.html?00db" target="items">辉龙石</A>×1</TD>
+<TD class="tb-cell1"><A href="../items/items.html?02ca" target="items">甲壳的硬币</A>×1<BR><A href="../items/items.html?02c3" target="items">白带硬币</A>×2<BR><A href="../items/items.html?02e0" target="items">星铁</A>×3<BR><A href="../items/items.html?00db" target="items">辉龙石</A>×1<BR>（传说的工匠生产）<hr style="border-top: 1px solid black;"><A href="../items/items.html?02e0" target="items">星铁</A>×1<BR><A href="../items/items.html?02c4" target="items">黑带硬币</A>×1<BR>（讨伐炎妃龍后联动）<BR>（传说的工匠生产）</TD>
 <TD class="tb-cell1">公会の受付嬢がハンターに<br>
 転身…した時のために工房が<br>
 作った、戦うお姉さん用装備。
@@ -9084,7 +9110,7 @@ Fami通Ｔ恤衫！！<br>
 </TR>
 <TR>
 <TD id="0233"class="tb-cell2" height="65">233</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0233" target="_blank">便服背心</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0233" target="armorlv">便服背心</A></TD>
 <TD class="tb-cell2">女性<BR>专用</TD>
 <TD class="tb-cell2">5</TD>
 <TD class="tb-cell3">12500</TD>
@@ -9114,7 +9140,7 @@ Fami通Ｔ恤衫！！<br>
 </TD>
 <TD class="tb-cell2">&nbsp;</TD>
 <TD class="tb-cell1">&nbsp;</TD>
-<TD class="tb-cell1"><A href="../items/items.html?02ca" target="items">甲壳的硬币</A>×1<BR><A href="../items/items.html?02c3" target="items">白带硬币</A>×2<BR><A href="../items/items.html?02e0" target="items">星铁</A>×3<BR><A href="../items/items.html?00db" target="items">辉龙石</A>×1</TD>
+<TD class="tb-cell1"><A href="../items/items.html?02ca" target="items">甲壳的硬币</A>×1<BR><A href="../items/items.html?02c3" target="items">白带硬币</A>×2<BR><A href="../items/items.html?02e0" target="items">星铁</A>×3<BR><A href="../items/items.html?00db" target="items">辉龙石</A>×1<BR>（传说的工匠生产）<hr style="border-top: 1px solid black;"><A href="../items/items.html?02e0" target="items">星铁</A>×1<BR><A href="../items/items.html?02c4" target="items">黑带硬币</A>×1<BR>（讨伐炎妃龍后联动）<BR>（传说的工匠生产）</TD>
 <TD class="tb-cell1">工房のお姉さんファンたちが<br>
 心血を注いだ防具。可憐さと<br>
 妖艶さの共演はアートの領域。
@@ -9122,7 +9148,7 @@ Fami通Ｔ恤衫！！<br>
 </TR>
 <TR>
 <TD id="0234"class="tb-cell2" height="65">234</TD>
-<TD class="tb-cell1"><A href="./armor1.html#0234" target="_blank">狩人Ｔ恤衫</A></TD>
+<TD class="tb-cell1"><A href="./armor1.html#0234" target="armorlv">狩人Ｔ恤衫</A></TD>
 <TD class="tb-cell2">&nbsp;</TD>
 <TD class="tb-cell2">6</TD>
 <TD class="tb-cell3">2940</TD>
@@ -9152,7 +9178,7 @@ Fami通Ｔ恤衫！！<br>
 </TD>
 <TD class="tb-cell2">&nbsp;</TD>
 <TD class="tb-cell1">&nbsp;</TD>
-<TD class="tb-cell1"><A href="../items/items.html?0198" target="items">火龙的鳞</A>×1<BR><A href="../items/items.html?01e0" target="items">麒麟的鬣毛</A>×1<BR><A href="../items/items.html?0018" target="items">怪物的体液</A>×1<BR><A href="../items/items.html?0120" target="items">蜜蜻蜓</A>×1</TD>
+<TD class="tb-cell1"><A href="../items/items.html?0198" target="items">火龙的鳞</A>×1<BR><A href="../items/items.html?01e0" target="items">麒麟的鬣毛</A>×1<BR><A href="../items/items.html?0018" target="items">怪物的体液</A>×1<BR><A href="../items/items.html?0120" target="items">蜜蜻蜓</A>×1<hr style="border-top: 1px solid black;"><A href="../shop.html#03" target="_blank">自东多尔玛街工房购入</A></TD>
 <TD class="tb-cell1">一人前ハンターのみが手に入<br>
 れられるココットの英雄直筆<br>
 の狩人の文字の入ったシャツ。
@@ -9160,7 +9186,7 @@ Fami通Ｔ恤衫！！<br>
 </TR>
 <TR>
 <TD id="0235"class="tb-cell2 hc" height="65">235</TD>
-<TD class="tb-cell1 hc"><A href="./armor1.html#0235" target="_blank">Fami通Ｔ恤衫</A></TD>
+<TD class="tb-cell1 hc"><A href="./armor1.html#0235" target="armorlv">Fami通Ｔ恤衫</A></TD>
 <TD class="tb-cell2 hc">&nbsp;</TD>
 <TD class="tb-cell2 hc">5</TD>
 <TD class="tb-cell3 hc">7500</TD>
@@ -9189,7 +9215,7 @@ Fami通Ｔ恤衫！！<br>
 </TABLE>
 </TD>
 <TD class="tb-cell2 hc">
-<A href="./armor.html#0228">228</A><BR>（Lv5以上）</TD>
+<A href="./armor.html#0228">228</A><BR>Lv5以上</TD>
 <TD class="tb-cell1 hc">&nbsp;</TD>
 <TD class="tb-cell1 hc"><A href="../items/items.html?02f3" target="items">Fami通券</A>×5<BR><A href="../items/items.html?02cd" target="items">豪华的硬币</A>×3<BR><A href="../items/items.html?02ce" target="items">坚实的硬币</A>×3<BR><A href="../items/items.html?02cc" target="items">永远的硬币</A>×3</TD>
 <TD class="tb-cell1 hc">真っ赤がメジルシ！<br>
@@ -9199,7 +9225,7 @@ Fami通Ｔ恤衫！！<br>
 </TR>
 <TR>
 <TD id="0236"class="tb-cell2 hc" height="65">236</TD>
-<TD class="tb-cell1 hc"><BR><BR><A href="./armor1.html#0236" target="_blank">公会卫队制服苍</A><BR><BR><FONT size="-2"><A href="./armor.html#0056">守卫者制服</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc"><BR><BR><A href="./armor1.html#0236" target="armorlv">公会卫队制服苍</A><BR><BR><FONT size="-2"><A href="./armor.html#0056">守卫者制服</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">男性<BR>专用</TD>
 <TD class="tb-cell2 hc">6</TD>
 <TD class="tb-cell3 hc">60000</TD>
@@ -9238,7 +9264,7 @@ Fami通Ｔ恤衫！！<br>
 </TR>
 <TR>
 <TD id="0237"class="tb-cell2 hc" height="65">237</TD>
-<TD class="tb-cell1 hc"><BR><BR><A href="./armor1.html#0237" target="_blank">公会卫队马甲苍</A><BR><BR><FONT size="-2"><A href="./armor.html#0057">守卫者马甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc"><BR><BR><A href="./armor1.html#0237" target="armorlv">公会卫队马甲苍</A><BR><BR><FONT size="-2"><A href="./armor.html#0057">守卫者马甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">男性<BR>专用</TD>
 <TD class="tb-cell2 hc">6</TD>
 <TD class="tb-cell3 hc">60000</TD>
@@ -9277,7 +9303,7 @@ Fami通Ｔ恤衫！！<br>
 </TR>
 <TR>
 <TD id="0238"class="tb-cell2 hc" height="65">238</TD>
-<TD class="tb-cell1 hc"><BR><BR><A href="./armor1.html#0238" target="_blank">公会卫队制服苍</A><BR><BR><FONT size="-2"><A href="./armor.html#0058">助理马甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc"><BR><BR><A href="./armor1.html#0238" target="armorlv">公会卫队制服苍</A><BR><BR><FONT size="-2"><A href="./armor.html#0058">助手马甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">女性<BR>专用</TD>
 <TD class="tb-cell2 hc">6</TD>
 <TD class="tb-cell3 hc">60000</TD>
@@ -9316,7 +9342,7 @@ Fami通Ｔ恤衫！！<br>
 </TR>
 <TR>
 <TD id="0239"class="tb-cell2 hc" height="65">239</TD>
-<TD class="tb-cell1 hc"><BR><BR><A href="./armor1.html#0239" target="_blank">公会卫队马甲苍</A><BR><BR><FONT size="-2"><A href="./armor.html#0059">医师马甲</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc"><BR><BR><A href="./armor1.html#0239" target="armorlv">公会卫队马甲苍</A><BR><BR><FONT size="-2"><A href="./armor.html#0059">治愈者马甲</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">女性<BR>专用</TD>
 <TD class="tb-cell2 hc">6</TD>
 <TD class="tb-cell3 hc">60000</TD>
@@ -9355,7 +9381,7 @@ Fami通Ｔ恤衫！！<br>
 </TR>
 <TR>
 <TD id="0240"class="tb-cell2 hc" height="65">240</TD>
-<TD class="tb-cell1 hc"><BR><BR><A href="./armor1.html#0240" target="_blank">美国螯虾之铠</A><BR><BR><FONT size="-2"><A href="./armor.html#0036">帝王龙虾之壳</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc"><BR><BR><A href="./armor1.html#0240" target="armorlv">美国螯虾之铠</A><BR><BR><FONT size="-2"><A href="./armor.html#0036">帝王龙虾之壳</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">剑士<BR>专用</TD>
 <TD class="tb-cell2 hc">6</TD>
 <TD class="tb-cell3 hc">33330</TD>
@@ -9394,7 +9420,7 @@ Fami通Ｔ恤衫！！<br>
 </TR>
 <TR>
 <TD id="0241"class="tb-cell2 hc" height="65">241</TD>
-<TD class="tb-cell1 hc"><BR><BR><A href="./armor1.html#0241" target="_blank">美国螯虾之皮</A><BR><BR><FONT size="-2"><A href="./armor.html#0037">帝王龙虾之皮</A>强化而来</FONT></TD>
+<TD class="tb-cell1 hc"><BR><BR><A href="./armor1.html#0241" target="armorlv">美国螯虾之皮</A><BR><BR><FONT size="-2"><A href="./armor.html#0037">帝王龙虾之皮</A> 强化而来</FONT></TD>
 <TD class="tb-cell2 hc">射手<BR>专用</TD>
 <TD class="tb-cell2 hc">6</TD>
 <TD class="tb-cell3 hc">33330</TD>
@@ -9433,7 +9459,7 @@ Fami通Ｔ恤衫！！<br>
 </TR>
 <TR>
 <TD id="0242"class="tb-cell2 nc" height="65">242</TD>
-<TD class="tb-cell1 nc"><A href="./armor1.html#0242" target="_blank">公会英雄铠</A></TD>
+<TD class="tb-cell1 nc"><A href="./armor1.html#0242" target="armorlv">公会英雄铠</A></TD>
 <TD class="tb-cell2 nc">&nbsp;</TD>
 <TD class="tb-cell2 nc">7</TD>
 <TD class="tb-cell3 nc">140000</TD>
@@ -9463,7 +9489,7 @@ Fami通Ｔ恤衫！！<br>
 </TD>
 <TD class="tb-cell2 nc">&nbsp;</TD>
 <TD class="tb-cell1 nc">&nbsp;</TD>
-<TD class="tb-cell1 nc">&nbsp;</TD>
+<TD class="tb-cell1 nc">*开发者物品*<br>*无生产配方*</TD>
 <TD class="tb-cell1 nc">多大な貢献をした者に与えら<br>
 れる特別な鎧。これで貴方も<br>
 ハンター・オブ・ハンター！<br>

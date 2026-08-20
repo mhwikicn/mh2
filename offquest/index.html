@@ -8,6 +8,22 @@
 <LINK rel="stylesheet" href="../table.css" type="text/css">
 <SCRIPT src="../scripts/links.js"></SCRIPT>
 </HEAD>
+<STYLE>
+.highlight-row td,
+.highlight-row th {
+  background-color: #c7edcc !important;
+  transition: background-color 0.3s ease;
+}
+.cnt-tb2 > tbody:first-child > tr:first-child {
+  position: sticky;
+  top: 0;
+  background-color: #996633;
+  z-index: 10;
+}
+.cnt-tb2 td[id] {
+  scroll-margin-top: 22px;
+}
+</STYLE>
 <BODY>
 <HR>
 <TABLE border="0" width="910">
@@ -31,15 +47,15 @@ ShowLinks(1, 5);
 <TBODY>
 <TR>
 <TH class="tb-th1" width="40">No.</TH>
-<TH class="tb-th1" width="35">Lev.</TH>
+<TH class="tb-th1" width="35">Lv.</TH>
 <TH class="tb-th1" width="200">任务名</TH>
 <TH class="tb-th1" width="40">季节</TH>
 <TH class="tb-th1" width="50">契约金</TH>
 <TH class="tb-th1" width="50">报酬金</TH>
 <TH class="tb-th1" width="40">HRP</TH>
 <TH class="tb-th1" width="40">时间</TH>
-<TH class="tb-th1" width="50">目的地</TH>
-<TH class="tb-th1" width="180">委托内容</TH>
+<TH class="tb-th1" width="60">目的地</TH>
+<TH class="tb-th1" width="170">委托内容</TH>
 <TH class="tb-th1" width="117">特殊条件</TH>
 </TR>
 <TR>
@@ -136,7 +152,7 @@ ShowLinks(1, 5);
 <TR>
 <TD class="tb-cell2">0412</TD>
 <TD class="tb-cell2">☆１</TD>
-<TD class="tb-cell51">≪沼地探索≫<BR><A href="./rem1.html#0412">湿地驰骋之毒怪鸟</A></TD>
+<TD class="tb-cell51">≪沼地探索≫<BR><A href="./rem1.html#0412">驰骋湿地之毒怪鸟</A></TD>
 <TD class="tb-cell2"><BR><IMG src="../images/season0.gif" border="0"><BR>温暖期</TD>
 <TD class="tb-cell3">150ｚ</TD>
 <TD class="tb-cell3">1400ｚ<BR>800ｚ<BR>300ｚ</TD>
@@ -162,7 +178,7 @@ ShowLinks(1, 5);
 <TR>
 <TD class="tb-cell2">0429</TD>
 <TD class="tb-cell2">☆１</TD>
-<TD class="tb-cell51">≪火山探索≫<BR><A href="./rem1.html#0429">以毒治毒</A></TD>
+<TD class="tb-cell51">≪火山探索≫<BR><A href="./rem1.html#0429">御毒之毒</A></TD>
 <TD class="tb-cell2"><BR><IMG src="../images/season0.gif" border="0"><BR>温暖期</TD>
 <TD class="tb-cell3">100ｚ</TD>
 <TD class="tb-cell3">900ｚ<BR>700ｚ<BR>0ｚ</TD>
@@ -227,7 +243,7 @@ ShowLinks(1, 5);
 <TR>
 <TD class="tb-cell2">0421</TD>
 <TD class="tb-cell2">☆２</TD>
-<TD class="tb-cell51">≪雪山探索≫<BR><A href="./rem2.html#0421">雪原匍匐之赤影</A></TD>
+<TD class="tb-cell51">≪雪山探索≫<BR><A href="./rem2.html#0421">匍匐雪原之赤影</A></TD>
 <TD class="tb-cell2"><BR><IMG src="../images/season0.gif" border="0"><BR>温暖期</TD>
 <TD class="tb-cell3">250ｚ</TD>
 <TD class="tb-cell3">2200ｚ<BR>0ｚ<BR>0ｚ</TD>
@@ -266,7 +282,7 @@ ShowLinks(1, 5);
 <TR>
 <TD class="tb-cell2">0417</TD>
 <TD class="tb-cell2">☆３</TD>
-<TD class="tb-cell51">≪沼地探索≫<BR><A href="./rem3.html#0417">湿地潜伏之大镰</A></TD>
+<TD class="tb-cell51">≪沼地探索≫<BR><A href="./rem3.html#0417">潜伏湿地之大镰</A></TD>
 <TD class="tb-cell2"><BR><IMG src="../images/season0.gif" border="0"><BR>温暖期</TD>
 <TD class="tb-cell3">300ｚ</TD>
 <TD class="tb-cell3">2800ｚ<BR>1000ｚ<BR>1100ｚ</TD>
@@ -344,14 +360,14 @@ ShowLinks(1, 5);
 <TR>
 <TD class="tb-cell2">0425</TD>
 <TD class="tb-cell2">☆４</TD>
-<TD class="tb-cell51">≪雪山探索≫<BR><A href="./rem4.html#0425">雪原驰骋之幻兽</A></TD>
+<TD class="tb-cell51">≪雪山探索≫<BR><A href="./rem4.html#0425">驰骋雪原之幻兽</A></TD>
 <TD class="tb-cell2"><BR><IMG src="../images/season0.gif" border="0"><BR>温暖期</TD>
 <TD class="tb-cell3">350ｚ</TD>
 <TD class="tb-cell3">3400ｚ<BR>500ｚ<BR>0ｚ</TD>
 <TD class="tb-cell3">&nbsp;</TD>
 <TD class="tb-cell3">50分</TD>
 <TD class="tb-cell2">雪山</TD>
-<TD class="tb-cell1">讨伐麒麟１头<BR>将公会烽旗升起于山顶<BR>无</TD>
+<TD class="tb-cell1">讨伐麒麟１头<BR>将公会旗帜升起于山顶<BR>无</TD>
 <TD class="tb-cell1">无</TD>
 </TR>
 <TR>
@@ -461,13 +477,13 @@ ShowLinks(1, 5);
 <TR>
 <TD class="tb-cell2">03FD</TD>
 <TD class="tb-cell2">☆１</TD>
-<TD class="tb-cell51">≪砂漠探索≫<BR><A href="./rem1.html#03fd">砂漠跃动之猎手</A></TD>
+<TD class="tb-cell51">≪沙漠探索≫<BR><A href="./rem1.html#03fd">跃于沙漠之猎手</A></TD>
 <TD class="tb-cell2"><BR><IMG src="../images/season1.gif" border="0"><BR>寒冷期</TD>
 <TD class="tb-cell3">100ｚ</TD>
 <TD class="tb-cell3">800ｚ<BR>400ｚ<BR>400ｚ</TD>
 <TD class="tb-cell3">&nbsp;</TD>
 <TD class="tb-cell3">50分</TD>
-<TD class="tb-cell2">砂漠</TD>
+<TD class="tb-cell2">沙漠</TD>
 <TD class="tb-cell1">狩猎黄速龙王１头<BR>讨伐黄速龙６只<BR>交纳百花仙人掌１个</TD>
 <TD class="tb-cell1">无</TD>
 </TR>
@@ -539,20 +555,20 @@ ShowLinks(1, 5);
 <TR>
 <TD class="tb-cell2">03FF</TD>
 <TD class="tb-cell2">☆２</TD>
-<TD class="tb-cell51">≪砂漠探索≫<BR><A href="./rem2.html#03ff">畅游砂中之龙</A></TD>
+<TD class="tb-cell51">≪沙漠探索≫<BR><A href="./rem2.html#03ff">畅游沙中之龙</A></TD>
 <TD class="tb-cell2"><BR><IMG src="../images/season1.gif" border="0"><BR>寒冷期</TD>
 <TD class="tb-cell3">200ｚ</TD>
 <TD class="tb-cell3">1600ｚ<BR>1000ｚ<BR>600ｚ</TD>
 <TD class="tb-cell3">&nbsp;</TD>
 <TD class="tb-cell3">50分</TD>
-<TD class="tb-cell2">砂漠</TD>
-<TD class="tb-cell1">狩猎砂龙王１头<BR>交纳鱼龙的肝３个<BR>讨伐砂龙４只</TD>
+<TD class="tb-cell2">沙漠</TD>
+<TD class="tb-cell1">狩猎沙龙王１头<BR>交纳鱼龙的肝３个<BR>讨伐沙龙４只</TD>
 <TD class="tb-cell1">无</TD>
 </TR>
 <TR>
 <TD class="tb-cell2">0415</TD>
 <TD class="tb-cell2">☆２</TD>
-<TD class="tb-cell51">≪沼地探索≫<BR><A href="./rem2.html#0415">暗中匍匐之白影</A></TD>
+<TD class="tb-cell51">≪沼地探索≫<BR><A href="./rem2.html#0415">匍匐暗中之白影</A></TD>
 <TD class="tb-cell2"><BR><IMG src="../images/season1.gif" border="0"><BR>寒冷期</TD>
 <TD class="tb-cell3">250ｚ</TD>
 <TD class="tb-cell3">2200ｚ<BR>0ｚ<BR>0ｚ</TD>
@@ -565,7 +581,7 @@ ShowLinks(1, 5);
 <TR>
 <TD class="tb-cell2">0416</TD>
 <TD class="tb-cell2">☆２</TD>
-<TD class="tb-cell51">≪沼地探索≫<BR><A href="./rem2.html#0416">沼地舞动之女王</A></TD>
+<TD class="tb-cell51">≪沼地探索≫<BR><A href="./rem2.html#0416">起舞沼地之女王</A></TD>
 <TD class="tb-cell2"><BR><IMG src="../images/season1.gif" border="0"><BR>寒冷期</TD>
 <TD class="tb-cell3">250ｚ</TD>
 <TD class="tb-cell3">2200ｚ<BR>850ｚ<BR>600ｚ</TD>
@@ -591,39 +607,39 @@ ShowLinks(1, 5);
 <TR>
 <TD class="tb-cell2">0401</TD>
 <TD class="tb-cell2">☆３</TD>
-<TD class="tb-cell51">≪砂漠探索≫<BR><A href="./rem3.html#0401">深潜水中之翡翠</A></TD>
+<TD class="tb-cell51">≪沙漠探索≫<BR><A href="./rem3.html#0401">深潜水中之翡翠</A></TD>
 <TD class="tb-cell2"><BR><IMG src="../images/season1.gif" border="0"><BR>寒冷期</TD>
 <TD class="tb-cell3">300ｚ</TD>
 <TD class="tb-cell3">2600ｚ<BR>0ｚ<BR>0ｚ</TD>
 <TD class="tb-cell3">&nbsp;</TD>
 <TD class="tb-cell3">50分</TD>
-<TD class="tb-cell2">砂漠</TD>
+<TD class="tb-cell2">沙漠</TD>
 <TD class="tb-cell1">狩猎水龙亚种１头<BR>无<BR>无</TD>
 <TD class="tb-cell1">无</TD>
 </TR>
 <TR>
 <TD class="tb-cell2">0404</TD>
 <TD class="tb-cell2">☆３</TD>
-<TD class="tb-cell51">≪砂漠探索≫<BR><A href="./rem3.html#0404">白一角龙之勇猛</A></TD>
+<TD class="tb-cell51">≪沙漠探索≫<BR><A href="./rem3.html#0404">白一角龙之勇猛</A></TD>
 <TD class="tb-cell2"><BR><IMG src="../images/season1.gif" border="0"><BR>寒冷期</TD>
 <TD class="tb-cell3">350ｚ</TD>
 <TD class="tb-cell3">3400ｚ<BR>0ｚ<BR>0ｚ</TD>
 <TD class="tb-cell3">&nbsp;</TD>
 <TD class="tb-cell3">50分</TD>
-<TD class="tb-cell2">砂漠</TD>
+<TD class="tb-cell2">沙漠</TD>
 <TD class="tb-cell1">狩猎一角龙亚种１头<BR>无<BR>无</TD>
 <TD class="tb-cell1">无</TD>
 </TR>
 <TR>
 <TD class="tb-cell2">0406</TD>
 <TD class="tb-cell2">☆３</TD>
-<TD class="tb-cell51">≪砂漠探索≫<BR><A href="./rem3.html#0406">穷凶极恶之角龙</A></TD>
+<TD class="tb-cell51">≪沙漠探索≫<BR><A href="./rem3.html#0406">穷凶极恶之角龙</A></TD>
 <TD class="tb-cell2"><BR><IMG src="../images/season1.gif" border="0"><BR>寒冷期</TD>
 <TD class="tb-cell3">300ｚ</TD>
 <TD class="tb-cell3">3000ｚ<BR>1000ｚ<BR>400ｚ</TD>
 <TD class="tb-cell3">&nbsp;</TD>
 <TD class="tb-cell3">50分</TD>
-<TD class="tb-cell2">砂漠</TD>
+<TD class="tb-cell2">沙漠</TD>
 <TD class="tb-cell1">狩猎角龙１头<BR>破坏角龙的双角<BR>交纳秘密的袋子３个</TD>
 <TD class="tb-cell1">无</TD>
 </TR>
@@ -682,39 +698,39 @@ ShowLinks(1, 5);
 <TR>
 <TD class="tb-cell2">0408</TD>
 <TD class="tb-cell2">☆４</TD>
-<TD class="tb-cell51">≪砂漠探索≫<BR><A href="./rem4.html#0408">呼唤砂岚之龍</A></TD>
+<TD class="tb-cell51">≪沙漠探索≫<BR><A href="./rem4.html#0408">呼唤沙暴之龍</A></TD>
 <TD class="tb-cell2"><BR><IMG src="../images/season1.gif" border="0"><BR>寒冷期</TD>
 <TD class="tb-cell3">400ｚ</TD>
 <TD class="tb-cell3">3600ｚ<BR>0ｚ<BR>0ｚ</TD>
 <TD class="tb-cell3">&nbsp;</TD>
 <TD class="tb-cell3">50分</TD>
-<TD class="tb-cell2">砂漠</TD>
+<TD class="tb-cell2">沙漠</TD>
 <TD class="tb-cell1">讨伐风翔龍１头<BR>无<BR>无</TD>
 <TD class="tb-cell1">无</TD>
 </TR>
 <TR>
 <TD class="tb-cell2">040A</TD>
 <TD class="tb-cell2">☆４</TD>
-<TD class="tb-cell51">≪砂漠探索≫<BR><A href="./rem4.html#040a">烧灼热砂之业炎</A></TD>
+<TD class="tb-cell51">≪沙漠探索≫<BR><A href="./rem4.html#040a">烧灼热沙之业炎</A></TD>
 <TD class="tb-cell2"><BR><IMG src="../images/season1.gif" border="0"><BR>寒冷期</TD>
 <TD class="tb-cell3">400ｚ</TD>
 <TD class="tb-cell3">3800ｚ<BR>0ｚ<BR>0ｚ</TD>
 <TD class="tb-cell3">&nbsp;</TD>
 <TD class="tb-cell3">50分</TD>
-<TD class="tb-cell2">砂漠</TD>
+<TD class="tb-cell2">沙漠</TD>
 <TD class="tb-cell1">讨伐炎王龍１头<BR>无<BR>无</TD>
 <TD class="tb-cell1">无</TD>
 </TR>
 <TR>
 <TD class="tb-cell2">040C</TD>
 <TD class="tb-cell2">☆４</TD>
-<TD class="tb-cell51">≪砂漠探索≫<BR><A href="./rem4.html#040c">坠于砂之太阳</A></TD>
+<TD class="tb-cell51">≪沙漠探索≫<BR><A href="./rem4.html#040c">坠于沙之太阳</A></TD>
 <TD class="tb-cell2"><BR><IMG src="../images/season1.gif" border="0"><BR>寒冷期</TD>
 <TD class="tb-cell3">400ｚ</TD>
 <TD class="tb-cell3">3800ｚ<BR>0ｚ<BR>0ｚ</TD>
 <TD class="tb-cell3">&nbsp;</TD>
 <TD class="tb-cell3">50分</TD>
-<TD class="tb-cell2">砂漠</TD>
+<TD class="tb-cell2">沙漠</TD>
 <TD class="tb-cell1">讨伐炎妃龍１头<BR>无<BR>无</TD>
 <TD class="tb-cell1">无</TD>
 </TR>
@@ -799,13 +815,13 @@ ShowLinks(1, 5);
 <TR>
 <TD class="tb-cell2">03FE</TD>
 <TD class="tb-cell2">☆１</TD>
-<TD class="tb-cell51">≪砂漠探索≫<BR><A href="./rem1.html#03fe">砂漠跃动之猎手</A></TD>
+<TD class="tb-cell51">≪沙漠探索≫<BR><A href="./rem1.html#03fe">跃于沙漠之猎手</A></TD>
 <TD class="tb-cell2"><BR><IMG src="../images/season2.gif" border="0"><BR>繁殖期</TD>
 <TD class="tb-cell3">100ｚ</TD>
 <TD class="tb-cell3">800ｚ<BR>1500ｚ<BR>300ｚ</TD>
 <TD class="tb-cell3">&nbsp;</TD>
 <TD class="tb-cell3">50分</TD>
-<TD class="tb-cell2">砂漠</TD>
+<TD class="tb-cell2">沙漠</TD>
 <TD class="tb-cell1">狩猎黄速龙王１头<BR>交纳草食龙的卵１枚<BR>讨伐甲壳草食龙４只</TD>
 <TD class="tb-cell1">无</TD>
 </TR>
@@ -825,7 +841,7 @@ ShowLinks(1, 5);
 <TR>
 <TD class="tb-cell2">0414</TD>
 <TD class="tb-cell2">☆１</TD>
-<TD class="tb-cell51">≪沼地探索≫<BR><A href="./rem1.html#0414">湿地驰骋之毒怪鸟</A></TD>
+<TD class="tb-cell51">≪沼地探索≫<BR><A href="./rem1.html#0414">驰骋湿地之毒怪鸟</A></TD>
 <TD class="tb-cell2"><BR><IMG src="../images/season2.gif" border="0"><BR>繁殖期</TD>
 <TD class="tb-cell3">150ｚ</TD>
 <TD class="tb-cell3">1400ｚ<BR>800ｚ<BR>600ｚ</TD>
@@ -890,26 +906,26 @@ ShowLinks(1, 5);
 <TR>
 <TD class="tb-cell2">0400</TD>
 <TD class="tb-cell2">☆２</TD>
-<TD class="tb-cell51">≪砂漠探索≫<BR><A href="./rem2.html#0400">亡骸之继承者</A></TD>
+<TD class="tb-cell51">≪沙漠探索≫<BR><A href="./rem2.html#0400">亡骸之继承者</A></TD>
 <TD class="tb-cell2"><BR><IMG src="../images/season2.gif" border="0"><BR>繁殖期</TD>
 <TD class="tb-cell3">200ｚ</TD>
 <TD class="tb-cell3">1800ｚ<BR>500ｚ<BR>400ｚ</TD>
 <TD class="tb-cell3">&nbsp;</TD>
 <TD class="tb-cell3">50分</TD>
-<TD class="tb-cell2">砂漠</TD>
+<TD class="tb-cell2">沙漠</TD>
 <TD class="tb-cell1">狩猎大名盾蟹１头<BR>交纳蟹黄４个<BR>讨伐黄速龙６只</TD>
 <TD class="tb-cell1">无</TD>
 </TR>
 <TR>
 <TD class="tb-cell2">0403</TD>
 <TD class="tb-cell2">☆２</TD>
-<TD class="tb-cell51">≪砂漠探索≫<BR><A href="./rem2.html#0403">砂漠绽放之樱</A></TD>
+<TD class="tb-cell51">≪沙漠探索≫<BR><A href="./rem2.html#0403">绽于沙漠之樱</A></TD>
 <TD class="tb-cell2"><BR><IMG src="../images/season2.gif" border="0"><BR>繁殖期</TD>
 <TD class="tb-cell3">250ｚ</TD>
 <TD class="tb-cell3">2200ｚ<BR>0ｚ<BR>0ｚ</TD>
 <TD class="tb-cell3">&nbsp;</TD>
 <TD class="tb-cell3">50分</TD>
-<TD class="tb-cell2">砂漠</TD>
+<TD class="tb-cell2">沙漠</TD>
 <TD class="tb-cell1">狩猎雌火龙亚种１头<BR>无<BR>无</TD>
 <TD class="tb-cell1">无</TD>
 </TR>
@@ -929,7 +945,7 @@ ShowLinks(1, 5);
 <TR>
 <TD class="tb-cell2">0422</TD>
 <TD class="tb-cell2">☆２</TD>
-<TD class="tb-cell51">≪雪山探索≫<BR><A href="./rem2.html#0422">暗中匍匐之白影</A></TD>
+<TD class="tb-cell51">≪雪山探索≫<BR><A href="./rem2.html#0422">匍匐暗中之白影</A></TD>
 <TD class="tb-cell2"><BR><IMG src="../images/season2.gif" border="0"><BR>繁殖期</TD>
 <TD class="tb-cell3">250ｚ</TD>
 <TD class="tb-cell3">2200ｚ<BR>500ｚ<BR>800ｚ</TD>
@@ -955,46 +971,46 @@ ShowLinks(1, 5);
 <TR>
 <TD class="tb-cell2">0402</TD>
 <TD class="tb-cell2">☆３</TD>
-<TD class="tb-cell51">≪砂漠探索≫<BR><A href="./rem3.html#0402">地底湖之水龙</A></TD>
+<TD class="tb-cell51">≪沙漠探索≫<BR><A href="./rem3.html#0402">地底湖之水龙</A></TD>
 <TD class="tb-cell2"><BR><IMG src="../images/season2.gif" border="0"><BR>繁殖期</TD>
 <TD class="tb-cell3">300ｚ</TD>
 <TD class="tb-cell3">2600ｚ<BR>600ｚ<BR>500ｚ</TD>
 <TD class="tb-cell3">&nbsp;</TD>
 <TD class="tb-cell3">50分</TD>
-<TD class="tb-cell2">砂漠</TD>
+<TD class="tb-cell2">沙漠</TD>
 <TD class="tb-cell1">狩猎水龙１头<BR>钓上水龙１次<BR>交纳黄金鱼２条</TD>
 <TD class="tb-cell1">无</TD>
 </TR>
 <TR>
 <TD class="tb-cell2">0405</TD>
 <TD class="tb-cell2">☆３</TD>
-<TD class="tb-cell51">≪砂漠探索≫<BR><A href="./rem3.html#0405">孤高之一角龙</A></TD>
+<TD class="tb-cell51">≪沙漠探索≫<BR><A href="./rem3.html#0405">孤高之一角龙</A></TD>
 <TD class="tb-cell2"><BR><IMG src="../images/season2.gif" border="0"><BR>繁殖期</TD>
 <TD class="tb-cell3">350ｚ</TD>
 <TD class="tb-cell3">3400ｚ<BR>1000ｚ<BR>1500ｚ</TD>
 <TD class="tb-cell3">&nbsp;</TD>
 <TD class="tb-cell3">50分</TD>
-<TD class="tb-cell2">砂漠</TD>
+<TD class="tb-cell2">沙漠</TD>
 <TD class="tb-cell1">狩猎一角龙１头<BR>交纳龙泪１颗<BR>交纳草食龙的卵１枚</TD>
 <TD class="tb-cell1">无</TD>
 </TR>
 <TR>
 <TD class="tb-cell2">0407</TD>
 <TD class="tb-cell2">☆３</TD>
-<TD class="tb-cell51">≪砂漠探索≫<BR><A href="./rem3.html#0407">漆黑之双角</A></TD>
+<TD class="tb-cell51">≪沙漠探索≫<BR><A href="./rem3.html#0407">漆黑之双角</A></TD>
 <TD class="tb-cell2"><BR><IMG src="../images/season2.gif" border="0"><BR>繁殖期</TD>
 <TD class="tb-cell3">300ｚ</TD>
 <TD class="tb-cell3">3000ｚ<BR>0ｚ<BR>0ｚ</TD>
 <TD class="tb-cell3">&nbsp;</TD>
 <TD class="tb-cell3">50分</TD>
-<TD class="tb-cell2">砂漠</TD>
+<TD class="tb-cell2">沙漠</TD>
 <TD class="tb-cell1">狩猎角龙亚种１头<BR>无<BR>无</TD>
 <TD class="tb-cell1">无</TD>
 </TR>
 <TR>
 <TD class="tb-cell2">0418</TD>
 <TD class="tb-cell2">☆３</TD>
-<TD class="tb-cell51">≪沼地探索≫<BR><A href="./rem3.html#0418">湿地潜伏之大镰</A></TD>
+<TD class="tb-cell51">≪沼地探索≫<BR><A href="./rem3.html#0418">潜伏湿地之大镰</A></TD>
 <TD class="tb-cell2"><BR><IMG src="../images/season2.gif" border="0"><BR>繁殖期</TD>
 <TD class="tb-cell3">300ｚ</TD>
 <TD class="tb-cell3">2800ｚ<BR>800ｚ<BR>400ｚ</TD>
@@ -1072,39 +1088,39 @@ ShowLinks(1, 5);
 <TR>
 <TD class="tb-cell2">0409</TD>
 <TD class="tb-cell2">☆４</TD>
-<TD class="tb-cell51">≪砂漠探索≫<BR><A href="./rem4.html#0409">呼唤砂岚之龍</A></TD>
+<TD class="tb-cell51">≪沙漠探索≫<BR><A href="./rem4.html#0409">呼唤沙暴之龍</A></TD>
 <TD class="tb-cell2"><BR><IMG src="../images/season2.gif" border="0"><BR>繁殖期</TD>
 <TD class="tb-cell3">400ｚ</TD>
 <TD class="tb-cell3">3600ｚ<BR>0ｚ<BR>0ｚ</TD>
 <TD class="tb-cell3">&nbsp;</TD>
 <TD class="tb-cell3">50分</TD>
-<TD class="tb-cell2">砂漠</TD>
+<TD class="tb-cell2">沙漠</TD>
 <TD class="tb-cell1">讨伐风翔龍１头<BR>无<BR>无</TD>
 <TD class="tb-cell1">无</TD>
 </TR>
 <TR>
 <TD class="tb-cell2">040B</TD>
 <TD class="tb-cell2">☆４</TD>
-<TD class="tb-cell51">≪砂漠探索≫<BR><A href="./rem4.html#040b">烧灼热砂之业炎</A></TD>
+<TD class="tb-cell51">≪沙漠探索≫<BR><A href="./rem4.html#040b">烧灼热沙之业炎</A></TD>
 <TD class="tb-cell2"><BR><IMG src="../images/season2.gif" border="0"><BR>繁殖期</TD>
 <TD class="tb-cell3">400ｚ</TD>
 <TD class="tb-cell3">3800ｚ<BR>0ｚ<BR>0ｚ</TD>
 <TD class="tb-cell3">&nbsp;</TD>
 <TD class="tb-cell3">50分</TD>
-<TD class="tb-cell2">砂漠</TD>
+<TD class="tb-cell2">沙漠</TD>
 <TD class="tb-cell1">讨伐炎王龍１头<BR>无<BR>无</TD>
 <TD class="tb-cell1">无</TD>
 </TR>
 <TR>
 <TD class="tb-cell2">040D</TD>
 <TD class="tb-cell2">☆４</TD>
-<TD class="tb-cell51">≪砂漠探索≫<BR><A href="./rem4.html#040d">坠于砂之太阳</A></TD>
+<TD class="tb-cell51">≪沙漠探索≫<BR><A href="./rem4.html#040d">坠于沙之太阳</A></TD>
 <TD class="tb-cell2"><BR><IMG src="../images/season2.gif" border="0"><BR>繁殖期</TD>
 <TD class="tb-cell3">400ｚ</TD>
 <TD class="tb-cell3">3800ｚ<BR>0ｚ<BR>0ｚ</TD>
 <TD class="tb-cell3">&nbsp;</TD>
 <TD class="tb-cell3">50分</TD>
-<TD class="tb-cell2">砂漠</TD>
+<TD class="tb-cell2">沙漠</TD>
 <TD class="tb-cell1">讨伐炎妃龍１头<BR>无<BR>无</TD>
 <TD class="tb-cell1">无</TD>
 </TR>
@@ -1124,7 +1140,7 @@ ShowLinks(1, 5);
 <TR>
 <TD class="tb-cell2">0426</TD>
 <TD class="tb-cell2">☆４</TD>
-<TD class="tb-cell51">≪雪山探索≫<BR><A href="./rem4.html#0426">雪原驰骋之幻兽</A></TD>
+<TD class="tb-cell51">≪雪山探索≫<BR><A href="./rem4.html#0426">驰骋雪原之幻兽</A></TD>
 <TD class="tb-cell2"><BR><IMG src="../images/season2.gif" border="0"><BR>繁殖期</TD>
 <TD class="tb-cell3">350ｚ</TD>
 <TD class="tb-cell3">3400ｚ<BR>1000ｚ<BR>0ｚ</TD>
@@ -1181,15 +1197,15 @@ ShowLinks(1, 5);
 <TBODY>
 <TR>
 <TH class="tb-th1" width="40">No.</TH>
-<TH class="tb-th1" width="35">Lev.</TH>
+<TH class="tb-th1" width="35">Lv.</TH>
 <TH class="tb-th1" width="200">任务名</TH>
 <TH class="tb-th1" width="40">季节</TH>
 <TH class="tb-th1" width="50">契约金</TH>
 <TH class="tb-th1" width="50">报酬金</TH>
 <TH class="tb-th1" width="40">HRP</TH>
 <TH class="tb-th1" width="40">时间</TH>
-<TH class="tb-th1" width="50">目的地</TH>
-<TH class="tb-th1" width="180">委托内容</TH>
+<TH class="tb-th1" width="60">目的地</TH>
+<TH class="tb-th1" width="170">委托内容</TH>
 <TH class="tb-th1" width="117">特殊条件</TH>
 </TR>
 <TR>
@@ -1213,15 +1229,15 @@ ShowLinks(1, 5);
 <TBODY>
 <TR>
 <TH class="tb-th1" width="40">No.</TH>
-<TH class="tb-th1" width="35">Lev.</TH>
+<TH class="tb-th1" width="35">Lv.</TH>
 <TH class="tb-th1" width="200">任务名</TH>
 <TH class="tb-th1" width="40">季节</TH>
 <TH class="tb-th1" width="50">契约金</TH>
 <TH class="tb-th1" width="50">报酬金</TH>
 <TH class="tb-th1" width="40">HRP</TH>
 <TH class="tb-th1" width="40">时间</TH>
-<TH class="tb-th1" width="50">目的地</TH>
-<TH class="tb-th1" width="180">委托内容</TH>
+<TH class="tb-th1" width="60">目的地</TH>
+<TH class="tb-th1" width="170">委托内容</TH>
 <TH class="tb-th1" width="117">特殊条件</TH>
 </TR>
 <TR>
@@ -1233,7 +1249,7 @@ ShowLinks(1, 5);
 <TD class="tb-cell3">1800ｚ<BR>0ｚ<BR>0ｚ</TD>
 <TD class="tb-cell3">&nbsp;</TD>
 <TD class="tb-cell3">50分</TD>
-<TD class="tb-cell2">砂漠</TD>
+<TD class="tb-cell2">沙漠</TD>
 <TD class="tb-cell1">狩猎大名盾蟹１头<BR>无<BR>无</TD>
 <TD class="tb-cell1">无</TD>
 </TR>
@@ -1259,7 +1275,7 @@ ShowLinks(1, 5);
 <TD class="tb-cell3">3400ｚ<BR>0ｚ<BR>0ｚ</TD>
 <TD class="tb-cell3">&nbsp;</TD>
 <TD class="tb-cell3">50分</TD>
-<TD class="tb-cell2">砂漠</TD>
+<TD class="tb-cell2">沙漠</TD>
 <TD class="tb-cell1">狩猎一角龙１头<BR>无<BR>无</TD>
 <TD class="tb-cell1">无</TD>
 </TR>
@@ -1279,13 +1295,13 @@ ShowLinks(1, 5);
 <TR>
 <TD class="tb-cell2">138B</TD>
 <TD class="tb-cell2">☆４</TD>
-<TD class="tb-cell51">≪风翔龍・击退作战≫<BR><A href="./rem4.html#138b">呼唤砂岚之龍</A></TD>
+<TD class="tb-cell51">≪风翔龍・击退作战≫<BR><A href="./rem4.html#138b">呼唤沙暴之龍</A></TD>
 <TD class="tb-cell2">&nbsp;</TD>
 <TD class="tb-cell3">0ｚ</TD>
 <TD class="tb-cell3">2500ｚ<BR>0ｚ<BR>0ｚ</TD>
 <TD class="tb-cell3">&nbsp;</TD>
 <TD class="tb-cell3">50分</TD>
-<TD class="tb-cell2">砂漠</TD>
+<TD class="tb-cell2">沙漠</TD>
 <TD class="tb-cell1">击退风翔龍１头<BR>无<BR>无</TD>
 <TD class="tb-cell1">无</TD>
 </TR>
@@ -1318,13 +1334,13 @@ ShowLinks(1, 5);
 <TR>
 <TD class="tb-cell2">138E</TD>
 <TD class="tb-cell2">☆４</TD>
-<TD class="tb-cell51">≪炎妃龍・击退作战≫<BR><A href="./rem4.html#138e">坠于砂之太阳</A></TD>
+<TD class="tb-cell51">≪炎妃龍・击退作战≫<BR><A href="./rem4.html#138e">坠于沙之太阳</A></TD>
 <TD class="tb-cell2">&nbsp;</TD>
 <TD class="tb-cell3">0ｚ</TD>
 <TD class="tb-cell3">2500ｚ<BR>0ｚ<BR>0ｚ</TD>
 <TD class="tb-cell3">&nbsp;</TD>
 <TD class="tb-cell3">50分</TD>
-<TD class="tb-cell2">砂漠</TD>
+<TD class="tb-cell2">沙漠</TD>
 <TD class="tb-cell1">击退炎妃龍１头<BR>无<BR>无</TD>
 <TD class="tb-cell1">无</TD>
 </TR>
@@ -1349,15 +1365,15 @@ ShowLinks(1, 5);
 <TBODY>
 <TR>
 <TH class="tb-th1" width="40">No.</TH>
-<TH class="tb-th1" width="35">Lev.</TH>
+<TH class="tb-th1" width="35">Lv.</TH>
 <TH class="tb-th1" width="200">任务名</TH>
 <TH class="tb-th1" width="40">季节</TH>
 <TH class="tb-th1" width="50">契约金</TH>
 <TH class="tb-th1" width="50">报酬金</TH>
 <TH class="tb-th1" width="40">HRP</TH>
 <TH class="tb-th1" width="40">时间</TH>
-<TH class="tb-th1" width="50">目的地</TH>
-<TH class="tb-th1" width="180">委托内容</TH>
+<TH class="tb-th1" width="60">目的地</TH>
+<TH class="tb-th1" width="170">委托内容</TH>
 <TH class="tb-th1" width="117">特殊条件</TH>
 </TR>
 <TR>
@@ -1636,14 +1652,14 @@ ShowLinks(1, 5);
 <TR>
 <TD class="tb-cell2">0067</TD>
 <TD class="tb-cell2">☆２</TD>
-<TD class="tb-cell51">≪狩猎演习≫<BR><A href="./rem2.html#0067">制止砂漠之暴走族！</A></TD>
+<TD class="tb-cell51">≪狩猎演习≫<BR><A href="./rem2.html#0067">制止沙漠之暴走族！</A></TD>
 <TD class="tb-cell2">&nbsp;</TD>
 <TD class="tb-cell3">0ｚ</TD>
 <TD class="tb-cell3">450ｐ<BR>250ｐ<BR>450ｐ</TD>
 <TD class="tb-cell3">&nbsp;</TD>
 <TD class="tb-cell3">50分</TD>
-<TD class="tb-cell2">砂漠</TD>
-<TD class="tb-cell1">讨伐砂龙３只<BR>交纳炸裂沙丁鱼４条<BR>交纳黄速龙的麻痹牙１０颗</TD>
+<TD class="tb-cell2">沙漠</TD>
+<TD class="tb-cell1">讨伐沙龙３只<BR>交纳炸裂沙丁鱼４条<BR>交纳黄速龙的麻痹牙１０颗</TD>
 <TD class="tb-cell1">无</TD>
 </TR>
 <TR>
@@ -1668,7 +1684,7 @@ ShowLinks(1, 5);
 <TD class="tb-cell3">1000ｐ<BR>400ｐ<BR>450ｐ</TD>
 <TD class="tb-cell3">&nbsp;</TD>
 <TD class="tb-cell3">50分</TD>
-<TD class="tb-cell2">砂漠</TD>
+<TD class="tb-cell2">沙漠</TD>
 <TD class="tb-cell1">交纳草食龙的卵２枚<BR>交纳鱼龙的牙２颗<BR>交纳薄片仙人掌１０个</TD>
 <TD class="tb-cell1">无</TD>
 </TR>
@@ -1682,7 +1698,7 @@ ShowLinks(1, 5);
 <TD class="tb-cell3">&nbsp;</TD>
 <TD class="tb-cell3">50分</TD>
 <TD class="tb-cell2">密林</TD>
-<TD class="tb-cell1">狩猎雌火龙１头<BR>交纳飞龙的卵１枚<BR>交纳切味鱼４条</TD>
+<TD class="tb-cell1">狩猎雌火龙１头<BR>交纳飞龙的卵１枚<BR>交纳刀背鱼４条</TD>
 <TD class="tb-cell1">无</TD>
 </TR>
 <TR>
@@ -1720,7 +1736,7 @@ ShowLinks(1, 5);
 <TD class="tb-cell3">2500ｐ<BR>750ｐ<BR>350ｐ</TD>
 <TD class="tb-cell3">&nbsp;</TD>
 <TD class="tb-cell3">50分</TD>
-<TD class="tb-cell2">砂漠</TD>
+<TD class="tb-cell2">沙漠</TD>
 <TD class="tb-cell1">讨伐大名盾蟹１头<BR>讨伐小盾蟹６只<BR>交纳煌甲虫５只</TD>
 <TD class="tb-cell1">无</TD>
 </TR>

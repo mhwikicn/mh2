@@ -8,6 +8,22 @@
 <LINK rel="stylesheet" href="../table.css" type="text/css">
 <SCRIPT src="../scripts/links.js"></SCRIPT>
 </HEAD>
+<STYLE>
+.highlight-row td,
+.highlight-row th {
+  background-color: #c7edcc !important;
+  transition: background-color 0.3s ease;
+}
+.cnt-tb2 > tbody:first-child > tr:first-child {
+  position: sticky;
+  top: 0;
+  background-color: #996633;
+  z-index: 10;
+}
+.cnt-tb2 td[id] {
+  scroll-margin-top: 22px;
+}
+</STYLE>
 <BODY>
 <HR>
 <TABLE border="0" width="910">
@@ -31,15 +47,15 @@ ShowLinks(1, 4);
 <TBODY>
 <TR>
 <TH class="tb-th1" width="40">No.</TH>
-<TH class="tb-th1" width="35">Lev.</TH>
+<TH class="tb-th1" width="35">Lv.</TH>
 <TH class="tb-th1" width="200">任务名</TH>
 <TH class="tb-th1" width="40">季节</TH>
 <TH class="tb-th1" width="50">契约金</TH>
 <TH class="tb-th1" width="50">报酬金</TH>
 <TH class="tb-th1" width="40">HRP</TH>
 <TH class="tb-th1" width="40">时间</TH>
-<TH class="tb-th1" width="50">目的地</TH>
-<TH class="tb-th1" width="180">委托内容</TH>
+<TH class="tb-th1" width="60">目的地</TH>
+<TH class="tb-th1" width="170">委托内容</TH>
 <TH class="tb-th1" width="117">特殊条件</TH>
 </TR>
 <TR>
@@ -110,7 +126,7 @@ ShowLinks(1, 4);
 <TR>
 <TD class="tb-cell2">2B1B</TD>
 <TD class="tb-cell2">★１</TD>
-<TD class="tb-cell51">≪沼地探索≫<BR><A href="./rem1.html#2b1b">湿地驰骋之毒怪鸟</A></TD>
+<TD class="tb-cell51">≪沼地探索≫<BR><A href="./rem1.html#2b1b">驰骋湿地之毒怪鸟</A></TD>
 <TD class="tb-cell2"><BR><IMG src="../images/season0.gif" border="0"><BR>温暖期</TD>
 <TD class="tb-cell3">250ｚ</TD>
 <TD class="tb-cell3">2800ｚ<BR>2400ｚ<BR>400ｚ</TD>
@@ -136,7 +152,7 @@ ShowLinks(1, 4);
 <TR>
 <TD class="tb-cell2">2B30</TD>
 <TD class="tb-cell2">★１</TD>
-<TD class="tb-cell51">≪火山探索≫<BR><A href="./rem1.html#2b30">以毒治毒</A></TD>
+<TD class="tb-cell51">≪火山探索≫<BR><A href="./rem1.html#2b30">御毒之毒</A></TD>
 <TD class="tb-cell2"><BR><IMG src="../images/season0.gif" border="0"><BR>温暖期</TD>
 <TD class="tb-cell3">200ｚ</TD>
 <TD class="tb-cell3">1800ｚ<BR>1050ｚ<BR>0ｚ</TD>
@@ -201,7 +217,7 @@ ShowLinks(1, 4);
 <TR>
 <TD class="tb-cell2">2B28</TD>
 <TD class="tb-cell2">★２</TD>
-<TD class="tb-cell51">≪雪山探索≫<BR><A href="./rem2.html#2b28">雪原匍匐之赤影</A></TD>
+<TD class="tb-cell51">≪雪山探索≫<BR><A href="./rem2.html#2b28">匍匐雪原之赤影</A></TD>
 <TD class="tb-cell2"><BR><IMG src="../images/season0.gif" border="0"><BR>温暖期</TD>
 <TD class="tb-cell3">350ｚ</TD>
 <TD class="tb-cell3">4400ｚ<BR>0ｚ<BR>0ｚ</TD>
@@ -214,7 +230,7 @@ ShowLinks(1, 4);
 <TR>
 <TD class="tb-cell2">2B1F</TD>
 <TD class="tb-cell2">★３</TD>
-<TD class="tb-cell51">≪沼地探索≫<BR><A href="./rem3.html#2b1f">湿地潜伏之大镰</A></TD>
+<TD class="tb-cell51">≪沼地探索≫<BR><A href="./rem3.html#2b1f">潜伏湿地之大镰</A></TD>
 <TD class="tb-cell2"><BR><IMG src="../images/season0.gif" border="0"><BR>温暖期</TD>
 <TD class="tb-cell3">300ｚ</TD>
 <TD class="tb-cell3">5600ｚ<BR>1000ｚ<BR>2200ｚ</TD>
@@ -292,14 +308,14 @@ ShowLinks(1, 4);
 <TR>
 <TD class="tb-cell2">2B2C</TD>
 <TD class="tb-cell2">★４</TD>
-<TD class="tb-cell51">≪雪山探索≫<BR><A href="./rem4.html#2b2c">雪原驰骋之幻兽</A></TD>
+<TD class="tb-cell51">≪雪山探索≫<BR><A href="./rem4.html#2b2c">驰骋雪原之幻兽</A></TD>
 <TD class="tb-cell2"><BR><IMG src="../images/season0.gif" border="0"><BR>温暖期</TD>
 <TD class="tb-cell3">450ｚ</TD>
 <TD class="tb-cell3">7200ｚ<BR>500ｚ<BR>0ｚ</TD>
 <TD class="tb-cell3">800<BR>100<BR>0</TD>
 <TD class="tb-cell3">50分</TD>
 <TD class="tb-cell2">雪山</TD>
-<TD class="tb-cell1">讨伐麒麟１头<BR>将公会烽旗升起于山顶<BR>无</TD>
+<TD class="tb-cell1">讨伐麒麟１头<BR>将公会旗帜升起于山顶<BR>无</TD>
 <TD class="tb-cell1">参加资格为<BR>ＨＲ２０以上</TD>
 </TR>
 <TR>
@@ -370,13 +386,13 @@ ShowLinks(1, 4);
 <TR>
 <TD class="tb-cell2">2B0B</TD>
 <TD class="tb-cell2">★１</TD>
-<TD class="tb-cell51">≪砂漠探索≫<BR><A href="./rem1.html#2b0b">砂漠跃动之猎手</A></TD>
+<TD class="tb-cell51">≪沙漠探索≫<BR><A href="./rem1.html#2b0b">跃于沙漠之猎手</A></TD>
 <TD class="tb-cell2"><BR><IMG src="../images/season1.gif" border="0"><BR>寒冷期</TD>
 <TD class="tb-cell3">200ｚ</TD>
 <TD class="tb-cell3">1600ｚ<BR>800ｚ<BR>1600ｚ</TD>
 <TD class="tb-cell3">170<BR>60<BR>60</TD>
 <TD class="tb-cell3">50分</TD>
-<TD class="tb-cell2">砂漠</TD>
+<TD class="tb-cell2">沙漠</TD>
 <TD class="tb-cell1">狩猎黄速龙王１头<BR>讨伐黄速龙１２只<BR>交纳百花仙人掌４个</TD>
 <TD class="tb-cell1">无</TD>
 </TR>
@@ -448,20 +464,20 @@ ShowLinks(1, 4);
 <TR>
 <TD class="tb-cell2">2B0D</TD>
 <TD class="tb-cell2">★２</TD>
-<TD class="tb-cell51">≪砂漠探索≫<BR><A href="./rem2.html#2b0d">畅游砂中之龙</A></TD>
+<TD class="tb-cell51">≪沙漠探索≫<BR><A href="./rem2.html#2b0d">畅游沙中之龙</A></TD>
 <TD class="tb-cell2"><BR><IMG src="../images/season1.gif" border="0"><BR>寒冷期</TD>
 <TD class="tb-cell3">300ｚ</TD>
 <TD class="tb-cell3">3200ｚ<BR>2000ｚ<BR>1200ｚ</TD>
 <TD class="tb-cell3">330<BR>150<BR>150</TD>
 <TD class="tb-cell3">50分</TD>
-<TD class="tb-cell2">砂漠</TD>
-<TD class="tb-cell1">狩猎砂龙王１头<BR>交纳鱼龙的肝６个<BR>讨伐砂龙８只</TD>
+<TD class="tb-cell2">沙漠</TD>
+<TD class="tb-cell1">狩猎沙龙王１头<BR>交纳鱼龙的肝６个<BR>讨伐沙龙８只</TD>
 <TD class="tb-cell1">无</TD>
 </TR>
 <TR>
 <TD class="tb-cell2">2B1E</TD>
 <TD class="tb-cell2">★２</TD>
-<TD class="tb-cell51">≪沼地探索≫<BR><A href="./rem2.html#2b1e">沼地舞动之女王</A></TD>
+<TD class="tb-cell51">≪沼地探索≫<BR><A href="./rem2.html#2b1e">起舞沼地之女王</A></TD>
 <TD class="tb-cell2"><BR><IMG src="../images/season1.gif" border="0"><BR>寒冷期</TD>
 <TD class="tb-cell3">350ｚ</TD>
 <TD class="tb-cell3">4400ｚ<BR>1800ｚ<BR>600ｚ</TD>
@@ -474,7 +490,7 @@ ShowLinks(1, 4);
 <TR>
 <TD class="tb-cell2">2B3D</TD>
 <TD class="tb-cell2">★２</TD>
-<TD class="tb-cell51">≪沼地探索≫<BR><A href="./rem2.html#2b3d">暗中匍匐之白影</A></TD>
+<TD class="tb-cell51">≪沼地探索≫<BR><A href="./rem2.html#2b3d">匍匐暗中之白影</A></TD>
 <TD class="tb-cell2"><BR><IMG src="../images/season1.gif" border="0"><BR>寒冷期</TD>
 <TD class="tb-cell3">350ｚ</TD>
 <TD class="tb-cell3">4400ｚ<BR>1200ｚ<BR>600ｚ</TD>
@@ -487,26 +503,26 @@ ShowLinks(1, 4);
 <TR>
 <TD class="tb-cell2">2B0F</TD>
 <TD class="tb-cell2">★３</TD>
-<TD class="tb-cell51">≪砂漠探索≫<BR><A href="./rem3.html#2b0f">深潜水中之翡翠</A></TD>
+<TD class="tb-cell51">≪沙漠探索≫<BR><A href="./rem3.html#2b0f">深潜水中之翡翠</A></TD>
 <TD class="tb-cell2"><BR><IMG src="../images/season1.gif" border="0"><BR>寒冷期</TD>
 <TD class="tb-cell3">400ｚ</TD>
 <TD class="tb-cell3">5200ｚ<BR>0ｚ<BR>0ｚ</TD>
 <TD class="tb-cell3">590<BR>0<BR>0</TD>
 <TD class="tb-cell3">50分</TD>
-<TD class="tb-cell2">砂漠</TD>
+<TD class="tb-cell2">沙漠</TD>
 <TD class="tb-cell1">狩猎水龙亚种１头<BR>无<BR>无</TD>
 <TD class="tb-cell1">参加资格为<BR>ＨＲ１５以上</TD>
 </TR>
 <TR>
 <TD class="tb-cell2">2B12</TD>
 <TD class="tb-cell2">★３</TD>
-<TD class="tb-cell51">≪砂漠探索≫<BR><A href="./rem3.html#2b12">穷凶极恶之角龙</A></TD>
+<TD class="tb-cell51">≪沙漠探索≫<BR><A href="./rem3.html#2b12">穷凶极恶之角龙</A></TD>
 <TD class="tb-cell2"><BR><IMG src="../images/season1.gif" border="0"><BR>寒冷期</TD>
 <TD class="tb-cell3">400ｚ</TD>
 <TD class="tb-cell3">6000ｚ<BR>2000ｚ<BR>800ｚ</TD>
 <TD class="tb-cell3">720<BR>150<BR>60</TD>
 <TD class="tb-cell3">50分</TD>
-<TD class="tb-cell2">砂漠</TD>
+<TD class="tb-cell2">沙漠</TD>
 <TD class="tb-cell1">狩猎角龙１头<BR>破坏角龙的双角<BR>交纳秘密的袋子６个</TD>
 <TD class="tb-cell1">参加资格为<BR>ＨＲ１５以上</TD>
 </TR>
@@ -565,26 +581,26 @@ ShowLinks(1, 4);
 <TR>
 <TD class="tb-cell2">2B14</TD>
 <TD class="tb-cell2">★４</TD>
-<TD class="tb-cell51">≪砂漠探索≫<BR><A href="./rem4.html#2b14">呼唤砂岚之龍</A></TD>
+<TD class="tb-cell51">≪沙漠探索≫<BR><A href="./rem4.html#2b14">呼唤沙暴之龍</A></TD>
 <TD class="tb-cell2"><BR><IMG src="../images/season1.gif" border="0"><BR>寒冷期</TD>
 <TD class="tb-cell3">500ｚ</TD>
 <TD class="tb-cell3">8200ｚ<BR>0ｚ<BR>0ｚ</TD>
 <TD class="tb-cell3">1300<BR>0<BR>0</TD>
 <TD class="tb-cell3">50分</TD>
-<TD class="tb-cell2">砂漠</TD>
+<TD class="tb-cell2">沙漠</TD>
 <TD class="tb-cell1">讨伐风翔龍１头<BR>无<BR>无</TD>
 <TD class="tb-cell1">参加资格为<BR>ＨＲ２０以上</TD>
 </TR>
 <TR>
 <TD class="tb-cell2">2B16</TD>
 <TD class="tb-cell2">★４</TD>
-<TD class="tb-cell51">≪砂漠探索≫<BR><A href="./rem4.html#2b16">烧灼热砂之业炎</A></TD>
+<TD class="tb-cell51">≪沙漠探索≫<BR><A href="./rem4.html#2b16">烧灼热沙之业炎</A></TD>
 <TD class="tb-cell2"><BR><IMG src="../images/season1.gif" border="0"><BR>寒冷期</TD>
 <TD class="tb-cell3">500ｚ</TD>
 <TD class="tb-cell3">8400ｚ<BR>0ｚ<BR>0ｚ</TD>
 <TD class="tb-cell3">1400<BR>0<BR>0</TD>
 <TD class="tb-cell3">50分</TD>
-<TD class="tb-cell2">砂漠</TD>
+<TD class="tb-cell2">沙漠</TD>
 <TD class="tb-cell1">讨伐炎王龍１头<BR>无<BR>无</TD>
 <TD class="tb-cell1">参加资格为<BR>ＨＲ２０以上</TD>
 </TR>
@@ -643,13 +659,13 @@ ShowLinks(1, 4);
 <TR>
 <TD class="tb-cell2">2B0C</TD>
 <TD class="tb-cell2">★１</TD>
-<TD class="tb-cell51">≪砂漠探索≫<BR><A href="./rem1.html#2b0c">砂漠跃动之猎手</A></TD>
+<TD class="tb-cell51">≪沙漠探索≫<BR><A href="./rem1.html#2b0c">跃于沙漠之猎手</A></TD>
 <TD class="tb-cell2"><BR><IMG src="../images/season2.gif" border="0"><BR>繁殖期</TD>
 <TD class="tb-cell3">200ｚ</TD>
 <TD class="tb-cell3">1600ｚ<BR>4500ｚ<BR>800ｚ</TD>
 <TD class="tb-cell3">170<BR>250<BR>40</TD>
 <TD class="tb-cell3">50分</TD>
-<TD class="tb-cell2">砂漠</TD>
+<TD class="tb-cell2">沙漠</TD>
 <TD class="tb-cell1">狩猎黄速龙王１头<BR>交纳草食龙的卵３枚<BR>讨伐甲壳草食龙８只</TD>
 <TD class="tb-cell1">无</TD>
 </TR>
@@ -669,7 +685,7 @@ ShowLinks(1, 4);
 <TR>
 <TD class="tb-cell2">2B1D</TD>
 <TD class="tb-cell2">★１</TD>
-<TD class="tb-cell51">≪沼地探索≫<BR><A href="./rem1.html#2b1d">湿地驰骋之毒怪鸟</A></TD>
+<TD class="tb-cell51">≪沼地探索≫<BR><A href="./rem1.html#2b1d">驰骋湿地之毒怪鸟</A></TD>
 <TD class="tb-cell2"><BR><IMG src="../images/season2.gif" border="0"><BR>繁殖期</TD>
 <TD class="tb-cell3">250ｚ</TD>
 <TD class="tb-cell3">2800ｚ<BR>2400ｚ<BR>1000ｚ</TD>
@@ -734,26 +750,26 @@ ShowLinks(1, 4);
 <TR>
 <TD class="tb-cell2">2B0E</TD>
 <TD class="tb-cell2">★２</TD>
-<TD class="tb-cell51">≪砂漠探索≫<BR><A href="./rem2.html#2b0e">亡骸之继承者</A></TD>
+<TD class="tb-cell51">≪沙漠探索≫<BR><A href="./rem2.html#2b0e">亡骸之继承者</A></TD>
 <TD class="tb-cell2"><BR><IMG src="../images/season2.gif" border="0"><BR>繁殖期</TD>
 <TD class="tb-cell3">300ｚ</TD>
 <TD class="tb-cell3">3600ｚ<BR>1000ｚ<BR>800ｚ</TD>
 <TD class="tb-cell3">350<BR>80<BR>60</TD>
 <TD class="tb-cell3">50分</TD>
-<TD class="tb-cell2">砂漠</TD>
+<TD class="tb-cell2">沙漠</TD>
 <TD class="tb-cell1">狩猎大名盾蟹１头<BR>交纳蟹黄８个<BR>讨伐黄速龙１２只</TD>
 <TD class="tb-cell1">无</TD>
 </TR>
 <TR>
 <TD class="tb-cell2">2B11</TD>
 <TD class="tb-cell2">★２</TD>
-<TD class="tb-cell51">≪砂漠探索≫<BR><A href="./rem2.html#2b11">砂漠绽放之樱</A></TD>
+<TD class="tb-cell51">≪沙漠探索≫<BR><A href="./rem2.html#2b11">绽于沙漠之樱</A></TD>
 <TD class="tb-cell2"><BR><IMG src="../images/season2.gif" border="0"><BR>繁殖期</TD>
 <TD class="tb-cell3">350ｚ</TD>
 <TD class="tb-cell3">4400ｚ<BR>0ｚ<BR>0ｚ</TD>
 <TD class="tb-cell3">470<BR>0<BR>0</TD>
 <TD class="tb-cell3">50分</TD>
-<TD class="tb-cell2">砂漠</TD>
+<TD class="tb-cell2">沙漠</TD>
 <TD class="tb-cell1">狩猎雌火龙亚种１头<BR>无<BR>无</TD>
 <TD class="tb-cell1">参加资格为<BR>ＨＲ８以上</TD>
 </TR>
@@ -773,7 +789,7 @@ ShowLinks(1, 4);
 <TR>
 <TD class="tb-cell2">2B29</TD>
 <TD class="tb-cell2">★２</TD>
-<TD class="tb-cell51">≪雪山探索≫<BR><A href="./rem2.html#2b29">暗中匍匐之白影</A></TD>
+<TD class="tb-cell51">≪雪山探索≫<BR><A href="./rem2.html#2b29">匍匐暗中之白影</A></TD>
 <TD class="tb-cell2"><BR><IMG src="../images/season2.gif" border="0"><BR>繁殖期</TD>
 <TD class="tb-cell3">350ｚ</TD>
 <TD class="tb-cell3">4400ｚ<BR>1200ｚ<BR>1600ｚ</TD>
@@ -786,33 +802,33 @@ ShowLinks(1, 4);
 <TR>
 <TD class="tb-cell2">2B10</TD>
 <TD class="tb-cell2">★３</TD>
-<TD class="tb-cell51">≪砂漠探索≫<BR><A href="./rem3.html#2b10">地底湖之水龙</A></TD>
+<TD class="tb-cell51">≪沙漠探索≫<BR><A href="./rem3.html#2b10">地底湖之水龙</A></TD>
 <TD class="tb-cell2"><BR><IMG src="../images/season2.gif" border="0"><BR>繁殖期</TD>
 <TD class="tb-cell3">400ｚ</TD>
 <TD class="tb-cell3">5200ｚ<BR>600ｚ<BR>1000ｚ</TD>
 <TD class="tb-cell3">600<BR>50<BR>20</TD>
 <TD class="tb-cell3">50分</TD>
-<TD class="tb-cell2">砂漠</TD>
+<TD class="tb-cell2">沙漠</TD>
 <TD class="tb-cell1">狩猎水龙１头<BR>钓上水龙１次<BR>交纳黄金鱼４条</TD>
 <TD class="tb-cell1">参加资格为<BR>ＨＲ１５以上</TD>
 </TR>
 <TR>
 <TD class="tb-cell2">2B13</TD>
 <TD class="tb-cell2">★３</TD>
-<TD class="tb-cell51">≪砂漠探索≫<BR><A href="./rem3.html#2b13">漆黑之双角</A></TD>
+<TD class="tb-cell51">≪沙漠探索≫<BR><A href="./rem3.html#2b13">漆黑之双角</A></TD>
 <TD class="tb-cell2"><BR><IMG src="../images/season2.gif" border="0"><BR>繁殖期</TD>
 <TD class="tb-cell3">400ｚ</TD>
 <TD class="tb-cell3">6000ｚ<BR>0ｚ<BR>0ｚ</TD>
 <TD class="tb-cell3">710<BR>0<BR>0</TD>
 <TD class="tb-cell3">50分</TD>
-<TD class="tb-cell2">砂漠</TD>
+<TD class="tb-cell2">沙漠</TD>
 <TD class="tb-cell1">狩猎角龙亚种１头<BR>无<BR>无</TD>
 <TD class="tb-cell1">参加资格为<BR>ＨＲ１５以上</TD>
 </TR>
 <TR>
 <TD class="tb-cell2">2B20</TD>
 <TD class="tb-cell2">★３</TD>
-<TD class="tb-cell51">≪沼地探索≫<BR><A href="./rem3.html#2b20">湿地潜伏之大镰</A></TD>
+<TD class="tb-cell51">≪沼地探索≫<BR><A href="./rem3.html#2b20">潜伏湿地之大镰</A></TD>
 <TD class="tb-cell2"><BR><IMG src="../images/season2.gif" border="0"><BR>繁殖期</TD>
 <TD class="tb-cell3">300ｚ</TD>
 <TD class="tb-cell3">5600ｚ<BR>2400ｚ<BR>800ｚ</TD>
@@ -864,26 +880,26 @@ ShowLinks(1, 4);
 <TR>
 <TD class="tb-cell2">2B15</TD>
 <TD class="tb-cell2">★４</TD>
-<TD class="tb-cell51">≪砂漠探索≫<BR><A href="./rem4.html#2b15">呼唤砂岚之龍</A></TD>
+<TD class="tb-cell51">≪沙漠探索≫<BR><A href="./rem4.html#2b15">呼唤沙暴之龍</A></TD>
 <TD class="tb-cell2"><BR><IMG src="../images/season2.gif" border="0"><BR>繁殖期</TD>
 <TD class="tb-cell3">500ｚ</TD>
 <TD class="tb-cell3">8200ｚ<BR>0ｚ<BR>0ｚ</TD>
 <TD class="tb-cell3">1300<BR>0<BR>0</TD>
 <TD class="tb-cell3">50分</TD>
-<TD class="tb-cell2">砂漠</TD>
+<TD class="tb-cell2">沙漠</TD>
 <TD class="tb-cell1">讨伐风翔龍１头<BR>无<BR>无</TD>
 <TD class="tb-cell1">参加资格为<BR>ＨＲ２０以上</TD>
 </TR>
 <TR>
 <TD class="tb-cell2">2B17</TD>
 <TD class="tb-cell2">★４</TD>
-<TD class="tb-cell51">≪砂漠探索≫<BR><A href="./rem4.html#2b17">烧灼热砂之业炎</A></TD>
+<TD class="tb-cell51">≪沙漠探索≫<BR><A href="./rem4.html#2b17">烧灼热沙之业炎</A></TD>
 <TD class="tb-cell2"><BR><IMG src="../images/season2.gif" border="0"><BR>繁殖期</TD>
 <TD class="tb-cell3">500ｚ</TD>
 <TD class="tb-cell3">8400ｚ<BR>0ｚ<BR>0ｚ</TD>
 <TD class="tb-cell3">1400<BR>0<BR>0</TD>
 <TD class="tb-cell3">50分</TD>
-<TD class="tb-cell2">砂漠</TD>
+<TD class="tb-cell2">沙漠</TD>
 <TD class="tb-cell1">讨伐炎王龍１头<BR>无<BR>无</TD>
 <TD class="tb-cell1">参加资格为<BR>ＨＲ２０以上</TD>
 </TR>
@@ -903,7 +919,7 @@ ShowLinks(1, 4);
 <TR>
 <TD class="tb-cell2">2B2D</TD>
 <TD class="tb-cell2">★４</TD>
-<TD class="tb-cell51">≪雪山探索≫<BR><A href="./rem4.html#2b2d">雪原驰骋之幻兽</A></TD>
+<TD class="tb-cell51">≪雪山探索≫<BR><A href="./rem4.html#2b2d">驰骋雪原之幻兽</A></TD>
 <TD class="tb-cell2"><BR><IMG src="../images/season2.gif" border="0"><BR>繁殖期</TD>
 <TD class="tb-cell3">450ｚ</TD>
 <TD class="tb-cell3">7200ｚ<BR>600ｚ<BR>0ｚ</TD>
@@ -947,15 +963,15 @@ ShowLinks(1, 4);
 <TBODY>
 <TR>
 <TH class="tb-th1" width="40">No.</TH>
-<TH class="tb-th1" width="35">Lev.</TH>
+<TH class="tb-th1" width="35">Lv.</TH>
 <TH class="tb-th1" width="200">任务名</TH>
 <TH class="tb-th1" width="40">季节</TH>
 <TH class="tb-th1" width="50">契约金</TH>
 <TH class="tb-th1" width="50">报酬金</TH>
 <TH class="tb-th1" width="40">HRP</TH>
 <TH class="tb-th1" width="40">时间</TH>
-<TH class="tb-th1" width="50">目的地</TH>
-<TH class="tb-th1" width="180">委托内容</TH>
+<TH class="tb-th1" width="60">目的地</TH>
+<TH class="tb-th1" width="170">委托内容</TH>
 <TH class="tb-th1" width="117">特殊条件</TH>
 </TR>
 <TR>
@@ -1000,7 +1016,7 @@ ShowLinks(1, 4);
 <TR>
 <TD class="tb-cell2">2EE9</TD>
 <TD class="tb-cell2">★５</TD>
-<TD class="tb-cell51">≪密林探索≫<BR><A href="./rem5.html#2ee9">毒之岚</A></TD>
+<TD class="tb-cell51">≪密林探索≫<BR><A href="./rem5.html#2ee9">毒风暴</A></TD>
 <TD class="tb-cell2"><BR><IMG src="../images/season0.gif" border="0"><BR>温暖期</TD>
 <TD class="tb-cell3">250ｚ</TD>
 <TD class="tb-cell3">3400ｚ<BR>3400ｚ<BR>0ｚ</TD>
@@ -1039,7 +1055,7 @@ ShowLinks(1, 4);
 <TR>
 <TD class="tb-cell2">2F05</TD>
 <TD class="tb-cell2">★５</TD>
-<TD class="tb-cell51">≪沼地探索≫<BR><A href="./rem5.html#2f05">湿地驰骋之毒怪鸟</A></TD>
+<TD class="tb-cell51">≪沼地探索≫<BR><A href="./rem5.html#2f05">驰骋湿地之毒怪鸟</A></TD>
 <TD class="tb-cell2"><BR><IMG src="../images/season0.gif" border="0"><BR>温暖期</TD>
 <TD class="tb-cell3">250ｚ</TD>
 <TD class="tb-cell3">3400ｚ<BR>2700ｚ<BR>300ｚ</TD>
@@ -1065,7 +1081,7 @@ ShowLinks(1, 4);
 <TR>
 <TD class="tb-cell2">2F1D</TD>
 <TD class="tb-cell2">★５</TD>
-<TD class="tb-cell51">≪火山探索≫<BR><A href="./rem5.html#2f1d">以毒治毒</A></TD>
+<TD class="tb-cell51">≪火山探索≫<BR><A href="./rem5.html#2f1d">御毒之毒</A></TD>
 <TD class="tb-cell2"><BR><IMG src="../images/season0.gif" border="0"><BR>温暖期</TD>
 <TD class="tb-cell3">200ｚ</TD>
 <TD class="tb-cell3">2400ｚ<BR>1050ｚ<BR>0ｚ</TD>
@@ -1130,7 +1146,7 @@ ShowLinks(1, 4);
 <TR>
 <TD class="tb-cell2">2F14</TD>
 <TD class="tb-cell2">★６</TD>
-<TD class="tb-cell51">≪雪山探索≫<BR><A href="./rem6.html#2f14">雪原匍匐之赤影</A></TD>
+<TD class="tb-cell51">≪雪山探索≫<BR><A href="./rem6.html#2f14">匍匐雪原之赤影</A></TD>
 <TD class="tb-cell2"><BR><IMG src="../images/season0.gif" border="0"><BR>温暖期</TD>
 <TD class="tb-cell3">350ｚ</TD>
 <TD class="tb-cell3">5800ｚ<BR>0ｚ<BR>0ｚ</TD>
@@ -1156,7 +1172,7 @@ ShowLinks(1, 4);
 <TR>
 <TD class="tb-cell2">2F0A</TD>
 <TD class="tb-cell2">★７</TD>
-<TD class="tb-cell51">≪沼地探索≫<BR><A href="./rem7.html#2f0a">湿地潜伏之大镰</A></TD>
+<TD class="tb-cell51">≪沼地探索≫<BR><A href="./rem7.html#2f0a">潜伏湿地之大镰</A></TD>
 <TD class="tb-cell2"><BR><IMG src="../images/season0.gif" border="0"><BR>温暖期</TD>
 <TD class="tb-cell3">400ｚ</TD>
 <TD class="tb-cell3">7200ｚ<BR>1000ｚ<BR>2200ｚ</TD>
@@ -1216,7 +1232,7 @@ ShowLinks(1, 4);
 <TD class="tb-cell3">50分</TD>
 <TD class="tb-cell2">密林</TD>
 <TD class="tb-cell1">讨伐风翔龍１头<BR>无<BR>无</TD>
-<TD class="tb-cell1">受注資格は<BR>ＨＲ４１以上<BR>参加资格为<BR>ＨＲ３８以上</TD>
+<TD class="tb-cell1">接受资格为<BR>ＨＲ４１以上<BR>参加资格为<BR>ＨＲ３８以上</TD>
 </TR>
 <TR>
 <TD class="tb-cell2">2F0F</TD>
@@ -1229,7 +1245,7 @@ ShowLinks(1, 4);
 <TD class="tb-cell3">50分</TD>
 <TD class="tb-cell2">沼地</TD>
 <TD class="tb-cell1">讨伐霞龍１头<BR>无<BR>无</TD>
-<TD class="tb-cell1">受注資格は<BR>ＨＲ４１以上<BR>参加资格为<BR>ＨＲ３８以上</TD>
+<TD class="tb-cell1">接受资格为<BR>ＨＲ４１以上<BR>参加资格为<BR>ＨＲ３８以上</TD>
 </TR>
 <TR>
 <TD class="tb-cell2">2F11</TD>
@@ -1242,20 +1258,20 @@ ShowLinks(1, 4);
 <TD class="tb-cell3">50分</TD>
 <TD class="tb-cell2">沼地</TD>
 <TD class="tb-cell1">讨伐炎王龍１头<BR>无<BR>无</TD>
-<TD class="tb-cell1">受注資格は<BR>ＨＲ４１以上<BR>参加资格为<BR>ＨＲ３８以上</TD>
+<TD class="tb-cell1">接受资格为<BR>ＨＲ４１以上<BR>参加资格为<BR>ＨＲ３８以上</TD>
 </TR>
 <TR>
 <TD class="tb-cell2">2F19</TD>
 <TD class="tb-cell2">★８</TD>
-<TD class="tb-cell51">≪雪山探索≫<BR><A href="./rem8.html#2f19">雪原驰骋之幻兽</A></TD>
+<TD class="tb-cell51">≪雪山探索≫<BR><A href="./rem8.html#2f19">驰骋雪原之幻兽</A></TD>
 <TD class="tb-cell2"><BR><IMG src="../images/season0.gif" border="0"><BR>温暖期</TD>
 <TD class="tb-cell3">450ｚ</TD>
 <TD class="tb-cell3">8400ｚ<BR>500ｚ<BR>0ｚ</TD>
 <TD class="tb-cell3">1200<BR>100<BR>0</TD>
 <TD class="tb-cell3">50分</TD>
 <TD class="tb-cell2">雪山</TD>
-<TD class="tb-cell1">狩猎麒麟１头<BR>将公会烽旗升起于山顶<BR>无</TD>
-<TD class="tb-cell1">受注資格は<BR>ＨＲ４１以上<BR>参加资格为<BR>ＨＲ３８以上</TD>
+<TD class="tb-cell1">狩猎麒麟１头<BR>将公会旗帜升起于山顶<BR>无</TD>
+<TD class="tb-cell1">接受资格为<BR>ＨＲ４１以上<BR>参加资格为<BR>ＨＲ３８以上</TD>
 </TR>
 <TR>
 <TD class="tb-cell2">2F1B</TD>
@@ -1268,7 +1284,7 @@ ShowLinks(1, 4);
 <TD class="tb-cell3">50分</TD>
 <TD class="tb-cell2">雪山</TD>
 <TD class="tb-cell1">讨伐风翔龍１头<BR>切断风翔龍的尾巴<BR>无</TD>
-<TD class="tb-cell1">受注資格は<BR>ＨＲ４１以上<BR>参加资格为<BR>ＨＲ３８以上</TD>
+<TD class="tb-cell1">接受资格为<BR>ＨＲ４１以上<BR>参加资格为<BR>ＨＲ３８以上</TD>
 </TR>
 <TR>
 <TD class="tb-cell2">2F24</TD>
@@ -1294,7 +1310,7 @@ ShowLinks(1, 4);
 <TD class="tb-cell3">50分</TD>
 <TD class="tb-cell2">火山</TD>
 <TD class="tb-cell1">讨伐炎王龍１头<BR>切断炎王龍的尾巴<BR>无</TD>
-<TD class="tb-cell1">受注資格は<BR>ＨＲ４１以上<BR>参加资格为<BR>ＨＲ３８以上</TD>
+<TD class="tb-cell1">接受资格为<BR>ＨＲ４１以上<BR>参加资格为<BR>ＨＲ３８以上</TD>
 </TR>
 <TR>
 <TD class="tb-cell2">2F2A</TD>
@@ -1307,7 +1323,7 @@ ShowLinks(1, 4);
 <TD class="tb-cell3">50分</TD>
 <TD class="tb-cell2">森丘</TD>
 <TD class="tb-cell1">讨伐霞龍１头<BR>破坏霞龍的角<BR>无</TD>
-<TD class="tb-cell1">受注資格は<BR>ＨＲ４１以上<BR>参加资格为<BR>ＨＲ３８以上</TD>
+<TD class="tb-cell1">接受资格为<BR>ＨＲ４１以上<BR>参加资格为<BR>ＨＲ３８以上</TD>
 </TR>
 <TR>
 <TD class="tb-cell2">2F2C</TD>
@@ -1320,7 +1336,7 @@ ShowLinks(1, 4);
 <TD class="tb-cell3">50分</TD>
 <TD class="tb-cell2">塔</TD>
 <TD class="tb-cell1">讨伐麒麟１头<BR>无<BR>无</TD>
-<TD class="tb-cell1">受注資格は<BR>ＨＲ４１以上<BR>参加资格为<BR>ＨＲ３８以上</TD>
+<TD class="tb-cell1">接受资格为<BR>ＨＲ４１以上<BR>参加资格为<BR>ＨＲ３８以上</TD>
 </TR>
 <TR>
 <TD class="tb-cell2">2F2F</TD>
@@ -1333,7 +1349,7 @@ ShowLinks(1, 4);
 <TD class="tb-cell3">50分</TD>
 <TD class="tb-cell2">塔</TD>
 <TD class="tb-cell1">讨伐浮岳龍１头<BR>破坏浮岳龍的触手<BR>无</TD>
-<TD class="tb-cell1">受注資格は<BR>ＨＲ４１以上<BR>参加资格为<BR>ＨＲ３８以上</TD>
+<TD class="tb-cell1">接受资格为<BR>ＨＲ４１以上<BR>参加资格为<BR>ＨＲ３８以上</TD>
 </TR>
 <TR>
 <TD class="tb-cell2">2EE4</TD>
@@ -1364,13 +1380,13 @@ ShowLinks(1, 4);
 <TR>
 <TD class="tb-cell2">2EF4</TD>
 <TD class="tb-cell2">★５</TD>
-<TD class="tb-cell51">≪砂漠探索≫<BR><A href="./rem5.html#2ef4">砂漠跃动之猎手</A></TD>
+<TD class="tb-cell51">≪沙漠探索≫<BR><A href="./rem5.html#2ef4">跃于沙漠之猎手</A></TD>
 <TD class="tb-cell2"><BR><IMG src="../images/season1.gif" border="0"><BR>寒冷期</TD>
 <TD class="tb-cell3">300ｚ</TD>
 <TD class="tb-cell3">4000ｚ<BR>800ｚ<BR>1600ｚ</TD>
 <TD class="tb-cell3">460<BR>60<BR>60</TD>
 <TD class="tb-cell3">50分</TD>
-<TD class="tb-cell2">砂漠</TD>
+<TD class="tb-cell2">沙漠</TD>
 <TD class="tb-cell1">狩猎黄速龙王２头<BR>讨伐黄速龙１２只<BR>交纳百花仙人掌４个</TD>
 <TD class="tb-cell1">参加资格为<BR>ＨＲ３１以上</TD>
 </TR>
@@ -1429,14 +1445,14 @@ ShowLinks(1, 4);
 <TR>
 <TD class="tb-cell2">2EF6</TD>
 <TD class="tb-cell2">★６</TD>
-<TD class="tb-cell51">≪砂漠探索≫<BR><A href="./rem6.html#2ef6">畅游砂中之龙</A></TD>
+<TD class="tb-cell51">≪沙漠探索≫<BR><A href="./rem6.html#2ef6">畅游沙中之龙</A></TD>
 <TD class="tb-cell2"><BR><IMG src="../images/season1.gif" border="0"><BR>寒冷期</TD>
 <TD class="tb-cell3">300ｚ</TD>
 <TD class="tb-cell3">3800ｚ<BR>2000ｚ<BR>1200ｚ</TD>
 <TD class="tb-cell3">480<BR>150<BR>150</TD>
 <TD class="tb-cell3">50分</TD>
-<TD class="tb-cell2">砂漠</TD>
-<TD class="tb-cell1">狩猎砂龙王１头<BR>交纳鱼龙的肝６个<BR>讨伐砂龙８只</TD>
+<TD class="tb-cell2">沙漠</TD>
+<TD class="tb-cell1">狩猎沙龙王１头<BR>交纳鱼龙的肝６个<BR>讨伐沙龙８只</TD>
 <TD class="tb-cell1">参加资格为<BR>ＨＲ３１以上</TD>
 </TR>
 <TR>
@@ -1455,7 +1471,7 @@ ShowLinks(1, 4);
 <TR>
 <TD class="tb-cell2">2F09</TD>
 <TD class="tb-cell2">★６</TD>
-<TD class="tb-cell51">≪沼地探索≫<BR><A href="./rem6.html#2f09">沼地舞动之女王</A></TD>
+<TD class="tb-cell51">≪沼地探索≫<BR><A href="./rem6.html#2f09">起舞沼地之女王</A></TD>
 <TD class="tb-cell2"><BR><IMG src="../images/season1.gif" border="0"><BR>寒冷期</TD>
 <TD class="tb-cell3">350ｚ</TD>
 <TD class="tb-cell3">5800ｚ<BR>1800ｚ<BR>600ｚ</TD>
@@ -1468,26 +1484,26 @@ ShowLinks(1, 4);
 <TR>
 <TD class="tb-cell2">2EF8</TD>
 <TD class="tb-cell2">★７</TD>
-<TD class="tb-cell51">≪砂漠探索≫<BR><A href="./rem7.html#2ef8">深潜水中之翡翠</A></TD>
+<TD class="tb-cell51">≪沙漠探索≫<BR><A href="./rem7.html#2ef8">深潜水中之翡翠</A></TD>
 <TD class="tb-cell2"><BR><IMG src="../images/season1.gif" border="0"><BR>寒冷期</TD>
 <TD class="tb-cell3">400ｚ</TD>
 <TD class="tb-cell3">6800ｚ<BR>0ｚ<BR>0ｚ</TD>
 <TD class="tb-cell3">890<BR>0<BR>0</TD>
 <TD class="tb-cell3">50分</TD>
-<TD class="tb-cell2">砂漠</TD>
+<TD class="tb-cell2">沙漠</TD>
 <TD class="tb-cell1">狩猎水龙亚种１头<BR>无<BR>无</TD>
 <TD class="tb-cell1">参加资格为<BR>ＨＲ３１以上</TD>
 </TR>
 <TR>
 <TD class="tb-cell2">2EFB</TD>
 <TD class="tb-cell2">★７</TD>
-<TD class="tb-cell51">≪砂漠探索≫<BR><A href="./rem7.html#2efb">穷凶极恶之角龙</A></TD>
+<TD class="tb-cell51">≪沙漠探索≫<BR><A href="./rem7.html#2efb">穷凶极恶之角龙</A></TD>
 <TD class="tb-cell2"><BR><IMG src="../images/season1.gif" border="0"><BR>寒冷期</TD>
 <TD class="tb-cell3">400ｚ</TD>
 <TD class="tb-cell3">7600ｚ<BR>2000ｚ<BR>800ｚ</TD>
 <TD class="tb-cell3">1080<BR>150<BR>60</TD>
 <TD class="tb-cell3">50分</TD>
-<TD class="tb-cell2">砂漠</TD>
+<TD class="tb-cell2">沙漠</TD>
 <TD class="tb-cell1">狩猎角龙１头<BR>破坏角龙的双角<BR>交纳秘密的袋子６个</TD>
 <TD class="tb-cell1">参加资格为<BR>ＨＲ３１以上</TD>
 </TR>
@@ -1507,7 +1523,7 @@ ShowLinks(1, 4);
 <TR>
 <TD class="tb-cell2">2F22</TD>
 <TD class="tb-cell2">★７</TD>
-<TD class="tb-cell51">≪火山探索≫<BR><A href="./rem7.html#2f22">四本大镰</A></TD>
+<TD class="tb-cell51">≪火山探索≫<BR><A href="./rem7.html#2f22">四支大镰</A></TD>
 <TD class="tb-cell2"><BR><IMG src="../images/season1.gif" border="0"><BR>寒冷期</TD>
 <TD class="tb-cell3">600ｚ</TD>
 <TD class="tb-cell3">14400ｚ<BR>1800ｚ<BR>0ｚ</TD>
@@ -1541,7 +1557,7 @@ ShowLinks(1, 4);
 <TD class="tb-cell3">50分</TD>
 <TD class="tb-cell2">密林</TD>
 <TD class="tb-cell1">讨伐风翔龍１头<BR>无<BR>无</TD>
-<TD class="tb-cell1">受注資格は<BR>ＨＲ４１以上<BR>参加资格为<BR>ＨＲ３８以上</TD>
+<TD class="tb-cell1">接受资格为<BR>ＨＲ４１以上<BR>参加资格为<BR>ＨＲ３８以上</TD>
 </TR>
 <TR>
 <TD class="tb-cell2">2EF2</TD>
@@ -1554,33 +1570,33 @@ ShowLinks(1, 4);
 <TD class="tb-cell3">50分</TD>
 <TD class="tb-cell2">密林</TD>
 <TD class="tb-cell1">讨伐霞龍１头<BR>无<BR>无</TD>
-<TD class="tb-cell1">受注資格は<BR>ＨＲ４１以上<BR>参加资格为<BR>ＨＲ３８以上</TD>
+<TD class="tb-cell1">接受资格为<BR>ＨＲ４１以上<BR>参加资格为<BR>ＨＲ３８以上</TD>
 </TR>
 <TR>
 <TD class="tb-cell2">2EFD</TD>
 <TD class="tb-cell2">★８</TD>
-<TD class="tb-cell51">≪砂漠探索≫<BR><A href="./rem8.html#2efd">呼唤砂岚之龍</A></TD>
+<TD class="tb-cell51">≪沙漠探索≫<BR><A href="./rem8.html#2efd">呼唤沙暴之龍</A></TD>
 <TD class="tb-cell2"><BR><IMG src="../images/season1.gif" border="0"><BR>寒冷期</TD>
 <TD class="tb-cell3">600ｚ</TD>
 <TD class="tb-cell3">12000ｚ<BR>0ｚ<BR>0ｚ</TD>
 <TD class="tb-cell3">1950<BR>0<BR>0</TD>
 <TD class="tb-cell3">50分</TD>
-<TD class="tb-cell2">砂漠</TD>
+<TD class="tb-cell2">沙漠</TD>
 <TD class="tb-cell1">讨伐风翔龍１头<BR>无<BR>无</TD>
-<TD class="tb-cell1">受注資格は<BR>ＨＲ４１以上<BR>参加资格为<BR>ＨＲ３８以上</TD>
+<TD class="tb-cell1">接受资格为<BR>ＨＲ４１以上<BR>参加资格为<BR>ＨＲ３８以上</TD>
 </TR>
 <TR>
 <TD class="tb-cell2">2EFF</TD>
 <TD class="tb-cell2">★８</TD>
-<TD class="tb-cell51">≪砂漠探索≫<BR><A href="./rem8.html#2eff">烧灼热砂之业炎</A></TD>
+<TD class="tb-cell51">≪沙漠探索≫<BR><A href="./rem8.html#2eff">烧灼热沙之业炎</A></TD>
 <TD class="tb-cell2"><BR><IMG src="../images/season1.gif" border="0"><BR>寒冷期</TD>
 <TD class="tb-cell3">600ｚ</TD>
 <TD class="tb-cell3">14000ｚ<BR>0ｚ<BR>0ｚ</TD>
 <TD class="tb-cell3">2100<BR>0<BR>0</TD>
 <TD class="tb-cell3">50分</TD>
-<TD class="tb-cell2">砂漠</TD>
+<TD class="tb-cell2">沙漠</TD>
 <TD class="tb-cell1">讨伐炎王龍１头<BR>无<BR>无</TD>
-<TD class="tb-cell1">受注資格は<BR>ＨＲ４１以上<BR>参加资格为<BR>ＨＲ３８以上</TD>
+<TD class="tb-cell1">接受资格为<BR>ＨＲ４１以上<BR>参加资格为<BR>ＨＲ３８以上</TD>
 </TR>
 <TR>
 <TD class="tb-cell2">2F12</TD>
@@ -1593,7 +1609,7 @@ ShowLinks(1, 4);
 <TD class="tb-cell3">50分</TD>
 <TD class="tb-cell2">沼地</TD>
 <TD class="tb-cell1">讨伐炎王龍１头<BR>无<BR>无</TD>
-<TD class="tb-cell1">受注資格は<BR>ＨＲ４１以上<BR>参加资格为<BR>ＨＲ３８以上</TD>
+<TD class="tb-cell1">接受资格为<BR>ＨＲ４１以上<BR>参加资格为<BR>ＨＲ３８以上</TD>
 </TR>
 <TR>
 <TD class="tb-cell2">2F2B</TD>
@@ -1606,7 +1622,7 @@ ShowLinks(1, 4);
 <TD class="tb-cell3">50分</TD>
 <TD class="tb-cell2">森丘</TD>
 <TD class="tb-cell1">讨伐霞龍１头<BR>破坏霞龍的角<BR>无</TD>
-<TD class="tb-cell1">受注資格は<BR>ＨＲ４１以上<BR>参加资格为<BR>ＨＲ３８以上</TD>
+<TD class="tb-cell1">接受资格为<BR>ＨＲ４１以上<BR>参加资格为<BR>ＨＲ３８以上</TD>
 </TR>
 <TR>
 <TD class="tb-cell2">2F2D</TD>
@@ -1619,7 +1635,7 @@ ShowLinks(1, 4);
 <TD class="tb-cell3">50分</TD>
 <TD class="tb-cell2">塔</TD>
 <TD class="tb-cell1">讨伐麒麟１头<BR>无<BR>无</TD>
-<TD class="tb-cell1">受注資格は<BR>ＨＲ４１以上<BR>参加资格为<BR>ＨＲ３８以上</TD>
+<TD class="tb-cell1">接受资格为<BR>ＨＲ４１以上<BR>参加资格为<BR>ＨＲ３８以上</TD>
 </TR>
 <TR>
 <TD class="tb-cell2">2F30</TD>
@@ -1632,7 +1648,7 @@ ShowLinks(1, 4);
 <TD class="tb-cell3">50分</TD>
 <TD class="tb-cell2">塔</TD>
 <TD class="tb-cell1">讨伐浮岳龍１头<BR>破坏浮岳龍的触手<BR>无</TD>
-<TD class="tb-cell1">受注資格は<BR>ＨＲ４１以上<BR>参加资格为<BR>ＨＲ３８以上</TD>
+<TD class="tb-cell1">接受资格为<BR>ＨＲ４１以上<BR>参加资格为<BR>ＨＲ３８以上</TD>
 </TR>
 <TR>
 <TD class="tb-cell2">2EE2</TD>
@@ -1663,13 +1679,13 @@ ShowLinks(1, 4);
 <TR>
 <TD class="tb-cell2">2EF5</TD>
 <TD class="tb-cell2">★５</TD>
-<TD class="tb-cell51">≪砂漠探索≫<BR><A href="./rem5.html#2ef5">砂漠跃动之猎手</A></TD>
+<TD class="tb-cell51">≪沙漠探索≫<BR><A href="./rem5.html#2ef5">跃于沙漠之猎手</A></TD>
 <TD class="tb-cell2"><BR><IMG src="../images/season2.gif" border="0"><BR>繁殖期</TD>
 <TD class="tb-cell3">200ｚ</TD>
 <TD class="tb-cell3">2000ｚ<BR>4500ｚ<BR>800ｚ</TD>
 <TD class="tb-cell3">230<BR>250<BR>40</TD>
 <TD class="tb-cell3">50分</TD>
-<TD class="tb-cell2">砂漠</TD>
+<TD class="tb-cell2">沙漠</TD>
 <TD class="tb-cell1">狩猎黄速龙王１头<BR>交纳草食龙的卵３枚<BR>讨伐甲壳草食龙８只</TD>
 <TD class="tb-cell1">参加资格为<BR>ＨＲ３１以上</TD>
 </TR>
@@ -1689,7 +1705,7 @@ ShowLinks(1, 4);
 <TR>
 <TD class="tb-cell2">2F07</TD>
 <TD class="tb-cell2">★５</TD>
-<TD class="tb-cell51">≪沼地探索≫<BR><A href="./rem5.html#2f07">湿地驰骋之毒怪鸟</A></TD>
+<TD class="tb-cell51">≪沼地探索≫<BR><A href="./rem5.html#2f07">驰骋湿地之毒怪鸟</A></TD>
 <TD class="tb-cell2"><BR><IMG src="../images/season2.gif" border="0"><BR>繁殖期</TD>
 <TD class="tb-cell3">250ｚ</TD>
 <TD class="tb-cell3">3400ｚ<BR>2700ｚ<BR>1000ｚ</TD>
@@ -1741,26 +1757,26 @@ ShowLinks(1, 4);
 <TR>
 <TD class="tb-cell2">2EF7</TD>
 <TD class="tb-cell2">★６</TD>
-<TD class="tb-cell51">≪砂漠探索≫<BR><A href="./rem6.html#2ef7">砂尘之砦</A></TD>
+<TD class="tb-cell51">≪沙漠探索≫<BR><A href="./rem6.html#2ef7">沙尘之砦</A></TD>
 <TD class="tb-cell2"><BR><IMG src="../images/season2.gif" border="0"><BR>繁殖期</TD>
 <TD class="tb-cell3">450ｚ</TD>
 <TD class="tb-cell3">8800ｚ<BR>0ｚ<BR>0ｚ</TD>
 <TD class="tb-cell3">1060<BR>0<BR>0</TD>
 <TD class="tb-cell3">50分</TD>
-<TD class="tb-cell2">砂漠</TD>
+<TD class="tb-cell2">沙漠</TD>
 <TD class="tb-cell1">狩猎大名盾蟹２头<BR>无<BR>无</TD>
 <TD class="tb-cell1">参加资格为<BR>ＨＲ３１以上</TD>
 </TR>
 <TR>
 <TD class="tb-cell2">2EFA</TD>
 <TD class="tb-cell2">★６</TD>
-<TD class="tb-cell51">≪砂漠探索≫<BR><A href="./rem6.html#2efa">砂漠绽放之樱</A></TD>
+<TD class="tb-cell51">≪沙漠探索≫<BR><A href="./rem6.html#2efa">绽于沙漠之樱</A></TD>
 <TD class="tb-cell2"><BR><IMG src="../images/season2.gif" border="0"><BR>繁殖期</TD>
 <TD class="tb-cell3">350ｚ</TD>
 <TD class="tb-cell3">5800ｚ<BR>0ｚ<BR>0ｚ</TD>
 <TD class="tb-cell3">720<BR>0<BR>0</TD>
 <TD class="tb-cell3">50分</TD>
-<TD class="tb-cell2">砂漠</TD>
+<TD class="tb-cell2">沙漠</TD>
 <TD class="tb-cell1">狩猎雌火龙亚种１头<BR>无<BR>无</TD>
 <TD class="tb-cell1">参加资格为<BR>ＨＲ３１以上</TD>
 </TR>
@@ -1780,7 +1796,7 @@ ShowLinks(1, 4);
 <TR>
 <TD class="tb-cell2">2F15</TD>
 <TD class="tb-cell2">★６</TD>
-<TD class="tb-cell51">≪雪山探索≫<BR><A href="./rem6.html#2f15">暗中匍匐之白影</A></TD>
+<TD class="tb-cell51">≪雪山探索≫<BR><A href="./rem6.html#2f15">匍匐暗中之白影</A></TD>
 <TD class="tb-cell2"><BR><IMG src="../images/season2.gif" border="0"><BR>繁殖期</TD>
 <TD class="tb-cell3">350ｚ</TD>
 <TD class="tb-cell3">5800ｚ<BR>1200ｚ<BR>1600ｚ</TD>
@@ -1793,33 +1809,33 @@ ShowLinks(1, 4);
 <TR>
 <TD class="tb-cell2">2EF9</TD>
 <TD class="tb-cell2">★７</TD>
-<TD class="tb-cell51">≪砂漠探索≫<BR><A href="./rem7.html#2ef9">地底湖之水龙</A></TD>
+<TD class="tb-cell51">≪沙漠探索≫<BR><A href="./rem7.html#2ef9">地底湖之水龙</A></TD>
 <TD class="tb-cell2"><BR><IMG src="../images/season2.gif" border="0"><BR>繁殖期</TD>
 <TD class="tb-cell3">400ｚ</TD>
 <TD class="tb-cell3">6800ｚ<BR>600ｚ<BR>1000ｚ</TD>
 <TD class="tb-cell3">900<BR>50<BR>20</TD>
 <TD class="tb-cell3">50分</TD>
-<TD class="tb-cell2">砂漠</TD>
+<TD class="tb-cell2">沙漠</TD>
 <TD class="tb-cell1">狩猎水龙１头<BR>钓上水龙１次<BR>交纳黄金鱼４条</TD>
 <TD class="tb-cell1">参加资格为<BR>ＨＲ３１以上</TD>
 </TR>
 <TR>
 <TD class="tb-cell2">2EFC</TD>
 <TD class="tb-cell2">★７</TD>
-<TD class="tb-cell51">≪砂漠探索≫<BR><A href="./rem7.html#2efc">四本之角</A></TD>
+<TD class="tb-cell51">≪沙漠探索≫<BR><A href="./rem7.html#2efc">四支角</A></TD>
 <TD class="tb-cell2"><BR><IMG src="../images/season2.gif" border="0"><BR>繁殖期</TD>
 <TD class="tb-cell3">400ｚ</TD>
 <TD class="tb-cell3">7600ｚ<BR>7600ｚ<BR>0ｚ</TD>
 <TD class="tb-cell3">1070<BR>1080<BR>0</TD>
 <TD class="tb-cell3">50分</TD>
-<TD class="tb-cell2">砂漠</TD>
+<TD class="tb-cell2">沙漠</TD>
 <TD class="tb-cell1">狩猎角龙亚种１头<BR>狩猎角龙１头<BR>无</TD>
 <TD class="tb-cell1">参加资格为<BR>ＨＲ３１以上</TD>
 </TR>
 <TR>
 <TD class="tb-cell2">2F0B</TD>
 <TD class="tb-cell2">★７</TD>
-<TD class="tb-cell51">≪沼地探索≫<BR><A href="./rem7.html#2f0b">湿地潜伏之大镰</A></TD>
+<TD class="tb-cell51">≪沼地探索≫<BR><A href="./rem7.html#2f0b">潜伏湿地之大镰</A></TD>
 <TD class="tb-cell2"><BR><IMG src="../images/season2.gif" border="0"><BR>繁殖期</TD>
 <TD class="tb-cell3">400ｚ</TD>
 <TD class="tb-cell3">7200ｚ<BR>2700ｚ<BR>800ｚ</TD>
@@ -1905,33 +1921,33 @@ ShowLinks(1, 4);
 <TD class="tb-cell3">50分</TD>
 <TD class="tb-cell2">密林</TD>
 <TD class="tb-cell1">讨伐霞龍１头<BR>无<BR>无</TD>
-<TD class="tb-cell1">受注資格は<BR>ＨＲ４１以上<BR>参加资格为<BR>ＨＲ３８以上</TD>
+<TD class="tb-cell1">接受资格为<BR>ＨＲ４１以上<BR>参加资格为<BR>ＨＲ３８以上</TD>
 </TR>
 <TR>
 <TD class="tb-cell2">2EFE</TD>
 <TD class="tb-cell2">★８</TD>
-<TD class="tb-cell51">≪砂漠探索≫<BR><A href="./rem8.html#2efe">呼唤砂岚之龍</A></TD>
+<TD class="tb-cell51">≪沙漠探索≫<BR><A href="./rem8.html#2efe">呼唤沙暴之龍</A></TD>
 <TD class="tb-cell2"><BR><IMG src="../images/season2.gif" border="0"><BR>繁殖期</TD>
 <TD class="tb-cell3">600ｚ</TD>
 <TD class="tb-cell3">12000ｚ<BR>0ｚ<BR>0ｚ</TD>
 <TD class="tb-cell3">1950<BR>0<BR>0</TD>
 <TD class="tb-cell3">50分</TD>
-<TD class="tb-cell2">砂漠</TD>
+<TD class="tb-cell2">沙漠</TD>
 <TD class="tb-cell1">讨伐风翔龍１头<BR>无<BR>无</TD>
-<TD class="tb-cell1">受注資格は<BR>ＨＲ４１以上<BR>参加资格为<BR>ＨＲ３８以上</TD>
+<TD class="tb-cell1">接受资格为<BR>ＨＲ４１以上<BR>参加资格为<BR>ＨＲ３８以上</TD>
 </TR>
 <TR>
 <TD class="tb-cell2">2F00</TD>
 <TD class="tb-cell2">★８</TD>
-<TD class="tb-cell51">≪砂漠探索≫<BR><A href="./rem8.html#2f00">烧灼热砂之业炎</A></TD>
+<TD class="tb-cell51">≪沙漠探索≫<BR><A href="./rem8.html#2f00">烧灼热沙之业炎</A></TD>
 <TD class="tb-cell2"><BR><IMG src="../images/season2.gif" border="0"><BR>繁殖期</TD>
 <TD class="tb-cell3">600ｚ</TD>
 <TD class="tb-cell3">14000ｚ<BR>0ｚ<BR>0ｚ</TD>
 <TD class="tb-cell3">2100<BR>0<BR>0</TD>
 <TD class="tb-cell3">50分</TD>
-<TD class="tb-cell2">砂漠</TD>
+<TD class="tb-cell2">沙漠</TD>
 <TD class="tb-cell1">讨伐炎王龍１头<BR>无<BR>无</TD>
-<TD class="tb-cell1">受注資格は<BR>ＨＲ４１以上<BR>参加资格为<BR>ＨＲ３８以上</TD>
+<TD class="tb-cell1">接受资格为<BR>ＨＲ４１以上<BR>参加资格为<BR>ＨＲ３８以上</TD>
 </TR>
 <TR>
 <TD class="tb-cell2">2F10</TD>
@@ -1944,7 +1960,7 @@ ShowLinks(1, 4);
 <TD class="tb-cell3">50分</TD>
 <TD class="tb-cell2">沼地</TD>
 <TD class="tb-cell1">讨伐霞龍１头<BR>无<BR>无</TD>
-<TD class="tb-cell1">受注資格は<BR>ＨＲ４１以上<BR>参加资格为<BR>ＨＲ３８以上</TD>
+<TD class="tb-cell1">接受资格为<BR>ＨＲ４１以上<BR>参加资格为<BR>ＨＲ３８以上</TD>
 </TR>
 <TR>
 <TD class="tb-cell2">2F18</TD>
@@ -1962,7 +1978,7 @@ ShowLinks(1, 4);
 <TR>
 <TD class="tb-cell2">2F1A</TD>
 <TD class="tb-cell2">★８</TD>
-<TD class="tb-cell51">≪雪山探索≫<BR><A href="./rem8.html#2f1a">雪原驰骋之幻兽</A></TD>
+<TD class="tb-cell51">≪雪山探索≫<BR><A href="./rem8.html#2f1a">驰骋雪原之幻兽</A></TD>
 <TD class="tb-cell2"><BR><IMG src="../images/season2.gif" border="0"><BR>繁殖期</TD>
 <TD class="tb-cell3">450ｚ</TD>
 <TD class="tb-cell3">8400ｚ<BR>600ｚ<BR>0ｚ</TD>
@@ -1970,7 +1986,7 @@ ShowLinks(1, 4);
 <TD class="tb-cell3">50分</TD>
 <TD class="tb-cell2">雪山</TD>
 <TD class="tb-cell1">狩猎麒麟１头<BR>交纳秘密的袋子６个<BR>无</TD>
-<TD class="tb-cell1">受注資格は<BR>ＨＲ４１以上<BR>参加资格为<BR>ＨＲ３８以上</TD>
+<TD class="tb-cell1">接受资格为<BR>ＨＲ４１以上<BR>参加资格为<BR>ＨＲ３８以上</TD>
 </TR>
 <TR>
 <TD class="tb-cell2">2F1C</TD>
@@ -1983,7 +1999,7 @@ ShowLinks(1, 4);
 <TD class="tb-cell3">50分</TD>
 <TD class="tb-cell2">雪山</TD>
 <TD class="tb-cell1">讨伐风翔龍１头<BR>切断风翔龍的尾巴<BR>无</TD>
-<TD class="tb-cell1">受注資格は<BR>ＨＲ４１以上<BR>参加资格为<BR>ＨＲ３８以上</TD>
+<TD class="tb-cell1">接受资格为<BR>ＨＲ４１以上<BR>参加资格为<BR>ＨＲ３８以上</TD>
 </TR>
 <TR>
 <TD class="tb-cell2">2F26</TD>
@@ -1996,7 +2012,7 @@ ShowLinks(1, 4);
 <TD class="tb-cell3">50分</TD>
 <TD class="tb-cell2">火山</TD>
 <TD class="tb-cell1">讨伐炎王龍１头<BR>切断炎王龍的尾巴<BR>无</TD>
-<TD class="tb-cell1">受注資格は<BR>ＨＲ４１以上<BR>参加资格为<BR>ＨＲ３８以上</TD>
+<TD class="tb-cell1">接受资格为<BR>ＨＲ４１以上<BR>参加资格为<BR>ＨＲ３８以上</TD>
 </TR>
 </TBODY>
 </TABLE>
@@ -2006,15 +2022,15 @@ ShowLinks(1, 4);
 <TBODY>
 <TR>
 <TH class="tb-th1" width="40">No.</TH>
-<TH class="tb-th1" width="35">Lev.</TH>
+<TH class="tb-th1" width="35">Lv.</TH>
 <TH class="tb-th1" width="200">任务名</TH>
 <TH class="tb-th1" width="40">季节</TH>
 <TH class="tb-th1" width="50">契约金</TH>
 <TH class="tb-th1" width="50">报酬金</TH>
 <TH class="tb-th1" width="40">HRP</TH>
 <TH class="tb-th1" width="40">时间</TH>
-<TH class="tb-th1" width="50">目的地</TH>
-<TH class="tb-th1" width="180">委托内容</TH>
+<TH class="tb-th1" width="60">目的地</TH>
+<TH class="tb-th1" width="170">委托内容</TH>
 <TH class="tb-th1" width="117">特殊条件</TH>
 </TR>
 <TR>
@@ -2155,15 +2171,15 @@ ShowLinks(1, 4);
 <TBODY>
 <TR>
 <TH class="tb-th1" width="40">No.</TH>
-<TH class="tb-th1" width="35">Lev.</TH>
+<TH class="tb-th1" width="35">Lv.</TH>
 <TH class="tb-th1" width="200">任务名</TH>
 <TH class="tb-th1" width="40">季节</TH>
 <TH class="tb-th1" width="50">契约金</TH>
 <TH class="tb-th1" width="50">报酬金</TH>
 <TH class="tb-th1" width="40">HRP</TH>
 <TH class="tb-th1" width="40">时间</TH>
-<TH class="tb-th1" width="50">目的地</TH>
-<TH class="tb-th1" width="180">委托内容</TH>
+<TH class="tb-th1" width="60">目的地</TH>
+<TH class="tb-th1" width="170">委托内容</TH>
 <TH class="tb-th1" width="117">特殊条件</TH>
 </TR>
 <TR>
@@ -2195,26 +2211,26 @@ ShowLinks(1, 4);
 <TR>
 <TD class="tb-cell2">3A9B</TD>
 <TD class="tb-cell2">★２</TD>
-<TD class="tb-cell51">≪正式狩猎考试③≫<BR><A href="./rem2.html#3a9b">砂漠之怪物扫讨作战！</A></TD>
+<TD class="tb-cell51">≪正式狩猎考试③≫<BR><A href="./rem2.html#3a9b">沙漠之怪物扫讨作战！</A></TD>
 <TD class="tb-cell2">&nbsp;</TD>
 <TD class="tb-cell3">0ｚ</TD>
 <TD class="tb-cell3">3200ｚ<BR>0ｚ<BR>0ｚ</TD>
 <TD class="tb-cell3">330<BR>75<BR>20</TD>
 <TD class="tb-cell3">50分</TD>
-<TD class="tb-cell2">砂漠</TD>
-<TD class="tb-cell1">狩猎砂龙王１头<BR>讨伐砂龙４只<BR>讨伐甲壳草食龙４只</TD>
+<TD class="tb-cell2">沙漠</TD>
+<TD class="tb-cell1">狩猎沙龙王１头<BR>讨伐沙龙４只<BR>讨伐甲壳草食龙４只</TD>
 <TD class="tb-cell1">无</TD>
 </TR>
 <TR>
 <TD class="tb-cell2">3A9C</TD>
 <TD class="tb-cell2">★２</TD>
-<TD class="tb-cell51">≪正式狩猎考试④≫<BR><A href="./rem2.html#3a9c">驱逐砂漠之盾蟹！</A></TD>
+<TD class="tb-cell51">≪正式狩猎考试④≫<BR><A href="./rem2.html#3a9c">驱逐沙漠之盾蟹！</A></TD>
 <TD class="tb-cell2">&nbsp;</TD>
 <TD class="tb-cell3">0ｚ</TD>
 <TD class="tb-cell3">3600ｚ<BR>0ｚ<BR>0ｚ</TD>
 <TD class="tb-cell3">350<BR>50<BR>0</TD>
 <TD class="tb-cell3">50分</TD>
-<TD class="tb-cell2">砂漠</TD>
+<TD class="tb-cell2">沙漠</TD>
 <TD class="tb-cell1">狩猎大名盾蟹１头<BR>讨伐小盾蟹５只<BR>无</TD>
 <TD class="tb-cell1">无</TD>
 </TR>
@@ -2273,14 +2289,14 @@ ShowLinks(1, 4);
 <TR>
 <TD class="tb-cell2">3AA1</TD>
 <TD class="tb-cell2">★３</TD>
-<TD class="tb-cell51">≪正式狩猎考试①≫<BR><A href="./rem3.html#3aa1">钓取狩猎砂漠之鱼龙！</A></TD>
+<TD class="tb-cell51">≪正式狩猎考试①≫<BR><A href="./rem3.html#3aa1">钓取狩猎沙漠之鱼龙！</A></TD>
 <TD class="tb-cell2">&nbsp;</TD>
 <TD class="tb-cell3">0ｚ</TD>
 <TD class="tb-cell3">5200ｚ<BR>0ｚ<BR>0ｚ</TD>
 <TD class="tb-cell3">600<BR>50<BR>75</TD>
 <TD class="tb-cell3">50分</TD>
-<TD class="tb-cell2">砂漠</TD>
-<TD class="tb-cell1">狩猎水龙１头<BR>讨伐黄速龙１０只<BR>讨伐砂龙４只</TD>
+<TD class="tb-cell2">沙漠</TD>
+<TD class="tb-cell1">狩猎水龙１头<BR>讨伐黄速龙１０只<BR>讨伐沙龙４只</TD>
 <TD class="tb-cell1">参加资格为<BR>ＨＲ２０以上</TD>
 </TR>
 <TR>
@@ -2299,14 +2315,14 @@ ShowLinks(1, 4);
 <TR>
 <TD class="tb-cell2">3AA3</TD>
 <TD class="tb-cell2">★３</TD>
-<TD class="tb-cell51">≪正式狩猎考试③≫<BR><A href="./rem3.html#3aa3">狩猎砂漠之强暴！</A></TD>
+<TD class="tb-cell51">≪正式狩猎考试③≫<BR><A href="./rem3.html#3aa3">狩猎沙漠之强暴！</A></TD>
 <TD class="tb-cell2">&nbsp;</TD>
 <TD class="tb-cell3">0ｚ</TD>
 <TD class="tb-cell3">6000ｚ<BR>0ｚ<BR>0ｚ</TD>
 <TD class="tb-cell3">720<BR>75<BR>20</TD>
 <TD class="tb-cell3">50分</TD>
-<TD class="tb-cell2">砂漠</TD>
-<TD class="tb-cell1">狩猎角龙１头<BR>讨伐砂龙４只<BR>讨伐黄速龙４只</TD>
+<TD class="tb-cell2">沙漠</TD>
+<TD class="tb-cell1">狩猎角龙１头<BR>讨伐沙龙４只<BR>讨伐黄速龙４只</TD>
 <TD class="tb-cell1">参加资格为<BR>ＨＲ２０以上</TD>
 </TR>
 <TR>
@@ -2338,13 +2354,13 @@ ShowLinks(1, 4);
 <TR>
 <TD class="tb-cell2">3AA6</TD>
 <TD class="tb-cell2">★６</TD>
-<TD class="tb-cell51">≪正式狩猎考试①≫<BR><A href="./rem6.html#3aa6">破坏砂尘之砦！</A></TD>
+<TD class="tb-cell51">≪正式狩猎考试①≫<BR><A href="./rem6.html#3aa6">破坏沙尘之砦！</A></TD>
 <TD class="tb-cell2">&nbsp;</TD>
 <TD class="tb-cell3">0ｚ</TD>
 <TD class="tb-cell3">8800ｚ<BR>0ｚ<BR>0ｚ</TD>
 <TD class="tb-cell3">1060<BR>0<BR>0</TD>
 <TD class="tb-cell3">50分</TD>
-<TD class="tb-cell2">砂漠</TD>
+<TD class="tb-cell2">沙漠</TD>
 <TD class="tb-cell1">狩猎大名盾蟹２头<BR>无<BR>无</TD>
 <TD class="tb-cell1">参加资格为<BR>ＨＲ３８以上</TD>
 </TR>
@@ -2396,7 +2412,7 @@ ShowLinks(1, 4);
 <TD class="tb-cell3">24000ｚ<BR>0ｚ<BR>0ｚ</TD>
 <TD class="tb-cell3">2800<BR>0<BR>0</TD>
 <TD class="tb-cell3">50分</TD>
-<TD class="tb-cell2">シュレイド城</TD>
+<TD class="tb-cell2">修雷德城</TD>
 <TD class="tb-cell1">讨伐黑龍１头<BR>无<BR>无</TD>
 <TD class="tb-cell1">参加资格为<BR>ＨＲ４８以上</TD>
 </TR>
@@ -2409,7 +2425,7 @@ ShowLinks(1, 4);
 <TD class="tb-cell3">28000ｚ<BR>0ｚ<BR>0ｚ</TD>
 <TD class="tb-cell3">3000<BR>0<BR>0</TD>
 <TD class="tb-cell3">50分</TD>
-<TD class="tb-cell2">決戦場</TD>
+<TD class="tb-cell2">决战场</TD>
 <TD class="tb-cell1">讨伐红黑龍１头<BR>无<BR>无</TD>
 <TD class="tb-cell1">参加资格为<BR>ＨＲ４８以上</TD>
 </TR>
@@ -2460,15 +2476,15 @@ ShowLinks(1, 4);
 <TBODY>
 <TR>
 <TH class="tb-th1" width="40">No.</TH>
-<TH class="tb-th1" width="35">Lev.</TH>
+<TH class="tb-th1" width="35">Lv.</TH>
 <TH class="tb-th1" width="200">任务名</TH>
 <TH class="tb-th1" width="40">季节</TH>
 <TH class="tb-th1" width="50">契约金</TH>
 <TH class="tb-th1" width="50">报酬金</TH>
 <TH class="tb-th1" width="40">HRP</TH>
 <TH class="tb-th1" width="40">时间</TH>
-<TH class="tb-th1" width="50">目的地</TH>
-<TH class="tb-th1" width="180">委托内容</TH>
+<TH class="tb-th1" width="60">目的地</TH>
+<TH class="tb-th1" width="170">委托内容</TH>
 <TH class="tb-th1" width="117">特殊条件</TH>
 </TR>
 <TR>
@@ -2480,7 +2496,7 @@ ShowLinks(1, 4);
 <TD class="tb-cell3">2000ｐ<BR>2200ｐ<BR>800ｐ</TD>
 <TD class="tb-cell3">0<BR>0<BR>0</TD>
 <TD class="tb-cell3">50分</TD>
-<TD class="tb-cell2">砂漠</TD>
+<TD class="tb-cell2">沙漠</TD>
 <TD class="tb-cell1">交纳草食龙的卵４枚<BR>交纳鱼龙的牙６颗<BR>交纳鱼龙的肝３个</TD>
 <TD class="tb-cell1">无</TD>
 </TR>
@@ -2519,7 +2535,7 @@ ShowLinks(1, 4);
 <TD class="tb-cell3">3000ｐ<BR>1400ｐ<BR>1200ｐ</TD>
 <TD class="tb-cell3">0<BR>0<BR>0</TD>
 <TD class="tb-cell3">50分</TD>
-<TD class="tb-cell2">砂漠</TD>
+<TD class="tb-cell2">沙漠</TD>
 <TD class="tb-cell1">交纳燃石炭３５个<BR>交纳炸裂沙丁鱼１０条<BR>交纳黄速龙的麻痹牙１５颗</TD>
 <TD class="tb-cell1">无</TD>
 </TR>
@@ -2545,7 +2561,7 @@ ShowLinks(1, 4);
 <TD class="tb-cell3">300ｐ<BR>5500ｐ<BR>2500ｐ</TD>
 <TD class="tb-cell3">0<BR>0<BR>0</TD>
 <TD class="tb-cell3">50分</TD>
-<TD class="tb-cell2">砂漠</TD>
+<TD class="tb-cell2">沙漠</TD>
 <TD class="tb-cell1">交纳半生肉１５个<BR>讨伐大名盾蟹１头<BR>讨伐小盾蟹１５只</TD>
 <TD class="tb-cell1">无</TD>
 </TR>
@@ -2661,15 +2677,15 @@ ShowLinks(1, 4);
 <TBODY>
 <TR>
 <TH class="tb-th1" width="40">No.</TH>
-<TH class="tb-th1" width="35">Lev.</TH>
+<TH class="tb-th1" width="35">Lv.</TH>
 <TH class="tb-th1" width="200">任务名</TH>
 <TH class="tb-th1" width="40">季节</TH>
 <TH class="tb-th1" width="50">契约金</TH>
 <TH class="tb-th1" width="50">报酬金</TH>
 <TH class="tb-th1" width="40">HRP</TH>
 <TH class="tb-th1" width="40">时间</TH>
-<TH class="tb-th1" width="50">目的地</TH>
-<TH class="tb-th1" width="180">委托内容</TH>
+<TH class="tb-th1" width="60">目的地</TH>
+<TH class="tb-th1" width="170">委托内容</TH>
 <TH class="tb-th1" width="117">特殊条件</TH>
 </TR>
 <TR>

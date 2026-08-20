@@ -21,6 +21,37 @@ tr.sp {background-color: #ffcc00}
 a, a:visited {
     color: blue;
 }
+html {
+  scrollbar-gutter: stable;
+}
+.gauge {
+  width: 160px;
+  margin: 0 auto;
+  display: flex;
+  height: 10px;
+  line-height: 0;
+  font-size: 0;
+  border-top: 1px solid rgba(0,0,0,0.3);
+  border-bottom: 1px dotted gray;
+  border-left: 1px solid gray;
+  border-right: 1px solid gray;
+}
+.gauge-ext {
+  width: 160px;
+  margin: 0 auto;
+  display: flex;
+  height: 10px;
+  line-height: 0;
+  font-size: 0;
+  border-bottom: 2px solid rgba(0,0,0,0.3);
+  border-left: 1px solid gray;
+  border-right: 1px solid gray;
+}
+.invisible-link,
+.invisible-link:link,
+.invisible-link:visited {
+  color: inherit;
+}
 </STYLE>
 <HR>
 <TABLE border="0" width="910">
@@ -53,7 +84,7 @@ return true;
 </TBODY>
 </TABLE>
 <HR>
-图解：<t1 style="background-color:#ffccff;">线上模式限定</t1>　<t1 style="color:#0000FF;">初级形态</t1>　<t1 style="color:#FF0000;">终极形态</t1>　<t1 style="background-color:#ffcc00;">超级武器（常规无法获得）</t1><BR>锋利度图形上/下分别表示普通状态/锋利度等级+1状态。部分项目没有列出直接生产配方。<BR><TR><TD>是否显示：</TD> <TD><INPUT 
+图解：<t1 style="background-color:#ffccff;">线上模式限定</t1>　<t1 style="color:#0000FF;">初级形态</t1>　<t1 style="color:#FF0000;">终极形态</t1>　<t1 style="background-color:#ffcc00;">开发者物品（常规无法获得）</t1><BR>锋利度图形上/下分别表示普通状态/锋利度等级+1状态。部分项目没有列出直接生产配方。<BR><TR><TD>是否显示：</TD> <TD><INPUT 
 onclick="return eChange(this, 'col01');" type=checkbox CHECKED>名称</TD> 
 <TD><INPUT onclick="return eChange(this, 'col02');" type=checkbox 
 CHECKED>锋利度</TD> <TD><INPUT onclick="return eChange(this, 'col03');" 
@@ -65,7 +96,7 @@ onclick="return eChange(this, 'col04');" type=checkbox CHECKED>属性</TD>
 <TD><INPUT onclick="return eChange(this, 'col08');" type=checkbox>价格</TD> 
 <TD><INPUT onclick="return eChange(this, 'col09');" type=checkbox 
 CHECKED>素材</TD></TR>
-<TABLE id=table1 borderColor=#c0c0c0 cellSpacing=0 cellPadding=0 width="100%" 
+<TABLE id=table1 borderColor=#c0c0c0 cellSpacing=0 cellPadding=0 width="90%" 
 border=0>
   <COLGROUP>
   <COL id=col01 bgColor=#ddddff>
@@ -83,1492 +114,2687 @@ border=0>
   <COL id=col13></COLGROUP>
   <TBODY>
   <TR>
-    <TH noWrap width=250>名称</TH>
-    <TH noWrap width=125>锋利度</TH>
-    <TH noWrap align=middle width=50>攻击力</TH>
-    <TH noWrap align=middle width=108>属性</TH>
-    <TH noWrap align=middle width=42>会心率</TH>
-    <TH noWrap align=middle width=45>插孔</TH>
-    <TH noWrap align=middle width=24>稀有度</TH>
-    <TH noWrap align=middle width=54>价格</TH>
-    <TH noWrap width=120>素材1</TH>
-    <TH noWrap width=120>素材2</TH>
-    <TH noWrap width=120>素材3</TH>
-    <TH noWrap width=120>素材4</TH></TR>
+    <TH noWrap width=320>名称</TH>
+    <TH noWrap width=160>锋利度</TH>
+    <TH noWrap align=middle width=64>攻击力</TH>
+    <TH noWrap align=middle width=180>属性</TH>
+    <TH noWrap align=middle width=54>会心率</TH>
+    <TH noWrap align=middle width=58>插孔</TH>
+    <TH noWrap align=middle width=30>稀有度</TH>
+    <TH noWrap align=middle width=69>价格</TH>
+    <TH noWrap width=140>素材1</TH>
+    <TH noWrap width=140>素材2</TH>
+    <TH noWrap width=140>素材3</TH>
+    <TH noWrap width=140>素材4</TH></TR>
   <TR class=odd>
-    <TD class=base noWrap>铁锤</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge055.gif" width=122></TD>
+    <TD class=base noWrap><A href="../bugu/hammer.html#0055" class="invisible-link" target="weapon">铁锤</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:36px; background:#ee0000;" title="90"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:16px; background:#eeee00;" title="40"></div>
+  <div style="width:100px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:36px; background:#ee0000;" title="90"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:36px; background:#eeee00;" title="90"></div>
+  <div style="width:80px; background:#000000;"></div>
+</div></TD>
     <TD noWrap align=middle>312</TD>
     <TD noWrap align=middle>　</TD>
     <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>ーーー</TD>
     <TD noWrap align=middle>1</TD>
     <TD noWrap align=right>1150z</TD>
-    <TD noWrap><A href="../items/items.html?00D8" target=items">铁矿石</A>x4</TD>
+    <TD noWrap><A href="../items/items.html?00D8" target="items">铁矿石</A>x4</TD>
     <TD noWrap>　</TD>
     <TD noWrap></TD>
     <TD noWrap></TD></TR>
   <TR>
-    <TD noWrap><IMG src="images/L.gif">铁锤改</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge056.gif" width=122></TD>
+    <TD noWrap><IMG src="images/L.gif"><A href="../bugu/hammer.html#0056" class="invisible-link" target="weapon">铁锤改</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:36px; background:#ee0000;" title="90"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:36px; background:#eeee00;" title="90"></div>
+  <div style="width:80px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:36px; background:#ee0000;" title="90"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:52px; background:#eeee00;" title="130"></div>
+  <div style="width:4px; background:#00ee00;" title="10"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div></TD>
     <TD noWrap align=middle>364</TD>
     <TD noWrap align=middle>　</TD>
     <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>ーーー</TD>
     <TD noWrap align=middle>1</TD>
     <TD noWrap align=right>1500z</TD>
-    <TD noWrap><A href="../items/items.html?00D8" target=items">铁矿石</A>x6</TD>
+    <TD noWrap><A href="../items/items.html?00D8" target="items">铁矿石</A>x6</TD>
     <TD noWrap>　</TD>
     <TD noWrap></TD>
     <TD noWrap></TD></TR>
   <TR class=odd>
-    <TD noWrap><IMG src="images/blank.gif"><IMG src="images/T.gif">战锤</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge057.gif" width=122></TD>
+    <TD noWrap><IMG src="images/blank.gif"><IMG src="images/T.gif"><A href="../bugu/hammer.html#0057" class="invisible-link" target="weapon">战锤</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:20px; background:#ee0000;" title="50"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:24px; background:#eeee00;" title="60"></div>
+  <div style="width:100px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:20px; background:#ee0000;" title="50"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:44px; background:#eeee00;" title="110"></div>
+  <div style="width:80px; background:#000000;"></div>
+</div></TD>
     <TD noWrap align=middle>416</TD>
     <TD noWrap align=middle>　</TD>
     <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>ーーー</TD>
     <TD noWrap align=middle>2</TD>
     <TD noWrap align=right>2830z</TD>
-    <TD noWrap><A href="../items/items.html?00D8" target=items">铁矿石</A>x10</TD>
-    <TD noWrap><A href="../items/items.html?00D6" target=items">阳光石</A>x2</TD>
+    <TD noWrap><A href="../items/items.html?00D8" target="items">铁矿石</A>x10</TD>
+    <TD noWrap><A href="../items/items.html?00D6" target="items">阳光石</A>x2</TD>
     <TD noWrap></TD>
     <TD noWrap></TD></TR>
   <TR>
     <TD noWrap><IMG src="images/blank.gif"><IMG src="images/I.gif"><IMG 
-      src="images/L.gif">战斗权杖</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge059.gif" width=122></TD>
+      src="images/L.gif"><A href="../bugu/hammer.html#0059" class="invisible-link" target="weapon">战斗权杖</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:36px; background:#ee0000;" title="90"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:36px; background:#eeee00;" title="90"></div>
+  <div style="width:80px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:36px; background:#ee0000;" title="90"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:52px; background:#eeee00;" title="130"></div>
+  <div style="width:4px; background:#00ee00;" title="10"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div></TD>
     <TD noWrap align=middle>520</TD>
     <TD noWrap align=middle>　</TD>
     <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>ーーー</TD>
     <TD noWrap align=middle>2</TD>
     <TD noWrap align=right>4520z</TD>
-    <TD noWrap><A href="../items/items.html?00D8" target=items">铁矿石</A>x15</TD>
-    <TD noWrap><A href="../items/items.html?00D6" target=items">阳光石</A>x5</TD>
+    <TD noWrap><A href="../items/items.html?00D8" target="items">铁矿石</A>x15</TD>
+    <TD noWrap><A href="../items/items.html?00D6" target="items">阳光石</A>x5</TD>
     <TD noWrap>　</TD>
     <TD noWrap></TD></TR>
   <TR class=odd>
     <TD noWrap><IMG src="images/blank.gif"><IMG src="images/I.gif"><IMG 
-      src="images/blank.gif"><IMG src="images/T.gif">铁之打击锤</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge060.gif" width=122></TD>
+      src="images/blank.gif"><IMG src="images/T.gif"><A href="../bugu/hammer.html#0060" class="invisible-link" target="weapon">铁之打击锤</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:36px; background:#ee0000;" title="90"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:52px; background:#eeee00;" title="130"></div>
+  <div style="width:4px; background:#00ee00;" title="10"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:36px; background:#ee0000;" title="90"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:52px; background:#eeee00;" title="130"></div>
+  <div style="width:24px; background:#00ee00;" title="60"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div></TD>
     <TD noWrap align=middle>624</TD>
     <TD noWrap align=middle>　</TD>
     <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>ーーー</TD>
     <TD noWrap align=middle>3</TD>
     <TD noWrap align=right>8870z</TD>
-    <TD noWrap><A href="../items/items.html?00DA" target=items">燕雀石</A>x9</TD>
-    <TD noWrap><A href="../items/items.html?00D8" target=items">铁矿石</A>x21</TD>
-    <TD noWrap><A href="../items/items.html?00D6" target=items">阳光石</A>x10</TD>
+    <TD noWrap><A href="../items/items.html?00DA" target="items">燕雀石</A>x9</TD>
+    <TD noWrap><A href="../items/items.html?00D8" target="items">铁矿石</A>x21</TD>
+    <TD noWrap><A href="../items/items.html?00D6" target="items">阳光石</A>x10</TD>
     <TD noWrap></TD></TR>
   <TR>
     <TD class=last noWrap><IMG src="images/blank.gif"><IMG src="images/I.gif"><IMG 
       src="images/blank.gif"><IMG src="images/I.gif"><IMG 
-      src="images/L.gif">铁之冲击锤</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge063.gif" width=122></TD>
+      src="images/L.gif"><A href="../bugu/hammer.html#0063" class="invisible-link" target="weapon">铁之冲击锤</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:36px; background:#ee0000;" title="90"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:52px; background:#eeee00;" title="130"></div>
+  <div style="width:24px; background:#00ee00;" title="60"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:36px; background:#ee0000;" title="90"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:52px; background:#eeee00;" title="130"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:16px; background:#5050ff;" title="40"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div></TD>
     <TD noWrap align=middle>728</TD>
     <TD noWrap align=middle>　</TD>
     <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>ーーー</TD>
     <TD noWrap align=middle>4</TD>
     <TD noWrap align=right>13600z</TD>
-    <TD noWrap><A href="../items/items.html?00DA" target=items">燕雀石</A>x16</TD>
-    <TD noWrap><A href="../items/items.html?00D8" target=items">铁矿石</A>x34</TD>
-    <TD noWrap><A href="../items/items.html?00E1" target=items">光水晶</A>x1</TD>
+    <TD noWrap><A href="../items/items.html?00DA" target="items">燕雀石</A>x16</TD>
+    <TD noWrap><A href="../items/items.html?00D8" target="items">铁矿石</A>x34</TD>
+    <TD noWrap><A href="../items/items.html?00E1" target="items">光水晶</A>x1</TD>
     <TD noWrap></TD></TR>
   <TR class=odd>
     <TD noWrap><IMG src="images/blank.gif"><IMG src="images/I.gif"><IMG 
-      src="images/blank.gif"><IMG src="images/L.gif">禁闭之锤</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge090.gif" width=122></TD>
+      src="images/blank.gif"><IMG src="images/L.gif"><A href="../bugu/hammer.html#0090" class="invisible-link" target="weapon">禁闭之锤</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:56px; background:#ee0000;" title="140"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:24px; background:#eeee00;" title="60"></div>
+  <div style="width:4px; background:#00ee00;" title="10"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:56px; background:#ee0000;" title="140"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:24px; background:#eeee00;" title="60"></div>
+  <div style="width:24px; background:#00ee00;" title="60"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div></TD>
     <TD noWrap align=middle>624</TD>
     <TD noWrap align=middle>麻痹190</TD>
     <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>〇ーー</TD>
     <TD noWrap align=middle>4</TD>
     <TD noWrap align=right>12980z</TD>
-    <TD noWrap><A href="../items/items.html?00DA" target=items">燕雀石</A>x12</TD>
-    <TD noWrap><A href="../items/items.html?0106" target=items">雷光虫</A>x11</TD>
-    <TD noWrap><A href="../items/items.html?0176" target=items">橡胶质的皮</A>x2</TD>
+    <TD noWrap><A href="../items/items.html?00DA" target="items">燕雀石</A>x12</TD>
+    <TD noWrap><A href="../items/items.html?0106" target="items">雷光虫</A>x11</TD>
+    <TD noWrap><A href="../items/items.html?0176" target="items">橡胶质的皮</A>x2</TD>
     <TD noWrap></TD></TR>
   <TR>
     <TD class=last noWrap><IMG src="images/blank.gif"><IMG src="images/I.gif"><IMG 
       src="images/blank.gif"><IMG src="images/blank.gif"><IMG 
-      src="images/L.gif">束缚立方</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge214.gif" width=122></TD>
+      src="images/L.gif"><A href="../bugu/hammer.html#0214" class="invisible-link" target="weapon">束缚立方</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:76px; background:#ee0000;" title="190"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:20px; background:#eeee00;" title="50"></div>
+  <div style="width:16px; background:#00ee00;" title="40"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:76px; background:#ee0000;" title="190"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:20px; background:#eeee00;" title="50"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:8px; background:#5050ff;" title="20"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div></TD>
     <TD noWrap align=middle>780</TD>
     <TD noWrap align=middle>麻痹280</TD>
     <TD noWrap align=right>10%</TD>
     <TD noWrap align=middle>〇ーー</TD>
     <TD noWrap align=middle>4</TD>
     <TD noWrap align=right>31460z</TD>
-    <TD noWrap><A href="../items/items.html?00DA" target=items">燕雀石</A>x22</TD>
-    <TD noWrap><A href="../items/items.html?0106" target=items">雷光虫</A>x28</TD>
-    <TD noWrap><A href="../items/items.html?0135" target=items">电气袋</A>x9</TD>
+    <TD noWrap><A href="../items/items.html?00DA" target="items">燕雀石</A>x22</TD>
+    <TD noWrap><A href="../items/items.html?0106" target="items">雷光虫</A>x28</TD>
+    <TD noWrap><A href="../items/items.html?0135" target="items">电气袋</A>x9</TD>
     <TD noWrap></TD></TR>
   <TR class=odd>
     <TD noWrap><IMG src="images/blank.gif"><IMG 
-    src="images/L.gif">刺锤</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge064.gif" width=122></TD>
+    src="images/L.gif"><A href="../bugu/hammer.html#0064" class="invisible-link" target="weapon">刺锤</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:20px; background:#ee0000;" title="50"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:24px; background:#eeee00;" title="60"></div>
+  <div style="width:100px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:20px; background:#ee0000;" title="50"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:44px; background:#eeee00;" title="110"></div>
+  <div style="width:80px; background:#000000;"></div>
+</div></TD>
     <TD noWrap align=middle>468</TD>
     <TD noWrap align=middle>　</TD>
     <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>ーーー</TD>
     <TD noWrap align=middle>2</TD>
     <TD noWrap align=right>3830z</TD>
-    <TD noWrap><A href="../items/items.html?00D8" target=items">铁矿石</A>x15</TD>
-    <TD noWrap><A href="../items/items.html?00D2" target=items">针果</A>x10</TD>
-    <TD noWrap><A href="../items/items.html?001D" target=items">增强剂</A>x3</TD>
+    <TD noWrap><A href="../items/items.html?00D8" target="items">铁矿石</A>x15</TD>
+    <TD noWrap><A href="../items/items.html?00D2" target="items">针果</A>x10</TD>
+    <TD noWrap><A href="../items/items.html?001D" target="items">增强剂</A>x3</TD>
     <TD noWrap>　</TD></TR>
   <TR>
     <TD noWrap><IMG src="images/blank.gif"><IMG src="images/blank.gif"><IMG 
-      src="images/L.gif">刺锤改</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge065.gif" width=122></TD>
+      src="images/L.gif"><A href="../bugu/hammer.html#0065" class="invisible-link" target="weapon">刺锤改</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:32px; background:#ee0000;" title="80"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:20px; background:#eeee00;" title="50"></div>
+  <div style="width:80px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:32px; background:#ee0000;" title="80"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:28px; background:#eeee00;" title="70"></div>
+  <div style="width:12px; background:#00ee00;" title="30"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div></TD>
     <TD noWrap align=middle>572</TD>
     <TD noWrap align=middle>　</TD>
     <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>ーーー</TD>
     <TD noWrap align=middle>2</TD>
     <TD noWrap align=right>6740z</TD>
-    <TD noWrap><A href="../items/items.html?00D8" target=items">铁矿石</A>x20</TD>
-    <TD noWrap><A href="../items/items.html?00D2" target=items">针果</A>x15</TD>
-    <TD noWrap><A href="../items/items.html?000A" target=items">营养剂Ｇ</A>x5</TD>
+    <TD noWrap><A href="../items/items.html?00D8" target="items">铁矿石</A>x20</TD>
+    <TD noWrap><A href="../items/items.html?00D2" target="items">针果</A>x15</TD>
+    <TD noWrap><A href="../items/items.html?000A" target="items">营养剂Ｇ</A>x5</TD>
     <TD noWrap>　</TD></TR>
   <TR class=odd>
     <TD noWrap><IMG src="images/blank.gif"><IMG src="images/blank.gif"><IMG 
-      src="images/blank.gif"><IMG src="images/L.gif">水晶石</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge066.gif" width=122></TD>
+      src="images/blank.gif"><IMG src="images/L.gif"><A href="../bugu/hammer.html#0066" class="invisible-link" target="weapon">水晶石</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:32px; background:#ee0000;" title="80"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:28px; background:#eeee00;" title="70"></div>
+  <div style="width:12px; background:#00ee00;" title="30"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:32px; background:#ee0000;" title="80"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:28px; background:#eeee00;" title="70"></div>
+  <div style="width:32px; background:#00ee00;" title="80"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div></TD>
     <TD noWrap align=middle>676</TD>
     <TD noWrap align=middle>　</TD>
     <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>〇ーー</TD>
     <TD noWrap align=middle>4</TD>
     <TD noWrap align=right>10120z</TD>
-    <TD noWrap><A href="../items/items.html?00E1" target=items">光水晶</A>x1</TD>
-    <TD noWrap><A href="../items/items.html?00DA" target=items">燕雀石</A>x8</TD>
-    <TD noWrap><A href="../items/items.html?02E7" target=items">宝石券</A>x3</TD>
+    <TD noWrap><A href="../items/items.html?00E1" target="items">光水晶</A>x1</TD>
+    <TD noWrap><A href="../items/items.html?00DA" target="items">燕雀石</A>x8</TD>
+    <TD noWrap><A href="../items/items.html?02E7" target="items">宝石券</A>x3</TD>
     <TD noWrap>　</TD></TR>
   <TR>
     <TD noWrap><IMG src="images/blank.gif"><IMG src="images/blank.gif"><IMG 
       src="images/blank.gif"><IMG src="images/blank.gif"><IMG 
-      src="images/L.gif">水晶新星</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge067.gif" width=122></TD>
+      src="images/L.gif"><A href="../bugu/hammer.html#0067" class="invisible-link" target="weapon">水晶新星</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:32px; background:#ee0000;" title="80"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:28px; background:#eeee00;" title="70"></div>
+  <div style="width:32px; background:#00ee00;" title="80"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:32px; background:#ee0000;" title="80"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:28px; background:#eeee00;" title="70"></div>
+  <div style="width:44px; background:#00ee00;" title="110"></div>
+  <div style="width:8px; background:#5050ff;" title="20"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div></TD>
     <TD noWrap align=middle>780</TD>
     <TD noWrap align=middle>　</TD>
     <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>〇ーー</TD>
     <TD noWrap align=middle>4</TD>
     <TD noWrap align=right>15220z</TD>
-    <TD noWrap><A href="../items/items.html?00E1" target=items">光水晶</A>x1</TD>
-    <TD noWrap><A href="../items/items.html?00DA" target=items">燕雀石</A>x15</TD>
-    <TD noWrap><A href="../items/items.html?00E4" target=items">冰结晶</A>x8</TD>
+    <TD noWrap><A href="../items/items.html?00E1" target="items">光水晶</A>x1</TD>
+    <TD noWrap><A href="../items/items.html?00DA" target="items">燕雀石</A>x15</TD>
+    <TD noWrap><A href="../items/items.html?00E4" target="items">冰结晶</A>x8</TD>
     <TD noWrap>　</TD></TR>
   <TR class=hc>
     <TD class=last noWrap><IMG src="images/blank.gif"><IMG src="images/blank.gif"><IMG 
       src="images/blank.gif"><IMG src="images/blank.gif"><IMG 
-      src="images/blank.gif"><IMG src="images/L.gif">大新星</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge306.gif" width=122></TD>
+      src="images/blank.gif"><IMG src="images/L.gif"><A href="../bugu/hammer.html#0306" class="invisible-link" target="weapon">大新星</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:32px; background:#ee0000;" title="80"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:28px; background:#eeee00;" title="70"></div>
+  <div style="width:44px; background:#00ee00;" title="110"></div>
+  <div style="width:8px; background:#5050ff;" title="20"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:32px; background:#ee0000;" title="80"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:28px; background:#eeee00;" title="70"></div>
+  <div style="width:44px; background:#00ee00;" title="110"></div>
+  <div style="width:20px; background:#5050ff;" title="50"></div>
+  <div style="width:8px; background:#ffffff;" title="20"></div>
+</div></TD>
     <TD noWrap align=middle>936</TD>
     <TD noWrap align=middle>雷300</TD>
     <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>〇〇ー</TD>
     <TD noWrap align=middle>6</TD>
     <TD noWrap align=right>123150z</TD>
-    <TD noWrap><A href="../items/items.html?00E2" target=items">耀水晶</A>x3</TD>
-    <TD noWrap><A href="../items/items.html?00DC" target=items">灵鹤石</A>x35</TD>
-    <TD noWrap><A href="../items/items.html?01DD" target=items">麒麟的雷角</A>x5</TD>
+    <TD noWrap><A href="../items/items.html?00E2" target="items">耀水晶</A>x3</TD>
+    <TD noWrap><A href="../items/items.html?00DC" target="items">灵鹤石</A>x35</TD>
+    <TD noWrap><A href="../items/items.html?01DD" target="items">麒麟的雷角</A>x5</TD>
     <TD noWrap></TD></TR>
   <TR>
-    <TH noWrap width=250>名称</TH>
-    <TH noWrap width=125>锋利度</TH>
-    <TH noWrap align=middle width=50>攻击力</TH>
-    <TH noWrap align=middle width=108>属性</TH>
-    <TH noWrap align=middle width=42>会心率</TH>
-    <TH noWrap align=middle width=45>插孔</TH>
-    <TH noWrap align=middle width=24>稀有度</TH>
-    <TH noWrap align=middle width=54>价格</TH>
-    <TH noWrap width=120>素材1</TH>
-    <TH noWrap width=120>素材2</TH>
-    <TH noWrap width=120>素材3</TH>
-    <TH noWrap width=120>素材4</TH></TR>
+    <TH>名称</TH>
+    <TH>锋利度</TH>
+    <TH>攻击力</TH>
+    <TH>属性</TH>
+    <TH>会心率</TH>
+    <TH>插孔</TH>
+    <TH>稀有度</TH>
+    <TH>价格</TH>
+    <TH>素材1</TH>
+    <TH>素材2</TH>
+    <TH>素材3</TH>
+    <TH>素材4</TH></TR>
   <TR class=odd>
-    <TD class=base noWrap>骨锤</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge078.gif" width=122></TD>
+    <TD class=base noWrap><A href="../bugu/hammer.html#0078" class="invisible-link" target="weapon">骨锤</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:20px; background:#ee0000;" title="50"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:24px; background:#eeee00;" title="60"></div>
+  <div style="width:100px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:20px; background:#ee0000;" title="50"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:44px; background:#eeee00;" title="110"></div>
+  <div style="width:80px; background:#000000;"></div>
+</div></TD>
     <TD noWrap align=middle>364</TD>
     <TD noWrap align=middle>　</TD>
     <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>ーーー</TD>
     <TD noWrap align=middle>1</TD>
     <TD noWrap align=right>950z</TD>
-    <TD noWrap><A href="../items/items.html?0138" target=items">龙骨【小】</A>x4</TD>
+    <TD noWrap><A href="../items/items.html?0138" target="items">龙骨【小】</A>x4</TD>
     <TD noWrap>　</TD>
     <TD noWrap></TD>
     <TD noWrap></TD></TR>
   <TR>
-    <TD noWrap><IMG src="images/L.gif">骨锤改</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge079.gif" width=122></TD>
+    <TD noWrap><IMG src="images/L.gif"><A href="../bugu/hammer.html#0079" class="invisible-link" target="weapon">骨锤改</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:20px; background:#ee0000;" title="50"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:44px; background:#eeee00;" title="110"></div>
+  <div style="width:80px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:20px; background:#ee0000;" title="50"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:56px; background:#eeee00;" title="140"></div>
+  <div style="width:8px; background:#00ee00;" title="20"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div></TD>
     <TD noWrap align=middle>416</TD>
     <TD noWrap align=middle>　</TD>
     <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>ーーー</TD>
     <TD noWrap align=middle>1</TD>
     <TD noWrap align=right>1890z</TD>
-    <TD noWrap><A href="../items/items.html?0138" target=items">龙骨【小】</A>x6</TD>
+    <TD noWrap><A href="../items/items.html?0138" target="items">龙骨【小】</A>x6</TD>
     <TD noWrap>　</TD>
     <TD noWrap></TD>
     <TD noWrap></TD></TR>
   <TR class=odd>
     <TD noWrap><IMG src="images/blank.gif"><IMG 
-    src="images/T.gif">独眼巨人之锤</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge080.gif" width=122></TD>
+    src="images/T.gif"><A href="../bugu/hammer.html#0080" class="invisible-link" target="weapon">独眼巨人之锤</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:40px; background:#eeee00;" title="100"></div>
+  <div style="width:100px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:60px; background:#eeee00;" title="150"></div>
+  <div style="width:80px; background:#000000;"></div>
+</div></TD>
     <TD noWrap align=middle>468</TD>
     <TD noWrap align=middle>　</TD>
     <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>ーーー</TD>
     <TD noWrap align=middle>2</TD>
     <TD noWrap align=right>2310z</TD>
-    <TD noWrap><A href="../items/items.html?0141" target=items">大块骨</A>x2</TD>
-    <TD noWrap><A href="../items/items.html?0138" target=items">龙骨【小】</A>x7</TD>
+    <TD noWrap><A href="../items/items.html?0141" target="items">大块骨</A>x2</TD>
+    <TD noWrap><A href="../items/items.html?0138" target="items">龙骨【小】</A>x7</TD>
     <TD noWrap></TD>
     <TD noWrap></TD></TR>
   <TR>
     <TD noWrap><IMG src="images/blank.gif"><IMG src="images/I.gif"><IMG 
-      src="images/T.gif">阿特拉斯之锤</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge082.gif" width=122></TD>
+      src="images/T.gif"><A href="../bugu/hammer.html#0082" class="invisible-link" target="weapon">阿特拉斯之锤</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:20px; background:#ee0000;" title="50"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:44px; background:#eeee00;" title="110"></div>
+  <div style="width:80px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:20px; background:#ee0000;" title="50"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:56px; background:#eeee00;" title="140"></div>
+  <div style="width:8px; background:#00ee00;" title="20"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div></TD>
     <TD noWrap align=middle>572</TD>
     <TD noWrap align=middle>　</TD>
     <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>ーーー</TD>
     <TD noWrap align=middle>2</TD>
     <TD noWrap align=right>3920z</TD>
-    <TD noWrap><A href="../items/items.html?0141" target=items">大块骨</A>x3</TD>
-    <TD noWrap><A href="../items/items.html?0138" target=items">龙骨【小】</A>x11</TD>
+    <TD noWrap><A href="../items/items.html?0141" target="items">大块骨</A>x3</TD>
+    <TD noWrap><A href="../items/items.html?0138" target="items">龙骨【小】</A>x11</TD>
     <TD noWrap></TD>
     <TD noWrap></TD></TR>
   <TR class=odd>
     <TD noWrap><IMG src="images/blank.gif"><IMG src="images/I.gif"><IMG 
-      src="images/I.gif"><IMG src="images/L.gif">怪鸟之颚</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge085.gif" width=122></TD>
+      src="images/I.gif"><IMG src="images/L.gif"><A href="../bugu/hammer.html#0085" class="invisible-link" target="weapon">怪鸟之颚</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:20px; background:#ee0000;" title="50"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:56px; background:#eeee00;" title="140"></div>
+  <div style="width:8px; background:#00ee00;" title="20"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:20px; background:#ee0000;" title="50"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:56px; background:#eeee00;" title="140"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div></TD>
     <TD noWrap align=middle>676</TD>
     <TD noWrap align=middle>　</TD>
     <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>ーーー</TD>
     <TD noWrap align=middle>3</TD>
     <TD noWrap align=right>6430z</TD>
-    <TD noWrap><A href="../items/items.html?0170" target=items">巨大的喙</A>x1</TD>
-    <TD noWrap><A href="../items/items.html?01FB" target=items">尖锐的爪</A>x6</TD>
-    <TD noWrap><A href="../items/items.html?0018" target=items">怪物的体液</A>x4</TD>
+    <TD noWrap><A href="../items/items.html?0170" target="items">巨大的喙</A>x1</TD>
+    <TD noWrap><A href="../items/items.html?01FB" target="items">尖锐的爪</A>x6</TD>
+    <TD noWrap><A href="../items/items.html?0018" target="items">怪物的体液</A>x4</TD>
     <TD noWrap></TD></TR>
   <TR>
     <TD class=last noWrap><IMG src="images/blank.gif"><IMG src="images/I.gif"><IMG 
       src="images/I.gif"><IMG src="images/blank.gif"><IMG 
-      src="images/T.gif">怪鸟喙击</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge305.gif" width=122></TD>
+      src="images/T.gif"><A href="../bugu/hammer.html#0305" class="invisible-link" target="weapon">怪鸟喙击</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:36px; background:#ee0000;" title="90"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:52px; background:#eeee00;" title="130"></div>
+  <div style="width:24px; background:#00ee00;" title="60"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:36px; background:#ee0000;" title="90"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:52px; background:#eeee00;" title="130"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:16px; background:#5050ff;" title="40"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div></TD>
     <TD noWrap align=middle>728</TD>
     <TD noWrap align=middle>　</TD>
     <TD noWrap align=right>10%</TD>
     <TD noWrap align=middle>〇〇ー</TD>
     <TD noWrap align=middle>4</TD>
     <TD noWrap align=right>15580z</TD>
-    <TD noWrap><A href="../items/items.html?016E" target=items">怪鸟的耳</A>x2</TD>
-    <TD noWrap><A href="../items/items.html?0203" target=items">极彩色的毛</A>x2</TD>
-    <TD noWrap><A href="../items/items.html?0018" target=items">怪物的体液</A>x15</TD>
+    <TD noWrap><A href="../items/items.html?016E" target="items">怪鸟的耳</A>x2</TD>
+    <TD noWrap><A href="../items/items.html?0203" target="items">极彩色的毛</A>x2</TD>
+    <TD noWrap><A href="../items/items.html?0018" target="items">怪物的体液</A>x15</TD>
     <TD noWrap></TD></TR>
   <TR class=odd>
     <TD noWrap><IMG src="images/blank.gif"><IMG src="images/I.gif"><IMG 
       src="images/I.gif"><IMG src="images/blank.gif"><IMG 
-      src="images/L.gif">残暴之颚</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge438.gif" width=122></TD>
+      src="images/L.gif"><A href="../bugu/hammer.html#0438" class="invisible-link" target="weapon">残暴之颚</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:20px; background:#ee0000;" title="50"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:56px; background:#eeee00;" title="140"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:20px; background:#ee0000;" title="50"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:56px; background:#eeee00;" title="140"></div>
+  <div style="width:40px; background:#00ee00;" title="100"></div>
+  <div style="width:8px; background:#5050ff;" title="20"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div></TD>
     <TD noWrap align=middle>780</TD>
     <TD noWrap align=middle>　</TD>
     <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>〇ーー</TD>
     <TD noWrap align=middle>3</TD>
     <TD noWrap align=right>11370z</TD>
-    <TD noWrap><A href="../items/items.html?0174" target=items">青怪鸟的甲壳</A>x8</TD>
-    <TD noWrap><A href="../items/items.html?0173" target=items">青怪鸟的鳞</A>x4</TD>
-    <TD noWrap><A href="../items/items.html?0108" target=items">粘着蝗虫</A>x6</TD>
+    <TD noWrap><A href="../items/items.html?0174" target="items">青怪鸟的甲壳</A>x8</TD>
+    <TD noWrap><A href="../items/items.html?0173" target="items">青怪鸟的鳞</A>x4</TD>
+    <TD noWrap><A href="../items/items.html?0108" target="items">黏着蝗虫</A>x6</TD>
     <TD noWrap></TD></TR>
   <TR>
     <TD noWrap><IMG src="images/blank.gif"><IMG src="images/I.gif"><IMG 
       src="images/I.gif"><IMG src="images/blank.gif"><IMG 
-      src="images/blank.gif"><IMG src="images/L.gif">恶毒怪兽</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge069.gif" width=122></TD>
+      src="images/blank.gif"><IMG src="images/L.gif"><A href="../bugu/hammer.html#0069" class="invisible-link" target="weapon">恶毒怪兽</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:56px; background:#ee0000;" title="140"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:24px; background:#eeee00;" title="60"></div>
+  <div style="width:24px; background:#00ee00;" title="60"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:56px; background:#ee0000;" title="140"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:24px; background:#eeee00;" title="60"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:16px; background:#5050ff;" title="40"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div></TD>
     <TD noWrap align=middle>832</TD>
     <TD noWrap align=middle>毒260</TD>
     <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>〇ーー</TD>
     <TD noWrap align=middle>5</TD>
     <TD noWrap align=right>24300z</TD>
-    <TD noWrap><A href="../items/items.html?0178" target=items">毒怪鸟的头</A>x1</TD>
-    <TD noWrap><A href="../items/items.html?00DA" target=items">燕雀石</A>x17</TD>
-    <TD noWrap><A href="../items/items.html?012F" target=items">毒袋</A>x6</TD>
+    <TD noWrap><A href="../items/items.html?0178" target="items">毒怪鸟的头</A>x1</TD>
+    <TD noWrap><A href="../items/items.html?00DA" target="items">燕雀石</A>x17</TD>
+    <TD noWrap><A href="../items/items.html?012F" target="items">毒袋</A>x6</TD>
     <TD noWrap></TD></TR>
   <TR class=hc>
     <TD class=last noWrap><IMG src="images/blank.gif"><IMG src="images/I.gif"><IMG 
       src="images/I.gif"><IMG src="images/blank.gif"><IMG 
       src="images/blank.gif"><IMG src="images/blank.gif"><IMG 
-      src="images/L.gif">死亡毒液锤</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge369.gif" width=122></TD>
+      src="images/L.gif"><A href="../bugu/hammer.html#0369" class="invisible-link" target="weapon">死亡毒液锤</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:76px; background:#ee0000;" title="190"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:20px; background:#eeee00;" title="50"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:8px; background:#5050ff;" title="20"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:76px; background:#ee0000;" title="190"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:20px; background:#eeee00;" title="50"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:16px; background:#5050ff;" title="40"></div>
+  <div style="width:12px; background:#ffffff;" title="30"></div>
+</div></TD>
     <TD noWrap align=middle>936</TD>
     <TD noWrap align=middle>毒260</TD>
     <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>〇ーー</TD>
     <TD noWrap align=middle>6</TD>
     <TD noWrap align=right>78600z</TD>
-    <TD noWrap><A href="../items/items.html?0178" target=items">毒怪鸟的头</A>x1</TD>
-    <TD noWrap><A href="../items/items.html?0177" target=items">橡胶质的上皮</A>x7</TD>
-    <TD noWrap><A href="../items/items.html?00DC" target=items">灵鹤石</A>x25</TD>
+    <TD noWrap><A href="../items/items.html?0178" target="items">毒怪鸟的头</A>x1</TD>
+    <TD noWrap><A href="../items/items.html?0177" target="items">橡胶质的上皮</A>x7</TD>
+    <TD noWrap><A href="../items/items.html?00DC" target="items">灵鹤石</A>x25</TD>
     <TD noWrap></TD></TR>
   <TR>
     <TD noWrap><IMG src="images/blank.gif"><IMG src="images/I.gif"><IMG 
-      src="images/L.gif">碎颅</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge083.gif" width=122></TD>
+      src="images/L.gif"><A href="../bugu/hammer.html#0083" class="invisible-link" target="weapon">碎颅</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:40px; background:#eeee00;" title="100"></div>
+  <div style="width:100px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:60px; background:#eeee00;" title="150"></div>
+  <div style="width:80px; background:#000000;"></div>
+</div></TD>
     <TD noWrap align=middle>520</TD>
     <TD noWrap align=middle>　</TD>
     <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>ーーー</TD>
     <TD noWrap align=middle>3</TD>
     <TD noWrap align=right>3190z</TD>
-    <TD noWrap><A href="../items/items.html?0139" target=items">龙骨【中】</A>x2</TD>
-    <TD noWrap><A href="../items/items.html?01FB" target=items">尖锐的爪</A>x10</TD>
-    <TD noWrap><A href="../items/items.html?0018" target=items">怪物的体液</A>x1</TD>
+    <TD noWrap><A href="../items/items.html?0139" target="items">龙骨【中】</A>x2</TD>
+    <TD noWrap><A href="../items/items.html?01FB" target="items">尖锐的爪</A>x10</TD>
+    <TD noWrap><A href="../items/items.html?0018" target="items">怪物的体液</A>x1</TD>
     <TD noWrap></TD></TR>
   <TR class=odd>
     <TD noWrap><IMG src="images/blank.gif"><IMG src="images/I.gif"><IMG 
-      src="images/blank.gif"><IMG src="images/L.gif">碎颅改</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge084.gif" width=122></TD>
+      src="images/blank.gif"><IMG src="images/L.gif"><A href="../bugu/hammer.html#0084" class="invisible-link" target="weapon">碎颅改</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:60px; background:#eeee00;" title="150"></div>
+  <div style="width:80px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:68px; background:#eeee00;" title="170"></div>
+  <div style="width:12px; background:#00ee00;" title="30"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div></TD>
     <TD noWrap align=middle>572</TD>
     <TD noWrap align=middle>　</TD>
     <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>ーーー</TD>
     <TD noWrap align=middle>3</TD>
     <TD noWrap align=right>5340z</TD>
-    <TD noWrap><A href="../items/items.html?0139" target=items">龙骨【中】</A>x4</TD>
-    <TD noWrap><A href="../items/items.html?017C" target=items">鱼龙的牙</A>x12</TD>
-    <TD noWrap><A href="../items/items.html?0018" target=items">怪物的体液</A>x2</TD>
+    <TD noWrap><A href="../items/items.html?0139" target="items">龙骨【中】</A>x4</TD>
+    <TD noWrap><A href="../items/items.html?017C" target="items">鱼龙的牙</A>x12</TD>
+    <TD noWrap><A href="../items/items.html?0018" target="items">怪物的体液</A>x2</TD>
     <TD noWrap></TD></TR>
   <TR>
     <TD noWrap><IMG src="images/blank.gif"><IMG src="images/I.gif"><IMG 
       src="images/blank.gif"><IMG src="images/blank.gif"><IMG 
-      src="images/T.gif">角龙尾</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge089.gif" width=122></TD>
+      src="images/T.gif"><A href="../bugu/hammer.html#0089" class="invisible-link" target="weapon">角龙尾</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:24px; background:#ee0000;" title="60"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:32px; background:#eeee00;" title="80"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:24px; background:#ee0000;" title="60"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:32px; background:#eeee00;" title="80"></div>
+  <div style="width:48px; background:#00ee00;" title="120"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div></TD>
     <TD noWrap align=middle>728</TD>
     <TD noWrap align=middle>防御+10</TD>
     <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>ーーー</TD>
     <TD noWrap align=middle>4</TD>
     <TD noWrap align=right>12690z</TD>
-    <TD noWrap><A href="../items/items.html?01C2" target=items">角龙的尻尾</A>x1</TD>
-    <TD noWrap><A href="../items/items.html?01BE" target=items">角龙的甲壳</A>x2</TD>
-    <TD noWrap><A href="../items/items.html?00DA" target=items">燕雀石</A>x8</TD>
+    <TD noWrap><A href="../items/items.html?01C2" target="items">角龙的尾巴</A>x1</TD>
+    <TD noWrap><A href="../items/items.html?01BE" target="items">角龙的甲壳</A>x2</TD>
+    <TD noWrap><A href="../items/items.html?00DA" target="items">燕雀石</A>x8</TD>
     <TD noWrap></TD></TR>
   <TR class=odd>
     <TD noWrap><IMG src="images/blank.gif"><IMG src="images/I.gif"><IMG 
       src="images/blank.gif"><IMG src="images/blank.gif"><IMG 
-      src="images/I.gif"><IMG src="images/L.gif">破锤禁闭</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge212.gif" width=122></TD>
+      src="images/I.gif"><IMG src="images/L.gif"><A href="../bugu/hammer.html#0212" class="invisible-link" target="weapon">破锤禁闭</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:40px; background:#ee0000;" title="100"></div>
+  <div style="width:4px; background:#eea000;" title="10"></div>
+  <div style="width:12px; background:#eeee00;" title="30"></div>
+  <div style="width:64px; background:#00ee00;" title="160"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:40px; background:#ee0000;" title="100"></div>
+  <div style="width:4px; background:#eea000;" title="10"></div>
+  <div style="width:12px; background:#eeee00;" title="30"></div>
+  <div style="width:68px; background:#00ee00;" title="170"></div>
+  <div style="width:16px; background:#5050ff;" title="40"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div></TD>
     <TD noWrap align=middle>832</TD>
     <TD noWrap align=middle>防御+14</TD>
     <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>ーーー</TD>
     <TD noWrap align=middle>4</TD>
     <TD noWrap align=right>31200z</TD>
-    <TD noWrap><A href="../items/items.html?01C2" target=items">角龙的尻尾</A>x3</TD>
-    <TD noWrap><A href="../items/items.html?01BE" target=items">角龙的甲壳</A>x8</TD>
-    <TD noWrap><A href="../items/items.html?0108" target=items">粘着蝗虫</A>x21</TD>
+    <TD noWrap><A href="../items/items.html?01C2" target="items">角龙的尾巴</A>x3</TD>
+    <TD noWrap><A href="../items/items.html?01BE" target="items">角龙的甲壳</A>x8</TD>
+    <TD noWrap><A href="../items/items.html?0108" target="items">黏着蝗虫</A>x21</TD>
     <TD noWrap></TD></TR>
   <TR class=hc>
     <TD noWrap><IMG src="images/blank.gif"><IMG src="images/I.gif"><IMG 
       src="images/blank.gif"><IMG src="images/blank.gif"><IMG 
       src="images/I.gif"><IMG src="images/blank.gif"><IMG 
-      src="images/L.gif">双角魔锤</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge062.gif" width=122></TD>
+      src="images/L.gif"><A href="../bugu/hammer.html#0062" class="invisible-link" target="weapon">双角魔锤</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:32px; background:#ee0000;" title="80"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:28px; background:#eeee00;" title="70"></div>
+  <div style="width:44px; background:#00ee00;" title="110"></div>
+  <div style="width:8px; background:#5050ff;" title="20"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:32px; background:#ee0000;" title="80"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:28px; background:#eeee00;" title="70"></div>
+  <div style="width:44px; background:#00ee00;" title="110"></div>
+  <div style="width:20px; background:#5050ff;" title="50"></div>
+  <div style="width:8px; background:#ffffff;" title="20"></div>
+</div></TD>
     <TD noWrap align=middle>884</TD>
     <TD noWrap align=middle>防御+18</TD>
     <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>ーーー</TD>
     <TD noWrap align=middle>6</TD>
     <TD noWrap align=right>50000z</TD>
-    <TD noWrap><A href="../items/items.html?01D6" target=items">真红之角</A>x1</TD>
-    <TD noWrap><A href="../items/items.html?01C4" target=items">黑卷角</A>x1</TD>
-    <TD noWrap><A href="../items/items.html?01C8" target=items">黑角龙的坚壳</A>x6</TD>
+    <TD noWrap><A href="../items/items.html?01D6" target="items">真红之角</A>x1</TD>
+    <TD noWrap><A href="../items/items.html?01C4" target="items">黑卷角</A>x1</TD>
+    <TD noWrap><A href="../items/items.html?01C8" target="items">黑角龙的坚壳</A>x6</TD>
     <TD noWrap></TD></TR>
   <TR class=hc>
     <TD class=last noWrap><IMG src="images/blank.gif"><IMG src="images/I.gif"><IMG 
       src="images/blank.gif"><IMG src="images/blank.gif"><IMG 
       src="images/I.gif"><IMG src="images/blank.gif"><IMG 
-      src="images/blank.gif"><IMG src="images/L.gif">角龙锤混沌造就者</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge430.gif" width=122></TD>
+      src="images/blank.gif"><IMG src="images/L.gif"><A href="../bugu/hammer.html#0430" class="invisible-link" target="weapon">角龙锤混沌造就者</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:40px; background:#ee0000;" title="100"></div>
+  <div style="width:4px; background:#eea000;" title="10"></div>
+  <div style="width:12px; background:#eeee00;" title="30"></div>
+  <div style="width:68px; background:#00ee00;" title="170"></div>
+  <div style="width:16px; background:#5050ff;" title="40"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:40px; background:#ee0000;" title="100"></div>
+  <div style="width:4px; background:#eea000;" title="10"></div>
+  <div style="width:12px; background:#eeee00;" title="30"></div>
+  <div style="width:68px; background:#00ee00;" title="170"></div>
+  <div style="width:24px; background:#5050ff;" title="60"></div>
+  <div style="width:12px; background:#ffffff;" title="30"></div>
+</div></TD>
     <TD noWrap align=middle>936</TD>
     <TD noWrap align=middle>防御+20</TD>
     <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>ーーー</TD>
     <TD noWrap align=middle>7</TD>
     <TD noWrap align=right>120000z</TD>
-    <TD noWrap><A href="../items/items.html?01BD" target=items">优质的弯角</A>x2</TD>
-    <TD noWrap><A href="../items/items.html?01C7" target=items">黑角龙的尻尾</A>x6</TD>
-    <TD noWrap><A href="../items/items.html?0144" target=items">龙玉</A>x1</TD>
+    <TD noWrap><A href="../items/items.html?01BD" target="items">优质的弯角</A>x2</TD>
+    <TD noWrap><A href="../items/items.html?01C7" target="items">黑角龙的尾巴</A>x6</TD>
+    <TD noWrap><A href="../items/items.html?0144" target="items">龙玉</A>x1</TD>
     <TD noWrap></TD></TR>
   <TR>
     <TD noWrap><IMG src="images/blank.gif"><IMG src="images/I.gif"><IMG 
       src="images/blank.gif"><IMG src="images/blank.gif"><IMG 
-      src="images/L.gif">雪狮头锤</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge075.gif" width=122></TD>
+      src="images/L.gif"><A href="../bugu/hammer.html#0075" class="invisible-link" target="weapon">雪狮头锤</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:68px; background:#eeee00;" title="170"></div>
+  <div style="width:12px; background:#00ee00;" title="30"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:68px; background:#eeee00;" title="170"></div>
+  <div style="width:32px; background:#00ee00;" title="80"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div></TD>
     <TD noWrap align=middle>624</TD>
     <TD noWrap align=middle>冰260</TD>
     <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>ーーー</TD>
     <TD noWrap align=middle>4</TD>
     <TD noWrap align=right>15500z</TD>
-    <TD noWrap><A href="../items/items.html?01FC" target=items">雪狮子的牙</A>x2</TD>
-    <TD noWrap><A href="../items/items.html?01FE" target=items">雪狮子的毛</A>x6</TD>
-    <TD noWrap><A href="../items/items.html?013E" target=items">谜之头骨</A>x1</TD>
+    <TD noWrap><A href="../items/items.html?01FC" target="items">雪狮子的牙</A>x2</TD>
+    <TD noWrap><A href="../items/items.html?01FE" target="items">雪狮子的毛</A>x6</TD>
+    <TD noWrap><A href="../items/items.html?013E" target="items">谜之头骨</A>x1</TD>
     <TD noWrap></TD></TR>
   <TR class=odd>
     <TD noWrap><IMG src="images/blank.gif"><IMG src="images/I.gif"><IMG 
       src="images/blank.gif"><IMG src="images/blank.gif"><IMG 
-      src="images/blank.gif"><IMG src="images/L.gif">雪狮头锤改</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge425.gif" width=122></TD>
+      src="images/blank.gif"><IMG src="images/L.gif"><A href="../bugu/hammer.html#0425" class="invisible-link" target="weapon">雪狮头锤改</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:68px; background:#eeee00;" title="170"></div>
+  <div style="width:32px; background:#00ee00;" title="80"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:68px; background:#eeee00;" title="170"></div>
+  <div style="width:48px; background:#00ee00;" title="120"></div>
+  <div style="width:4px; background:#5050ff;" title="10"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div></TD>
     <TD noWrap align=middle>728</TD>
     <TD noWrap align=middle>冰370</TD>
     <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>ーーー</TD>
     <TD noWrap align=middle>4</TD>
     <TD noWrap align=right>25430z</TD>
-    <TD noWrap><A href="../items/items.html?01FC" target=items">雪狮子的牙</A>x3</TD>
-    <TD noWrap><A href="../items/items.html?0201" target=items">雪狮子的尻尾</A>x2</TD>
-    <TD noWrap><A href="../items/items.html?010A" target=items">煌甲虫</A>x5</TD>
+    <TD noWrap><A href="../items/items.html?01FC" target="items">雪狮子的牙</A>x3</TD>
+    <TD noWrap><A href="../items/items.html?0201" target="items">雪狮子的尾巴</A>x2</TD>
+    <TD noWrap><A href="../items/items.html?010A" target="items">煌甲虫</A>x5</TD>
     <TD noWrap></TD></TR>
   <TR class=hc>
     <TD class=last noWrap><IMG src="images/blank.gif"><IMG src="images/I.gif"><IMG 
       src="images/blank.gif"><IMG src="images/blank.gif"><IMG 
       src="images/blank.gif"><IMG src="images/blank.gif"><IMG 
-      src="images/blank.gif"><IMG src="images/L.gif">雪狮巨头</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge086.gif" width=122></TD>
+      src="images/blank.gif"><IMG src="images/L.gif"><A href="../bugu/hammer.html#0086" class="invisible-link" target="weapon">雪狮巨头</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:68px; background:#eeee00;" title="170"></div>
+  <div style="width:48px; background:#00ee00;" title="120"></div>
+  <div style="width:4px; background:#5050ff;" title="10"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:68px; background:#eeee00;" title="170"></div>
+  <div style="width:48px; background:#00ee00;" title="120"></div>
+  <div style="width:16px; background:#5050ff;" title="40"></div>
+  <div style="width:8px; background:#ffffff;" title="20"></div>
+</div></TD>
     <TD noWrap align=middle>832</TD>
     <TD noWrap align=middle>冰400</TD>
     <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>ーーー</TD>
     <TD noWrap align=middle>6</TD>
     <TD noWrap align=right>87230z</TD>
-    <TD noWrap><A href="../items/items.html?01FD" target=items">雪狮子的锐牙</A>x7</TD>
-    <TD noWrap><A href="../items/items.html?01FF" target=items">雪狮子的刚毛</A>x10</TD>
-    <TD noWrap><A href="../items/items.html?013F" target=items">达人的髑髅</A>x1</TD>
+    <TD noWrap><A href="../items/items.html?01FD" target="items">雪狮子的锐牙</A>x7</TD>
+    <TD noWrap><A href="../items/items.html?01FF" target="items">雪狮子的刚毛</A>x10</TD>
+    <TD noWrap><A href="../items/items.html?013F" target="items">达人的髑髅</A>x1</TD>
     <TD noWrap></TD></TR>
   <TR class=odd>
-    <TD noWrap><IMG src="images/blank.gif"><IMG src="images/L.gif">骨斧</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge070.gif" width=122></TD>
+    <TD noWrap><IMG src="images/blank.gif"><IMG src="images/L.gif"><A href="../bugu/hammer.html#0070" class="invisible-link" target="weapon">骨斧</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:24px; background:#ee0000;" title="60"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:20px; background:#eeee00;" title="50"></div>
+  <div style="width:100px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:24px; background:#ee0000;" title="60"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:32px; background:#eeee00;" title="80"></div>
+  <div style="width:8px; background:#00ee00;" title="20"></div>
+  <div style="width:80px; background:#000000;"></div>
+</div></TD>
     <TD noWrap align=middle>624</TD>
     <TD noWrap align=middle>　</TD>
     <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>〇ーー</TD>
     <TD noWrap align=middle>2</TD>
     <TD noWrap align=right>4390z</TD>
-    <TD noWrap><A href="../items/items.html?0139" target=items">龙骨【中】</A>x6</TD>
-    <TD noWrap><A href="../items/items.html?0018" target=items">怪物的体液</A>x1</TD>
+    <TD noWrap><A href="../items/items.html?0139" target="items">龙骨【中】</A>x6</TD>
+    <TD noWrap><A href="../items/items.html?0018" target="items">怪物的体液</A>x1</TD>
     <TD noWrap></TD>
     <TD noWrap></TD></TR>
   <TR>
     <TD class=last noWrap><IMG src="images/blank.gif"><IMG src="images/blank.gif"><IMG 
-      src="images/L.gif">宽骨斧</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge072.gif" width=122></TD>
+      src="images/L.gif"><A href="../bugu/hammer.html#0072" class="invisible-link" target="weapon">宽骨斧</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:56px; background:#ee0000;" title="140"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:24px; background:#eeee00;" title="60"></div>
+  <div style="width:4px; background:#00ee00;" title="10"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:56px; background:#ee0000;" title="140"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:24px; background:#eeee00;" title="60"></div>
+  <div style="width:24px; background:#00ee00;" title="60"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div></TD>
     <TD noWrap align=middle>780</TD>
     <TD noWrap align=middle>　</TD>
     <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>〇〇ー</TD>
     <TD noWrap align=middle>2</TD>
     <TD noWrap align=right>8980z</TD>
-    <TD noWrap><A href="../items/items.html?013A" target=items">龙骨【大】</A>x5</TD>
-    <TD noWrap><A href="../items/items.html?0018" target=items">怪物的体液</A>x3</TD>
+    <TD noWrap><A href="../items/items.html?013A" target="items">龙骨【大】</A>x5</TD>
+    <TD noWrap><A href="../items/items.html?0018" target="items">怪物的体液</A>x3</TD>
     <TD noWrap></TD>
     <TD noWrap></TD></TR>
   <TR>
-    <TH noWrap width=250>名称</TH>
-    <TH noWrap width=125>锋利度</TH>
-    <TH noWrap align=middle width=50>攻击力</TH>
-    <TH noWrap align=middle width=108>属性</TH>
-    <TH noWrap align=middle width=42>会心率</TH>
-    <TH noWrap align=middle width=45>插孔</TH>
-    <TH noWrap align=middle width=24>稀有度</TH>
-    <TH noWrap align=middle width=54>价格</TH>
-    <TH noWrap width=120>素材1</TH>
-    <TH noWrap width=120>素材2</TH>
-    <TH noWrap width=120>素材3</TH>
-    <TH noWrap width=120>素材4</TH></TR>
+    <TH>名称</TH>
+    <TH>锋利度</TH>
+    <TH>攻击力</TH>
+    <TH>属性</TH>
+    <TH>会心率</TH>
+    <TH>插孔</TH>
+    <TH>稀有度</TH>
+    <TH>价格</TH>
+    <TH>素材1</TH>
+    <TH>素材2</TH>
+    <TH>素材3</TH>
+    <TH>素材4</TH></TR>
   <TR class=odd>
-    <TD class=base noWrap>巨大锤</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge073.gif" width=122></TD>
+    <TD class=base noWrap><A href="../bugu/hammer.html#0073" class="invisible-link" target="weapon">巨大锤</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:24px; background:#ee0000;" title="60"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:32px; background:#eeee00;" title="80"></div>
+  <div style="width:8px; background:#00ee00;" title="20"></div>
+  <div style="width:80px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:24px; background:#ee0000;" title="60"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:32px; background:#eeee00;" title="80"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div></TD>
     <TD noWrap align=middle>624</TD>
     <TD noWrap align=middle>防御+8</TD>
     <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>〇ーー</TD>
     <TD noWrap align=middle>3</TD>
     <TD noWrap align=right>6780z</TD>
-    <TD noWrap><A href="../items/items.html?01B6" target=items">铠龙的甲壳</A>x4</TD>
-    <TD noWrap><A href="../items/items.html?01B2" target=items">岩龙的甲壳</A>x3</TD>
-    <TD noWrap><A href="../items/items.html?00DA" target=items">燕雀石</A>x11</TD>
+    <TD noWrap><A href="../items/items.html?01B6" target="items">铠龙的甲壳</A>x4</TD>
+    <TD noWrap><A href="../items/items.html?01B2" target="items">岩龙的甲壳</A>x3</TD>
+    <TD noWrap><A href="../items/items.html?00DA" target="items">燕雀石</A>x11</TD>
     <TD noWrap></TD></TR>
   <TR>
-    <TD noWrap><IMG src="images/T.gif">巨大锤改</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge087.gif" width=122></TD>
+    <TD noWrap><IMG src="images/T.gif"><A href="../bugu/hammer.html#0087" class="invisible-link" target="weapon">巨大锤改</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:32px; background:#ee0000;" title="80"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:28px; background:#eeee00;" title="70"></div>
+  <div style="width:12px; background:#00ee00;" title="30"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:32px; background:#ee0000;" title="80"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:28px; background:#eeee00;" title="70"></div>
+  <div style="width:32px; background:#00ee00;" title="80"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div></TD>
     <TD noWrap align=middle>728</TD>
     <TD noWrap align=middle>　</TD>
     <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>〇ーー</TD>
     <TD noWrap align=middle>3</TD>
     <TD noWrap align=right>9180z</TD>
-    <TD noWrap><A href="../items/items.html?01B6" target=items">铠龙的甲壳</A>x6</TD>
-    <TD noWrap><A href="../items/items.html?01B2" target=items">岩龙的甲壳</A>x5</TD>
-    <TD noWrap><A href="../items/items.html?00DA" target=items">燕雀石</A>x16</TD>
+    <TD noWrap><A href="../items/items.html?01B6" target="items">铠龙的甲壳</A>x6</TD>
+    <TD noWrap><A href="../items/items.html?01B2" target="items">岩龙的甲壳</A>x5</TD>
+    <TD noWrap><A href="../items/items.html?00DA" target="items">燕雀石</A>x16</TD>
     <TD noWrap></TD></TR>
   <TR class=odd>
-    <TD noWrap><IMG src="images/I.gif"><IMG src="images/L.gif">溶解锤</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge058.gif" width=122></TD>
+    <TD noWrap><IMG src="images/I.gif"><IMG src="images/L.gif"><A href="../bugu/hammer.html#0058" class="invisible-link" target="weapon">熔解锤</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:32px; background:#ee0000;" title="80"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:28px; background:#eeee00;" title="70"></div>
+  <div style="width:32px; background:#00ee00;" title="80"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:32px; background:#ee0000;" title="80"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:28px; background:#eeee00;" title="70"></div>
+  <div style="width:44px; background:#00ee00;" title="110"></div>
+  <div style="width:8px; background:#5050ff;" title="20"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div></TD>
     <TD noWrap align=middle>832</TD>
     <TD noWrap align=middle>火190</TD>
     <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>〇ーー</TD>
     <TD noWrap align=middle>5</TD>
     <TD noWrap align=right>31500z</TD>
-    <TD noWrap><A href="../items/items.html?01B9" target=items">黑铠龙的甲壳</A>x8</TD>
-    <TD noWrap><A href="../items/items.html?01BB" target=items">黑铠龙的头壳</A>x1</TD>
-    <TD noWrap><A href="../items/items.html?00DE" target=items">红莲石</A>x8</TD>
+    <TD noWrap><A href="../items/items.html?01B9" target="items">黑铠龙的甲壳</A>x8</TD>
+    <TD noWrap><A href="../items/items.html?01BB" target="items">黑铠龙的头壳</A>x1</TD>
+    <TD noWrap><A href="../items/items.html?00DE" target="items">红莲石</A>x8</TD>
     <TD noWrap></TD></TR>
   <TR class=hc>
     <TD class=last noWrap><IMG src="images/I.gif"><IMG src="images/blank.gif"><IMG 
-      src="images/L.gif">溶解锤【炼狱】</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge262.gif" width=122></TD>
+      src="images/L.gif"><A href="../bugu/hammer.html#0262" class="invisible-link" target="weapon">熔解锤【炼狱】</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:32px; background:#ee0000;" title="80"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:28px; background:#eeee00;" title="70"></div>
+  <div style="width:44px; background:#00ee00;" title="110"></div>
+  <div style="width:8px; background:#5050ff;" title="20"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:32px; background:#ee0000;" title="80"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:28px; background:#eeee00;" title="70"></div>
+  <div style="width:44px; background:#00ee00;" title="110"></div>
+  <div style="width:20px; background:#5050ff;" title="50"></div>
+  <div style="width:8px; background:#ffffff;" title="20"></div>
+</div></TD>
     <TD noWrap align=middle>884</TD>
     <TD noWrap align=middle>火310</TD>
     <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>〇ーー</TD>
     <TD noWrap align=middle>6</TD>
     <TD noWrap align=right>65190z</TD>
-    <TD noWrap><A href="../items/items.html?01BA" target=items">黑铠龙的坚壳</A>x12</TD>
-    <TD noWrap><A href="../items/items.html?01BB" target=items">黑铠龙的头壳</A>x2</TD>
-    <TD noWrap><A href="../items/items.html?01B5" target=items">铠龙的骨髓</A>x3</TD>
+    <TD noWrap><A href="../items/items.html?01BA" target="items">黑铠龙的坚壳</A>x12</TD>
+    <TD noWrap><A href="../items/items.html?01BB" target="items">黑铠龙的头壳</A>x2</TD>
+    <TD noWrap><A href="../items/items.html?01B5" target="items">铠龙的骨髓</A>x3</TD>
     <TD noWrap></TD></TR>
   <TR class=odd>
-    <TD noWrap><IMG src="images/L.gif">甲壳锤</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge477.gif" width=122></TD>
+    <TD noWrap><IMG src="images/L.gif"><A href="../bugu/hammer.html#0477" class="invisible-link" target="weapon">甲壳锤</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:24px; background:#ee0000;" title="60"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:32px; background:#eeee00;" title="80"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:24px; background:#ee0000;" title="60"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:32px; background:#eeee00;" title="80"></div>
+  <div style="width:48px; background:#00ee00;" title="120"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div></TD>
     <TD noWrap align=middle>780</TD>
     <TD noWrap align=middle>防御+8 毒160</TD>
     <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>〇〇ー</TD>
     <TD noWrap align=middle>4</TD>
     <TD noWrap align=right>15780z</TD>
-    <TD noWrap><A href="../items/items.html?01B2" target=items">岩龙的甲壳</A>x8</TD>
-    <TD noWrap><A href="../items/items.html?0142" target=items">龙牙</A>x15</TD>
-    <TD noWrap><A href="../items/items.html?012F" target=items">毒袋</A>x5</TD>
+    <TD noWrap><A href="../items/items.html?01B2" target="items">岩龙的甲壳</A>x8</TD>
+    <TD noWrap><A href="../items/items.html?0142" target="items">龙牙</A>x15</TD>
+    <TD noWrap><A href="../items/items.html?012F" target="items">毒袋</A>x5</TD>
     <TD noWrap></TD></TR>
   <TR>
-    <TD class=last noWrap><IMG src="images/blank.gif"><IMG src="images/L.gif">重力锤</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge077.gif" width=122></TD>
+    <TD class=last noWrap><IMG src="images/blank.gif"><IMG src="images/L.gif"><A href="../bugu/hammer.html#0077" class="invisible-link" target="weapon">重力锤</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:24px; background:#ee0000;" title="60"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:32px; background:#eeee00;" title="80"></div>
+  <div style="width:48px; background:#00ee00;" title="120"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:24px; background:#ee0000;" title="60"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:32px; background:#eeee00;" title="80"></div>
+  <div style="width:48px; background:#00ee00;" title="120"></div>
+  <div style="width:20px; background:#5050ff;" title="50"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div></TD>
     <TD noWrap align=middle>884</TD>
     <TD noWrap align=middle>防御+14 毒180</TD>
     <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>〇〇ー</TD>
     <TD noWrap align=middle>4</TD>
     <TD noWrap align=right>52220z</TD>
-    <TD noWrap><A href="../items/items.html?01B2" target=items">岩龙的甲壳</A>x12</TD>
-    <TD noWrap><A href="../items/items.html?0196" target=items">火龙的翼爪</A>x8</TD>
-    <TD noWrap><A href="../items/items.html?018E" target=items">雌火龙的棘</A>x1</TD>
+    <TD noWrap><A href="../items/items.html?01B2" target="items">岩龙的甲壳</A>x12</TD>
+    <TD noWrap><A href="../items/items.html?0196" target="items">火龙的翼爪</A>x8</TD>
+    <TD noWrap><A href="../items/items.html?018E" target="items">雌火龙的棘</A>x1</TD>
     <TD noWrap></TD></TR>
   <TR>
-    <TH noWrap width=250>名称</TH>
-    <TH noWrap width=125>锋利度</TH>
-    <TH noWrap align=middle width=50>攻击力</TH>
-    <TH noWrap align=middle width=108>属性</TH>
-    <TH noWrap align=middle width=42>会心率</TH>
-    <TH noWrap align=middle width=45>插孔</TH>
-    <TH noWrap align=middle width=24>稀有度</TH>
-    <TH noWrap align=middle width=54>价格</TH>
-    <TH noWrap width=120>素材1</TH>
-    <TH noWrap width=120>素材2</TH>
-    <TH noWrap width=120>素材3</TH>
-    <TH noWrap width=120>素材4</TH></TR>
+    <TH>名称</TH>
+    <TH>锋利度</TH>
+    <TH>攻击力</TH>
+    <TH>属性</TH>
+    <TH>会心率</TH>
+    <TH>插孔</TH>
+    <TH>稀有度</TH>
+    <TH>价格</TH>
+    <TH>素材1</TH>
+    <TH>素材2</TH>
+    <TH>素材3</TH>
+    <TH>素材4</TH></TR>
   <TR class=odd>
-    <TD class=base noWrap>铁砧锤</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge068.gif" width=122></TD>
+    <TD class=base noWrap><A href="../bugu/hammer.html#0068" class="invisible-link" target="weapon">铁砧锤</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:60px; background:#eeee00;" title="150"></div>
+  <div style="width:80px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:68px; background:#eeee00;" title="170"></div>
+  <div style="width:12px; background:#00ee00;" title="30"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div></TD>
     <TD noWrap align=middle>676</TD>
     <TD noWrap align=middle>防御+4</TD>
     <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>〇ーー</TD>
     <TD noWrap align=middle>4</TD>
     <TD noWrap align=right>19740z</TD>
-    <TD noWrap><A href="../items/items.html?00DB" target=items">辉龙石</A>x4</TD>
-    <TD noWrap><A href="../items/items.html?00DA" target=items">燕雀石</A>x15</TD>
-    <TD noWrap><A href="../items/items.html?00D8" target=items">铁矿石</A>x50</TD>
+    <TD noWrap><A href="../items/items.html?00DB" target="items">辉龙石</A>x4</TD>
+    <TD noWrap><A href="../items/items.html?00DA" target="items">燕雀石</A>x15</TD>
+    <TD noWrap><A href="../items/items.html?00D8" target="items">铁矿石</A>x50</TD>
     <TD noWrap></TD></TR>
   <TR>
-    <TD noWrap><IMG src="images/L.gif">激锤猛攻</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge213.gif" width=122></TD>
+    <TD noWrap><IMG src="images/L.gif"><A href="../bugu/hammer.html#0213" class="invisible-link" target="weapon">激锤猛攻</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:68px; background:#eeee00;" title="170"></div>
+  <div style="width:12px; background:#00ee00;" title="30"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:68px; background:#eeee00;" title="170"></div>
+  <div style="width:32px; background:#00ee00;" title="80"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div></TD>
     <TD noWrap align=middle>832</TD>
     <TD noWrap align=middle>防御+6</TD>
     <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>〇ーー</TD>
     <TD noWrap align=middle>4</TD>
     <TD noWrap align=right>38750z</TD>
-    <TD noWrap><A href="../items/items.html?00DB" target=items">辉龙石</A>x10</TD>
-    <TD noWrap><A href="../items/items.html?00DA" target=items">燕雀石</A>x30</TD>
-    <TD noWrap><A href="../items/items.html?00D8" target=items">铁矿石</A>x99</TD>
+    <TD noWrap><A href="../items/items.html?00DB" target="items">辉龙石</A>x10</TD>
+    <TD noWrap><A href="../items/items.html?00DA" target="items">燕雀石</A>x30</TD>
+    <TD noWrap><A href="../items/items.html?00D8" target="items">铁矿石</A>x99</TD>
     <TD noWrap></TD></TR>
   <TR class=hc>
-    <TD noWrap><IMG src="images/blank.gif"><IMG src="images/T.gif">战争践踏</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge300.gif" width=122></TD>
+    <TD noWrap><IMG src="images/blank.gif"><IMG src="images/T.gif"><A href="../bugu/hammer.html#0300" class="invisible-link" target="weapon">战争践踏</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:68px; background:#eeee00;" title="170"></div>
+  <div style="width:32px; background:#00ee00;" title="80"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:68px; background:#eeee00;" title="170"></div>
+  <div style="width:48px; background:#00ee00;" title="120"></div>
+  <div style="width:4px; background:#5050ff;" title="10"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div></TD>
     <TD noWrap align=middle>936</TD>
     <TD noWrap align=middle>防御+7</TD>
     <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>〇〇ー</TD>
     <TD noWrap align=middle>6</TD>
     <TD noWrap align=right>53720z</TD>
-    <TD noWrap><A href="../items/items.html?00DB" target=items">辉龙石</A>x15</TD>
-    <TD noWrap><A href="../items/items.html?00DC" target=items">灵鹤石</A>x30</TD>
-    <TD noWrap><A href="../items/items.html?00D6" target=items">阳光石</A>x30</TD>
+    <TD noWrap><A href="../items/items.html?00DB" target="items">辉龙石</A>x15</TD>
+    <TD noWrap><A href="../items/items.html?00DC" target="items">灵鹤石</A>x30</TD>
+    <TD noWrap><A href="../items/items.html?00D6" target="items">阳光石</A>x30</TD>
     <TD noWrap></TD></TR>
   <TR class=hc>
     <TD class=last noWrap><IMG src="images/blank.gif"><IMG src="images/I.gif"><IMG 
-      src="images/L.gif">战争怒击</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge301.gif" width=122></TD>
+      src="images/L.gif"><A href="../bugu/hammer.html#0301" class="invisible-link" target="weapon">战争怒击</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:68px; background:#eeee00;" title="170"></div>
+  <div style="width:48px; background:#00ee00;" title="120"></div>
+  <div style="width:4px; background:#5050ff;" title="10"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:68px; background:#eeee00;" title="170"></div>
+  <div style="width:48px; background:#00ee00;" title="120"></div>
+  <div style="width:16px; background:#5050ff;" title="40"></div>
+  <div style="width:8px; background:#ffffff;" title="20"></div>
+</div></TD>
     <TD noWrap align=middle>1040</TD>
     <TD noWrap align=middle>防御+8</TD>
     <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>〇〇ー</TD>
     <TD noWrap align=middle>6</TD>
     <TD noWrap align=right>75800z</TD>
-    <TD noWrap><A href="../items/items.html?00DB" target=items">辉龙石</A>x18</TD>
-    <TD noWrap><A href="../items/items.html?00DC" target=items">灵鹤石</A>x60</TD>
-    <TD noWrap><A href="../items/items.html?00D6" target=items">阳光石</A>x60</TD>
+    <TD noWrap><A href="../items/items.html?00DB" target="items">辉龙石</A>x18</TD>
+    <TD noWrap><A href="../items/items.html?00DC" target="items">灵鹤石</A>x60</TD>
+    <TD noWrap><A href="../items/items.html?00D6" target="items">阳光石</A>x60</TD>
     <TD noWrap></TD></TR>
   <TR class=hc>
-    <TD noWrap><IMG src="images/blank.gif"><IMG src="images/L.gif">鬼铁</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge112.gif" width=122></TD>
+    <TD noWrap><IMG src="images/blank.gif"><IMG src="images/L.gif"><A href="../bugu/hammer.html#0112" class="invisible-link" target="weapon">鬼铁</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:24px; background:#ee0000;" title="60"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:32px; background:#eeee00;" title="80"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:24px; background:#ee0000;" title="60"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:32px; background:#eeee00;" title="80"></div>
+  <div style="width:48px; background:#00ee00;" title="120"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div></TD>
     <TD noWrap align=middle>832</TD>
     <TD noWrap align=middle>　</TD>
     <TD noWrap align=right>10%</TD>
     <TD noWrap align=middle>〇ーー</TD>
     <TD noWrap align=middle>6</TD>
     <TD noWrap align=right>30000z</TD>
-    <TD noWrap><A href="../items/items.html?00DC" target=items">灵鹤石</A>x10</TD>
-    <TD noWrap><A href="../items/items.html?0164" target=items">黄速龙王的头</A>x1</TD>
-    <TD noWrap><A href="../items/items.html?0255" target=items">蛇龙的头</A>x1</TD>
+    <TD noWrap><A href="../items/items.html?00DC" target="items">灵鹤石</A>x10</TD>
+    <TD noWrap><A href="../items/items.html?0164" target="items">黄速龙王的头</A>x1</TD>
+    <TD noWrap><A href="../items/items.html?0255" target="items">蛇龙的头</A>x1</TD>
     <TD noWrap></TD></TR>
   <TR class=hc>
     <TD class=last noWrap><IMG src="images/blank.gif"><IMG src="images/blank.gif"><IMG 
-      src="images/L.gif">鬼铁丸</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge298.gif" width=122></TD>
+      src="images/L.gif"><A href="../bugu/hammer.html#0298" class="invisible-link" target="weapon">鬼铁丸</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:24px; background:#ee0000;" title="60"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:32px; background:#eeee00;" title="80"></div>
+  <div style="width:48px; background:#00ee00;" title="120"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:24px; background:#ee0000;" title="60"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:32px; background:#eeee00;" title="80"></div>
+  <div style="width:48px; background:#00ee00;" title="120"></div>
+  <div style="width:20px; background:#5050ff;" title="50"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div></TD>
     <TD noWrap align=middle>884</TD>
     <TD noWrap align=middle>　</TD>
     <TD noWrap align=right>20%</TD>
     <TD noWrap align=middle>〇ーー</TD>
     <TD noWrap align=middle>7</TD>
     <TD noWrap align=right>120000z</TD>
-    <TD noWrap><A href="../items/items.html?00DC" target=items">灵鹤石</A>x20</TD>
-    <TD noWrap><A href="../items/items.html?0195" target=items">金火龙的坚壳</A>x1</TD>
-    <TD noWrap><A href="../items/items.html?020E" target=items">黄金之毛</A>x1</TD>
+    <TD noWrap><A href="../items/items.html?00DC" target="items">灵鹤石</A>x20</TD>
+    <TD noWrap><A href="../items/items.html?0195" target="items">金火龙的坚壳</A>x1</TD>
+    <TD noWrap><A href="../items/items.html?020E" target="items">黄金之毛</A>x1</TD>
     <TD noWrap></TD></TR>
   <TR>
-    <TH noWrap width=250>名称</TH>
-    <TH noWrap width=125>锋利度</TH>
-    <TH noWrap align=middle width=50>攻击力</TH>
-    <TH noWrap align=middle width=108>属性</TH>
-    <TH noWrap align=middle width=42>会心率</TH>
-    <TH noWrap align=middle width=45>插孔</TH>
-    <TH noWrap align=middle width=24>稀有度</TH>
-    <TH noWrap align=middle width=54>价格</TH>
-    <TH noWrap width=120>素材1</TH>
-    <TH noWrap width=120>素材2</TH>
-    <TH noWrap width=120>素材3</TH>
-    <TH noWrap width=120>素材4</TH></TR>
+    <TH>名称</TH>
+    <TH>锋利度</TH>
+    <TH>攻击力</TH>
+    <TH>属性</TH>
+    <TH>会心率</TH>
+    <TH>插孔</TH>
+    <TH>稀有度</TH>
+    <TH>价格</TH>
+    <TH>素材1</TH>
+    <TH>素材2</TH>
+    <TH>素材3</TH>
+    <TH>素材4</TH></TR>
   <TR class=hc>
-    <TD class=base noWrap>龙虾重踏</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge071.gif" width=122></TD>
+    <TD class=base noWrap><A href="../bugu/hammer.html#0071" class="invisible-link" target="weapon">龙虾重踏</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:24px; background:#ee0000;" title="60"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:32px; background:#eeee00;" title="80"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:24px; background:#ee0000;" title="60"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:32px; background:#eeee00;" title="80"></div>
+  <div style="width:48px; background:#00ee00;" title="120"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div></TD>
     <TD noWrap align=middle>624</TD>
     <TD noWrap align=middle>水200</TD>
     <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>ーーー</TD>
     <TD noWrap align=middle>6</TD>
     <TD noWrap align=right>15780z</TD>
-    <TD noWrap><A href="../items/items.html?017E" target=items">水龙的上鳞</A>x1</TD>
-    <TD noWrap><A href="../items/items.html?01D3" target=items">虾之大壳</A>x1</TD>
-    <TD noWrap><A href="../items/items.html?01D2" target=items">虾之小壳</A>x1</TD>
-    <TD noWrap><A href="../items/items.html?0140" target=items">棒状之骨</A>x1</TD></TR>
+    <TD noWrap><A href="../items/items.html?017E" target="items">水龙的上鳞</A>x1</TD>
+    <TD noWrap><A href="../items/items.html?01D3" target="items">虾之大壳</A>x1</TD>
+    <TD noWrap><A href="../items/items.html?01D2" target="items">虾之小壳</A>x1</TD>
+    <TD noWrap><A href="../items/items.html?0140" target="items">棒状之骨</A>x1</TD></TR>
   <TR class=hc>
-    <TD class=last noWrap><IMG src="images/L.gif">帝王龙虾重踏</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge437.gif" width=122></TD>
+    <TD class=last noWrap><IMG src="images/L.gif"><A href="../bugu/hammer.html#0437" class="invisible-link" target="weapon">帝王龙虾重踏</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:20px; background:#ee0000;" title="50"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:56px; background:#eeee00;" title="140"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:20px; background:#ee0000;" title="50"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:56px; background:#eeee00;" title="140"></div>
+  <div style="width:40px; background:#00ee00;" title="100"></div>
+  <div style="width:8px; background:#5050ff;" title="20"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div></TD>
     <TD noWrap align=middle>780</TD>
     <TD noWrap align=middle>水230</TD>
     <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>ーーー</TD>
     <TD noWrap align=middle>6</TD>
     <TD noWrap align=right>35880z</TD>
-    <TD noWrap><A href="../items/items.html?01D4" target=items">虾之巨大壳</A>x1</TD>
-    <TD noWrap><A href="../items/items.html?00FE" target=items">女王虾</A>x3</TD>
+    <TD noWrap><A href="../items/items.html?01D4" target="items">虾之巨大壳</A>x1</TD>
+    <TD noWrap><A href="../items/items.html?00FE" target="items">女王虾</A>x3</TD>
     <TD noWrap></TD>
     <TD noWrap></TD></TR>
   <TR>
-    <TH noWrap width=250>名称</TH>
-    <TH noWrap width=125>锋利度</TH>
-    <TH noWrap align=middle width=50>攻击力</TH>
-    <TH noWrap align=middle width=108>属性</TH>
-    <TH noWrap align=middle width=42>会心率</TH>
-    <TH noWrap align=middle width=45>插孔</TH>
-    <TH noWrap align=middle width=24>稀有度</TH>
-    <TH noWrap align=middle width=54>价格</TH>
-    <TH noWrap width=120>素材1</TH>
-    <TH noWrap width=120>素材2</TH>
-    <TH noWrap width=120>素材3</TH>
-    <TH noWrap width=120>素材4</TH></TR>
+    <TH>名称</TH>
+    <TH>锋利度</TH>
+    <TH>攻击力</TH>
+    <TH>属性</TH>
+    <TH>会心率</TH>
+    <TH>插孔</TH>
+    <TH>稀有度</TH>
+    <TH>价格</TH>
+    <TH>素材1</TH>
+    <TH>素材2</TH>
+    <TH>素材3</TH>
+    <TH>素材4</TH></TR>
   <TR class=odd>
-    <TD class=base noWrap>锚锤</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge074.gif" width=122></TD>
+    <TD class=base noWrap><A href="../bugu/hammer.html#0074" class="invisible-link" target="weapon">锚锤</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:36px; background:#ee0000;" title="90"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:52px; background:#eeee00;" title="130"></div>
+  <div style="width:4px; background:#00ee00;" title="10"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:36px; background:#ee0000;" title="90"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:52px; background:#eeee00;" title="130"></div>
+  <div style="width:24px; background:#00ee00;" title="60"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div></TD>
     <TD noWrap align=middle>624</TD>
     <TD noWrap align=middle>水290</TD>
     <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>〇ーー</TD>
     <TD noWrap align=middle>4</TD>
     <TD noWrap align=right>15000z</TD>
-    <TD noWrap><A href="../bugu/hammer.html#0074" target=weapons">*船老大赠送*</A></TD>
+    <TD noWrap><A href="../bugu/hammer.html#0074" target="weapon">*船老大赠送*</A></TD>
     <TD noWrap></TD>
     <TD noWrap></TD>
     <TD noWrap></TD></TR>
   <TR>
-    <TD class=last noWrap><IMG src="images/L.gif">碎击锚</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge427.gif" width=122></TD>
+    <TD class=last noWrap><IMG src="images/L.gif"><A href="../bugu/hammer.html#0427" class="invisible-link" target="weapon">碎击锚</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:36px; background:#ee0000;" title="90"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:52px; background:#eeee00;" title="130"></div>
+  <div style="width:24px; background:#00ee00;" title="60"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:36px; background:#ee0000;" title="90"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:52px; background:#eeee00;" title="130"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:16px; background:#5050ff;" title="40"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div></TD>
     <TD noWrap align=middle>780</TD>
     <TD noWrap align=middle>水340</TD>
     <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>〇〇ー</TD>
     <TD noWrap align=middle>5</TD>
     <TD noWrap align=right>28410z</TD>
-    <TD noWrap><A href="../items/items.html?0261" target=items">豪腕之锁</A>x1</TD>
-    <TD noWrap><A href="../items/items.html?017F" target=items">水龙的鳍</A>x2</TD>
-    <TD noWrap><A href="../items/items.html?02E0" target=items">星铁</A>x3</TD>
+    <TD noWrap><A href="../items/items.html?0261" target="items">豪腕之锁</A>x1</TD>
+    <TD noWrap><A href="../items/items.html?017F" target="items">水龙的鳍</A>x2</TD>
+    <TD noWrap><A href="../items/items.html?02E0" target="items">星铁</A>x3</TD>
     <TD noWrap></TD></TR>
   <TR>
-    <TH noWrap width=250>名称</TH>
-    <TH noWrap width=125>锋利度</TH>
-    <TH noWrap align=middle width=50>攻击力</TH>
-    <TH noWrap align=middle width=108>属性</TH>
-    <TH noWrap align=middle width=42>会心率</TH>
-    <TH noWrap align=middle width=45>插孔</TH>
-    <TH noWrap align=middle width=24>稀有度</TH>
-    <TH noWrap align=middle width=54>价格</TH>
-    <TH noWrap width=120>素材1</TH>
-    <TH noWrap width=120>素材2</TH>
-    <TH noWrap width=120>素材3</TH>
-    <TH noWrap width=120>素材4</TH></TR>
+    <TH>名称</TH>
+    <TH>锋利度</TH>
+    <TH>攻击力</TH>
+    <TH>属性</TH>
+    <TH>会心率</TH>
+    <TH>插孔</TH>
+    <TH>稀有度</TH>
+    <TH>价格</TH>
+    <TH>素材1</TH>
+    <TH>素材2</TH>
+    <TH>素材3</TH>
+    <TH>素材4</TH></TR>
   <TR class=hc>
-    <TD class=base noWrap>龍头盖棍</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge081.gif" width=122></TD>
+    <TD class=base noWrap><A href="../bugu/hammer.html#0081" class="invisible-link" target="weapon">龍头盖棍</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:56px; background:#ee0000;" title="140"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:24px; background:#eeee00;" title="60"></div>
+  <div style="width:24px; background:#00ee00;" title="60"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:56px; background:#ee0000;" title="140"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:24px; background:#eeee00;" title="60"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:16px; background:#5050ff;" title="40"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div></TD>
     <TD noWrap align=middle>624</TD>
     <TD noWrap align=middle>　</TD>
     <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>〇〇ー</TD>
     <TD noWrap align=middle>6</TD>
     <TD noWrap align=right>11400z</TD>
-    <TD noWrap><A href="../items/items.html?013F" target=items">达人的髑髅</A>x1</TD>
-    <TD noWrap><A href="../items/items.html?0210" target=items">龙头壳</A>x4</TD>
-    <TD noWrap><A href="../items/items.html?013C" target=items">古龍骨</A>x7</TD>
-    <TD noWrap><A href="../items/items.html?0019" target=items">怪物的浓汁</A>x5</TD></TR>
+    <TD noWrap><A href="../items/items.html?013F" target="items">达人的髑髅</A>x1</TD>
+    <TD noWrap><A href="../items/items.html?0210" target="items">龙头壳</A>x4</TD>
+    <TD noWrap><A href="../items/items.html?013C" target="items">古龍骨</A>x7</TD>
+    <TD noWrap><A href="../items/items.html?0019" target="items">怪物的浓汁</A>x5</TD></TR>
   <TR class=hc>
-    <TD class=last noWrap><IMG src="images/L.gif">上古遗物</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge431.gif" width=122></TD>
+    <TD class=last noWrap><IMG src="images/L.gif"><A href="../bugu/hammer.html#0431" class="invisible-link" target="weapon">上古遗物</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:56px; background:#ee0000;" title="140"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:24px; background:#eeee00;" title="60"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:16px; background:#5050ff;" title="40"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:56px; background:#ee0000;" title="140"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:24px; background:#eeee00;" title="60"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:16px; background:#5050ff;" title="40"></div>
+  <div style="width:20px; background:#ffffff;" title="50"></div>
+</div></TD>
     <TD noWrap align=middle>780</TD>
     <TD noWrap align=middle>　</TD>
     <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>〇〇〇</TD>
     <TD noWrap align=middle>6</TD>
     <TD noWrap align=right>31250z</TD>
-    <TD noWrap><A href="../items/items.html?0210" target=items">龙头壳</A>x6</TD>
-    <TD noWrap><A href="../items/items.html?013C" target=items">古龍骨</A>x15</TD>
-    <TD noWrap><A href="../items/items.html?0108" target=items">粘着蝗虫</A>x20</TD>
+    <TD noWrap><A href="../items/items.html?0210" target="items">龙头壳</A>x6</TD>
+    <TD noWrap><A href="../items/items.html?013C" target="items">古龍骨</A>x15</TD>
+    <TD noWrap><A href="../items/items.html?0108" target="items">黏着蝗虫</A>x20</TD>
     <TD noWrap></TD></TR>
   <TR>
-    <TH noWrap width=250>名称</TH>
-    <TH noWrap width=125>锋利度</TH>
-    <TH noWrap align=middle width=50>攻击力</TH>
-    <TH noWrap align=middle width=108>属性</TH>
-    <TH noWrap align=middle width=42>会心率</TH>
-    <TH noWrap align=middle width=45>插孔</TH>
-    <TH noWrap align=middle width=24>稀有度</TH>
-    <TH noWrap align=middle width=54>价格</TH>
-    <TH noWrap width=120>素材1</TH>
-    <TH noWrap width=120>素材2</TH>
-    <TH noWrap width=120>素材3</TH>
-    <TH noWrap width=120>素材4</TH></TR>
+    <TH>名称</TH>
+    <TH>锋利度</TH>
+    <TH>攻击力</TH>
+    <TH>属性</TH>
+    <TH>会心率</TH>
+    <TH>插孔</TH>
+    <TH>稀有度</TH>
+    <TH>价格</TH>
+    <TH>素材1</TH>
+    <TH>素材2</TH>
+    <TH>素材3</TH>
+    <TH>素材4</TH></TR>
   <TR class=hc>
-    <TD class=base noWrap>岩龙打击</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge088.gif" width=122></TD>
+    <TD class=base noWrap><A href="../bugu/hammer.html#0088" class="invisible-link" target="weapon">岩龙打击</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:68px; background:#eeee00;" title="170"></div>
+  <div style="width:32px; background:#00ee00;" title="80"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:68px; background:#eeee00;" title="170"></div>
+  <div style="width:48px; background:#00ee00;" title="120"></div>
+  <div style="width:4px; background:#5050ff;" title="10"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div></TD>
     <TD noWrap align=middle>832</TD>
     <TD noWrap align=middle>　</TD>
     <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>ーーー</TD>
     <TD noWrap align=middle>6</TD>
     <TD noWrap align=right>15000z</TD>
-    <TD noWrap><A href="../items/items.html?026A" target=items">太古的大块</A>*</TD>
+    <TD noWrap><A href="../items/items.html?026A" target="items">太古的大块</A>*</TD>
     <TD noWrap></TD>
     <TD noWrap></TD>
     <TD noWrap></TD></TR>
   <TR class=hc>
-    <TD class=last noWrap><IMG src="images/L.gif">岩龙怒击</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge432.gif" width=122></TD>
+    <TD class=last noWrap><IMG src="images/L.gif"><A href="../bugu/hammer.html#0432" class="invisible-link" target="weapon">岩龙怒击</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:68px; background:#eeee00;" title="170"></div>
+  <div style="width:48px; background:#00ee00;" title="120"></div>
+  <div style="width:4px; background:#5050ff;" title="10"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:68px; background:#eeee00;" title="170"></div>
+  <div style="width:48px; background:#00ee00;" title="120"></div>
+  <div style="width:16px; background:#5050ff;" title="40"></div>
+  <div style="width:8px; background:#ffffff;" title="20"></div>
+</div></TD>
     <TD noWrap align=middle>936</TD>
     <TD noWrap align=middle>　</TD>
     <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>ーーー</TD>
     <TD noWrap align=middle>6</TD>
     <TD noWrap align=right>46850z</TD>
-    <TD noWrap><A href="../items/items.html?01B3" target=items">岩龙的坚壳</A>x15</TD>
-    <TD noWrap><A href="../items/items.html?00DD" target=items">白鸠石</A>x7</TD>
-    <TD noWrap><A href="../items/items.html?0144" target=items">龙玉</A>x1</TD>
+    <TD noWrap><A href="../items/items.html?01B3" target="items">岩龙的坚壳</A>x15</TD>
+    <TD noWrap><A href="../items/items.html?00DD" target="items">白鸠石</A>x7</TD>
+    <TD noWrap><A href="../items/items.html?0144" target="items">龙玉</A>x1</TD>
     <TD noWrap></TD></TR>
   <TR>
-    <TH noWrap width=250>名称</TH>
-    <TH noWrap width=125>锋利度</TH>
-    <TH noWrap align=middle width=50>攻击力</TH>
-    <TH noWrap align=middle width=108>属性</TH>
-    <TH noWrap align=middle width=42>会心率</TH>
-    <TH noWrap align=middle width=45>插孔</TH>
-    <TH noWrap align=middle width=24>稀有度</TH>
-    <TH noWrap align=middle width=54>价格</TH>
-    <TH noWrap width=120>素材1</TH>
-    <TH noWrap width=120>素材2</TH>
-    <TH noWrap width=120>素材3</TH>
-    <TH noWrap width=120>素材4</TH></TR>
-  <TR class=hc>
-    <TD class=base noWrap>严重风化的槌</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge310.gif" width=122></TD>
-    <TD noWrap align=middle>780</TD>
-    <TD noWrap align=middle>　</TD>
-    <TD noWrap align=right>0%</TD>
-    <TD noWrap align=middle>ーーー</TD>
-    <TD noWrap align=middle>6</TD>
-    <TD noWrap align=right>10000z</TD>
-    <TD noWrap><A href="../items/items.html?026A" target=items">太古的大块</A>*</TD>
-    <TD noWrap></TD>
-    <TD noWrap></TD>
-    <TD noWrap></TD></TR>
-  <TR class=hc>
-    <TD noWrap><IMG src="images/L.gif">风化的槌</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge311.gif" width=122></TD>
-    <TD noWrap align=middle>884</TD>
-    <TD noWrap align=middle>　</TD>
-    <TD noWrap align=right>0%</TD>
-    <TD noWrap align=middle>ーーー</TD>
-    <TD noWrap align=middle>6</TD>
-    <TD noWrap align=right>20000z</TD>
-    <TD noWrap><A href="../items/items.html?0226" target=items">钢之龍鳞</A>x15</TD>
-    <TD noWrap>　</TD>
-    <TD noWrap></TD>
-    <TD noWrap></TD></TR>
-  <TR class=hc>
-    <TD class=last noWrap><IMG src="images/blank.gif"><IMG src="images/T.gif">律动・核心</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge313.gif" width=122></TD>
-    <TD noWrap align=middle>1040</TD>
-    <TD noWrap align=middle>　</TD>
-    <TD noWrap align=right>-20%</TD>
-    <TD noWrap align=middle>ーーー</TD>
-    <TD noWrap align=middle>7</TD>
-    <TD noWrap align=right>42500z</TD>
-    <TD noWrap><A href="../items/items.html?0226" target=items">钢之龍鳞</A>x20</TD>
-    <TD noWrap><A href="../items/items.html?023D" target=items">古龍的血</A>x1</TD>
-    <TD noWrap></TD>
-    <TD noWrap></TD></TR>
-  <TR class=hc>
-    <TD noWrap><IMG src="images/blank.gif"><IMG src="images/L.gif">钢冰棍</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge097.gif" width=122></TD>
-    <TD noWrap align=middle>936</TD>
-    <TD noWrap align=middle>冰290</TD>
-    <TD noWrap align=right>0%</TD>
-    <TD noWrap align=middle>ーーー</TD>
-    <TD noWrap align=middle>7</TD>
-    <TD noWrap align=right>75000z</TD>
-    <TD noWrap><A href="../items/items.html?0225" target=items">钢龍的坚壳</A>x6</TD>
-    <TD noWrap><A href="../items/items.html?0229" target=items">钢龍的尻尾</A>x1</TD>
-    <TD noWrap><A href="../items/items.html?010B" target=items">珍稀丽金龟</A>x4</TD>
-    <TD noWrap></TD></TR>
-  <TR class=hc>
-    <TD class=last noWrap><IMG src="images/blank.gif"><IMG src="images/blank.gif"><IMG 
-      src="images/L.gif">伟岸＝达奥拉</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge433.gif" width=122></TD>
-    <TD noWrap align=middle>988</TD>
-    <TD noWrap align=middle>冰330</TD>
-    <TD noWrap align=right>0%</TD>
-    <TD noWrap align=middle>ーーー</TD>
-    <TD noWrap align=middle>7</TD>
-    <TD noWrap align=right>150000z</TD>
-    <TD noWrap><A href="../items/items.html?0225" target=items">钢龍的坚壳</A>x12</TD>
-    <TD noWrap><A href="../items/items.html?022B" target=items">钢龍的尖爪</A>x2</TD>
-    <TD noWrap><A href="../items/items.html?022C" target=items">钢龍的宝玉</A>x1</TD>
-    <TD noWrap></TD></TR>
-  <TR>
-    <TH noWrap width=250>名称</TH>
-    <TH noWrap width=125>锋利度</TH>
-    <TH noWrap align=middle width=50>攻击力</TH>
-    <TH noWrap align=middle width=108>属性</TH>
-    <TH noWrap align=middle width=42>会心率</TH>
-    <TH noWrap align=middle width=45>插孔</TH>
-    <TH noWrap align=middle width=24>稀有度</TH>
-    <TH noWrap align=middle width=54>价格</TH>
-    <TH noWrap width=120>素材1</TH>
-    <TH noWrap width=120>素材2</TH>
-    <TH noWrap width=120>素材3</TH>
-    <TH noWrap width=120>素材4</TH></TR>
+    <TH>名称</TH>
+    <TH>锋利度</TH>
+    <TH>攻击力</TH>
+    <TH>属性</TH>
+    <TH>会心率</TH>
+    <TH>插孔</TH>
+    <TH>稀有度</TH>
+    <TH>价格</TH>
+    <TH>素材1</TH>
+    <TH>素材2</TH>
+    <TH>素材3</TH>
+    <TH>素材4</TH></TR>
   <TR class=odd>
-    <TD class=base noWrap>严重锈蚀的槌</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge095.gif" width=122></TD>
+    <TD class=base noWrap><A href="../bugu/hammer.html#0095" class="invisible-link" target="weapon">严重锈蚀的槌</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:60px; background:#ee0000;" title="150"></div>
+  <div style="width:100px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:76px; background:#ee0000;" title="190"></div>
+  <div style="width:4px; background:#eea000;" title="10"></div>
+  <div style="width:80px; background:#000000;"></div>
+</div></TD>
     <TD noWrap align=middle>624</TD>
     <TD noWrap align=middle>　</TD>
     <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>ーーー</TD>
     <TD noWrap align=middle>1</TD>
     <TD noWrap align=right>2500z</TD>
-    <TD noWrap><A href="../items/items.html?0265" target=items">大锈块</A>*</TD>
+    <TD noWrap><A href="../items/items.html?0265" target="items">大锈块</A>*</TD>
     <TD noWrap></TD>
     <TD noWrap></TD>
     <TD noWrap></TD></TR>
   <TR>
-    <TD noWrap><IMG src="images/L.gif">锈蚀的槌</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge096.gif" width=122></TD>
+    <TD noWrap><IMG src="images/L.gif"><A href="../bugu/hammer.html#0096" class="invisible-link" target="weapon">锈蚀的槌</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:56px; background:#ee0000;" title="140"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:8px; background:#eeee00;" title="20"></div>
+  <div style="width:80px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:56px; background:#ee0000;" title="140"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:24px; background:#eeee00;" title="60"></div>
+  <div style="width:4px; background:#00ee00;" title="10"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div></TD>
     <TD noWrap align=middle>676</TD>
     <TD noWrap align=middle>　</TD>
     <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>ーーー</TD>
     <TD noWrap align=middle>1</TD>
     <TD noWrap align=right>5000z</TD>
-    <TD noWrap><A href="../items/items.html?00D9" target=items">大地的结晶</A>x20</TD>
+    <TD noWrap><A href="../items/items.html?00D9" target="items">大地的结晶</A>x20</TD>
     <TD noWrap></TD>
     <TD noWrap></TD>
     <TD noWrap></TD></TR>
   <TR class=odd>
-    <TD class=last noWrap><IMG src="images/blank.gif"><IMG src="images/T.gif">龍息・核心</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge098.gif" width=122></TD>
+    <TD class=last noWrap><IMG src="images/blank.gif"><IMG src="images/T.gif"><A href="../bugu/hammer.html#0098" class="invisible-link" target="weapon">龍息・核心</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:76px; background:#ee0000;" title="190"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:20px; background:#eeee00;" title="50"></div>
+  <div style="width:16px; background:#00ee00;" title="40"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:76px; background:#ee0000;" title="190"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:20px; background:#eeee00;" title="50"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:8px; background:#5050ff;" title="20"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div></TD>
     <TD noWrap align=middle>936</TD>
     <TD noWrap align=middle>　</TD>
     <TD noWrap align=right>-20%</TD>
     <TD noWrap align=middle>ーーー</TD>
     <TD noWrap align=middle>5</TD>
     <TD noWrap align=right>35470z</TD>
-    <TD noWrap><A href="../items/items.html?00D9" target=items">大地的结晶</A>x40</TD>
-    <TD noWrap><A href="../items/items.html?023D" target=items">古龍的血</A>x1</TD>
+    <TD noWrap><A href="../items/items.html?00D9" target="items">大地的结晶</A>x40</TD>
+    <TD noWrap><A href="../items/items.html?023D" target="items">古龍的血</A>x1</TD>
     <TD noWrap></TD>
     <TD noWrap></TD></TR>
   <TR>
     <TD noWrap><IMG src="images/blank.gif"><IMG 
-      src="images/L.gif">硬玉权杖</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge091.gif" width=122></TD>
+      src="images/L.gif"><A href="../bugu/hammer.html#0091" class="invisible-link" target="weapon">硬玉权杖</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:32px; background:#ee0000;" title="80"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:28px; background:#eeee00;" title="70"></div>
+  <div style="width:12px; background:#00ee00;" title="30"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:32px; background:#ee0000;" title="80"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:28px; background:#eeee00;" title="70"></div>
+  <div style="width:32px; background:#00ee00;" title="80"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div></TD>
     <TD noWrap align=middle>728</TD>
     <TD noWrap align=middle>火260</TD>
     <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>ーーー</TD>
     <TD noWrap align=middle>5</TD>
     <TD noWrap align=right>29730z</TD>
-    <TD noWrap><A href="../items/items.html?0243" target=items">炎妃龍的角</A>x3</TD>
-    <TD noWrap><A href="../items/items.html?023F" target=items">炎妃龍的甲壳</A>x3</TD>
-    <TD noWrap><A href="../items/items.html?00DE" target=items">红莲石</A>x7</TD>
+    <TD noWrap><A href="../items/items.html?0243" target="items">炎妃龍的角</A>x3</TD>
+    <TD noWrap><A href="../items/items.html?023F" target="items">炎妃龍的甲壳</A>x3</TD>
+    <TD noWrap><A href="../items/items.html?00DE" target="items">红莲石</A>x7</TD>
     <TD noWrap></TD></TR>
   <TR class=odd>
     <TD noWrap><IMG src="images/blank.gif"><IMG src="images/blank.gif"><IMG 
-      src="images/L.gif">翡翠权杖</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge092.gif" width=122></TD>
+      src="images/L.gif"><A href="../bugu/hammer.html#0092" class="invisible-link" target="weapon">翡翠权杖</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:56px; background:#ee0000;" title="140"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:24px; background:#eeee00;" title="60"></div>
+  <div style="width:24px; background:#00ee00;" title="60"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:56px; background:#ee0000;" title="140"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:24px; background:#eeee00;" title="60"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:16px; background:#5050ff;" title="40"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div></TD>
     <TD noWrap align=middle>780</TD>
     <TD noWrap align=middle>火300</TD>
     <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>〇ーー</TD>
     <TD noWrap align=middle>5</TD>
     <TD noWrap align=right>58750z</TD>
-    <TD noWrap><A href="../items/items.html?0243" target=items">炎妃龍的角</A>x3</TD>
-    <TD noWrap><A href="../items/items.html?023F" target=items">炎妃龍的甲壳</A>x7</TD>
-    <TD noWrap><A href="../items/items.html?023D" target=items">古龍的血</A>x2</TD>
+    <TD noWrap><A href="../items/items.html?0243" target="items">炎妃龍的角</A>x3</TD>
+    <TD noWrap><A href="../items/items.html?023F" target="items">炎妃龍的甲壳</A>x7</TD>
+    <TD noWrap><A href="../items/items.html?023D" target="items">古龍的血</A>x2</TD>
     <TD noWrap></TD></TR>
   <TR class=hc>
     <TD class=last noWrap><IMG src="images/blank.gif"><IMG src="images/blank.gif"><IMG 
-      src="images/blank.gif"><IMG src="images/L.gif">娜娜＝托莉</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge426.gif" width=122></TD>
+      src="images/blank.gif"><IMG src="images/L.gif"><A href="../bugu/hammer.html#0426" class="invisible-link" target="weapon">娜娜＝托莉</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:36px; background:#ee0000;" title="90"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:52px; background:#eeee00;" title="130"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:16px; background:#5050ff;" title="40"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:36px; background:#ee0000;" title="90"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:52px; background:#eeee00;" title="130"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:20px; background:#5050ff;" title="50"></div>
+  <div style="width:16px; background:#ffffff;" title="40"></div>
+</div></TD>
     <TD noWrap align=middle>832</TD>
     <TD noWrap align=middle>火370</TD>
     <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>〇ーー</TD>
     <TD noWrap align=middle>7</TD>
     <TD noWrap align=right>150000z</TD>
-    <TD noWrap><A href="../items/items.html?0243" target=items">炎妃龍的角</A>x6</TD>
-    <TD noWrap><A href="../items/items.html?023B" target=items">炎龍的尘粉</A>x3</TD>
-    <TD noWrap><A href="../items/items.html?023C" target=items">炎龍的宝玉</A>x1</TD>
+    <TD noWrap><A href="../items/items.html?0243" target="items">炎妃龍的角</A>x6</TD>
+    <TD noWrap><A href="../items/items.html?023B" target="items">炎龍的尘粉</A>x3</TD>
+    <TD noWrap><A href="../items/items.html?023C" target="items">炎龍的宝玉</A>x1</TD>
     <TD noWrap></TD></TR>
   <TR>
-    <TH noWrap width=250>名称</TH>
-    <TH noWrap width=125>锋利度</TH>
-    <TH noWrap align=middle width=50>攻击力</TH>
-    <TH noWrap align=middle width=108>属性</TH>
-    <TH noWrap align=middle width=42>会心率</TH>
-    <TH noWrap align=middle width=45>插孔</TH>
-    <TH noWrap align=middle width=24>稀有度</TH>
-    <TH noWrap align=middle width=54>价格</TH>
-    <TH noWrap width=120>素材1</TH>
-    <TH noWrap width=120>素材2</TH>
-    <TH noWrap width=120>素材3</TH>
-    <TH noWrap width=120>素材4</TH></TR>
+    <TH>名称</TH>
+    <TH>锋利度</TH>
+    <TH>攻击力</TH>
+    <TH>属性</TH>
+    <TH>会心率</TH>
+    <TH>插孔</TH>
+    <TH>稀有度</TH>
+    <TH>价格</TH>
+    <TH>素材1</TH>
+    <TH>素材2</TH>
+    <TH>素材3</TH>
+    <TH>素材4</TH></TR>
+  <TR class=hc>
+    <TD class=base noWrap><A href="../bugu/hammer.html#0310" class="invisible-link" target="weapon">严重风化的槌</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:76px; background:#ee0000;" title="190"></div>
+  <div style="width:4px; background:#eea000;" title="10"></div>
+  <div style="width:80px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:76px; background:#ee0000;" title="190"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:16px; background:#eeee00;" title="40"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div></TD>
+    <TD noWrap align=middle>780</TD>
+    <TD noWrap align=middle>　</TD>
+    <TD noWrap align=right>0%</TD>
+    <TD noWrap align=middle>ーーー</TD>
+    <TD noWrap align=middle>6</TD>
+    <TD noWrap align=right>10000z</TD>
+    <TD noWrap><A href="../items/items.html?026A" target="items">太古的大块</A>*</TD>
+    <TD noWrap></TD>
+    <TD noWrap></TD>
+    <TD noWrap></TD></TR>
+  <TR class=hc>
+    <TD noWrap><IMG src="images/L.gif"><A href="../bugu/hammer.html#0311" class="invisible-link" target="weapon">风化的槌</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:76px; background:#ee0000;" title="190"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:16px; background:#eeee00;" title="40"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:76px; background:#ee0000;" title="190"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:20px; background:#eeee00;" title="50"></div>
+  <div style="width:16px; background:#00ee00;" title="40"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div></TD>
+    <TD noWrap align=middle>884</TD>
+    <TD noWrap align=middle>　</TD>
+    <TD noWrap align=right>0%</TD>
+    <TD noWrap align=middle>ーーー</TD>
+    <TD noWrap align=middle>6</TD>
+    <TD noWrap align=right>20000z</TD>
+    <TD noWrap><A href="../items/items.html?0226" target="items">钢之龍鳞</A>x15</TD>
+    <TD noWrap>　</TD>
+    <TD noWrap></TD>
+    <TD noWrap></TD></TR>
+  <TR class=hc>
+    <TD class=last noWrap><IMG src="images/blank.gif"><IMG src="images/T.gif"><A href="../bugu/hammer.html#0313" class="invisible-link" target="weapon">律动・核心</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:76px; background:#ee0000;" title="190"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:20px; background:#eeee00;" title="50"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:8px; background:#5050ff;" title="20"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:76px; background:#ee0000;" title="190"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:20px; background:#eeee00;" title="50"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:16px; background:#5050ff;" title="40"></div>
+  <div style="width:12px; background:#ffffff;" title="30"></div>
+</div></TD>
+    <TD noWrap align=middle>1040</TD>
+    <TD noWrap align=middle>　</TD>
+    <TD noWrap align=right>-20%</TD>
+    <TD noWrap align=middle>ーーー</TD>
+    <TD noWrap align=middle>7</TD>
+    <TD noWrap align=right>42500z</TD>
+    <TD noWrap><A href="../items/items.html?0226" target="items">钢之龍鳞</A>x20</TD>
+    <TD noWrap><A href="../items/items.html?023D" target="items">古龍的血</A>x1</TD>
+    <TD noWrap></TD>
+    <TD noWrap></TD></TR>
+  <TR class=hc>
+    <TD noWrap><IMG src="images/blank.gif"><IMG src="images/L.gif"><A href="../bugu/hammer.html#0097" class="invisible-link" target="weapon">钢冰棍</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:24px; background:#ee0000;" title="60"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:32px; background:#eeee00;" title="80"></div>
+  <div style="width:48px; background:#00ee00;" title="120"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:24px; background:#ee0000;" title="60"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:32px; background:#eeee00;" title="80"></div>
+  <div style="width:48px; background:#00ee00;" title="120"></div>
+  <div style="width:20px; background:#5050ff;" title="50"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div></TD>
+    <TD noWrap align=middle>936</TD>
+    <TD noWrap align=middle>冰290</TD>
+    <TD noWrap align=right>0%</TD>
+    <TD noWrap align=middle>ーーー</TD>
+    <TD noWrap align=middle>7</TD>
+    <TD noWrap align=right>75000z</TD>
+    <TD noWrap><A href="../items/items.html?0225" target="items">钢龍的坚壳</A>x6</TD>
+    <TD noWrap><A href="../items/items.html?0229" target="items">钢龍的尾巴</A>x1</TD>
+    <TD noWrap><A href="../items/items.html?010B" target="items">珍稀丽金龟</A>x4</TD>
+    <TD noWrap></TD></TR>
+  <TR class=hc>
+    <TD class=last noWrap><IMG src="images/blank.gif"><IMG src="images/blank.gif"><IMG 
+      src="images/L.gif"><A href="../bugu/hammer.html#0433" class="invisible-link" target="weapon">宏伟＝达奥拉</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:24px; background:#ee0000;" title="60"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:32px; background:#eeee00;" title="80"></div>
+  <div style="width:48px; background:#00ee00;" title="120"></div>
+  <div style="width:20px; background:#5050ff;" title="50"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:24px; background:#ee0000;" title="60"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:32px; background:#eeee00;" title="80"></div>
+  <div style="width:48px; background:#00ee00;" title="120"></div>
+  <div style="width:24px; background:#5050ff;" title="60"></div>
+  <div style="width:16px; background:#ffffff;" title="40"></div>
+</div></TD>
+    <TD noWrap align=middle>988</TD>
+    <TD noWrap align=middle>冰330</TD>
+    <TD noWrap align=right>0%</TD>
+    <TD noWrap align=middle>ーーー</TD>
+    <TD noWrap align=middle>7</TD>
+    <TD noWrap align=right>150000z</TD>
+    <TD noWrap><A href="../items/items.html?0225" target="items">钢龍的坚壳</A>x12</TD>
+    <TD noWrap><A href="../items/items.html?022B" target="items">钢龍的尖爪</A>x2</TD>
+    <TD noWrap><A href="../items/items.html?022C" target="items">钢龍的宝玉</A>x1</TD>
+    <TD noWrap></TD></TR>
+  <TR>
+    <TH>名称</TH>
+    <TH>锋利度</TH>
+    <TH>攻击力</TH>
+    <TH>属性</TH>
+    <TH>会心率</TH>
+    <TH>插孔</TH>
+    <TH>稀有度</TH>
+    <TH>价格</TH>
+    <TH>素材1</TH>
+    <TH>素材2</TH>
+    <TH>素材3</TH>
+    <TH>素材4</TH></TR>
   <TR class=odd>
-    <TD class=base noWrap>骨块</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge099.gif" width=122></TD>
+    <TD class=base noWrap><A href="../bugu/hammer.html#0099" class="invisible-link" target="weapon">骨块</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:60px; background:#ee0000;" title="150"></div>
+  <div style="width:100px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:76px; background:#ee0000;" title="190"></div>
+  <div style="width:4px; background:#eea000;" title="10"></div>
+  <div style="width:80px; background:#000000;"></div>
+</div></TD>
     <TD noWrap align=middle>416</TD>
     <TD noWrap align=middle>　</TD>
     <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>ーーー</TD>
     <TD noWrap align=middle>1</TD>
     <TD noWrap align=right>840z</TD>
-    <TD noWrap><A href="../items/items.html?013D" target=items">谜之骨</A>x3</TD>
+    <TD noWrap><A href="../items/items.html?013D" target="items">谜之骨</A>x3</TD>
     <TD noWrap></TD>
     <TD noWrap></TD>
     <TD noWrap></TD></TR>
   <TR>
-    <TD class=last noWrap><IMG src="images/L.gif">大骨块</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge100.gif" width=122></TD>
+    <TD class=last noWrap><IMG src="images/L.gif"><A href="../bugu/hammer.html#0100" class="invisible-link" target="weapon">大骨块</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:32px; background:#ee0000;" title="80"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:20px; background:#eeee00;" title="50"></div>
+  <div style="width:80px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:32px; background:#ee0000;" title="80"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:28px; background:#eeee00;" title="70"></div>
+  <div style="width:12px; background:#00ee00;" title="30"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div></TD>
     <TD noWrap align=middle>728</TD>
     <TD noWrap align=middle>　</TD>
     <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>ーーー</TD>
     <TD noWrap align=middle>1</TD>
     <TD noWrap align=right>1050z</TD>
-    <TD noWrap><A href="../items/items.html?013D" target=items">谜之骨</A>x6</TD>
+    <TD noWrap><A href="../items/items.html?013D" target="items">谜之骨</A>x6</TD>
     <TD noWrap></TD>
     <TD noWrap></TD>
     <TD noWrap></TD></TR>
   <TR>
-    <TH noWrap width=250>名称</TH>
-    <TH noWrap width=125>锋利度</TH>
-    <TH noWrap align=middle width=50>攻击力</TH>
-    <TH noWrap align=middle width=108>属性</TH>
-    <TH noWrap align=middle width=42>会心率</TH>
-    <TH noWrap align=middle width=45>插孔</TH>
-    <TH noWrap align=middle width=24>稀有度</TH>
-    <TH noWrap align=middle width=54>价格</TH>
-    <TH noWrap width=120>素材1</TH>
-    <TH noWrap width=120>素材2</TH>
-    <TH noWrap width=120>素材3</TH>
-    <TH noWrap width=120>素材4</TH></TR>
+    <TH>名称</TH>
+    <TH>锋利度</TH>
+    <TH>攻击力</TH>
+    <TH>属性</TH>
+    <TH>会心率</TH>
+    <TH>插孔</TH>
+    <TH>稀有度</TH>
+    <TH>价格</TH>
+    <TH>素材1</TH>
+    <TH>素材2</TH>
+    <TH>素材3</TH>
+    <TH>素材4</TH></TR>
   <TR class=hc>
-    <TD class=base noWrap>铁拳</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge215.gif" width=122></TD>
+    <TD class=base noWrap><A href="../bugu/hammer.html#0215" class="invisible-link" target="weapon">铁拳</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:76px; background:#ee0000;" title="190"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:16px; background:#eeee00;" title="40"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:76px; background:#ee0000;" title="190"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:20px; background:#eeee00;" title="50"></div>
+  <div style="width:16px; background:#00ee00;" title="40"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div></TD>
     <TD noWrap align=middle>988</TD>
     <TD noWrap align=middle>　</TD>
     <TD noWrap align=right>-20%</TD>
     <TD noWrap align=middle>〇ーー</TD>
     <TD noWrap align=middle>7</TD>
     <TD noWrap align=right>100000z</TD>
-    <TD noWrap><A href="../items/items.html?025F" target=items">石像之拳</A>x1</TD>
-    <TD noWrap><A href="../items/items.html?00DB" target=items">辉龙石</A>x6</TD>
+    <TD noWrap><A href="../items/items.html?025F" target="items">石像之拳</A>x1</TD>
+    <TD noWrap><A href="../items/items.html?00DB" target="items">辉龙石</A>x6</TD>
     <TD noWrap></TD>
     <TD noWrap></TD></TR>
   <TR class=hc>
-    <TD class=last noWrap><IMG src="images/L.gif">远古打击</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge429.gif" width=122></TD>
+    <TD class=last noWrap><IMG src="images/L.gif"><A href="../bugu/hammer.html#0429" class="invisible-link" target="weapon">远古打击</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:76px; background:#ee0000;" title="190"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:20px; background:#eeee00;" title="50"></div>
+  <div style="width:16px; background:#00ee00;" title="40"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:76px; background:#ee0000;" title="190"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:20px; background:#eeee00;" title="50"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:8px; background:#5050ff;" title="20"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div></TD>
     <TD noWrap align=middle>1092</TD>
     <TD noWrap align=middle>　</TD>
     <TD noWrap align=right>-20%</TD>
     <TD noWrap align=middle>〇〇ー</TD>
     <TD noWrap align=middle>7</TD>
     <TD noWrap align=right>150000z</TD>
-    <TD noWrap><A href="../items/items.html?025F" target=items">石像之拳</A>x1</TD>
-    <TD noWrap><A href="../items/items.html?00DB" target=items">辉龙石</A>x8</TD>
-    <TD noWrap><A href="../items/items.html?00DD" target=items">白鸠石</A>x11</TD>
+    <TD noWrap><A href="../items/items.html?025F" target="items">石像之拳</A>x1</TD>
+    <TD noWrap><A href="../items/items.html?00DB" target="items">辉龙石</A>x8</TD>
+    <TD noWrap><A href="../items/items.html?00DD" target="items">白鸠石</A>x11</TD>
     <TD noWrap></TD></TR>
   <TR>
-    <TH noWrap width=250>名称</TH>
-    <TH noWrap width=125>锋利度</TH>
-    <TH noWrap align=middle width=50>攻击力</TH>
-    <TH noWrap align=middle width=108>属性</TH>
-    <TH noWrap align=middle width=42>会心率</TH>
-    <TH noWrap align=middle width=45>插孔</TH>
-    <TH noWrap align=middle width=24>稀有度</TH>
-    <TH noWrap align=middle width=54>价格</TH>
-    <TH noWrap width=120>素材1</TH>
-    <TH noWrap width=120>素材2</TH>
-    <TH noWrap width=120>素材3</TH>
-    <TH noWrap width=120>素材4</TH></TR>
+    <TH>名称</TH>
+    <TH>锋利度</TH>
+    <TH>攻击力</TH>
+    <TH>属性</TH>
+    <TH>会心率</TH>
+    <TH>插孔</TH>
+    <TH>稀有度</TH>
+    <TH>价格</TH>
+    <TH>素材1</TH>
+    <TH>素材2</TH>
+    <TH>素材3</TH>
+    <TH>素材4</TH></TR>
   <TR class=odd>
-    <TD class=base noWrap>野猪头锤</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge061.gif" width=122></TD>
+    <TD class=base noWrap><A href="../bugu/hammer.html#0061" class="invisible-link" target="weapon">野猪头锤</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:32px; background:#ee0000;" title="80"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:20px; background:#eeee00;" title="50"></div>
+  <div style="width:80px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:32px; background:#ee0000;" title="80"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:28px; background:#eeee00;" title="70"></div>
+  <div style="width:12px; background:#00ee00;" title="30"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div></TD>
     <TD noWrap align=middle>520</TD>
     <TD noWrap align=middle>　</TD>
     <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>〇ーー</TD>
     <TD noWrap align=middle>3</TD>
     <TD noWrap align=right>4830z</TD>
-    <TD noWrap><A href="../items/items.html?014F" target=items">大猪的皮</A>x2</TD>
-    <TD noWrap><A href="../items/items.html?014E" target=items">大野猪的头</A>x1</TD>
-    <TD noWrap><A href="../items/items.html?0141" target=items">大块骨</A>x1</TD>
+    <TD noWrap><A href="../items/items.html?014F" target="items">大猪的皮</A>x2</TD>
+    <TD noWrap><A href="../items/items.html?014E" target="items">大野猪的头</A>x1</TD>
+    <TD noWrap><A href="../items/items.html?0141" target="items">大块骨</A>x1</TD>
     <TD noWrap></TD></TR>
   <TR>
-    <TD class=last noWrap><IMG src="images/L.gif">野猪牙锤</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge424.gif" width=122></TD>
+    <TD class=last noWrap><IMG src="images/L.gif"><A href="../bugu/hammer.html#0424" class="invisible-link" target="weapon">野猪牙锤</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:32px; background:#ee0000;" title="80"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:28px; background:#eeee00;" title="70"></div>
+  <div style="width:12px; background:#00ee00;" title="30"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:32px; background:#ee0000;" title="80"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:28px; background:#eeee00;" title="70"></div>
+  <div style="width:32px; background:#00ee00;" title="80"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div></TD>
     <TD noWrap align=middle>572</TD>
     <TD noWrap align=middle>　</TD>
     <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>〇〇ー</TD>
     <TD noWrap align=middle>3</TD>
     <TD noWrap align=right>7860z</TD>
-    <TD noWrap><A href="../items/items.html?014E" target=items">大野猪的头</A>x1</TD>
-    <TD noWrap><A href="../items/items.html?0141" target=items">大块骨</A>x5</TD>
-    <TD noWrap><A href="../items/items.html?000F" target=items">鬼人药</A>x1</TD>
+    <TD noWrap><A href="../items/items.html?014E" target="items">大野猪的头</A>x1</TD>
+    <TD noWrap><A href="../items/items.html?0141" target="items">大块骨</A>x5</TD>
+    <TD noWrap><A href="../items/items.html?000F" target="items">鬼人药</A>x1</TD>
     <TD noWrap>　</TD></TR>
   <TR>
-    <TH noWrap width=250>名称</TH>
-    <TH noWrap width=125>锋利度</TH>
-    <TH noWrap align=middle width=50>攻击力</TH>
-    <TH noWrap align=middle width=108>属性</TH>
-    <TH noWrap align=middle width=42>会心率</TH>
-    <TH noWrap align=middle width=45>插孔</TH>
-    <TH noWrap align=middle width=24>稀有度</TH>
-    <TH noWrap align=middle width=54>价格</TH>
-    <TH noWrap width=120>素材1</TH>
-    <TH noWrap width=120>素材2</TH>
-    <TH noWrap width=120>素材3</TH>
-    <TH noWrap width=120>素材4</TH></TR>
+    <TH>名称</TH>
+    <TH>锋利度</TH>
+    <TH>攻击力</TH>
+    <TH>属性</TH>
+    <TH>会心率</TH>
+    <TH>插孔</TH>
+    <TH>稀有度</TH>
+    <TH>价格</TH>
+    <TH>素材1</TH>
+    <TH>素材2</TH>
+    <TH>素材3</TH>
+    <TH>素材4</TH></TR>
   <TR class=odd>
-    <TD class=base noWrap>工房试制品枪锤</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge093.gif" width=122></TD>
+    <TD class=base noWrap><A href="../bugu/hammer.html#0093" class="invisible-link" target="weapon">工房试制品枪锤</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:40px; background:#ee0000;" title="100"></div>
+  <div style="width:4px; background:#eea000;" title="10"></div>
+  <div style="width:12px; background:#eeee00;" title="30"></div>
+  <div style="width:44px; background:#00ee00;" title="110"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:40px; background:#ee0000;" title="100"></div>
+  <div style="width:4px; background:#eea000;" title="10"></div>
+  <div style="width:12px; background:#eeee00;" title="30"></div>
+  <div style="width:64px; background:#00ee00;" title="160"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div></TD>
     <TD noWrap align=middle>676</TD>
     <TD noWrap align=middle>火200</TD>
     <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>ーーー</TD>
     <TD noWrap align=middle>4</TD>
     <TD noWrap align=right>27800z</TD>
-    <TD noWrap><A href="../items/items.html?00DE" target=items">红莲石</A>x4</TD>
-    <TD noWrap><A href="../items/items.html?00DA" target=items">燕雀石</A>x20</TD>
-    <TD noWrap><A href="../items/items.html?0197" target=items">火龙的骨髓</A>x1</TD>
-    <TD noWrap><A href="../items/items.html?0020" target=items">爆药</A>x20</TD></TR>
+    <TD noWrap><A href="../items/items.html?00DE" target="items">红莲石</A>x4</TD>
+    <TD noWrap><A href="../items/items.html?00DA" target="items">燕雀石</A>x20</TD>
+    <TD noWrap><A href="../items/items.html?0197" target="items">火龙的骨髓</A>x1</TD>
+    <TD noWrap><A href="../items/items.html?0020" target="items">爆药</A>x20</TD></TR>
   <TR>
-    <TD noWrap><IMG src="images/L.gif">死亡左轮</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge094.gif" width=122></TD>
+    <TD noWrap><IMG src="images/L.gif"><A href="../bugu/hammer.html#0094" class="invisible-link" target="weapon">死亡左轮</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:40px; background:#ee0000;" title="100"></div>
+  <div style="width:4px; background:#eea000;" title="10"></div>
+  <div style="width:12px; background:#eeee00;" title="30"></div>
+  <div style="width:64px; background:#00ee00;" title="160"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:40px; background:#ee0000;" title="100"></div>
+  <div style="width:4px; background:#eea000;" title="10"></div>
+  <div style="width:12px; background:#eeee00;" title="30"></div>
+  <div style="width:68px; background:#00ee00;" title="170"></div>
+  <div style="width:16px; background:#5050ff;" title="40"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div></TD>
     <TD noWrap align=middle>780</TD>
     <TD noWrap align=middle>火240</TD>
     <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>〇〇ー</TD>
     <TD noWrap align=middle>4</TD>
     <TD noWrap align=right>32690z</TD>
-    <TD noWrap><A href="../items/items.html?00DB" target=items">辉龙石</A>x15</TD>
-    <TD noWrap><A href="../items/items.html?0197" target=items">火龙的骨髓</A>x2</TD>
-    <TD noWrap><A href="../items/items.html?00DE" target=items">红莲石</A>x4</TD>
+    <TD noWrap><A href="../items/items.html?00DB" target="items">辉龙石</A>x15</TD>
+    <TD noWrap><A href="../items/items.html?0197" target="items">火龙的骨髓</A>x2</TD>
+    <TD noWrap><A href="../items/items.html?00DE" target="items">红莲石</A>x4</TD>
     <TD noWrap>　</TD></TR>
   <TR class=hc>
-    <TD class=last noWrap><IMG src="images/blank.gif"><IMG src="images/L.gif">正式采用机械锤</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge299.gif" width=122></TD>
+    <TD class=last noWrap><IMG src="images/blank.gif"><IMG src="images/L.gif"><A href="../bugu/hammer.html#0299" class="invisible-link" target="weapon">正式采用机械锤</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:32px; background:#ee0000;" title="80"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:28px; background:#eeee00;" title="70"></div>
+  <div style="width:44px; background:#00ee00;" title="110"></div>
+  <div style="width:8px; background:#5050ff;" title="20"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:32px; background:#ee0000;" title="80"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:28px; background:#eeee00;" title="70"></div>
+  <div style="width:44px; background:#00ee00;" title="110"></div>
+  <div style="width:20px; background:#5050ff;" title="50"></div>
+  <div style="width:8px; background:#ffffff;" title="20"></div>
+</div></TD>
     <TD noWrap align=middle>936</TD>
     <TD noWrap align=middle>火290</TD>
     <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>〇〇ー</TD>
     <TD noWrap align=middle>6</TD>
     <TD noWrap align=right>69800z</TD>
-    <TD noWrap><A href="../items/items.html?00DE" target=items">红莲石</A>x4</TD>
-    <TD noWrap><A href="../items/items.html?00DC" target=items">灵鹤石</A>x20</TD>
-    <TD noWrap><A href="../items/items.html?0019" target=items">怪物的浓汁</A>x2</TD>
+    <TD noWrap><A href="../items/items.html?00DE" target="items">红莲石</A>x4</TD>
+    <TD noWrap><A href="../items/items.html?00DC" target="items">灵鹤石</A>x20</TD>
+    <TD noWrap><A href="../items/items.html?0019" target="items">怪物的浓汁</A>x2</TD>
     <TD noWrap></TD></TR>
   <TR>
-    <TH noWrap width=250>名称</TH>
-    <TH noWrap width=125>锋利度</TH>
-    <TH noWrap align=middle width=50>攻击力</TH>
-    <TH noWrap align=middle width=108>属性</TH>
-    <TH noWrap align=middle width=42>会心率</TH>
-    <TH noWrap align=middle width=45>插孔</TH>
-    <TH noWrap align=middle width=24>稀有度</TH>
-    <TH noWrap align=middle width=54>价格</TH>
-    <TH noWrap width=120>素材1</TH>
-    <TH noWrap width=120>素材2</TH>
-    <TH noWrap width=120>素材3</TH>
-    <TH noWrap width=120>素材4</TH></TR>
+    <TH>名称</TH>
+    <TH>锋利度</TH>
+    <TH>攻击力</TH>
+    <TH>属性</TH>
+    <TH>会心率</TH>
+    <TH>插孔</TH>
+    <TH>稀有度</TH>
+    <TH>价格</TH>
+    <TH>素材1</TH>
+    <TH>素材2</TH>
+    <TH>素材3</TH>
+    <TH>素材4</TH></TR>
   <TR class=hc>
-    <TD class=base noWrap>电击熊</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge233.gif" width=122></TD>
+    <TD class=base noWrap><A href="../bugu/hammer.html#0233" class="invisible-link" target="weapon">电击熊</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:20px; background:#ee0000;" title="50"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:44px; background:#eeee00;" title="110"></div>
+  <div style="width:80px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:20px; background:#ee0000;" title="50"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:56px; background:#eeee00;" title="140"></div>
+  <div style="width:8px; background:#00ee00;" title="20"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div></TD>
     <TD noWrap align=middle>520</TD>
     <TD noWrap align=middle>雷280</TD>
     <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>ーーー</TD>
     <TD noWrap align=middle>4</TD>
     <TD noWrap align=right>523z</TD>
-    <TD noWrap><A href="../items/items.html?02F5" target=items">电击券</A>x4</TD>
+    <TD noWrap><A href="../items/items.html?02F5" target="items">电击券</A>x4</TD>
     <TD noWrap>　</TD>
     <TD noWrap></TD>
     <TD noWrap></TD></TR>
   <TR class=hc>
-    <TD class=last noWrap><IMG src="images/L.gif">电击熊Ｇ</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge374.gif" width=122></TD>
+    <TD class=last noWrap><IMG src="images/L.gif"><A href="../bugu/hammer.html#0374" class="invisible-link" target="weapon">电击熊Ｇ</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:20px; background:#ee0000;" title="50"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:56px; background:#eeee00;" title="140"></div>
+  <div style="width:8px; background:#00ee00;" title="20"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:20px; background:#ee0000;" title="50"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:56px; background:#eeee00;" title="140"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div></TD>
     <TD noWrap align=middle>780</TD>
     <TD noWrap align=middle>雷420</TD>
     <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>ーーー</TD>
     <TD noWrap align=middle>6</TD>
     <TD noWrap align=right>550z</TD>
-    <TD noWrap><A href="../items/items.html?02F5" target=items">电击券</A>x5</TD>
-    <TD noWrap><A href="../items/items.html?0209" target=items">金狮子的尖角</A>x1</TD>
+    <TD noWrap><A href="../items/items.html?02F5" target="items">电击券</A>x5</TD>
+    <TD noWrap><A href="../items/items.html?0209" target="items">金狮子的尖角</A>x1</TD>
     <TD noWrap></TD>
     <TD noWrap></TD></TR>
   <TR>
-    <TH noWrap width=250>名称</TH>
-    <TH noWrap width=125>锋利度</TH>
-    <TH noWrap align=middle width=50>攻击力</TH>
-    <TH noWrap align=middle width=108>属性</TH>
-    <TH noWrap align=middle width=42>会心率</TH>
-    <TH noWrap align=middle width=45>插孔</TH>
-    <TH noWrap align=middle width=24>稀有度</TH>
-    <TH noWrap align=middle width=54>价格</TH>
-    <TH noWrap width=120>素材1</TH>
-    <TH noWrap width=120>素材2</TH>
-    <TH noWrap width=120>素材3</TH>
-    <TH noWrap width=120>素材4</TH></TR>
+    <TH>名称</TH>
+    <TH>锋利度</TH>
+    <TH>攻击力</TH>
+    <TH>属性</TH>
+    <TH>会心率</TH>
+    <TH>插孔</TH>
+    <TH>稀有度</TH>
+    <TH>价格</TH>
+    <TH>素材1</TH>
+    <TH>素材2</TH>
+    <TH>素材3</TH>
+    <TH>素材4</TH></TR>
   <TR class=odd>
-    <TD class=base noWrap>黑带大锤</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge308.gif" width=122></TD>
+    <TD class=base noWrap><A href="../bugu/hammer.html#0308" class="invisible-link" target="weapon">黑带大锤</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:32px; background:#ee0000;" title="80"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:28px; background:#eeee00;" title="70"></div>
+  <div style="width:12px; background:#00ee00;" title="30"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:32px; background:#ee0000;" title="80"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:28px; background:#eeee00;" title="70"></div>
+  <div style="width:32px; background:#00ee00;" title="80"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div></TD>
     <TD noWrap align=middle>780</TD>
     <TD noWrap align=middle>　</TD>
     <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>〇〇〇</TD>
     <TD noWrap align=middle>4</TD>
     <TD noWrap align=right>10130z</TD>
-    <TD noWrap><A href="../items/items.html?02EE" target=items">大锤券</A>x10</TD>
-    <TD noWrap><A href="../items/items.html?02CC" target=items">永远的硬币</A>x10</TD>
-    <TD noWrap><A href="../items/items.html?02C5" target=items">达人硬币</A>x10</TD>
-    <TD noWrap><A href="../items/items.html?01B6" target=items">铠龙的甲壳</A>x3</TD></TR>
+    <TD noWrap><A href="../items/items.html?02EE" target="items">大锤券</A>x10</TD>
+    <TD noWrap><A href="../items/items.html?02CC" target="items">永远的硬币</A>x10</TD>
+    <TD noWrap><A href="../items/items.html?02C5" target="items">达人硬币</A>x10</TD>
+    <TD noWrap><A href="../items/items.html?01B6" target="items">铠龙的甲壳</A>x3</TD></TR>
   <TR class=hc>
-    <TD class=last noWrap><IMG src="images/L.gif">达人大锤</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge309.gif" width=122></TD>
+    <TD class=last noWrap><IMG src="images/L.gif"><A href="../bugu/hammer.html#0309" class="invisible-link" target="weapon">达人大锤</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:68px; background:#eeee00;" title="170"></div>
+  <div style="width:32px; background:#00ee00;" title="80"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:68px; background:#eeee00;" title="170"></div>
+  <div style="width:48px; background:#00ee00;" title="120"></div>
+  <div style="width:4px; background:#5050ff;" title="10"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div></TD>
     <TD noWrap align=middle>884</TD>
     <TD noWrap align=middle>防御+2</TD>
     <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>〇〇〇</TD>
     <TD noWrap align=middle>6</TD>
     <TD noWrap align=right>21560z</TD>
-    <TD noWrap><A href="../items/items.html?02EE" target=items">大锤券</A>x20</TD>
-    <TD noWrap><A href="../items/items.html?02C9" target=items">牙兽的硬币</A>x6</TD>
-    <TD noWrap><A href="../items/items.html?0195" target=items">金火龙的坚壳</A>x3</TD>
+    <TD noWrap><A href="../items/items.html?02EE" target="items">大锤券</A>x20</TD>
+    <TD noWrap><A href="../items/items.html?02C9" target="items">牙兽的硬币</A>x6</TD>
+    <TD noWrap><A href="../items/items.html?0195" target="items">金火龙的坚壳</A>x3</TD>
     <TD noWrap>　</TD></TR>
   <TR>
-    <TH noWrap width=250>名称</TH>
-    <TH noWrap width=125>锋利度</TH>
-    <TH noWrap align=middle width=50>攻击力</TH>
-    <TH noWrap align=middle width=108>属性</TH>
-    <TH noWrap align=middle width=42>会心率</TH>
-    <TH noWrap align=middle width=45>插孔</TH>
-    <TH noWrap align=middle width=24>稀有度</TH>
-    <TH noWrap align=middle width=54>价格</TH>
-    <TH noWrap width=120>素材1</TH>
-    <TH noWrap width=120>素材2</TH>
-    <TH noWrap width=120>素材3</TH>
-    <TH noWrap width=120>素材4</TH></TR>
+    <TH>名称</TH>
+    <TH>锋利度</TH>
+    <TH>攻击力</TH>
+    <TH>属性</TH>
+    <TH>会心率</TH>
+    <TH>插孔</TH>
+    <TH>稀有度</TH>
+    <TH>价格</TH>
+    <TH>素材1</TH>
+    <TH>素材2</TH>
+    <TH>素材3</TH>
+    <TH>素材4</TH></TR>
   <TR class=odd>
-    <TD class=base noWrap>锤【乌】</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge076.gif" width=122></TD>
+    <TD class=base noWrap><A href="../bugu/hammer.html#0076" class="invisible-link" target="weapon">锤【乌】</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:24px; background:#ee0000;" title="60"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:32px; background:#eeee00;" title="80"></div>
+  <div style="width:48px; background:#00ee00;" title="120"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:24px; background:#ee0000;" title="60"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:32px; background:#eeee00;" title="80"></div>
+  <div style="width:48px; background:#00ee00;" title="120"></div>
+  <div style="width:20px; background:#5050ff;" title="50"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div></TD>
     <TD noWrap align=middle>780</TD>
     <TD noWrap align=middle>　</TD>
     <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>〇ーー</TD>
     <TD noWrap align=middle>5</TD>
     <TD noWrap align=right>18470z</TD>
-    <TD noWrap><A href="../items/items.html?0259" target=items">尖锐的喙</A>x1</TD>
-    <TD noWrap><A href="../items/items.html?0258" target=items">黑狼鸟的耳</A>x2</TD>
-    <TD noWrap><A href="../items/items.html?025C" target=items">黑狼鸟的鬣毛</A>x4</TD>
-    <TD noWrap><A href="../items/items.html?013A" target=items">龙骨【大】</A>x3</TD></TR>
+    <TD noWrap><A href="../items/items.html?0259" target="items">尖锐的喙</A>x1</TD>
+    <TD noWrap><A href="../items/items.html?0258" target="items">黑狼鸟的耳</A>x2</TD>
+    <TD noWrap><A href="../items/items.html?025C" target="items">黑狼鸟的鬣毛</A>x4</TD>
+    <TD noWrap><A href="../items/items.html?013A" target="items">龙骨【大】</A>x3</TD></TR>
   <TR>
-    <TD class=last noWrap><IMG src="images/L.gif">锤【狼】</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge428.gif" width=122></TD>
+    <TD class=last noWrap><IMG src="images/L.gif"><A href="../bugu/hammer.html#0428" class="invisible-link" target="weapon">锤【狼】</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:56px; background:#ee0000;" title="140"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:24px; background:#eeee00;" title="60"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:16px; background:#5050ff;" title="40"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:56px; background:#ee0000;" title="140"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:24px; background:#eeee00;" title="60"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:16px; background:#5050ff;" title="40"></div>
+  <div style="width:20px; background:#ffffff;" title="50"></div>
+</div></TD>
     <TD noWrap align=middle>884</TD>
     <TD noWrap align=middle>　</TD>
     <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>〇ーー</TD>
     <TD noWrap align=middle>5</TD>
     <TD noWrap align=right>41500z</TD>
-    <TD noWrap><A href="../items/items.html?0259" target=items">尖锐的喙</A>x3</TD>
-    <TD noWrap><A href="../items/items.html?025C" target=items">黑狼鸟的鬣毛</A>x10</TD>
-    <TD noWrap><A href="../items/items.html?0121" target=items">大力神王虫</A>x18</TD>
+    <TD noWrap><A href="../items/items.html?0259" target="items">尖锐的喙</A>x3</TD>
+    <TD noWrap><A href="../items/items.html?025C" target="items">黑狼鸟的鬣毛</A>x10</TD>
+    <TD noWrap><A href="../items/items.html?0121" target="items">大力神王虫</A>x18</TD>
     <TD noWrap></TD></TR>
   <TR>
-    <TH noWrap width=250>名称</TH>
-    <TH noWrap width=125>锋利度</TH>
-    <TH noWrap align=middle width=50>攻击力</TH>
-    <TH noWrap align=middle width=108>属性</TH>
-    <TH noWrap align=middle width=42>会心率</TH>
-    <TH noWrap align=middle width=45>插孔</TH>
-    <TH noWrap align=middle width=24>稀有度</TH>
-    <TH noWrap align=middle width=54>价格</TH>
-    <TH noWrap width=120>素材1</TH>
-    <TH noWrap width=120>素材2</TH>
-    <TH noWrap width=120>素材3</TH>
-    <TH noWrap width=120>素材4</TH></TR>
+    <TH>名称</TH>
+    <TH>锋利度</TH>
+    <TH>攻击力</TH>
+    <TH>属性</TH>
+    <TH>会心率</TH>
+    <TH>插孔</TH>
+    <TH>稀有度</TH>
+    <TH>价格</TH>
+    <TH>素材1</TH>
+    <TH>素材2</TH>
+    <TH>素材3</TH>
+    <TH>素材4</TH></TR>
   <TR class=odd>
-    <TD class=base noWrap>黑猫锤</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge435.gif" width=122></TD>
+    <TD class=base noWrap><A href="../bugu/hammer.html#0435" class="invisible-link" target="weapon">黑猫锤</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:40px; background:#ee0000;" title="100"></div>
+  <div style="width:4px; background:#eea000;" title="10"></div>
+  <div style="width:12px; background:#eeee00;" title="30"></div>
+  <div style="width:64px; background:#00ee00;" title="160"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:40px; background:#ee0000;" title="100"></div>
+  <div style="width:4px; background:#eea000;" title="10"></div>
+  <div style="width:12px; background:#eeee00;" title="30"></div>
+  <div style="width:68px; background:#00ee00;" title="170"></div>
+  <div style="width:16px; background:#5050ff;" title="40"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div></TD>
     <TD noWrap align=middle>624</TD>
     <TD noWrap align=middle>麻痹240</TD>
     <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>ーーー</TD>
     <TD noWrap align=middle>4</TD>
     <TD noWrap align=right>15000z</TD>
-    <TD noWrap><A href="../items/items.html?00DB" target=items">辉龙石</A>x2</TD>
-    <TD noWrap><A href="../items/items.html?0229" target=items">钢龍的尻尾</A>x1</TD>
-    <TD noWrap><A href="../items/items.html?02F2" target=items">肉球的图章</A>x5</TD>
+    <TD noWrap><A href="../items/items.html?00DB" target="items">辉龙石</A>x2</TD>
+    <TD noWrap><A href="../items/items.html?0229" target="items">钢龍的尾巴</A>x1</TD>
+    <TD noWrap><A href="../items/items.html?02F2" target="items">肉球的图章</A>x5</TD>
     <TD noWrap></TD></TR>
   <TR class=hc>
-    <TD class=last noWrap><IMG src="images/L.gif">白猫锤</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge434.gif" width=122></TD>
+    <TD class=last noWrap><IMG src="images/L.gif"><A href="../bugu/hammer.html#0434" class="invisible-link" target="weapon">白猫锤</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:32px; background:#ee0000;" title="80"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:28px; background:#eeee00;" title="70"></div>
+  <div style="width:44px; background:#00ee00;" title="110"></div>
+  <div style="width:8px; background:#5050ff;" title="20"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:32px; background:#ee0000;" title="80"></div>
+  <div style="width:28px; background:#eea000;" title="70"></div>
+  <div style="width:28px; background:#eeee00;" title="70"></div>
+  <div style="width:44px; background:#00ee00;" title="110"></div>
+  <div style="width:20px; background:#5050ff;" title="50"></div>
+  <div style="width:8px; background:#ffffff;" title="20"></div>
+</div></TD>
     <TD noWrap align=middle>728</TD>
     <TD noWrap align=middle>麻痹310</TD>
     <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>〇ーー</TD>
     <TD noWrap align=middle>6</TD>
     <TD noWrap align=right>25000z</TD>
-    <TD noWrap><A href="../items/items.html?00DC" target=items">灵鹤石</A>x20</TD>
-    <TD noWrap><A href="../items/items.html?00E7" target=items">艾尔坚果</A>x2</TD>
-    <TD noWrap><A href="../items/items.html?02F2" target=items">肉球的图章</A>x7</TD>
+    <TD noWrap><A href="../items/items.html?00DC" target="items">灵鹤石</A>x20</TD>
+    <TD noWrap><A href="../items/items.html?00E7" target="items">艾尔坚果</A>x2</TD>
+    <TD noWrap><A href="../items/items.html?02F2" target="items">肉球的图章</A>x7</TD>
     <TD noWrap></TD></TR>
   <TR>
-    <TH noWrap width=250>名称</TH>
-    <TH noWrap width=125>锋利度</TH>
-    <TH noWrap align=middle width=50>攻击力</TH>
-    <TH noWrap align=middle width=108>属性</TH>
-    <TH noWrap align=middle width=42>会心率</TH>
-    <TH noWrap align=middle width=45>插孔</TH>
-    <TH noWrap align=middle width=24>稀有度</TH>
-    <TH noWrap align=middle width=54>价格</TH>
-    <TH noWrap width=120>素材1</TH>
-    <TH noWrap width=120>素材2</TH>
-    <TH noWrap width=120>素材3</TH>
-    <TH noWrap width=120>素材4</TH></TR>
+    <TH>名称</TH>
+    <TH>锋利度</TH>
+    <TH>攻击力</TH>
+    <TH>属性</TH>
+    <TH>会心率</TH>
+    <TH>插孔</TH>
+    <TH>稀有度</TH>
+    <TH>价格</TH>
+    <TH>素材1</TH>
+    <TH>素材2</TH>
+    <TH>素材3</TH>
+    <TH>素材4</TH></TR>
   <TR class=odd>
-    <TD class=base noWrap>龍灭</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge101.gif" width=122></TD>
+    <TD class=base noWrap><A href="../bugu/hammer.html#0101" class="invisible-link" target="weapon">龍灭</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:24px; background:#ee0000;" title="60"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:32px; background:#eeee00;" title="80"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:60px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:24px; background:#ee0000;" title="60"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:32px; background:#eeee00;" title="80"></div>
+  <div style="width:48px; background:#00ee00;" title="120"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div></TD>
     <TD noWrap align=middle>780</TD>
     <TD noWrap align=middle>龍170</TD>
     <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>ーーー</TD>
     <TD noWrap align=middle>5</TD>
     <TD noWrap align=right>31680z</TD>
-    <TD noWrap><A href="../items/items.html?01E3" target=items">老山龍的大爪</A>x1</TD>
-    <TD noWrap><A href="../items/items.html?01E5" target=items">老山龍的鳞</A>x5</TD>
-    <TD noWrap><A href="../items/items.html?013A" target=items">龙骨【大】</A>x3</TD>
+    <TD noWrap><A href="../items/items.html?01E3" target="items">老山龍的大爪</A>x1</TD>
+    <TD noWrap><A href="../items/items.html?01E5" target="items">老山龍的鳞</A>x5</TD>
+    <TD noWrap><A href="../items/items.html?013A" target="items">龙骨【大】</A>x3</TD>
     <TD noWrap></TD></TR>
   <TR>
-    <TD noWrap><IMG src="images/L.gif">龍破</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge102.gif" width=122></TD>
+    <TD noWrap><IMG src="images/L.gif"><A href="../bugu/hammer.html#0102" class="invisible-link" target="weapon">龍破</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:24px; background:#ee0000;" title="60"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:32px; background:#eeee00;" title="80"></div>
+  <div style="width:48px; background:#00ee00;" title="120"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:24px; background:#ee0000;" title="60"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:32px; background:#eeee00;" title="80"></div>
+  <div style="width:48px; background:#00ee00;" title="120"></div>
+  <div style="width:20px; background:#5050ff;" title="50"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div></TD>
     <TD noWrap align=middle>884</TD>
     <TD noWrap align=middle>龍330</TD>
     <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>ーーー</TD>
     <TD noWrap align=middle>5</TD>
     <TD noWrap align=right>40160z</TD>
-    <TD noWrap><A href="../items/items.html?01E3" target=items">老山龍的大爪</A>x2</TD>
-    <TD noWrap><A href="../items/items.html?01E7" target=items">老山龍的甲壳</A>x3</TD>
-    <TD noWrap><A href="../items/items.html?023D" target=items">古龍的血</A>x2</TD>
+    <TD noWrap><A href="../items/items.html?01E3" target="items">老山龍的大爪</A>x2</TD>
+    <TD noWrap><A href="../items/items.html?01E7" target="items">老山龍的甲壳</A>x3</TD>
+    <TD noWrap><A href="../items/items.html?023D" target="items">古龍的血</A>x2</TD>
     <TD noWrap></TD></TR>
   <TR class=hc>
-    <TD class=last noWrap><IMG src="images/blank.gif"><IMG src="images/L.gif">龍坏棍</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge303.gif" width=122></TD>
+    <TD class=last noWrap><IMG src="images/blank.gif"><IMG src="images/L.gif"><A href="../bugu/hammer.html#0303" class="invisible-link" target="weapon">龍坏棍</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:68px; background:#eeee00;" title="170"></div>
+  <div style="width:48px; background:#00ee00;" title="120"></div>
+  <div style="width:4px; background:#5050ff;" title="10"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:68px; background:#eeee00;" title="170"></div>
+  <div style="width:48px; background:#00ee00;" title="120"></div>
+  <div style="width:16px; background:#5050ff;" title="40"></div>
+  <div style="width:8px; background:#ffffff;" title="20"></div>
+</div></TD>
     <TD noWrap align=middle>988</TD>
     <TD noWrap align=middle>龍410</TD>
     <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>ーーー</TD>
     <TD noWrap align=middle>7</TD>
     <TD noWrap align=right>120000z</TD>
-    <TD noWrap><A href="../items/items.html?01EA" target=items">老山龍的苍甲壳</A>x5</TD>
-    <TD noWrap><A href="../items/items.html?01E6" target=items">老山龍的红玉</A>x1</TD>
-    <TD noWrap><A href="../items/items.html?00E2" target=items">耀水晶</A>x3</TD>
+    <TD noWrap><A href="../items/items.html?01EA" target="items">老山龍的苍甲壳</A>x5</TD>
+    <TD noWrap><A href="../items/items.html?01E6" target="items">老山龍的红玉</A>x1</TD>
+    <TD noWrap><A href="../items/items.html?00E2" target="items">耀水晶</A>x3</TD>
     <TD noWrap></TD></TR>
   <TR>
-    <TH noWrap width=250>名称</TH>
-    <TH noWrap width=125>锋利度</TH>
-    <TH noWrap align=middle width=50>攻击力</TH>
-    <TH noWrap align=middle width=108>属性</TH>
-    <TH noWrap align=middle width=42>会心率</TH>
-    <TH noWrap align=middle width=45>插孔</TH>
-    <TH noWrap align=middle width=24>稀有度</TH>
-    <TH noWrap align=middle width=54>价格</TH>
-    <TH noWrap width=120>素材1</TH>
-    <TH noWrap width=120>素材2</TH>
-    <TH noWrap width=120>素材3</TH>
-    <TH noWrap width=120>素材4</TH></TR>
+    <TH>名称</TH>
+    <TH>锋利度</TH>
+    <TH>攻击力</TH>
+    <TH>属性</TH>
+    <TH>会心率</TH>
+    <TH>插孔</TH>
+    <TH>稀有度</TH>
+    <TH>价格</TH>
+    <TH>素材1</TH>
+    <TH>素材2</TH>
+    <TH>素材3</TH>
+    <TH>素材4</TH></TR>
   <TR class=hc>
-    <TD class=base noWrap>邪龍破碎锤</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge473.gif" width=122></TD>
+    <TD class=base noWrap><A href="../bugu/hammer.html#0473" class="invisible-link" target="weapon">黑龍破碎者</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:68px; background:#eeee00;" title="170"></div>
+  <div style="width:32px; background:#00ee00;" title="80"></div>
+  <div style="width:40px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:68px; background:#eeee00;" title="170"></div>
+  <div style="width:48px; background:#00ee00;" title="120"></div>
+  <div style="width:4px; background:#5050ff;" title="10"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div></TD>
     <TD noWrap align=middle>832</TD>
     <TD noWrap align=middle>龍100</TD>
     <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>ーーー</TD>
     <TD noWrap align=middle>7</TD>
     <TD noWrap align=right>100000z</TD>
-    <TD noWrap><A href="../items/items.html?01EB" target=items">黑龍的角</A>x2</TD>
-    <TD noWrap><A href="../items/items.html?01ED" target=items">黑龍的甲壳</A>x6</TD>
-    <TD noWrap><A href="../items/items.html?02E4" target=items">战友之绊</A>x10</TD>
-    <TD noWrap><A href="../items/items.html?02E3" target=items">战友之证</A>x5</TD></TR>
+    <TD noWrap><A href="../items/items.html?01EB" target="items">黑龍的角</A>x2</TD>
+    <TD noWrap><A href="../items/items.html?01ED" target="items">黑龍的甲壳</A>x6</TD>
+    <TD noWrap><A href="../items/items.html?02E4" target="items">战友之纽带</A>x10</TD>
+    <TD noWrap><A href="../items/items.html?02E3" target="items">战友之证</A>x5</TD></TR>
   <TR class=hc>
-    <TD class=last noWrap><IMG src="images/T.gif">火神破碎者</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge475.gif" width=122></TD>
+    <TD class=last noWrap><IMG src="images/T.gif"><A href="../bugu/hammer.html#0475" class="invisible-link" target="weapon">红龍破碎者</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:36px; background:#ee0000;" title="90"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:52px; background:#eeee00;" title="130"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:16px; background:#5050ff;" title="40"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:36px; background:#ee0000;" title="90"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:52px; background:#eeee00;" title="130"></div>
+  <div style="width:28px; background:#00ee00;" title="70"></div>
+  <div style="width:20px; background:#5050ff;" title="50"></div>
+  <div style="width:16px; background:#ffffff;" title="40"></div>
+</div></TD>
     <TD noWrap align=middle>988</TD>
     <TD noWrap align=middle>龍240</TD>
     <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>ーーー</TD>
     <TD noWrap align=middle>7</TD>
     <TD noWrap align=right>150000z</TD>
-    <TD noWrap><A href="../items/items.html?01EB" target=items">黑龍的角</A>x3</TD>
-    <TD noWrap><A href="../items/items.html?01EE" target=items">黑龍的眼</A>x2</TD>
-    <TD noWrap><A href="../items/items.html?022C" target=items">钢龍的宝玉</A>x3</TD>
+    <TD noWrap><A href="../items/items.html?01EB" target="items">黑龍的角</A>x3</TD>
+    <TD noWrap><A href="../items/items.html?01EE" target="items">黑龍的眼</A>x2</TD>
+    <TD noWrap><A href="../items/items.html?022C" target="items">钢龍的宝玉</A>x3</TD>
     <TD noWrap>　</TD></TR>
   <TR class=hc>
     <TD class=last noWrap><IMG 
-src="images/L.gif">祖龍破碎者</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge476.gif" width=122></TD>
+src="images/L.gif"><A href="../bugu/hammer.html#0476" class="invisible-link" target="weapon">祖龍破碎者</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:68px; background:#eeee00;" title="170"></div>
+  <div style="width:48px; background:#00ee00;" title="120"></div>
+  <div style="width:4px; background:#5050ff;" title="10"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:68px; background:#eeee00;" title="170"></div>
+  <div style="width:48px; background:#00ee00;" title="120"></div>
+  <div style="width:16px; background:#5050ff;" title="40"></div>
+  <div style="width:8px; background:#ffffff;" title="20"></div>
+</div></TD>
     <TD noWrap align=middle>884</TD>
     <TD noWrap align=middle>防御+8 龍350</TD>
     <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>ーーー</TD>
     <TD noWrap align=middle>7</TD>
     <TD noWrap align=right>250000z</TD>
-    <TD noWrap><A href="../items/items.html?01F8" target=items">祖龍的角</A>x5</TD>
-    <TD noWrap><A href="../items/items.html?01F3" target=items">黑龍的魔眼</A>x2</TD>
-    <TD noWrap><A href="../items/items.html?023C" target=items">炎龍的宝玉</A>x1</TD>
+    <TD noWrap><A href="../items/items.html?01F8" target="items">祖龍的角</A>x5</TD>
+    <TD noWrap><A href="../items/items.html?01F3" target="items">黑龍的魔眼</A>x2</TD>
+    <TD noWrap><A href="../items/items.html?023C" target="items">炎龍的宝玉</A>x1</TD>
     <TD noWrap>　</TD></TR>
   <TR>
-    <TH noWrap width=250>名称</TH>
-    <TH noWrap width=125>锋利度</TH>
-    <TH noWrap align=middle width=50>攻击力</TH>
-    <TH noWrap align=middle width=108>属性</TH>
-    <TH noWrap align=middle width=42>会心率</TH>
-    <TH noWrap align=middle width=45>插孔</TH>
-    <TH noWrap align=middle width=24>稀有度</TH>
-    <TH noWrap align=middle width=54>价格</TH>
-    <TH noWrap width=120>素材1</TH>
-    <TH noWrap width=120>素材2</TH>
-    <TH noWrap width=120>素材3</TH>
-    <TH noWrap width=120>素材4</TH></TR>
+    <TH>名称</TH>
+    <TH>锋利度</TH>
+    <TH>攻击力</TH>
+    <TH>属性</TH>
+    <TH>会心率</TH>
+    <TH>插孔</TH>
+    <TH>稀有度</TH>
+    <TH>价格</TH>
+    <TH>素材1</TH>
+    <TH>素材2</TH>
+    <TH>素材3</TH>
+    <TH>素材4</TH></TR>
   <TR class=odd>
-    <TD noWrap>晚安熊</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge224.gif" width=122></TD>
+    <TD noWrap><A href="../bugu/hammer.html#0224" class="invisible-link" target="weapon">晚安熊</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:20px; background:#ee0000;" title="50"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:24px; background:#eeee00;" title="60"></div>
+  <div style="width:100px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:20px; background:#ee0000;" title="50"></div>
+  <div style="width:16px; background:#eea000;" title="40"></div>
+  <div style="width:44px; background:#eeee00;" title="110"></div>
+  <div style="width:80px; background:#000000;"></div>
+</div></TD>
     <TD noWrap align=middle>260</TD>
     <TD noWrap align=middle>睡眠200</TD>
     <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>ーーー</TD>
     <TD noWrap align=middle>4</TD>
     <TD noWrap align=right>5800z</TD>
-    <TD noWrap><A href="../items/items.html?02E6" target=items">蛋券</A>x1</TD>
-    <TD noWrap><A href="../items/items.html?02E7" target=items">宝石券</A>x1</TD>
-    <TD noWrap><A href="../items/items.html?02E0" target=items">星铁</A>x1</TD>
+    <TD noWrap><A href="../items/items.html?02E6" target="items">蛋券</A>x1</TD>
+    <TD noWrap><A href="../items/items.html?02E7" target="items">宝石券</A>x1</TD>
+    <TD noWrap><A href="../items/items.html?02E0" target="items">星铁</A>x1</TD>
     <TD noWrap></TD></TR>
   <TR class=hc>
-    <TD noWrap>金猫锤</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge436.gif" width=122></TD>
+    <TD noWrap><A href="../bugu/hammer.html#0436" class="invisible-link" target="weapon">金猫锤</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:68px; background:#eeee00;" title="170"></div>
+  <div style="width:48px; background:#00ee00;" title="120"></div>
+  <div style="width:4px; background:#5050ff;" title="10"></div>
+  <div style="width:20px; background:#000000;"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:68px; background:#eeee00;" title="170"></div>
+  <div style="width:48px; background:#00ee00;" title="120"></div>
+  <div style="width:16px; background:#5050ff;" title="40"></div>
+  <div style="width:8px; background:#ffffff;" title="20"></div>
+</div></TD>
     <TD noWrap align=middle>676</TD>
     <TD noWrap align=middle>麻痹280</TD>
     <TD noWrap align=right>0%</TD>
     <TD noWrap align=middle>〇〇ー</TD>
     <TD noWrap align=middle>6</TD>
     <TD noWrap align=right>30000z</TD>
-    <TD noWrap><A href="../items/items.html?02E9" target=items">肉球的印鉴</A>x20</TD>
-    <TD noWrap><A href="../items/items.html?0194" target=items">金火龙的上鳞</A>x3</TD>
-    <TD noWrap><A href="../items/items.html?0107" target=items">王族花金龟</A>x8</TD>
+    <TD noWrap><A href="../items/items.html?02E9" target="items">肉球的印鉴</A>x20</TD>
+    <TD noWrap><A href="../items/items.html?0194" target="items">金火龙的上鳞</A>x3</TD>
+    <TD noWrap><A href="../items/items.html?0107" target="items">王族花金龟</A>x8</TD>
     <TD noWrap></TD></TR>
   <TR class=sp>
-    <TD noWrap>生死悲号</TD>
-    <TD noWrap align=middle><IMG height=15 src="../images/gauge482.gif" width=122></TD>
+    <TD noWrap><A href="../bugu/hammer.html#0482" class="invisible-link" target="weapon">仙宿贝号</A></TD>
+    <TD noWrap align=middle><div class="gauge">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:68px; background:#eeee00;" title="170"></div>
+  <div style="width:48px; background:#00ee00;" title="120"></div>
+  <div style="width:16px; background:#5050ff;" title="40"></div>
+  <div style="width:8px; background:#ffffff;" title="20"></div>
+</div>
+<div class="gauge-ext">
+  <div style="width:12px; background:#ee0000;" title="30"></div>
+  <div style="width:8px; background:#eea000;" title="20"></div>
+  <div style="width:68px; background:#eeee00;" title="170"></div>
+  <div style="width:48px; background:#00ee00;" title="120"></div>
+  <div style="width:16px; background:#5050ff;" title="40"></div>
+  <div style="width:8px; background:#ffffff;" title="20"></div>
+</div></TD>
     <TD noWrap align=middle>1144</TD>
     <TD noWrap align=middle>防御+16 龍380</TD>
     <TD noWrap align=right>0%</TD>
